@@ -12,10 +12,12 @@
     *   Learners use their own machines
     *   No dependence on other Carpentry modules
         *   In particular, no knowledge of shell or version control
-    *   Use real data (gapminder)
     *   Will _not_ depend on Jupyter Notebook
         *   What to use instead?
         *   How to get learners' filenames into programs?
+*   Data
+    *   Use the gapminder data throughout
+    *   Break into multiple files by continent
 
 ## Stage 1 - Desired Results
 
@@ -79,7 +81,7 @@ Students will understand that...
 ## Stage 2 - Assessment
 
 Running and Quitting Interactively
-:   Run an interactive Python interpreter; print 1+2; exit the interpreter
+:   run an interactive Python interpreter; print 1+2; exit the interpreter
 
 Variables and Assignment
 :   trace behavior of swapping with intermediate variable; calculate elapsed time in seconds
@@ -91,16 +93,16 @@ Built-in Functions and Help
 :   len (of strings); max
 
 Libraries
-:   os (for getcwd and chdir, needed to load data files); python.org docs
+:   operations with math library; python.org docs
 
 Reading Tabular Data
 :   read CSV with NumPy
 
 Collective Operations
-:   row and column averages
+:   scale array values to 0..1
 
 Plotting
-:   plotting averages; scatterplots
+:   plot differences between data sets
 
 Running Saved Programs
 :   FIXME: depends on tools
@@ -109,19 +111,19 @@ For Loops
 :   reverse a string
 
 Lists
-:   looping over a range of numbers
+:   create lists from lists
 
 Looping Over Data Sets
-:   glob; process each file in a directory
+:   process each file in a directory
 
 Error Messages
-:   diagnose and fix several broken programs (some syntax errors, some runtime errors)
+:   diagnose and fix small programs with errors (some syntax, some runtime)
 
 Conditionals
-:   counting vowels; check sizes of data files
+:   count vowels; check sizes of data files inside a loop
 
 Writing Functions
-:   check sizes of data files in a directory (name given as arg)
+:   check sizes of all data files in a directory (name given as arg)
 
 The Call Stack and Variable Scoping
 :   trace and draw execution of functions calling functions
@@ -133,7 +135,7 @@ Programming Style
 :   clean up badly-written 20-line program
 
 Debugging
-:   debug one-page program by importing and then testing functions with small lists
+:   debug one-page program by importing and then testing functions with small fabricated data
 
 Testing
 :   write Nose tests for the functions in the one-page program above
