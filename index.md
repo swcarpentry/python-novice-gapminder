@@ -2,13 +2,13 @@
 
 ## Stage 0 - Assumptions
 
-*   Audience:
+*   Audience
     *   Graduate students in numerate disciplines
     *   Understand very basic statistics (mean, correlation)
     *   Have manipulated data in spreadsheets and interactive tools like SAS
     *   Have _not_ programmed beyond CPD (copy-paste-despair)
-*   Requirements:
-    *   Full day (12 x 30 minutes)
+*   Requirements
+    *   Full day: 18 x 20 minutes
     *   Learners use their own machines
     *   No dependence on other Carpentry modules
         *   In particular, no knowledge of shell or version control
@@ -54,6 +54,7 @@ Students will understand that...
 *   What integers, floats, strings, lists, arrays, and data frames are
 *   How a `for` loop executes
 *   How `if`/`else` executes
+*   The difference between defining and calling a function
 *   What a call stack is
 *   How local variables are created and scoped
 *   Where to find documentation on standard libraries
@@ -75,46 +76,67 @@ Students will understand that...
 *   Interpret common error messages
 *   Track down bugs by running small tests of program modules
 
-## Stage 2 - Assessment Evidence
+## Stage 2 - Assessment
 
 Running and Quitting Interactively
-:   FIXME: exercises
+:   Run an interactive Python interpreter; print 1+2; exit the interpreter
 
 Variables and Assignment
-:   FIXME: exercises
+:   trace behavior of swapping with intermediate variable; calculate elapsed time in seconds
 
 Data Types and Type Conversion
-:   FIXME: exercises
+:   predict types (or errors) of various operations; add conversion functions to broken code to make it work
 
 Built-in Functions and Help
-:   FIXME: exercises
+:   len (of strings); max
 
 Libraries
-:   FIXME: exercises
+:   os (for getcwd and chdir, needed to load data files); python.org docs
 
 Reading Tabular Data
-:   FIXME: exercises
+:   read CSV with NumPy
 
 Collective Operations
-:   FIXME: exercises
-
-Running Saved Programs
-:   FIXME: exercises
-
-For Loops
-:   FIXME: exercises using character strings
-
-Lists
-:   FIXME: exercises on indexing and looping
-
-Looping Over Data Sets
-:   FIXME: exercises
-
-Conditionals
-:   FIXME: exercises testing characters inside loops and then checking data set sizes
+:   row and column averages
 
 Plotting
-:   FIXME: exercises
+:   plotting averages; scatterplots
+
+Running Saved Programs
+:   FIXME: depends on tools
+
+For Loops
+:   reverse a string
+
+Lists
+:   looping over a range of numbers
+
+Looping Over Data Sets
+:   glob; process each file in a directory
+
+Error Messages
+:   diagnose and fix several broken programs (some syntax errors, some runtime errors)
+
+Conditionals
+:   counting vowels; check sizes of data files
+
+Writing Functions
+:   check sizes of data files in a directory (name given as arg)
+
+The Call Stack and Variable Scoping
+:   trace and draw execution of functions calling functions
+
+Documentation
+:   add docstrings to functions written earlier
+
+Programming Style
+:   clean up badly-written 20-line program
+
+Debugging
+:   debug one-page program by importing and then testing functions with small lists
+
+Testing
+:   write Nose tests for the functions in the one-page program above
 
 ## Stage 3 - Learning Plan
 
