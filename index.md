@@ -90,28 +90,25 @@ Data Types and Type Conversion
 :   predict types (or errors) of various operations; add conversion functions to broken code to make it work
 
 Built-in Functions and Help
-:   len (of strings); max
+:   chain calculations with max and min
 
 Libraries
 :   operations with math library; python.org docs
 
 Reading Tabular Data
-:   read CSV with NumPy
+:   read gapminder CSV with NumPy
 
 Collective Operations
 :   scale array values to 0..1
 
 Plotting
-:   plot differences between data sets
+:   plot normalized change in GDP over time
 
 Running Saved Programs
 :   FIXME: depends on tools
 
 For Loops
 :   reverse a string
-
-Lists
-:   create lists from lists
 
 Looping Over Data Sets
 :   process each file in a directory
