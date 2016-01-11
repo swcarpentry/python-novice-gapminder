@@ -8,7 +8,7 @@
     *   Have manipulated data in spreadsheets and interactive tools like SAS
     *   Have _not_ programmed beyond CPD (copy-paste-despair)
 *   Requirements
-    *   Full day: 18 x 20 minutes
+    *   Full day: 6.5 hours
     *   Learners use their own machines
     *   No dependence on other Carpentry modules
         *   In particular, no knowledge of shell or version control
@@ -77,65 +77,153 @@ Students will understand that...
 *   Create simple plots of data in arrays and data frames
 *   Interpret common error messages
 *   Track down bugs by running small tests of program modules
+*   Create literate programs in the Jupyter Notebook
 
 ## Stage 2 - Assessment
 
-Running and Quitting Interactively
-:   run an interactive Python interpreter; print 1+2; exit the interpreter
+### Running and Quitting Interactively
 
-Variables and Assignment
-:   trace behavior of swapping with intermediate variable; calculate elapsed time in seconds
+*   Teaching: 5 min
+*   Exercises: 10 min (because setup issues)
+    *   Run an interactive Python interpreter, print 1+2, exit the interpreter
 
-Data Types and Type Conversion
-:   predict types (or errors) of various operations; add conversion functions to broken code to make it work
+### Variables and Assignment
 
-Built-in Functions and Help
-:   chain calculations with max and min
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
+    *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
 
-Libraries
-:   operations with math library; python.org docs
+### Data Types and Type Conversion
 
-Reading Tabular Data
-:   read gapminder CSV with NumPy
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   predict result types (or errors) of various operations
+    *   add conversion functions to broken code to make it work
 
-Collective Operations
-:   scale array values to 0..1
+### Built-in Functions (and Methods) and Help
 
-Plotting
-:   plot normalized change in GDP over time
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   chain calculations with max and min
+    *   find a useful method using help(str)
+    *   Parsons Problem to achieve specific results with string methods
 
-Running Saved Programs
-:   FIXME: depends on tools
+### Libraries (Including Aliases)
 
-For Loops
-:   reverse a string
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   operations with math library
+    *   look things up in the python.org docs
 
-Looping Over Data Sets
-:   process each file in a directory
+### Collective Operations (on NumPy Arrays)
 
-Error Messages
-:   diagnose and fix small programs with errors (some syntax, some runtime)
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   scale array values to 0..1
 
-Conditionals
-:   count vowels; check sizes of data files inside a loop
+### Reading Tabular Data
 
-Writing Functions
-:   check sizes of all data files in a directory (name given as arg)
+*   Teaching: 5 min (hard part is changing directory, so may need to introduce os library)
+*   Exercises: 5 min
+    *   read gapminder CSV with NumPy
 
-The Call Stack and Variable Scoping
-:   trace and draw execution of functions calling functions
+### Plotting
 
-Documentation
-:   add docstrings to functions written earlier
+*   Teaching: 10 min (to show a variety of plots and debug display problems)
+*   Exercises: 5 min
+    *   plot normalized change in GDP over time (tweaking provided code)
 
-Programming Style
-:   clean up badly-written 20-line program
+### Running Saved Programs
 
-Debugging
-:   debug one-page program by importing and then testing functions with small fabricated data
+*   Teaching: 10 min (setup issues again)
+*   Exercises:
+    *   save plotting code in file and run that (input filename hard-coded)
+    *   FIXME: how to get filename into script without editing?
 
-Testing
-:   write Nose tests for the functions in the one-page program above
+### For Loops
+
+*   Teaching: 15 min (do *not* introduce lists)
+*   Exercises: 10 min
+    *   reverse a string by repeated append
+    *   trace execution of loop
+
+### Lists
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   indexing exercises
+    *   conversion from list to string and back
+    *   sum values in a list
+
+### Looping Over Data Sets
+
+*   Teaching: 10 min (use glob to get filenames)
+*   Exercises: 15 min
+    *   count rows of each data set
+    *   check number of columns in each data set is the same
+
+### Error Messages
+
+*   Teaching: 10 min (review of error messages seen to date)
+*   Exercises: 10 min
+    *   diagnose and fix small programs with errors (some syntax, some runtime)
+
+### Conditionals
+
+*   Teaching: 15 min (inside loop)
+*   Exercises: 15 min
+    *   count vowels
+    *   check sizes of data files inside a loop
+
+### Writing Functions
+
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   check size of a single data file
+    *   check sizes of all data files in a directory (directory name given as arg)
+
+### The Call Stack and Variable Scoping
+
+*   Teaching: 15 min
+*   Exercises: 20 min
+    *   trace and draw execution of functions calling functions
+
+### Documentation
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   add docstrings to functions written earlier
+
+### Programming Style
+
+*   Teaching: 15 min (mostly to introduce checklist)
+*   Exercises: 15 min
+    *   clean up badly-written 20-line program
+
+### Debugging
+
+*   Teaching: 10 min (divide and conquer)
+*   Exercises: 15 min
+    *   debug one-page program
+
+### Defensive Programming
+
+*   Teaching: 5 min
+*   Exercises: 10 min
+    *   add assertions to functions based on docstrings
+
+### Testing
+
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   write Nose tests for the functions in the one-page program above
+
+### Jupyter Notebook
+
+*   Teaching: 15 min
+*   Exercises: 20 min
+    *   build a multi-part script with documentation in the Notebook
 
 ## Stage 3 - Learning Plan
 
