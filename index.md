@@ -8,16 +8,22 @@
     *   Have manipulated data in spreadsheets and interactive tools like SAS
     *   Have _not_ programmed beyond CPD (copy-paste-despair)
 *   Requirements
-    *   Full day: 6.5 hours
+    *   Full day: 06:30
     *   Learners use their own machines
     *   No dependence on other Carpentry modules
         *   In particular, no knowledge of shell or version control
-    *   Will _not_ depend on Jupyter Notebook
-        *   What to use instead?
-        *   How to get learners' filenames into programs?
+    *   Will introduce the Jupyter Notebook
+        *   Authentic tool used by many instructors
+        *   There isn't really an alternative
 *   Data
     *   Use the gapminder data throughout
     *   Break into multiple files by continent
+*   Pandas instead of NumPy
+    *   Genuine novices are likely to want data analysis
+    *   People with some prior experience:
+        *   Will accept data analysis as an authentic task
+        *   Are unlikely to have encountered Pandas,
+            so they'll still get something useful out of the lesson
 
 ## Stage 1 - Desired Results
 
@@ -27,20 +33,6 @@
     "[Good Enough Practices in Scientific Computing][good-enough]".
 *   Enable them to make sense of other onlines tutorials and resources
 
-### Understandings
-
-Students will understand that...
-
-*   A program is a piece of lab equipment that implements an analysis
-    *   Needs to be validated/calibrated before/during use
-    *   Makes analysis reproducible, reviewable, shareable
-*   Programs are written for people, not for computers
-    *   Meaningful variable names
-    *   Modularity for readability as well as re-use
-    *   No duplication
-    *   Document purpose and use
-*   There is no magic: the programs they use are no different in principle from those they build
-
 ### Essential Questions
 
 *   How do I read, analyze, and visualize a tabular data set?
@@ -48,18 +40,6 @@ Students will understand that...
 *   How do I tell if my program is working correctly?
 *   How do I fix it when it's not?
 *   How do I find and use software other people have written instead of writing my own?
-
-### Learners Will Know...
-
-*   What a variable is
-*   How assignment works
-*   What integers, floats, strings, lists, arrays, and data frames are
-*   How a `for` loop executes
-*   How `if`/`else` executes
-*   The difference between defining and calling a function
-*   What a call stack is
-*   How local variables are created and scoped
-*   Where to find documentation on standard libraries
 
 ### Learners Will Be Able To...
 
@@ -79,13 +59,36 @@ Students will understand that...
 *   Track down bugs by running small tests of program modules
 *   Create literate programs in the Jupyter Notebook
 
+### Learners Will Know...
+
+*   That a program is a piece of lab equipment that implements an analysis
+    *   Needs to be validated/calibrated before/during use
+    *   Makes analysis reproducible, reviewable, shareable
+*   That programs are written for people, not for computers
+    *   Meaningful variable names
+    *   Modularity for readability as well as re-use
+    *   No duplication
+    *   Document purpose and use
+*   That there is no magic: the programs they use are no different in principle from those they build
+*   What a variable is
+*   How assignment works
+*   What integers, floats, strings, lists, arrays, and data frames are
+*   How a `for` loop executes
+*   How `if`/`else` executes
+*   The difference between defining and calling a function
+*   What a call stack is
+*   How local variables are created and scoped
+*   Where to find documentation on standard libraries
+
 ## Stage 2 - Assessment
 
 ### Running and Quitting Interactively
 
-*   Teaching: 5 min
-*   Exercises: 10 min (because setup issues)
-    *   Run an interactive Python interpreter, print 1+2, exit the interpreter
+*   Teaching: 15 min (because setup issues)
+*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+    *   Run the Notebook
+    *   Create a few Markdown cells
+    *   Create and execute a Python cell that prints 1+2
 
 ### Variables and Assignment
 
@@ -98,132 +101,127 @@ Students will understand that...
 
 *   Teaching: 5 min
 *   Exercises: 5 min
-    *   predict result types (or errors) of various operations
-    *   add conversion functions to broken code to make it work
+    *   Predict result types (or errors) of various operations
+    *   Add conversion functions to broken code to make it work
 
 ### Built-in Functions (and Methods) and Help
 
 *   Teaching: 5 min
 *   Exercises: 5 min
-    *   chain calculations with max and min
-    *   find a useful method using help(str)
+    *   Chain calculations with max and min
+    *   Find a useful method using help(str)
     *   Parsons Problem to achieve specific results with string methods
-
-### Libraries (Including Aliases)
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   operations with math library
-    *   look things up in the python.org docs
-
-### Collective Operations (on NumPy Arrays)
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   scale array values to 0..1
-
-### Reading Tabular Data
-
-*   Teaching: 5 min (hard part is changing directory, so may need to introduce os library)
-*   Exercises: 5 min
-    *   read gapminder CSV with NumPy
-
-### Plotting
-
-*   Teaching: 10 min (to show a variety of plots and debug display problems)
-*   Exercises: 5 min
-    *   plot normalized change in GDP over time (tweaking provided code)
-
-### Running Saved Programs
-
-*   Teaching: 10 min (setup issues again)
-*   Exercises:
-    *   save plotting code in file and run that (input filename hard-coded)
-    *   FIXME: how to get filename into script without editing?
-
-### For Loops
-
-*   Teaching: 15 min (do *not* introduce lists)
-*   Exercises: 10 min
-    *   reverse a string by repeated append
-    *   trace execution of loop
-
-### Lists
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   indexing exercises
-    *   conversion from list to string and back
-    *   sum values in a list
-
-### Looping Over Data Sets
-
-*   Teaching: 10 min (use glob to get filenames)
-*   Exercises: 15 min
-    *   count rows of each data set
-    *   check number of columns in each data set is the same
 
 ### Error Messages
 
 *   Teaching: 10 min (review of error messages seen to date)
 *   Exercises: 10 min
-    *   diagnose and fix small programs with errors (some syntax, some runtime)
+    *   Diagnose and fix small errors (some syntax, some runtime)
+
+### Libraries (Including Aliases)
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Operations with math library
+    *   Look things up in the python.org docs
+
+### Pandas Data Frames
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Import Pandas
+    *   Create and display a data frame
+
+### Reading Tabular Data
+
+*   Teaching: 5 min
+*   Exercises: 5 min
+    *   Read one continent's subset of gapminder CSV data
+
+### Collective Operations
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Select various subsets of data
+    *   Normalize values (scale to 0..1)
+
+### Plotting
+
+*   Teaching: 10 min (to show a variety of plots and debug display problems)
+*   Exercises: 5 min
+    *   Plot normalized change in GDP over time (tweaking provided code)
+
+### For Loops
+
+*   Teaching: 15 min (do *not* introduce lists)
+*   Exercises: 10 min
+    *   Reverse a string by repeated append
+    *   Trace execution of loop
+
+### Looping Over Data Sets
+
+*   Teaching: 10 min (use glob to get filenames)
+*   Exercises: 15 min
+    *   Count rows of each data set
+    *   Check number of columns in each data set is the same
+
+### Lists
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Indexing exercises
+    *   Conversion from list to string and back
+    *   Sum values in a list
 
 ### Conditionals
 
 *   Teaching: 15 min (inside loop)
 *   Exercises: 15 min
-    *   count vowels
-    *   check sizes of data files inside a loop
+    *   Count vowels
+    *   Check sizes of data files inside a loop
 
 ### Writing Functions
 
 *   Teaching: 15 min
 *   Exercises: 15 min
-    *   check size of a single data file
-    *   check sizes of all data files in a directory (directory name given as arg)
-
-### The Call Stack and Variable Scoping
-
-*   Teaching: 15 min
-*   Exercises: 20 min
-    *   trace and draw execution of functions calling functions
+    *   Check size of a single data file
+    *   Check sizes of all data files in a directory
+        *   Write new function using previous function
 
 ### Documentation
 
-*   Teaching: 10 min
+*   Teaching: 5 min
 *   Exercises: 10 min
-    *   add docstrings to functions written earlier
+    *   Add docstrings to functions written earlier
 
 ### Programming Style
 
-*   Teaching: 15 min (mostly to introduce checklist)
+*   Teaching: 10 min (mostly to introduce checklist)
 *   Exercises: 15 min
-    *   clean up badly-written 20-line program
+    *   Clean up badly-written 20-line program
 
 ### Debugging
 
 *   Teaching: 10 min (divide and conquer)
 *   Exercises: 15 min
-    *   debug one-page program
+    *   Debug three-function program
 
 ### Defensive Programming
 
 *   Teaching: 5 min
 *   Exercises: 10 min
-    *   add assertions to functions based on docstrings
+    *   Add assertions to functions based on docstrings
 
-### Testing
+### Programming with Arrays
 
-*   Teaching: 15 min
-*   Exercises: 15 min
-    *   write Nose tests for the functions in the one-page program above
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   More complicated array indexing
 
-### Jupyter Notebook
+### Wrap-Up
 
-*   Teaching: 15 min
-*   Exercises: 20 min
-    *   build a multi-part script with documentation in the Notebook
+*   Teaching: 10 min (overview of key scipy modules)
+*   Exercises: 0 min
 
 ## Stage 3 - Learning Plan
 
