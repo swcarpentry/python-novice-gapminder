@@ -29,9 +29,29 @@
 
 ### Goals
 
-*   Get learners to the stage decribed in the "Software" section of
+1.  Get learners to the stage decribed in the "Software" section of
     "[Good Enough Practices in Scientific Computing][good-enough]".
-*   Enable them to make sense of other onlines tutorials and resources
+    *   Goals
+        1.  Make it easy for people (including your future self) to understand and (re)use your code
+        2.  Modular, comprehensible, reusable, and testable all come together
+    *   Rules
+        1.  Every analysis step is represented textually (complete with parameter values)
+        2.  Every program or script has a brief explanatory comment at the start
+        3.  Programs of all kinds (including "scripts") are broken into functions that:
+        4.  No duplication
+        5.  Functions and variables have meaningful names
+        6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
+        7.  Commenting/uncommenting are not routinely used to control program behavior
+        8.  Use a simple example or test data set to run to tell if it's working at all and whether it gives a known correct output for a simple known input
+        9.  Submit code to a reputable DOI-issuing repository upon submission of paper, just like data
+2.  Enable them to make sense of other onlines tutorials and resources
+
+### Summative Assessment
+
+FIXME:
+
+1.  If we had a final exam for this, what would it be?
+2.  If we had a mid-point exam, what would it be?
 
 ### Essential Questions
 
@@ -167,6 +187,8 @@
 *   Exercises: 15 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
+
+### *Lunch Break*
 
 ### Lists
 
