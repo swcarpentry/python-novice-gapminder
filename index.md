@@ -120,8 +120,8 @@
 
 ### Libraries (Including Aliases)
 
-*   Teaching: 10 min
-*   Exercises: 10 min
+*   Teaching: 5 min
+*   Exercises: 5 min
     *   Operations with math library
     *   Look things up in the python.org docs
 
@@ -137,6 +137,9 @@
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Read one continent's subset of gapminder CSV data
+*   Callout:
+    *   How to read data from Excel spreadsheets via export to CSV
+    *   How tor ead data from Excel spreadsheets directly (needs another library)
 
 ### Collective Operations
 
@@ -175,10 +178,10 @@
 
 ### Conditionals
 
-*   Teaching: 15 min (inside loop)
+*   Teaching: 10 min (inside loop)
 *   Exercises: 15 min
     *   Count vowels
-    *   Check sizes of data files inside a loop
+    *   Report badly-sized files inside loop
 
 ### Writing Functions
 
@@ -220,7 +223,11 @@
 
 ### Wrap-Up
 
-*   Teaching: 10 min (overview of key scipy modules)
+*   Teaching: 25 min
+    *   Overview of key SciPy modules
+    *   How to find and install libraries
+    *   Running Python from the command line
+    *   Other editing tools
 *   Exercises: 0 min
 
 ## Stage 3 - Learning Plan
