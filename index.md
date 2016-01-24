@@ -254,4 +254,6 @@ FIXME:
 
 ## Stage 3 - Learning Plan
 
+FIXME: fill in Teaching items above and add instructors' notes here.
+
 [good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
