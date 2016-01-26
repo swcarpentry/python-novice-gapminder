@@ -31,16 +31,17 @@
 
 1.  Get learners to the stage decribed in the "Software" section of
     "[Good Enough Practices in Scientific Computing][good-enough]".
+    *   Missing items are in **bold**
     *   Goals
         1.  Make it easy for people (including your future self) to understand and (re)use your code
         2.  Modular, comprehensible, reusable, and testable all come together
     *   Rules
         1.  Every analysis step is represented textually (complete with parameter values)
         2.  Every program or script has a brief explanatory comment at the start
-        3.  Programs of all kinds (including "scripts") are broken into functions that:
+        3.  Programs of all kinds (including "scripts") are broken into functions
         4.  No duplication
         5.  Functions and variables have meaningful names
-        6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
+        6.  **Dependencies and requirements are explicit (e.g., a requirements.txt file)**
         7.  Commenting/uncommenting are not routinely used to control program behavior
         8.  Use a simple example or test data set to run to tell if it's working at all and whether it gives a known correct output for a simple known input
         9.  Submit code to a reputable DOI-issuing repository upon submission of paper, just like data
@@ -107,14 +108,14 @@ FIXME:
 *   Teaching: 15 min (because setup issues)
 *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
     *   Run the Notebook
-    *   Create a few Markdown cells
-    *   Create and execute a Python cell that prints 1+2
+    *   Create a few Markdown cells (just formatted)
+    *   Create and execute a Python cell that prints 1+2 (to show that cells can be executed)
 
 ### Variables and Assignment
 
 *   Teaching: 5 min
 *   Exercises: 5 min
-    *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
+    *   Trace behavior of swapping values of two variables using an intermediate variable
     *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
 
 ### Data Types and Type Conversion
@@ -144,6 +145,8 @@ FIXME:
 *   Exercises: 5 min
     *   Operations with math library
     *   Look things up in the python.org docs
+
+### *Coffee: 15 min*
 
 ### Pandas Data Frames
 
@@ -183,12 +186,12 @@ FIXME:
 
 ### Looping Over Data Sets
 
-*   Teaching: 10 min (use glob to get filenames)
+*   Teaching: 10 min (use `glob` to get filenames)
 *   Exercises: 15 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
-### *Lunch Break*
+### *Lunch: 60 min*
 
 ### Lists
 
@@ -218,6 +221,8 @@ FIXME:
 *   Teaching: 5 min
 *   Exercises: 10 min
     *   Add docstrings to functions written earlier
+
+### *Coffee: 15 min*
 
 ### Programming Style
 
