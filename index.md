@@ -8,13 +8,14 @@
     *   Have manipulated data in spreadsheets and interactive tools like SAS
     *   Have _not_ programmed beyond CPD (copy-paste-despair)
 *   Requirements
-    *   Full day: 06:30
+    *   Full day: 06:30 teaching time (plus 1:30 for lunch and two coffee breaks)
     *   Learners use their own machines
     *   No dependence on other Carpentry modules
         *   In particular, no knowledge of shell or version control
-    *   Will introduce the Jupyter Notebook
+    *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
+        *   Even people who have seen a bit of Python before will learn something
 *   Data
     *   Use the gapminder data throughout
     *   Break into multiple files by continent
@@ -135,7 +136,7 @@ FIXME:
 
 ### Error Messages
 
-*   Teaching: 10 min (review of error messages seen to date)
+*   Teaching: 5 min (review of error messages seen to date)
 *   Exercises: 10 min
     *   Diagnose and fix small errors (some syntax, some runtime)
 
@@ -158,7 +159,7 @@ FIXME:
 ### Reading Tabular Data
 
 *   Teaching: 5 min
-*   Exercises: 5 min
+*   Exercises: 10 min (because some people will have trouble finding the data set's path)
     *   Read one continent's subset of gapminder CSV data
 *   Callout:
     *   How to read data from Excel spreadsheets via export to CSV
@@ -174,43 +175,37 @@ FIXME:
 ### Plotting
 
 *   Teaching: 10 min (to show a variety of plots and debug display problems)
-*   Exercises: 5 min
+*   Exercises: 10 min
     *   Plot normalized change in GDP over time (tweaking provided code)
 
 ### For Loops
 
-*   Teaching: 15 min (do *not* introduce lists)
+*   Teaching: 10 min
+    *   Do *not* explicitly introduce lists
 *   Exercises: 10 min
     *   Reverse a string by repeated append
-    *   Trace execution of loop
+    *   Manually trace execution of loop
+    *   Interrupt a running program
 
 ### Looping Over Data Sets
 
-*   Teaching: 10 min (use `glob` to get filenames)
+*   Teaching: 5 min (use `glob` to get filenames)
 *   Exercises: 15 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
 ### *Lunch: 60 min*
 
-### Lists
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Indexing exercises
-    *   Conversion from list to string and back
-    *   Sum values in a list
-
 ### Conditionals
 
 *   Teaching: 10 min (inside loop)
-*   Exercises: 15 min
+*   Exercises: 10 min
     *   Count vowels
     *   Report badly-sized files inside loop
 
 ### Writing Functions
 
-*   Teaching: 15 min
+*   Teaching: 10 min
 *   Exercises: 15 min
     *   Check size of a single data file
     *   Check sizes of all data files in a directory
@@ -219,7 +214,7 @@ FIXME:
 ### Documentation
 
 *   Teaching: 5 min
-*   Exercises: 10 min
+*   Exercises: 5 min
     *   Add docstrings to functions written earlier
 
 ### *Coffee: 15 min*
@@ -227,8 +222,8 @@ FIXME:
 ### Programming Style
 
 *   Teaching: 10 min (mostly to introduce checklist)
-*   Exercises: 15 min
-    *   Clean up badly-written 20-line program
+*   Exercises: 10 min
+    *   Critique a badly-written 20-line program
 
 ### Debugging
 
@@ -236,25 +231,11 @@ FIXME:
 *   Exercises: 15 min
     *   Debug three-function program
 
-### Defensive Programming
-
-*   Teaching: 5 min
-*   Exercises: 10 min
-    *   Add assertions to functions based on docstrings
-
-### Programming with Arrays
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   More complicated array indexing
-
 ### Wrap-Up
 
-*   Teaching: 25 min
+*   Teaching: 15 min
     *   Overview of key SciPy modules
     *   How to find and install libraries
-    *   Running Python from the command line
-    *   Other editing tools
 *   Exercises: 0 min
 
 ## Stage 3 - Learning Plan
