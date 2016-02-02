@@ -67,7 +67,6 @@ FIXME:
 
 *   Run code interactively
 *   Run code saved in a file
-*   Loop over a list
 *   Write single-condition `if` statements
 *   Convert between basic data types (integer, float, string)
 *   Call built-in functions
@@ -94,7 +93,7 @@ FIXME:
 *   That there is no magic: the programs they use are no different in principle from those they build
 *   What a variable is
 *   How assignment works
-*   What integers, floats, strings, lists, arrays, and data frames are
+*   What integers, floats, strings, and data frames are
 *   How a `for` loop executes
 *   How `if`/`else` executes
 *   The difference between defining and calling a function
