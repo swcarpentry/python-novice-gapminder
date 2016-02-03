@@ -127,8 +127,9 @@ FIXME:
 
 ### Built-in Functions (and Methods) and Help
 
-*   Teaching: 5 min
-*   Exercises: 5 min
+*   Teaching: 10 min
+    *   Include re-running cells and re-running all
+*   Exercises: 10 min
     *   Chain calculations with max and min
     *   Find a useful method using help(str)
     *   Parsons Problem to achieve specific results with string methods
@@ -148,13 +149,6 @@ FIXME:
 
 ### *Coffee: 15 min*
 
-### Pandas Data Frames
-
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Import Pandas
-    *   Create and display a data frame
-
 ### Reading Tabular Data
 
 *   Teaching: 5 min
@@ -162,12 +156,13 @@ FIXME:
     *   Read one continent's subset of gapminder CSV data
 *   Callout:
     *   How to read data from Excel spreadsheets via export to CSV
-    *   How tor ead data from Excel spreadsheets directly (needs another library)
 
-### Collective Operations
+### Pandas Data Frames
 
-*   Teaching: 10 min
-*   Exercises: 10 min
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   Create data frame manually
+    *   Select individual values
     *   Select various subsets of data
     *   Normalize values (scale to 0..1)
 
