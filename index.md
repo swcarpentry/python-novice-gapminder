@@ -3,27 +3,35 @@
 ## Stage 0 - Assumptions
 
 *   Audience
-    *   Graduate students in numerate disciplines
-    *   Understand very basic statistics (mean, correlation)
-    *   Have manipulated data in spreadsheets and interactive tools like SAS
-    *   Have _not_ programmed beyond CPD (copy-paste-despair)
-*   Requirements
-    *   Full day: 06:30 teaching time (plus 1:30 for lunch and two coffee breaks)
-    *   Learners use their own machines
+    *   Graduate students in numerate disciplines from cosmology to economics
+    *   Who understand very basic statistics (mean, standard deviation, correlation coefficient)
+    *   And have manipulated data in spreadsheets and with interactive tools like SAS
+    *   But have *not* programmed beyond CPD (copy-paste-despair)
+*   Constraints
+    *   One full day 09:00-17:00
+        *   06:30 teaching time
+        *   1:00 for lunch
+	*   0:30 total for two coffee breaks
+    *   Learners use native installs on their own machines
+        *   May use VMs or cloud resources at instructor's discretion
+        *   But must keep native local install as an option
     *   No dependence on other Carpentry modules
-        *   In particular, no knowledge of shell or version control
+        *   In particular, must not knowledge of shell or version control
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
-        *   Even people who have seen a bit of Python before will learn something
+        *   And means that even people who done seen a bit of Python before will probably learn something
 *   Data
     *   Use the gapminder data throughout
-    *   Break into multiple files by continent
-*   Pandas instead of NumPy
+    *   But break into multiple files by continent
+        *   To make display of output from examples tidier (use Australia/New Zealand, which is only two lines)
+        *   And allow examples showing use of multiple data sets
+*   Focus on Pandas instead of NumPy
+    *   Makes lesson usable by both Data Carpentry and Software Carpentry
     *   Genuine novices are likely to want data analysis
-    *   People with some prior experience:
-        *   Will accept data analysis as an authentic task
-        *   Are unlikely to have encountered Pandas,
+    *   And people with some prior experience:
+        *   will accept data analysis as an authentic task
+        *   And are unlikely to have encountered Pandas,
             so they'll still get something useful out of the lesson
 
 ## Stage 1 - Desired Results
@@ -50,10 +58,8 @@
 
 ### Summative Assessment
 
-FIXME:
-
-1.  If we had a final exam for this, what would it be?
-2.  If we had a mid-point exam, what would it be?
+*   Midpoint: plot bar chart showing average GDP per continent
+*   Final: debug and extend a short multi-function program to handle data laid out differently
 
 ### Essential Questions
 
@@ -101,7 +107,7 @@ FIXME:
 *   How local variables are created and scoped
 *   Where to find documentation on standard libraries
 
-## Stage 2 - Assessment
+## Stage 2 - Learning Plan
 
 ### Running and Quitting Interactively
 
@@ -231,9 +237,5 @@ FIXME:
     *   Overview of key SciPy modules
     *   How to find and install libraries
 *   Exercises: 0 min
-
-## Stage 3 - Learning Plan
-
-FIXME: fill in Teaching items above and add instructors' notes here.
 
 [good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
