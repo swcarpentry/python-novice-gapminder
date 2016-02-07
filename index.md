@@ -33,6 +33,8 @@
         *   will accept data analysis as an authentic task
         *   And are unlikely to have encountered Pandas,
             so they'll still get something useful out of the lesson
+*   See also:
+    *   http://nsoontie.github.io/2015-03-05-ubc/novice/python/Pandas-Lesson.html
 
 ## Stage 1 - Desired Results
 
