@@ -20,7 +20,7 @@
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
-        *   And means that even people who done seen a bit of Python before will probably learn something
+        *   And means that even people who have seen a bit of Python before will probably learn something
 *   Data
     *   Use the gapminder data throughout
     *   But break into multiple files by continent
