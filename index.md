@@ -16,7 +16,7 @@
         *   May use VMs or cloud resources at instructor's discretion
         *   But must keep native local install as an option
     *   No dependence on other Carpentry modules
-        *   In particular, must not knowledge of shell or version control
+        *   In particular, must not require knowledge of shell or version control
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
