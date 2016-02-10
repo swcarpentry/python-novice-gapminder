@@ -86,6 +86,7 @@
 *   Create simple plots of data in arrays and data frames
 *   Interpret common error messages
 *   Track down bugs by running small tests of program modules
+*   Write non-recursive functions taking a fixed number of named parameters
 *   Create literate programs in the Jupyter Notebook
 
 ### Learners Will Know...
