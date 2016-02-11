@@ -11,7 +11,7 @@
     *   One full day 09:00-17:00
         *   06:30 teaching time
         *   1:00 for lunch
-	*   0:30 total for two coffee breaks
+        *   0:30 total for two coffee breaks
     *   Learners use native installs on their own machines
         *   May use VMs or cloud resources at instructor's discretion
         *   But must keep native local install as an option
