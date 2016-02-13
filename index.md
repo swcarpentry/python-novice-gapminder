@@ -33,6 +33,13 @@
         *   will accept data analysis as an authentic task
         *   And are unlikely to have encountered Pandas,
             so they'll still get something useful out of the lesson
+*   Exercises will mostly *not* be "write this code from scratch"
+    *   Want lots of short exercises that can reliably be finished in allotted time
+    *   So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
+*   Lesson materials
+    *   Notes for instructors and self-study will be written in Markdown
+        *   We've tried writing/maintaining lessons as Notebooks...
+    *   Learners will be provided with one Notebook per episode containing exercises
 *   See also:
     *   http://nsoontie.github.io/2015-03-05-ubc/novice/python/Pandas-Lesson.html
 
@@ -147,7 +154,7 @@
 
 *   Teaching: 5 min (review of error messages seen to date)
 *   Exercises: 10 min
-    *   Diagnose and fix small errors (some syntax, some runtime)
+    *   Identify causes of common errors (but don't actually fix)
 
 ### Libraries (Including Aliases)
 
@@ -168,8 +175,8 @@
 
 ### Pandas Data Frames
 
-*   Teaching: 15 min
-*   Exercises: 15 min
+*   Teaching: 10 min
+*   Exercises: 10 min
     *   Create data frame manually
     *   Select individual values
     *   Select various subsets of data
@@ -201,7 +208,7 @@
 
 ### Conditionals
 
-*   Teaching: 10 min (inside loop)
+*   Teaching: 5 min (show conditionals inside loop)
 *   Exercises: 10 min
     *   Count vowels
     *   Report badly-sized files inside loop
@@ -222,9 +229,9 @@
 
 ### *Coffee: 15 min*
 
-### Programming Style
+### Defensive Programming
 
-*   Teaching: 10 min (mostly to introduce checklist)
+*   Teaching: 5 min (introduce assertions)
 *   Exercises: 10 min
     *   Critique a badly-written 20-line program
 
@@ -234,11 +241,16 @@
 *   Exercises: 15 min
     *   Debug three-function program
 
+### Programming Style
+
+*   Teaching: 10 min (present checklist)
+*   Exercises: 10 min
+    *   Do a code review
+
 ### Wrap-Up
 
 *   Teaching: 15 min
-    *   Overview of key SciPy modules
-    *   How to find and install libraries
+    *   Where to look next
 *   Exercises: 0 min
 
 [good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
