@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Licenses
+layout: lesson
+subtitle: Licenses
 ---
 ## Instructional Material
 
