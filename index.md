@@ -196,7 +196,6 @@
 *   Exercises: 10 min
     *   Reverse a string by repeated append
     *   Manually trace execution of loop
-    *   Interrupt a running program
 
 ### Looping Over Data Sets
 
