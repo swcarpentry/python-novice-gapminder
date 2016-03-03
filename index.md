@@ -199,7 +199,6 @@ layout: lesson
 *   Exercises: 10 min
     *   Reverse a string by repeated append
     *   Manually trace execution of loop
-    *   Interrupt a running program
 
 ### 11: [Looping Over Data Sets](looping-data-sets.html)
 
