@@ -111,6 +111,7 @@
 *   How assignment works
 *   What integers, floats, strings, and data frames are
 *   How a `for` loop executes
+*   What a list is and how to index one
 *   How `if`/`else` executes
 *   The difference between defining and calling a function
 *   What a call stack is
@@ -204,6 +205,12 @@
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
+### Lists
+
+*   Teaching: 5 min (show what `glob` produces and do a few operations on lists)
+*   Exercises: 5 min
+    *   Toy examples of lists, indexing, etc.
+
 ### *Lunch: 60 min*
 
 ### Conditionals
@@ -238,7 +245,7 @@
 ### Debugging
 
 *   Teaching: 10 min (divide and conquer)
-*   Exercises: 15 min
+*   Exercises: 10 min
     *   Debug three-function program
 
 ### Programming Style
@@ -249,7 +256,7 @@
 
 ### Wrap-Up
 
-*   Teaching: 15 min
+*   Teaching: 10 min
     *   Where to look next
 *   Exercises: 0 min
 
