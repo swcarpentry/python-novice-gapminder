@@ -7,6 +7,8 @@ subtitle: For Loops
 > * Learner will explain what `for` loops are normally used for.
 > * Learner will trace the execution of a simple (unnested) loop
 >   and correctly state the values of variables in each iteration.
+> * Learner will write `for` loops that use the Accumulator pattern
+>   to aggregate values.
 {: .objectives}
 
 FIXME: lesson content.
