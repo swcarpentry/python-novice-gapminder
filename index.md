@@ -123,7 +123,7 @@ layout: lesson
 
 ## Stage 2 - Learning Plan
 
-### 01: [Running and Quitting Interactively](01-run-quit.html)
+### [Running and Quitting Interactively](01-run-quit.html)
 
 *   Teaching: 15 min (because setup issues)
 *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
@@ -131,21 +131,21 @@ layout: lesson
     *   Create a few Markdown cells (just formatted)
     *   Create and execute a Python cell that prints 1+2 (to show that cells can be executed)
 
-### 02: [Variables and Assignment](02-variables.html)
+### [Variables and Assignment](02-variables.html)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Trace behavior of swapping values of two variables using an intermediate variable
     *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
 
-### 03: [Data Types and Type Conversion](03-types-conversion.html)
+### [Data Types and Type Conversion](03-types-conversion.html)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Predict result types (or errors) of various operations
     *   Add conversion functions to broken code to make it work
 
-### 04: [Built-in Functions and Help](04-built-in.html)
+### [Built-in Functions and Help](04-built-in.html)
 
 *   Teaching: 10 min
     *   Include re-running cells and re-running all
@@ -154,22 +154,22 @@ layout: lesson
     *   Find a useful method using help(str)
     *   Parsons Problem to achieve specific results with string methods
 
-### 05: [Error Messages](05-error-messages.html)
+### [Error Messages](05-error-messages.html)
 
 *   Teaching: 5 min (review of error messages seen to date)
 *   Exercises: 10 min
     *   Identify causes of common errors (but don't actually fix)
 
-### 06: [Libraries](06-libraries.html)
+### [Libraries](06-libraries.html)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Operations with math library
     *   Look things up in the python.org docs
 
-### *Coffee: 15 min*
+### Coffee: 15 min*
 
-### 07: [Reading Tabular Data](07-reading-tabular.html)
+### [Reading Tabular Data](07-reading-tabular.html)
 
 *   Teaching: 5 min
 *   Exercises: 10 min (because some people will have trouble finding the data set's path)
@@ -177,7 +177,7 @@ layout: lesson
 *   Callout:
     *   How to read data from Excel spreadsheets via export to CSV
 
-### 08: [Pandas Data Frames](08-data-frames.html)
+### [Pandas Data Frames](08-data-frames.html)
 
 *   Teaching: 10 min
 *   Exercises: 10 min
@@ -186,13 +186,19 @@ layout: lesson
     *   Select various subsets of data
     *   Normalize values (scale to 0..1)
 
-### 09: [Plotting](09-plotting.html)
+### [Plotting](09-plotting.html)
 
 *   Teaching: 10 min (to show a variety of plots and debug display problems)
 *   Exercises: 10 min
     *   Plot normalized change in GDP over time (tweaking provided code)
 
-### 10: [For Loops](10-for-loops.html)
+### [Lists](10-lists.html)
+
+*   Teaching: 5 min (show what `glob` produces and do a few operations on lists)
+*   Exercises: 5 min
+    *   Toy examples of lists, indexing, etc.
+
+### [For Loops](11-for-loops.html)
 
 *   Teaching: 10 min
     *   Do *not* explicitly introduce lists
@@ -201,29 +207,23 @@ layout: lesson
     *   Manually trace execution of loop
     *   Interrupt a running program
 
-### 11: [Looping Over Data Sets](looping-data-sets.html)
+### [Looping Over Data Sets](12-looping-data-sets.html)
 
 *   Teaching: 5 min (use `glob` to get filenames)
 *   Exercises: 15 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
-### 12: [Lists](12-lists.html)
-
-*   Teaching: 5 min (show what `glob` produces and do a few operations on lists)
-*   Exercises: 5 min
-    *   Toy examples of lists, indexing, etc.
-
 ### *Lunch: 60 min*
 
-### 13: [Conditionals](13-conditionals.html)
+### [Conditionals](13-conditionals.html)
 
 *   Teaching: 5 min (show conditionals inside loop)
 *   Exercises: 10 min
     *   Count vowels
     *   Report badly-sized files inside loop
 
-### 14: [Writing Functions](14-writing-functions.html)
+### [Writing Functions](14-writing-functions.html)
 
 *   Teaching: 10 min
 *   Exercises: 15 min
@@ -231,33 +231,33 @@ layout: lesson
     *   Check sizes of all data files in a directory
         *   Write new function using previous function
 
-### 15: [Documentation](15-documentation.html)
+### [Documentation](15-documentation.html)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Add docstrings to functions written earlier
 
-### *Coffee: 15 min*
+### Coffee: 15 min*
 
-### 16: [Defensive Programming](16-defensive-programming.html)
+### [Defensive Programming](16-defensive-programming.html)
 
 *   Teaching: 5 min (introduce assertions)
 *   Exercises: 10 min
     *   Critique a badly-written 20-line program
 
-### 17: [Debugging](17-debugging.html)
+### [Debugging](17-debugging.html)
 
 *   Teaching: 10 min (divide and conquer)
 *   Exercises: 10 min
     *   Debug three-function program
 
-### 18: [Programming Style](18-programming-style.html)
+### [Programming Style](18-programming-style.html)
 
 *   Teaching: 10 min (present checklist)
 *   Exercises: 10 min
     *   Do a code review
 
-### 19: [Wrap-Up](19-wrap.html)
+### [Wrap-Up](19-wrap.html)
 
 *   Teaching: 10 min
     *   Where to look next
