@@ -194,7 +194,7 @@ layout: lesson
 
 ### [Lists](10-lists.html)
 
-*   Teaching: 5 min (show what `glob` produces and do a few operations on lists)
+*   Teaching: 5 min
     *   Note: `range` doesn't produce a simple list in Python 3, so we can't use that for teaching.
 *   Exercises: 5 min
     *   Toy examples of lists, indexing, etc.
