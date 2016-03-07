@@ -33,6 +33,7 @@ FIXME: lesson content.
 >
 > 1. Explain in simple terms what `list("some string")` does.
 > 2. What does `'-'.join(['x', 'y'])` generate?
+{: .challenge}
 
 > ## Indexing
 >
@@ -43,6 +44,7 @@ FIXME: lesson content.
 > print(values[values[0]])
 > ~~~
 > {: .python}
+{: .challenge}
 
 > ## Fill in the Blanks
 >
@@ -64,6 +66,7 @@ FIXME: lesson content.
 > second time: [3, 5]
 > ~~~
 > {: .output}
+{: .challenge}
 
 > ## How Large is a Slice?
 >
