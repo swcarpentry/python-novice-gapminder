@@ -2,6 +2,7 @@
 layout: lesson
 subtitle: Pandas Data Frames
 ---
+FIXME
 *   Teaching: 10 min
 *   Exercises: 10 min
     *   Create data frame manually

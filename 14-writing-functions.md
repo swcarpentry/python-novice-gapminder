@@ -2,6 +2,7 @@
 layout: lesson
 subtitle: Writing Functions
 ---
+FIXME
 *   Teaching: 10 min
 *   Exercises: 15 min
     *   Check size of a single data file

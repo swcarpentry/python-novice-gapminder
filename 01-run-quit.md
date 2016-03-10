@@ -2,6 +2,7 @@
 layout: lesson
 subtitle: Running and Quitting Interactively
 ---
+FIXME
 *   Teaching: 15 min (because setup issues)
 *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
     *   Run the Notebook
