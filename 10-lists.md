@@ -46,36 +46,36 @@ print(values[values[0]])
 ~~~
 {: .python}
 
-> ## Fill in the Blanks
->
-> Fill in the blanks so that the program below produces the output shown.
->
-> ~~~
-> values = ____
-> values.____(1)
-> values.____(3)
-> values.____(5)
-> print('first time:', values)
-> values = values[____]
-> print('second time:', values)
-> ~~~
-> {: .python}
->
-> ~~~
-> first time: [1, 3, 5]
-> second time: [3, 5]
-> ~~~
-> {: .output}
+## Fill in the Blanks
 {: .challenge}
 
-> ## How Large is a Slice?
->
-> If 'low' and 'high' are both non-negative integers,
-> how long is the list `values[low:high]`?
+Fill in the blanks so that the program below produces the output shown.
+
+~~~
+values = ____
+values.____(1)
+values.____(3)
+values.____(5)
+print('first time:', values)
+values = values[____]
+print('second time:', values)
+~~~
+{: .python}
+
+~~~
+first time: [1, 3, 5]
+second time: [3, 5]
+~~~
+{: .output}
+
+## How Large is a Slice?
 {: .challenge}
 
-> ## In Simple Terms
->
-> Assuming `values` is a list,
-> explain in simple terms what `del values[-1]` does.
+If 'low' and 'high' are both non-negative integers,
+how long is the list `values[low:high]`?
+
+## In Simple Terms
 {: .challenge}
+
+Assuming `values` is a list,
+explain in simple terms what `del values[-1]` does.
