@@ -300,6 +300,35 @@ $bk-radius: 13px;
 }
 
 .lesson{
+
+  h2.challenge{
+    font-style: normal;
+    border: 1px solid;
+    border-radius: $bk-radius;
+    margin: auto;
+    padding: 10px 15px;
+    width: 98%;
+    font-size: 1.4em;
+
+    $color: #3c763d;
+    $glyph: "\270f";
+    $gradientcolor1: scale-color($color, $lightness: 70%);
+    $gradientcolor2: scale-color($color, $lightness: 80%);
+    border-color: $color;
+    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
+    border-color: $color;
+    color: darken( $color, 20% );
+
+    &::before {
+      content:$glyph ;
+      font-family: 'Glyphicons Halflings';
+      float: left;
+      padding-right:10px;
+      display: inline-block;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
   blockquote {
       margin: 10px;
       padding: 0px;
@@ -359,33 +388,6 @@ $bk-radius: 13px;
   .challenge{ @include bkSetup(#3c763d, "\270f"); }
   .objectives{ @include bkSetup(#D4C30B, "\e124"); }
   .testimonial{ @include bkSetup(#D4C30B, "\e067"); }
-  .heading{
-    font-style: normal;
-    border: 1px solid;
-    border-radius: $bk-radius;
-    margin: auto;
-    padding: 10px 15px;
-    width: 98%;
-    font-size: 1.4em;
-
-    $color: #3c763d;
-    $glyph: "\270f";
-    $gradientcolor1: scale-color($color, $lightness: 70%);
-    $gradientcolor2: scale-color($color, $lightness: 80%);
-    border-color: $color;
-    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
-    border-color: $color;
-    color: darken( $color, 20% );
-
-    &::before {
-      content:$glyph ;
-      font-family: 'Glyphicons Halflings';
-      float: left;
-      padding-right:10px;
-      display: inline-block;
-      -webkit-font-smoothing: antialiased;
-    }
-  }
 
   pre {
       display: block;
