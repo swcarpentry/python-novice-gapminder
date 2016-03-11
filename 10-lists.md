@@ -15,7 +15,7 @@ subtitle: Lists
 
 FIXME: lesson content.
 
->## From Strings to Lists and Back
+## From Strings to Lists and Back
 {: .heading}
 
 Given this:
@@ -35,7 +35,7 @@ print('list to string:', ''.join(['g', 'o', 'l', 'd']))
 1. Explain in simple terms what `list("some string")` does.
 2. What does `'-'.join(['x', 'y'])` generate?
 
->## Indexing
+## Indexing
 {: .heading}
 
 What does the following program print?
