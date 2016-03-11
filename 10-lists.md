@@ -16,7 +16,7 @@ subtitle: Lists
 FIXME: lesson content.
 
 ## From Strings to Lists and Back
-{: .heading}
+{: .challenge}
 
 Given this:
 
@@ -36,7 +36,7 @@ print('list to string:', ''.join(['g', 'o', 'l', 'd']))
 2. What does `'-'.join(['x', 'y'])` generate?
 
 ## Indexing
-{: .heading}
+{: .challenge}
 
 What does the following program print?
 
