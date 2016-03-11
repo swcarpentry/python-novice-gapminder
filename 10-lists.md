@@ -15,36 +15,36 @@ subtitle: Lists
 
 FIXME: lesson content.
 
-> ## From Strings to Lists and Back
->
-> Given this:
->
-> ~~~
-> print('string to list:', list('tin'))
-> print('list to string:', ''.join(['g', 'o', 'l', 'd']))
-> ~~~
-> {: .python}
->
-> ~~~
-> ['t', 'i', 'n']
-> 'gold'
-> ~~~
-> {: .output}
->
-> 1. Explain in simple terms what `list("some string")` does.
-> 2. What does `'-'.join(['x', 'y'])` generate?
+## From Strings to Lists and Back
 {: .challenge}
 
-> ## Indexing
->
-> What does the following program print?
->
-> ~~~
-> values = [1, 3, 5, 7, 9]
-> print(values[values[0]])
-> ~~~
-> {: .python}
+Given this:
+
+~~~
+print('string to list:', list('tin'))
+print('list to string:', ''.join(['g', 'o', 'l', 'd']))
+~~~
+{: .python}
+
+~~~
+['t', 'i', 'n']
+'gold'
+~~~
+{: .output}
+
+1. Explain in simple terms what `list("some string")` does.
+2. What does `'-'.join(['x', 'y'])` generate?
+
+## Indexing
 {: .challenge}
+
+What does the following program print?
+
+~~~
+values = [1, 3, 5, 7, 9]
+print(values[values[0]])
+~~~
+{: .python}
 
 > ## Fill in the Blanks
 >
