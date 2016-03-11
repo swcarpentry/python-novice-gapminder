@@ -359,6 +359,13 @@ $bk-radius: 13px;
   .challenge{ @include bkSetup(#3c763d, "\270f"); }
   .objectives{ @include bkSetup(#D4C30B, "\e124"); }
   .testimonial{ @include bkSetup(#D4C30B, "\e067"); }
+  .heading{
+    @include bkSetup(#3c763d, "\270f");
+    h2{
+        border-radius: $bk-radius;
+        border-bottom: none;
+    }
+   }
 
   pre {
       display: block;
@@ -659,4 +666,3 @@ font-smoothing: antialiased;
 .icon-warning:before { content: "\f131"; }
 .icon-xing:before { content: "\f135"; }
 .icon-youtube:before { content: "\f132"; }
-
