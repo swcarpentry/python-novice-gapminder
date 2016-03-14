@@ -2,15 +2,59 @@
 layout: lesson
 subtitle: Writing Functions
 ---
+> ## Learning Objectives
+>
+> * Learner will explain and identify the difference between function *definition* and function *call*.
+> * Learner will write a function that takes a small, fixed number of arguments and producing a single result.
+> * Learner will correctly identify local and global variable use in a function.
+{: .objectives}
 
-FIXME
+FIXME: lesson content.
 
-[Elegant explanation of functions](https://twitter.com/minisciencegirl/status/693486088963272705):
+FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/status/693486088963272705):
 () contains the ingredients for the function while the body contains the recipe.
 
+## Definition and Use
+{: .challenge}
 
-*   Teaching: 10 min
-*   Exercises: 15 min
-    *   Check size of a single data file
-    *   Check sizes of all data files in a directory
-        *   Write new function using previous function
+What does the following program print?
+
+~~~
+def report(pressure):
+    print('pressure is', pressure)
+
+print('calling', report, 22.5)
+
+## Encapsulation
+{: .challenge}
+
+Fill in the blanks to create a function
+that takes a single filename as an argument,
+loads the data in the file named by the argument,
+and returns the minimum value in that data.
+
+~~~
+import pandas as pd
+
+def min_in_data(____):
+    data = ____
+    return ____
+~~~
+{: .python}
+
+## Local and Global Variable Use
+{: .challenge}
+
+Trace the values of all variables in this program as it is executed.
+(Use '---' as the value of variables before and after they exist.)
+
+~~~
+limit = 100
+
+def clip(value):
+    return min(max(0.0, value), limit)
+
+value = -22.5
+print(clip(value))
+~~~
+{: .python}
