@@ -9,6 +9,8 @@ subtitle: Variables and Assignment
 > * Learner will correctly trace value changes in programs that use scalar assignment.
 {: .objectives}
 
+FIXME: lesson content.
+
 ## Swapping Values
 {: .challenge}
 
