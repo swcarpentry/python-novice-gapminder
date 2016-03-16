@@ -88,10 +88,15 @@ third = "1.1"
 {: .python}
 
 A. `first + float(second)`
+
 B. `float(second) + float(third)`
+
 C. `first + int(third)`
+
 D. `first + int(float(third))`
+
 E. `int(first) + int(float(third))`
+
 F. `2.0 * second`
 
 *Answer:*  A and D
