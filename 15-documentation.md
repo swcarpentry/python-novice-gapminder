@@ -11,7 +11,7 @@ exercises: 5
 > * Learner will write short docstrings for functions.
 {: objectives}
 
-FIXME
+FIXME: lesson content.
 
 ## What Will Be Shown?
 {: .challenge}
