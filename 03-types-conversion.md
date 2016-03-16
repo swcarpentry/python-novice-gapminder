@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Data Types and Type Conversion
+teaching: 5
+exercises: 5
 ---
 > ## Learning Objectives
 >

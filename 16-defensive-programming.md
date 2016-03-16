@@ -1,7 +1,13 @@
 ---
 layout: lesson
 subtitle: Defensive Programming
+teaching: 5
+exercises: 10
 ---
+> ## Learning Objectives
+>
+> * FIXME
+{: objectives}
 
 FIXME
 

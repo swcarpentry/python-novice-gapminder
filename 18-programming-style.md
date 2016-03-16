@@ -1,7 +1,13 @@
 ---
 layout: lesson
 subtitle: Programming Style
+teaching: 10
+exercises: 10
 ---
+> ## Learning Objectives
+>
+> * FIXME
+{: .objectives}
 
 FIXME
 

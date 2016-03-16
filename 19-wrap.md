@@ -1,7 +1,13 @@
 ---
 layout: lesson
 subtitle: Wrap-Up
+teaching: 10
+exercises: 0
 ---
+> ## Learning Objectives
+>
+> * FIXME
+{: .objectives}
 
 FIXME
 

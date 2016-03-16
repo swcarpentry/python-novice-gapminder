@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Pandas Data Frames
+teaching: 10
+exercises: 10
 ---
 > ## Learning Objectives
 >
