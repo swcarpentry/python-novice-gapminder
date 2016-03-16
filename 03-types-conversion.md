@@ -74,3 +74,24 @@ Why do you think it does that?
 print("fractional string to int:", int("3.4"))
 ~~~
 {: .python}
+
+## Arithmetic with Different Types
+{: .challenge}
+
+Which of the following will print 2.0? *(note: there can be more than one right answer).*
+
+~~~
+first = 1.0
+second = "1"
+third = "1.1"
+~~~
+{: .python}
+
+A. `first + float(second)`
+B. `float(second) + float(third)`
+C. `first + int(third)`
+D. `first + int(float(third))`
+E. `int(first) + int(float(third))`
+F. `2.0 * second`
+
+*Answer:*  A and D
