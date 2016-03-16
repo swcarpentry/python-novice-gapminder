@@ -13,6 +13,13 @@
       <h1>
         <a href="{{site.baseurl}}/">{{ site.lesson_title }}</a>{% if page.subtitle %}: {{ page.subtitle }}{% endif %}
       </h1>
+      {% if page.teaching or page.exercises %}
+      <p>
+	Teaching time: {{page.teaching}} minutes
+	<br/>
+	Exercise time: {{page.exercises}} minutes
+      </p>
+      {% endif %}
       {{ content }}
     </div>
   </div>
