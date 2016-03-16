@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Reading Tabular Data
+teaching: 5
+exercises: 10
 ---
 > ## Learning Objectives
 >

@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Plotting
+teaching: 10
+exercises: 10
 ---
 > ## Learning Objectives
 >

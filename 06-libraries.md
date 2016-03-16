@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Libraries
+teaching: 5
+exercises: 5
 ---
 > ## Learning Objectives
 >

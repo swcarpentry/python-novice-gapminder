@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Built-in Functions (and Methods) and Help
+teaching: 10
+exercises: 10
 ---
 > ## Learning Objectives
 >

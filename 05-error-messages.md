@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Error Messages
+teaching: 5
+exercises: 10
 ---
 > ## Learning Objectives
 >

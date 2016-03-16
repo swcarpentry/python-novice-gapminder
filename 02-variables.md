@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Variables and Assignment
+teaching: 5
+exercises: 5
 ---
 > ## Learning Objectives
 >

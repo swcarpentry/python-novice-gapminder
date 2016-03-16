@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Writing Functions
+teaching: 10
+exercises: 15
 ---
 > ## Learning Objectives
 >

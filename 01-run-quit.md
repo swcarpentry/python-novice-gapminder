@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Running and Quitting Interactively
+teaching: 15
+exercises: 0
 ---
 > ## Learning Objectives
 >

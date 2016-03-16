@@ -1,7 +1,13 @@
 ---
 layout: lesson
 subtitle: Debugging
+teaching: 10
+exercises: 10
 ---
+> ## Learning Objectives
+>
+> * FIXME
+{: .objectives}
 
 FIXME
 

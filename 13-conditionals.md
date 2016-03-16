@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: Conditionals
+teaching: 5
+exercises: 10
 ---
 > ## Learning Objectives
 >

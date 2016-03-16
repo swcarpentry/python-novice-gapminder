@@ -1,6 +1,8 @@
 ---
 layout: lesson
 subtitle: For Loops
+teaching: 10
+exercises: 10
 ---
 > ## Learning Objectives
 >
