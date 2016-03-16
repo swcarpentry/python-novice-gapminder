@@ -22,11 +22,11 @@ install :
 
 ## clean      : clean up junk files.
 clean :
-	rm -rf _site
-	rm -rf .sass-cache
-	find . -name .DS_Store -exec rm {} \;
-	find . -name '*~' -exec rm {} \;
-	find . -name '*.pyc' -exec rm {} \;
+	@rm -rf _site
+	@rm -rf .sass-cache
+	@find . -name .DS_Store -exec rm {} \;
+	@find . -name '*~' -exec rm {} \;
+	@find . -name '*.pyc' -exec rm {} \;
 
 # Include extra commands if available.
 -include commands.mk
