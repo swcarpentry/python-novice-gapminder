@@ -80,7 +80,8 @@ print("fractional string to int:", int("3.4"))
 ## Arithmetic with Different Types
 {: .challenge}
 
-Which of the following will print 2.0? *(note: there can be more than one right answer).*
+Which of the following will print 2.0?
+Note: there may be more than one right answer.
 
 ~~~
 first = 1.0
@@ -89,16 +90,12 @@ third = "1.1"
 ~~~
 {: .python}
 
-A. `first + float(second)`
+1. `first + float(second)`
+2. `float(second) + float(third)`
+3. `first + int(third)`
+4. `first + int(float(third))`
+5. `int(first) + int(float(third))`
+6. `2.0 * second`
 
-B. `float(second) + float(third)`
-
-C. `first + int(third)`
-
-D. `first + int(float(third))`
-
-E. `int(first) + int(float(third))`
-
-F. `2.0 * second`
-
-*Answer:*  A and D
+> Answer: A and D
+{: .solution}
