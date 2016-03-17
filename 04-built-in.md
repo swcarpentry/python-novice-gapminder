@@ -24,7 +24,7 @@ FIXME: lesson content.
 
 ~~~
 radiance = 1.0
-radiance = max(2.0 + min(radiance, 1.1 * radiance - 0.5))
+radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 ~~~
 {: .python}
 
