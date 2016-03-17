@@ -15,6 +15,18 @@ exercises: 5
 
 FIXME: lesson content.
 
+## Locating the right library
+{: .challenge}
+
+You want to select a random id from your dataset:
+~~~
+ids = [1, 2, 3, 4, 5, 6]
+~~~ 
+
+1. What [standard library](https://docs.python.org/3/library/index.html) 
+   would you most expect to help? 
+2. Which function would you select from that library? Are there alternatives?
+
 ## Exploring the Math Library
 {: .challenge}
 
