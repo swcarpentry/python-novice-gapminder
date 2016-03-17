@@ -6,11 +6,12 @@ exercises: 0
 ---
 > ## Learning Objectives
 >
-> * FIXME
+> * Learner will know to look at scientific Python community sites for software, workshops, and help.
 {: .objectives}
 
-FIXME
+FIXME: lesson content.
 
-*   Teaching: 15 min
-    *   Where to look next
-*   Exercises: 0 min
+* jupyter.org
+* scipy.org
+* pandas.pydata.org
+* add others

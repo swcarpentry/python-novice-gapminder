@@ -10,7 +10,7 @@ exercises: 10
 > * Learner will correct simple logic errors in short functions.
 {: .objectives}
 
-FIXME
+FIXME: lesson content.
 
 ## Finding Neighbors
 {: .challenge}
