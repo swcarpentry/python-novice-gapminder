@@ -7,7 +7,7 @@ exercises: 10
 > ## Learning Objectives
 >
 > * Learner will provide sound justifications for basic rules of coding style.
-> * Learner will refactor simple programs to make them more readable
+> * Learner will refactor one-page programs to make them more readable
 >   and justify the changes.
 {: .objectives}
 
