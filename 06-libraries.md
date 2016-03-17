@@ -15,10 +15,10 @@ exercises: 5
 
 FIXME: lesson content.
 
-## Locating the right library
+## Locating the Right Library
 {: .challenge}
 
-You want to select a random id from your dataset:
+You want to select a random value from your data:
 ~~~
 ids = [1, 2, 3, 4, 5, 6]
 ~~~ 
