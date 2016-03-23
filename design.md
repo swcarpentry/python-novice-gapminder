@@ -264,7 +264,7 @@ and the call stack all need time.
 ### [Looping Over Data Sets](12-looping-data-sets.html)
 
 *   Teaching: 5 min (use `glob` to get filenames)
-*   Exercises: 15 min
+*   Exercises: 10 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
