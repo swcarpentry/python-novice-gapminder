@@ -2,7 +2,7 @@
 layout: lesson
 subtitle: Looping Over Data Sets
 teaching: 5
-exercises: 15
+exercises: 10
 ---
 > ## Learning Objectives
 >

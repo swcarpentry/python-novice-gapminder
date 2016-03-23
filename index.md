@@ -4,12 +4,7 @@ layout: lesson
 This lesson is meant to be used in both [Data Carpentry][dc-website] and [Software Carpentry][swc-website] workshops.
 It's also meant to serve as a worked example in [instructor training][instructor-training] of how to develop a new lesson.
 
-*   [License](LICENSE.html)
-*   [Code of Conduct](CONDUCT.html)
-*   [Contributing](CONTRIBUTING.html)
-*   [Lesson Design](design.html)
-
-**Schedule**
+## Schedule
 
 |  1. | [Running and Quitting Interactively](01-run-quit.html)     | 09:00 |
 |  2. | [Variables and Assignment](02-variables.html)              | 09:15 |
@@ -17,27 +12,33 @@ It's also meant to serve as a worked example in [instructor training][instructor
 |  4. | [Built-in Functions and Help](04-built-in.html)            | 09:35 |
 |  5. | [Error Messages](05-error-messages.html)                   | 09:55 |
 |  6. | [Libraries](06-libraries.html)                             | 10:10 |
-|     | *Coffee*                                                   | 10:20 |
-|  7. | [Reading Tabular Data](07-reading-tabular.html)            | 10:35 |
-|  8. | [Pandas Data Frames](08-data-frames.html)                  | 10:50 |
-|  9. | [Plotting](09-plotting.html)                               | 11:10 |
-| 10. | [Lists](10-lists.html)                                     | 11:30 |
-| 11. | [For Loops](11-for-loops.html)                             | 11:40 |
-| 12. | [Looping Over Data Sets](12-looping-data-sets.html)        | 12:00 |
-|     | *Lunch*                                                    | 12:20 |
-| 13. | [Conditionals](13-conditionals.html)                       | 13:20 |
-| 14. | [Writing Functions](14-writing-functions.html)             | 13:35 |
-| 15. | [The Call Stack](15-call-stack.html)                       | 14:00 |
-|     | *Coffee*                                                   | 14:25 |
-| 16. | [Defensive Programming](16-defensive.html)                 | 14:40 |
-| 17. | [Programming Style](17-programming-style.html)             | 15:05 |
-| 18. | [Next Steps](18-next-steps.html)                           | 15:30 |
-| 19. | [Wrap-Up](19-wrap.html)                                    | 15:45 |
+|  7. | *[Morning Coffee](07-coffee.html)*                         | 10:20 |
+|  8. | [Reading Tabular Data](08-reading-tabular.html)            | 10:35 |
+|  9. | [Pandas Data Frames](09-data-frames.html)                  | 10:50 |
+| 10. | [Plotting](10-plotting.html)                               | 11:10 |
+| 11. | [Lists](11-lists.html)                                     | 11:30 |
+| 12. | [For Loops](12-for-loops.html)                             | 11:45 |
+| 13. | [Looping Over Data Sets](13-looping-data-sets.html)        | 12:05 |
+| 14. | *[Lunch](14-lunch.html)                                    | 12:20 |
+| 15. | [Conditionals](15-conditionals.html)                       | 13:20 |
+| 16. | [Writing Functions](16-writing-functions.html)             | 13:35 |
+| 17. | [The Call Stack](17-call-stack.html)                       | 14:00 |
+| 18. | *[Afternoon Coffee](18-coffee.html)*                       | 14:25 |
+| 19. | [Defensive Programming](19-defensive.html)                 | 14:40 |
+| 20. | [Programming Style](20-programming-style.html)             | 15:05 |
+| 21. | [Next Steps](21-next-steps.html)                           | 15:30 |
+| 22. | [Wrap-Up](22-wrap.html)                                    | 15:45 |
 
+## Resources
+
+*   [License](LICENSE.html)
+*   [Code of Conduct](CONDUCT.html)
+*   [Contributing](CONTRIBUTING.html)
 *   [Reference Guide](reference.html)
 *   [Discussion](discussion.html)
 *   [Further Exercises](exercises.html)
 *   [Instructors' Guide](instructors.html)
+*   [Lesson Design](design.html)
 
 [dc-website]: http://datacarpentry.org
 [instructor-training]: https://swcarpentry.github.io/instructor-training/
