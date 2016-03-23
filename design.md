@@ -45,6 +45,18 @@ This was also the point at which I settled on using the Jupyter Notebook
 (I'd decided on the [Gapminder data][gapminder-data] at the outset to be consistent with [Data Carpentry][dc-website]).
 It took about six hours of work over several weeks to get to the point where I felt the lesson was ready for general feedback.
 
+I then solicited feedback from half a dozen experienced instructors.
+Based on what they said,
+I made further cuts
+in order to devote more (i.e., more realistic) time to basic topics.
+Defensive programming, debugging, and programming style were merged,
+which freed up another half an hour to spend on functions:
+these are the key to writing reusable programs,
+but defining vs. calling,
+parameter passing,
+variable scope,
+and the call stack all need time.
+
 ## Stage 0 - Assumptions
 
 *   Audience
@@ -238,7 +250,7 @@ It took about six hours of work over several weeks to get to the point where I f
 
 *   Teaching: 5 min
     *   Note: `range` doesn't produce a simple list in Python 3, so we can't use that for teaching.
-*   Exercises: 5 min
+*   Exercises: 10 min
     *   Toy examples of lists, indexing, etc.
 
 ### [For Loops](11-for-loops.html)
@@ -273,35 +285,28 @@ It took about six hours of work over several weeks to get to the point where I f
     *   Check sizes of all data files in a directory
         *   Write new function using previous function
 
-### [Documentation](15-documentation.html)
+### [The Call Stack](15-call-stack.html)
 
-*   Teaching: 5 min
-*   Exercises: 5 min
+*   Teaching: 10 min
+*   Exercises: 15 min
     *   Add docstrings to functions written earlier
 
 ### Coffee: 15 min*
 
-### [Defensive Programming](16-defensive-programming.html)
-
-*   Teaching: 5 min (introduce assertions)
-*   Exercises: 10 min
-    *   Critique a badly-written 20-line program
-
-### [Debugging](17-debugging.html)
-
-*   Teaching: 10 min (divide and conquer)
-*   Exercises: 10 min
-    *   Debug three-function program
-
-### [Programming Style](18-programming-style.html)
-
-*   Teaching: 10 min (present checklist)
-*   Exercises: 10 min
-    *   Do a code review
-
-### [Wrap-Up](19-wrap.html)
+### [Defensive Programming](16-defensive.html)
 
 *   Teaching: 10 min
+*   Exercise: 15 min
+
+### [Programming Style](17-style.html)
+
+*   Teaching: 10 min (present checklist)
+*   Exercises: 15 min
+    *   Do a code review
+
+### [Wrap-Up](18-wrap.html)
+
+*   Teaching: 15 min
     *   Where to look next
 *   Exercises: 0 min
 

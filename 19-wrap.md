@@ -1,17 +1,12 @@
 ---
 layout: lesson
 subtitle: Wrap-Up
-teaching: 10
+teaching: 15
 exercises: 0
 ---
 > ## Learning Objectives
 >
-> * Learner will know to look at scientific Python community sites for software, workshops, and help.
+> * Learner will map major concepts and relations from the day's lessons.
 {: .objectives}
 
-FIXME: lesson content.
-
-* jupyter.org
-* scipy.org
-* pandas.pydata.org
-* add others
+FIXME: recap.

@@ -2,7 +2,7 @@
 layout: lesson
 subtitle: Lists
 teaching: 5
-exercises: 5
+exercises: 10
 ---
 > ## Learning Objectives
 >

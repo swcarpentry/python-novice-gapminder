@@ -2,7 +2,7 @@
 layout: lesson
 subtitle: Programming Style
 teaching: 10
-exercises: 10
+exercises: 15
 ---
 > ## Learning Objectives
 >
