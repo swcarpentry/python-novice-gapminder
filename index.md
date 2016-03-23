@@ -28,6 +28,7 @@ It's also meant to serve as a worked example in [instructor training][instructor
 | 20. | [Programming Style](20-programming-style.html)             | 15:05 |
 | 21. | [Next Steps](21-next-steps.html)                           | 15:30 |
 | 22. | [Wrap-Up](22-wrap.html)                                    | 15:45 |
+|     | Done                                                       | 16:00 |
 
 ## Resources
 
