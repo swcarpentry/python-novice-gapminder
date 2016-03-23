@@ -1,8 +1,8 @@
 ---
 layout: lesson
 subtitle: Defensive Programming
-teaching: 5
-exercises: 10
+teaching: 10
+exercises: 15
 ---
 > ## Learning Objectives
 >

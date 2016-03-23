@@ -9,6 +9,9 @@ exercises: 15
 > * Learner will explain and identify the difference between function *definition* and function *call*.
 > * Learner will write a function that takes a small, fixed number of arguments and producing a single result.
 > * Learner will correctly identify local and global variable use in a function.
+> * Learner will correctly identify portions of source code that will be displayed as online help,
+>   and in particular distinguish docstrings from comments.
+> * Learner will write short docstrings for functions.
 {: .objectives}
 
 FIXME: lesson content.
@@ -44,19 +47,45 @@ def min_in_data(____):
 ~~~
 {: .python}
 
-## Local and Global Variable Use
+## What Will Be Shown?
 {: .challenge}
 
-Trace the values of all variables in this program as it is executed.
-(Use '---' as the value of variables before and after they exist.)
+Highlight the lines in the code below that will be available as online help.
+Are there lines that should be made available, but won't be?
+Will any lines produce a syntax error or a runtime error?
 
 ~~~
-limit = 100
+"Find maximum edit distance between multiple sequences."
+# This finds the maximum distance between all sequences.
 
-def clip(value):
-    return min(max(0.0, value), limit)
+def overall_max(sequences):
+    '''Determine overall maximum edit distance.'''
 
-value = -22.5
-print(clip(value))
+    highest = 0
+    for left in sequences:
+        for right in sequences:
+            '''Avoid checking sequence against itself.'''
+            if left != right:
+                this = edit_distance(left, right)
+                highest = max(highest, this)
+
+    # Report.
+    return highest
+~~~
+{: .python}
+
+## Document This
+{: .challenge}
+
+Turn the comment on the following function into a docstring
+and check that `help` displays it properly.
+
+~~~
+def middle(a, b, c):
+    # Return the middle value of three.
+    # Assumes the values can actually be compared.
+    values = [a, b, c]
+    values.sort()
+    return values[1]
 ~~~
 {: .python}
