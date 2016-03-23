@@ -19,7 +19,7 @@ It's also meant to serve as a worked example in [instructor training][instructor
 | 11. | [Lists](11-lists.html)                                     | 11:30 |
 | 12. | [For Loops](12-for-loops.html)                             | 11:45 |
 | 13. | [Looping Over Data Sets](13-looping-data-sets.html)        | 12:05 |
-| 14. | *[Lunch](14-lunch.html)                                    | 12:20 |
+| 14. | *[Lunch](14-lunch.html)*                                   | 12:20 |
 | 15. | [Conditionals](15-conditionals.html)                       | 13:20 |
 | 16. | [Writing Functions](16-writing-functions.html)             | 13:35 |
 | 17. | [The Call Stack](17-call-stack.html)                       | 14:00 |
