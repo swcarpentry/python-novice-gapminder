@@ -20,6 +20,10 @@ site :
 install :
 	bundle install
 
+## schedule   : calculate schedule.
+schedule :
+	@bin/schedule -t 09:00 ??-*.md
+
 ## clean      : clean up junk files.
 clean :
 	@rm -rf _site
