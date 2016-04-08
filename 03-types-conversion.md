@@ -34,7 +34,7 @@ while the '%' operator returns the remainder from division:
 
 ~~~
 print('5 // 3:', 5//3)
-print('5 % 3:', 5//3)
+print('5 % 3:', 5%3)
 ~~~
 {: .python}
 
