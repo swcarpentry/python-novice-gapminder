@@ -221,7 +221,7 @@ and the call stack all need time.
     *   Operations with math library
     *   Look things up in the python.org docs
 
-### Coffee: 15 min*
+### *Coffee: 15 min*
 
 ### [Reading Tabular Data](07-reading-tabular.html)
 
@@ -291,7 +291,7 @@ and the call stack all need time.
 *   Exercises: 15 min
     *   Add docstrings to functions written earlier
 
-### Coffee: 15 min*
+### *Coffee: 15 min*
 
 ### [Defensive Programming](16-defensive.html)
 
