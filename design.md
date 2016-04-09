@@ -106,7 +106,6 @@ and the call stack all need time.
 
 1.  Get learners to the stage decribed in the "Software" section of
     "[Good Enough Practices in Scientific Computing][good-enough]".
-    *   Missing items are in **bold**
     *   Goals
         1.  Make it easy for people (including your future self) to understand and (re)use your code
         2.  Modular, comprehensible, reusable, and testable all come together
@@ -116,10 +115,12 @@ and the call stack all need time.
         3.  Programs of all kinds (including "scripts") are broken into functions
         4.  No duplication
         5.  Functions and variables have meaningful names
-        6.  **Dependencies and requirements are explicit (e.g., a requirements.txt file)**
+        6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
+            *   This rule is *not* covered in this lesson
         7.  Commenting/uncommenting are not routinely used to control program behavior
         8.  Use a simple example or test data set to run to tell if it's working at all and whether it gives a known correct output for a simple known input
         9.  Submit code to a reputable DOI-issuing repository upon submission of paper, just like data
+            *   This rule is *not* covered in this lesson
 2.  Enable them to make sense of other onlines tutorials and resources
 
 ### Summative Assessment
@@ -129,11 +130,13 @@ and the call stack all need time.
 
 ### Essential Questions
 
-*   How do I read, analyze, and visualize a tabular data set?
-*   How do I process multiple data sets?
-*   How do I tell if my program is working correctly?
-*   How do I fix it when it's not?
-*   How do I find and use software other people have written instead of writing my own?
+How do I...
+
+*   ...read, analyze, and visualize a tabular data set?
+*   ...process multiple data sets?
+*   ...tell if my program is working correctly?
+*   ...fix it when it's not?
+*   ...find and use software other people have written instead of writing my own?
 
 ### Learners Will Be Able To...
 
@@ -164,16 +167,15 @@ and the call stack all need time.
     *   No duplication
     *   Document purpose and use
 *   That there is no magic: the programs they use are no different in principle from those they build
-*   What a variable is
-*   How assignment works
+*   How to assign values to variables
 *   What integers, floats, strings, and data frames are
-*   How a `for` loop executes
-*   What a list is and how to index one
-*   How `if`/`else` executes
+*   How to trace the execution of a `for` loop
+*   How to create and index lists
+*   How to trace the execution of `if`/`else` statements
 *   The difference between defining and calling a function
 *   What a call stack is
-*   How local variables are created and scoped
 *   Where to find documentation on standard libraries
+*   How to find out what else scientific Python offers
 
 ## Stage 2 - Learning Plan
 
