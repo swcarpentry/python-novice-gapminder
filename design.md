@@ -223,9 +223,9 @@ How do I...
     *   Operations with math library
     *   Look things up in the python.org docs
 
-### *Coffee: 15 min*
+### *[Coffee: 15 min](07-coffee.html)*
 
-### [Reading Tabular Data](07-reading-tabular.html)
+### [Reading Tabular Data](08-reading-tabular.html)
 
 *   Teaching: 5 min
 *   Exercises: 10 min (because some people will have trouble finding the data set's path)
@@ -233,7 +233,7 @@ How do I...
 *   Callout:
     *   How to read data from Excel spreadsheets via export to CSV
 
-### [Pandas Data Frames](08-data-frames.html)
+### [Pandas Data Frames](09-data-frames.html)
 
 *   Teaching: 10 min
 *   Exercises: 10 min
@@ -242,20 +242,20 @@ How do I...
     *   Select various subsets of data
     *   Normalize values (scale to 0..1)
 
-### [Plotting](09-plotting.html)
+### [Plotting](10-plotting.html)
 
 *   Teaching: 10 min (to show a variety of plots and debug display problems)
 *   Exercises: 10 min
     *   Plot normalized change in GDP over time (tweaking provided code)
 
-### [Lists](10-lists.html)
+### [Lists](11-lists.html)
 
 *   Teaching: 5 min
     *   Note: `range` doesn't produce a simple list in Python 3, so we can't use that for teaching.
 *   Exercises: 10 min
     *   Toy examples of lists, indexing, etc.
 
-### [For Loops](11-for-loops.html)
+### [For Loops](12-for-loops.html)
 
 *   Teaching: 10 min
 *   Exercises: 10 min
@@ -263,23 +263,23 @@ How do I...
     *   Manually trace execution of loop
     *   Interrupt a running program
 
-### [Looping Over Data Sets](12-looping-data-sets.html)
+### [Looping Over Data Sets](13-looping-data-sets.html)
 
 *   Teaching: 5 min (use `glob` to get filenames)
 *   Exercises: 10 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
-### *Lunch: 60 min*
+### *[Lunch: 60 min](14-lunch.html)*
 
-### [Conditionals](13-conditionals.html)
+### [Conditionals](15-conditionals.html)
 
 *   Teaching: 5 min (show conditionals inside loop)
 *   Exercises: 10 min
     *   Count vowels
     *   Report badly-sized files inside loop
 
-### [Writing Functions](14-writing-functions.html)
+### [Writing Functions](16-writing-functions.html)
 
 *   Teaching: 10 min
 *   Exercises: 15 min
@@ -287,26 +287,32 @@ How do I...
     *   Check sizes of all data files in a directory
         *   Write new function using previous function
 
-### [The Call Stack](15-call-stack.html)
+### [The Call Stack](17-call-stack.html)
 
 *   Teaching: 10 min
 *   Exercises: 15 min
     *   Add docstrings to functions written earlier
 
-### *Coffee: 15 min*
+### *[Coffee: 15 min](18-coffee.html)*
 
-### [Defensive Programming](16-defensive.html)
+### [Defensive Programming](19-defensive.html)
 
 *   Teaching: 10 min
 *   Exercise: 15 min
 
-### [Programming Style](17-style.html)
+### [Programming Style](20-style.html)
 
 *   Teaching: 10 min (present checklist)
 *   Exercises: 15 min
     *   Do a code review
 
-### [Wrap-Up](18-wrap.html)
+### [Next Steps](21-next-steps.html)
+
+*   Teaching: 15 min
+    *   Where to look next
+*   Exercises: 0 min
+
+### [Wrap-Up](22-wrap.html)
 
 *   Teaching: 15 min
     *   Where to look next
