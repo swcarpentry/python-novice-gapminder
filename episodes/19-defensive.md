@@ -9,6 +9,8 @@ questions:
 objectives:
 - "Diagnose corner cases in simple programs."
 - "Write assertions with informative messages that test for corner cases in simple programs."
+keypoints:
+- FIXME
 ---
 > ## Is This Needed?
 > 

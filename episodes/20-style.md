@@ -9,6 +9,8 @@ questions:
 objectives:
 - "Provide sound justifications for basic rules of coding style."
 - "Refactor one-page programs to make them more readable and justify the changes."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

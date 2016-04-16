@@ -9,6 +9,8 @@ objectives:
 - "Explain why programs need collections of values."
 - "Correctly explain each adjective in 'a mutable ordered collection of heterogeneous values'."
 - "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

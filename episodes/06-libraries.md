@@ -10,6 +10,8 @@ objectives:
 - "Explain what software libraries are and why programmers create and use them."
 - "Write programs that import and use libraries from Python's standard library."
 - "Find and read documentation for standard libraries interactively (in the interpreter) and online."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

@@ -9,6 +9,8 @@ objectives:
 - "Explain what for loops are normally used for."
 - "Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration."
 - "Write for loops that use the Accumulator pattern to aggregate values."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

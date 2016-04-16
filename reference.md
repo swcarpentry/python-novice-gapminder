@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: reference
 title: Reference
 ---
-FIXME: fill in
+FIXME: more reference material.

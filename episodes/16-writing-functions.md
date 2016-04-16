@@ -11,6 +11,8 @@ objectives:
 - "Correctly identify local and global variable use in a function."
 - "Correctly identify portions of source code that will be displayed as online help, and in particular distinguish docstrings from comments."
 - "Write short docstrings for functions."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 
