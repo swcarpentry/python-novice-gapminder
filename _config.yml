@@ -38,14 +38,6 @@ collections:
   extras:
     output: true
 
-# Set the default layout for things in the episodes collection.
-defaults:
-  - scope:
-      path: ""
-      type: episodes
-    values:
-      layout: episode
-
 # Files and directories that are not to be copied.
 exclude:
   - Makefile

@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Programming Style
 teaching: 10
 exercises: 15

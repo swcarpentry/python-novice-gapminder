@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Data Types and Type Conversion
 teaching: 5
 exercises: 5

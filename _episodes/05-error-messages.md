@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Error Messages
 teaching: 5
 exercises: 10
