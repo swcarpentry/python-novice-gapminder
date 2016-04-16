@@ -1,5 +1,5 @@
 ---
-layout: lesson
-subtitle: Reference Guide
+layout: page
+title: Reference
 ---
-FIXME: key points for learners
+FIXME: fill in

@@ -1,6 +1,7 @@
 ---
-layout: lesson
-subtitle: Lesson Design
+layout: page
+title: Lesson Design
+permalink: /design/
 ---
 ## Process Used
 
