@@ -1,20 +1,14 @@
 ---
-layout: lesson
-subtitle: Lists
+title: Lists
 teaching: 5
 exercises: 10
+questions:
+- "How can I store multiple values?"
+objectives:
+- "Learner will explain why programs need collections of values."
+- "Learner will correctly explain each adjective in 'a mutable ordered collection of heterogeneous values'."
+- "Learner will write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
 ---
-> ## Learning Objectives
->
-> * Learner will explain why programs need collections of values.
-> * Learner will correctly explain each adjective in
->   "a mutable ordered collection of heterogeneous values".
-> * Learner will write programs that create flat lists,
->   index them,
->   slice them,
->   and modify them through assignment and method calls.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## From Strings to Lists and Back

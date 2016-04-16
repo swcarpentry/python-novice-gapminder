@@ -1,17 +1,15 @@
 ---
-layout: lesson
-subtitle: Pandas Data Frames
+title: Pandas Data Frames
 teaching: 10
 exercises: 10
+questions:
+- "How can do statistical analysis of tabular data?"
+objectives:
+- "Learner will select individual values from a Pandas data frame."
+- "Learner will select entire rows or entire columns from a data frame."
+- "Learner will select a subset of both rows and columns from a data frame in a single operation."
+- "Learner will select a subset of a data frame by a single Boolean criterion."
 ---
-> ## Learning Objectives
->
-> * Learner will select individual values from a Pandas data frame.
-> * Learner will select entire rows or entire columns from a data frame.
-> * Learner will select a subset of both rows and columns from a data frame in a single operation.
-> * Learner will select a subset of a data frame by a single Boolean criterion.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Selection

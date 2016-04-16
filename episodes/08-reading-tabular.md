@@ -1,15 +1,13 @@
 ---
-layout: lesson
-subtitle: Reading Tabular Data
+title: Reading Tabular Data
 teaching: 5
 exercises: 10
+questions:
+- "How can I read tabular data?"
+objectives:
+- "Learner will import the Pandas library."
+- "Learner will use Pandas to load a simple CSV data set."
 ---
-> ## Learning Objectives
->
-> * Learner will import the Pandas library.
-> * Learner will use Pandas to load a simple CSV data set.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Reading Other Data

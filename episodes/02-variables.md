@@ -1,16 +1,13 @@
 ---
-layout: lesson
-subtitle: Variables and Assignment
+title: Variables and Assignment
 teaching: 5
 exercises: 5
+questions:
+- "How can I store data in programs?"
+objectives:
+- "Learner will write programs that assign scalar values to variables and perform calculations with those values."
+- "Learner will correctly trace value changes in programs that use scalar assignment."
 ---
-> ## Learning Objectives
->
-> * Learner will write programs that assign scalar values to variables
->   and perform calculations with those values.
-> * Learner will correctly trace value changes in programs that use scalar assignment.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Swapping Values

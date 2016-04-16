@@ -1,16 +1,14 @@
 ---
-layout: lesson
-subtitle: Running and Quitting Interactively
+title: Running and Quitting Interactively
 teaching: 15
 exercises: 0
+questions:
+- "How can I run Python programs?"
+objectives:
+- "Learner will launch the Jupyter Notebook, create new notebooks, and exit the Notebook."
+- "Learner will create Markdown cells in a notebook."
+- "Learner will create and run Python cells in a notebook."
 ---
-> ## Learning Objectives
->
-> * Learner will launch the Jupyter Notebook, create new notebooks, and exit the Notebook.
-> * Learner will create Markdown cells in a notebook.
-> * Learner will create and run Python cells in a notebook.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Creating Lists

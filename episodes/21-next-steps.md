@@ -1,14 +1,12 @@
 ---
-layout: lesson
-subtitle: Next Steps
+title: Next Steps
 teaching: 15
 exercises: 0
+questions:
+- "What else is out there and where do I find it?"
+objectives:
+- "Name and locate scientific Python community sites for software, workshops, and help."
 ---
-> ## Learning Objectives
->
-> * Learner will know to look at scientific Python community sites for software, workshops, and help.
-{: .objectives}
-
 FIXME: lesson content.
 
 * jupyter.org

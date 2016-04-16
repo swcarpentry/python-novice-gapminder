@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: index
 ---
 This lesson is an introduction to programming Python for people with little or no previous programming experience.
 It is designed to be used in both [Data Carpentry][dc-website] and [Software Carpentry][swc-website] workshops,

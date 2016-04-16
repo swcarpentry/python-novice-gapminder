@@ -1,17 +1,13 @@
 ---
-layout: lesson
-subtitle: Conditionals
+title: Conditionals
 teaching: 5
 exercises: 10
+questions:
+- "How can programs make decisions?"
+objectives:
+- "Learner will correctly write programs that use `if` and simple Boolean expressions (without logical operators)."
+- "Learner will trace the execution of unnested conditionals and conditionals inside loops."
 ---
-> ## Learning Objectives
->
-> * Learner will correctly write programs that use `if` and simple Boolean expressions
->   (without logical operators).
-> * Learner will trace the execution of unnested conditionals
->   and conditionals inside loops.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Trimming Values

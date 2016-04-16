@@ -1,22 +1,14 @@
 ---
-layout: lesson
-subtitle: Error Messages
+title: Error Messages
 teaching: 5
 exercises: 10
+questions:
+- "What kind of errors can occur in programs?"
+- "How can I identify errors when they occur?"
+objectives:
+- "Learner will read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message."
+- "Learner will correctly describe situations in which SyntaxError, IndentationError, NameError, IndexError, and FileNotFoundError occur."
 ---
-> ## Learning Objectives
->
-> * Learner will read a traceback and determine the following:
->   * The file, function, and line number on which the error occurred
->   * The type of the error
->   * The error message
-> * Learner will correctly describe situations in which the following errors occur:
->   * `SyntaxError` and `IndentationError`
->   * `NameError`
->   * `IndexError`
->   * `FileNotFoundError`
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Reading Error Messages

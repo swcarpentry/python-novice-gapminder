@@ -1,19 +1,16 @@
 ---
-layout: lesson
-subtitle: Writing Functions
+title: Writing Functions
 teaching: 10
 exercises: 15
+questions:
+- "How can I create my own functions?"
+objectives:
+- "Learner will explain and identify the difference between function definition and function call."
+- "Learner will write a function that takes a small, fixed number of arguments and producing a single result."
+- "Learner will correctly identify local and global variable use in a function."
+- "Learner will correctly identify portions of source code that will be displayed as online help, and in particular distinguish docstrings from comments."
+- "Learner will write short docstrings for functions."
 ---
-> ## Learning Objectives
->
-> * Learner will explain and identify the difference between function *definition* and function *call*.
-> * Learner will write a function that takes a small, fixed number of arguments and producing a single result.
-> * Learner will correctly identify local and global variable use in a function.
-> * Learner will correctly identify portions of source code that will be displayed as online help,
->   and in particular distinguish docstrings from comments.
-> * Learner will write short docstrings for functions.
-{: .objectives}
-
 FIXME: lesson content.
 
 FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/status/693486088963272705):

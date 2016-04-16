@@ -1,18 +1,14 @@
 ---
-layout: lesson
-subtitle: For Loops
+title: For Loops
 teaching: 10
 exercises: 10
+questions:
+- "How can I make a program do many things?"
+objectives:
+- "Learner will explain what `for` loops are normally used for."
+- "Learner will trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration."
+- "Learner will write `for` loops that use the Accumulator pattern to aggregate values."
 ---
-> ## Learning Objectives
->
-> * Learner will explain what `for` loops are normally used for.
-> * Learner will trace the execution of a simple (unnested) loop
->   and correctly state the values of variables in each iteration.
-> * Learner will write `for` loops that use the Accumulator pattern
->   to aggregate values.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Tracing Execution
