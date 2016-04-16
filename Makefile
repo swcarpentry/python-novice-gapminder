@@ -1,6 +1,6 @@
 # Settings
 MAKEFILES=Makefile $(wildcard *.mk)
-JEKYLL=jekyll # or 'bundle exec jekyll'
+JEKYLL=jekyll
 
 all : commands
 
@@ -14,15 +14,7 @@ serve :
 
 ## site       : build files but do not run a server.
 site :
-	${JEKYLL} build --config _config.yml
-
-## install    : install missing Ruby gems using bundle.
-install :
-	bundle install
-
-## schedule   : calculate schedule.
-schedule :
-	@bin/schedule -t 09:00 ??-*.md
+	${JEKYLL} build --config _config.yml,_config_dev.yml
 
 ## clean      : clean up junk files.
 clean :

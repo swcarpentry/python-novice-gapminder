@@ -3,19 +3,19 @@
 #------------------------------------------------------------
 
 # Domain for searches.
-domain: "https://swcarpentry.github.io/python-novice-gapminder"
+domain: "https://USERNAME.github.io/LESSON-NAME"
 
 # URL for repository.
-repo: "https://github.com/swcarpentry/python-novice-gapminder"
+repo: "https://github.com/USERNAME/LESSON-NAME"
 
 # Root URL for lesson below domain.
-root: "/python-novice-gapminder"
+root: "/LESSON-NAME"
 
 # Overall lesson title.
-title: "Programming in Python"
+title: "LESSON TITLE"
 
 # Contact email address.
-email: gvwilson@software-carpentry.org
+email: USERNAME@SOME.WHERE
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).

@@ -1,6 +1,7 @@
 ---
-layout: lesson
-subtitle: Licenses
+layout: page
+title: "Licenses"
+permalink: /license/
 ---
 ## Instructional Material
 
