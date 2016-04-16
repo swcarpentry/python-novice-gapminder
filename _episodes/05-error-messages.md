@@ -9,6 +9,8 @@ questions:
 objectives:
 - "Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message."
 - "Correctly describe situations in which SyntaxError, IndentationError, NameError, IndexError, and FileNotFoundError occur."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

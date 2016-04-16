@@ -8,6 +8,8 @@ questions:
 objectives:
 - "Import the Pandas library."
 - "Use Pandas to load a simple CSV data set."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

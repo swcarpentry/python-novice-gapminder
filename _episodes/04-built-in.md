@@ -11,6 +11,8 @@ objectives:
 - "Correctly call built-in Python functions."
 - "Correctly nest calls to built-in functions."
 - "Use help to display documentation for built-in functions."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

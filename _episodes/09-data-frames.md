@@ -10,6 +10,8 @@ objectives:
 - "Select entire rows or entire columns from a data frame."
 - "Select a subset of both rows and columns from a data frame in a single operation."
 - "Select a subset of a data frame by a single Boolean criterion."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

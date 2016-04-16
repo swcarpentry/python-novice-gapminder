@@ -8,6 +8,8 @@ questions:
 objectives:
 - "Create a time series plot showing a single data set."
 - "Create a scatter plot showing relationship between two data sets."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

@@ -9,6 +9,8 @@ objectives:
 - "Be able to read and write globbing expressions that match sets of files."
 - "Use glob to create lists of files."
 - "Write for loops to perform operations on files given their names in a list."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content - build up to showing how to create one plot per file for multiple files.
 

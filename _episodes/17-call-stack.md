@@ -9,6 +9,8 @@ objectives:
 - "Identify local and global variables."
 - "Identify parameters as local variables."
 - "Trace values in non-recursive nested function calls."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

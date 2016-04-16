@@ -9,6 +9,8 @@ objectives:
 - "Launch the Jupyter Notebook, create new notebooks, and exit the Notebook."
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 

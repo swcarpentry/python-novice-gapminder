@@ -8,6 +8,8 @@ questions:
 objectives:
 - "Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators)."
 - "Trace the execution of unnested conditionals and conditionals inside loops."
+keypoints:
+- FIXME
 ---
 FIXME: lesson content.
 
