@@ -1,16 +1,14 @@
 ---
-layout: lesson
-subtitle: The Call Stack
+title: The Call Stack
 teaching: 10
 exercises: 15
+questions:
+- "How do function calls actually work?"
+objectives:
+- "Learner will correctly distinguish local and global variables."
+- "Learner will correctly identify parameters as local variables."
+- "Learner will correctly trace values in non-recursive nested function calls."
 ---
-> ## Learning Objectives
->
-> * Learner will correctly distinguish local and global variables.
-> * Learner will correctly identify parameters as local variables.
-> * Learner will correctly trace values in non-recursive nested function calls.
-{: objectives}
-
 FIXME: lesson content.
 
 ## Local and Global Variable Use

@@ -1,17 +1,16 @@
 ---
-layout: lesson
-subtitle: Built-in Functions (and Methods) and Help
+title: Built-in Functions (and Methods) and Help
 teaching: 10
 exercises: 10
+questions:
+- "How can I use built-in functions?"
+- "How can I find out what they do?"
+objectives:
+- "Learner will explain the purpose of functions."
+- "Learner will correctly call built-in Python functions."
+- "Learner will correctly nest calls to built-in functions."
+- "Learner will use help to display documentation for built-in functions."
 ---
-> ## Learning Objectives
->
-> * Learner will explain the purpose of functions.
-> * Learner will correctly call built-in Python functions such as `len`, `max`, and `min`.
-> * Learner will correctly nest calls to built-in functions.
-> * Learner will use `help` to display documentation for built-in functions.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## What Happens When

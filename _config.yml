@@ -3,10 +3,10 @@
 #------------------------------------------------------------
 
 # Domain for searches.
-domain: "https://swcarpentry.github.io/python-novice-gapminder"
+domain: "https://gvwilson.github.io/python-novice-gapminder"
 
 # URL for repository.
-repo: "https://github.com/swcarpentry/python-novice-gapminder"
+repo: "https://github.com/gvwilson/python-novice-gapminder"
 
 # Root URL for lesson below domain.
 root: "/python-novice-gapminder"
@@ -35,6 +35,8 @@ collections:
   episodes:
     output: true
     permalink: /:path/
+  extras:
+    output: true
 
 # Set the default layout for things in the episodes collection.
 defaults:

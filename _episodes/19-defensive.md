@@ -1,16 +1,14 @@
 ---
-layout: lesson
-subtitle: Defensive Programming
+title: Defensive Programming
 teaching: 10
 exercises: 15
+questions:
+- "What sorts of things frequently go wrong in programs?"
+- "How can I make my programs more robust?"
+objectives:
+- "Diagnose corner cases in simple programs."
+- "Write assertions with informative messages that test for corner cases in simple programs."
 ---
-> ## Learning Objectives
->
-> * Learner will diagnose corner cases in simple programs.
-> * Learner will write `assert` statements with informative messages
->   that test for corner cases in simple programs.
-{: objectives}
-
 ## Is This Needed?
 {: .challenge}
 

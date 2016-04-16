@@ -1,13 +1,7 @@
 ---
-layout: lesson
-subtitle: Afternoon Coffee
+title: Afternoon Coffee
 teaching: 0
 exercises: 0
-reflection: 15
+break: 15
 ---
-> ## Learning Objectives
->
-> * Reflection
-{: objectives}
-
 FIXME: describe what to reflect on.

@@ -1,16 +1,15 @@
 ---
-layout: lesson
-subtitle: Data Types and Type Conversion
+title: Data Types and Type Conversion
 teaching: 5
 exercises: 5
+questions:
+- "What kinds of data do programs store?"
+- "How can I convert one type to another?"
+objectives:
+- "Learner will explain key differences between integers and floating point numbers."
+- "Learner will explain key differences between numbers and character strings."
+- "Learner will use built-in functions to convert between integers, floating point numbers, and strings."
 ---
-> ## Learning Objectives
->
-> * Learner will explain key differences between integers and floating point numbers.
-> * Learner will explain key differences between numbers and character strings.
-> * Learner will use built-in functions to convert between integers, floating point numbers, and strings.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Choose a Type

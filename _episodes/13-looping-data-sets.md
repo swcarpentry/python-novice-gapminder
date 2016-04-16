@@ -1,17 +1,14 @@
 ---
-layout: lesson
-subtitle: Looping Over Data Sets
+title: Looping Over Data Sets
 teaching: 5
 exercises: 10
+questions:
+- "How can I process many data sets with a single command?"
+objectives:
+- "Learner will be able to read and write globbing expressions that match sets of files."
+- "Learner will use `glob` to create lists of files."
+- "Learner will write `for` loops to perform operations on files given their names in a list."
 ---
-> ## Learning Objectives
->
-> * Learner will be able to read and write globbing expressions that match sets of files.
-> * Learner will use `glob` to create lists of files.
-> * Learner will write `for` loops to perform operations on files
->   given their names in a list.
-{: .objectives}
-
 FIXME: lesson content - build up to showing how to create one plot per file for multiple files.
 
 ## Finding Lots of Files

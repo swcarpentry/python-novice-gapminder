@@ -1,16 +1,14 @@
 ---
-layout: lesson
-subtitle: Programming Style
+title: Programming Style
 teaching: 10
 exercises: 15
+questions:
+- "How can I make my programs more readable?"
+- "Why do developers follow certain style rules?"
+objectives:
+- "Provide sound justifications for basic rules of coding style."
+- "Refactor one-page programs to make them more readable and justify the changes."
 ---
-> ## Learning Objectives
->
-> * Learner will provide sound justifications for basic rules of coding style.
-> * Learner will refactor one-page programs to make them more readable
->   and justify the changes.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Clean Up This Code

@@ -1,13 +1,7 @@
 ---
-layout: lesson
-subtitle: Lunch
+title: Lunch
 teaching: 0
 exercises: 0
-reflection: 60
+break: 60
 ---
-> ## Learning Objectives
->
-> * Reflection
-{: .objectives}
-
-FIXME: what to reflect on
+FIXME: describe what to reflect on.

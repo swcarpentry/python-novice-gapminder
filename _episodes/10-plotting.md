@@ -1,15 +1,13 @@
 ---
-layout: lesson
-subtitle: Plotting
+title: Plotting
 teaching: 10
 exercises: 10
+questions:
+- "How can I plot my data?"
+objectives:
+- "Learner will create a time series plot showing a single data set."
+- "Learner will create a scatter plot showing relationship between two data sets."
 ---
-> ## Learning Objectives
->
-> * Learner will create a time series plot showing a single data set.
-> * Learner will create a scatter plot showing relationship between two data sets.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Minima and Maxima

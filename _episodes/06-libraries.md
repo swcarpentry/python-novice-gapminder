@@ -1,18 +1,15 @@
 ---
-layout: lesson
-subtitle: Libraries
+title: Libraries
 teaching: 5
 exercises: 5
+questions:
+- "How can I use software that other people have written?"
+- "How can I find out what that software does?"
+objectives:
+- "Learner will explain what software libraries are and why programmers create and use them."
+- "Learner will write programs that import and use libraries from Python's standard library."
+- "Learner can find and read documentation for standard libraries interactively (in the interpreter) and online."
 ---
-> ## Learning Objectives
->
-> * Learner will explain what software libraries are
->   and why programmers create and use them.
-> * Learner will write programs that import and use libraries from Python's standard library.
-> * Learner can find and read documentation for standard libraries
->   interactively (in the interpreter) and online.
-{: .objectives}
-
 FIXME: lesson content.
 
 ## Locating the Right Library
