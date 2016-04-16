@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Variables and Assignment
 teaching: 5
 exercises: 5

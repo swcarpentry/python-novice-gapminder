@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Reading Tabular Data
 teaching: 5
 exercises: 10

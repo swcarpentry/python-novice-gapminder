@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Running and Quitting Interactively
 teaching: 15
 exercises: 0

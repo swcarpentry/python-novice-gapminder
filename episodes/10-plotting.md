@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Plotting
 teaching: 10
 exercises: 10

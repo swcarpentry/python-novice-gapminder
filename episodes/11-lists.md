@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Lists
 teaching: 5
 exercises: 10

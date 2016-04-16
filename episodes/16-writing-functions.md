@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Writing Functions
 teaching: 10
 exercises: 15

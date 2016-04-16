@@ -1,4 +1,5 @@
 ---
+layout: episode
 title: Built-in Functions (and Methods) and Help
 teaching: 10
 exercises: 10
