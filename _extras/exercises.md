@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: lesson_page
 title: Further Exercises
 permalink: /exercises/
 ---
