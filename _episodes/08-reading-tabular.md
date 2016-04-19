@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Reading Tabular Data
+title: "Reading Tabular Data"
 teaching: 5
 exercises: 10
 questions:

@@ -1,5 +1,5 @@
 ---
-layout: lesson_page
+layout: page
 title: "Licenses"
 permalink: /license/
 ---

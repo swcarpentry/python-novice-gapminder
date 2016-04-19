@@ -1,6 +1,6 @@
 ---
-layout: lesson_page
-title: Setup
+layout: page
+title: "Setup"
 permalink: /setup/
 ---
 For the SQL lessons, 

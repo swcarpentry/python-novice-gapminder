@@ -1,6 +1,6 @@
 ---
 layout: reference
-title: Reference
+title: "Reference"
 permalink: /reference/
 ---
 FIXME: more reference material.

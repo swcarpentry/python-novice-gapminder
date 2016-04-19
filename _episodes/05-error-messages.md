@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Error Messages
+title: "Error Messages"
 teaching: 5
 exercises: 10
 questions:

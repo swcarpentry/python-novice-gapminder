@@ -1,6 +1,6 @@
 ---
-layout: lesson_page
-title: Lesson Design
+layout: page
+title: "Lesson Design"
 permalink: /design/
 ---
 ## Process Used

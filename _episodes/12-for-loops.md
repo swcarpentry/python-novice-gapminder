@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: For Loops
+title: "For Loops"
 teaching: 10
 exercises: 10
 questions:

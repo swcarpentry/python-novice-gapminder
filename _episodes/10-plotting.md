@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Plotting
+title: "Plotting"
 teaching: 10
 exercises: 10
 questions:

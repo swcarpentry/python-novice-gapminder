@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Writing Functions
+title: "Writing Functions"
 teaching: 10
 exercises: 15
 questions:

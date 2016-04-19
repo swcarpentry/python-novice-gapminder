@@ -9,5 +9,3 @@ and to serve as a worked example of how to develop a new lesson.
 >
 > FIXME: explain prereqs.
 {: .prereq}
-
-{% include syllabus.html %}
