@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Lists
+title: "Lists"
 teaching: 5
 exercises: 10
 questions:

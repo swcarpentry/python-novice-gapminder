@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Wrap-Up
+title: "Wrap-Up"
 teaching: 15
 exercises: 0
 questions:

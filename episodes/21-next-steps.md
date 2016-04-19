@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Next Steps
+title: "Next Steps"
 teaching: 15
 exercises: 0
 questions:

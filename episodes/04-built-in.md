@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Built-in Functions (and Methods) and Help
+title: "Built-in Functions and Help"
 teaching: 10
 exercises: 10
 questions:

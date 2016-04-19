@@ -1,6 +1,6 @@
 ---
 layout: break
-title: Lunch
+title: "Lunch"
 teaching: 0
 exercises: 0
 break: 60

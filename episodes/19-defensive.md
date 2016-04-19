@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Defensive Programming
+title: "Defensive Programming"
 teaching: 10
 exercises: 15
 questions:

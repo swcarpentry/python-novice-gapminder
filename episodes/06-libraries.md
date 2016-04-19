@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Libraries
+title: "Libraries"
 teaching: 5
 exercises: 5
 questions:

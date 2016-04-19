@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Conditionals
+title: "Conditionals"
 teaching: 5
 exercises: 10
 questions:

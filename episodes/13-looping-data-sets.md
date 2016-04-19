@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Looping Over Data Sets
+title: "Looping Over Data Sets"
 teaching: 5
 exercises: 10
 questions:

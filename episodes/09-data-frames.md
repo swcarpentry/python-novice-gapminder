@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: Pandas Data Frames
+title: "Pandas Data Frames"
 teaching: 10
 exercises: 10
 questions:
