@@ -49,7 +49,7 @@ FIXME: lesson content.
 > for filename in glob.glob('data/*.csv'):
 >     contents = pd.read_csv(filename)
 >     ____:
->         FIXME: what to include as processing step?
+>         print filename,len(contents)
 > ~~~
 > {: .source}
 {: .challenge}
