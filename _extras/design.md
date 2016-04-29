@@ -180,7 +180,7 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
-### [Running and Quitting Interactively](01-run-quit.html)
+### [Running and Quitting Interactively]({{ site.root }}/01-run-quit/)
 
 *   Teaching: 15 min (because setup issues)
 *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
@@ -188,21 +188,21 @@ How do I...
     *   Create a few Markdown cells (just formatted)
     *   Create and execute a Python cell that prints 1+2 (to show that cells can be executed)
 
-### [Variables and Assignment](02-variables.html)
+### [Variables and Assignment]({{ site.root }}/02-variables/)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Trace behavior of swapping values of two variables using an intermediate variable
     *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
 
-### [Data Types and Type Conversion](03-types-conversion.html)
+### [Data Types and Type Conversion]({{ site.root }}/03-types-conversion/)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Predict result types (or errors) of various operations
     *   Add conversion functions to broken code to make it work
 
-### [Built-in Functions and Help](04-built-in.html)
+### [Built-in Functions and Help]({{ site.root }}/04-built-in/)
 
 *   Teaching: 10 min
     *   Include re-running cells and re-running all
@@ -211,22 +211,22 @@ How do I...
     *   Find a useful method using help(str)
     *   Parsons Problem to achieve specific results with string methods
 
-### [Error Messages](05-error-messages.html)
+### [Error Messages]({{ site.root }}/05-error-messages/)
 
 *   Teaching: 5 min (review of error messages seen to date)
 *   Exercises: 10 min
     *   Identify causes of common errors (but don't actually fix)
 
-### [Libraries](06-libraries.html)
+### [Libraries]({{ site.root }}/06-libraries/)
 
 *   Teaching: 5 min
 *   Exercises: 5 min
     *   Operations with math library
     *   Look things up in the python.org docs
 
-### *[Coffee: 15 min](07-coffee.html)*
+### *[Coffee: 15 min]({{ site.root }}/07-coffee/)*
 
-### [Reading Tabular Data](08-reading-tabular.html)
+### [Reading Tabular Data]({{ site.root }}/08-reading-tabular/)
 
 *   Teaching: 5 min
 *   Exercises: 10 min (because some people will have trouble finding the data set's path)
@@ -234,7 +234,7 @@ How do I...
 *   Callout:
     *   How to read data from Excel spreadsheets via export to CSV
 
-### [Pandas Data Frames](09-data-frames.html)
+### [Pandas Data Frames]({{ site.root }}/09-data-frames/)
 
 *   Teaching: 10 min
 *   Exercises: 10 min
@@ -243,20 +243,20 @@ How do I...
     *   Select various subsets of data
     *   Normalize values (scale to 0..1)
 
-### [Plotting](10-plotting.html)
+### [Plotting]({{ site.root }}/10-plotting/)
 
 *   Teaching: 10 min (to show a variety of plots and debug display problems)
 *   Exercises: 10 min
     *   Plot normalized change in GDP over time (tweaking provided code)
 
-### [Lists](11-lists.html)
+### [Lists]({{ site.root }}/11-lists/)
 
 *   Teaching: 5 min
     *   Note: `range` doesn't produce a simple list in Python 3, so we can't use that for teaching.
 *   Exercises: 10 min
     *   Toy examples of lists, indexing, etc.
 
-### [For Loops](12-for-loops.html)
+### [For Loops]({{ site.root }}/12-for-loops/)
 
 *   Teaching: 10 min
 *   Exercises: 10 min
@@ -264,23 +264,23 @@ How do I...
     *   Manually trace execution of loop
     *   Interrupt a running program
 
-### [Looping Over Data Sets](13-looping-data-sets.html)
+### [Looping Over Data Sets]({{ site.root }}/13-looping-data-sets/)
 
 *   Teaching: 5 min (use `glob` to get filenames)
 *   Exercises: 10 min
     *   Count rows of each data set
     *   Check number of columns in each data set is the same
 
-### *[Lunch: 60 min](14-lunch.html)*
+### *[Lunch: 60 min]({{ site.root }}/14-lunch/)*
 
-### [Conditionals](15-conditionals.html)
+### [Conditionals]({{ site.root }}/15-conditionals/)
 
 *   Teaching: 5 min (show conditionals inside loop)
 *   Exercises: 10 min
     *   Count vowels
     *   Report badly-sized files inside loop
 
-### [Writing Functions](16-writing-functions.html)
+### [Writing Functions]({{ site.root }}/16-writing-functions/)
 
 *   Teaching: 10 min
 *   Exercises: 15 min
@@ -288,32 +288,32 @@ How do I...
     *   Check sizes of all data files in a directory
         *   Write new function using previous function
 
-### [The Call Stack](17-call-stack.html)
+### [The Call Stack]({{ site.root }}/17-call-stack/)
 
 *   Teaching: 10 min
 *   Exercises: 15 min
     *   Add docstrings to functions written earlier
 
-### *[Coffee: 15 min](18-coffee.html)*
+### *[Coffee: 15 min]({{ site.root }}/18-coffee/)*
 
-### [Defensive Programming](19-defensive.html)
+### [Defensive Programming]({{ site.root }}/19-defensive/)
 
 *   Teaching: 10 min
 *   Exercise: 15 min
 
-### [Programming Style](20-style.html)
+### [Programming Style]({{ site.root }}/20-style/)
 
 *   Teaching: 10 min (present checklist)
 *   Exercises: 15 min
     *   Do a code review
 
-### [Next Steps](21-next-steps.html)
+### [Next Steps]({{ site.root }}/21-next-steps/)
 
 *   Teaching: 15 min
     *   Where to look next
 *   Exercises: 0 min
 
-### [Wrap-Up](22-wrap.html)
+### [Wrap-Up]({{ site.root }}/22-wrap/)
 
 *   Teaching: 15 min
     *   Where to look next
