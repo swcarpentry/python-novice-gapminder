@@ -5,10 +5,11 @@ teaching: 10
 exercises: 15
 questions:
 - "How can I make my programs more readable?"
-- "Why do developers follow certain style rules?"
+- "How do most programmers format their code?"
 objectives:
 - "Provide sound justifications for basic rules of coding style."
 - "Refactor one-page programs to make them more readable and justify the changes."
+- "Use Python community coding standards (PEP-8)."
 keypoints:
 - FIXME
 ---
