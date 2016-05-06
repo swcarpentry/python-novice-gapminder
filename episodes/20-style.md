@@ -13,7 +13,35 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+As you begin to develop Python packages that others may use,
+or that you are hoping others will contribute to,
+it's useful to adhere to Python community standards.
+Some that you should be aware of include:
+
+*   [PEP8](https://www.python.org/dev/peps/pep-0008):
+    a style guide for Python that discusses topics such as how you should name variables,
+    how you should use indentation in your code,
+    how you should structure your `import` statements,
+    etc.
+    Adhering to PEP8 makes it easier for other Python developers to read and understand your code,
+    and to understand what their contributions should look like.
+    The [PEP8 application and Python library](https://pypi.python.org/pypi/pep8)
+    can check your code for compliance with PEP8.
+
+*   [numpydoc](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt):
+    a standard for API documentation through docstrings used by NumPy, SciPy,
+    and many other Python scientific computing pacakges.
+    Adhering to numpydoc helps ensure that users and developers will know how to use your Python package,
+    either for their own analyses or as a component of their own Python packages.
+    If you use numpydoc,
+    you can also use existing tools such as [Sphinx](http://sphinx-doc.org/)
+    to automatically generate HTML documentation for your API.
+
+*   [Semantic Versioning](http://semver.org/):
+    a standard describing how to define versions of your software
+    no matter what language it's written in.
+    Using Semantic Versioning makes it easy for other developers to understand
+    what is guaranteed to stay the same and what might change across versions of your software.
 
 > ## Clean Up This Code
 > 
