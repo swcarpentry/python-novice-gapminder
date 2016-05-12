@@ -1,9 +1,6 @@
 # Contributing
 
-Thank you for thinking about contributing to [Software Carpentry][swc-site].
-It's people like you that make us as useful as we are.
-
-[Software Carpentry][swc-site] is an open source project,
+[Software Carpentry][swc-site] and [Data Carpentry][dc-site] are open source projects,
 and we welcome contributions of all kinds:
 new lessons,
 fixes to existing material,
@@ -89,6 +86,11 @@ or encourage others to do so.
 The maintainers are community volunteers,
 and have final say over what gets merged into the lesson.
 
+## Our Template
+
+[This documentation][example-site] explains how we format our lessons
+(and is itself an example of that formatting).
+
 ## Other Resources
 
 General discussion of [Software Carpentry][swc-site] happens on
@@ -99,7 +101,9 @@ You can also [reach us by email][contact].
 [contact]: admin@software-carpentry.org
 [dc-issues]: https://github.com/issues?q=user%3Adatacarpentry
 [dc-lessons]: http://datacarpentry.org/lessons/
+[dc-site]: http://datacarpentry.org/
 [discuss-list]: http://lists.software-carpentry.org/mailman/listinfo/discuss_lists.software-carpentry.org
+[example-site]: https://gvwilson.github.io/new-lesson-example/
 [github-flow]: https://guides.github.com/introduction/flow/
 [how-contribute]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
 [issues]: https://github.com/swcarpentry/python-novice-gapminder/issues/
