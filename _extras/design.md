@@ -126,8 +126,11 @@ and the call stack all need time.
 
 ### Summative Assessment
 
-*   Midpoint: plot bar chart showing average GDP per continent
-*   Final: debug and extend a short multi-function program to handle data laid out differently
+*   Midpoint: plot a bar chart showing the average GDP per continent from the data.
+*   Final: given a two-page analysis program made up of five functions:
+    1.  Modify the input function to read data that is laid out differently (but is still tabular).
+    2.  Find and fix a bug in the analysis routine (off-by-one error).
+    3.  Add an option to create a plot instead of dumping results as CSV.
 
 ### Essential Questions
 
