@@ -15,7 +15,7 @@ keypoints:
 ---
 FIXME: lesson content.
 
-> ## Selection
+> ## Selection of Individual Values
 > 
 > Assume Pandas has been imported into your notebook
 > and the Gapminder GDP data for Europe has been loaded:
@@ -23,7 +23,22 @@ FIXME: lesson content.
 > ~~~
 > import pandas as pd
 > 
-> data = pd.read_csv('data/gapminder_gd_europe.csv')
+> df = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> ~~~
+> {: .source}
+> 
+> Write an expression to find the Per Capita GDP of Albania in 2007.
+{: .challenge}
+
+> ## Selection of Rows
+> 
+> Assume Pandas has been imported into your notebook
+> and the Gapminder GDP data for Europe has been loaded:
+> 
+> ~~~
+> import pandas as pd
+> 
+> data = pd.read_csv('data/gapminder_gdp_europe.csv')
 > ~~~
 > {: .source}
 > 
