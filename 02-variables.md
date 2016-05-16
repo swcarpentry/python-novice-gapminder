@@ -17,6 +17,11 @@ Variables are names for values. In Python the `=` symbol assigns the value on th
 
 Enter code into a cell that assigns the value of your age to a variable `age` and your first name in quotation marks to a variable `first_name`
 
+```python
+age = 42
+first_name = 'Alistair'
+```
+
 ## Swapping Values
 {: .challenge}
 
