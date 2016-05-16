@@ -11,7 +11,11 @@ exercises: 5
 > * Learner will correctly trace value changes in programs that use scalar assignment.
 {: .objectives}
 
-FIXME: lesson content.
+### Variables
+
+Variables are names for values. In Python the `=` symbol assigns the value on the right to the name on the left.
+
+Enter code into a cell that assigns the value of your age to a variable `age` and your first name in quotation marks to a variable `first_name`
 
 ## Swapping Values
 {: .challenge}
