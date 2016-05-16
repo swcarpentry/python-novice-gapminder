@@ -11,12 +11,16 @@ exercises: 5
 > * Learner will use built-in functions to convert between integers, floating point numbers, and strings.
 {: .objectives}
 
+### Words
+
 Text handling is a strength of Python, we call a sequence of characters a `str` or string. Python doesn't understand what the string means, it sees it as a sequence of characters.
 
 ```python
 # create a string and assign it to a variable
 question = 'The meaning of life'
 ```
+
+### Numbers
 
 Numeric values are either `int` or `float`. The difference is `int`, or integer, is a whole number value and a `float`, or floating point number, is a number with a decimal point.
 
@@ -25,6 +29,8 @@ Numeric values are either `int` or `float`. The difference is `int`, or integer,
 answer = 42
 precisely = 42.7
 ```
+
+### Types
 
 Let's use the `type()` function to check
 
