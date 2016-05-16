@@ -14,6 +14,17 @@ exercises: 10
 
 FIXME: lesson content.
 
+### Functions
+
+
+
+
+### Built in Functions
+
+### Getting Help
+
+
+
 ## What Happens When
 {: .challenge}
 
