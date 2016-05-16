@@ -14,6 +14,8 @@ exercises: 10
 
 FIXME: lesson content.
 
+*lists needed now
+
 ### Functions
 
 Lets use Python's maths functions to calculate a mean or average
