@@ -15,6 +15,44 @@ keypoints:
 ---
 FIXME: lesson content.
 
+### Words
+
+Text handling is a strength of Python, we call a sequence of characters a `str` or string. Python doesn't understand what the string means, it sees it as a sequence of characters.
+
+```python
+# create a string and assign it to a variable
+question = 'The meaning of life'
+```
+
+### Numbers
+
+Numeric values are either `int` or `float`. The difference is `int`, or integer, is a whole number value and a `float`, or floating point number, is a number with a decimal point.
+
+```python
+#create a int and a float
+answer = 42
+precisely = 42.7
+```
+
+### Types
+
+Let's use the `type()` function to check
+
+```python
+question = 'The meaning of life'
+type(question)
+```
+```python
+answer = 42
+type(answer)
+```
+```python
+precisely = 42.7
+type(precisely)
+```
+
+Can you include numeric values in strings?
+
 > ## Choose a Type
 > 
 > What type of value (integer, floating point number, or character string)
