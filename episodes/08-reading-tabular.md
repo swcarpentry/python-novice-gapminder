@@ -1,6 +1,6 @@
 ---
 layout: episode
-title: "Reading Tabular Data"
+title: "Reading Tabular Data into Data Frames"
 teaching: 5
 exercises: 10
 questions:
@@ -8,10 +8,59 @@ questions:
 objectives:
 - "Import the Pandas library."
 - "Use Pandas to load a simple CSV data set."
+- "Get some basic information about a Pandas Data frame."
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+- import pandas
+
+~~~
+import pandas
+~~~
+
+- using pandas.read_csv
+- ensure reading from correct location
+- store it as a variable
+
+~~~
+data_frame = pandas.read_csv("gapminder_gdp_oceania.csv")
+~~~
+
+- look at info about data frame
+
+~~~
+data_frame.info()
+~~~
+
+- look at columns
+
+~~~
+data_frame.columns
+~~~
+
+- Transpose
+
+~~~
+data_frame.T
+~~~
+
+- Viewing top or bottom cells
+
+~~~
+df = pandas.read_csv("gapminder_gdp_europe.csv")
+
+df.head()
+df.tail()
+
+df.head(10)
+~~~
+
+- Summary statistics by column
+
+~~~
+data_frame.describe()
+~~~
+
 
 > ## Reading Other Data
 > 

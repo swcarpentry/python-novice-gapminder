@@ -13,7 +13,24 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+- Selecting individual values
+- label-based vs. index based
+
+~~~
+data_frame = pandas.read_csv('data/gapminder_gdp_europe.csv')
+
+data_frame.ix[0, "gdpPercap_1952"]
+data_frame.ix[0, 1]
+data_frame.ix[0, 1:3]
+~~~
+{: .source}
+
+What do you think happens in the code below?  How many column entries are we accessing here?
+
+~~~
+data_frame.ix[0, "gdpPercap_1952":"gdpPercap_1962"]
+~~~
+{: .source}
 
 > ## Selection of Individual Values
 > 
@@ -21,14 +38,21 @@ FIXME: lesson content.
 > and the Gapminder GDP data for Europe has been loaded:
 > 
 > ~~~
-> import pandas as pd
+> import pandas
 > 
-> df = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
 > {: .source}
 > 
 > Write an expression to find the Per Capita GDP of Albania in 2007.
 {: .challenge}
+
+
+- Selecting columns by index
+~~~
+data_frame["gdpPercap_1952"]
+data_frame.gdpPercap_1952
+~~~
 
 > ## Selection of Rows
 > 
@@ -36,9 +60,8 @@ FIXME: lesson content.
 > and the Gapminder GDP data for Europe has been loaded:
 > 
 > ~~~
-> import pandas as pd
-> 
-> data = pd.read_csv('data/gapminder_gdp_europe.csv')
+> import pandas
+> data = pandas.read_csv('data/gapminder_gdp_europe.csv')
 > ~~~
 > {: .source}
 > 
