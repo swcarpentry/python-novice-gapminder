@@ -7,5 +7,31 @@ and to serve as a worked example of how to develop a new lesson.
 
 > ## Prerequisites
 >
-> FIXME: explain prereqs.
+> Learners need to understand the concepts of files and directories
+> (including the working directory) and how to start a Python
+> interpreter before tackling this lesson. This lesson references the Jupyter (IPython)
+> Notebook although it can be taught through any Python interpreter.
+> The commands in this lesson pertain to **Python 3**.
+{: .prereq}
+
+> ## Starting Python
+>
+> If you will be using the IPython or Jupyter notebook for the lesson,
+> you should have already
+> [installed Anaconda](http://swcarpentry.github.io/workshop-template/#setup)
+> which includes the notebook.
+>
+> To start the notebook, open a terminal or git bash and type the command:
+>
+> ~~~ 
+> $ jupyter notebook
+> ~~~
+>{: .source}
+>
+> To start the Python intrepreter without the notebook, open a terminal or git bash and type the command:
+>
+> ~~~ 
+> $ python
+> ~~~
+>{: .source}
 {: .prereq}
