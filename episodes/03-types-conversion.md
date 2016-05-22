@@ -13,45 +13,65 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
-
 ### Words
 
-Text handling is a strength of Python, we call a sequence of characters a `str` or string. Python doesn't understand what the string means, it sees it as a sequence of characters.
+*   Text handling is a strength of Python, we call a sequence of characters a `str` or string.
+*   Python doesn't understand what the string means, it sees it as a sequence of characters.
 
-```python
+~~~
 # create a string and assign it to a variable
 question = 'The meaning of life'
-```
+~~~
+{: .source}
 
 ### Numbers
 
-Numeric values are either `int` or `float`. The difference is `int`, or integer, is a whole number value and a `float`, or floating point number, is a number with a decimal point.
+*   Numeric values are either `int` or `float`.
+*   The difference is `int`, or integer, is a whole number value and a `float`, or floating point number, is a number with a decimal point.
+*   "Use integers for counting and floats for measuring."
 
-```python
-#create a int and a float
+~~~
+# Create a int and a float.
 answer = 42
 precisely = 42.7
-```
+~~~
+{: .source}
 
 ### Types
 
-Let's use the `type()` function to check
+Let's use the `type` function to check:
 
-```python
+~~~
 question = 'The meaning of life'
 type(question)
-```
-```python
+~~~
+{: .source}
+~~~
+<class 'str'>
+~~~
+{: .output}
+
+~~~
 answer = 42
 type(answer)
-```
-```python
+~~~
+{: .source}
+~~~
+<class 'int'>
+~~~
+{: .output}
+
+~~~
 precisely = 42.7
 type(precisely)
-```
+~~~
+{: .source}
+~~~
+<class 'float'>
+~~~
+{: .output}
 
-Can you include numeric values in strings?
+*   Can you include numeric values in strings?
 
 > ## Choose a Type
 > 
