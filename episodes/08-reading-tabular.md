@@ -17,6 +17,7 @@ keypoints:
 ~~~
 import pandas
 ~~~
+{: .source}
 
 - using pandas.read_csv
 - ensure reading from correct location
@@ -25,42 +26,55 @@ import pandas
 ~~~
 data_frame = pandas.read_csv("gapminder_gdp_oceania.csv")
 ~~~
+{: .source}
+
+- Note that row headings, or **indexes** are numbers, automatically generated
+- specify row headings from a chosen column using index_col
+
+~~~
+data_frame = pandas.read_csv("gapminder_gdp_oceania.csv", index_col="country")
+~~~
+{: .source}
 
 - look at info about data frame
 
 ~~~
 data_frame.info()
 ~~~
+{: .source}
 
 - look at columns
 
 ~~~
 data_frame.columns
 ~~~
+{: .source}
 
 - Transpose
 
 ~~~
 data_frame.T
 ~~~
+{: .source}
 
 - Viewing top or bottom cells
 
 ~~~
-df = pandas.read_csv("gapminder_gdp_europe.csv")
+df = pandas.read_csv("gapminder_gdp_europe.csv", index_col="country")
 
 df.head()
 df.tail()
 
 df.head(10)
 ~~~
+{: .source}
 
 - Summary statistics by column
 
 ~~~
 data_frame.describe()
 ~~~
-
+{: .source}
 
 > ## Reading Other Data
 > 
