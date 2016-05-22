@@ -11,7 +11,60 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+In the course of programming, we may find that we need our code to make a
+choice.  This choice may be to execute or not execute a certain task or to
+execute one or a subset of multiple tasks.  We can often use **conditional**
+statements in order to direct our program in these ways.  Conditional statements
+are often referred to as "if" statements, since their syntax involves the
+keyword "if" in python and many other languages.  Their general structure looks
+like:
+
+~~~
+if statement_1:
+    task_to_be_done_if_statement_1_is_true
+~~~
+{: .source python}
+
+In the above code, the indented line, `task_to_be_done_if_statement_1_is_true`,
+will only be executed if the content of statement_1 evaluates to true.  What if
+we want a task to be executed if statement_1 is false?  We can use the "else"
+keyword in conjunction with "if" (sometimes referred to as an "if-else"
+statement).
+
+~~~
+if statement_1:
+    task_to_be_done_if_statement_1_is_true
+else:
+    task_to_be_done_if_statement_1_is_false
+~~~
+{: .source}
+
+For example, we might use the comparator `>`, as in the following:
+
+~~~
+water_temp = 120 
+pressure = 1
+
+if water_temp > 100:
+    print("Boiling")
+else:
+    print("Not boiling")
+~~~
+{: .source}
+
+I can also more complex conditional statements with boolean operators
+like **and** and **or**, and use comparators like "<", ">"
+
+~~~
+water_temp = 30
+pressure = 1
+
+if water_temp < 100 and water_temp > 0:
+    state = "liquid"
+
+print("The water is currently ", state)
+~~~
+{: .source}
 
 > ## Trimming Values
 > 
