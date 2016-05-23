@@ -14,6 +14,12 @@ and to serve as a worked example of how to develop a new lesson.
 > The commands in this lesson pertain to **Python 3**.
 {: .prereq}
 
+> ## Get gapminder data
+> The data we will be using is taken from the [gapminder](gapminder.org) dataset.
+> To obtain it, download and unzip the file [python-novice-gapminder-data.zip](python-novice-gapminder-data.zip).
+> In order to follow the presented material, you should create the jupyter notebook in the "data" directory.
+{: .prereq}
+
 > ## Starting Python
 >
 > If you will be using the IPython or Jupyter notebook for the lesson,
