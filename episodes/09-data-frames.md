@@ -111,6 +111,8 @@ df[df["gdpPercap_1952"] > 10000]
 > {: .source}
 > 
 > Fix it!
+> Use the following code to save a dataframe to csv
+> DataFrame.to_csv(filename)
 >
 > ~~~ 
 > df = pandas.load_csv("gapminder_gdp_all.csv", index_col="country")
@@ -121,6 +123,26 @@ df[df["gdpPercap_1952"] > 10000]
 > ~~~
 > {: .source}
 {: .challenge}
+
+## More operations
+
+- Minima
+
+~~~
+df = pandas.load_csv("gapminder_gdp_europe.csv", index_col="country")
+df.min()
+df.idxmin()
+~~~
+{: .source}
+
+- Maxima
+
+~~~
+df = pandas.load_csv("gapminder_gdp_europe.csv", index_col="country")
+df.max()
+df.idxmax()
+~~~
+{: .source}
 
 > ## Selection of Rows
 > 

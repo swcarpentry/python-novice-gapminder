@@ -91,6 +91,14 @@ df.T.plot.scatter(x = "Australia", y = "New Zealand")
 > Modify the example in the notes to plot the minimum GDP per capita over time
 > for all the countries in Asia.
 > Modify it again to plot the maximum GDP per capita over time for Asia.
+> 
+> ~~~
+> df_europe = pandas.read_csv("gapminder_gdp_europe.csv")
+> df_europe.min().plot(label='min')
+> df_europe.max().plot(label='max')
+> plt.legend(loc='best')
+> ~~~
+> {: .source}
 {: .challenge}
 
 > ## Correlations
@@ -100,4 +108,34 @@ df.T.plot.scatter(x = "Australia", y = "New Zealand")
 > among the countries in Asia
 > for each year in the data set.
 > What relationship do you see (if any)?
+>
+> ~~~
+> df_asia = pandas.read_csv("gapminder_gdp_asia.csv")
+> df_asia.describe().T.plot(kind='scatter', x = 'min', y = 'max')
+> ~~~
+> {: .source}
+> 
+> You might note that the variability in the maximum is much higher than
+> that of the minimum.  Take a look at the maximum and the max indexes:
+>
+> ~~~
+> df_asia = pandas.read_csv("gapminder_gdp_asia.csv")
+> df_asia.max().plot()
+> df_asia.idxmax()
+> df_asia.idxmin()
+> ~~~
+> {: .source}
+
+> ## More correlations
+> 
+> As a final exercise, make a fancy plot that shows the correlation between
+> GDP and life expectancy for 2007, normalizing marker size by population.
+>
+> ~~~
+> df_all = pandas.read_csv("gapminder_all.csv")
+> df_all.plot(kind='scatter', x = 'gdpPercap_2007', y='lifeExp_2007', 
+>             s = df_all['pop_2007']/1e6)
+> ~~~
+> {: .source}
+
 {: .challenge}
