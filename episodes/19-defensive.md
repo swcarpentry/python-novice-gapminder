@@ -12,6 +12,23 @@ objectives:
 keypoints:
 - FIXME
 ---
+- Review of errors : SyntaxError, IndentationError, NameError, IndexError, FileNotFoundError
+- Assertions - Say we know something about how we want our program to behave, we
+  can use the **assert** keyword to have checks in our program
+- Test a Fahrenheit to Celsius function
+
+~~~
+def convert_fahrenheit_to_celsius(input_temp_f):
+    output_temp_c = 5/9*(input_temp_f - 32)
+    return output_temp_c
+
+assert convert_fahrenheit_to_celsius(212) == 100, 'Water boiling point conversion failed'
+~~~
+{: .source}
+
+- Precondition, postcondition, invariant
+- Test-driven development
+
 > ## Is This Needed?
 > 
 > The `os` library contains a function called `os.path.exists(path)`
