@@ -55,4 +55,7 @@ check **Make Anaconda the default Python**.
     default location for the files. Type `yes` and press enter to prepend Anaconda to
     your `PATH` (this makes the Anaconda distribution the default Python).
 
-
+## Get gapminder data
+The data we will be using is taken from the [gapminder](gapminder.org) dataset.
+To obtain it, download and unzip the file [python-novice-gapminder-data.zip](python-novice-gapminder-data.zip).
+In order to follow the presented material, you should create the jupyter notebook in the "data" directory.
