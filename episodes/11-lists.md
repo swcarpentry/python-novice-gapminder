@@ -142,7 +142,6 @@ FIXME: lesson content.
 > values[::2]
 > values[::-1]
 > ~~~
->
 > {: .source}
 >
 > How can you extract a list of the even numbers from `values`?
