@@ -143,11 +143,10 @@ FIXME: lesson content.
 > values[::-1]
 > ~~~
 >
-> {.source}
+> {: .source}
 >
 > How can you extract a list of the even numbers from `values`?
->
-> {.challenge}
+{: .challenge}
 
 
 > ## Dealing with Bounds
