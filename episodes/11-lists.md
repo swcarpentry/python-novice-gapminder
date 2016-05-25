@@ -127,12 +127,12 @@ FIXME: lesson content.
 
 > ## Working with the End
 >
-> Assuming `values` is a list,
+> 1. Assuming `values` is a list,
 > explain in simple terms what `del values[-1]` does.
-> How can you display all elements but the last one without changing `values`.
+> How can you display all elements but the last one without changing `values`?
 {: .challenge}
 
-> ## Stepping through a list
+> ## Stepping through a List
 >  
 > What if we want to sequentially go through the elements of a list in a particular manner?
 > Discuss the output of the following commands:
