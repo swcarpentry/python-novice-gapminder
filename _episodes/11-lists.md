@@ -129,7 +129,7 @@ FIXME: lesson content.
 >
 > 1. Assuming `values` is a list,
 > explain in simple terms what `del values[-1]` does.
-> How can you display all elements but the last one without changing `values`?
+> 2. How can you display all elements but the last one without changing `values`?
 {: .challenge}
 
 > ## Stepping through a List
