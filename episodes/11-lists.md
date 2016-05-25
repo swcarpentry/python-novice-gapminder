@@ -88,10 +88,13 @@ FIXME: lesson content.
 >
 > ~~~
 > values = [1, 3, 5, 7, 9]
+> print(values[0])
+> print(values[1:3])
 > print(values[values[0]])
 > ~~~
 > {: .source}
 {: .challenge}
+
 
 > ## Fill in the Blanks
 >
@@ -126,8 +129,26 @@ FIXME: lesson content.
 >
 > Assuming `values` is a list,
 > explain in simple terms what `del values[-1]` does.
-> How can you display all elements but the last one without changing values.
+> How can you display all elements but the last one without changing `values`.
 {: .challenge}
+
+> ## Stepping through a list
+>  
+> What if we want to sequentially go through the elements of a list in a particular manner?
+> Discuss the output of the following commands:
+>
+> ~~~
+> values = [1,2,3,4,5,6,7]
+> values[::2]
+> values[::-1]
+> ~~~
+>
+> {.source}
+>
+> How can you extract a list of the even numbers from `values`?
+>
+> {.challenge}
+
 
 > ## Dealing with Bounds
 >
