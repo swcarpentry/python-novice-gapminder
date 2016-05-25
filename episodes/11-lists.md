@@ -14,30 +14,77 @@ keypoints:
 ---
 FIXME: lesson content.
 
+> ## Creating Lists
+>
+>  Multiple values can be stored in lists:
+>
+> ~~~
+> objectives = ['Create lists.', 'Extract items from lists.','Modify lists.']
+>
+> print(type(objectives))
+> ~~~
+>{: .source}
+>
+> ~~~
+> <class 'list'>
+> ~~~
+> {: .output}
+>
+> Sometimes we are not sure how many values we will have so we can start with an empty list and fill it sequentially.
+>
+> ~~~
+> objectives = []
+> print(objectives)
+> objectives.append("Create lists.")
+> print(objectives)
+> objectives.append('Extract items from lists.')
+> print(objectives)
+> objectives.append('Modify lists.')
+> print(objectives)
+> ~~~
+> {: .source}
+>
+> []
+> ['Create lists.']
+> ['Create lists.','Extract items from lists.']
+> ['Create lists.','Extract items from lists.','Modify lists.']
+> ~~~
+> {: .output}
+
+> Lists can also contain different types of values:
+>
+> ~~~
+> objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+> {: .source}
+> ~~~
+
+
+
 > ## From Strings to Lists and Back
-> 
+>
 > Given this:
-> 
+>
 > ~~~
 > print('string to list:', list('tin'))
 > print('list to string:', ''.join(['g', 'o', 'l', 'd']))
 > ~~~
 > {: .source}
-> 
+
+>
 > ~~~
 > ['t', 'i', 'n']
 > 'gold'
 > ~~~
 > {: .output}
-> 
+>
 > 1. Explain in simple terms what `list("some string")` does.
 > 2. What does `'-'.join(['x', 'y'])` generate?
 {: .challenge}
 
 > ## Indexing
-> 
+>
 > What does the following program print?
-> 
+>
 > ~~~
 > values = [1, 3, 5, 7, 9]
 > print(values[values[0]])
@@ -46,9 +93,9 @@ FIXME: lesson content.
 {: .challenge}
 
 > ## Fill in the Blanks
-> 
+>
 > Fill in the blanks so that the program below produces the output shown.
-> 
+>
 > ~~~
 > values = ____
 > values.____(1)
@@ -59,7 +106,7 @@ FIXME: lesson content.
 > print('second time:', values)
 > ~~~
 > {: .source}
-> 
+>
 > ~~~
 > first time: [1, 3, 5]
 > second time: [3, 5]
@@ -68,13 +115,22 @@ FIXME: lesson content.
 {: .challenge}
 
 > ## How Large is a Slice?
-> 
+>
 > If 'low' and 'high' are both non-negative integers,
 > how long is the list `values[low:high]`?
 {: .challenge}
 
-> ## In Simple Terms
-> 
+
+> ## Working with the End
+>
 > Assuming `values` is a list,
 > explain in simple terms what `del values[-1]` does.
+> How can you display all elements but the last one without changing values.
 {: .challenge}
+
+> ## Dealing with Bounds
+>
+> Explain how python is handling out-of-bound indices by trying these commands:
+> `values[0:20]`
+> `values[-1:3]`
+{: .challenge}`
