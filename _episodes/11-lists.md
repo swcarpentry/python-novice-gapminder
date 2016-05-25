@@ -29,7 +29,7 @@ FIXME: lesson content.
 > <class 'list'>
 > ~~~
 > {: .output}
->
+
 > Sometimes we are not sure how many values we will have so we can start with an empty list and fill it sequentially.
 >
 > ~~~
@@ -44,6 +44,7 @@ FIXME: lesson content.
 > ~~~
 > {: .source}
 >
+> ~~~
 > []
 > ['Create lists.']
 > ['Create lists.','Extract items from lists.']
@@ -55,8 +56,9 @@ FIXME: lesson content.
 >
 > ~~~
 > objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
-> {: .source}
 > ~~~
+> {: .source}
+
 
 
 
@@ -69,7 +71,6 @@ FIXME: lesson content.
 > print('list to string:', ''.join(['g', 'o', 'l', 'd']))
 > ~~~
 > {: .source}
-
 >
 > ~~~
 > ['t', 'i', 'n']
@@ -131,6 +132,10 @@ FIXME: lesson content.
 > ## Dealing with Bounds
 >
 > Explain how python is handling out-of-bound indices by trying these commands:
-> `values[0:20]`
-> `values[-1:3]`
-{: .challenge}`
+>
+> ~~~
+> values[0:20]
+> values[-1:3]
+> ~~~
+> {: .source}
+{: .challenge}
