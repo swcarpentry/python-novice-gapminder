@@ -17,8 +17,11 @@ title: "Programming in Python"
 # Contact email address.
 email: swcarpentry@software-carpentry.org
 
-# Is this a workshop site (if not, interpreted as a lesson site)?
-is_workshop: false
+# What kind of thing is this ("workshop", "lesson")?
+kind: "lesson"
+
+# Which carpentry is this ("swc", "dc")?
+carpentry: "dc"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
