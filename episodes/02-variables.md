@@ -91,6 +91,33 @@ future_age
 ~~~
 {: .source}
 
+The assignment of variables in Python is dynamic, this means that the type of data and memory are assigned when the objects/variables are created, for instance,
+
+> ~~~
+> x = 1
+> ~~~
+
+will assign an integer value to the variable `x`. However, if we assign
+
+> ~~~
+> x = 1.0
+> ~~~
+
+Python will assign a float value to the variable `x`. Once a variable is defined will remain in memory until the program python shell is alive. If you want to delete the variable you will do
+
+> ~~~
+> del x
+> ~~~
+
+and this command will delete the variable `x` just defined above. You can assign a variable the value of another variable,
+
+> ~~~
+> x = 10.0
+> y = x
+> ~~~
+
+Now, `y` has the same value than `x`.
+
 > ## Swapping Values
 > 
 > Draw a table showing the values of the variables in this program
