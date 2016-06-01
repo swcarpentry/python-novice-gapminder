@@ -52,7 +52,7 @@ else:
 ~~~
 {: .source}
 
-I can also more complex conditional statements with boolean operators
+I can also generate more complex conditional statements with boolean operators
 like **and** and **or**, and use comparators like "<", ">"
 
 ~~~
@@ -65,6 +65,54 @@ if water_temp < 100 and water_temp > 0:
 print("The water is currently ", state)
 ~~~
 {: .source}
+
+Sometimes, you might want to test if multiple statements are true or false in one 
+single loop. You can do this by chaining multiple `if` / `elif` statements in a row. 
+For example:
+
+~~~
+if statement_1:
+    task_to_be_done_if_statement_1_is_true
+elif statement_2:
+    task_to_be_done_if_statement_2_is_true
+else:
+	task_to_be_done_if_neither_statement_1_or_statement_2_is_true
+~~~
+{: .source python}
+
+You can chain as many `if` / `elif` statements together as you would like, but there 
+can only be one else statement in a set of code. Let's try an example. Let's say 
+you wanted to convert a numerical grade into a letter grade.
+
+~~~
+grade = 85
+if grade >= 90:
+	print("A")
+elif grade >= 80:
+	print("B")
+elif grade >= 70:
+	print("C")
+else:
+	print("failing")
+~~~
+{: .source}
+
+Be careful as you construct these complex statements because the code stops 
+checking if conditionals are true / false after the first true conditional is met. 
+So, make sure the ordering of your statements makes logical sense. For example:
+
+~~~
+grade = 85
+if grade >= 70:
+	print("C")
+elif grade >= 80:
+	print("B")
+elif grade >= 90:
+	print("A")
+~~~
+{: .source}
+
+would print `C`, not `B` as you might want.
 
 > ## Trimming Values
 > 
