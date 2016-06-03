@@ -20,7 +20,7 @@ FIXME: lesson content.
 
 ### Functions
 
-Lets use Python's maths functions to calculate a mean or average
+Lets use Python's math functions to calculate a mean or average
 
 ```python
 a = 2
