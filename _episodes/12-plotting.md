@@ -18,6 +18,19 @@ keypoints:
 ~~~
 {: .source}
 
+- Using matplotlib we can plot lists of numbers
+
+~~~
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 6, 8, 10]
+
+plt.plot(x, y)
+plt.xlabel('x-data')
+plt.ylabel('y-data')
+~~~
+{: .source}
+
+- We can also plot Pandas dataframes
 - Plot Australia data using dataframe plot method
 - Access row, Series.plot plots with columns as x variable
 - Note that dataframe is implicitly using matplotlib
@@ -51,11 +64,16 @@ plt.ylabel("GDP per capita")
 {: .source}
 
 - Use pyplot.plot explicitly
-- Get years using list comprehension
-- convert dataframe data to list
+- Store years in a list
+- We can also convert dataframe data to a list (though this is not necessary).
 
 ~~~
-years = [col[-4:] for col in df.columns.tolist()]
+years = []
+for col in df.columns:
+    # year is given by last 4 chars in col
+    year = col[-4:]
+    years.append(year)
+
 gdp_australia = df.ix["Australia"].tolist()
 plt.plot(years, gdp_australia, 'b-')
 ~~~
@@ -64,9 +82,15 @@ plt.plot(years, gdp_australia, 'b-')
 - Plot two series with labels
 
 ~~~
-years = [col[-4:] for col in df.columns.tolist()]
-gdp_australia = df.ix["Australia"].tolist()
-gdp_nz = df.ix["New Zealand"].tolist()
+years = []
+for col in df.columns:
+    # year is given by last 4 chars in col
+    year = col[-4:]
+    years.append(year)
+    
+gdp_australia = df.ix["Australia"]
+gdp_nz = df.ix["New Zealand"]
+
 plt.plot(years, gdp_australia, 'b-', label="Australia")
 plt.plot(years, gdp_nz, 'g-', label="New Zealand")
 plt.legend(loc="upper left")
