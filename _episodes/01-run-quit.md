@@ -65,7 +65,7 @@ $ jupyter notebook .
 *   Notebooks can also render Markdown. 
 *   Turn the current cell into a Markdown cell by entering the control mode (esc/blue) and press the "M" key. 
 *   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
-*   FIXME: how do you turn a Markdown cell back into a code cell?
+*   We can convert the Markdown cell back to the code cell by entering control mode (esc) and pressing "Y".
 
 > ## Creating Lists
 > 
