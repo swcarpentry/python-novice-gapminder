@@ -72,12 +72,12 @@ $ jupyter notebook .
 > Create a numbered list in a Markdown cell in a notebook
 > that looks like this:
 > 
-> > 1.  Get funding.
-> > 2.  Design experiment.
-> > 3.  Collect data.
-> > 4.  Analyze.
-> > 5.  Write up.
-> > 6.  Publish.
+> 1.  Get funding.
+> 2.  Design experiment.
+> 3.  Collect data.
+> 4.  Analyze.
+> 5.  Write up.
+> 6.  Publish.
 {: .challenge}
 
 > ## More Math

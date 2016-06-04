@@ -149,8 +149,9 @@ df.T.plot.scatter(x = "Australia", y = "New Zealand")
 > df_asia.idxmin()
 > ~~~
 > {: .source}
+{: .challenge}
 
-> ## More correlations
+> ## More Correlations
 > 
 > As a final exercise, make a fancy plot that shows the correlation between
 > GDP and life expectancy for 2007, normalizing marker size by population.
@@ -161,5 +162,4 @@ df.T.plot.scatter(x = "Australia", y = "New Zealand")
 >             s = df_all['pop_2007']/1e6)
 > ~~~
 > {: .source}
-
 {: .challenge}

@@ -14,53 +14,49 @@ keypoints:
 ---
 FIXME: lesson content.
 
-> ## Creating Lists
->
->  Multiple values can be stored in lists:
->
-> ~~~
-> objectives = ['Create lists.', 'Extract items from lists.','Modify lists.']
->
-> print(type(objectives))
-> ~~~
->{: .source}
->
-> ~~~
-> <class 'list'>
-> ~~~
-> {: .output}
+## Creating Lists
 
-> Sometimes we are not sure how many values we will have so we can start with an empty list and fill it sequentially.
->
-> ~~~
-> objectives = []
-> print(objectives)
-> objectives.append("Create lists.")
-> print(objectives)
-> objectives.append('Extract items from lists.')
-> print(objectives)
-> objectives.append('Modify lists.')
-> print(objectives)
-> ~~~
-> {: .source}
->
-> ~~~
-> []
-> ['Create lists.']
-> ['Create lists.','Extract items from lists.']
-> ['Create lists.','Extract items from lists.','Modify lists.']
-> ~~~
-> {: .output}
+Multiple values can be stored in lists:
 
-> Lists can also contain different types of values:
->
-> ~~~
-> objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
-> ~~~
-> {: .source}
+~~~
+objectives = ['Create lists.', 'Extract items from lists.','Modify lists.']
+print(type(objectives))
+~~~
+{: .source}
 
+~~~
+<class 'list'>
+~~~
+{: .output}
 
+Sometimes we are not sure how many values we will have so we can start with an empty list and fill it sequentially.
 
+~~~
+objectives = []
+print(objectives)
+objectives.append("Create lists.")
+print(objectives)
+objectives.append('Extract items from lists.')
+print(objectives)
+objectives.append('Modify lists.')
+print(objectives)
+~~~
+{: .source}
+
+~~~
+[]
+['Create lists.']
+['Create lists.','Extract items from lists.']
+['Create lists.','Extract items from lists.','Modify lists.']
+~~~
+{: .output}
+
+Lists can also contain different types of values:
+
+~~~
+objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+~~~
+{: .source}
 
 > ## From Strings to Lists and Back
 >

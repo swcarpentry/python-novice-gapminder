@@ -98,6 +98,7 @@ data_frame.describe()
 > |-- thesis/
 > |   \-- analysis.ipynb
 > ~~~
+> {: .output}
 > 
 > What value(s) should you pass to `read_csv` to read `microbes.csv` in `analysis.ipynb`?
 {: .challenge}
