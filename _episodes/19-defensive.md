@@ -62,6 +62,7 @@ assert convert_fahrenheit_to_celsius(212) == 100, 'Water boiling point conversio
 >     copy.sort()
 >     return copy[:2]
 > ~~~
+> {: .source}
 {: .challenge}
 
 > ## Design by Contract
