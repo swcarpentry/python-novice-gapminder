@@ -129,7 +129,7 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 {: .challenge}
 
 > ## Stepping through a List
->  
+>
 > What if we want to sequentially go through the elements of a list in a particular manner?
 > Discuss the output of the following commands:
 >
