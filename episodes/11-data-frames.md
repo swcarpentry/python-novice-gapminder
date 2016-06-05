@@ -25,17 +25,17 @@ data_frame.ix[0, 0]
 {: .source}
 
 > ## Selection of Individual Values
-> 
+>
 > Assume Pandas has been imported into your notebook
 > and the Gapminder GDP data for Europe has been loaded:
-> 
+>
 > ~~~
 > import pandas
-> 
+>
 > df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
 > {: .source}
-> 
+>
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}
 
@@ -75,10 +75,10 @@ data_frame.ix["Italy":"Poland", "gdpPercap_1962":"gdpPercap_1972"]
 Will the two snippets below produce the same output?  Why or why not?  How many
 data entries will be in the result?
 
-~~~ 
+~~~
 data_frame.ix[0:2, 0:2]
 data_frame.ix["Albania":"Belgium", "gdpPercap_1952":"gdpPercap_1962"]
-~~~ 
+~~~
 {: .source}
 
 In the above code, we discover that **slicing using indexes is inclusive at both
@@ -90,31 +90,31 @@ pythonic behavior.
 - Subsets using boolean criteria
 - All values greater than 10000, everything else is NaN
 
-~~~ 
+~~~
 df[df > 10000]
-~~~ 
+~~~
 {: .source}
 
 - All rows corresponding to 1952 GDP > 10000
 
-~~~ 
+~~~
 df[df["gdpPercap_1952"] > 10000]
 ~~~
 {: .source}
 
 > ## Make Americas.csv great again
 > Note that the Americas data is incorrect.  Take a look:
-> 
-> ~~~ 
+>
+> ~~~
 > df = pandas.load_csv("gapminder_gdp_americas.csv", index_col="country")
 > ~~~
 > {: .source}
-> 
+>
 > Fix it!
 > Use the following code to save a dataframe to csv
 > DataFrame.to_csv(filename)
 >
-> ~~~ 
+> ~~~
 > df = pandas.load_csv("gapminder_gdp_all.csv", index_col="country")
 > americas = df[df["continent"] == "Americas"]
 > americas = americas.drop("Puerto Rico")
@@ -145,17 +145,17 @@ df.idxmax()
 {: .source}
 
 > ## Selection of Rows
-> 
+>
 > Assume Pandas has been imported into your notebook and the Gapminder GDP data
 > for Europe has been loaded:
-> 
-> ~~~ 
-> import pandas data = pandas.read_csv('data/gapminder_gdp_europe.csv') 
+>
+> ~~~
+> import pandas data = pandas.read_csv('data/gapminder_gdp_europe.csv')
 > ~~~
 > {: .source}
-> 
+>
 > Write an expression to select each of the following:
-> 
+>
 > 1. GDP per capita for all countries in 1982.  2. GDP per capita for Denmark
 > for all years.  3. GDP per capita for all countries for years *after* 1985.
 > 4. GDP per capita for each country in 2007 as a multiple of GDP per capita for
@@ -163,7 +163,7 @@ df.idxmax()
 {: .challenge}
 
 > ## Interpretation
-> 
+>
 > Poland's borders have been stable since 1945, but changed several times in the
 > years before then.  How would you handle this if you were creating a table of
 > GDP per capita for Poland in the Twentieth Century?

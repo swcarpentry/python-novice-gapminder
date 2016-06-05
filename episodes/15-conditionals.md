@@ -42,7 +42,7 @@ else:
 For example, we might use the comparator `>`, as in the following:
 
 ~~~
-water_temp = 120 
+water_temp = 120
 pressure = 1
 
 if water_temp > 100:
@@ -67,11 +67,11 @@ print("The water is currently ", state)
 {: .source}
 
 > ## Trimming Values
-> 
+>
 > Fill in the blanks so that this program trims the data
 > by replacing all values less than zero with zero
 > and all values greater than one with one.
-> 
+>
 > ~~~
 > original = [-1.5, 0.2, 0.4, 0.0, 1.3, 0.4]
 > result = ____
@@ -85,7 +85,7 @@ print("The water is currently ", state)
 > print(result)
 > ~~~
 > {: .source}
-> 
+>
 > ~~~
 > [0.0, 0.2, 0.4, 0.0, 1.0, 0.4]
 > ~~~
@@ -93,9 +93,9 @@ print("The water is currently ", state)
 {: .challenge}
 
 > ## Processing Small Files
-> 
+>
 > Modify this program so that it only processes files with fewer than 50 records.
-> 
+>
 > ~~~
 > import glob
 > import pandas as pd
@@ -108,10 +108,10 @@ print("The water is currently ", state)
 {: .challenge}
 
 > ## Initializing
-> 
+>
 > Modify this program so that it finds the largest and smallest values in the list
 > no matter what the range of values originally is.
-> 
+>
 > ~~~
 > values = [...some test data...]
 > smallest, largest = None, None
@@ -124,15 +124,15 @@ print("The water is currently ", state)
 > print(smallest, largest)
 > ~~~
 > {: .source}
-> 
+>
 > What are the advantages and disadvantages of using this method
 > to find the range of the data?
 {: .challenge}
 
 > ## Tracing Execution
-> 
+>
 > What does this program print?
-> 
+>
 > ~~~
 > pressure = 71.9
 > if pressure 50.0:

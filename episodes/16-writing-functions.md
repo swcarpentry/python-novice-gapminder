@@ -20,26 +20,26 @@ FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/st
 () contains the ingredients for the function while the body contains the recipe.
 
 > ## Definition and Use
-> 
+>
 > What does the following program print?
-> 
+>
 > ~~~
 > def report(pressure):
 >     print('pressure is', pressure)
-> 
+>
 > print('calling', report, 22.5)
 {: .challenge}
 
 > ## Encapsulation
-> 
+>
 > Fill in the blanks to create a function
 > that takes a single filename as an argument,
 > loads the data in the file named by the argument,
 > and returns the minimum value in that data.
-> 
+>
 > ~~~
 > import pandas as pd
-> 
+>
 > def min_in_data(____):
 >     data = ____
 >     return ____
@@ -48,18 +48,18 @@ FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/st
 {: .challenge}
 
 > ## What Will Be Shown?
-> 
+>
 > Highlight the lines in the code below that will be available as online help.
 > Are there lines that should be made available, but won't be?
 > Will any lines produce a syntax error or a runtime error?
-> 
+>
 > ~~~
 > "Find maximum edit distance between multiple sequences."
 > # This finds the maximum distance between all sequences.
-> 
+>
 > def overall_max(sequences):
 >     '''Determine overall maximum edit distance.'''
-> 
+>
 >     highest = 0
 >     for left in sequences:
 >         for right in sequences:
@@ -67,7 +67,7 @@ FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/st
 >             if left != right:
 >                 this = edit_distance(left, right)
 >                 highest = max(highest, this)
-> 
+>
 >     # Report.
 >     return highest
 > ~~~
@@ -75,10 +75,10 @@ FIXME: [elegant explanation of functions](https://twitter.com/minisciencegirl/st
 {: .challenge}
 
 > ## Document This
-> 
+>
 > Turn the comment on the following function into a docstring
 > and check that `help` displays it properly.
-> 
+>
 > ~~~
 > def middle(a, b, c):
 >     # Return the middle value of three.

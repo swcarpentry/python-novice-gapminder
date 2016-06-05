@@ -65,7 +65,7 @@ full_name
 {: .source}
 
 *   Can you use the `-` symbol to subtract a string?
-*   Can you multiply `*` a string by a number? 
+*   Can you multiply `*` a string by a number?
 *   By another string?
 
 ### When are calculations performed?
@@ -123,11 +123,11 @@ y = x
 Now, `y` has the same value than `x`.
 
 > ## Swapping Values
-> 
+>
 > Draw a table showing the values of the variables in this program
 > after each statement is executed.
 > In simple terms, what do the last three lines of this program do?
-> 
+>
 > ~~~
 > lowest = 1.0
 > highest = 3.0
@@ -139,11 +139,11 @@ Now, `y` has the same value than `x`.
 {: .challenge}
 
 > ## Predicting Values
-> 
+>
 > What is the final value of `position` in the program below?
 > (Try to predict the value without running the program,
 > then check your prediction.)
-> 
+>
 > ~~~
 > initial = "left"
 > position = initial
