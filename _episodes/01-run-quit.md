@@ -36,7 +36,7 @@ $ jupyter notebook .
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
 *   FIXME: what advantages are there to this arrangement?
-*   The notebook is stored as JSON.
+*   The notebook is stored as JSON but can be saved as a .py file if you would like to run it from the bash shell or a python interpreter.
 *   Just like a webpage, the saved notebook looks different to what you see when it gets rendered by your browser.
 
 ### Control and Edit modes
