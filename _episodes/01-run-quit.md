@@ -30,7 +30,8 @@ $ jupyter notebook .
 ~~~
 {: .source}
 
-*   This will start a Jupyter Notebook server and open your default web browser.
+*   This will start a Jupyter Notebook server and open your default web browser. 
+*   The server runs locally on your machine only and does not use an internet connection.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
