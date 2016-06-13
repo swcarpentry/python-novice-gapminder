@@ -59,10 +59,9 @@ $ jupyter notebook .
 *   There are lots of shortcuts you can try out and most actions can done with the menus at the top of the page if you forget the shortcuts.
 *   *If you first remember the "esc" and "H" shortcut, you will be able to find out all the rest.*
 
-*   Pressing the "return" key turns the surround green to signify edit mode and you can type code into the cell.
-*   Because we want to be able to write many lines of code in a single cell, the "return" key will do what it normally does.
-*   It moves the cursor to the next line just like in a text editor.
-*   We need some other way to tell the Notebook we want to execute the code in the cell.
+*   Pressing the "return" key when the border is blue turns the border green to signify edit mode and you can type code into the cell.
+*   Because we want to be able to write many lines of code in a single cell, pressing the "return" key when the border is green moves the cursor to the next line just like in a text editor.
+*   We need some way to tell the Notebook we want to execute the code in the cell.
 *   Pressing the "return" key and the "shift" key together will execute the code in the cell.
 *   Notice that the "return" and "shift" keys on the right of the keyboard are right next to each other.
 
