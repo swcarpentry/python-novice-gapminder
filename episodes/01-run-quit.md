@@ -47,9 +47,9 @@ $ jupyter notebook .
 ### Control and Edit modes
 
 *   Open a new notebook from the dropdown menu in the top right corner of the file browser page.
-*   If you press "esc" and "return" alternately, you will see the surround of your code cell change from blue to green.
+*   If you press "esc" and "return" alternately, you will see the outer border of your code cell change from blue to green.
 *   The difference in colour is subtle.
-*   These are the control and edit modes of your notebook.
+*   These are the control (blue) and edit (green) modes of your notebook.
 *   If you use the "esc" and "return" keys to make the surround blue and then press the "H" key, a list of all the shortcut keys will appear.
 
 *   When in control mode (esc/Blue),
