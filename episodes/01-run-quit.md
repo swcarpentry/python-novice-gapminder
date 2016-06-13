@@ -36,6 +36,11 @@ $ jupyter notebook .
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
 *   FIXME: what advantages are there to this arrangement?
+*   This has several advantages:
+	- You can easily type, edit, and copy and paste blocks of code.
+	- Tab complete allows you to easily access the names of things you are using and learn more about them.
+	- It allows you to annotate your code with links, different sized text, bullets, etc to make it more accessible to you and your collaborators.
+	- It allows you to display figures next to the code that produces them to tell a complete story of the analysis.
 *   The notebook is stored as JSON but can be saved as a .py file if you would like to run it from the bash shell or a python interpreter.
 *   Just like a webpage, the saved notebook looks different to what you see when it gets rendered by your browser.
 
