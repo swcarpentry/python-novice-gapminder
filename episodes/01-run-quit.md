@@ -21,7 +21,7 @@ keypoints:
 
 ### The Jupyter Notebook
 
-*   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
+*   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook. See [Setup Instructions](../setup.md) for Anaconda installation instructions.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a bash shell and type:
 
@@ -96,3 +96,4 @@ $ jupyter notebook .
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
+[setup]: ../setup.md
