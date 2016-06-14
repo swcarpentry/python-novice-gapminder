@@ -76,9 +76,9 @@ if statement_1:
 elif statement_2:
     task_to_be_done_if_statement_2_is_true
 else:
-	task_to_be_done_if_neither_statement_1_or_statement_2_is_true
+    task_to_be_done_if_neither_statement_1_or_statement_2_is_true
 ~~~
-{: .source python}
+{: .source}
 
 You can chain as many `if` / `elif` statements together as you would like, but there 
 can only be one else statement in a set of code. Let's try an example. Let's say 
@@ -87,13 +87,13 @@ you wanted to convert a numerical grade into a letter grade.
 ~~~
 grade = 85
 if grade >= 90:
-	print("A")
+    print("A")
 elif grade >= 80:
-	print("B")
+    print("B")
 elif grade >= 70:
-	print("C")
+    print("C")
 else:
-	print("failing")
+    print("failing")
 ~~~
 {: .source}
 
@@ -104,11 +104,11 @@ So, make sure the ordering of your statements makes logical sense. For example:
 ~~~
 grade = 85
 if grade >= 70:
-	print("C")
+    print("C")
 elif grade >= 80:
-	print("B")
+    print("B")
 elif grade >= 90:
-	print("A")
+    print("A")
 ~~~
 {: .source}
 
