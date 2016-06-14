@@ -223,3 +223,17 @@ subset [5, 13, 23, 37]
 > ~~~
 > {: .source}
 {: .challenge}
+
+> ## Non-continuous slices
+> Use the step size argument to create a new string that contains only every other character in the string "In an octopus's garden in the shade"  
+>
+> ~~~
+> beatles = "In an octopus's garden in the shade"
+> ~~~
+> {.source}
+> 
+> ~~~
+> I notpssgre ntesae
+> ~~~
+> {.output}
+> {.challenge}
