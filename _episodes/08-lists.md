@@ -237,3 +237,18 @@ subset [5, 13, 23, 37]
 > ~~~
 > {.output}
 > {.challenge}
+
+>## Slicing correctly
+> Given the list below, which option underneath will return the subset of list entries `['nothing', 'drive', 'away,', 'can', 'them', 'for', 'day.']` ?
+>
+>~~~
+>bowie = ['Though', 'nothing', 'will', 'drive', 'them', 'away', 'we', 'can', 'beat', 'them', 'just', 'for', 'one', 'day']
+>~~~
+>{: .source}
+>
+>a) bowie[1,3,5,7,9,11,13]  
+>b) bowie[::2]  
+>c) bowie[1::2]  
+>d) bowie[:2]
+>{: .challenge}
+
