@@ -230,13 +230,13 @@ subset [5, 13, 23, 37]
 > ~~~
 > beatles = "In an octopus's garden in the shade"
 > ~~~
-> {.source}
+> {: .source}
 > 
 > ~~~
 > I notpssgre ntesae
 > ~~~
-> {.output}
-> {.challenge}
+> {: .output}
+{: .challenge}
 
 >## Slicing correctly
 > Given the list below, which option underneath will return the subset of list entries `['nothing', 'drive', 'away,', 'can', 'them', 'for', 'day.']` ?
