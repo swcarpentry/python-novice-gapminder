@@ -42,6 +42,22 @@ FIXME: lesson content.
 > {: .source}
 {: .challenge}
 
+> ## Cumulative sum
+>
+> Reorder and properly indent the following program so that it prints an array with the cumulative sum of data.
+> (should print [1,3,5,10]).
+>
+> ~~~
+> cumulative += [sum]
+> for number in data:
+> cumulative = []
+> sum += number
+> print(cumulative)
+> data = [1,2,2,5]
+> ~~~
+> {: .source}
+{: .challenge}
+
 > ## Looping through Dictionaries
 >
 > So far, we've seen two ways to loop through objects in Python. 
