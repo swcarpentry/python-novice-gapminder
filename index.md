@@ -50,7 +50,7 @@ We first import Pandas library as :
 > Now that we have the library imported, we can load one of the data files in our directory:
 >
 > ~~~
-> data = pd.read_csv("./gapminder_all.csv", header=0)
+> data = pandas.read_csv("./gapminder_all.csv", header=0)
 > ~~~
 >
 > Now we have read and stored the content of the "gapminder_all.csv" file in the "data" variable. "header=0" means the first line of the file contains the header info.
