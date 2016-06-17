@@ -1,9 +1,9 @@
 #------------------------------------------------------------
-# Values for this site.
+# Values for this lesson.
 #------------------------------------------------------------
 
-# Domain for searches.
-domain: "https://swcarpentry.github.io/python-novice-gapminder"
+# Which carpentry is this ("swc", "dc")?
+carpentry: "swc"
 
 # URL for repository.
 repo: "https://github.com/swcarpentry/python-novice-gapminder"
@@ -11,17 +11,17 @@ repo: "https://github.com/swcarpentry/python-novice-gapminder"
 # Root URL for lesson below domain.
 root: "/python-novice-gapminder"
 
-# Overall lesson title.
-title: "Programming in Python"
-
 # Contact email address.
-email: swcarpentry@software-carpentry.org
+email: lessons@software-carpentry.org
 
 # What kind of thing is this ("workshop", "lesson")?
 kind: "lesson"
 
-# Which carpentry is this ("swc", "dc")?
-carpentry: "swc"
+# Overall title for pages.
+title: "Programming in Python"
+
+# Domain for searches.
+domain: "https://swcarpentry.github.io/python-novice-gapminder"
 
 #------------------------------------------------------------
 # Generic settings (should not need to change).
@@ -32,11 +32,15 @@ amy_site: "https://amy.software-carpentry.org/workshops"
 dc_site: "https://datacarpentry.org"
 swc_github: "https://github.com/swcarpentry"
 swc_site: "https://software-carpentry.org"
-template_repo: "https://github.com/gvwilson/new-template"
-example_repo: "https://github.com/gvwilson/new-lesson-example"
-example_site: "https://gvwilson.github.com/new-lesson-example"
-workshop_repo: "https://github.com/gvwilson/new-workshop-template"
-workshop_site: "https://gvwilson.github.io/new-workshop-template"
+template_repo: "https://github.com/swcarpentry/new-template"
+example_repo: "https://github.com/swcarpentry/lesson-example"
+example_site: "https://swcarpentry.github.com/lesson-example"
+workshop_repo: "https://github.com/swcarpentry/workshop-template"
+workshop_site: "https://swcarpentry.github.io/workshop-template"
+
+# Surveys.
+pre_survey: "https://www.surveymonkey.com/r/swc_pre_workshop_v1?workshop_id="
+post_survey: "https://www.surveymonkey.com/r/swc_post_workshop_v1?workshop_id="
 
 # Start time in minutes (540 is 09:00 am)
 start_time: 540
@@ -48,6 +52,14 @@ collections:
     permalink: /:path/
   extras:
     output: true
+
+# Set the default layout for things in the episodes collection.
+defaults:
+  - scope:
+      path: ""
+      type: episodes
+    values:
+      layout: episode
 
 # Files and directories that are not to be copied.
 exclude:
