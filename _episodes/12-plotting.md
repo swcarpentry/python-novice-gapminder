@@ -11,7 +11,7 @@ objectives:
 keypoints:
 - FIXME
 ---
-- Set up matplotlib inline functionality in jupyter notebook
+- Set up matplotlib inline functionality in Jupyter notebook
 
 ~~~
 %matplotlib inline

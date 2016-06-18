@@ -72,5 +72,6 @@ your workshop organizers via e-mail for assistance getting set up.
 ## Get Gapminder Data
 
 The data we will be using is taken from the [gapminder](gapminder.org) dataset.
-To obtain it, download and unzip the file [python-novice-gapminder-data.zip]({{ site.root }}/python-novice-gapminder-data.zip).
-In order to follow the presented material, you should create the jupyter notebook in the "data" directory.
+To obtain it, download and unzip the file
+[python-novice-gapminder-data.zip]({{ site.github.repository_url }}/python-novice-gapminder-data.zip).
+In order to follow the presented material, you should create the Jupyter notebook in the "data" directory.
