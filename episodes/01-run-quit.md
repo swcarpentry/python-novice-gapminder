@@ -95,4 +95,22 @@ $ jupyter notebook .
 > {: .source}
 {: .challenge}
 
+> ## Change an Existing Cell from Code to Markdown
+> What if you already wrote some code in into your *code cell* and then you switch it to a *markdown cell*?
+> Give it a try; type the following into a cell in *Edit Mode*:
+> 
+> ~~~
+> x = 6 * 7 + 12
+> print(x)
+> ~~~ 
+> 
+> Now run the cell to be sure that it works as a code cell (shift + return). 
+> 
+> Now go back to the cell, press escape to make sure you're in *Control Mode*, and press the "M" key. Now try running the cell (shift + return). 
+>
+> What happened and how might this be useful? 
+> 
+> As an added challenge, try changing back to a code cell by pressing the "Y" key from the *Control Mode*. 
+{: .challenge}
+
 [anaconda]: https://docs.continuum.io/anaconda/install
