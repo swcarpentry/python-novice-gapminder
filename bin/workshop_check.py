@@ -415,8 +415,9 @@ def main():
         print(USAGE, file=sys.stderr)
         sys.exit(1)
 
-    index_file = sys.argv[1]
-    config_file = os.path.join(os.path.dirname(index_file), '_config.yml')
+    root_dir = sys.argv[1]
+    index_file = os.path.join(root_dir, 'index.html')
+    config_file = os.path.join(root_dir, '_config.yml')
     logger.info('Testing "{0}" and "{1}"'.format(index_file, config_file))
 
     errors = []

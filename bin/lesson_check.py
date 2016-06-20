@@ -10,10 +10,9 @@ import glob
 import json
 import yaml
 import re
-from subprocess import Popen, PIPE
 from optparse import OptionParser
 
-from util import Reporter
+from util import Reporter, read_markdown
 
 __version__ = '0.2'
 
@@ -32,6 +31,7 @@ REQUIRED_FILES = [
     (True, '%/LICENSE.md'),
     (False, '%/README.md'),
     (True, '%/_extras/discuss.md'),
+    (True, '%/_extras/figures.md'),
     (True, '%/_extras/guide.md'),
     (True, '%/index.md'),
     (True, '%/reference.md'),
@@ -134,42 +134,10 @@ def read_all_markdown(args, source_dir):
     result = {}
     for pat in all_patterns:
         for filename in glob.glob(pat):
-            data = read_markdown(args, filename)
+            data = read_markdown(args.parser, filename)
             if data:
                 result[filename] = data
     return result
-
-
-def read_markdown(args, path):
-    """Get YAML and AST for Markdown file, returning {'metadata':yaml, 'text': text, 'doc':doc}."""
-
-    # Split and extract YAML (if present).
-    metadata = None
-    metadata_len = None
-    with open(path, 'r') as reader:
-        body = reader.read()
-    pieces = body.split('---', 2)
-    if len(pieces) == 3:
-        try:
-            metadata = yaml.load(pieces[1])
-        except yaml.YAMLError as e:
-            print('Unable to parse YAML header in {0}:\n{1}'.format(path, e))
-            sys.exit(1)
-        metadata_len = pieces[1].count('\n')
-        body = pieces[2]
-
-    # Parse Markdown.
-    cmd = 'ruby {0}'.format(args.parser)
-    p = Popen(cmd, shell=True, stdin=PIPE, stdout=PIPE, close_fds=True, universal_newlines=True)
-    stdout_data, stderr_data = p.communicate(body)
-    doc = json.loads(stdout_data)
-
-    return {
-        'metadata': metadata,
-        'metadata_len': metadata_len,
-        'text': body,
-        'doc': doc
-    }
 
 
 def check_fileset(source_dir, reporter, filenames_present):
