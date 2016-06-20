@@ -41,6 +41,7 @@ average
 ```
 
 If we wanted to just know the answer in round numbers we could convert the floating point number to an integer
+
 ```python
 whole = int(average)
 whole
