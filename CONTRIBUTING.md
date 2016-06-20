@@ -42,7 +42,7 @@ and to meet some of our community members.
     and would like to add or change material,
     you can submit a pull request (PR).
     For information about using pull requests see 
-    [github documentation on using pull requests](https://help.github.com/articles/using-pull-requests/)
+    [github documentation on using pull requests](https://help.github.com/articles/using-pull-requests/).
 
 ## What We're Looking For
 
