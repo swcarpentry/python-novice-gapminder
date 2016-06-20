@@ -31,6 +31,7 @@ $ jupyter notebook .
 {: .source}
 
 *   This will start a Jupyter Notebook server and open your default web browser.
+*   The "." in the above command signifies that the base directory of the notebook will be in the current working directory.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
