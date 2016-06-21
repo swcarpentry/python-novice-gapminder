@@ -13,6 +13,7 @@ keypoints:
 - FIXME
 ---
 FIXME: lesson content.
+* First place indentation is used to group code into blocks. Indentation should be described here.
 
 > ## Tracing Execution
 >
