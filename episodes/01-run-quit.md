@@ -103,6 +103,7 @@ $ jupyter notebook .
 > x = 6 * 7 + 12
 > print(x)
 > ~~~ 
+> {: .python}
 > 
 > Now run the cell to be sure that it works as a code cell (shift + return). 
 > 
