@@ -42,7 +42,7 @@ FIXME: lesson content.
 > {: .source}
 {: .challenge}
 
-> ## Looping through Dictionaries
+> ## Looping Through Dictionaries
 >
 > So far, we've seen two ways to loop through objects in Python. 
 > Looping through a *string* iterates through character by character.
@@ -50,12 +50,14 @@ FIXME: lesson content.
 > We can also loop through python *dictionaries*. 
 > The default looping behavior iterates through each key in the dictionary.
 > 
-> ~~~ {.python}
+> ~~~
 > d = {'apples': 0.49, 'oranges': 0.99, 'pears': 1.49, 'bananas': 0.32}
 > #default looping
 > for key in d:
 >    print key, d[key]
 > ~~~
+> {: .python}
 > 
 > Knowing this, use a for loop to calculate how much it'll cost you 
 > to buy 2 pieces of each fruit.
+{: .challenge}
