@@ -31,6 +31,7 @@ $ jupyter notebook .
 {: .source}
 
 *   This will start a Jupyter Notebook server and open your default web browser.
+*   The "." in the above command signifies that the base directory of the notebook will be in the current working directory.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
@@ -50,7 +51,7 @@ $ jupyter notebook .
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
-*   There are lots of shortcuts you can try out and most actions can done with the menus at the top of the page if you forget the shortcuts.
+*   There are lots of shortcuts you can try out and most actions can be done with the menus at the top of the page if you forget the shortcuts.
 *   *If you first remember the "esc" and "H" shortcut, you will be able to find out all the rest.*
 
 *   Pressing the "return" key turns the surround green to signify edit mode and you can type code into the cell.
@@ -65,7 +66,7 @@ $ jupyter notebook .
 *   Notebooks can also render Markdown.
 *   Turn the current cell into a Markdown cell by entering the control mode (esc/blue) and press the "M" key.
 *   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
-*   FIXME: how do you turn a Markdown cell back into a code cell?
+*   A non-code cell can be turned back into a code cell by using the "Y" key.
 
 > ## Creating Lists
 >

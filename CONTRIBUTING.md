@@ -41,14 +41,15 @@ and to meet some of our community members.
 3.  If you are comfortable with Git,
     and would like to add or change material,
     you can submit a pull request (PR).
-    Instructions for doing this are [included below](#using-github).
+    For information about using pull requests see 
+    [github documentation on using pull requests](https://help.github.com/articles/using-pull-requests/).
 
 ## What We're Looking For
 
 There are many ways to contribute,
 from writing new exercises and improving existing ones
 to updating or filling in the documentation
-and and submitting [bug reports][issues]
+and submitting [bug reports][issues]
 about things that don't work, aren't clear, or are missing.
 If you are looking for ideas,
 please see [the list of issues for this repository][issues],

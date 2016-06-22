@@ -105,7 +105,7 @@ x = 1.0
 ~~~
 {: .source}
 
-Python will assign a float value to the variable `x`. Once a variable is defined will remain in memory until the program python shell is alive. If you want to delete the variable you will do
+Python will assign a float value to the variable `x`. Once a variable is defined it will remain in memory until the python shell is no longer alive. If you want to delete the variable you will do
 
 ~~~
 del x
