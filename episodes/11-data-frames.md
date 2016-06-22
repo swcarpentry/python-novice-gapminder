@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Pandas Data Frames"
 teaching: 10
 exercises: 10

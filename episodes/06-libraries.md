@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Libraries"
 teaching: 5
 exercises: 5
