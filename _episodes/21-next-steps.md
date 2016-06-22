@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Next Steps"
 teaching: 15
 exercises: 0

@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "The Call Stack"
 teaching: 10
 exercises: 15
