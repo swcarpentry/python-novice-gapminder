@@ -4,6 +4,33 @@ title: "Setup"
 permalink: /setup/
 ---
 
+## Getting the Data
+
+The data we will be using is taken from the [gapminder](gapminder.org) dataset.
+To obtain it, download and unzip the file [python-novice-gapminder-data.zip](python-novice-gapminder-data.zip).
+In order to follow the presented material, you should create the Jupyter notebook in the "data" directory.
+
+## Starting Python
+
+If you will be using the IPython or Jupyter notebook for the lesson,
+you should have already
+[installed Anaconda](http://swcarpentry.github.io/workshop-template/#setup)
+which includes the notebook.
+
+To start the notebook, open a terminal or git bash and type the command:
+
+~~~
+$ jupyter notebook
+~~~
+{: .source}
+
+To start the Python intrepreter without the notebook, open a terminal or git bash and type the command:
+
+~~~
+$ python
+~~~
+{: .source}
+
 ## Installation Using Anaconda
 
 [Python](https://python.org) is a popular language for scientific computing, and great for
