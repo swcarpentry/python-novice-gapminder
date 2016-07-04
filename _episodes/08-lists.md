@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Lists"
 teaching: 5
 exercises: 10
@@ -91,7 +90,6 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 > {: .source}
 {: .challenge}
 
-
 > ## Fill in the Blanks
 >
 > Fill in the blanks so that the program below produces the output shown.
@@ -120,7 +118,6 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 > how long is the list `values[low:high]`?
 {: .challenge}
 
-
 > ## Working with the End
 >
 > 1. Assuming `values` is a list,
@@ -128,7 +125,7 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 > 2. How can you display all elements but the last one without changing `values`?
 {: .challenge}
 
-> ## Stepping through a List
+> ## Stepping Through a List
 >
 > What if we want to sequentially go through the elements of a list in a particular manner?
 > Discuss the output of the following commands:

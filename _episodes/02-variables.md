@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Variables and Assignment"
 teaching: 5
 exercises: 5
@@ -29,19 +28,19 @@ first_name = 'Alistair'
 *   Underscores at the start like `__alistairs_real_age` have a special meaning so we won't do that until we understand the convention.
 *   Python programmers refer to a double underscore as a "dunder".
 
-### Upper and lower case letters
+### Upper and Lower Case Letters
 
 *   `Name` and `name` are different to Python.
 *   Again there are conventions around using uppercase at the start of names so we'll use lowercase letters.
 
-### Meaningful variable names
+### Meaningful Variable Names
 
 *   Python doesn't care what you call variables as long as they follow the rules.
 *   You can name your age `flabadap` and your first name `ewr-45-ada__wYYEDyebdb` --- but don't.
 *   Try to use a meaningful variable name because it helps humans read the code.
 *   And by humans we really mean your future self.
 
-### Using variables
+### Using Variables
 
 *   Now we've created the age variable, we can do calculations with it:
 
@@ -68,7 +67,7 @@ full_name
 *   Can you multiply `*` a string by a number?
 *   By another string?
 
-### When are calculations performed?
+### When Are Calculations Performed?
 
 *   We changed the value of `age` before to `age + 3`.
 *   Let's reassign our current age to `age` and create a `future_age` variable that uses `age` to calculate our future age in 15 years:

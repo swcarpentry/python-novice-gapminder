@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Conditionals"
 teaching: 5
 exercises: 10

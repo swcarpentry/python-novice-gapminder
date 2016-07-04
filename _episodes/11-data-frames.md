@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Pandas Data Frames"
 teaching: 10
 exercises: 10
@@ -103,6 +102,7 @@ df[df["gdpPercap_1952"] > 10000]
 {: .source}
 
 > ## Make Americas.csv great again
+>
 > Note that the Americas data is incorrect.  Take a look:
 >
 > ~~~
@@ -124,7 +124,7 @@ df[df["gdpPercap_1952"] > 10000]
 > {: .source}
 {: .challenge}
 
-## More operations
+## More Operations
 
 - Minima
 

@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Built-in Functions and Help"
 teaching: 10
 exercises: 10
@@ -22,66 +21,78 @@ FIXME: lesson content.
 
 Lets use Python's math functions to calculate a mean or average
 
-```python
+~~~
 a = 2
 b = 7
 c = 4
 average = a + b + c / 3
 average
-```
+~~~
+{: .python}
 
 Oops! I forgot that division happens before addition. Can you see the mistake?
 
-```python
+~~~
 a = 2
 b = 7
 c = 4
 average = (a + b + c) / 3
 average
-```
+~~~
+{: .python}
 
 If we wanted to just know the answer in round numbers we could convert the floating point number to an integer
 
-```python
+~~~
 whole = int(average)
-whole
-```
+~~~
+{: .python}
 
 Rounding it to 2 decimal places would be a bit trickier.
 
-### Built in Functions
+### Built-In Functions
 
 Python has common tasks already built in and rounding numbers is one of them.
 
-```python
+~~~
 round(average)
-```
+~~~
+{: .python}
 
-The function has parenthesis after it. The variable we want to perform the function on is inside them. The default behaviour is to round to whole numbers. If we wanted to round to 2 decimal places, we need to stipulate that with a second value inside the parenthesis.
+The function has parenthesis after it. The variable we want to perform
+the function on is inside them. The default behaviour is to round to
+whole numbers. If we wanted to round to 2 decimal places, we need to
+stipulate that with a second value inside the parenthesis.
 
-```python
+~~~
 round(average,2)
-```
+~~~
+{: .python}
 
 ### Getting Help
 
-In the Jupyter notebook we can get help on functions in a couple of ways. Place the cursor inside the parenthesis of the function, hold down `shift` and press `tab`. Notice they are close together on the left side of the keyboard.
+In the Jupyter notebook we can get help on functions in a couple of
+ways. Place the cursor inside the parenthesis of the function, hold
+down `shift` and press `tab`. Notice they are close together on the
+left side of the keyboard.
 
 Typing a function name with a question mark after it will bring up the documentation.
 
-```python
+~~~
 round?
-```
+~~~
+{: .python}
 
-The third way is to use the help function. This will work at any python prompt, rather than just in the Jupyter Notebook like the first two examples.
+The third way is to use the help function. This will work at any
+python prompt, rather than just in the Jupyter Notebook like the first
+two examples.
 
-```python
+~~~
 help(round)
-```
+~~~
+{: .python}
 
-  Now that you know how to get help, try out `len()`,`sum()`,`min()` and `max()`.
-
-
+Now that you know how to get help, try out `len()`,`sum()`,`min()` and `max()`.
 
 > ## What Happens When
 >

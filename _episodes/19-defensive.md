@@ -1,5 +1,4 @@
 ---
-layout: episode
 title: "Defensive Programming"
 teaching: 10
 exercises: 15
