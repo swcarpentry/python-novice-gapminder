@@ -214,5 +214,22 @@ Or use [named links][data_carpentry].
 > What happened and how might this be useful? 
 {: .challenge}
 
+> ## Mathematics
+>
+> Standard Markdown (such as we're using for these notes) won't render equations,
+> but the Notebook will.
+> Create a new Markdown cell
+> and enter the following:
+>
+> ~~~
+> $\Sigma_{i=1}^{N} 2^{-i} \approx 1$
+> ~~~
+> {: .source}
+>
+> (It's probably easier to copy and paste.)
+> What does it display?
+> What do you think the underscore `_`, circumflex `^`, and dollar sign `$` do?
+{: .challenge}
+
 [anaconda]: https://docs.continuum.io/anaconda/install
 [markdown]: https://en.wikipedia.org/wiki/Markdown
