@@ -11,14 +11,14 @@ objectives:
 keypoints:
 - FIXME
 ---
-### Python Programs are plain text files.
+## Python programs are plain text files.
 
 *   They have the ".py" extension to let everyone know (including the operating system) it is a Python program.
 *   It's common to write them using a text editor but we are going to use the Jupyter Notebook.
 *   The bit of extra setup is well worth it because the Notebook provides code completion and other helpful features.
 *   Notebook files have the extension ".ipynb" to distinguish them from plain-text Python programs.
 
-### The Jupyter Notebook
+## Use the Jupyter Notebook for editing and running Python.
 
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
 *   It also installs all the extra libraries it needs to run.
@@ -40,7 +40,7 @@ FIXME: diagram
 > *   But this format allows Jupyter to mix software (in several languages) with documentation and graphics, all in one file.
 {: .callout}
 
-### Control and Edit modes
+## The Notebook has Control and Edit modes.
 
 *   Open a new notebook from the dropdown menu in the top right corner of the file browser page.
 *   Each notebook contains one or more cells of various types.
@@ -63,7 +63,7 @@ FIXME: diagram
 *   There are lots of shortcuts you can try out and most actions can done with the menus at the top of the page if you forget the shortcuts.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
 
-## Editing a Cell
+## Use the keyboard and mouse to select and edit cells.
 
 *   Pressing the "return" key turns the surround green to signify edit mode and you can type into the cell.
 *   Because we want to be able to write many lines in a single cell, the "return" key will do what it normally does.
@@ -72,7 +72,7 @@ FIXME: diagram
 *   Pressing the "return" key and the "shift" key together will execute the contents of the cell.
 *   Notice that the "return" and "shift" keys on the right of the keyboard are right next to each other.
 
-## Markdown
+## The Notebook will turn Markdown into pretty-printed documentation.
 
 *   Notebooks can also render [Markdown][markdown].
     *   A simple plain-text format for writing lists, links, and other things that might go into a web page.
@@ -81,7 +81,7 @@ FIXME: diagram
 *   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
 *   Use the "Y" key in the control menu to change the cell back to code.
 
-## A Quick Guide
+## Markdown does most of what HTML does.
 
 <div class="row">
   <div class="col-md-6" markdown="1">
@@ -90,6 +90,7 @@ FIXME: diagram
 *   to create
 *   bullet lists.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 *   Use asterisks
@@ -105,6 +106,7 @@ FIXME: diagram
 1.  to create
 1.  numbered lists.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 1.  Use numbers
@@ -118,6 +120,7 @@ FIXME: diagram
 ~~~
 # A Level-1 Heading
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 # A Level-1 Heading
@@ -129,6 +132,7 @@ FIXME: diagram
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 ## A Level-2 Heading (etc.)
@@ -144,6 +148,7 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 Line breaks
@@ -162,6 +167,7 @@ Or use [named links][data_carpentry].
 
 [links]: http://datacarpentry.org
 ~~~
+{: .source}
   </div>
   <div class="col-md-6" markdown="1">
 [Create links](http://software-carpentry.org) with `[...](...)`.
