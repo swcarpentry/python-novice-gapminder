@@ -13,86 +13,131 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+## A function may take zero or more arguments.
 
-*lists needed now
-
-### Functions
-
-Lets use Python's math functions to calculate a mean or average
-
-~~~
-a = 2
-b = 7
-c = 4
-average = a + b + c / 3
-average
-~~~
-{: .python}
-
-Oops! I forgot that division happens before addition. Can you see the mistake?
+*   We have seen some functions already --- now let's take a closer look.
+*   An *argument* is a value passed into a function.
+*   `len` takes exactly one.
+*   `int`, `str`, and `float` create a new value from an existing one.
+*   `print` takes zero or more.
+*   `print` with no arguments prints a blank line.
+    *   Must always use parentheses, even if they're empty,
+        so that Python knows a function is being called.
 
 ~~~
-a = 2
-b = 7
-c = 4
-average = (a + b + c) / 3
-average
+print('before')
+print()
+print('after')
 ~~~
 {: .python}
+~~~
+before
 
-If we wanted to just know the answer in round numbers we could convert the floating point number to an integer
+after
+~~~
+{: .output}
+
+## Commonly-used built-in functions include `max`, `min`, and `round`.
+
+*   Use `max` to find the largest value of one or more values.
+*   Use `min` to find the smallest.
+*   Both work on character strings as well as numbers.
+    *   "Larger" and "smaller" use (0-9, A-Z, a-z) to compare letters.
 
 ~~~
-whole = int(average)
-~~~
-{: .python}
-
-Rounding it to 2 decimal places would be a bit trickier.
-
-### Built-In Functions
-
-Python has common tasks already built in and rounding numbers is one of them.
-
-~~~
-round(average)
-~~~
-{: .python}
-
-The function has parenthesis after it. The variable we want to perform
-the function on is inside them. The default behaviour is to round to
-whole numbers. If we wanted to round to 2 decimal places, we need to
-stipulate that with a second value inside the parenthesis.
-
-~~~
-round(average,2)
+print(max(1, 2, 3))
+print(min('a', 'A', '0'))
 ~~~
 {: .python}
+~~~
+3
+0
+~~~
+{: .output}
 
-### Getting Help
+## Functions may only work for certain (combinations of) arguments.
 
-In the Jupyter notebook we can get help on functions in a couple of
-ways. Place the cursor inside the parenthesis of the function, hold
-down `shift` and press `tab`. Notice they are close together on the
-left side of the keyboard.
-
-Typing a function name with a question mark after it will bring up the documentation.
+*   `max` and `min` must be given at least one argument.
+    *   "Largest of the empty set" is a meaningless question.
+*   And they must be given things that can meaningfully be compared.
 
 ~~~
-round?
+print(max(1, 'a'))
 ~~~
 {: .python}
+~~~
+TypeError: unorderable types: str() > int()
+~~~
+{: .error}
 
-The third way is to use the help function. This will work at any
-python prompt, rather than just in the Jupyter Notebook like the first
-two examples.
+## Functions may have default values for some arguments.
+
+*   `round` will round off a floating-point number.
+*   By default, rounds to zero decimal places.
+
+~~~
+round(3.712)
+~~~
+{: .python}
+~~~
+4
+~~~
+{: .output}
+
+*   We can specify the number of decimal places we ant.
+
+~~~
+round(3.712, 1)
+~~~
+{: .python}
+~~~
+3.7
+~~~
+{: .output}
+
+## Use the built-in function `help` to get help for a function.
+
+*   Every built-in function has online documentation.
 
 ~~~
 help(round)
 ~~~
 {: .python}
+~~~
+Help on built-in function round in module builtins:
 
-Now that you know how to get help, try out `len()`,`sum()`,`min()` and `max()`.
+round(...)
+    round(number[, ndigits]) -> number
+    
+    Round a number to a given precision in decimal digits (default 0 digits).
+    This returns an int when called with one argument, otherwise the
+    same type as the number. ndigits may be negative.
+~~~
+{: .output}
+
+## The Jupyter Notebook has two ways to get help.
+
+*   Place the cursor inside the parenthesis of the function,
+    hold down `shift`,
+    and press `tab`.
+*   Or type a function name with a question mark after it.
+
+## Every function returns something.
+
+*   Every function call produces some result.
+*   If the function doesn't have a useful result to return,
+    it usually returns the special value `None`.
+
+~~~
+result = print('example')
+print('result of print is', result)
+~~~
+{: .python}
+~~~
+example
+result of print is None
+~~~
+{: .output}
 
 > ## What Happens When
 >
@@ -123,9 +168,7 @@ Now that you know how to get help, try out `len()`,`sum()`,`min()` and `max()`.
 > {: .source}
 {: .challenge}
 
-> ## Getting Help
+> ## Why Not?
 >
-> Use `help` to determine what the function `round` does,
-> and write a program to round 3.141592653 to 3, 4, and 5 significant digits.
-> Do you agree with the answers?
+> Why don't `max` and `min` return `None` when they are given no arguments?
 {: .challenge}
