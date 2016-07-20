@@ -1,6 +1,6 @@
 ---
-title: "Lists"
-teaching: 5
+title: "Lists and Indexing"
+teaching: 10
 exercises: 10
 questions:
 - "How can I store multiple values?"
@@ -11,83 +11,187 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+## A list stores many values in a single structure.
 
-## Creating Lists
-
-Multiple values can be stored in lists:
-
-~~~
-objectives = ['Create lists.', 'Extract items from lists.','Modify lists.']
-print(type(objectives))
-~~~
-{: .source}
+*   Doing calculations with a hundred variables called `pressure_001`, `pressure_002`, etc.,
+    would be at least as slow as doing them by hand.
+*   Use a *list* to store many values together.
+    *   Contained within square brackets `[...]`.
+    *   Values separated by commas `,`.
+*   Use `len` to find out how many values are in a list.
 
 ~~~
-<class 'list'>
+pressures = [0.273, 0.275, 0.277, 0.275, 0.276]
+print('pressures:', pressures)
+print('length:', len(pressures))
 ~~~
-{: .output}
-
-Sometimes we are not sure how many values we will have so we can start with an empty list and fill it sequentially.
-
+{: .python}
 ~~~
-objectives = []
-print(objectives)
-objectives.append("Create lists.")
-print(objectives)
-objectives.append('Extract items from lists.')
-print(objectives)
-objectives.append('Modify lists.')
-print(objectives)
-~~~
-{: .source}
-
-~~~
-[]
-['Create lists.']
-['Create lists.','Extract items from lists.']
-['Create lists.','Extract items from lists.','Modify lists.']
+pressures: [0.273, 0.275, 0.277, 0.275, 0.276]
+length: 5
 ~~~
 {: .output}
 
-Lists can also contain different types of values:
+## Use an item's index to fetch it from a list.
+
+*   Each value in a list is stored in a particular location.
+*   Locations are numbered from 0 rather than 1.
+*   Use the location's index in square brackets to access the value it contains.
 
 ~~~
-objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+print('zeroth item of pressures:', pressures[0])
+print('fourth item of pressures:', pressures[4])
 ~~~
-{: .source}
+{: .python}
+~~~
+zeroth item of pressures: 0.273
+fourth item of pressures: 0.276
+~~~
+{: .output}
 
-> ## From Strings to Lists and Back
->
-> Given this:
->
-> ~~~
-> print('string to list:', list('tin'))
-> print('list to string:', ''.join(['g', 'o', 'l', 'd']))
-> ~~~
-> {: .source}
->
-> ~~~
-> ['t', 'i', 'n']
-> 'gold'
-> ~~~
-> {: .output}
->
-> 1. Explain in simple terms what `list("some string")` does.
-> 2. What does `'-'.join(['x', 'y'])` generate?
-{: .challenge}
+## Lists' values can be replaced by assigning to them.
 
-> ## Indexing
+*   Use an index expression on the left of assignment to replace a value.
+
+~~~
+pressures[0] = 0.265
+print('pressures is now:', pressures)
+~~~
+{: .python}
+~~~
+pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
+~~~
+{: .output}
+
+## Appending items to a list lengthens it.
+
+*   Use `list_name.append` to add items to the end of a list.
+
+~~~
+primes = [2, 3, 5]
+print('primes is initially:', primes)
+primes.append(7)
+primes.append(9)
+print('primes has become:', primes)
+~~~
+{: .python}
+~~~
+primes is initially: [2, 3, 5]
+primes has become: [2, 3, 5, 7, 9]
+~~~
+{: .python}
+
+*   `append` is a *method* of lists.
+    *   Like a function, but tied to a particular object.
+*   Use `object_name.method_name` to call methods.
+    *   Deliberately resembles the way we refer to things in a library.
+*   We will meet other methods of lists as we go along.
+    *   Use `help(list)` for a preview.
+
+## Use `del` to remove items from a list entirely.
+
+*   `del list_name[index]` removes an item from a list and shortens the list.
+*   Not a function or a method, but a statement in the language.
+
+~~~
+print('primes before removing last item:', primes)
+del primes[4]
+print('primes after removing last item:', primes)
+~~~
+{: .python}
+~~~
+primes before removing last item: [2, 3, 5, 7, 9]
+primes after removing last item: [2, 3, 5, 7]
+~~~
+{: .output}
+
+## The empty list contains no values.
+
+*   Use `[]` on its own to represent a list that doesn't contain any values.
+    *   "The zero of lists."
+*   Helpful as a starting point for collecting values
+    (which we will see in the [next episode]({{site.github.url}}/09-for-loops/)).
+
+## Lists may contain values of different types.
+
+*   A single list may contain numbers, strings, and anything else.
+
+~~~
+goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+~~~
+{: .python}
+
+## A list is a mutable ordered collection of heterogeneous values.
+
+*   Mutable: contents can be changed in place.
+*   Ordered: items are stored in a particular order and can be accessed by location.
+*   Collection: lists contain other things.
+*   Heterogeneous: a list can contain values of many types.
+
+## Character strings can be indexed like lists.
+
+*   Get single characters from a character string using indexes in square brackets.
+
+~~~
+element = 'carbon'
+print('zeroth character:', element[0])
+print('third character:', element[3])
+~~~
+{: .python}
+~~~
+zeroth character: c
+third character: b
+~~~
+{: .output}
+
+## Character strings are immutable.
+
+*   Cannot change the characters in a string after it has been created.
+*   Python considers the string to be a single value with parts,
+    not a collection of values.
+
+~~~
+element[0] = 'C'
+~~~
+{: .python}
+~~~
+TypeError: 'str' object does not support item assignment
+~~~
+{: .error}
+
+*   Lists and character strings are both *collections*.
+
+## Indexing beyond the end of the collection is an error.
+
+*   Python reports a runtime error if we attempt to access a value that doesn't exist.
+
+~~~
+print('99th element of element is:', element[99])
+~~~
+{: .python}
+~~~
+IndexError: string index out of range
+~~~
+{: .output}
+
+> ## Slicing
 >
 > What does the following program print?
 >
 > ~~~
-> values = [1, 3, 5, 7, 9]
-> print(values[0])
-> print(values[1:3])
-> print(values[values[0]])
+> element = 'carbon'
+> print('element[1:3] is:', element[1:3])
 > ~~~
-> {: .source}
+> {: .python}
+> ~~~
+> element[1:3] is: ar
+> ~~~
+> {: .output}
+>
+> 1.  What does `thing[low:high]` do?
+> 2.  What does `thing[low:]` (without a value after the colon) do?
+> 3.  What does `thing[:high]` (without a value before the colon) do?
+> 4.  What does `thing[:]` (just a colon) do?
 {: .challenge}
 
 > ## Fill in the Blanks
@@ -103,7 +207,7 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 > values = values[____]
 > print('second time:', values)
 > ~~~
-> {: .source}
+> {: .python}
 >
 > ~~~
 > first time: [1, 3, 5]
@@ -118,36 +222,67 @@ objectives = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lis
 > how long is the list `values[low:high]`?
 {: .challenge}
 
-> ## Working with the End
+> ## From Strings to Lists and Back
 >
-> 1. Assuming `values` is a list,
-> explain in simple terms what `del values[-1]` does.
-> 2. How can you display all elements but the last one without changing `values`?
+> Given this:
+>
+> ~~~
+> print('string to list:', list('tin'))
+> print('list to string:', ''.join(['g', 'o', 'l', 'd']))
+> ~~~
+> {: .python}
+> ~~~
+> ['t', 'i', 'n']
+> 'gold'
+> ~~~
+> {: .output}
+>
+> 1.  Explain in simple terms what `list('some string')` does.
+> 2.  What does `'-'.join(['x', 'y'])` generate?
+{: .challenge}
+
+> ## Working With the End
+>
+> What does the following program print?
+>
+> ~~~
+> element = 'helium'
+> print(element[-1])
+> ~~~
+> {: .python}
+>
+> 1.  How does Python interpret a negative index?
+> 2.  If a list or string has N elements,
+>     what is the most negative index that can safely be used with it,
+>     and what location does that index represent?
+> 3.  If `values` is a list, what does `del values[-1]` do?
+> 4.  How can you display all elements but the last one without changing `values`?
+>     (Hint: you will need to combine slicing and negative indexing.)
 {: .challenge}
 
 > ## Stepping Through a List
 >
-> What if we want to sequentially go through the elements of a list in a particular manner?
-> Discuss the output of the following commands:
+> What does the following program print?
 >
 > ~~~
-> values = [1,2,3,4,5,6,7]
-> values[::2]
-> values[::-1]
+> element = 'fluorine'
+> print(element[::2])
+> print(element[::-1])
 > ~~~
-> {: .source}
+> {: .python}
 >
-> How can you extract a list of the even numbers from `values`?
+> 1.  If we write a slice as `low:high:stride`, what does `stride` do?
+> 2.  What expression would select all of the even-numbered items from a collection?
 {: .challenge}
 
-
-> ## Dealing with Bounds
+> ## Slice Bounds
 >
-> Explain how python is handling out-of-bound indices by trying these commands:
+> What does the following program print?
 >
 > ~~~
-> values[0:20]
-> values[-1:3]
+> element = 'lithium'
+> print(element[0:20])
+> print(element[-1:3])
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
