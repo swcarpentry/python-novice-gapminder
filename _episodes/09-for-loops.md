@@ -41,6 +41,19 @@ FIXME: lesson content.
 > {: .source}
 {: .challenge}
 
+> ## For loops for coffee
+>
+> adjust the the following code to get the proper number of
+> cups of coffee for your.  Then try and emulate this at the coffee machine.
+>
+> ~~~
+> coffeedrinkers = 12
+> cups = coffeedrinkers
+> for i in range(cups):
+>    print "we need " + str(i +1) + " coffees" 
+> 
+> ~~~
+
 > ## Looping Through Dictionaries
 >
 > So far, we've seen two ways to loop through objects in Python. 
