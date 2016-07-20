@@ -11,7 +11,56 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+
+## Use comments to add documentation to programs.
+
+~~~
+# This sentence isn't executed by Python.
+adjustment = 0.5   # Neither is this - anything after '#' is ignored.
+~~~
+{: .python}
+
+## Python reports a syntax error when it can't understand the source of a program.
+
+*   Won't even try to run the program if it can be parsed.
+
+~~~
+# Forgot to close the quotation marks around the string.
+name = 'Feng
+~~~
+{: .python}
+~~~
+SyntaxError: EOL while scanning string literal
+~~~
+{: .error}
+
+~~~
+# An extra '=' in the assignment.
+age = = 52
+~~~
+{: .python}
+~~~
+SyntaxError: invalid syntax
+~~~
+{: .error}
+
+## Python reports a runtime error when something goes wrong while a program is executing.
+
+~~~
+age = 53
+remaining = 100 - aege # mis-spelled 'age'
+~~~
+{: .python}
+~~~
+NameError: name 'aege' is not defined
+~~~
+{: .error}
+
+## Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+
+FIXME: diagram of where each type of error occurs.
+
+FIXME: this entire episode needs to move later (we can't do IndentationError yet, or talk about the tracebacks until we've written functions).
 
 > ## Reading Error Messages
 >
