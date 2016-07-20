@@ -216,8 +216,8 @@ first is 2 and second is 5
 
 > ## Division Types
 >
-> The `//` operator returns the whole-number result of division,
-> while the '%' operator returns the remainder from division:
+> The `//` operator calcultaes the whole-number result of division,
+> while the '%' operator calculates the remainder from division:
 >
 > ~~~
 > print('5 // 3:', 5//3)
@@ -287,4 +287,9 @@ first is 2 and second is 5
 > > ## Solution
 > > Answer: A and D
 > {: .solution}
+{: .challenge}
+
+> ## Complex Numbers
+>
+> FIXME: introduce complex numbers
 {: .challenge}
