@@ -10,155 +10,176 @@ objectives:
 keypoints:
 - FIXME
 ---
-- Set up matplotlib inline functionality in Jupyter notebook
+## `matplotlib` is the most widely used scientific plotting library in Python.
+
+*   Commonly use a sub-library called `matplotlib.pyplot`.
+*   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command.
 
 ~~~
 %matplotlib inline
+import matplotlib.pyplot as plt
 ~~~
-{: .source}
+{: .python}
 
-- Using matplotlib we can plot lists of numbers
+*   Simple plots are then (fairly) simple to create.
 
 ~~~
 x = [1, 2, 3, 4, 5]
 y = [2, 4, 6, 8, 10]
 
 plt.plot(x, y)
-plt.xlabel('x-data')
-plt.ylabel('y-data')
+plt.xlabel('Numbers')
+plt.ylabel('Doubles')
 ~~~
-{: .source}
+{: .python}
 
-- We can also plot Pandas dataframes
-- Plot Australia data using dataframe plot method
-- Access row, Series.plot plots with columns as x variable
-- Note that dataframe is implicitly using matplotlib
+## Plot data directly from a Pandas data frame.
+
+*   We can also plot Pandas data frames.
+*   This implicitly uses `matplotlib.pyplot`.
 
 ~~~
-df = pandas.read_csv("gapminder_gdp_oceania.csv", index_col="country")
-df.ix["Australia"].plot()
+import pandas
+
+data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+data.ix['Australia'].plot()
 plt.xticks(rotation=90)
 ~~~
-{: .source}
+{: .python}
 
-- Plot both series
-- By default, DataFrame.plot plots with the indexes (or rows) as the x axis
-- We can transpose to get what we need in order to plot multiple series
+## Select and transform data, then plot it.
+
+*   By default, `DataFrame.plot` plots with the rows as the X axis.
+*   We can transpose the data in order to plot multiple series.
 
 ~~~
-plt.plot(df.T)
-plt.ylabel("GDP per capita")
+data.T.plot()
+plt.ylabel('GDP per capita')
 plt.xticks(rotation=90)
 ~~~
-{: .source}
+{: .python}
 
-- Do a bar plot, use fancier style
+## Many styles of plot are available.
+
+*   For example, do a bar plot using a fancier style.
 
 ~~~
-plt.style.use("ggplot")
-plt.plot(df.T)
+plt.style.use('ggplot')
+data.T.plot()
 plt.xticks(rotation=90)
-plt.ylabel("GDP per capita")
+plt.ylabel('GDP per capita')
 ~~~
-{: .source}
+{: .python}
 
-- Use pyplot.plot explicitly
-- Store years in a list
-- We can also convert dataframe data to a list (though this is not necessary).
+*   Extract years from the last four characters of the columns' names.
+    *   Store these in a list using the Accumulator pattern.
+*   Can also convert data frame data to a list.
 
 ~~~
+# Accumulator pattern to collect years (as character strings).
 years = []
-for col in df.columns:
-    # year is given by last 4 chars in col
+for col in data.columns:
     year = col[-4:]
     years.append(year)
 
-gdp_australia = df.ix["Australia"].tolist()
+# Australia data as list.
+gdp_australia = data.ix['Australia'].tolist()
+
+# Plot: 'b-' sets the line style.
 plt.plot(years, gdp_australia, 'b-')
 ~~~
-{: .source}
+{: .python}
 
-- Plot two series with labels
+## Can plot many sets of data together.
 
 ~~~
+# Accumulator pattern to collect years (as character strings).
 years = []
-for col in df.columns:
-    # year is given by last 4 chars in col
+for col in data.columns:
     year = col[-4:]
     years.append(year)
 
-gdp_australia = df.ix["Australia"]
-gdp_nz = df.ix["New Zealand"]
+# Select two countries' worth of data.
+gdp_australia = data.ix['Australia']
+gdp_nz = data.ix['New Zealand']
 
-plt.plot(years, gdp_australia, 'b-', label="Australia")
-plt.plot(years, gdp_nz, 'g-', label="New Zealand")
-plt.legend(loc="upper left")
-plt.xlabel("Year")
-plt.ylabel("GDP per capita ($)")
+# Plot with differently-colored markers.
+plt.plot(years, gdp_australia, 'b-', label='Australia')
+plt.plot(years, gdp_nz, 'g-', label='New Zealand')
+
+# Create legend.
+plt.legend(loc='upper left')
+plt.xlabel('Year')
+plt.ylabel('GDP per capita ($)')
 ~~~
-{: .source}
+{: .python}
 
-- Plot a scatter plot correlating the GDP of Australia and New Zealand
-- Using plt.scatter and DataFrame.plot.scatter
-- Note that you could also use plt.plot
-- Transpose the data frame again to make the "dates" the indices
+*   Plot a scatter plot correlating the GDP of Australia and New Zealand
+*   Use either `plt.scatter` or `DataFrame.plot.scatter`
 
 ~~~
 plt.scatter(gdp_australia, gdp_nz)
-df.T.plot.scatter(x = "Australia", y = "New Zealand")
 ~~~
-{: .source}
+{: .python}
+
+~~~
+data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
+~~~
+{: .python}
 
 > ## Minima and Maxima
 >
-> Modify the example in the notes to plot the minimum GDP per capita over time
-> for all the countries in Asia.
-> Modify it again to plot the maximum GDP per capita over time for Asia.
+> Fill in the blanks below to plot the minimum GDP per capita over time
+> for all the countries in Europe.
+> Modify it again to plot the maximum GDP per capita over time for Europe.
 >
 > ~~~
-> df_europe = pandas.read_csv("gapminder_gdp_europe.csv")
-> df_europe.min().plot(label='min')
-> df_europe.max().plot(label='max')
+> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv')
+> data_europe.____.plot(label='min')
+> data_europe.____
 > plt.legend(loc='best')
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Correlations
 >
 > Modify the example in the notes to create a scatter plot showing
 > the relationship between the minimum and maximum GDP per capita
-> among the countries in Asia
-> for each year in the data set.
+> among the countries in Asia for each year in the data set.
 > What relationship do you see (if any)?
 >
 > ~~~
-> df_asia = pandas.read_csv("gapminder_gdp_asia.csv")
-> df_asia.describe().T.plot(kind='scatter', x = 'min', y = 'max')
+> data_asia = pandas.read_csv('gapminder_gdp_asia.csv')
+> data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
-> {: .source}
+> {: .python}
 >
 > You might note that the variability in the maximum is much higher than
 > that of the minimum.  Take a look at the maximum and the max indexes:
 >
 > ~~~
-> df_asia = pandas.read_csv("gapminder_gdp_asia.csv")
-> df_asia.max().plot()
-> df_asia.idxmax()
-> df_asia.idxmin()
+> data_asia = pandas.read_csv('gapminder_gdp_asia.csv')
+> data_asia.max().plot()
+> print(data_asia.idxmax())
+> print(data_asia.idxmin())
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## More Correlations
 >
-> As a final exercise, make a fancy plot that shows the correlation between
-> GDP and life expectancy for 2007, normalizing marker size by population.
+> This short programs creates a plot showing
+> the correlation between GDP and life expectancy for 2007,
+> normalizing marker size by population:
 >
 > ~~~
-> df_all = pandas.read_csv("gapminder_all.csv")
-> df_all.plot(kind='scatter', x = 'gdpPercap_2007', y='lifeExp_2007',
->             s = df_all['pop_2007']/1e6)
+> data_all = pandas.read_csv('gapminder_all.csv')
+> data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
+>               s=data_all['pop_2007']/1e6)
 > ~~~
-> {: .source}
+> {: .python}
+>
+> Using online help and other resources,
+> explain what each argument to `plot` does.
 {: .challenge}
