@@ -46,6 +46,7 @@ print(data)
 ~~~
 {: .output}
 
+*   The columns in a data frame are the observed variables, and the rows are the observations.
 *   Pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
 
 > ## File Not Found
@@ -90,38 +91,6 @@ Australia       23424.76683     26997.93657     30687.75473     34435.36744
 New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ~~~
 {: .output}
-
-## The columns in a data frame are the observed variables, and the rows are the observations.
-
-*   There are typically many more rows than columns,
-    so we index a data frame by column, then by row.
-
-~~~
-print(data['gdpPercap_1952']['Australia'])
-~~~
-{: .python}
-~~~
-10039.59564
-~~~
-{: .output}
-
-*   Note the double index: `data[column][row]` and *not* `data[column, row]`.
-*   We can get an entire column at once by using a single index.
-
-~~~
-print(data['gdpPercap_1952'])
-~~~
-{: .python}
-~~~
-country
-Australia      10039.59564
-New Zealand    10556.57566
-Name: gdpPercap_1952, dtype: float64
-~~~
-{: .output}
-
-*   Subscripting this way actually creates a one-dimensional *series*
-    that remembers some of the properties of the original data frame.
 
 ## Use `DataFrame.info` to find out more about a data frame.
 
