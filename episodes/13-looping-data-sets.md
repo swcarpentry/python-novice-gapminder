@@ -11,12 +11,96 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content - build up to showing how to create one plot per file for multiple files.
 
-> ## Finding Lots of Files
->
-> Explain in simple terms what set of files is matched by `glob.glob('*/*.csv')`.
-{: .challenge}
+## Use a `for` loop to process files given a list of their names.
+
+*   A filename is just a character string.
+*   And lists can contain character strings.
+
+~~~
+for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
+    data = pandas.read_csv(filename, index_col='country')
+    print(filename, data.min())
+~~~
+{: .python}
+~~~
+data/gapminder_gdp_africa.csv gdpPercap_1952    298.846212
+gdpPercap_1957    335.997115
+gdpPercap_1962    355.203227
+gdpPercap_1967    412.977514
+⋮ ⋮ ⋮
+gdpPercap_1997    312.188423
+gdpPercap_2002    241.165877
+gdpPercap_2007    277.551859
+dtype: float64
+data/gapminder_gdp_asia.csv gdpPercap_1952    331
+gdpPercap_1957    350
+gdpPercap_1962    388
+gdpPercap_1967    349
+⋮ ⋮ ⋮
+gdpPercap_1997    415
+gdpPercap_2002    611
+gdpPercap_2007    944
+dtype: float64
+~~~
+{: .output}
+    
+## Use `glob.glob` to find sets of files whose names match a pattern.
+
+*   In Unix, the term "globbing" means "matching a set of files with a pattern".
+*   The most common patterns are:
+    *   `*` meaning "match zero or more characters"
+    *   `?` meaning "match exactly one character"
+*   Provided in Python by the `glob` library, which provides a function also called `glob`.
+*   E.g., `glob.glob('*.txt')` matches all files in the current directory whose names end with `.txt`.
+*   Result is a (possibly empty) list of character strings.
+
+~~~
+import glob
+print('all csv files in data directory:', glob.glob('data/*.csv'))
+~~~
+{: .python}
+~~~
+all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_africa.csv', \
+'data/gapminder_gdp_americas.csv', 'data/gapminder_gdp_asia.csv', 'data/gapminder_gdp_europe.csv', \
+'data/gapminder_gdp_oceania.csv']
+~~~
+{: .output}
+
+~~~
+print('all PDB files:', glob.glob('*.pdb'))
+~~~
+{: .python}
+~~~
+all PDB files: []
+~~~
+{: .output}
+
+## Use `glob` and `for` to process batches of files.
+
+*   Helps a lot if the files are named and stored systematically and consistently
+    so that simple patterns will find the right data.
+
+~~~
+for filename in glob.glob('data/*.csv'):
+    data = pandas.read_csv(filename)
+    print(filename, data.['gdpPercap_1952'].min())
+~~~
+{: .python}
+~~~
+data/gapminder_all.csv 298.8462121
+data/gapminder_gdp_africa.csv 298.8462121
+data/gapminder_gdp_americas.csv 1397.717137
+data/gapminder_gdp_asia.csv 331.0
+data/gapminder_gdp_europe.csv 973.5331948
+data/gapminder_gdp_oceania.csv 10039.59564
+~~~
+{: .output}
+
+*   This includes all data, as well as per-region data.
+*   Use a more specific pattern in the exercises to exclude the whole data set.
+*   But note that the minimum of the entire data set is also the minimum of one of the data sets,
+    which is a nice check on correctness.
 
 > ## Determining Matches
 >
@@ -31,18 +115,20 @@ FIXME: lesson content - build up to showing how to create one plot per file for 
 > ## Maximum File Size
 >
 > Modify this program so that it prints the number of records in
-> the file that has the most records.
+> the file that has the fewest records.
 >
 > ~~~
-> largest = ____
-> for filename in glob.glob('*.csv'):
->     largest = ____
-> print('largest file has', largest, 'records')
+> fewest = ____
+> for filename in glob.glob('data/*.csv'):
+>     fewest = ____
+> print('smallest file has', fewest, 'records')
 > ~~~
 > {: .source}
 {: .challenge}
 
-> ## Calculating Averages
+> ## Comparing Data
 >
-> FIXME: show how to calculate average GDP per capita for each region in 2002.
+> Write a short program that reads in the regional data sets
+> and plots the average GDP per capita for each region over time
+> in a single chart.
 {: .challenge}
