@@ -83,7 +83,7 @@ print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
 {: .python}
 ~~~
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country                                                    
+country
 Italy           8243.582340    10022.401310    12269.273780
 Montenegro      4649.593785     5907.850937     7778.414017
 Netherlands    12790.849560    15363.251360    18794.745670
@@ -145,7 +145,7 @@ print('\nWhere are values large?\n', subset > 10000)
 ~~~
 Subset of data:
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country                                                    
+country
 Italy           8243.582340    10022.401310    12269.273780
 Montenegro      4649.593785     5907.850937     7778.414017
 Netherlands    12790.849560    15363.251360    18794.745670
@@ -154,7 +154,7 @@ Poland          5338.752143     6557.152776     8006.506993
 
 Where are values large?
             gdpPercap_1962 gdpPercap_1967 gdpPercap_1972
-country                                                 
+country
 Italy                False           True           True
 Montenegro           False          False          False
 Netherlands           True           True           True
@@ -174,7 +174,7 @@ print(subset[mask])
 {: .python}
 ~~~
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country                                                    
+country
 Italy                   NaN     10022.40131     12269.27378
 Montenegro              NaN             NaN             NaN
 Netherlands     12790.84956     15363.25136     18794.74567

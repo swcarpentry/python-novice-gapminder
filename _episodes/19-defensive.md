@@ -11,22 +11,96 @@ objectives:
 keypoints:
 - FIXME
 ---
-- Review of errors : SyntaxError, IndentationError, NameError, IndexError, FileNotFoundError
-- Assertions - Say we know something about how we want our program to behave, we
-  can use the **assert** keyword to have checks in our program
-- Test a Fahrenheit to Celsius function
+## Fail early, fail loudly.
+
+*   "All programs are wrong, but some programs are useful."
+*   Python reports syntax errors when it reads the source code.
+*   Can report runtime errors for things that can't possibly be right.
+    *   Division by zero, index out of bounds.
+*   But it cannot know how your data should be handled.
+*   Want to detect and report the problem:
+    *   As soon as it occurs (so that you don't have to trace back through hundreds of lines).
+    *   Loudly and clearly: a *silent error* is worse than one you know about.
+
+## Can use `if`, `print`, and `sys.exit` to detect and report errors.
 
 ~~~
-def convert_fahrenheit_to_celsius(input_temp_f):
-    output_temp_c = 5/9*(input_temp_f - 32)
-    return output_temp_c
+import sys
 
-assert convert_fahrenheit_to_celsius(212) == 100, 'Water boiling point conversion failed'
+def average(values):
+    if len(values) == 0:
+        print('Error in average: no values supplied')
+        sys.exit(1)
+
+    return sum(values) / len(values)
 ~~~
-{: .source}
+{: .python}
 
-- Precondition, postcondition, invariant
-- Test-driven development
+*   But it doesn't give the caller a chance to handle the error in a different way.
+*   And doesn't integrate with graphical user interfaces, web programs,
+    and other things that might not want you to print.
+*   And gets in the way of reading the "happy path" through the code.
+
+## Use `assert` to check internal correctness.
+
+*   The `assert` statement checks whether a condition is true.
+    *   "This must be true here or something has gone wrong."
+*   Like `if`, but signals an error instead of controlling a block of code.
+*   By default, Python stops the program and displays the error,
+    along with a *traceback* of the call stack
+    to help you figure out what went wrong.
+
+~~~
+import sys
+
+def average(values):
+    assert len(values) > 0, 'No values supplied'
+    return sum(values) / len(values)
+~~~
+{: .python}
+
+*   Easier to read.
+*   A standard way to do things
+    (much better than a dozen libraries each reporting errors in different ways).
+*   Sometimes called "runnable documentation".
+    *   Python checks while the program executes.
+    *   Human readers can see what you expect of your program.
+
+## Practice defensive programming.
+
+*   When fixing bug,
+    add assertions to make sure they don't reoccur.
+
+~~~
+def kelvin_to_celsius(k):
+    assert k >= 0.0, 'Temperature in Kelvin cannot be negative'
+    return FIXME
+~~~
+{: .python}
+
+*   Add assertions when writing code in the first place
+    to check for errors you have made or seen in the past.
+
+## Practice test-driven development.
+
+*   Write assertions *before* writing functions
+    to help you figure out what those functions should do.
+*   Encourages you to:
+    *   Think about how the function is supposed to behave.
+    *   See how usable the function will be before it's written.
+*   The assertions are a "contract".
+    *   Specify what the function does without specifying how.
+    *   A good way to communicate with other programmers when developing software together.
+
+~~~
+assert count_leading_zeros([]) == 0
+assert count_leading_zeros([0]) == 1
+assert count_leading_zeros([0, 1]) == 1
+assert count_leading_zeros([0, 1, 0]) == 1
+assert count_leading_zeros([0, 0, 1]) == 2
+assert count_leading_zeros([1, 0]) == 0
+~~~
+{: .python}
 
 > ## Is This Needed?
 >
@@ -64,9 +138,9 @@ assert convert_fahrenheit_to_celsius(212) == 100, 'Water boiling point conversio
 > {: .source}
 {: .challenge}
 
-> ## Design by Contract
+> ## Test-Driven Development.
 >
-> 1. Explain in simple language what the function is supposed to do.
+> 1. Explain in simple language what `run_starts` function is supposed to do.
 > 2. Fill in the blanks in the function definition so that all of the assertions succeed.
 > 3. For what input(s) could different users reasonably expect this function to return different values?
 >    I.e., where could reasonable people still disagree about the function's behavior?

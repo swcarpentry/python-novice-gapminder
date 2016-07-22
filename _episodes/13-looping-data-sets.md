@@ -44,7 +44,7 @@ gdpPercap_2007    944
 dtype: float64
 ~~~
 {: .output}
-    
+
 ## Use `glob.glob` to find sets of files whose names match a pattern.
 
 *   In Unix, the term "globbing" means "matching a set of files with a pattern".

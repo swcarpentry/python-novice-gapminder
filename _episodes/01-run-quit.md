@@ -207,17 +207,17 @@ Or use [named links][data_carpentry].
 > What happens if you write some Python in a code cell and then you switch it to a Markdown cell?
 > For example,
 > put the following in a code cell:
-> 
+>
 > ~~~
 > x = 6 * 7 + 12
 > print(x)
-> ~~~ 
+> ~~~
 > {: .python}
-> 
+>
 > And then run it with shift+return to be sure that it works as a code cell.
 > Now go back to the cell and use escape+M to switch the cell to Markdown
 > and "run" it with shift+return.
-> What happened and how might this be useful? 
+> What happened and how might this be useful?
 {: .challenge}
 
 > ## Mathematics

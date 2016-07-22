@@ -59,7 +59,7 @@ NAME
 
 MODULE REFERENCE
     http://docs.python.org/3.5/library/math
-    
+
     The following documentation is automatically generated from the Python
     source files.  It may be incomplete, incorrect or include features that
     are considered implementation detail and may vary between Python
@@ -73,7 +73,7 @@ DESCRIPTION
 FUNCTIONS
     acos(...)
         acos(x)
-        
+
         Return the arc cosine (measured in radians) of x.
 ⋮ ⋮ ⋮
 ~~~
