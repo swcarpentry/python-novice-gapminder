@@ -8,7 +8,11 @@ objectives:
 - "Create a time series plot showing a single data set."
 - "Create a scatter plot showing relationship between two data sets."
 keypoints:
-- FIXME
+- "`matplotlib` is the most widely used scientific plotting library in Python."
+- "Plot data directly from a Pandas data frame."
+- "Select and transform data, then plot it."
+- "Many styles of plot are available."
+- "Can plot many sets of data together."
 ---
 ## `matplotlib` is the most widely used scientific plotting library in Python.
 

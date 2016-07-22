@@ -8,7 +8,12 @@ objectives:
 - "Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators)."
 - "Trace the execution of unnested conditionals and conditionals inside loops."
 keypoints:
-- FIXME
+- "Use `if` statements to control whether or not a block of code is executed."
+- "Conditionals are often used inside loops."
+- "Use `else` to execute a block of code when an `if` condition is *not* true."
+- "Use `elif` to specify additional tests."
+- "Conditions are tested once, in order."
+- "Create a table showing updates to variables' values to trace the execution of a program."
 ---
 ## Use `if` statements to control whether or not a block of code is executed.
 

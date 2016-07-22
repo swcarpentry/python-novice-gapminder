@@ -11,7 +11,13 @@ objectives:
 - "Correctly nest calls to built-in functions."
 - "Use help to display documentation for built-in functions."
 keypoints:
-- FIXME
+- "A function may take zero or more arguments."
+- "Commonly-used built-in functions include `max`, `min`, and `round`."
+- "Functions may only work for certain (combinations of) arguments."
+- "Functions may have default values for some arguments."
+- "Use the built-in function `help` to get help for a function."
+- "The Jupyter Notebook has two ways to get help."
+- "Every function returns something."
 ---
 ## A function may take zero or more arguments.
 

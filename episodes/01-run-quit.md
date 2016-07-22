@@ -9,7 +9,12 @@ objectives:
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
-- FIXME
+- "Python programs are plain text files."
+- "Use the Jupyter Notebook for editing and running Python."
+- "The Notebook has Control and Edit modes."
+- "Use the keyboard and mouse to select and edit cells."
+- "The Notebook will turn Markdown into pretty-printed documentation."
+- "Markdown does most of what HTML does."
 ---
 ## Python programs are plain text files.
 

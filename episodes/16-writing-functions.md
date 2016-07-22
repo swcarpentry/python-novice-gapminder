@@ -11,7 +11,11 @@ objectives:
 - "Correctly identify portions of source code that will be displayed as online help, and in particular distinguish docstrings from comments."
 - "Write short docstrings for functions."
 keypoints:
-- FIXME
+- "Break programs down into functions to make them easier to understand."
+- "Define a function using `def` with a name, parameters, and a block of code."
+- "Defining a function does not run it."
+- "Arguments in call are matched to parameters in definition."
+- "Functions may return a result to their caller using `return`."
 ---
 ## Break programs down into functions to make them easier to understand.
 

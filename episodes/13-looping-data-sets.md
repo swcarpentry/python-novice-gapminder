@@ -9,7 +9,9 @@ objectives:
 - "Use glob to create lists of files."
 - "Write for loops to perform operations on files given their names in a list."
 keypoints:
-- FIXME
+- "Use a `for` loop to process files given a list of their names."
+- "Use `glob.glob` to find sets of files whose names match a pattern."
+- "Use `glob` and `for` to process batches of files."
 ---
 
 ## Use a `for` loop to process files given a list of their names.

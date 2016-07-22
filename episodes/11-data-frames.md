@@ -10,7 +10,12 @@ objectives:
 - "Select a subset of both rows and columns from a data frame in a single operation."
 - "Select a subset of a data frame by a single Boolean criterion."
 keypoints:
-- FIXME
+- "Use `DataFrame.ix[..., ...]` to select values by location."
+- "Use `:` on its own to mean all columns or all rows."
+- "Select multiple columns or rows using `DataFrame.ix` and a named slice."
+- "Result of slicing can be used in further operations."
+- "Use comparisons to select data based on value."
+- "Select values or NaN using a Boolean mask."
 ---
 ## Use `DataFrame.ix[..., ...]` to select values by location.
 

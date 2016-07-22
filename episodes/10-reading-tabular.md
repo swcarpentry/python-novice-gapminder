@@ -9,7 +9,12 @@ objectives:
 - "Use Pandas to load a simple CSV data set."
 - "Get some basic information about a Pandas Data frame."
 keypoints:
-- FIXME
+- "Use the Pandas library to do statistics on tabular data."
+- "Use `index_col` to specify that a column's values should be used as row headings."
+- "Use `DataFrame.info` to find out more about a data frame."
+- "The `DataFrame.columns` variable stores information about the data frame's columns."
+- "Use `DataFrame.T` to transpose a data frame."
+- "Use `DataFrame.describe` to get summary statistics about data."
 ---
 ## Use the Pandas library to do statistics on tabular data.
 

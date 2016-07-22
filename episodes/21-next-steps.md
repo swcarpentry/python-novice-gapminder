@@ -7,7 +7,7 @@ questions:
 objectives:
 - "Name and locate scientific Python community sites for software, workshops, and help."
 keypoints:
-- FIXME
+- "Python supports a large scientific programming community."
 ---
 ## Python supports a large scientific programming community.
 

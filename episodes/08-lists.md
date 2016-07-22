@@ -9,7 +9,17 @@ objectives:
 - "Correctly explain each adjective in 'a mutable ordered collection of heterogeneous values'."
 - "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
 keypoints:
-- FIXME
+- "A list stores many values in a single structure."
+- "Use an item's index to fetch it from a list."
+- "Lists' values can be replaced by assigning to them."
+- "Appending items to a list lengthens it."
+- "Use `del` to remove items from a list entirely."
+- "The empty list contains no values."
+- "Lists may contain values of different types."
+- "A list is a mutable ordered collection of heterogeneous values."
+- "Character strings can be indexed like lists."
+- "Character strings are immutable."
+- "Indexing beyond the end of the collection is an error."
 ---
 ## A list stores many values in a single structure.
 
