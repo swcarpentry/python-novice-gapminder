@@ -12,10 +12,7 @@ objectives:
 keypoints:
 - FIXME
 ---
-As you begin to develop Python packages that others may use,
-or that you are hoping others will contribute to,
-it's useful to adhere to Python community standards.
-Some that you should be aware of include:
+## Follow standard Python style in your code.
 
 *   [PEP8](https://www.python.org/dev/peps/pep-0008):
     a style guide for Python that discusses topics such as how you should name variables,
@@ -42,23 +39,46 @@ Some that you should be aware of include:
     Using Semantic Versioning makes it easy for other developers to understand
     what is guaranteed to stay the same and what might change across versions of your software.
 
+## Use docstrings to provide online help.
 
-- Document a simple function
+*   If the first thing in a function is a character string
+    that is not assigned to a variable,
+    Python attaches it to the function as the online help.
+*   Called a *docstring* (short for "documentation string").
 
 ~~~
-def convert_fahrenheit_to_celsius(input_temp_f):
-    """
-    Converts an input temperature from Fahrenheit to Celsius degrees.
+def average(values):
+    "Return average of values, or None if no values are supplied."
 
-    Parameters
-    ----------
-    input_temp_f : float
-        input temperature in Fahrenheit
-    """
-    output_temp_c = 5/9*(input_temp_f - 32)
-    return output_temp_c
+    if len(values) == 0:
+        return None
+    return sum(values) / average(values)
+
+help(average)
 ~~~
-{: .source}
+{: .python}
+~~~
+Help on function average in module __main__:
+
+average(values)
+    Return average of values, or None if no values are supplied.
+~~~
+{: .output}
+
+> ## Multiline Strings
+>
+> Often use *multiline strings* for documentation.
+> These start and end with three quote characters (either single or double)
+> and end with three matching characters.
+>
+> ~~~
+> """This string spans
+> multiple lines.
+>
+> Blank lines are allowed."""
+> ~~~
+> {: .python}
+{: .callout}
 
 > ## What Will Be Shown?
 >
