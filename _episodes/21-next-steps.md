@@ -9,9 +9,10 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: lesson content.
+## Python supports a large scientific programming community.
 
-* jupyter.org
-* scipy.org
-* pandas.pydata.org
-* add others
+*   [SciPy](scipy.org) is a rich collection of scientific utilities.
+
+*   [Jupyter](jupyter.org) is the home of the Jupyter Notebook.
+
+*   [Pandas](pandas.pydata.org) is the home of the Pandas data library.
