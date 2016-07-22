@@ -122,7 +122,7 @@ for p in primes:
 ~~~
 print('a range is not a list:', range(3))
 for number in range(3):
-    print number
+    print(number)
 ~~~
 {: .python}
 ~~~
