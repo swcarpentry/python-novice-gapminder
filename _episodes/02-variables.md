@@ -8,7 +8,13 @@ objectives:
 - "Write programs that assign scalar values to variables and perform calculations with those values."
 - "Correctly trace value changes in programs that use scalar assignment."
 keypoints:
-- FIXME
+- "Use variables to store values."
+- "Use `print` to display values."
+- "Variables persist between cells."
+- "Variables must be created before they are used."
+- "Python is case-sensitive."
+- "Use meaningful variable names."
+- "Variables can be used in calculations."
 ---
 ## Use variables to store values.
 

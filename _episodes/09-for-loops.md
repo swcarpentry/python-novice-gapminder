@@ -9,7 +9,13 @@ objectives:
 - "Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration."
 - "Write for loops that use the Accumulator pattern to aggregate values."
 keypoints:
-- FIXME
+- "A *for loop* executes commands once for each value in a collection."
+- "The first line of the `for` loop must end with a colon, and the body must be indented."
+- "A `for` loop is made up of a collection, a loop variable, and a body."
+- "Loop variables can be called anything."
+- "The body of a loop can contain many statements."
+- "Use `range` to iterate over a sequence of numbers."
+- "The Accumulator pattern turns many values into one."
 ---
 ## A *for loop* executes commands once for each value in a collection.
 

@@ -9,7 +9,8 @@ objectives:
 - "Identify parameters as local variables."
 - "Trace values in non-recursive nested function calls."
 keypoints:
-- FIXME
+- "The scope of a variable is the part of a program that can 'see' that variable."
+- "Python keeps track of variables during function calls using a call stack."
 ---
 ## The scope of a variable is the part of a program that can 'see' that variable.
 

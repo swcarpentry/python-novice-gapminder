@@ -10,7 +10,8 @@ objectives:
 - "Refactor one-page programs to make them more readable and justify the changes."
 - "Use Python community coding standards (PEP-8)."
 keypoints:
-- FIXME
+- "Follow standard Python style in your code."
+- "Use docstrings to provide online help."
 ---
 ## Follow standard Python style in your code.
 

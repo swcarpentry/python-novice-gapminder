@@ -10,7 +10,11 @@ objectives:
 - "Write programs that import and use libraries from Python's standard library."
 - "Find and read documentation for standard libraries interactively (in the interpreter) and online."
 keypoints:
-- FIXME
+- "Most of the power of a programming language is in its libraries."
+- "A program must import a library in order to use it."
+- "Use `help` to find out more about a library's contents."
+- "Import specific items from a library to shorten programs."
+- "Create an alias for a library when importing it to shorten programs."
 ---
 ## Most of the power of a programming language is in its libraries.
 

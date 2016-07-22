@@ -10,7 +10,14 @@ objectives:
 - "Explain key differences between numbers and character strings."
 - "Use built-in functions to convert between integers, floating point numbers, and strings."
 keypoints:
-- FIXME
+- "Every value has a type."
+- "Use the built-in function `type` to find the type of a value."
+- "Types control what operations can be done on values."
+- "Strings can be added and multiplied."
+- "Strings have a length (but numbers don't)."
+- "Must convert numbers to strings or vice versa when operating on them."
+- "Can mix integers and floats freely in operations."
+- "Variables only change value when something is assigned to them."
 ---
 ## Every value has a type.
 

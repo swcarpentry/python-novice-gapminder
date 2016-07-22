@@ -9,7 +9,11 @@ objectives:
 - "Diagnose corner cases in simple programs."
 - "Write assertions with informative messages that test for corner cases in simple programs."
 keypoints:
-- FIXME
+- "Fail early, fail loudly."
+- "Can use `if`, `print`, and `sys.exit` to detect and report errors."
+- "Use `assert` to check internal correctness."
+- "Practice defensive programming."
+- "Practice test-driven development."
 ---
 ## Fail early, fail loudly.
 
