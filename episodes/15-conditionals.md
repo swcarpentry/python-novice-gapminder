@@ -3,138 +3,228 @@ title: "Conditionals"
 teaching: 5
 exercises: 10
 questions:
-- "How can programs make decisions?"
+- "How can programs do different things for different data?"
 objectives:
 - "Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators)."
 - "Trace the execution of unnested conditionals and conditionals inside loops."
 keypoints:
 - FIXME
 ---
-In the course of programming, we may find that we need our code to make a
-choice.  This choice may be to execute or not execute a certain task or to
-execute one or a subset of multiple tasks.  We can often use **conditional**
-statements in order to direct our program in these ways.  Conditional statements
-are often referred to as "if" statements, since their syntax involves the
-keyword "if" in python and many other languages.  Their general structure looks
-like:
+## Use `if` statements to control whether or not a block of code is executed.
+
+*   An `if` statement (more properly called a *conditional* statement)
+    controls whether some block of code is executed or not.
+*   Structure is similar to a `for` statement:
+    *   First line opens with `if` and ends with a colon
+    *   Body containing one or more statements is indented (usually by 4 spaces)
 
 ~~~
-if statement_1:
-    task_to_be_done_if_statement_1_is_true
-~~~
-{: .source python}
+mass = 3.54
+if mass > 3.0:
+    print(mass, 'is large')
 
-In the above code, the indented line, `task_to_be_done_if_statement_1_is_true`,
-will only be executed if the content of statement_1 evaluates to true.  What if
-we want a task to be executed if statement_1 is false?  We can use the "else"
-keyword in conjunction with "if" (sometimes referred to as an "if-else"
-statement).
-
+mass = 2.07
+if mass > 3.0:
+    print (mass, 'is large')
 ~~~
-if statement_1:
-    task_to_be_done_if_statement_1_is_true
-else:
-    task_to_be_done_if_statement_1_is_false
+{: .python}
 ~~~
-{: .source}
+3.0 is large
+~~~
+{: .output}
 
-For example, we might use the comparator `>`, as in the following:
+## Conditionals are often used inside loops.
+
+*   Not much point using a conditional when we know the value (as above).
+*   But useful when we have a collection to process.
 
 ~~~
-water_temp = 120
-pressure = 1
-
-if water_temp > 100:
-    print("Boiling")
-else:
-    print("Not boiling")
+masses = [3.54, 2.07, 9.22, 1.86, 1.71]
+for m in masses:
+    if mass > 3.0:
+        print(mass, 'is large')
 ~~~
-{: .source}
+{: .python}
+~~~
+3.54 is large
+9.22 is large
+~~~
+{: .output}
+
+## Use `else` to execute a block of code when an `if` condition is *not* true.
+
+*   `else` is always attached to `if`.
+*   Allows us to specify an alternative to execute when the `if` *branch* isn't taken.
+
+~~~
+masses = [3.54, 2.07, 9.22, 1.86, 1.71]
+for m in masses:
+    if mass > 3.0:
+        print(mass, 'is large')
+    else:
+        print(mass, 'is small')
+~~~
+{: .python}
+~~~
+3.54 is large
+2.07 is small
+9.22 is large
+1.86 is small
+1.71 is small
+~~~
+{: .output}
+
+## Use `elif` to specify additional tests.
+
+*   May want to provide several alternative choices, each with its own test.
+*   Use `elif` (short for "else if") and a condition to specify these.
+*   Always associated with an `if`.
+*   Must come before the `else` (which is the "catch all").
 
 I can also generate more complex conditional statements with boolean operators
 like **and** and **or**, and use comparators like "<", ">"
 
 ~~~
-water_temp = 30
-pressure = 1
-
-if water_temp < 100 and water_temp > 0:
-    state = "liquid"
-
-print("The water is currently ", state)
+masses = [3.54, 2.07, 9.22, 1.86, 1.71]
+for m in masses:
+    if mass > 9.0:
+        print(mass, 'is HUGE')
+    elif mass > 3.0:
+        print(mass, 'is large')
+    else:
+        print(mass, 'is small')
 ~~~
-{: .source}
-
-Sometimes, you might want to test if multiple statements are true or false in one 
-single loop. You can do this by chaining multiple `if` / `elif` statements in a row. 
-For example:
-
+{: .python}
 ~~~
-if statement_1:
-    task_to_be_done_if_statement_1_is_true
-elif statement_2:
-    task_to_be_done_if_statement_2_is_true
-else:
-    task_to_be_done_if_neither_statement_1_or_statement_2_is_true
+3.54 is large
+2.07 is small
+9.22 is HUGE
+1.86 is small
+1.71 is small
 ~~~
-{: .source}
+{: .output}
 
-You can chain as many `if` / `elif` statements together as you would like, but there 
-can only be one else statement in a set of code. Let's try an example. Let's say 
-you wanted to convert a numerical grade into a letter grade.
+## Conditions are tested once, in order.
 
-~~~
-grade = 85
-if grade >= 90:
-    print("A")
-elif grade >= 80:
-    print("B")
-elif grade >= 70:
-    print("C")
-else:
-    print("failing")
-~~~
-{: .source}
-
-Be careful as you construct these complex statements because the code stops 
-checking if conditionals are true / false after the first true conditional is met. 
-So, make sure the ordering of your statements makes logical sense. For example:
+*   Python steps through the branches of the conditional in order, testing each in turn.
+*   So ordering matters.
 
 ~~~
 grade = 85
 if grade >= 70:
-    print("C")
+    print('grade is C')
 elif grade >= 80:
-    print("B")
+    print('grade is B')
 elif grade >= 90:
-    print("A")
+    print('grade is A')
 ~~~
-{: .source}
+{: .python}
+~~~
+grade is C
+~~~
+{: .output}
 
-would print `C`, not `B` as you might want.
+*   Does *not* automatically go back and re-evaluate if values change.
+
+~~~
+velocity = 10.0
+if velocity > 20.0:
+    print('moving too fast')
+else:
+    print('adjusting velocity')
+    velocity = 50.0
+~~~
+{: .python}
+~~~
+adjusting velocity
+~~~
+{: .output}
+
+*   Often use conditionals in a loop to "evolve" the values of variables.
+
+~~~
+velocity = 10.0
+for i in range(5): # execute the loop 5 times
+    print(i, ':', velocity)
+    if velocity > 20.0:
+        print('moving too fast')
+        velocity = velocity - 5.0
+    else:
+        print('moving too slow')
+        velocity = velocity + 10.0
+print('final velocity:', velocity)
+~~~
+{: .python}
+~~~
+0 : 10.0
+moving too slow
+1 : 20.0
+moving too slow
+2 : 30.0
+moving too fast
+3 : 25.0
+moving too fast
+4 : 20.0
+moving too slow
+final velocity: 30.0
+~~~
+{: .output}
+
+## Create a table showing updates to variables' values to trace the execution of a program.
+
+<table>
+  <tr> <td><strong>i</strong></td> <td><strong>velocity</strong></td> </tr>
+  <tr> <td>0</td> <td>10.0</td> </tr>
+  <tr> <td> </td> <td>20.0</td> </tr>
+  <tr> <td>1</td> <td></td> </tr>
+  <tr> <td> </td> <td>30.0</td> </tr>
+  <tr> <td>2</td> <td></td> </tr>
+  <tr> <td> </td> <td>25.0</td> </tr>
+  <tr> <td>3</td> <td></td> </tr>
+  <tr> <td> </td> <td>20.0</td> </tr>
+  <tr> <td>4</td> <td></td> </tr>
+  <tr> <td> </td> <td>30.0</td> </tr>
+</table>
+
+*   The program must have a `print` statement *outside* the body of the loop
+    to show the final value of `velocity`,
+    since its value is updated by the last iteration of the loop.
+
+> ## Tracing Execution
+>
+> What does this program print?
+>
+> ~~~
+> pressure = 71.9
+> if pressure 50.0:
+>     pressure = 25.0
+> elif pressure <= 50.0:
+>     pressure = 0.0
+> print(pressure)
+> ~~~
+> {: .source}
+{: .challenge}
 
 > ## Trimming Values
 >
-> Fill in the blanks so that this program trims the data
-> by replacing all values less than zero with zero
-> and all values greater than one with one.
+> Fill in the blanks so that this program creates a new list
+> containing zeroes where the original list's values were negative
+> and ones where the origina list's values were positive.
 >
 > ~~~
-> original = [-1.5, 0.2, 0.4, 0.0, 1.3, 0.4]
+> original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
 > result = ____
 > for value in original:
 >     if ____:
->         result.append(0.0)
->     elif ____:
->         result.append(1.0)
+>         result.append(0)
 >     else:
->         result.append(____)
+>         ____
 > print(result)
 > ~~~
 > {: .source}
 >
 > ~~~
-> [0.0, 0.2, 0.4, 0.0, 1.0, 0.4]
+> [0, 1, 1, 1, 0, 1]
 > ~~~
 > {: .output}
 {: .challenge}
@@ -145,11 +235,11 @@ would print `C`, not `B` as you might want.
 >
 > ~~~
 > import glob
-> import pandas as pd
+> import pandas
 > for filename in glob.glob('data/*.csv'):
->     contents = pd.read_csv(filename)
+>     contents = pandas.read_csv(filename)
 >     ____:
->         print(filename,len(contents))
+>         print(filename, len(contents))
 > ~~~
 > {: .source}
 {: .challenge}
@@ -174,19 +264,4 @@ would print `C`, not `B` as you might want.
 >
 > What are the advantages and disadvantages of using this method
 > to find the range of the data?
-{: .challenge}
-
-> ## Tracing Execution
->
-> What does this program print?
->
-> ~~~
-> pressure = 71.9
-> if pressure 50.0:
->     pressure = 25.0
-> elif pressure <= 50.0:
->     pressure = 0.0
-> print(pressure)
-> ~~~
-> {: .source}
 {: .challenge}
