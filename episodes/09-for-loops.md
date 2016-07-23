@@ -230,3 +230,20 @@ print(total)
 > ~~~
 > {: .python}
 {: .challenge}
+
+> ## Cumulative Sum
+>
+> Reorder and properly indent the lines of code below
+> so that they print an array with the cumulative sum of data.
+> The result should be `[1, 3, 5, 10]`.
+>
+> ~~~
+> cumulative += [sum]
+> for number in data:
+> cumulative = []
+> sum += number
+> print(cumulative)
+> data = [1,2,2,5]
+> ~~~
+> {: .python}
+{: .challenge}
