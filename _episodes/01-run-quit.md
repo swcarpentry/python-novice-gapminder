@@ -28,10 +28,12 @@ keypoints:
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
+
     ~~~
     $ jupyter notebook
     ~~~
     {: .source}
+
 *   This will start a Jupyter Notebook server and open your default web browser.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
