@@ -26,6 +26,7 @@ keypoints:
 ## Use the Jupyter Notebook for editing and running Python.
 
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
+    *   See [the setup instructions]({{ site.github.url }}/setup/) for Anaconda installation instructions.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
 
@@ -34,9 +35,18 @@ keypoints:
     ~~~
     {: .source}
 
-*   This will start a Jupyter Notebook server and open your default web browser.
+*   This will start a Jupyter Notebook server and open your default web browser. 
+*   The server runs locally on your machine only and does not use an internet connection.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
+*   You can type code into the browser and see the result when the web page talks to the server.
+*   This has several advantages:
+	- You can easily type, edit, and copy and paste blocks of code.
+	- Tab complete allows you to easily access the names of things you are using and learn more about them.
+	- It allows you to annotate your code with links, different sized text, bullets, etc to make it more accessible to you and your collaborators.
+	- It allows you to display figures next to the code that produces them to tell a complete story of the analysis.
+*   The notebook is stored as JSON but can be saved as a .py file if you would like to run it from the bash shell or a python interpreter.
+*   Just like a webpage, the saved notebook looks different to what you see when it gets rendered by your browser.
 
 FIXME: diagram
 
@@ -59,9 +69,9 @@ FIXME: diagram
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press "esc" and "return" alternately, you will see the surround of your cell change from blue to green.
+*   If you press "esc" and "return" alternately, you will see the outer border of your code cell change from blue to green.
     *   The difference in colour is subtle.
-*   These are the control and edit modes of your notebook.
+*   These are the control (blue) and edit (green) modes of your notebook.
 *   If you use the "esc" and "return" keys to make the surround blue and then press the "H" key, a list of all the shortcut keys will appear.
 *   When in control mode (esc/blue),
     *   The "B" key will make a new cell below the currently selected cell.
@@ -73,8 +83,9 @@ FIXME: diagram
 ## Use the keyboard and mouse to select and edit cells.
 
 *   Pressing the "return" key turns the surround green to signify edit mode and you can type into the cell.
-*   Because we want to be able to write many lines in a single cell, the "return" key will do what it normally does.
-    *   E.g., it moves the cursor to the next line just like in a text editor.
+*   Because we want to be able to write many lines of code in a single cell,
+    pressing the "return" key when the border is green moves the cursor to the next line in the cell
+    just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
 *   Pressing the "return" key and the "shift" key together will execute the contents of the cell.
 *   Notice that the "return" and "shift" keys on the right of the keyboard are right next to each other.
@@ -86,7 +97,7 @@ FIXME: diagram
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
 *   Turn the current cell into a Markdown cell by entering the control mode (esc/blue) and press the "M" key.
 *   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
-*   Use the "Y" key in the control menu to change the cell back to code.
+*   Turn the current cell into a Code cell by entering the control mode (esc/blue) and press the "Y" key.
 
 ## Markdown does most of what HTML does.
 
