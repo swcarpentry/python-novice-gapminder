@@ -212,3 +212,86 @@ result of call is: None
 > 2.  When and why is it useful to call functions this way?
 > {: .python}
 {: .challenge}
+
+> ## Encapsulating Data Analysis
+>
+> Assume that the following code has been executed:
+>
+> ~~~ 
+> import pandas
+>
+> df = pandas.read_csv('gapminder_gdp_asia.csv', index_col=0)
+> japan = df.ix['Japan']
+> ~~~
+> {: .python}
+>
+> 1. Complete the statements below to obtain the average GDP for Japan
+>    across the years reported for the 1980s.
+>
+> ~~~ 
+> year = 1983
+> gdp_decade = 'gdpPercap_' + str(year // ____)
+> avg = (japan.ix[gdp_decade + ___] + japan.ix[gdp_decade + ___]) / 2
+> ~~~
+> {: .python}
+>
+> 2. Abstract the code above into a single function.
+>
+> ~~~
+> def avg_gdp_in_decade(country, continent, year):
+>     df = pd.read_csv('gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+>     ____
+>     ____
+>     ____
+>     return avg
+> ~~~
+> {: .python}
+>
+> 3. How would you generalize this function
+>    if you did not know beforehand which specific years occurred as columns in the data?
+>    For instance, what if we also had data from years ending in 1 and 9 for each decade?
+>    (Hint: use the columns to filter out the ones that correspond to the decade,
+>    instead of enumerating them in the code.) 
+>
+> > ## Solution
+> >
+> > 1. 
+> >
+> > ~~~ 
+> > year = 1983
+> > gdp_decade = 'gdpPercap_' + str(year // 10)
+> > avg = (japan.ix[gdp_decade + '2'] + japan.ix[gdp_decade + '7']) / 2
+> > ~~~
+> > {: .python}
+> >
+> > 2.
+> >
+> > ~~~
+> > def avg_gdp_in_decade(country, continent, year):
+> >     df = pd.read_csv('gapminder_gdp_' + continent + '.csv', index_col=0)
+> >     c = df.ix[country]
+> >     gdp_decade = 'gdpPercap_' + str(year // 10)
+> >     avg = (c.ix[gdp_decade + '2'] + c.ix[gdp_decade + '7'])/2
+> >     return avg
+> > ~~~
+> > {: .python}
+> >
+> > 3. We need to loop over the reported years
+> >    to obtain the average for the relevant ones in the data.
+> >
+> > ~~~
+> > def avg_gdp_in_decade(country, continent, year):
+> >     df = pd.read_csv('gapminder_gdp_' + continent + '.csv', index_col=0)
+> >     c = df.ix[country] 
+> >     gdp_decade = 'gdpPercap_' + str(year // 10)
+> >     total = 0.0
+> >     num_years = 0
+> >     for yr_header in c.index: # c's index contains reported years
+> >         if yr_header.startswith(gdp_decade):
+> >             total = total + c.ix[yr_header]
+> >             num_years = num_years + 1
+> >     return total/num_years
+> > ~~~
+> > {: .source}
+> {: .solution}
+{: .challenge}
