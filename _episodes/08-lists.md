@@ -6,7 +6,6 @@ questions:
 - "How can I store multiple values?"
 objectives:
 - "Explain why programs need collections of values."
-- "Correctly explain each adjective in 'a mutable ordered collection of heterogeneous values'."
 - "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
 keypoints:
 - "A list stores many values in a single structure."
@@ -16,7 +15,6 @@ keypoints:
 - "Use `del` to remove items from a list entirely."
 - "The empty list contains no values."
 - "Lists may contain values of different types."
-- "A list is a mutable ordered collection of heterogeneous values."
 - "Character strings can be indexed like lists."
 - "Character strings are immutable."
 - "Indexing beyond the end of the collection is an error."
@@ -131,13 +129,6 @@ goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 ~~~
 {: .python}
 
-## A list is a mutable ordered collection of heterogeneous values.
-
-*   Mutable: contents can be changed in place.
-*   Ordered: items are stored in a particular order and can be accessed by location.
-*   Collection: lists contain other things.
-*   Heterogeneous: a list can contain values of many types.
-
 ## Character strings can be indexed like lists.
 
 *   Get single characters from a character string using indexes in square brackets.
@@ -157,6 +148,8 @@ third character: b
 ## Character strings are immutable.
 
 *   Cannot change the characters in a string after it has been created.
+    *   *Immutable*: cannot be changed after creation.
+    *   In contrast, lists are *mutable*: they can be modified in place.
 *   Python considers the string to be a single value with parts,
     not a collection of values.
 
