@@ -1,5 +1,5 @@
 ---
-title: "The Call Stack"
+title: "Variable Scope"
 teaching: 10
 exercises: 15
 questions:
