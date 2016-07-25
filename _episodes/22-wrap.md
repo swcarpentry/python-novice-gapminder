@@ -9,4 +9,8 @@ objectives:
 keypoints:
 - FIXME
 ---
-FIXME: recap.
+
+Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
+The same is true of programming:
+many things that seem obvious when we're thinking about them
+turn out to be anything but when we have to explain them precisely.
