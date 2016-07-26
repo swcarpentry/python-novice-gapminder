@@ -247,3 +247,17 @@ print(total)
 > ~~~
 > {: .python}
 {: .challenge}
+
+> ## Indentation Errors
+>
+> What kind of error does Python report
+> when we try to run the following program?
+>
+> ~~~
+> for char in 'helium':
+> print char
+> ~~~
+> {: .python}
+>
+> Is this a syntax error or a runtime error?
+{: .challenge}

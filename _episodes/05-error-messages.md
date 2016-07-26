@@ -11,6 +11,7 @@ objectives:
 keypoints:
 - "Use comments to add documentation to programs."
 - "Python reports a syntax error when it can't understand the source of a program."
+- "Indentation is meaningful in Python."
 - "Python reports a runtime error when something goes wrong while a program is executing."
 - "Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution."
 ---
@@ -45,6 +46,53 @@ age = = 52
 SyntaxError: invalid syntax
 ~~~
 {: .error}
+
+*   Look more closely at the error message:
+
+~~~
+print("hello world"
+~~~
+{: .python}
+~~~
+  File "<ipython-input-6-d1cc229bf815>", line 1
+    print ("hello world"
+                        ^
+SyntaxError: unexpected EOF while parsing
+~~~
+{: .error}
+
+*   The message indicates a problem on first line of the input ("line 1").
+    *   In this case the "ipython-input" section of the file name tells us that
+        we are working with input into IPython,
+        the Python interpreter used by the Jupyter Notebook.
+*   The `-6-` part of the filename indicates that
+    the error occurred in cell 6 of our Notebook.
+*   Next is the problematic line of code,
+    indicating the problem with a `^` pointer.
+
+## Indentation is meaningful in Python.
+
+*   Python uses indentation to group sections of code together
+    (which we will discuss [later]({{ site.github.url }}/09-for-loops).
+*   If the indentation changes in a way that Python does not expect,
+    it reports an `IndentationError`
+    (which is a more specific kind of syntax error).
+
+~~~
+firstName="Jon"
+  lastName="Smith"
+~~~
+{: .python}
+~~~
+  File "<ipython-input-7-f65f2962bf9c>", line 2
+    lastName="Smith"
+    ^
+IndentationError: unexpected indent
+~~~
+{: .error}
+
+*   This error can be fixed by removing the extra spaces
+    at the beginning of the second line.
 
 ## Python reports a runtime error when something goes wrong while a program is executing.
 

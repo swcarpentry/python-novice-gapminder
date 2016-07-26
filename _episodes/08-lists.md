@@ -166,7 +166,10 @@ TypeError: 'str' object does not support item assignment
 
 ## Indexing beyond the end of the collection is an error.
 
-*   Python reports a runtime error if we attempt to access a value that doesn't exist.
+*   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
+    *   This is a kind of [runtime error]({{ site.github.url }}/05-error-messages/).
+    *   Cannot be detected as the code is parsed
+        because the index might be calculated based on data.
 
 ~~~
 print('99th element of element is:', element[99])
