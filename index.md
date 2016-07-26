@@ -2,7 +2,8 @@
 layout: lesson
 ---
 This lesson is an introduction to programming Python
-for people with little or no previous programming experience.
+for people with little or no previous programming experience
+using analysis of tabular data as a motivating example.
 It is designed to be used in both [Data Carpentry]({{ site.dc_site }})
 and [Software Carpentry]({{ site.swc_site }}) workshops.
 This lesson references the Jupyter Notebook,
