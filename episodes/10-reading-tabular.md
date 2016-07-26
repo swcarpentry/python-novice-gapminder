@@ -60,7 +60,8 @@ print(data)
 > which is why the path to the file is `data/gapminder_gdp_oceania.csv`.
 > If you forget to include `data/`,
 > or if you include it but your copy of the file is somewhere else,
-> you will get an error report that ends with a line like this:
+> you will get a [runtime error]({{ site.github.url }}/05-error-messages/)
+> that ends with a line like this:
 >
 > ~~~
 > OSError: File b'gapminder_gdp_oceania.csv' does not exist
