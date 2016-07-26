@@ -77,7 +77,7 @@ FIXME: diagram
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
-*   There are lots of shortcuts you can try out and most actions can done with the menus at the top of the page if you forget the shortcuts.
+*   There are lots of shortcuts you can try out and most actions can be done with the menus at the top of the page if you forget the shortcuts.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
 
 ## Use the keyboard and mouse to select and edit cells.
