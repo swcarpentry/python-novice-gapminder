@@ -183,9 +183,117 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
-This section originally presented a point-form outline of the lesson episodes
-with time estimates for teaching and exercises.
-That information is now in the syllabus on the front page.
+The original step-by-step learning plan is included below.
+It has been superseded by the content of the actual episodes,
+but is included for reference.
+
+*   Running and Quitting Interactively
+    *   Teaching: 15 min (because setup issues)
+    *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+        *   Run the Notebook
+        *   Create a few Markdown cells
+        *   Create and execute a Python cell that prints 1+2
+*   Variables and Assignment
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
+        *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
+*   Data Types and Type Conversion
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Predict result types (or errors) of various operations
+        *   Add conversion functions to broken code to make it work
+*   Built-in Functions (and Methods) and Help
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Chain calculations with max and min
+        *   Find a useful method using help(str)
+        *   Parsons Problem to achieve specific results with string methods
+*   Error Messages
+    *   Teaching: 10 min (review of error messages seen to date)
+    *   Exercises: 10 min
+        *   Diagnose and fix small errors (some syntax, some runtime)
+*   Libraries (Including Aliases)
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Operations with math library
+        *   Look things up in the python.org docs
+*   Pandas Data Frames
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Import Pandas
+        *   Create and display a data frame
+*   Reading Tabular Data
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Read one continent's subset of gapminder CSV data
+    *   Callout:
+        *   How to read data from Excel spreadsheets via export to CSV
+        *   How tor ead data from Excel spreadsheets directly (needs another library)
+*   Collective Operations
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Select various subsets of data
+        *   Normalize values (scale to 0..1)
+*   Plotting
+    *   Teaching: 10 min (to show a variety of plots and debug display problems)
+    *   Exercises: 5 min
+        *   Plot normalized change in GDP over time (tweaking provided code)
+*   For Loops
+    *   Teaching: 15 min (do *not* introduce lists)
+    *   Exercises: 10 min
+        *   Reverse a string by repeated append
+        *   Trace execution of loop
+*   Looping Over Data Sets
+    *   Teaching: 10 min (use glob to get filenames)
+    *   Exercises: 15 min
+        *   Count rows of each data set
+        *   Check number of columns in each data set is the same
+*   *Lunch Break*
+*   Lists
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Indexing exercises
+        *   Conversion from list to string and back
+        *   Sum values in a list
+*   Conditionals
+    *   Teaching: 10 min (inside loop)
+    *   Exercises: 15 min
+        *   Count vowels
+        *   Report badly-sized files inside loop
+*   Writing Functions
+    *   Teaching: 15 min
+    *   Exercises: 15 min
+        *   Check size of a single data file
+        *   Check sizes of all data files in a directory
+            *   Write new function using previous function
+*   Documentation
+    *   Teaching: 5 min
+    *   Exercises: 10 min
+        *   Add docstrings to functions written earlier
+*   Programming Style
+    *   Teaching: 10 min (mostly to introduce checklist)
+    *   Exercises: 15 min
+        *   Clean up badly-written 20-line program
+*   Debugging
+    *   Teaching: 10 min (divide and conquer)
+    *   Exercises: 15 min
+        *   Debug three-function program
+*   Defensive Programming
+    *   Teaching: 5 min
+    *   Exercises: 10 min
+        *   Add assertions to functions based on docstrings
+*   Programming with Arrays
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   More complicated array indexing
+*   Wrap-Up
+    *   Teaching: 25 min
+        *   Overview of key SciPy modules
+        *   How to find and install libraries
+        *   Running Python from the command line
+        *   Other editing tools
+    *   Exercises: 0 min
 
 [dc-website]: http://datacarpentry.org
 [gapminder-data]: http://www.gapminder.org/data/
