@@ -58,7 +58,7 @@ parameter passing,
 variable scope,
 and the call stack all need time.
 
-## Stage 0 - Assumptions
+## Stage 1 - Assumptions
 
 *   Audience
     *   Graduate students in numerate disciplines from cosmology to economics
@@ -101,7 +101,7 @@ and the call stack all need time.
 *   See also:
     *   http://nsoontie.github.io/2015-03-05-ubc/novice/python/Pandas-Lesson.html
 
-## Stage 1 - Desired Results
+## Stage 2 - Desired Results
 
 ### Goals
 
@@ -181,119 +181,122 @@ How do I...
 *   Where to find documentation on standard libraries
 *   How to find out what else scientific Python offers
 
-## Stage 2 - Learning Plan
+## Stage 3 - Learning Plan
 
 The original step-by-step learning plan is included below.
 It has been superseded by the content of the actual episodes,
 but is included for reference.
 
-*   Running and Quitting Interactively
+*   Running and Quitting Interactively (09:00)
     *   Teaching: 15 min (because setup issues)
     *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
         *   Run the Notebook
         *   Create a few Markdown cells
         *   Create and execute a Python cell that prints 1+2
-*   Variables and Assignment
-    *   Teaching: 5 min
-    *   Exercises: 5 min
+*   Variables and Assignment (09:15)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
         *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
         *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
-*   Data Types and Type Conversion
-    *   Teaching: 5 min
-    *   Exercises: 5 min
+*   Data Types and Type Conversion (09:35)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
         *   Predict result types (or errors) of various operations
         *   Add conversion functions to broken code to make it work
-*   Built-in Functions (and Methods) and Help
-    *   Teaching: 5 min
-    *   Exercises: 5 min
+*   Built-in Functions (and Methods) and Help (09:55)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
         *   Chain calculations with max and min
         *   Find a useful method using help(str)
         *   Parsons Problem to achieve specific results with string methods
-*   Error Messages
+*   Error Messages (10:15)
     *   Teaching: 10 min (review of error messages seen to date)
     *   Exercises: 10 min
         *   Diagnose and fix small errors (some syntax, some runtime)
-*   Libraries (Including Aliases)
-    *   Teaching: 5 min
-    *   Exercises: 5 min
+*   Coffee: 15 min (10:35)
+*   Libraries (Including Aliases) (10:50)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
         *   Operations with math library
         *   Look things up in the python.org docs
-*   Pandas Data Frames
+*   Pandas Data Frames (11:10)
     *   Teaching: 10 min
     *   Exercises: 10 min
         *   Import Pandas
         *   Create and display a data frame
-*   Reading Tabular Data
+*   Reading Tabular Data (11:30)
     *   Teaching: 5 min
     *   Exercises: 5 min
         *   Read one continent's subset of gapminder CSV data
     *   Callout:
         *   How to read data from Excel spreadsheets via export to CSV
         *   How tor ead data from Excel spreadsheets directly (needs another library)
-*   Collective Operations
+*   Collective Operations (11:40)
     *   Teaching: 10 min
     *   Exercises: 10 min
         *   Select various subsets of data
         *   Normalize values (scale to 0..1)
-*   Plotting
+*   Lunch: 60 min (12:00)
+*   Plotting (13:00)
     *   Teaching: 10 min (to show a variety of plots and debug display problems)
-    *   Exercises: 5 min
+    *   Exercises: 10 min
         *   Plot normalized change in GDP over time (tweaking provided code)
-*   For Loops
+*   For Loops (13:20)
     *   Teaching: 15 min (do *not* introduce lists)
     *   Exercises: 10 min
         *   Reverse a string by repeated append
         *   Trace execution of loop
-*   Looping Over Data Sets
+*   Looping Over Data Sets (13:55)
     *   Teaching: 10 min (use glob to get filenames)
     *   Exercises: 15 min
         *   Count rows of each data set
         *   Check number of columns in each data set is the same
-*   *Lunch Break*
-*   Lists
+*   Lists (14:20)
     *   Teaching: 10 min
     *   Exercises: 10 min
         *   Indexing exercises
         *   Conversion from list to string and back
         *   Sum values in a list
-*   Conditionals
+*   Coffee: 15 min (14:40)
+*   Conditionals (15:05)
     *   Teaching: 10 min (inside loop)
     *   Exercises: 15 min
         *   Count vowels
         *   Report badly-sized files inside loop
-*   Writing Functions
+*   Writing Functions (15:30)
     *   Teaching: 15 min
     *   Exercises: 15 min
         *   Check size of a single data file
         *   Check sizes of all data files in a directory
             *   Write new function using previous function
-*   Documentation
+*   Documentation (16:00)
     *   Teaching: 5 min
     *   Exercises: 10 min
         *   Add docstrings to functions written earlier
-*   Programming Style
+*   Programming Style (16:15)
     *   Teaching: 10 min (mostly to introduce checklist)
     *   Exercises: 15 min
         *   Clean up badly-written 20-line program
-*   Debugging
+*   Debugging (16:40)
     *   Teaching: 10 min (divide and conquer)
     *   Exercises: 15 min
         *   Debug three-function program
-*   Defensive Programming
+*   Defensive Programming (17:05)
     *   Teaching: 5 min
     *   Exercises: 10 min
         *   Add assertions to functions based on docstrings
-*   Programming with Arrays
+*   Programming with Arrays (17:20)
     *   Teaching: 10 min
     *   Exercises: 10 min
         *   More complicated array indexing
-*   Wrap-Up
-    *   Teaching: 25 min
+*   Wrap-Up (17:40)
+    *   Teaching: 15 min
         *   Overview of key SciPy modules
         *   How to find and install libraries
         *   Running Python from the command line
         *   Other editing tools
     *   Exercises: 0 min
+*   Finish (17:55)
 
 [dc-website]: http://datacarpentry.org
 [gapminder-data]: http://www.gapminder.org/data/
