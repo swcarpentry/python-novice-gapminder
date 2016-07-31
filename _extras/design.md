@@ -168,3 +168,4 @@ How do I...
     *   Exercises: 15 min
         *   Plot time series data from complex data set
 *   Wrapping Up: 10 min (15:50)
+*   Finish (16:00)
