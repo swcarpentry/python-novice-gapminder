@@ -18,7 +18,7 @@ keypoints:
 ---
 ## Python programs are plain text files.
 
-*   They have the ".py" extension to let everyone know (including the operating system) it is a Python program.
+*   They have the ".py" extension to let people and the operating system know it is a Python program (although this is convention, not a requirement).
 *   It's common to write them using a text editor but we are going to use the Jupyter Notebook.
 *   The bit of extra setup is well worth it because the Notebook provides code completion and other helpful features.
 *   Notebook files have the extension ".ipynb" to distinguish them from plain-text Python programs.
@@ -69,11 +69,11 @@ FIXME: diagram
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press "esc" and "return" alternately, you will see the outer border of your code cell change from blue to green.
+*   If you press "esc" and "return" alternately, you will see the outer border of your code cell change from grey to green.
     *   The difference in colour is subtle.
-*   These are the control (blue) and edit (green) modes of your notebook.
-*   If you use the "esc" and "return" keys to make the surround blue and then press the "H" key, a list of all the shortcut keys will appear.
-*   When in control mode (esc/blue),
+*   These are the control (grey) and edit (green) modes of your notebook.
+*   If you use the "esc" and "return" keys to make the surround grey and then press the "H" key, a list of all the shortcut keys will appear.
+*   When in control mode (esc/grey),
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
@@ -95,9 +95,9 @@ FIXME: diagram
 *   Notebooks can also render [Markdown][markdown].
     *   A simple plain-text format for writing lists, links, and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-*   Turn the current cell into a Markdown cell by entering the control mode (esc/blue) and press the "M" key.
+*   Turn the current cell into a Markdown cell by entering the control mode (esc/grey) and press the "M" key.
 *   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
-*   Turn the current cell into a Code cell by entering the control mode (esc/blue) and press the "Y" key.
+*   Turn the current cell into a Code cell by entering the control mode (esc/grey) and press the "Y" key.
 
 ## Markdown does most of what HTML does.
 
