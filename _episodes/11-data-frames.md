@@ -3,7 +3,7 @@ title: "Pandas Data Frames"
 teaching: 10
 exercises: 10
 questions:
-- "How can do statistical analysis of tabular data?"
+- "How can I do statistical analysis of tabular data?"
 objectives:
 - "Select individual values from a Pandas data frame."
 - "Select entire rows or entire columns from a data frame."
