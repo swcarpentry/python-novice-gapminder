@@ -21,7 +21,7 @@ keypoints:
 *   Variables are names for values.
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
-*   Here's Python that assigns an age to a variable `age`
+*   Here, Python assigns an age to a variable `age`
     and a name in quotation marks to a variable `first_name`.
 
 ~~~
@@ -41,7 +41,8 @@ first_name = 'Ahmed'
 
 *   Python has a built-in function called `print` that prints things as text.
 *   Call the function (i.e., tell Python to run it) by using its name.
-*   Provide values to the function (e.g., things to print) in parentheses.
+*   Provide values to the function (i.e., the things to print) in parentheses.
+*   The values passed to the function are called 'arguments'
 
 ~~~
 print(first_name, 'is', age, 'years old')
@@ -57,8 +58,10 @@ Ahmed is 42 years old
 
 ## Variables persist between cells.
 
-*   Variables defined in one cell exist in all following cells.
-*   Notebook cells are just a way to organize a program:
+*   Variables defined in one cell exist in all other cells once executed, 
+    so the relative location of cells in the notebook do not matter (i.e., cells
+    lower down can still affect those above).
+*   Notebook cells are just a way to organize a program;
     as far as Python is concerned,
     all of the source code is one long set of instructions.
 
@@ -89,8 +92,7 @@ NameError: name 'last_name' is not defined
 
 *   Python thinks that upper- and lower-case letters are different,
     so `Name` and `name` are different variables.
-*   Again,
-    there are conventions around using upper-case letters at the start of variable names
+*   There are conventions for using upper-case letters at the start of variable names
     so we will use lower-case letters for now.
 
 ## Use meaningful variable names.
