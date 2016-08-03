@@ -223,7 +223,7 @@ first is 2 and second is 5
 
 > ## Division Types
 >
-> The `//` operator calcultaes the whole-number result of division,
+> The `//` operator calculates the whole-number result of division,
 > while the '%' operator calculates the remainder from division:
 >
 > ~~~
