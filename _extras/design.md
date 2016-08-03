@@ -107,65 +107,94 @@ How do I...
 
 ## Stage 2 - Learning Plan
 
-*   Running and Quitting Interactively (9:00)
-    *   Teaching: 15 min (because setup issues)
-    *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
-        *   Run the Notebook
-        *   Create a few Markdown cells
-        *   Create and execute a Python cell that prints 1+2
-*   Variables and Assignment (9:15)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Trace behavior of three-step swapping
-        *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
-*   NumPy Arrays (9:35)
-    *   Teaching: 15 min
-    *   Exercises: 10 min
-        *   Read CSV data into array
-        *   Calculate statistics on rows and columns
-*   Plotting Vectors (10:00)
-    *   Teaching: 10 min
-    *   Exercise: 10 min
-        *   Load single-column CSV and create plot
-*   Plotting Time Series (10:20)
-    *   Teaching: 10 min
-    *   Exercise: 10 min
-        *   Read and plot two-column data set (year and value)
-*   Coffee: 15 min (10:40)
-*   Lists (10:55)
-    *   Teaching: 15 min (introduce `glob.glob`)
-    *   Exercises: 10 min
-        *   Count how many files match a given pattern
-*   Loops (11:20)
-    *   Teaching: 15 min
-    *   Exercises: 15 min
-        *   Filter a list of files (a simple alternative to `glob`)
-*   Combining Ideas (11:50)
-    *   Teaching: 5 min
-    *   Exercise: 15 min
-        *   Produce one plot for each data file in a directory
-*   Lunch: 60 min (12:10)
-*   Writing Functions (13:10)
-    *   Teaching: 20 min
-    *   Exercises: 20 min
-        *   Extract and encapsulate "plot this file"
-*   Conditionals (13:50)
-    *   Teaching: 10 min
-    *   Exercises: 15 min
-        *   Resize picture so that either height or width is 100px
-        *   Keep largest of three color values (conditional in loop)
-*   Coffee: 15 min (14:15)
-*   Programming Style (14:30)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Add docstrings to functions written earlier
-*   Data Frames (14:50)
-    *   Teaching: 15 min
-    *   Exercises: 15 min
-        *   Read more complex data set and calculate statistics
-*   Plotting Data Frames (15:20)
-    *   Teaching: 15 min
-    *   Exercises: 15 min
-        *   Plot time series data from complex data set
-*   Wrapping Up: 10 min (15:50)
-*   Finish (16:00)
+### Running and Quitting Interactively (9:00)
+
+*   Teaching: 15 min (because setup issues)
+*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+    *   Run the Notebook
+    *   Create a few Markdown cells
+    *   Create and execute a Python cell that prints 1+2
+
+### Variables and Assignment (9:15)
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Trace behavior of three-step swapping
+    *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
+
+### NumPy Arrays (9:35)
+
+*   Teaching: 15 min
+*   Exercises: 10 min
+    *   Read CSV data into array
+    *   Calculate statistics on rows and columns
+
+### Plotting Vectors (10:00)
+
+*   Teaching: 10 min
+*   Exercise: 10 min
+    *   Load single-column CSV and create plot
+
+### Plotting Time Series (10:20)
+
+*   Teaching: 10 min
+*   Exercise: 10 min
+    *   Read and plot two-column data set (year and value)
+
+### Coffee: 15 min (10:40)
+
+### Lists (10:55)
+
+*   Teaching: 15 min (introduce `glob.glob`)
+*   Exercises: 10 min
+    *   Count how many files match a given pattern
+
+### Loops (11:20)
+
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   Filter a list of files (a simple alternative to `glob`)
+
+### Combining Ideas (11:50)
+
+*   Teaching: 5 min
+*   Exercise: 15 min
+    *   Produce one plot for each data file in a directory
+
+### Lunch: 60 min (12:10)
+
+### Writing Functions (13:10)
+
+*   Teaching: 20 min
+*   Exercises: 20 min
+    *   Extract and encapsulate "plot this file"
+
+### Conditionals (13:50)
+
+*   Teaching: 10 min
+*   Exercises: 15 min
+    *   Plot average if more than N records
+
+### Coffee: 15 min (14:15)
+
+### Programming Style (14:30)
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+    *   Add docstrings to functions written earlier
+
+### Data Frames (14:50)
+
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   Read more complex data set and calculate statistics
+
+### Plotting Data Frames (15:20)
+
+*   Teaching: 15 min
+*   Exercises: 15 min
+    *   Plot time series data from complex data set
+
+### Wrapping Up: 10 min (15:50)
+
+### Finish (16:00)
