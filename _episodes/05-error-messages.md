@@ -112,6 +112,8 @@ FIXME: diagram of where each type of error occurs.
 
 FIXME: this entire episode needs to move later (we can't do IndentationError yet, or talk about the tracebacks until we've written functions).
 
+FIXME: The 'Identifying Item Errors' section can be moved to later. The List data structure is not yet introduced.
+
 > ## Reading Error Messages
 >
 > Read the traceback below, and identify the following:
