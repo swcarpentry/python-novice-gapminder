@@ -118,9 +118,83 @@ How do I...
 ### Variables and Assignment (9:15)
 
 *   Teaching: 10 min
+
+Basic assignment of a value.  What kind of thing is it?  Can assign results
+of computation and use a variable on the right to assign to the left.
+
+```
+a = 3
+print(a)
+type(a)
+a = a + 60
+print(a)
+```
+
+Things can change type and operators can change 'meaning'
+
+```
+a = 'gdp.csv'
+print(a)
+type(a)
+a = 'data/' + a
+print(a)
+```
+
+Use meaningful names for variables.  For example, time
+
+```
+minutes = 3
+seconds = 12
+seconds = seconds + minutes*60
+print(seconds)
+```
+
 *   Exercises: 10 min
+
+Qu:  What kind of thing is 3.4?
+Ans:
+
+```
+     min = 3.25
+     type(3.25)
+```
+
+Qu:  What kind of thing is `3.25 + 4`?
+Ans:
+
+```
+    test = 3.25 + 4
+    type(test)
+    type(3.25 + 4)
+```
+
+Qu: Which is a better variable name, min or minutes?  Why?  What else might
+    min stand for (minimum)?  Would that ever be confusing?  Which of these
+    is easier for you to understand?
+
+```
+    ts = m * 60 + s
+    tot_sec = min * 60 + sec
+    total_seconds = minutes * 60 + seconds
+```
+
+Qu: Which would you rather inherit from the person who is leaving the lab?
+
     *   Trace behavior of three-step swapping
     *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
+
+Qu: Create a variable for minutes and set it to 6.35
+    Convert the minutes into seconds and print the result, once
+    saving the results and once not.
+Ans:
+
+```
+    minutes = 6.35
+    seconds = 6.35 * 60
+    print(seconds)
+    print(6.35 * 60)
+```
+
 
 ### NumPy Arrays (9:35)
 
