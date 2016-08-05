@@ -5,6 +5,14 @@ permalink: /design/
 ---
 ## Process Used
 
+> ## Help Wanted
+>
+> **We are filling in the exercises [below](#stage-3---learning-plan)
+> in order to make the lesson plan more concrete.
+> Contributions (both in the form of pull requests with filled-in exercises,
+> and comments on specific exercises, ordering, and timings) are greatly appreciated.**
+{: .callout}
+
 This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
 The main sections are:
 
@@ -52,7 +60,7 @@ The main sections are:
         *   We've tried writing/maintaining lessons as Notebooks...
     *   Learners will be provided with one Notebook per episode containing exercises
 
-## Stage 1 - Desired Results
+## Stage 2 - Desired Results
 
 ### Goals
 
@@ -105,7 +113,7 @@ How do I...
 *   Where to find documentation on standard libraries
 *   How to find out what else scientific Python offers
 
-## Stage 2 - Learning Plan
+## Stage 3 - Learning Plan
 
 ### Running and Quitting Interactively (9:00)
 
@@ -117,84 +125,105 @@ How do I...
 
 ### Variables and Assignment (9:15)
 
-*   Teaching: 10 min
+**Teaching: 10 min**
 
-Basic assignment of a value.  What kind of thing is it?  Can assign results
-of computation and use a variable on the right to assign to the left.
+*   Basic assignment of a value.
+*   What kind of thing is it?
+*   Can assign results of computation and use a variable on the right to assign to the left.
 
-```
+~~~
 a = 3
 print(a)
 type(a)
 a = a + 60
 print(a)
-```
+~~~
+{: .python}
 
-Things can change type and operators can change 'meaning'
+*   Things can change type and operators can change 'meaning'
 
-```
+~~~
 a = 'gdp.csv'
 print(a)
 type(a)
 a = 'data/' + a
 print(a)
-```
+~~~
+{: .python}
 
-Use meaningful names for variables.  For example, time
+*   Use meaningful names for variables.  For example, time
 
-```
+~~~
 minutes = 3
 seconds = 12
 seconds = seconds + minutes*60
 print(seconds)
-```
+~~~
+{: .python}
 
-*   Exercises: 10 min
+**Exercises: 10 min**
 
-Qu:  What kind of thing is 3.4?
-Ans:
+Q: What kind of thing is 3.4?
 
-```
-     min = 3.25
-     type(3.25)
-```
+A:
 
-Qu:  What kind of thing is `3.25 + 4`?
-Ans:
+~~~
+min = 3.25
+type(3.25)
+~~~
+{: .python}
 
-```
-    test = 3.25 + 4
-    type(test)
-    type(3.25 + 4)
-```
+Q: What kind of thing is `3.25 + 4`?
 
-Qu: Which is a better variable name, min or minutes?  Why?  What else might
-    min stand for (minimum)?  Would that ever be confusing?  Which of these
-    is easier for you to understand?
+~~~
+test = 3.25 + 4
+type(test)
+type(3.25 + 4)
+~~~
+{: .python}
 
-```
-    ts = m * 60 + s
-    tot_sec = min * 60 + sec
-    total_seconds = minutes * 60 + seconds
-```
+Q: Which is a better variable name, `min` or `minutes`?
+   Why?
+   (Hint: what else might `min` stand for?)
 
-Qu: Which would you rather inherit from the person who is leaving the lab?
+A: `minutes` is better because `min` might mean something like "minimum"
+   (and actually does in Python, but we haven't seen that yet).
 
-    *   Trace behavior of three-step swapping
-    *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
+Q: Which of the following would you rather inherit from someone who is leaving the lab?
 
-Qu: Create a variable for minutes and set it to 6.35
-    Convert the minutes into seconds and print the result, once
-    saving the results and once not.
-Ans:
+   1. `ts = m * 60 + s`
+   2. `tot_sec = min * 60 + sec`
+   3. `total_seconds = minutes * 60 + seconds`
 
-```
-    minutes = 6.35
-    seconds = 6.35 * 60
-    print(seconds)
-    print(6.35 * 60)
-```
+A: #3.
 
+Q: Trace the behavior of three-step swapping
+   by drawing a table to show the values of each variable after each line:
+
+~~~
+temp = left
+left = right
+right = temp
+~~~
+{: .python}
+
+Q: Create a variable for minutes and set it to 6.35.
+   Convert the minutes into seconds and print the result.
+   Then print the result *without* storing the number of seconds in a variable.
+
+A:
+
+~~~
+minutes = 6.35
+seconds = 6.35 * 60
+print(seconds)
+~~~
+{: .python}
+
+~~~
+print(6.35 * 60)
+~~~
+{: .python}
 
 ### NumPy Arrays (9:35)
 
