@@ -252,6 +252,131 @@ print(6.35 * 60)
 *   Exercises: 10 min
     *   Count how many files match a given pattern
 
+A list is a collection of elements.  Can be strings, numbers, other lists, etc.
+
+~~~
+#  Create an empty list
+first_list = []
+type(first_list)
+~~~
+{: .python}
+
+Create a list with some things in it, strings and numbers
+
+~~~
+continents = [ 'Africa', 'Europe' ]
+print(continents)
+primes = [ 1, 2, 3, 7, 11 ]
+#  How many elements in a list?
+len(primes)
+~~~
+{: .python}
+
+A list index indicates the position in the list of an element; the
+index is used to look at an element
+
+~~~
+print(continents[1])
+~~~
+{: .python}
+
+Which element is that?  List index starts at 0, so element 1 is the second.
+The type of an element is the type of the variable.
+
+~~~
+type(primes[2])
+mixed = [ 1, 2, 3, "That's all" ]
+type(mixed[0])
+type(mixed[3])
+~~~
+{: .python}
+
+Why do you get an error with the following command?
+~~~
+print(continents[2])
+~~~
+{: .python}
+
+What do you think these do?  Try them.
+~~~
+print(continents[:2])
+print(continents[1:])
+print(continent[-2])
+~~~
+{: .python}
+
+Once you have a list, you might want add new things to it
+
+~~~
+continents.append('Oceania')
+print(continents)
+~~~
+{: .python}
+
+Things are out of order.  This can matter.
+
+~~~
+continents.sort()
+print(continents)
+~~~
+{: .python}
+
+But, that changes the list itself.  If you need instead a sorted copy
+
+~~~
+continents = ['Africa', 'Europe', 'Oceania', 'Asia']
+sorted_continents = sorted(continents)
+print(sorted_continents)
+print(continents)
+~~~
+{: .python}
+
+Like `ls` or `dir`, you can get a folder list
+
+~~~
+folder_listing = os.listdir()
+print(folder_listing)
+~~~
+{: .python}
+
+But you might want a list of only some files, using a pattern, e.g., *.csv
+
+~~~
+import glob
+
+A_files = glob.glob('A*')
+print(A_files)
+type(A_files)
+~~~
+{: .python}
+
+That gets you file and folder names.  Be careful!  May be better to be
+more specific.  How would you get a list of all .csv files?
+
+~~~
+#  All .csv data files
+csv_filenames = glob('*.csv')
+print(csv_filenames)
+~~~
+{: .python}
+
+How would you get a list of all .csv files that begin with 'A'?
+
+~~~
+csv_filenames = glob('A*.csv')
+print(csv_filenames)
+~~~
+{: .python}
+
+How many of them are there?
+
+~~~
+len(csv_filenames)
+~~~
+{: .python}
+
+
+
 ### Loops (11:20)
 
 *   Teaching: 15 min
