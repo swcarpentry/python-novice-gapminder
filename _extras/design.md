@@ -355,7 +355,7 @@ more specific.  How would you get a list of all .csv files?
 
 ~~~
 #  All .csv data files
-csv_filenames = glob('*.csv')
+csv_filenames = glob.glob('*.csv')
 print(csv_filenames)
 ~~~
 {: .python}
@@ -363,7 +363,7 @@ print(csv_filenames)
 How would you get a list of all .csv files that begin with 'A'?
 
 ~~~
-csv_filenames = glob('A*.csv')
+csv_filenames = glob.glob('A*.csv')
 print(csv_filenames)
 ~~~
 {: .python}
