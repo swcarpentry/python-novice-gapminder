@@ -248,64 +248,80 @@ print(6.35 * 60)
 
 ### Lists (10:55)
 
-*   Teaching: 15 min (introduce `glob.glob`)
-*   Exercises: 10 min
-    *   Count how many files match a given pattern
+**Teaching: 15 min**
 
-A list is a collection of elements.  Can be strings, numbers, other lists, etc.
+*   A list is a collection of values.
+*   Can be strings, numbers, or a mix.
+*   Written inside `[]` with values separated by `,`.
 
 ~~~
-#  Create an empty list
-first_list = []
-type(first_list)
+continents = ['Africa', 'Europe']
+print(continents)
+primes = [1, 2, 3, 7, 11]
+print(primes)
 ~~~
 {: .python}
 
-Create a list with some things in it, strings and numbers
+*   Use the built-in function `len` to find out how long the list is.
 
 ~~~
-continents = [ 'Africa', 'Europe' ]
-print(continents)
-primes = [ 1, 2, 3, 7, 11 ]
-#  How many elements in a list?
 len(primes)
 ~~~
 {: .python}
 
-A list index indicates the position in the list of an element; the
-index is used to look at an element
+*   Use an index to specify a single value in a list.
+*   List indexes start at 0, so `list[1]` is actually the *second* value in the list.
 
 ~~~
 print(continents[1])
 ~~~
 {: .python}
 
-Which element is that?  List index starts at 0, so element 1 is the second.
-The type of an element is the type of the variable.
+*   The type of the list is `list`, but the types of the values may vary.
 
 ~~~
-type(primes[2])
-mixed = [ 1, 2, 3, "That's all" ]
+mixed = [1, "is not prime"]
+type(mixed)
 type(mixed[0])
-type(mixed[3])
+type(mixed[1])
 ~~~
 {: .python}
 
-Why do you get an error with the following command?
+*   Cannot ask for values that do not exist.
+    *   Unlike some languages, Python doesn't fill in a default.
+
 ~~~
 print(continents[2])
 ~~~
 {: .python}
 
-What do you think these do?  Try them.
+*   Negative indexes count backward from the end of the list.
+
 ~~~
-print(continents[:2])
-print(continents[1:])
-print(continent[-2])
+print(primes[-1])
 ~~~
 {: .python}
 
-Once you have a list, you might want add new things to it
+*   Can change values in a list by assigning to them (just like regular variables).
+
+~~~
+americas = ['South', 'Norht'] # oops, typo
+americas[1] = 'North'
+print(americas)
+~~~
+{: .python}
+
+*   The empty list contains no values.
+    *   Like zero for numbers or the empty string for text.
+
+~~~
+empty = []
+type(empty)
+print(empty)
+~~~
+{: .python}
+
+*   Can enlarge a list by appending values to it.
 
 ~~~
 continents.append('Oceania')
@@ -313,69 +329,88 @@ print(continents)
 ~~~
 {: .python}
 
-Things are out of order.  This can matter.
-
-~~~
-continents.sort()
-print(continents)
-~~~
-{: .python}
-
-But, that changes the list itself.  If you need instead a sorted copy
-
-~~~
-continents = ['Africa', 'Europe', 'Oceania', 'Asia']
-sorted_continents = sorted(continents)
-print(sorted_continents)
-print(continents)
-~~~
-{: .python}
-
-Like `ls` or `dir`, you can get a folder list
-
-~~~
-folder_listing = os.listdir()
-print(folder_listing)
-~~~
-{: .python}
-
-But you might want a list of only some files, using a pattern, e.g., *.csv
+*   Use the `glob` library to get a list of filenames matching a pattern.
 
 ~~~
 import glob
 
-A_files = glob.glob('A*')
-print(A_files)
-type(A_files)
+files = glob.glob('*.txt')
+print(files)
+type(files)
 ~~~
 {: .python}
 
-That gets you file and folder names.  Be careful!  May be better to be
-more specific.  How would you get a list of all .csv files?
+**Exercises: 10 min**
 
+Q: Given what we saw earlier about indexing NumPy arrays,
+   what do you expect these two expressions do?
+
+1.  `continents[:2]`
+2.  `continents[1:]`
+
+Q: How would you get a list of all CSV files in the `data` directory?
+   What would your answer produce if the `data` directory was empty?
+
+A:
+
+1.  `glob.glob('data/*.csv')`
+2.  An empty list.
+
+Q: Write a single expression to produce the number of CSV files in the `data` directory.
+
+A: `len(glob.glob('data/*.csv'))`
+
+Q: What does program A print?
+   What does program B print?
+   In simple terms, explain the difference between `sorted(letters)` and `letters.sort()`.
+
+<div class="row">
+  <div class="col-md-6" markdown="1">
 ~~~
-#  All .csv data files
-csv_filenames = glob.glob('*.csv')
-print(csv_filenames)
+# Program A
+letters = list('gold')
+result = sorted(letters)
+print('letters is', letters, 'and result is', result)
 ~~~
 {: .python}
-
-How would you get a list of all .csv files that begin with 'A'?
-
+  </div>
+  <div class="col-md-6" markdown="1">
 ~~~
-csv_filenames = glob.glob('A*.csv')
-print(csv_filenames)
-~~~
-{: .python}
-
-How many of them are there?
-
-~~~
-len(csv_filenames)
+# Program B
+letters = list('gold')
+result = letters.sort()
+print('letters is', letters, 'and result is', result)
 ~~~
 {: .python}
+  </div>
+</div>
 
+Q: What does program A print?
+   What does program B print?
+   In simple terms, explain the difference between `new = old` and `new = old[:]`.
 
+<div class="row">
+  <div class="col-md-6" markdown="1">
+~~~
+# Program A
+old = list('gold')
+new = old      # simple assignment
+new[0] = 'D'
+print('new is', new, 'and old is', old)
+~~~
+{: .python}
+  </div>
+  <div class="col-md-6" markdown="1">
+~~~
+# Program B
+old = list('gold')
+new = old[:]   # assigning a slice
+new[0] = 'D'
+print('new is', new, 'and old is', old)
+~~~
+{: .python}
+  </div>
+</div>
 
 ### Loops (11:20)
 
