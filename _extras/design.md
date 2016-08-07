@@ -125,7 +125,7 @@ How do I...
 
 ### Variables and Assignment (9:15)
 
-**Teaching: 10 min**
+#### Teaching: 10 min
 
 *   Basic assignment of a value.
 *   What kind of thing is it?
@@ -161,7 +161,7 @@ print(seconds)
 ~~~
 {: .python}
 
-**Exercises: 10 min**
+#### Exercises: 10 min
 
 Q: What kind of thing is 3.4?
 
@@ -248,7 +248,7 @@ print(6.35 * 60)
 
 ### Lists (10:55)
 
-**Teaching: 15 min**
+#### Teaching: 15 min
 
 *   A list is a collection of values.
 *   Can be strings, numbers, or a mix.
@@ -340,7 +340,7 @@ type(files)
 ~~~
 {: .python}
 
-**Exercises: 10 min**
+#### Exercises: 10 min
 
 Q: Given what we saw earlier about indexing NumPy arrays,
    what do you expect these two expressions do?
