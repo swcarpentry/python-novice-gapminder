@@ -232,11 +232,25 @@ print(6.35 * 60)
     *   Read CSV data into array
     *   Calculate statistics on rows and columns
 
+Note: `data/asia_gdp_per_capita.csv` has been transposed so that
+all country names are in the header row
+and the years are in a column.
+This makes it easy to read with NumPy (see below),
+and also motivates the use of Pandas
+(which keeps all the information we have to throw away in this case).
+
+~~~
+import numpy as np
+
+data = np.readtxt('data/asia_gdp_per_capita.csv', delimiter=',', skiprows=1)
+~~~
+{: .python}
+
 ### Plotting Vectors (10:00)
 
 *   Teaching: 10 min
 *   Exercise: 10 min
-    *   Load single-column CSV and create plot
+    *   Load CSV and create plot
 
 ### Plotting Time Series (10:20)
 
