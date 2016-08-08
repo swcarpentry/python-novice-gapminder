@@ -78,7 +78,7 @@ def average(values):
 ~~~
 def kelvin_to_celsius(k):
     assert k >= 0.0, 'Temperature in Kelvin cannot be negative'
-    return FIXME
+    return k - 273.15
 ~~~
 {: .python}
 
@@ -146,8 +146,9 @@ assert count_leading_zeros([1, 0]) == 0
 >
 > 1. Explain in simple language what `run_starts` function is supposed to do.
 > 2. Fill in the blanks in the function definition so that all of the assertions succeed.
-> 3. For what input(s) could different users reasonably expect this function to return different values?
->    I.e., where could reasonable people still disagree about the function's behavior?
+> 3. For what input(s) could different users reasonably expect this 
+>     function to return different values? I.e., where could reasonable people 
+>     still disagree about the function's behavior?
 > 4. Add one or more assertions to test for each situation identified above.
 >
 > ~~~

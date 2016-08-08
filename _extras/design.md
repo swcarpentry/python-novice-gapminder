@@ -18,10 +18,12 @@ This lesson was developed using a slimmed-down variant of the "Understanding by 
 The main sections are:
 
 1.  Assumptions about audience, time, etc.
-    (The current draft also includes some conclusions and decisions in this section - that should be refactored.)
+    (The current draft also includes some conclusions and decisions in this 
+    section - that should be refactored.)
 
 2.  Desired results:
-    overall goals, summative assessments at half-day granularity, what learners will be able to do, what learners will know.
+    overall goals, summative assessments at half-day granularity, what learners 
+    will be able to do, what learners will know.
 
 3.  Learning plan:
     each episode has a heading that summarizes what will be covered,
@@ -32,8 +34,7 @@ The main sections are:
 
 *   Audience
     *   Graduate students in numerate disciplines from cosmology to archaeology
-    *   Who are sighted
-    *   And have manipulated data in spreadsheets and with interactive tools like SAS
+    *   Who have manipulated data in spreadsheets and with interactive tools like SAS
     *   But have *not* programmed beyond CPD (copy-paste-despair)
 *   Constraints
     *   One full day 09:00-17:00
@@ -48,18 +49,30 @@ The main sections are:
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
-        *   And means that even people who have seen a bit of Python before will probably learn something
+        *   And means that even people who have seen a bit of Python before
+            will probably learn something
 *   Motivating Example
     *   Creating 2D plots suitable for inclusion in papers
     *   Appeals to almost everyone
     *   Makes lesson usable by both Carpentries
+        *   And means that even people who have seen a bit of Python before 
+            will probably learn something
+*   Data
+    *   Use the gapminder data throughout
+    *   But break into multiple files by continent
+        *   To make display of output from examples tidier
+            (e.g., use Australia/New Zealand, which is only two lines)
+        *   And allow examples showing use of multiple data sets
+*   Focus on Pandas instead of NumPy
+    *   Makes lesson usable by both Data Carpentry and Software Carpentry
+    *   Genuine novices are likely to want data analysis
+    *   And people with some prior experience:
+        *   will accept data analysis as an authentic task,
+        *   and are unlikely to have encountered Pandas,
+            so they'll still get something useful out of the lesson
 *   Exercises will mostly *not* be "write this code from scratch"
     *   Want lots of short exercises that can reliably be finished in allotted time
     *   So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
-*   Lesson materials
-    *   Notes for instructors and self-study will be written in Markdown
-        *   We've tried writing/maintaining lessons as Notebooks...
-    *   Learners will be provided with one Notebook per episode containing exercises
 
 ## Stage 2 - Desired Results
 
@@ -68,11 +81,9 @@ The main sections are:
 Learners can...
 
 *   ...write short scripts using loops and conditionals.
-*   ...write functions with a fixed number of parameters that return a single result
-    by extracting and encapsulating code from longer scripts.
+*   ...write functions with a fixed number of parameters that return a single result.
 *   ...import libraries using aliases and refer to those libraries' contents.
-*   ...do simple data extraction and formatting using NumPy and Pandas.
-*   ...read tabular data and plot it.
+*   ...do simple data extraction and formatting using Pandas.
 
 ### Summative Assessment
 
@@ -101,7 +112,8 @@ How do I...
     *   Modularity for readability as well as re-use
     *   No duplication
     *   Document purpose and use
-*   That there is no magic: the programs they use are no different in principle from those they build
+*   That there is no magic: the programs they use are no different 
+    in principle from those they build
 *   How to assign values to variables
 *   What integers, floats, strings, NumPy arrays, and Pandas data frames are
 *   How to trace the execution of a `for` loop
