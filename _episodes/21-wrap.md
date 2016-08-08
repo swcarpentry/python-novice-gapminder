@@ -1,14 +1,21 @@
 ---
-title: "Next Steps"
+title: "Wrap-Up"
 teaching: 15
 exercises: 0
 questions:
+- "What have we learned?"
 - "What else is out there and where do I find it?"
 objectives:
 - "Name and locate scientific Python community sites for software, workshops, and help."
 keypoints:
 - "Python supports a large community within and outwith research."
 ---
+
+Leslie Lamport once said, "Writing is nature's way of showing you how sloppy your thinking is."
+The same is true of programming:
+many things that seem obvious when we're thinking about them
+turn out to be anything but when we have to explain them precisely.
+
 ## Python supports a large community within and outwith research.
 
 *   The [Python 3 documentation](https://docs.python.org/3/) covers the core language
