@@ -90,7 +90,7 @@ round(3.712)
 ~~~
 {: .output}
 
-*   We can specify the number of decimal places we ant.
+*   We can specify the number of decimal places we want.
 
 ~~~
 round(3.712, 1)

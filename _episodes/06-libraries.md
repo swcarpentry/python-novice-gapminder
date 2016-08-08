@@ -45,7 +45,8 @@ cos(pi) is -1.0
 {: .output}
 
 *   Have to refer to each item with the library's name.
-    *   `math.cos(pi)` won't work: the reference to `pi` doesn't somewhow "inherit" the function's reference to `math`.
+    *   `math.cos(pi)` won't work: the reference to `pi`
+        doesn't somehow "inherit" the function's reference to `math`.
 
 ## Use `help` to find out more about a library's contents.
 

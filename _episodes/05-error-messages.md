@@ -25,7 +25,7 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 
 ## Python reports a syntax error when it can't understand the source of a program.
 
-*   Won't even try to run the program if it can be parsed.
+*   Won't even try to run the program if it can't be parsed.
 
 ~~~
 # Forgot to close the quotation marks around the string.
@@ -106,11 +106,12 @@ NameError: name 'aege' is not defined
 ~~~
 {: .error}
 
-## Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+## Fix syntax errors by reading the source and runtime errors by tracing execution.
 
 FIXME: diagram of where each type of error occurs.
 
-FIXME: this entire episode needs to move later (we can't do IndentationError yet, or talk about the tracebacks until we've written functions).
+FIXME: this entire episode needs to move later (we can't do IndentationError yet, or 
+talk about the tracebacks until we've written functions).
 
 > ## Reading Error Messages
 >
@@ -171,7 +172,8 @@ FIXME: this entire episode needs to move later (we can't do IndentationError yet
 >    *without* running it.
 > 2. Run the code and read the error message.
 >    What type of `NameError` do you think this is?
->    Is it a string with no quotes, a misspelled variable, or a variable that should have been defined but was not?
+>    Is it a string with no quotes, a misspelled variable, or a 
+>    variable that should have been defined but was not?
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >

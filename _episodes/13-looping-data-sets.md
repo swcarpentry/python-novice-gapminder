@@ -54,7 +54,8 @@ dtype: float64
     *   `*` meaning "match zero or more characters"
     *   `?` meaning "match exactly one character"
 *   Provided in Python by the `glob` library, which provides a function also called `glob`.
-*   E.g., `glob.glob('*.txt')` matches all files in the current directory whose names end with `.txt`.
+*   E.g., `glob.glob('*.txt')` matches all files in the current directory 
+    whose names end with `.txt`.
 *   Result is a (possibly empty) list of character strings.
 
 ~~~
