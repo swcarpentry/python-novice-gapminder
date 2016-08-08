@@ -492,6 +492,105 @@ print('new is', new, 'and old is', old)
 *   Exercises: 15 min
     *   Filter a list of files (a simple alternative to `glob`)
 
+> ## Tracing Execution
+>
+> Create a table showing the numbers of the lines that are executed when this program runs,
+> and the values of the variables after each line is executed.
+>
+> ~~~
+> total = 0
+> for char in "tin":
+>     total = total + 1
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Reversing a String
+>
+> Fill in the blanks in the program below so that it prints "nit"
+> (the reverse of the original character string "tin").
+>
+> ~~~
+> original = "tin"
+> result = ____
+> for char in original:
+>     result = ____
+> print(result)
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Practice Accumulating
+>
+> Fill in the blanks in each of the programs below
+> to produce the indicated result.
+>
+> ~~~
+> # Total length of the strings in the list: ["red", "green", "blue"] => 12
+> total = 0
+> for word in ["red", "green", "blue"]:
+>     ____ = ____ + len(word)
+> print(total)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # List of word lengths: ["red", "green", "blue"] => [3, 5, 4]
+> lengths = ____
+> for word in ["red", "green", "blue"]:
+>     lengths = lengths.____(____)
+> print(lengths)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # Concatenate all words: ["red", "green", "blue"] => "redgreenblue"
+> words = ["red", "green", "blue"]
+> result = ____
+> for ____ in ____:
+>     ____
+> print(result)
+> ~~~~
+> {: .python}
+>
+> ~~~
+> # Create acronym: ["red", "green", "blue"] => "RGB"
+> # write the whole thing
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Cumulative Sum
+>
+> Reorder and properly indent the lines of code below
+> so that they print an array with the cumulative sum of data.
+> The result should be `[1, 3, 5, 10]`.
+>
+> ~~~
+> cumulative += [sum]
+> for number in data:
+> cumulative = []
+> sum += number
+> print(cumulative)
+> data = [1,2,2,5]
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Indentation Errors
+>
+> What kind of error does Python report
+> when we try to run the following program?
+>
+> ~~~
+> for char in 'helium':
+> print char
+> ~~~
+> {: .python}
+>
+> Is this a syntax error or a runtime error?
+{: .challenge}
+
 ### Combining Ideas (11:50)
 
 *   Teaching: 5 min
