@@ -34,7 +34,7 @@ if mass > 3.0:
 ~~~
 {: .python}
 ~~~
-3.0 is large
+3.54 is large
 ~~~
 {: .output}
 

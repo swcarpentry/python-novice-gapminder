@@ -22,7 +22,7 @@ keypoints:
 
 *   Stack Overflow's [general Python section](http://stackoverflow.com/questions/tagged/python)
     can be helpful,
-    as can the sections on[NumPy](http://stackoverflow.com/questions/tagged/numpy),
+    as can the sections on [NumPy](http://stackoverflow.com/questions/tagged/numpy),
     [SciPy](http://stackoverflow.com/questions/tagged/scipy),
     [Pandas](http://stackoverflow.com/questions/tagged/pandas),
     and other topics.
