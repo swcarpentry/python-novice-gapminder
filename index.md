@@ -26,6 +26,9 @@ Please note that this lesson uses Python 3 rather than Python 2.
 >     what a working directory is
 >     and how to start a Python interpreter.
 >
-> 2. Learners must install Python
->    and download a set of CSV files before the class starts.
+> 2. Learners must install Python before the class starts.
+>
+> 3. Learners must download the gapminder data before class starts:
+>    please see [the setup instructions]({{ site.github.url }}/setup/))
+>    for details.
 {: .prereq}
