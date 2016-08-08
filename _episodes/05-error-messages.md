@@ -25,7 +25,7 @@ adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 
 ## Python reports a syntax error when it can't understand the source of a program.
 
-*   Won't even try to run the program if it can be parsed.
+*   Won't even try to run the program if it can't be parsed.
 
 ~~~
 # Forgot to close the quotation marks around the string.
