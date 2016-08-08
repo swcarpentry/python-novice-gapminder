@@ -6,7 +6,7 @@ questions:
 - "How can I create my own functions?"
 objectives:
 - "Explain and identify the difference between function definition and function call."
-- "Write a function that takes a small, fixed number of arguments and producing a single result."
+- "Write a function that takes a small, fixed number of arguments and produces a single result."
 - "Correctly identify local and global variable use in a function."
 - "Correctly identify portions of source code that will be displayed as online help, and in particular distinguish docstrings from comments."
 - "Write short docstrings for functions."

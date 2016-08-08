@@ -18,11 +18,12 @@ keypoints:
 ---
 ## Python programs are plain text files.
 
-*   They have the ".py" extension to let everyone know (including the operating system) 
-it is a Python program.
+*   They have the ".py" extension to let everyone (including the operating system) 
+    know it is a Python program.
+    *   This is convention, not a requirement.
 *   It's common to write them using a text editor but we are going to use the Jupyter Notebook.
 *   The bit of extra setup is well worth it because the Notebook provides code completion 
-and other helpful features.
+    and other helpful features.
 *   Notebook files have the extension ".ipynb" to distinguish them from plain-text Python programs.
 
 ## Use the Jupyter Notebook for editing and running Python.
@@ -79,13 +80,14 @@ FIXME: diagram
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press "esc" and "return" alternately, you will see the outer 
-    border of your code cell change from blue to green.
-    *   The difference in colour is subtle.
-*   These are the control (blue) and edit (green) modes of your notebook.
-*   If you use the "esc" and "return" keys to make the surround blue and 
-    then press the "H" key, a list of all the shortcut keys will appear.
-*   When in control mode (esc/blue),
+*   If you press "esc" and "return" alternately,
+    the outer border of your code cell will change from gray to green.
+    *   The difference in color is subtle.
+*   These are the control (gray) and edit (green) modes of your notebook.
+*   If you use the "esc" and "return" keys to make the surround gray
+    and then press the "H" key,
+    a list of all the shortcut keys will appear.
+*   When in control mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
@@ -112,11 +114,11 @@ FIXME: diagram
         and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
 *   Turn the current cell into a Markdown cell by entering 
-    the control mode (esc/blue) and press the "M" key.
-*   The `In [ ]:` will disappear to show it is no longer a 
-    code cell and you will be able to write in Markdown.
-*   Turn the current cell into a Code cell by entering the 
-    control mode (esc/blue) and press the "Y" key.
+    the control mode (esc/gray) and press the "M" key.
+*   `In [ ]:` will disappear to show it is no longer a code cell
+    and you will be able to write in Markdown.
+*   Turn the current cell into a Code cell
+    by entering the control mode (esc/gray) and press the "Y" key.
 
 ## Markdown does most of what HTML does.
 
@@ -229,7 +231,8 @@ Or use [named links][data_carpentry].
 
 > ## More Math
 >
-> What is displayed when a Python cell in a notebook that contains several calculations is executed?
+> What is displayed when a Python cell in a notebook
+> that contains several calculations is executed?
 > For example, what happens when this cell is executed?
 >
 > ~~~
@@ -241,7 +244,8 @@ Or use [named links][data_carpentry].
 
 > ## Change an Existing Cell from Code to Markdown
 >
-> What happens if you write some Python in a code cell and then you switch it to a Markdown cell?
+> What happens if you write some Python in a code cell
+> and then you switch it to a Markdown cell?
 > For example,
 > put the following in a code cell:
 >
