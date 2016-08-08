@@ -212,36 +212,31 @@ print(a)
 ~~~
 {: .python}
 
-*   Looking at pieces of a string: indexing
+*   Indexing a string
 
 ~~~
 print(a[0])
-print(a[1])
-print(a[2])
 print(a[-1])
-print(a[-2])
-print(a[-3])
 print(a[5:8])
-print(a[:4])
-print(a[-4:])
 ~~~
 {: .python}
 
 Q:  If you set `a = 123`, then what happens if you try to get the second digit?
 A:  Numbers are not stored in the written representation, so they can't be
     treated like strings.
+
 ~~~
 a = 123
 print(a[1])
 ~~~
 {: .python}
 
-*   Use meaningful names for variables.  For example, time
+*   Use meaningful names for variables.
 
 ~~~
 minutes = 3
 seconds = 12
-seconds = seconds + minutes*60
+seconds = seconds + minutes * 60
 print(seconds)
 ~~~
 {: .python}
