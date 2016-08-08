@@ -156,7 +156,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 {: .error}
 
 *   Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
-*   Use the name of a type as a function to convert a value to that type.
+*   Some types can be converted to other types by using the type name as a function.
 
 ~~~
 print(1 + int('2'))
@@ -190,7 +190,7 @@ three squared is 9.0
 *   If we make one cell in a spreadsheet depend on another,
     and update the latter,
     the former updates automatically.
-*   This does *not* happen in programming languages.
+*   This does **not** happen in programming languages.
 
 ~~~
 first = 1
@@ -292,7 +292,7 @@ first is 2 and second is 5
 > 6. `2.0 * second`
 >
 > > ## Solution
-> > Answer: A and D
+> > Answer: 1 and 4
 > {: .solution}
 {: .challenge}
 

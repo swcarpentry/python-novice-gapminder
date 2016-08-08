@@ -78,7 +78,7 @@ def average(values):
 ~~~
 def kelvin_to_celsius(k):
     assert k >= 0.0, 'Temperature in Kelvin cannot be negative'
-    return FIXME
+    return k - 273.15
 ~~~
 {: .python}
 
