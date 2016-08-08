@@ -103,4 +103,4 @@ $ python
 ~~~
 {: .source}
 
-[data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-gapminder-data.zip
+[data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-gapminder-data.zip?raw=true
