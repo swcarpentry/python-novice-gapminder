@@ -1,6 +1,6 @@
 ---
 title: "Programming Style"
-teaching: 10
+teaching: 15
 exercises: 15
 questions:
 - "How can I make my programs more readable?"
@@ -40,6 +40,10 @@ keypoints:
     no matter what language it's written in.
     Using Semantic Versioning makes it easy for other developers to understand
     what is guaranteed to stay the same and what might change across versions of your software.
+
+## Use assertions to check for internal errors.
+
+FIXME
 
 ## Use docstrings to provide online help.
 
