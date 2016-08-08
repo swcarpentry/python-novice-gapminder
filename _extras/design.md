@@ -3,8 +3,6 @@ layout: page
 title: "Lesson Design"
 permalink: /design/
 ---
-## Process Used
-
 > ## Help Wanted
 >
 > **We are filling in the exercises [below](#stage-3---learning-plan)
@@ -13,7 +11,12 @@ permalink: /design/
 > and comments on specific exercises, ordering, and timings) are greatly appreciated.**
 {: .callout}
 
-This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
+## Process Used
+
+This lesson is meant to be used in both [Data Carpentry][dc-website] and [Software Carpentry][swc-website] workshops.
+It's also meant to serve as a worked example in [instructor training][instructor-training] of how to develop a new lesson.
+To that end,
+the outline below was developed using a slimmed-down variant of the "Understanding by Design" process.
 The main sections are:
 
 1.  Assumptions about audience, time, etc.
@@ -31,7 +34,7 @@ The main sections are:
 
 *   Audience
     *   Graduate students in numerate disciplines from cosmology to archaeology
-    *   Who are sighted
+    *   Who understand very basic statistics (mean, standard deviation, correlation coefficient)
     *   And have manipulated data in spreadsheets and with interactive tools like SAS
     *   But have *not* programmed beyond CPD (copy-paste-despair)
 *   Constraints
@@ -52,6 +55,18 @@ The main sections are:
     *   Creating 2D plots suitable for inclusion in papers
     *   Appeals to almost everyone
     *   Makes lesson usable by both Carpentries
+*   Data
+    *   Use the gapminder data throughout
+    *   But break into multiple files by continent
+        *   To make display of output from examples tidier
+            (use Australia/New Zealand, which is only two lines)
+        *   And allow examples showing use of multiple data sets
+*   Focus on Pandas instead of NumPy
+    *   Genuine novices are likely to want data analysis
+    *   And people with some prior experience:
+        *   will accept data analysis as an authentic task
+        *   And are unlikely to have encountered Pandas,
+            so they'll still get something useful out of the lesson
 *   Exercises will mostly *not* be "write this code from scratch"
     *   Want lots of short exercises that can reliably be finished in allotted time
     *   So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
@@ -115,6 +130,7 @@ How do I...
 
 ## Stage 3 - Learning Plan
 
+<<<<<<< HEAD
 ### Running and Quitting Interactively (9:00)
 
 *   Teaching: 15 min (because setup issues)
@@ -461,3 +477,125 @@ print('new is', new, 'and old is', old)
 ### Wrapping Up: 10 min (15:50)
 
 ### Finish (16:00)
+=======
+The original step-by-step learning plan is included below.
+It has been superseded by the content of the actual episodes,
+but is included for reference.
+
+*   Running and Quitting Interactively (09:00)
+    *   Teaching: 15 min (because setup issues)
+    *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
+        *   Run the Notebook
+        *   Create a few Markdown cells
+        *   Create and execute a Python cell that prints 1+2
+*   Variables and Assignment (09:15)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
+        *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
+*   Data Types and Type Conversion (09:35)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Predict result types (or errors) of various operations
+        *   Add conversion functions to broken code to make it work
+*   Built-in Functions (and Methods) and Help (09:55)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Chain calculations with max and min
+        *   Find a useful method using help(str)
+        *   Parsons Problem to achieve specific results with string methods
+*   Error Messages (10:15)
+    *   Teaching: 10 min (review of error messages seen to date)
+    *   Exercises: 10 min
+        *   Diagnose and fix small errors (some syntax, some runtime)
+*   Coffee: 15 min (10:35)
+*   Libraries (Including Aliases) (10:50)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Operations with math library
+        *   Look things up in the python.org docs
+*   Pandas Data Frames (11:10)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Import Pandas
+        *   Create and display a data frame
+*   Reading Tabular Data (11:30)
+    *   Teaching: 5 min
+    *   Exercises: 5 min
+        *   Read one continent's subset of gapminder CSV data
+    *   Callout:
+        *   How to read data from Excel spreadsheets via export to CSV
+        *   How tor ead data from Excel spreadsheets directly (needs another library)
+*   Collective Operations (11:40)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Select various subsets of data
+        *   Normalize values (scale to 0..1)
+*   Lunch: 60 min (12:00)
+*   Plotting (13:00)
+    *   Teaching: 10 min (to show a variety of plots and debug display problems)
+    *   Exercises: 10 min
+        *   Plot normalized change in GDP over time (tweaking provided code)
+*   For Loops (13:20)
+    *   Teaching: 15 min (do *not* introduce lists)
+    *   Exercises: 10 min
+        *   Reverse a string by repeated append
+        *   Trace execution of loop
+*   Looping Over Data Sets (13:55)
+    *   Teaching: 10 min (use glob to get filenames)
+    *   Exercises: 15 min
+        *   Count rows of each data set
+        *   Check number of columns in each data set is the same
+*   Lists (14:20)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   Indexing exercises
+        *   Conversion from list to string and back
+        *   Sum values in a list
+*   Coffee: 15 min (14:40)
+*   Conditionals (15:05)
+    *   Teaching: 10 min (inside loop)
+    *   Exercises: 15 min
+        *   Count vowels
+        *   Report badly-sized files inside loop
+*   Writing Functions (15:30)
+    *   Teaching: 15 min
+    *   Exercises: 15 min
+        *   Check size of a single data file
+        *   Check sizes of all data files in a directory
+            *   Write new function using previous function
+*   Documentation (16:00)
+    *   Teaching: 5 min
+    *   Exercises: 10 min
+        *   Add docstrings to functions written earlier
+*   Programming Style (16:15)
+    *   Teaching: 10 min (mostly to introduce checklist)
+    *   Exercises: 15 min
+        *   Clean up badly-written 20-line program
+*   Debugging (16:40)
+    *   Teaching: 10 min (divide and conquer)
+    *   Exercises: 15 min
+        *   Debug three-function program
+*   Defensive Programming (17:05)
+    *   Teaching: 5 min
+    *   Exercises: 10 min
+        *   Add assertions to functions based on docstrings
+*   Programming with Arrays (17:20)
+    *   Teaching: 10 min
+    *   Exercises: 10 min
+        *   More complicated array indexing
+*   Wrap-Up (17:40)
+    *   Teaching: 15 min
+        *   Overview of key SciPy modules
+        *   How to find and install libraries
+        *   Running Python from the command line
+        *   Other editing tools
+    *   Exercises: 0 min
+*   Finish (17:55)
+
+[dc-website]: http://datacarpentry.org
+[gapminder-data]: http://www.gapminder.org/data/
+[good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
+[instructor-training]: https://swcarpentry.github.io/instructor-training/
+[swc-website]: http://software-carpentry.org
+>>>>>>> fb9ab5532d112674b1d202a7923c62703f968e17
