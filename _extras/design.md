@@ -124,6 +124,66 @@ How do I...
     *   Create a few Markdown cells
     *   Create and execute a Python cell that prints 1+2
 
+> ## Creating Lists in Markdown
+>
+> Create a nested list in a Markdown cell in a notebook that looks like this:
+>
+> 1.  Get funding.
+> 2.  Do work.
+>     *   Design experiment.
+>     *   Collect data.
+>     *   Analyze.
+> 3.  Write up.
+> 4.  Publish.
+{: .challenge}
+
+> ## More Math
+>
+> What is displayed when a Python cell in a notebook that contains several calculations is executed?
+> For example, what happens when this cell is executed?
+>
+> ~~~
+> 7 * 3
+> 2 + 1
+> ~~~
+> {: .source}
+{: .challenge}
+
+> ## Change an Existing Cell from Code to Markdown
+>
+> What happens if you write some Python in a code cell and then you switch it to a Markdown cell?
+> For example,
+> put the following in a code cell:
+>
+> ~~~
+> x = 6 * 7 + 12
+> print(x)
+> ~~~
+> {: .python}
+>
+> And then run it with shift+return to be sure that it works as a code cell.
+> Now go back to the cell and use escape+M to switch the cell to Markdown
+> and "run" it with shift+return.
+> What happened and how might this be useful?
+{: .challenge}
+
+> ## Mathematics
+>
+> Standard Markdown (such as we're using for these notes) won't render equations,
+> but the Notebook will.
+> Create a new Markdown cell
+> and enter the following:
+>
+> ~~~
+> $\Sigma_{i=1}^{N} 2^{-i} \approx 1$
+> ~~~
+> {: .source}
+>
+> (It's probably easier to copy and paste.)
+> What does it display?
+> What do you think the underscore `_`, circumflex `^`, and dollar sign `$` do?
+{: .challenge}
+
 ### Variables and Assignment (9:15)
 
 #### Teaching: 10 min
@@ -233,17 +293,71 @@ print(6.35 * 60)
     *   Read CSV data into array
     *   Calculate statistics on rows and columns
 
+Note: `data/asia_gdp_per_capita.csv` has been transposed so that
+all country names are in the header row
+and the years are in a column.
+This makes it easy to read with NumPy (see below),
+and also motivates the use of Pandas
+(which keeps all the information we have to throw away in this case).
+
+~~~
+import numpy as np
+
+data = np.readtxt('data/asia_gdp_per_capita.csv', delimiter=',', skiprows=1)
+~~~
+{: .python}
+
 ### Plotting Vectors (10:00)
 
 *   Teaching: 10 min
 *   Exercise: 10 min
-    *   Load single-column CSV and create plot
+    *   Load CSV and create plot
 
-### Plotting Time Series (10:20)
+### Error Messages (10:20)
 
 *   Teaching: 10 min
 *   Exercise: 10 min
-    *   Read and plot two-column data set (year and value)
+    *   Classify error messages
+
+> ## Identifying Syntax Errors
+>
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code and read the error message.
+>    Is it a `SyntaxError` or an `IndentationError`?
+> 3. Fix the error.
+> 4. Repeat steps 2 and 3 until you have fixed all the errors.
+>
+> ~~~
+> def another_function
+>   print("Syntax errors are annoying.")
+>    print("But at least python tells us about them!")
+>   print("So they are usually not too hard to fix.")
+> ~~~
+> {: .source}
+{: .challenge}
+
+> ## Identifying Variable Name Errors
+>
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code and read the error message.
+>    What type of `NameError` do you think this is?
+>    Is it a string with no quotes, a misspelled variable, or a variable that should have been defined but was not?
+> 3. Fix the error.
+> 4. Repeat steps 2 and 3, until you have fixed all the errors.
+>
+> ~~~
+> for number in range(10):
+>     # use a if the number is a multiple of 3, otherwise use b
+>     if (Number % 3) == 0:
+>         message = message + a
+>     else:
+>         message = message + "b"
+> print(message)
+> ~~~
+> {: .source}
+{: .challenge}
 
 ### Coffee: 15 min (10:40)
 
@@ -413,11 +527,124 @@ print('new is', new, 'and old is', old)
   </div>
 </div>
 
+> ## Identifying Item Errors
+>
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code, and read the error message. What type of error is it?
+> 3. Fix the error.
+>
+> ~~~
+> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+> print('My favorite season is ', seasons[4])
+> ~~~
+> {: .source}
+{: .challenge}
+
 ### Loops (11:20)
 
 *   Teaching: 15 min
 *   Exercises: 15 min
     *   Filter a list of files (a simple alternative to `glob`)
+
+> ## Tracing Execution
+>
+> Create a table showing the numbers of the lines that are executed when this program runs,
+> and the values of the variables after each line is executed.
+>
+> ~~~
+> total = 0
+> for char in "tin":
+>     total = total + 1
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Reversing a String
+>
+> Fill in the blanks in the program below so that it prints "nit"
+> (the reverse of the original character string "tin").
+>
+> ~~~
+> original = "tin"
+> result = ____
+> for char in original:
+>     result = ____
+> print(result)
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Practice Accumulating
+>
+> Fill in the blanks in each of the programs below
+> to produce the indicated result.
+>
+> ~~~
+> # Total length of the strings in the list: ["red", "green", "blue"] => 12
+> total = 0
+> for word in ["red", "green", "blue"]:
+>     ____ = ____ + len(word)
+> print(total)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # List of word lengths: ["red", "green", "blue"] => [3, 5, 4]
+> lengths = ____
+> for word in ["red", "green", "blue"]:
+>     lengths = lengths.____(____)
+> print(lengths)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # Concatenate all words: ["red", "green", "blue"] => "redgreenblue"
+> words = ["red", "green", "blue"]
+> result = ____
+> for ____ in ____:
+>     ____
+> print(result)
+> ~~~~
+> {: .python}
+>
+> ~~~
+> # Create acronym: ["red", "green", "blue"] => "RGB"
+> # write the whole thing
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Cumulative Sum
+>
+> Reorder and properly indent the lines of code below
+> so that they print an array with the cumulative sum of data.
+> The result should be `[1, 3, 5, 10]`.
+>
+> ~~~
+> cumulative += [sum]
+> for number in data:
+> cumulative = []
+> sum += number
+> print(cumulative)
+> data = [1,2,2,5]
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Indentation Errors
+>
+> What kind of error does Python report
+> when we try to run the following program?
+>
+> ~~~
+> for char in 'helium':
+> print char
+> ~~~
+> {: .python}
+>
+> Is this a syntax error or a runtime error?
+{: .challenge}
 
 ### Combining Ideas (11:50)
 
@@ -432,6 +659,41 @@ print('new is', new, 'and old is', old)
 *   Teaching: 20 min
 *   Exercises: 20 min
     *   Extract and encapsulate "plot this file"
+
+> ## Reading Error Messages
+>
+> Read the traceback below, and identify the following:
+>
+> 1. How many levels does the traceback have?
+> 2. What is the file name where the error occurred?
+> 3. What is the function name where the error occurred?
+> 4. On which line number in this function did the error occurr?
+> 5. What is the type of error?
+> 6. What is the error message?
+>
+> ~~~
+> ---------------------------------------------------------------------------
+> KeyError                                  Traceback (most recent call last)
+> <ipython-input-2-e4c4cbafeeb5> in <module>()
+>       1 import errors_02
+> ----> 2 errors_02.print_friday_message()
+>
+> /Users/ghopper/thesis/code/errors_02.py in print_friday_message()
+>      13
+>      14 def print_friday_message():
+> ---> 15     print_message("Friday")
+>
+> /Users/ghopper/thesis/code/errors_02.py in print_message(day)
+>       9         "sunday": "Aw, the weekend is almost over."
+>      10     }
+> ---> 11     print(messages[day])
+>      12
+>      13
+>
+> KeyError: 'Friday'
+> ~~~
+> {: .error}
+{: .challenge}
 
 ### Conditionals (13:50)
 
