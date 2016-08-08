@@ -179,7 +179,8 @@ gdpPercap_2007  34435.36744  25185.00911
 
 ## Use `DataFrame.describe` to get summary statistics about data.
 
-DataFrame.describe() gets the summary statistics of only the columns that have numerical data. All other columns are ignored.
+DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
+All other columns are ignored.
 ~~~
 print(data.describe())
 ~~~
