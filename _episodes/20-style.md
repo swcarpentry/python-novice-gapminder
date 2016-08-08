@@ -28,7 +28,8 @@ keypoints:
 *   [numpydoc](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt):
     a standard for API documentation through docstrings used by NumPy, SciPy,
     and many other Python scientific computing pacakges.
-    Adhering to numpydoc helps ensure that users and developers will know how to use your Python package,
+    Adhering to numpydoc helps ensure that users and developers 
+    will know how to use your Python package,
     either for their own analyses or as a component of their own Python packages.
     If you use numpydoc,
     you can also use existing tools such as [Sphinx](http://sphinx-doc.org/)
@@ -187,7 +188,8 @@ average(values)
 
 > ## Finding Neighbors
 >
-> This function is supposed to find the minimum value adjacent to (but not in) a specified location in an array.
+> This function is supposed to find the minimum value adjacent to 
+> (but not in) a specified location in an array.
 > For what inputs does it produce the wrong answer?
 > How can it be repaired?
 >

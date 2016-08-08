@@ -5,17 +5,20 @@ permalink: /design/
 ---
 ## Process Used
 
-This lesson is meant to be used in both [Data Carpentry][dc-website] and [Software Carpentry][swc-website] workshops.
-It's also meant to serve as a worked example in [instructor training][instructor-training] of how to develop a new lesson.
-To that end,
-the outline below was developed using a slimmed-down variant of the "Understanding by Design" process.
-The main sections are:
+This lesson is meant to be used in both [Data Carpentry][dc-website] and 
+[Software Carpentry][swc-website] workshops. It's also meant to serve as 
+a worked example in [instructor training][instructor-training] of how to 
+develop a new lesson. To that end, the outline below was developed using 
+a slimmed-down variant of the "Understanding by Design" process. The 
+main sections are:
 
 1.  Assumptions about audience, time, etc.
-    (The current draft also includes some conclusions and decisions in this section - that should be refactored.)
+    (The current draft also includes some conclusions and decisions in this 
+    section - that should be refactored.)
 
 2.  Desired results:
-    overall goals, summative assessments at half-day granularity, what learners will be able to do, what learners will know.
+    overall goals, summative assessments at half-day granularity, what learners 
+    will be able to do, what learners will know.
 
 3.  Learning plan:
     each episode has a heading that summarizes what will be covered,
@@ -30,7 +33,8 @@ While it looks like a waterfall process, in practice I did this:
 
 3.  Draft the desired results.
 
-4.  Update the learning milestones (still as just one bullet point each, no time estimates or exercises).
+4.  Update the learning milestones (still as just one bullet point each, 
+    no time estimates or exercises).
 
 5.  Get early feedback from four people.
 
@@ -39,24 +43,19 @@ While it looks like a waterfall process, in practice I did this:
 7.  Ask for feedback and start iterating (mostly to cut things).
 
 At the start of #7 above, the lesson needed 8.5 hours, versus a budget of 6.5.
-NumPy went,
-as did everything to do with running scripts from the command line and a bunch of other topics that are useful and important,
-but not *as* important as what's there.
-This was also the point at which I settled on using the Jupyter Notebook
-(I'd decided on the [Gapminder data][gapminder-data] at the outset to be consistent with [Data Carpentry][dc-website]).
-It took about six hours of work over several weeks to get to the point where I felt the lesson was ready for general feedback.
+NumPy went, as did everything to do with running scripts from the command line 
+and a bunch of other topics that are useful and important, but not *as* important 
+as what's there. This was also the point at which I settled on using the Jupyter 
+Notebook (I'd decided on the [Gapminder data][gapminder-data] at the outset to be 
+consistent with [Data Carpentry][dc-website]). It took about six hours of work over 
+several weeks to get to the point where I felt the lesson was ready for general feedback.
 
-I then solicited feedback from half a dozen experienced instructors.
-Based on what they said,
-I made further cuts
-in order to devote more (i.e., more realistic) time to basic topics.
-Defensive programming, debugging, and programming style were merged,
-which freed up another half an hour to spend on functions:
-these are the key to writing reusable programs,
-but defining vs. calling,
-parameter passing,
-variable scope,
-and the call stack all need time.
+I then solicited feedback from half a dozen experienced instructors. Based on what 
+they said, I made further cuts in order to devote more (i.e., more realistic) time 
+to basic topics. Defensive programming, debugging, and programming style were merged,
+which freed up another half an hour to spend on functions: these are the key to writing 
+reusable programs, but defining vs. calling, parameter passing, variable scope, and the 
+call stack all need time.
 
 ## Stage 1 - Assumptions
 
@@ -78,11 +77,13 @@ and the call stack all need time.
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
-        *   And means that even people who have seen a bit of Python before will probably learn something
+        *   And means that even people who have seen a bit of Python before 
+            will probably learn something
 *   Data
     *   Use the gapminder data throughout
     *   But break into multiple files by continent
-        *   To make display of output from examples tidier (use Australia/New Zealand, which is only two lines)
+        *   To make display of output from examples tidier (use Australia/New Zealand, 
+            which is only two lines)
         *   And allow examples showing use of multiple data sets
 *   Focus on Pandas instead of NumPy
     *   Makes lesson usable by both Data Carpentry and Software Carpentry
@@ -119,8 +120,10 @@ and the call stack all need time.
         6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
             *   This rule is *not* covered in this lesson
         7.  Commenting/uncommenting are not routinely used to control program behavior
-        8.  Use a simple example or test data set to run to tell if it's working at all and whether it gives a known correct output for a simple known input
-        9.  Submit code to a reputable DOI-issuing repository upon submission of paper, just like data
+        8.  Use a simple example or test data set to run to tell if it's working at all 
+            and whether it gives a known correct output for a simple known input
+        9.  Submit code to a reputable DOI-issuing repository upon submission of paper, 
+            just like data
             *   This rule is *not* covered in this lesson
 2.  Enable them to make sense of other onlines tutorials and resources
 
@@ -170,7 +173,8 @@ How do I...
     *   Modularity for readability as well as re-use
     *   No duplication
     *   Document purpose and use
-*   That there is no magic: the programs they use are no different in principle from those they build
+*   That there is no magic: the programs they use are no different 
+    in principle from those they build
 *   How to assign values to variables
 *   What integers, floats, strings, and data frames are
 *   How to trace the execution of a `for` loop
@@ -196,7 +200,8 @@ but is included for reference.
 *   Variables and Assignment (09:15)
     *   Teaching: 10 min
     *   Exercises: 10 min
-        *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) with an intermediate variable
+        *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) 
+            with an intermediate variable
         *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
 *   Data Types and Type Conversion (09:35)
     *   Teaching: 10 min

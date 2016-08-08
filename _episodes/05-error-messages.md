@@ -110,9 +110,8 @@ NameError: name 'aege' is not defined
 
 FIXME: diagram of where each type of error occurs.
 
-FIXME: this entire episode needs to move later (we can't do IndentationError yet, or talk about the tracebacks until we've written functions).
-
-FIXME: The 'Identifying Item Errors' section can be moved to later. The List data structure is not yet introduced.
+FIXME: this entire episode needs to move later (we can't do IndentationError yet, or 
+talk about the tracebacks until we've written functions).
 
 > ## Reading Error Messages
 >
@@ -173,7 +172,8 @@ FIXME: The 'Identifying Item Errors' section can be moved to later. The List dat
 >    *without* running it.
 > 2. Run the code and read the error message.
 >    What type of `NameError` do you think this is?
->    Is it a string with no quotes, a misspelled variable, or a variable that should have been defined but was not?
+>    Is it a string with no quotes, a misspelled variable, or a 
+>    variable that should have been defined but was not?
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
