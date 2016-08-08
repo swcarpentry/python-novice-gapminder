@@ -106,7 +106,7 @@ NameError: name 'aege' is not defined
 ~~~
 {: .error}
 
-## Fix syntax errors by reading the source code, and runtime errors by tracing the program's execution.
+## Fix syntax errors by reading the source and runtime errors by tracing execution.
 
 FIXME: diagram of where each type of error occurs.
 
