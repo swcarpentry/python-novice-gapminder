@@ -3,7 +3,6 @@ layout: page
 title: "Lesson Design"
 permalink: /design/
 ---
-## Process Used
 
 > ## Help Wanted
 >
@@ -12,6 +11,8 @@ permalink: /design/
 > Contributions (both in the form of pull requests with filled-in exercises,
 > and comments on specific exercises, ordering, and timings) are greatly appreciated.**
 {: .callout}
+
+## Process Used
 
 This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
 The main sections are:
