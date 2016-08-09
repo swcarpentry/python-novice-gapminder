@@ -73,7 +73,7 @@ SyntaxError: unexpected EOF while parsing
 ## Indentation is meaningful in Python.
 
 *   Python uses indentation to group sections of code together
-    (which we will discuss [later]({{ site.github.url }}/09-for-loops).
+    (which we will discuss [later]({{ site.github.url }}/09-for-loops)).
 *   If the indentation changes in a way that Python does not expect,
     it reports an `IndentationError`
     (which is a more specific kind of syntax error).
