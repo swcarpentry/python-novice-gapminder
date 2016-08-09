@@ -26,3 +26,5 @@ keypoints:
     [SciPy](http://stackoverflow.com/questions/tagged/scipy),
     [Pandas](http://stackoverflow.com/questions/tagged/pandas),
     and other topics.
+
+*   [PyCon](pycon.org/) is the largest annual conference for the Python community.
