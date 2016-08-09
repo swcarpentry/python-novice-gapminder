@@ -120,8 +120,8 @@ for p in primes:
     *   Exactly the legal indices of a list or character string of length N
 
 ~~~
-print('a range is not a list:', range(3))
-for number in range(3):
+print('a range is not a list: range(0, 3)')
+for number in range(0,3):
     print(number)
 ~~~
 {: .python}
