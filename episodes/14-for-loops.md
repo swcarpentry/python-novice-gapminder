@@ -12,7 +12,7 @@ keypoints:
 - "A *for loop* executes commands once for each value in a collection."
 - "The first line of the `for` loop must end with a colon, and the body must be indented."
 - "A `for` loop is made up of a collection, a loop variable, and a body."
-- "Loop variables can be called anything."
+- "Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable)."
 - "The body of a loop can contain many statements."
 - "Use `range` to iterate over a sequence of numbers."
 - "The Accumulator pattern turns many values into one."
@@ -120,8 +120,8 @@ for p in primes:
     *   Exactly the legal indices of a list or character string of length N
 
 ~~~
-print('a range is not a list:', range(3))
-for number in range(3):
+print('a range is not a list: range(0, 3)')
+for number in range(0,3):
     print(number)
 ~~~
 {: .python}
