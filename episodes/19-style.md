@@ -5,6 +5,7 @@ exercises: 15
 questions:
 - "How can I make my programs more readable?"
 - "How do most programmers format their code?"
+- "How can programs check their own operation?"
 objectives:
 - "Provide sound justifications for basic rules of coding style."
 - "Refactor one-page programs to make them more readable and justify the changes."
@@ -24,22 +25,6 @@ keypoints:
     and to understand what their contributions should look like.
     The [PEP8 application and Python library](https://pypi.python.org/pypi/pep8)
     can check your code for compliance with PEP8.
-
-*   [numpydoc](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt):
-    a standard for API documentation through docstrings used by NumPy, SciPy,
-    and many other Python scientific computing pacakges.
-    Adhering to numpydoc helps ensure that users and developers 
-    will know how to use your Python package,
-    either for their own analyses or as a component of their own Python packages.
-    If you use numpydoc,
-    you can also use existing tools such as [Sphinx](http://sphinx-doc.org/)
-    to automatically generate HTML documentation for your API.
-
-*   [Semantic Versioning](http://semver.org/):
-    a standard describing how to define versions of your software
-    no matter what language it's written in.
-    Using Semantic Versioning makes it easy for other developers to understand
-    what is guaranteed to stay the same and what might change across versions of your software.
 
 ## Use assertions to check for internal errors.
 

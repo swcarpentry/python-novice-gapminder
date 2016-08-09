@@ -1,6 +1,6 @@
 ---
 title: "Wrap-Up"
-teaching: 15
+teaching: 20
 exercises: 0
 questions:
 - "What have we learned?"

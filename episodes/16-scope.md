@@ -1,7 +1,7 @@
 ---
 title: "Variable Scope"
 teaching: 10
-exercises: 15
+exercises: 10
 questions:
 - "How do function calls actually work?"
 objectives:

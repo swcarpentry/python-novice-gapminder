@@ -1,7 +1,7 @@
 ---
 title: "Conditionals"
-teaching: 5
-exercises: 10
+teaching: 10
+exercises: 15
 questions:
 - "How can programs do different things for different data?"
 objectives:
