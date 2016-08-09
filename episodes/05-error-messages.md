@@ -7,7 +7,7 @@ questions:
 - "How can I identify errors when they occur?"
 objectives:
 - "Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message."
-- "Correctly describe situations in which SyntaxError, IndentationError, NameError, IndexError, and FileNotFoundError occur."
+- "Correctly describe situations in which SyntaxError, IndentationError, and NameError occur."
 keypoints:
 - "Use comments to add documentation to programs."
 - "Python reports a syntax error when it can't understand the source of a program."
