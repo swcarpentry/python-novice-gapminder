@@ -130,11 +130,13 @@ How do I...
 
 ### Running and Quitting Interactively (9:00)
 
-*   Teaching: 15 min (because setup issues)
-*   Exercises: 0 min (accounted for in teaching time - no separate exercise)
-    *   Run the Notebook
-    *   Create a few Markdown cells
-    *   Create and execute a Python cell that prints 1+2
+#### Teaching: 15 min (because setup issues)
+
+* Launch the Jupyter Notebook, create new notebooks, and exit the Notebook.
+* Create Markdown cells in a notebook.
+* Create and run Python cells in a notebook.
+
+#### Exercises: 0 min (accounted for in teaching time - no separate exercise)
 
 > ## Creating Lists in Markdown
 >
@@ -200,9 +202,8 @@ How do I...
 
 #### Teaching: 10 min
 
-*   Basic assignment of a value.
-*   What kind of thing is it?
-*   Can assign results of computation and use a variable on the right to assign to the left.
+* Write programs that assign scalar values to variables and perform calculations with those values.
+* Correctly trace value changes in programs that use scalar assignment.
 
 ~~~
 a = 3
@@ -317,38 +318,58 @@ print(6.35 * 60)
 ~~~
 {: .python}
 
-### NumPy Arrays (9:35)
+### Data Types and Type Conversion (09:35)
 
-*   Teaching: 15 min
+*   Teaching: 10 min
+
+* Explain key differences between integers and floating point numbers.
+* Explain key differences between numbers and character strings.
+* Use built-in functions to convert between integers, floating point numbers, and strings.
+
 *   Exercises: 10 min
-    *   Read CSV data into array
-    *   Calculate statistics on rows and columns
 
-Note: `data/asia_gdp_per_capita.csv` has been transposed so that
-all country names are in the header row
-and the years are in a column.
-This makes it easy to read with NumPy (see below),
-and also motivates the use of Pandas
-(which keeps all the information we have to throw away in this case).
+Q: What type of value (integer, floating point number, or character string)
+   would you use to represent each of the following?
+
+1. Number of days since the start of the year.
+2. Time elapsed since the start of the year.
+3. Serial number of a piece of lab equipment.
+
+Q: `float` will convert a string to a floating point number, and `int`
+   will convert a floating point number to an integer: Given that,
+   what do you expect this program to do?  What does it actually do?
+   Why do you think it does that?
+
+`print("fractional string to int:", int("3.4"))`
+
+### Built-in Functions and Help (09:55)
+
+#### Teaching: 10 min
+
+* Explain the purpose of functions.
+* Correctly call built-in Python functions.
+* Correctly nest calls to built-in functions.
+* Use help to display documentation for built-in functions.
+
+#### Exercises: 10 min
+
+Q: explain the order of operations in the second line below:
 
 ~~~
-import numpy as np
-
-data = np.readtxt('data/asia_gdp_per_capita.csv', delimiter=',', skiprows=1)
+radiance = 1.0
+radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 ~~~
-{: .python}
 
-### Plotting Vectors (10:00)
+Q: Why don't `max` and `min` return `None` when they are given no arguments?
 
-*   Teaching: 10 min
-*   Exercise: 10 min
-    *   Load CSV and create plot
+### Error Messages (10:15)
 
-### Error Messages (10:20)
+#### Teaching: 5 min
 
-*   Teaching: 10 min
-*   Exercise: 10 min
-    *   Classify error messages
+* Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message.
+* Correctly describe situations in which SyntaxError, IndentationError, and NameError occur.
+
+#### Exercise: 10 min
 
 > ## Identifying Syntax Errors
 >
@@ -368,29 +389,113 @@ data = np.readtxt('data/asia_gdp_per_capita.csv', delimiter=',', skiprows=1)
 > {: .source}
 {: .challenge}
 
-> ## Identifying Variable Name Errors
+### Coffee: 15 min (10:30)
+
+### Libraries (Including Aliases) (10:50)
+
+*   Teaching: 10 min
+*   Exercises: 10 min
+
+> ## Exploring the Math Library
 >
-> 1. Read the code below and try to identify what the errors are
->    *without* running it.
-> 2. Run the code and read the error message.
->    What type of `NameError` do you think this is?
->    Is it a string with no quotes, a misspelled variable, or a variable that should have been defined but was not?
-> 3. Fix the error.
-> 4. Repeat steps 2 and 3, until you have fixed all the errors.
+> 1. What function from the `math` library can you use to calculate a square root
+>    *without* using `sqrt`?
+> 2. Since the library contains this function, why does `sqrt` exist?
+{: .challenge}
+
+> ## Importing With Aliases
+>
+> 1. Fill in the blanks so that the program below prints `90.0`.
+> 2. Rewrite the program so that it uses `import` *without* `as`.
+> 3. Which form do you find easier to read?
 >
 > ~~~
-> for number in range(10):
->     # use a if the number is a multiple of 3, otherwise use b
->     if (Number % 3) == 0:
->         message = message + a
->     else:
->         message = message + "b"
-> print(message)
+> import math as m
+> angle = ____.degrees(____.pi / 2)
+> print(____)
 > ~~~
 > {: .source}
 {: .challenge}
 
-### Coffee: 15 min (10:40)
+### Reading Tabular Data (11:10)
+
+#### Teaching: 5 min
+
+#### Exercises: 10 min
+
+> ## Reading Other Data
+>
+> Read the data in `gapminder_gdp_americas.csv`
+> (which should be in the same directory as `gapminder_gdp_oceania.csv`)
+> into a variable called `americas`
+> and display its summary statistics.
+{: .challenge}
+
+> ## Inspecting Data.
+>
+> After reading the data for the Americas,
+> use `help(americas.head)` and `help(americas.tail)`
+> to find out what `DataFrame.head` and `DataFrame.tail` do.
+>
+> 1.  What method call will display the first three rows of this data?
+> 2.  What method call will display the last three columns of this data?
+>     (Hint: you may need to change your view of the data.)
+{: .challenge}
+
+### Data Frames (11:25)
+
+#### Teaching: 15 min
+
+#### Exercises: 15 min
+
+Q: Write an expression to find the Per Capita GDP of Serbia in 2007.
+
+Do the two statements below produce the same output?
+Based on this,
+what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+
+~~~
+print(data.ix[0:2, 0:2])
+print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+~~~
+{: .python}
+
+> ## Practice with Selection
+>
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
+> Write an expression to select each of the following:
+>
+> 1.  GDP per capita for all countries in 1982.
+> 2.  GDP per capita for Denmark for all years.
+> 3.  GDP per capita for all countries for years *after* 1985.
+> 4.  GDP per capita for each country in 2007 as a multiple of 
+>     GDP per capita for that country in 1952.
+{: .challenge}
+
+### Plotting (10:00)
+
+#### Teaching: 15 min
+
+#### Exercise: 15 min
+
+> ## Minima and Maxima
+>
+> Fill in the blanks below to plot the minimum GDP per capita over time
+> for all the countries in Europe.
+> Modify it again to plot the maximum GDP per capita over time for Europe.
+>
+> ~~~
+> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv')
+> data_europe.____.plot(label='min')
+> data_europe.____
+> plt.legend(loc='best')
+> ~~~
+> {: .python}
+{: .challenge}
+
+### Wrap-Up
+
+### Lunch
 
 ### Lists (10:55)
 
@@ -488,23 +593,53 @@ type(files)
 
 #### Exercises: 10 min
 
-Q: Given what we saw earlier about indexing NumPy arrays,
-   what do you expect these two expressions do?
+> ## Slicing
+>
+> What does the following program print?
+>
+> ~~~
+> element = 'carbon'
+> print('element[1:3] is:', element[1:3])
+> ~~~
+> {: .python}
+> ~~~
+> element[1:3] is: ar
+> ~~~
+> {: .output}
+>
+> 1.  What does `thing[low:high]` do?
+> 2.  What does `thing[low:]` (without a value after the colon) do?
+> 3.  What does `thing[:high]` (without a value before the colon) do?
+> 4.  What does `thing[:]` (just a colon) do?
+{: .challenge}
 
-1.  `continents[:2]`
-2.  `continents[1:]`
+> ## Fill in the Blanks
+>
+> Fill in the blanks so that the program below produces the output shown.
+>
+> ~~~
+> values = ____
+> values.____(1)
+> values.____(3)
+> values.____(5)
+> print('first time:', values)
+> values = values[____]
+> print('second time:', values)
+> ~~~
+> {: .python}
+>
+> ~~~
+> first time: [1, 3, 5]
+> second time: [3, 5]
+> ~~~
+> {: .output}
+{: .challenge}
 
-Q: How would you get a list of all CSV files in the `data` directory?
-   What would your answer produce if the `data` directory was empty?
-
-A:
-
-1.  `glob.glob('data/*.csv')`
-2.  An empty list.
-
-Q: Write a single expression to produce the number of CSV files in the `data` directory.
-
-A: `len(glob.glob('data/*.csv'))`
+> ## How Large is a Slice?
+>
+> If 'low' and 'high' are both non-negative integers,
+> how long is the list `values[low:high]`?
+{: .challenge}
 
 Q: What does program A print?
    What does program B print?
@@ -574,9 +709,9 @@ print('new is', new, 'and old is', old)
 
 ### Loops (11:20)
 
-*   Teaching: 15 min
-*   Exercises: 15 min
-    *   Filter a list of files (a simple alternative to `glob`)
+#### Teaching: 10 min
+
+#### Exercises: 15 min
 
 > ## Tracing Execution
 >
@@ -677,81 +812,170 @@ print('new is', new, 'and old is', old)
 > Is this a syntax error or a runtime error?
 {: .challenge}
 
-### Combining Ideas (11:50)
+### Looping Over Data Sets
 
-*   Teaching: 5 min
-*   Exercise: 15 min
-    *   Produce one plot for each data file in a directory
+#### Teaching: 5 min
 
-### Lunch: 60 min (12:10)
+#### Exercise: 10 min
+
+
+> ## Determining Matches
+>
+> Which of these files is *not* matched by the expression `glob.glob('data/*as*.csv')`?
+>
+> 1. `data/gapminder_gdp_africa.csv`
+> 2. `data/gapminder_gdp_americas.csv`
+> 3. `data/gapminder_gdp_asia.csv`
+> 4. 1 and 2 are not matched.
+{: .challenge}
+
+> ## Maximum File Size
+>
+> Modify this program so that it prints the number of records in
+> the file that has the fewest records.
+>
+> ~~~
+> fewest = ____
+> for filename in glob.glob('data/*.csv'):
+>     fewest = ____
+> print('smallest file has', fewest, 'records')
+> ~~~
+> {: .source}
+{: .challenge}
+
+> ## Comparing Data
+>
+> Write a short program that reads in the regional data sets
+> and plots the average GDP per capita for each region over time
+> in a single chart.
+{: .challenge}
 
 ### Writing Functions (13:10)
 
-*   Teaching: 20 min
-*   Exercises: 20 min
-    *   Extract and encapsulate "plot this file"
+#### Teaching: 10 min
 
-> ## Reading Error Messages
+#### Exercises: 15 min
+
+> ## Encapsulation
 >
-> Read the traceback below, and identify the following:
->
-> 1. How many levels does the traceback have?
-> 2. What is the file name where the error occurred?
-> 3. What is the function name where the error occurred?
-> 4. On which line number in this function did the error occurr?
-> 5. What is the type of error?
-> 6. What is the error message?
+> Fill in the blanks to create a function that takes a single filename as an argument,
+> loads the data in the file named by the argument,
+> and returns the minimum value in that data.
 >
 > ~~~
-> ---------------------------------------------------------------------------
-> KeyError                                  Traceback (most recent call last)
-> <ipython-input-2-e4c4cbafeeb5> in <module>()
->       1 import errors_02
-> ----> 2 errors_02.print_friday_message()
+> import pandas
 >
-> /Users/ghopper/thesis/code/errors_02.py in print_friday_message()
->      13
->      14 def print_friday_message():
-> ---> 15     print_message("Friday")
->
-> /Users/ghopper/thesis/code/errors_02.py in print_message(day)
->       9         "sunday": "Aw, the weekend is almost over."
->      10     }
-> ---> 11     print(messages[day])
->      12
->      13
->
-> KeyError: 'Friday'
+> def min_in_data(____):
+>     data = ____
+>     return ____
 > ~~~
-> {: .error}
+> {: .source}
 {: .challenge}
+
+> ## Find the First
+>
+> Fill in the blanks to create a function that takes a list of numbers as an argument
+> and returns the first negative value in the list.
+> What does your function do if the list is empty?
+>
+> ~~~
+> def first_negative(values):
+>     for v in ____:
+>         if ____:
+>             return ____
+> ~~~
+> {: .python}
+{: .challenge}
+
+### Scope
+
+#### Teaching: 10 min
+
+#### Exercises: 15 min
+
+> ## Local and Global Variable Use
+>
+> Trace the values of all variables in this program as it is executed.
+> (Use '---' as the value of variables before and after they exist.)
+>
+> ~~~
+> limit = 100
+>
+> def clip(value):
+>     return min(max(0.0, value), limit)
+>
+> value = -22.5
+> print(clip(value))
+> ~~~
+> {: .source}
+{: .challenge}
+
+### Coffee
 
 ### Conditionals (13:50)
 
-*   Teaching: 10 min
-*   Exercises: 15 min
-    *   Plot average if more than N records
+#### Teaching: 5 min
+
+#### Exercises: 10 min
+
+> ## Tracing Execution
+>
+> What does this program print?
+>
+> ~~~
+> pressure = 71.9
+> if pressure 50.0:
+>     pressure = 25.0
+> elif pressure <= 50.0:
+>     pressure = 0.0
+> print(pressure)
+> ~~~
+> {: .source}
+{: .challenge}
+
+> ## Processing Small Files
+>
+> Modify this program so that it only processes files with fewer than 50 records.
+>
+> ~~~
+> import glob
+> import pandas
+> for filename in glob.glob('data/*.csv'):
+>     contents = pandas.read_csv(filename)
+>     ____:
+>         print(filename, len(contents))
+> ~~~
+> {: .source}
+{: .challenge}
 
 ### Coffee: 15 min (14:15)
 
 ### Programming Style (14:30)
 
-*   Teaching: 10 min
-*   Exercises: 10 min
-    *   Add docstrings to functions written earlier
+#### Teaching: 15 min
 
-### Data Frames (14:50)
+#### Exercises: 15 min
 
-*   Teaching: 15 min
-*   Exercises: 15 min
-    *   Read more complex data set and calculate statistics
+> ## Document This
+>
+> Turn the comment on the following function into a docstring
+> and check that `help` displays it properly.
+>
+> ~~~
+> def middle(a, b, c):
+>     # Return the middle value of three.
+>     # Assumes the values can actually be compared.
+>     values = [a, b, c]
+>     values.sort()
+>     return values[1]
+> ~~~
+> {: .source}
+{: .challenge}
 
-### Plotting Data Frames (15:20)
+### Wrap-Up
 
-*   Teaching: 15 min
-*   Exercises: 15 min
-    *   Plot time series data from complex data set
+#### Teaching: 15 min
 
-### Wrapping Up: 10 min (15:50)
+#### Exercises: 0 min
 
 ### Finish (16:00)

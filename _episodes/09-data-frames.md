@@ -264,7 +264,7 @@ max      13450.401510    16361.876470    18965.055510
 > {: .python}
 {: .challenge}
 
-> ## Practice with Selection.
+> ## Practice with Selection
 >
 > Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
 > Write an expression to select each of the following:
