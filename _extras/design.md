@@ -393,8 +393,13 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 
 ### Libraries (Including Aliases) (10:50)
 
-*   Teaching: 10 min
-*   Exercises: 10 min
+#### Teaching: 10 min
+
+* Explain what software libraries are and why programmers create and use them.
+* Write programs that import and use libraries from Python's standard library.
+* Find and read documentation for standard libraries interactively (in the interpreter) and online.
+
+#### Exercises: 10 min
 
 > ## Exploring the Math Library
 >
@@ -421,6 +426,10 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 
 #### Teaching: 5 min
 
+* Import the Pandas library.
+* Use Pandas to load a simple CSV data set.
+* Get some basic information about a Pandas Data frame.
+
 #### Exercises: 10 min
 
 > ## Reading Other Data
@@ -445,6 +454,11 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 ### Data Frames (11:25)
 
 #### Teaching: 15 min
+
+* Select individual values from a Pandas data frame.
+* Select entire rows or entire columns from a data frame.
+* Select a subset of both rows and columns from a data frame in a single operation.
+* Select a subset of a data frame by a single Boolean criterion.
 
 #### Exercises: 15 min
 
@@ -472,11 +486,14 @@ print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 >     GDP per capita for that country in 1952.
 {: .challenge}
 
-### Plotting (10:00)
+### Plotting (11:55)
 
-#### Teaching: 15 min
+#### Teaching: 10 min
 
-#### Exercise: 15 min
+- "Create a time series plot showing a single data set."
+- "Create a scatter plot showing relationship between two data sets."
+
+#### Exercise: 10 min
 
 > ## Minima and Maxima
 >
@@ -493,11 +510,9 @@ print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > {: .python}
 {: .challenge}
 
-### Wrap-Up
+### Lunch (12:15): 45 min
 
-### Lunch
-
-### Lists (10:55)
+### Lists (13:00)
 
 #### Teaching: 15 min
 
