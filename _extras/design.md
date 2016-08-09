@@ -37,9 +37,9 @@ The main sections are:
     *   Who have manipulated data in spreadsheets and with interactive tools like SAS
     *   But have *not* programmed beyond CPD (copy-paste-despair)
 *   Constraints
-    *   One full day 09:00-17:00
-        *   06:30 teaching time
-        *   1:00 for lunch
+    *   One full day 09:00-16:30
+        *   06:15 class time
+        *   0:45 lunch
         *   0:30 total for two coffee breaks
     *   Learners use native installs on their own machines
         *   May use VMs or cloud resources at instructor's discretion
@@ -391,7 +391,7 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 
 ### Coffee: 15 min (10:30)
 
-### Libraries (Including Aliases) (10:50)
+### Libraries (Including Aliases) (10:45)
 
 #### Teaching: 10 min
 
@@ -422,7 +422,7 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 > {: .source}
 {: .challenge}
 
-### Reading Tabular Data (11:10)
+### Reading Tabular Data (11:05)
 
 #### Teaching: 5 min
 
@@ -451,7 +451,7 @@ Q: Why don't `max` and `min` return `None` when they are given no arguments?
 >     (Hint: you may need to change your view of the data.)
 {: .challenge}
 
-### Data Frames (11:25)
+### Data Frames (11:20)
 
 #### Teaching: 15 min
 
@@ -486,14 +486,14 @@ print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 >     GDP per capita for that country in 1952.
 {: .challenge}
 
-### Plotting (11:55)
+### Plotting (11:50)
 
 #### Teaching: 10 min
 
 - "Create a time series plot showing a single data set."
 - "Create a scatter plot showing relationship between two data sets."
 
-#### Exercise: 10 min
+#### Exercise: 15 min
 
 > ## Minima and Maxima
 >
@@ -512,13 +512,12 @@ print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 
 ### Lunch (12:15): 45 min
 
-### Lists (13:00)
+### Lists and Indexing (13:00)
 
-#### Teaching: 15 min
+#### Teaching: 10 min
 
-*   A list is a collection of values.
-*   Can be strings, numbers, or a mix.
-*   Written inside `[]` with values separated by `,`.
+* Explain why programs need collections of values.
+* Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
 
 ~~~
 continents = ['Africa', 'Europe']
@@ -722,9 +721,13 @@ print('new is', new, 'and old is', old)
 > {: .source}
 {: .challenge}
 
-### Loops (11:20)
+### Loops (13:20)
 
 #### Teaching: 10 min
+
+* Explain what for loops are normally used for.
+* Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
+* Write for loops that use the Accumulator pattern to aggregate values.
 
 #### Exercises: 15 min
 
@@ -827,12 +830,15 @@ print('new is', new, 'and old is', old)
 > Is this a syntax error or a runtime error?
 {: .challenge}
 
-### Looping Over Data Sets
+### Looping Over Data Sets (13:45)
 
 #### Teaching: 5 min
 
-#### Exercise: 10 min
+* Be able to read and write globbing expressions that match sets of files.
+* Use glob to create lists of files.
+* Write for loops to perform operations on files given their names in a list.
 
+#### Exercise: 10 min
 
 > ## Determining Matches
 >
@@ -865,9 +871,12 @@ print('new is', new, 'and old is', old)
 > in a single chart.
 {: .challenge}
 
-### Writing Functions (13:10)
+### Writing Functions (14:00)
 
 #### Teaching: 10 min
+
+* Explain and identify the difference between function definition and function call.
+* Write a function that takes a small, fixed number of arguments and produces a single result.
 
 #### Exercises: 15 min
 
@@ -902,11 +911,14 @@ print('new is', new, 'and old is', old)
 > {: .python}
 {: .challenge}
 
-### Scope
+### Variable Scope (14:25)
 
 #### Teaching: 10 min
 
-#### Exercises: 15 min
+* Identify local and global variables.
+* Identify parameters as local variables.
+
+#### Exercises: 10 min
 
 > ## Local and Global Variable Use
 >
@@ -925,13 +937,16 @@ print('new is', new, 'and old is', old)
 > {: .source}
 {: .challenge}
 
-### Coffee
+### Coffee (14:45): 15 min
 
-### Conditionals (13:50)
+### Conditionals (15:00)
 
-#### Teaching: 5 min
+#### Teaching: 10 min
 
-#### Exercises: 10 min
+* Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
+* Trace the execution of unnested conditionals and conditionals inside loops.
+
+#### Exercises: 15 min
 
 > ## Tracing Execution
 >
@@ -963,11 +978,13 @@ print('new is', new, 'and old is', old)
 > {: .source}
 {: .challenge}
 
-### Coffee: 15 min (14:15)
-
-### Programming Style (14:30)
+### Programming Style (15:25)
 
 #### Teaching: 15 min
+
+* How can I make my programs more readable?
+* How do most programmers format their code?
+* How can programs check their own operation?
 
 #### Exercises: 15 min
 
@@ -987,10 +1004,19 @@ print('new is', new, 'and old is', old)
 > {: .source}
 {: .challenge}
 
-### Wrap-Up
+### Wrap-Up (15:55)
 
-#### Teaching: 15 min
+#### Teaching: 20 min
+
+- "What have we learned?"
+- "What else is out there and where do I find it?"
 
 #### Exercises: 0 min
 
-### Finish (16:00)
+### Feedback (16:15)
+
+#### Teaching: 00 min
+
+#### Exercises: 15 min
+
+### Finish (16:30)
