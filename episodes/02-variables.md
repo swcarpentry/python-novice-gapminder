@@ -12,9 +12,12 @@ keypoints:
 - "Use `print` to display values."
 - "Variables persist between cells."
 - "Variables must be created before they are used."
+- "Variables can be used in calculations."
+- "Use an index to get a single character from a string."
+- "Use a slice to get a substring."
+- "Use the built-in function `len` to find the length of a string."
 - "Python is case-sensitive."
 - "Use meaningful variable names."
-- "Variables can be used in calculations."
 ---
 ## Use variables to store values.
 
@@ -88,6 +91,67 @@ NameError: name 'last_name' is not defined
 *   The last line of an error message is usually the most informative.
 *   We will look at error messages in detail [later]({{ site.github.url }}/05-error-messages/).
 
+## Variables can be used in calculations.
+
+*   We can use variables in calculations just as if they were values.
+    *   Remember, we assigned 42 to `age` a few lines ago.
+
+~~~
+age = age + 3
+print('Age in three years:', age)
+~~~
+{: .python}
+~~~
+Age in three years: 45
+~~~
+{: .output}
+
+## Use an index to get a single character from a string.
+
+*   Sometimes called a "subscript".
+*   Each character in a string is in a particular location.
+*   Use the location's index in square brackets to get the character.
+*   Locations are numbered from 0 rather than 1.
+
+~~~
+element = 'helium'
+print(element[0])
+~~~
+{: .python}
+~~~
+h
+~~~
+{: .output}
+
+## Use a slice to get a substring.
+
+*   A slice consists of `[low:high]`.
+*   From the lower bound (inclusive) up to but not including the upper bound (exclusive).
+*   So upper-lower is the slice's length.
+
+~~~
+element = 'sodium'
+print(element[0:3])
+~~~
+{: .python}
+~~~
+sod
+~~~
+{: .output}
+
+## Use the built-in function `len` to find the length of a string.
+
+~~~
+element = 'helium'
+print(len(helium))
+~~~
+{: .python}
+
+*   Nested functions are evaluated from the inside out,
+    just like in mathematics.
+
+FIXME: need to introduce slices
+
 ## Python is case-sensitive.
 
 *   Python thinks that upper- and lower-case letters are different,
@@ -109,21 +173,6 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 *   Use meaningful variable names to help other people understand what the program does.
 *   The most important "other person" is your future self.
-
-## Variables can be used in calculations.
-
-*   We can use variables in calculations just as if they were values.
-    *   Remember, we assigned 42 to `age` a few lines ago.
-
-~~~
-age = age + 3
-print('Age in three years:', age)
-~~~
-{: .python}
-~~~
-Age in three years: 45
-~~~
-{: .output}
 
 > ## Swapping Values
 >
@@ -153,4 +202,63 @@ Age in three years: 45
 > initial = "right"
 > ~~~
 > {: .source}
+{: .challenge}
+
+> ## Challenge
+>
+> If you assign `a = 123`,
+> what happens if you try to get the second digit of `a`?
+>
+> > ## Solution
+> > Numbers are not stored in the written representation,
+> > so they can't be treated like strings.
+> >
+> > ~~~
+> > a = 123
+> > print(a[1])
+> > ~~~
+> > {: .python}
+> > ~~~
+> > TypeError: 'int' object is not subscriptable
+> > ~~~
+> > {: .error}
+> {: .solution}
+{: .challenge}
+
+> ## Choosing a Name
+>
+> Which is a better variable name, `m`, `min`, or `minutes`?
+> Why?
+> Hint: think about which code you would rather inherit
+> from someone who is leaving the lab:
+>
+> 1. `ts = m * 60 + s`
+> 2. `tot_sec = min * 60 + sec`
+> 3. `total_seconds = minutes * 60 + seconds`
+>
+> > ## Solution
+> >
+> > `minutes` is better because `min` might mean something like "minimum"
+> > (and actually does in Python, but we haven't seen that yet).
+> {: .solution}
+{: .challenge}
+
+> ## Slicing
+>
+> What does the following program print?
+>
+> ~~~
+> element = 'carbon'
+> print('element[1:3] is:', element[1:3])
+> ~~~
+> {: .python}
+> ~~~
+> element[1:3] is: ar
+> ~~~
+> {: .output}
+>
+> 1.  What does `thing[low:high]` do?
+> 2.  What does `thing[low:]` (without a value after the colon) do?
+> 3.  What does `thing[:high]` (without a value before the colon) do?
+> 4.  What does `thing[:]` (just a colon) do?
 {: .challenge}

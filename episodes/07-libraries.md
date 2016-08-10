@@ -121,23 +121,22 @@ cos(pi) is -1.0
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
-> ## Locating the Right Library
->
-> You want to select a random value from your data:
-> ~~~
-> ids = [1, 2, 3, 4, 5, 6]
-> ~~~
->
-> 1. What [standard library][stdlib]
->    would you most expect to help?
-> 2. Which function would you select from that library? Are there alternatives?
-{: .challenge}
-
 > ## Exploring the Math Library
 >
 > 1. What function from the `math` library can you use to calculate a square root
 >    *without* using `sqrt`?
 > 2. Since the library contains this function, why does `sqrt` exist?
+{: .challenge}
+
+> ## Locating the Right Library
+>
+> You want to select a random character from a string:
+> ~~~
+> bases = 'ACTTGCTTGAC'
+> ~~~
+>
+> 1. What [standard library][stdlib] would you most expect to help?
+> 2. Which function would you select from that library? Are there alternatives?
 {: .challenge}
 
 > ## When Is Help Available?

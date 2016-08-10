@@ -141,6 +141,26 @@ result of call is: None
 > print('calling', report, 22.5)
 {: .challenge}
 
+> ## Order of Operations
+>
+> The example above:
+>
+> ~~~
+> result = print_date(1871, 3, 19)
+> print('result of call is:', result)
+> ~~~
+> {: .python}
+>
+> printed:
+> ~~~
+> 1871/3/19
+> result of call is: None
+> ~~~
+> {: .output}
+>
+> Explain why the two lines of output appeared in the order they did.
+{: .challenge}
+
 > ## Encapsulation
 >
 > Fill in the blanks to create a function that takes a single filename as an argument,
@@ -170,26 +190,6 @@ result of call is: None
 >             return ____
 > ~~~
 > {: .python}
-{: .challenge}
-
-> ## Order of Operations
->
-> The example above:
->
-> ~~~
-> result = print_date(1871, 3, 19)
-> print('result of call is:', result)
-> ~~~
-> {: .python}
->
-> printed:
-> ~~~
-> 1871/3/19
-> result of call is: None
-> ~~~
-> {: .output}
->
-> Explain why the two lines of output appeared in the order they did.
 {: .challenge}
 
 > ## Calling by Name

@@ -261,7 +261,7 @@ Or use [named links][data_carpentry].
 > What happened and how might this be useful?
 {: .challenge}
 
-> ## Mathematics
+> ## Equations
 >
 > Standard Markdown (such as we're using for these notes) won't render equations,
 > but the Notebook will.
