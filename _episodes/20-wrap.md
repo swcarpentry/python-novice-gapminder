@@ -21,7 +21,10 @@ turn out to be anything but when we have to explain them precisely.
 *   The [Python 3 documentation](https://docs.python.org/3/) covers the core language
     and the standard library.
 
+*   [PyCon](pycon.org/) is the largest annual conference for the Python community.
+
 *   [SciPy](scipy.org) is a rich collection of scientific utilities.
+    It is also the name of [a series of annual conferences](https://conference.scipy.org/).
 
 *   [Jupyter](jupyter.org) is the home of the Jupyter Notebook.
 
@@ -33,5 +36,3 @@ turn out to be anything but when we have to explain them precisely.
     [SciPy](http://stackoverflow.com/questions/tagged/scipy),
     [Pandas](http://stackoverflow.com/questions/tagged/pandas),
     and other topics.
-
-*   [PyCon](pycon.org/) is the largest annual conference for the Python community.
