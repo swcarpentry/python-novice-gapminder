@@ -144,64 +144,36 @@ average(values)
 > ~~~
 > {: .source}
 >
-> Here's one solution.
->
-> ~~~
-> def string_machine(input_string, iterations):
->     """
->     Takes input_string and generates a new string with -'s and *'s
->     corresponding to characters that have identical adjacent characters
->     or not, respectively.  Iterates through this procedure with the resultant
->     strings for the supplied number of iterations.
->     """
->     print(input_string)
->     old = input_string
->     for i in range(iterations):
->         new = ''
->         # iterate through characters in previous string
->         for j in range(len(s)):
->             left = j-1
->             right = (j+1)%len(s) # ensure right index wraps around
->             if old[left]==old[right]:
->                 new += '-'
->             else:
->                 new += '*'
->         print(new)
->         # store new string as old
->         old = new
->
-> string_machine('et cetera', 10)
-> ~~~
-> {: .source}
-{: .challenge}
-
-> ## Finding Neighbors
->
-> This function is supposed to find the minimum value adjacent to 
-> (but not in) a specified location in an array.
-> For what inputs does it produce the wrong answer?
-> How can it be repaired?
->
-> ~~~
-> def any_negative_neighbors(array, i, j, use_diagonals):
->     '''
->     Return True if any neighbors of (i,j) are negative, or False if none are.
->     Only check diagonal neighbors if use_diagonals is True.
->     '''
->
->     width, height = array.shape
->
->     if i > 0 and array[i-1, j] < 0: return True
->     if i < width and array[i+1, j] < 0: return True
->     if j > 0 and array[i, i-1] < 0: return True
->     if j < width and array[i, j+1] < 0: return True
->
->     if not use_diagonals: return False
->
->     if i > 0 and j > 0 and array[i-1, j-1] < 0: return True
->     if i > 0 and j < width and array[i-1, j+1] < 0: return True
->     if i < width and j > 0 and array[i+1, j-1] < 0: return True
->     if i < width and j < height and array[i+1, j+1] < 0: return True
-> ~~~
-> {: .source}
+> > ## Solution
+> >
+> > Here's one solution.
+> >
+> > ~~~
+> > def string_machine(input_string, iterations):
+> >     """
+> >     Takes input_string and generates a new string with -'s and *'s
+> >     corresponding to characters that have identical adjacent characters
+> >     or not, respectively.  Iterates through this procedure with the resultant
+> >     strings for the supplied number of iterations.
+> >     """
+> >     print(input_string)
+> >     old = input_string
+> >     for i in range(iterations):
+> >         new = ''
+> >         # iterate through characters in previous string
+> >         for j in range(len(s)):
+> >             left = j-1
+> >             right = (j+1)%len(s) # ensure right index wraps around
+> >             if old[left]==old[right]:
+> >                 new += '-'
+> >             else:
+> >                 new += '*'
+> >         print(new)
+> >         # store new string as old
+> >         old = new
+> >
+> > string_machine('et cetera', 10)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}

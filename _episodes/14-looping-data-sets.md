@@ -115,7 +115,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 4. 1 and 2 are not matched.
 {: .challenge}
 
-> ## Maximum File Size
+> ## Minimum File Size
 >
 > Modify this program so that it prints the number of records in
 > the file that has the fewest records.
@@ -131,7 +131,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 
 > ## Comparing Data
 >
-> Write a short program that reads in the regional data sets
+> Write a program that reads in the regional data sets
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 {: .challenge}
