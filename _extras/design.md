@@ -30,7 +30,7 @@ The main sections are:
     then estimates time that will be spent on teaching and on exercises,
     while the exercises are given as bullet points.
 
-## Stage 1 - Assumptions
+## Stage 1: Assumptions
 
 *   Audience
     *   Graduate students in numerate disciplines from cosmology to archaeology
@@ -74,24 +74,9 @@ The main sections are:
     *   Want lots of short exercises that can reliably be finished in allotted time
     *   So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
 
-## Stage 2 - Desired Results
+## Stage 2: Desired Results
 
-### Goals
-
-Learners can...
-
-*   ...write short scripts using loops and conditionals.
-*   ...write functions with a fixed number of parameters that return a single result.
-*   ...import libraries using aliases and refer to those libraries' contents.
-*   ...do simple data extraction and formatting using Pandas.
-
-### Summative Assessment
-
-*   Midpoint: create time-series plot for each file in a directory.
-*   Final: extract data from Pandas data frame
-    and create comparative multi-line time series plot.
-
-### Essential Questions
+### Questions
 
 How do I...
 
@@ -102,31 +87,48 @@ How do I...
 *   ...extra data from a single data set for plotting?
 *   ...write programs I can read and re-use in future?
 
-### Learners Will Know...
+### Skills
 
-*   That a program is a piece of lab equipment that implements an analysis
+I can...
+
+*   ...write short scripts using loops and conditionals.
+*   ...write functions with a fixed number of parameters that return a single result.
+*   ...import libraries using aliases and refer to those libraries' contents.
+*   ...do simple data extraction and formatting using Pandas.
+
+### Knowledge
+
+I know...
+
+*   ...that a program is a piece of lab equipment that implements an analysis
     *   Needs to be validated/calibrated before/during use
     *   Makes analysis reproducible, reviewable, shareable
-*   That programs are written for people, not for computers
+*   ...that programs are written for people, not for computers
     *   Meaningful variable names
     *   Modularity for readability as well as re-use
     *   No duplication
     *   Document purpose and use
-*   That there is no magic: the programs they use are no different 
+*   ...that there is no magic: the programs they use are no different 
     in principle from those they build
-*   How to assign values to variables
-*   What integers, floats, strings, NumPy arrays, and Pandas data frames are
-*   How to trace the execution of a `for` loop
-*   How to trace the execution of `if`/`else` statements
-*   How to create and index lists
-*   How to create and index NumPy arrays
-*   How to create and index Pandas data frames
-*   How to create time series plots
-*   The difference between defining and calling a function
-*   Where to find documentation on standard libraries
-*   How to find out what else scientific Python offers
+*   ...how to assign values to variables
+*   ...what integers, floats, strings, NumPy arrays, and Pandas data frames are
+*   ...how to trace the execution of a `for` loop
+*   ...how to trace the execution of `if`/`else` statements
+*   ...how to create and index lists
+*   ...how to create and index NumPy arrays
+*   ...how to create and index Pandas data frames
+*   ...how to create time series plots
+*   ...the difference between defining and calling a function
+*   ...where to find documentation on standard libraries
+*   ...how to find out what else scientific Python offers
 
-## Stage 3 - Learning Plan
+## Stage 3: Learning Plan
+
+### Summative Assessment
+
+*   Midpoint: create time-series plot for each file in a directory.
+*   Final: extract data from Pandas data frame
+    and create comparative multi-line time series plot.
 
 ### Running and Quitting Interactively (9:00)
 
@@ -172,11 +174,12 @@ How do I...
 
 ### Built-in Functions and Help (09:55)
 
-*   Teaching: 10 min
+*   Teaching: 15 min
     *   Explain the purpose of functions.
     *   Correctly call built-in Python functions.
     *   Correctly nest calls to built-in functions.
     *   Use help to display documentation for built-in functions.
+    *   Correctly describe situations in which SyntaxError and NameError occur.
 *   Challenges: 10 min
     *   Explain the order of operations in the following complex expression.
     *   What will each nested combination of `min` and `max` calls produce?
@@ -184,18 +187,9 @@ How do I...
     *   Given what we have seen so far,
         what index expression will get the last character in a string?
 
-### Error Messages (10:15)
+### Coffee: 15 min (10:20)
 
-*   Teaching: 5 min
-    *   Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message.
-    *   Correctly describe situations in which SyntaxError, IndentationError, and NameError occur.
-*   Exercise: 10 min
-    *   Identify and correct the syntax errors in this short piece of code
-    *   Read a traceback and identify key elements (filename, error type, etc.)
-
-### Coffee: 15 min (10:30)
-
-### Libraries (Including Aliases) (10:45)
+### Libraries (Including Aliases) (10:35)
 
 *   Teaching: 10 min
     *   Explain what software libraries are and why programmers create and use them.
@@ -207,9 +201,9 @@ How do I...
     *   If `help(math)` produces an error, what have you forgotten to do?
     *   Fill in the blanks in code below so that the import statement and program run.
 
-### Reading Tabular Data (11:05)
+### Reading Tabular Data (10:55)
 
-*   Teaching: 5 min
+*   Teaching: 10 min
     *   Import the Pandas library.
     *   Use Pandas to load a simple CSV data set.
     *   Get some basic information about a Pandas Data frame.
@@ -219,7 +213,7 @@ How do I...
     *   What string(s) should you pass to `read_csv` to read files from other directories?
     *   How can you *write* CSV data?
 
-### Data Frames (11:20)
+### Data Frames (11:15)
 
 *   Teaching: 15 min
     *   Select individual values from a Pandas data frame.
@@ -238,9 +232,9 @@ How do I...
         what would you do if asked to create a table of GDP per capita for Poland
         for the Twentieth Century?
 
-### Plotting (11:50)
+### Plotting (11:45)
 
-*   Teaching: 10 min
+*   Teaching: 15 min
     *   Create a time series plot showing a single data set.
     *   Create a scatter plot showing relationship between two data sets.
 *   Exercise: 15 min
@@ -307,6 +301,7 @@ How do I...
 *   Teaching: 10 min
     *   Identify local and global variables.
     *   Identify parameters as local variables.
+    *   Read a traceback and determine the file, function, and line number on which the error occurred.
 *   Challenges: 10 min
     *   Trace the changes to the values in this program,
         being careful to distinguish local from global values.
