@@ -96,7 +96,7 @@ I can...
 *   ...import libraries using aliases and refer to those libraries' contents.
 *   ...do simple data extraction and formatting using Pandas.
 
-### Knowledge
+### Concepts
 
 I know...
 
