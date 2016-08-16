@@ -3,6 +3,13 @@ layout: page
 title: "Lesson Design"
 permalink: /design/
 ---
+
+## Contents
+{:.no_toc}
+
+* Jekyll will replace this line with an auto-generated table of contents.
+{:toc}
+
 ## Process Used
 
 This lesson is meant to be used in both [Data Carpentry][dc-website] and 
