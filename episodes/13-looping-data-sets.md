@@ -87,7 +87,7 @@ all PDB files: []
 ~~~
 for filename in glob.glob('data/*.csv'):
     data = pandas.read_csv(filename)
-    print(filename, data.['gdpPercap_1952'].min())
+    print(filename, data['gdpPercap_1952'].min())
 ~~~
 {: .python}
 ~~~
