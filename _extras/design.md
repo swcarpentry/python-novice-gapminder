@@ -4,7 +4,14 @@ title: "Lesson Design"
 permalink: /design/
 ---
 
+## Contents
+{:.no_toc}
+
+* Jekyll will replace this line with an auto-generated table of contents.
+{:toc}
+
 > ## Help Wanted
+> {:.no_toc}
 >
 > **We are filling in the exercises [below](#stage-3---learning-plan)
 > in order to make the lesson plan more concrete.
