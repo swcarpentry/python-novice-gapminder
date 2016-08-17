@@ -21,6 +21,15 @@ permalink: /design/
 
 ## Process Used
 
+> Michael Pollan's advice if he taught R or Python programming:
+>
+> 1. Write code.
+> 2. Not too much.
+> 3. Mostly plots.
+>
+> — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
+{: .quotation}
+
 This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
 The main sections are:
 
