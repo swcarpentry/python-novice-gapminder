@@ -69,7 +69,7 @@ plt.xticks(rotation=90)
 
 ~~~
 plt.style.use('ggplot')
-data.T.plot()
+data.T.plot(kind='bar')
 plt.xticks(rotation=90)
 plt.ylabel('GDP per capita')
 ~~~
