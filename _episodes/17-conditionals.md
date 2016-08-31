@@ -195,6 +195,99 @@ final velocity: 30.0
     to show the final value of `velocity`,
     since its value is updated by the last iteration of the loop.
 
+> ## Compound relations using `and`, `or`, and parentheses
+> 
+> Often, you want some combination of things to be true.  You can combine
+> relations within a conditional using `and` and `or`.  Continuing the example
+> above, suppose you have 
+> 
+> ~~~
+> mass     = [ 3.54,  2.07,  9.22,  1.86,  1.71]
+> velocity = [10.00, 20.00, 30.00, 25.00, 20.00]
+> 
+> i = 0
+> for i in range(5):
+>     if mass[i] > 5 and velocity[i] > 20:
+>         print "Fast heavy object.  Duck!"
+>     elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
+>         print "Normal traffic"
+>     elif mass[i] <= 2 and velocity <= 20:
+>         print "Slow light object.  Ignore it"
+>     else:
+>         print "Whoa!  Something is up with the data.  Check it"
+> ~~~
+> {: .python}
+> 
+> Just like with arithmetic, you can and should use parentheses whenever there
+> is possible ambiguity.  A good general rule is to _always_ use parentheses
+> when mixing `and` and `or` in the same condition.  That is, use
+> 
+> ~~~
+> if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
+> ~~~
+> {: .python}
+> 
+> should be written as one of these,
+> 
+> ~~~
+> if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
+> if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
+> ~~~
+> {: .python}
+> so it is perfectly clear to a reader (and to Python) what you really mean.
+{: .challenge}
+
+> ## Using functions with conditionals with Pandas
+> 
+> Functions will often contain conditionals.  Here is a short example that
+> will indicate which quartile the argument is in based on hand-coded values
+> for the quartile cut points.
+> 
+> ~~~
+> def calculate_life_quartile(exp):
+>     if exp < 58.41:
+>         # This observation is in the first quartile
+>         return 1
+>     elif exp >= 58.41 and exp < 67.05:
+>         # This observation is in the second quartile
+>        return 2
+>     elif exp >= 67.05 and exp < 71.70:
+>         # This observation is in the third quartile
+>        return 3
+>     elif exp >= 71.70:
+>         # This observation is in the fourth quartile
+>        return 4
+>     else:
+>         # This observation has bad data
+>        return None
+> 
+> calculate_life_quartile(62.5)
+> ~~~
+> {: .python}
+> 
+> ~~~
+> 2
+> ~~~
+> {: .output}
+> 
+> That function would typically be used within a `for` loop, but Pandas has
+> a different, more efficient way of doing the same thing, and that is by
+> _applying_ a function to a data frame or a portion of a data frame.  Here
+> is an example, using the definition above.
+> 
+> ~~~
+> data = pd.read_csv('Americas-data.csv')
+> data['life_qrtl'] = data['lifeExp'].apply(calculate_life_quartile)
+> ~~~
+> {: .python}
+> 
+> There is a lot in that second line, so let's take it piece by piece.
+> On the right side of the `=` we start with `data['lifeExp']`, which is the
+> column in the data frame called `data` labeled `lifExp`.  We use the
+> `apply()` to do what it says, apply the `calculate_life_quartile` to the
+> value of this column for every row in the data frame.
+{: .challenge}
+
 > ## Tracing Execution
 >
 > What does this program print?
