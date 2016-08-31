@@ -1,7 +1,7 @@
 ---
 title: "Data Types and Type Conversion"
-teaching: 5
-exercises: 5
+teaching: 10
+exercises: 10
 questions:
 - "What kinds of data do programs store?"
 - "How can I convert one type to another?"
@@ -208,6 +208,47 @@ first is 2 and second is 5
     creates a new value, and assigns it to `second`.
 *   After that, `second` does not remember where it came from.
 
+> ## Fractions
+>
+> What type of value is 3.4?
+> How can you find out?
+>
+> > ## Solution
+> >
+> > It is a floating-point number (often abbreviated "float").
+> >
+> > ~~~
+> > print(type(3.4))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > <class 'float'>
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+> ## Automatic Type Conversion
+>
+> What type of value is 3..25 + 4?
+>
+> > ## Solution
+> >
+> > It is a float:
+> > integers are automatically converted to floats as necessary.
+> >
+> > ~~~
+> > result = 3.25 + 4
+> > print(result, 'is', type(result))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > 7.25 is <class 'float'>
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
 > ## Choose a Type
 >
 > What type of value (integer, floating point number, or character string)
@@ -292,11 +333,20 @@ first is 2 and second is 5
 > 6. `2.0 * second`
 >
 > > ## Solution
+> >
 > > Answer: 1 and 4
 > {: .solution}
 {: .challenge}
 
 > ## Complex Numbers
 >
-> FIXME: introduce complex numbers
+> Python provides complex numbers,
+> which are written as `1.0+2.0j`.
+> If `val` is an imaginary number,
+> its real and imaginary parts can be accessed using *dot notation*
+> as `val.real` and `val.imag`.
+>
+> 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
+> 2.  What do you expect `1+2j + 3` to produce?
+> 3.  What do you expect '4j' to be?  What about `4 j' (with a space)?
 {: .challenge}
