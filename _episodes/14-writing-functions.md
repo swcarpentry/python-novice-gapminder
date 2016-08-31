@@ -7,9 +7,6 @@ questions:
 objectives:
 - "Explain and identify the difference between function definition and function call."
 - "Write a function that takes a small, fixed number of arguments and produces a single result."
-- "Correctly identify local and global variable use in a function."
-- "Correctly identify portions of source code that will be displayed as online help, and in particular distinguish docstrings from comments."
-- "Write short docstrings for functions."
 keypoints:
 - "Break programs down into functions to make them easier to understand."
 - "Define a function using `def` with a name, parameters, and a block of code."
@@ -144,6 +141,26 @@ result of call is: None
 > print('calling', report, 22.5)
 {: .challenge}
 
+> ## Order of Operations
+>
+> The example above:
+>
+> ~~~
+> result = print_date(1871, 3, 19)
+> print('result of call is:', result)
+> ~~~
+> {: .python}
+>
+> printed:
+> ~~~
+> 1871/3/19
+> result of call is: None
+> ~~~
+> {: .output}
+>
+> Explain why the two lines of output appeared in the order they did.
+{: .challenge}
+
 > ## Encapsulation
 >
 > Fill in the blanks to create a function that takes a single filename as an argument,
@@ -173,26 +190,6 @@ result of call is: None
 >             return ____
 > ~~~
 > {: .python}
-{: .challenge}
-
-> ## Order of Operations
->
-> The example above:
->
-> ~~~
-> result = print_date(1871, 3, 19)
-> print('result of call is:', result)
-> ~~~
-> {: .python}
->
-> printed:
-> ~~~
-> 1871/3/19
-> result of call is: None
-> ~~~
-> {: .output}
->
-> Explain why the two lines of output appeared in the order they did.
 {: .challenge}
 
 > ## Calling by Name

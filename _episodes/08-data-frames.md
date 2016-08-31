@@ -1,7 +1,7 @@
 ---
 title: "Pandas Data Frames"
-teaching: 10
-exercises: 10
+teaching: 15
+exercises: 15
 questions:
 - "How can I do statistical analysis of tabular data?"
 objectives:
@@ -264,7 +264,7 @@ max      13450.401510    16361.876470    18965.055510
 > {: .python}
 {: .challenge}
 
-> ## Practice with Selection.
+> ## Practice with Selection
 >
 > Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
 > Write an expression to select each of the following:

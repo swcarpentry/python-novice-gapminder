@@ -1,6 +1,6 @@
 ---
 title: "Reading Tabular Data into Data Frames"
-teaching: 5
+teaching: 10
 exercises: 10
 questions:
 - "How can I read tabular data?"
@@ -240,7 +240,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 >     (Hint: you may need to change your view of the data.)
 {: .challenge}
 
-> ## Error Messages
+> ## Reading Files in Other Directories
 >
 > The data for your current project is stored in a file called `microbes.csv`,
 > which is located in a folder called `field_data`.

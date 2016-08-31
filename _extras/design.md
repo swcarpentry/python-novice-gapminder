@@ -10,14 +10,28 @@ permalink: /design/
 * Jekyll will replace this line with an auto-generated table of contents.
 {:toc}
 
+> ## Help Wanted
+> {:.no_toc}
+>
+> **We are filling in the exercises [below](#stage-3---learning-plan)
+> in order to make the lesson plan more concrete.
+> Contributions (both in the form of pull requests with filled-in exercises,
+> and comments on specific exercises, ordering, and timings) are greatly appreciated.**
+{: .callout}
+
 ## Process Used
 
-This lesson is meant to be used in both [Data Carpentry][dc-website] and 
-[Software Carpentry][swc-website] workshops. It's also meant to serve as 
-a worked example in [instructor training][instructor-training] of how to 
-develop a new lesson. To that end, the outline below was developed using 
-a slimmed-down variant of the "Understanding by Design" process. The 
-main sections are:
+> Michael Pollan's advice if he taught R or Python programming:
+>
+> 1. Write code.
+> 2. Not too much.
+> 3. Mostly plots.
+>
+> — [Michael Koontz](https://twitter.com/_mikoontz/status/758021742078025728)
+{: .quotation}
+
+This lesson was developed using a slimmed-down variant of the "Understanding by Design" process.
+The main sections are:
 
 1.  Assumptions about audience, time, etc.
     (The current draft also includes some conclusions and decisions in this 
@@ -32,286 +46,318 @@ main sections are:
     then estimates time that will be spent on teaching and on exercises,
     while the exercises are given as bullet points.
 
-While it looks like a waterfall process, in practice I did this:
-
-1.  Draft the assumptions.
-
-2.  Do one bullet point for each of several learning milestones.
-
-3.  Draft the desired results.
-
-4.  Update the learning milestones (still as just one bullet point each, 
-    no time estimates or exercises).
-
-5.  Get early feedback from four people.
-
-6.  Do a full pass to flesh out the assumptions and add time estimates and exercises.
-
-7.  Ask for feedback and start iterating (mostly to cut things).
-
-At the start of #7 above, the lesson needed 8.5 hours, versus a budget of 6.5.
-NumPy went, as did everything to do with running scripts from the command line 
-and a bunch of other topics that are useful and important, but not *as* important 
-as what's there. This was also the point at which I settled on using the Jupyter 
-Notebook (I'd decided on the [Gapminder data][gapminder-data] at the outset to be 
-consistent with [Data Carpentry][dc-website]). It took about six hours of work over 
-several weeks to get to the point where I felt the lesson was ready for general feedback.
-
-I then solicited feedback from half a dozen experienced instructors. Based on what 
-they said, I made further cuts in order to devote more (i.e., more realistic) time 
-to basic topics. Defensive programming, debugging, and programming style were merged,
-which freed up another half an hour to spend on functions: these are the key to writing 
-reusable programs, but defining vs. calling, parameter passing, variable scope, and the 
-call stack all need time.
-
-## Stage 1 - Assumptions
+## Stage 1: Assumptions
 
 *   Audience
-    *   Graduate students in numerate disciplines from cosmology to economics
-    *   Who understand very basic statistics (mean, standard deviation, correlation coefficient)
-    *   And have manipulated data in spreadsheets and with interactive tools like SAS
+    *   Graduate students in numerate disciplines from cosmology to archaeology
+    *   Who have manipulated data in spreadsheets and with interactive tools like SAS
     *   But have *not* programmed beyond CPD (copy-paste-despair)
 *   Constraints
-    *   One full day 09:00-17:00
-        *   06:30 teaching time
-        *   1:00 for lunch
+    *   One full day 09:00-16:30
+        *   06:15 class time
+        *   0:45 lunch
         *   0:30 total for two coffee breaks
     *   Learners use native installs on their own machines
         *   May use VMs or cloud resources at instructor's discretion
         *   But must keep native local install as an option
     *   No dependence on other Carpentry modules
-        *   In particular, must not require knowledge of shell or version control
+        *   In particular, does not require knowledge of shell or version control
     *   Use the Jupyter Notebook
         *   Authentic tool used by many instructors
         *   There isn't really an alternative
+        *   And means that even people who have seen a bit of Python before
+            will probably learn something
+*   Motivating Example
+    *   Creating 2D plots suitable for inclusion in papers
+    *   Appeals to almost everyone
+    *   Makes lesson usable by both Carpentries
         *   And means that even people who have seen a bit of Python before 
             will probably learn something
 *   Data
     *   Use the gapminder data throughout
     *   But break into multiple files by continent
-        *   To make display of output from examples tidier (use Australia/New Zealand, 
-            which is only two lines)
+        *   To make display of output from examples tidier
+            (e.g., use Australia/New Zealand, which is only two lines)
         *   And allow examples showing use of multiple data sets
 *   Focus on Pandas instead of NumPy
     *   Makes lesson usable by both Data Carpentry and Software Carpentry
     *   Genuine novices are likely to want data analysis
     *   And people with some prior experience:
-        *   will accept data analysis as an authentic task
-        *   And are unlikely to have encountered Pandas,
+        *   will accept data analysis as an authentic task,
+        *   and are unlikely to have encountered Pandas,
             so they'll still get something useful out of the lesson
-*   Exercises will mostly *not* be "write this code from scratch"
+*   Challenges will mostly *not* be "write this code from scratch"
     *   Want lots of short exercises that can reliably be finished in allotted time
     *   So use MCQs, fill-in-the-blanks, Parsons Problems, "tweak this code", etc.
-*   Lesson materials
-    *   Notes for instructors and self-study will be written in Markdown
-        *   We've tried writing/maintaining lessons as Notebooks...
-    *   Learners will be provided with one Notebook per episode containing exercises
-*   See also:
-    *   http://nsoontie.github.io/2015-03-05-ubc/novice/python/Pandas-Lesson.html
 
-## Stage 2 - Desired Results
+## Stage 2: Desired Results
 
-### Goals
-
-1.  Get learners to the stage decribed in the "Software" section of
-    "[Good Enough Practices in Scientific Computing][good-enough]".
-    *   Goals
-        1.  Make it easy for people (including your future self) to understand and (re)use your code
-        2.  Modular, comprehensible, reusable, and testable all come together
-    *   Rules
-        1.  Every analysis step is represented textually (complete with parameter values)
-        2.  Every program or script has a brief explanatory comment at the start
-        3.  Programs of all kinds (including "scripts") are broken into functions
-        4.  No duplication
-        5.  Functions and variables have meaningful names
-        6.  Dependencies and requirements are explicit (e.g., a requirements.txt file)
-            *   This rule is *not* covered in this lesson
-        7.  Commenting/uncommenting are not routinely used to control program behavior
-        8.  Use a simple example or test data set to run to tell if it's working at all 
-            and whether it gives a known correct output for a simple known input
-        9.  Submit code to a reputable DOI-issuing repository upon submission of paper, 
-            just like data
-            *   This rule is *not* covered in this lesson
-2.  Enable them to make sense of other onlines tutorials and resources
-
-### Summative Assessment
-
-*   Midpoint: plot a bar chart showing the average GDP per continent from the data.
-*   Final: given a two-page analysis program made up of five functions:
-    1.  Modify the input function to read data that is laid out differently (but is still tabular).
-    2.  Find and fix a bug in the analysis routine (off-by-one error).
-    3.  Add an option to create a plot instead of dumping results as CSV.
-
-### Essential Questions
+### Questions
 
 How do I...
 
-*   ...read, analyze, and visualize a tabular data set?
-*   ...process multiple data sets?
-*   ...tell if my program is working correctly?
-*   ...fix it when it's not?
-*   ...find and use software other people have written instead of writing my own?
+*   ...read tabular data?
+*   ...plot a single vector of values?
+*   ...create a time series plot?
+*   ...create one plot for each of several data sets?
+*   ...extra data from a single data set for plotting?
+*   ...write programs I can read and re-use in future?
 
-### Learners Will Be Able To...
+### Skills
 
-*   Run code interactively
-*   Run code saved in a file
-*   Write single-condition `if` statements
-*   Convert between basic data types (integer, float, string)
-*   Call built-in functions
-*   Use `help` and online documentation
-*   Import a library using an alias
-*   Call something from an imported library
-*   Read tabular data into an array or data frame
-*   Do collective operations on arrays and data frames
-*   Create simple plots of data in arrays and data frames
-*   Interpret common error messages
-*   Track down bugs by running small tests of program modules
-*   Write non-recursive functions taking a fixed number of named parameters
-*   Create literate programs in the Jupyter Notebook
+I can...
 
-### Learners Will Know...
+*   ...write short scripts using loops and conditionals.
+*   ...write functions with a fixed number of parameters that return a single result.
+*   ...import libraries using aliases and refer to those libraries' contents.
+*   ...do simple data extraction and formatting using Pandas.
 
-*   That a program is a piece of lab equipment that implements an analysis
+### Concepts
+
+I know...
+
+*   ...that a program is a piece of lab equipment that implements an analysis
     *   Needs to be validated/calibrated before/during use
     *   Makes analysis reproducible, reviewable, shareable
-*   That programs are written for people, not for computers
+*   ...that programs are written for people, not for computers
     *   Meaningful variable names
     *   Modularity for readability as well as re-use
     *   No duplication
     *   Document purpose and use
-*   That there is no magic: the programs they use are no different 
+*   ...that there is no magic: the programs they use are no different 
     in principle from those they build
-*   How to assign values to variables
-*   What integers, floats, strings, and data frames are
-*   How to trace the execution of a `for` loop
-*   How to create and index lists
-*   How to trace the execution of `if`/`else` statements
-*   The difference between defining and calling a function
-*   What a call stack is
-*   Where to find documentation on standard libraries
-*   How to find out what else scientific Python offers
+*   ...how to assign values to variables
+*   ...what integers, floats, strings, NumPy arrays, and Pandas data frames are
+*   ...how to trace the execution of a `for` loop
+*   ...how to trace the execution of `if`/`else` statements
+*   ...how to create and index lists
+*   ...how to create and index NumPy arrays
+*   ...how to create and index Pandas data frames
+*   ...how to create time series plots
+*   ...the difference between defining and calling a function
+*   ...where to find documentation on standard libraries
+*   ...how to find out what else scientific Python offers
 
-## Stage 3 - Learning Plan
+## Stage 3: Learning Plan
 
-The original step-by-step learning plan is included below.
-It has been superseded by the content of the actual episodes,
-but is included for reference.
+### Summative Assessment
 
-*   Running and Quitting Interactively (09:00)
-    *   Teaching: 15 min (because setup issues)
-    *   Exercises: 0 min (accounted for in teaching time - no separate exercise)
-        *   Run the Notebook
-        *   Create a few Markdown cells
-        *   Create and execute a Python cell that prints 1+2
-*   Variables and Assignment (09:15)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Trace behavior of swapping (`a, b = b, a` the old fashioned way) 
-            with an intermediate variable
-        *   Calculate elapsed time in seconds using named values for seconds per minute, etc.
-*   Data Types and Type Conversion (09:35)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Predict result types (or errors) of various operations
-        *   Add conversion functions to broken code to make it work
-*   Built-in Functions (and Methods) and Help (09:55)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Chain calculations with max and min
-        *   Find a useful method using help(str)
-        *   Parsons Problem to achieve specific results with string methods
-*   Error Messages (10:15)
-    *   Teaching: 10 min (review of error messages seen to date)
-    *   Exercises: 10 min
-        *   Diagnose and fix small errors (some syntax, some runtime)
-*   Coffee: 15 min (10:35)
-*   Libraries (Including Aliases) (10:50)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Operations with math library
-        *   Look things up in the python.org docs
-*   Pandas Data Frames (11:10)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Import Pandas
-        *   Create and display a data frame
-*   Reading Tabular Data (11:30)
-    *   Teaching: 5 min
-    *   Exercises: 5 min
-        *   Read one continent's subset of gapminder CSV data
-    *   Callout:
-        *   How to read data from Excel spreadsheets via export to CSV
-        *   How tor ead data from Excel spreadsheets directly (needs another library)
-*   Collective Operations (11:40)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Select various subsets of data
-        *   Normalize values (scale to 0..1)
-*   Lunch: 60 min (12:00)
-*   Plotting (13:00)
-    *   Teaching: 10 min (to show a variety of plots and debug display problems)
-    *   Exercises: 10 min
-        *   Plot normalized change in GDP over time (tweaking provided code)
-*   For Loops (13:20)
-    *   Teaching: 15 min (do *not* introduce lists)
-    *   Exercises: 10 min
-        *   Reverse a string by repeated append
-        *   Trace execution of loop
-*   Looping Over Data Sets (13:55)
-    *   Teaching: 10 min (use glob to get filenames)
-    *   Exercises: 15 min
-        *   Count rows of each data set
-        *   Check number of columns in each data set is the same
-*   Lists (14:20)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   Indexing exercises
-        *   Conversion from list to string and back
-        *   Sum values in a list
-*   Coffee: 15 min (14:40)
-*   Conditionals (15:05)
-    *   Teaching: 10 min (inside loop)
-    *   Exercises: 15 min
-        *   Count vowels
-        *   Report badly-sized files inside loop
-*   Writing Functions (15:30)
-    *   Teaching: 15 min
-    *   Exercises: 15 min
-        *   Check size of a single data file
-        *   Check sizes of all data files in a directory
-            *   Write new function using previous function
-*   Documentation (16:00)
-    *   Teaching: 5 min
-    *   Exercises: 10 min
-        *   Add docstrings to functions written earlier
-*   Programming Style (16:15)
-    *   Teaching: 10 min (mostly to introduce checklist)
-    *   Exercises: 15 min
-        *   Clean up badly-written 20-line program
-*   Debugging (16:40)
-    *   Teaching: 10 min (divide and conquer)
-    *   Exercises: 15 min
-        *   Debug three-function program
-*   Defensive Programming (17:05)
-    *   Teaching: 5 min
-    *   Exercises: 10 min
-        *   Add assertions to functions based on docstrings
-*   Programming with Arrays (17:20)
-    *   Teaching: 10 min
-    *   Exercises: 10 min
-        *   More complicated array indexing
-*   Wrap-Up (17:40)
-    *   Teaching: 15 min
-        *   Overview of key SciPy modules
-        *   How to find and install libraries
-        *   Running Python from the command line
-        *   Other editing tools
-    *   Exercises: 0 min
-*   Finish (17:55)
+*   Midpoint: create time-series plot for each file in a directory.
+*   Final: extract data from Pandas data frame
+    and create comparative multi-line time series plot.
 
-[dc-website]: http://datacarpentry.org
-[gapminder-data]: http://www.gapminder.org/data/
-[good-enough]: https://github.com/swcarpentry/good-enough-practices-in-scientific-computing
-[instructor-training]: https://swcarpentry.github.io/instructor-training/
-[swc-website]: http://software-carpentry.org
+### Running and Quitting Interactively (9:00)
+
+*   Teaching: 15 min (because setup issues)
+    *   Launch the Jupyter Notebook, create new notebooks, and exit the Notebook.
+    *   Create Markdown cells in a notebook.
+    *   Create and run Python cells in a notebook.
+*   Challenges: 0 min (accounted for in teaching time - no separate exercise)
+    *   Creating lists in Markdown
+    *   What is displayed when several expressions are put in a single cell?
+    *   Change an existing cell from code to Markdown
+    *   Rendering LaTeX-style equations
+
+### Variables and Assignment (9:15)
+
+*   Teaching: 10 min
+    *   Write programs that assign scalar values to variables and perform calculations with those values.
+    *   Correctly trace value changes in programs that use scalar assignment.
+*   Challenges: 10 min
+    *   Trace execution of code swapping two values using an intermediate variable.
+    *   Predict final values of variables after several assignments.
+    *   What happens if you try to index a number?
+    *   Which is a better variable name, `m`, `min`, or `minutes`?
+    *   What do the following slice expressions produce?
+
+### Data Types and Type Conversion (09:35)
+
+*   Teaching: 10 min
+    *   Explain key differences between integers and floating point numbers.
+    *   Explain key differences between numbers and character strings.
+    *   Use built-in functions to convert between integers, floating point numbers, and strings.
+*   Challenges: 10 min
+    *   What type of value is 3.4?
+    *   What type of value is 3.25 + 4?
+    *   What type of value would you use to represent:
+        *   Number of days since the start of the year.
+        *   Time elapsed since the start of the year.
+        *   Etc.
+    *   How can you use `//` (integer division) and `%` (modulo)?
+    *   What does `int("3.4")` do?
+    *   Given these float, int, and string values, which expressions will print a particular result?
+    *   What do you expect `1+2j + 3` to produce?
+
+### Built-in Functions and Help (09:55)
+
+*   Teaching: 15 min
+    *   Explain the purpose of functions.
+    *   Correctly call built-in Python functions.
+    *   Correctly nest calls to built-in functions.
+    *   Use help to display documentation for built-in functions.
+    *   Correctly describe situations in which SyntaxError and NameError occur.
+*   Challenges: 10 min
+    *   Explain the order of operations in the following complex expression.
+    *   What will each nested combination of `min` and `max` calls produce?
+    *   Why don't `max` and `min` return `None` when given no arguments?
+    *   Given what we have seen so far,
+        what index expression will get the last character in a string?
+
+### Coffee: 15 min (10:20)
+
+### Libraries (Including Aliases) (10:35)
+
+*   Teaching: 10 min
+    *   Explain what software libraries are and why programmers create and use them.
+    *   Write programs that import and use libraries from Python's standard library.
+    *   Find and read documentation for standard libraries interactively (in the interpreter) and online.
+*   Challenges: 10 min
+    *   What function from the standard math library could you use to calculate a square root?
+    *   What library would you use to select a random value from data?
+    *   If `help(math)` produces an error, what have you forgotten to do?
+    *   Fill in the blanks in code below so that the import statement and program run.
+
+### Reading Tabular Data (10:55)
+
+*   Teaching: 10 min
+    *   Import the Pandas library.
+    *   Use Pandas to load a simple CSV data set.
+    *   Get some basic information about a Pandas Data frame.
+*   Challenges: 10 min
+    *   Read the data for the Americas and display its summary statistics.
+    *   What do `.head` and `.tail` do?
+    *   What string(s) should you pass to `read_csv` to read files from other directories?
+    *   How can you *write* CSV data?
+
+### Data Frames (11:15)
+
+*   Teaching: 15 min
+    *   Select individual values from a Pandas data frame.
+    *   Select entire rows or entire columns from a data frame.
+    *   Select a subset of both rows and columns from a data frame in a single operation.
+    *   Select a subset of a data frame by a single Boolean criterion.
+*   Challenges: 15 min
+    *   What expression will find the Per Capita GDP of Serbia in 2007?
+    *   What rule governs what is (or isn't) included in numerical and named slices in Pandas?
+    *   What does each line in the following short program do?
+    *   What do `idxmin` and `idxmax` do?
+    *   Write expressions to get the GDP per capita for all countries in 1982,
+        for all countries *after* 1985,
+        etc.
+    *   Given the way its borders have changed since 1900,
+        what would you do if asked to create a table of GDP per capita for Poland
+        for the Twentieth Century?
+
+### Plotting (11:45)
+
+*   Teaching: 15 min
+    *   Create a time series plot showing a single data set.
+    *   Create a scatter plot showing relationship between two data sets.
+*   Exercise: 15 min
+    *   Fill in the blanks to plot the minimum GDP per capita over time for European countries.
+    *   Modify the example to create a scatter plot of GDP per capita in Asian countries.
+    *   Explain what each argument to `plot` does in the following example.
+
+### Lunch (12:15): 45 min
+
+### Lists (13:00)
+
+*   Teaching: 10 min
+    *   Explain why programs need collections of values.
+    *   Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
+*   Challenges: 10 min
+    *   Fill in the blanks so that the program produces the output shown.
+    *   How large are the following slices?
+    *   What do negative index expressions print?
+    *   What does a "stride" in a slice do?
+    *   How do slices treat out-of-range bounds?
+    *   What are the differences between sorting these two ways?
+    *   What is the difference between `new = old` and `new = old[:]`?
+
+### Loops (13:20)
+
+*   Teaching: 10 min
+    *   Explain what for loops are normally used for.
+    *   Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
+    *   Write for loops that use the Accumulator pattern to aggregate values.
+*   Challenges: 15 min
+    *   Is an indentation error a syntax error or a runtime error?
+    *   Trace which lines of this program are executed in what order.
+    *   Fill in the blanks in this program so that it reverses a string.
+    *   Fill in the blanks in this series of examples to get practice accumulating values.
+    *   Reorder and indent these lins to calculate the cumulative sum of the list values.
+
+### Looping Over Data Sets (13:45)
+
+*   Teaching: 5 min
+    *   Be able to read and write globbing expressions that match sets of files.
+    *   Use glob to create lists of files.
+    *   Write for loops to perform operations on files given their names in a list.
+*   Challenges: 10 min
+    *   Which filenames are *not* matched by this glob expression?
+    *   Modify this program so that it prints the number of records in the shortest file.
+    *   Write a program that reads and plots all of the regional data sets.
+
+### Writing Functions (14:00)
+
+*   Teaching: 10 min
+    *   Explain and identify the difference between function definition and function call.
+    *   Write a function that takes a small, fixed number of arguments and produces a single result.
+*   Challenges: 15 min
+    *   This code defines and calls a function - what does it print when run?
+    *   Explain why this short program prints things in the order it does.
+    *   Fill in the blanks to create a function that finds the minimum value in a data file.
+    *   Fill in the blanks to create a function that finds the first negative value in a list.
+        What does your function do if the list is empty?
+    *   Why is it sometimes useful to pass arguments by naming the corresponding parameters?
+    *   Fill in the blanks and turn this short piece of code into a function.
+
+### Variable Scope (14:25)
+
+*   Teaching: 10 min
+    *   Identify local and global variables.
+    *   Identify parameters as local variables.
+    *   Read a traceback and determine the file, function, and line number on which the error occurred.
+*   Challenges: 10 min
+    *   Trace the changes to the values in this program,
+        being careful to distinguish local from global values.
+
+### Coffee (14:45): 15 min
+
+### Conditionals (15:00)
+
+*   Teaching: 10 min
+    *   Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
+    *   Trace the execution of unnested conditionals and conditionals inside loops.
+*   Challenges: 15 min
+    *   Trace the execution of this conditional statement.
+    *   Fill in the blanks so that this function replaces negative values with zeroes.
+    *   Modify this program so that it only processes files with fewer than 50 records.
+    *   Modify this program so that it always finds the largest and smallest values in a list
+        no matter what the list's values are.
+
+### Programming Style (15:25)
+
+*   Teaching: 15 min
+    *   How can I make my programs more readable?
+    *   How do most programmers format their code?
+    *   How can programs check their own operation?
+*   Challenges: 15 min
+    *   Which lines in this code will be available as online help?
+    *   Turn the comments in this program into docstrings.
+    *   Rewrite this short program to be more readable.
+
+### Wrap-Up (15:55)
+
+*   Teaching: 20 min
+    *   Name and locate scientific Python community sites for software, workshops, and help.
+*   Challenges: 0 min
+    *   None.
+
+### Feedback (16:15)
+
+*   Teaching: 0 min
+*   Challenges: 15 min
+    *   Collect feedback
+
+### Finish (16:30)
