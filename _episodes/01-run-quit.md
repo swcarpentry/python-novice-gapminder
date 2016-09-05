@@ -18,7 +18,7 @@ keypoints:
 ---
 ## Python programs are plain text files.
 
-*   They have the ".py" extension to let everyone (including the operating system) 
+*   They have the `.py` extension to let everyone (including the operating system) 
     know it is a Python program.
     *   This is convention, not a requirement.
 *   It's common to write them using a text editor but we are going to use the Jupyter Notebook.

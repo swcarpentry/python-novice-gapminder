@@ -13,7 +13,7 @@ keypoints:
 - "Use `else` to execute a block of code when an `if` condition is *not* true."
 - "Use `elif` to specify additional tests."
 - "Conditions are tested once, in order."
-- "Create a table showing updates to variables' values to trace the execution of a program."
+- "Create a table showing variables' values to trace a program's execution."
 ---
 ## Use `if` statements to control whether or not a block of code is executed.
 
@@ -175,20 +175,35 @@ final velocity: 30.0
 ~~~
 {: .output}
 
-## Create a table showing updates to variables' values to trace the execution of a program.
+## Create a table showing variables' values to trace a program's execution.
 
 <table>
-  <tr> <td><strong>i</strong></td> <td><strong>velocity</strong></td> </tr>
-  <tr> <td>0</td> <td>10.0</td> </tr>
-  <tr> <td> </td> <td>20.0</td> </tr>
-  <tr> <td>1</td> <td></td> </tr>
-  <tr> <td> </td> <td>30.0</td> </tr>
-  <tr> <td>2</td> <td></td> </tr>
-  <tr> <td> </td> <td>25.0</td> </tr>
-  <tr> <td>3</td> <td></td> </tr>
-  <tr> <td> </td> <td>20.0</td> </tr>
-  <tr> <td>4</td> <td></td> </tr>
-  <tr> <td> </td> <td>30.0</td> </tr>
+  <tr>
+    <td><strong>i</strong></td>
+    <td>0</td>
+    <td>.</td>
+    <td>1</td>
+    <td>.</td>
+    <td>2</td>
+    <td>.</td>
+    <td>3</td>
+    <td>.</td>
+    <td>4</td>
+    <td>.</td>
+  </tr>
+  <tr>
+    <td><strong>velocity</strong></td>
+    <td>10.0</td>
+    <td>20.0</td>
+    <td>.</td>
+    <td>30.0</td>
+    <td>.</td>
+    <td>25.0</td>
+    <td>.</td>
+    <td>20.0</td>
+    <td>.</td>
+    <td>30.0</td>
+  </tr>
 </table>
 
 *   The program must have a `print` statement *outside* the body of the loop
