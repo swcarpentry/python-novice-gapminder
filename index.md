@@ -28,7 +28,10 @@ Please note that this lesson uses Python 3 rather than Python 2.
 >
 > 2. Learners must install Python before the class starts.
 >
-> 3. Learners must download the gapminder data before class starts:
->    please see [the setup instructions]({{ site.github.url }}/setup/))
+> 3. Learners must get the gapminder data before class starts:
+>    please download and unzip the file 
+>    [python-novice-gapminder-data.zip][data-zip].
+>
+>    Please see [the setup instructions]({{ site.github.url }}/setup/))
 >    for details.
 {: .prereq}
