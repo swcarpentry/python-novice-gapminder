@@ -16,6 +16,9 @@ keypoints:
 - "The Notebook will turn Markdown into pretty-printed documentation."
 - "Markdown does most of what HTML does."
 ---
+ Programming in Python is a powerful and accessible tool for anyone looking to utilize computational resources. All programs are lists of instruction that should be logically organized to accomplish series of specific tasks (see diagram) and leverage the power of computing to facilitate repeatable data tasks. Our issue is how to do we get from a concept (like the diagram below) to a working, useful program. To do that we need to understand the basics of a programming language and how it works. In this lesson series, we will be exploring Python and the programming structures and logic associated with it in order to help you learn how to accomplish whatever tasks you need to do.
+
+
 ## Python programs are plain text files.
 
 *   They have the `.py` extension to let everyone (including the operating system) 
