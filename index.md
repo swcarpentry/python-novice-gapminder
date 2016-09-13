@@ -33,6 +33,6 @@ Please note that this lesson uses Python 3 rather than Python 2.
 >    please download and unzip the file 
 >    [python-novice-gapminder-data.zip][data-zip].
 >
->    Please see [the setup instructions]({{ page.root }}/setup/))
+>    Please see [the setup instructions]({{ page.root }}/setup/)
 >    for details.
 {: .prereq}
