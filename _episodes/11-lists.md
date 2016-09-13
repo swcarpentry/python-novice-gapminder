@@ -116,7 +116,7 @@ primes after removing last item: [2, 3, 5, 7]
 *   Use `[]` on its own to represent a list that doesn't contain any values.
     *   "The zero of lists."
 *   Helpful as a starting point for collecting values
-    (which we will see in the [next episode]({{site.github.url}}/09-for-loops/)).
+    (which we will see in the [next episode]({{page.root}}/09-for-loops/)).
 
 ## Lists may contain values of different types.
 
@@ -165,7 +165,7 @@ TypeError: 'str' object does not support item assignment
 ## Indexing beyond the end of the collection is an error.
 
 *   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of [runtime error]({{ site.github.url }}/05-error-messages/).
+    *   This is a kind of [runtime error]({{ page.root }}/05-error-messages/).
     *   Cannot be detected as the code is parsed
         because the index might be calculated based on data.
 

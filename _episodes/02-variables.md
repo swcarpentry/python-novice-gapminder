@@ -89,7 +89,7 @@ NameError: name 'last_name' is not defined
 {: .error}
 
 *   The last line of an error message is usually the most informative.
-*   We will look at error messages in detail [later]({{ site.github.url }}/05-error-messages/).
+*   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
 
 ## Variables can be used in calculations.
 

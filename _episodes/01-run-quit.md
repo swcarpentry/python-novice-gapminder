@@ -29,7 +29,7 @@ keypoints:
 ## Use the Jupyter Notebook for editing and running Python.
 
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
-    *   See [the setup instructions]({{ site.github.url }}/setup/) for Anaconda installation 
+    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation 
         instructions.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
