@@ -4,12 +4,6 @@ title: "Lesson Design"
 permalink: /design/
 ---
 
-## Contents
-{:.no_toc}
-
-* Jekyll will replace this line with an auto-generated table of contents.
-{:toc}
-
 > ## Help Wanted
 > {:.no_toc}
 >
@@ -146,7 +140,7 @@ I know...
 *   Final: extract data from Pandas data frame
     and create comparative multi-line time series plot.
 
-### [Running and Quitting Interactively]({{site.github.url}}/01-run-quit/) (9:00)
+### [Running and Quitting Interactively]({{page.root}}/01-run-quit/) (9:00)
 
 *   Teaching: 15 min (because setup issues)
     *   Launch the Jupyter Notebook, create new notebooks, and exit the Notebook.
@@ -158,7 +152,7 @@ I know...
     *   Change an existing cell from code to Markdown
     *   Rendering LaTeX-style equations
 
-### [Variables and Assignment]({{site.github.url}}/02-variables/) (9:15)
+### [Variables and Assignment]({{page.root}}/02-variables/) (9:15)
 
 *   Teaching: 10 min
     *   Write programs that assign scalar values to variables and perform calculations with those values.
@@ -170,7 +164,7 @@ I know...
     *   Which is a better variable name, `m`, `min`, or `minutes`?
     *   What do the following slice expressions produce?
 
-### [Data Types and Type Conversion]({{site.github.url}}/03-types-conversion/) (09:35)
+### [Data Types and Type Conversion]({{page.root}}/03-types-conversion/) (09:35)
 
 *   Teaching: 10 min
     *   Explain key differences between integers and floating point numbers.
@@ -188,7 +182,7 @@ I know...
     *   Given these float, int, and string values, which expressions will print a particular result?
     *   What do you expect `1+2j + 3` to produce?
 
-### [Built-in Functions and Help]({{site.github.url}}/04-built-in/) (09:55)
+### [Built-in Functions and Help]({{page.root}}/04-built-in/) (09:55)
 
 *   Teaching: 15 min
     *   Explain the purpose of functions.
@@ -203,9 +197,9 @@ I know...
     *   Given what we have seen so far,
         what index expression will get the last character in a string?
 
-### [Coffee]({{site.github.url}}/05-coffee/): 15 min (10:20)
+### [Coffee]({{page.root}}/05-coffee/): 15 min (10:20)
 
-### [Libraries]({{site.github.url}}/06-libraries/) (10:35)
+### [Libraries]({{page.root}}/06-libraries/) (10:35)
 
 *   Teaching: 10 min
     *   Explain what software libraries are and why programmers create and use them.
@@ -217,7 +211,7 @@ I know...
     *   If `help(math)` produces an error, what have you forgotten to do?
     *   Fill in the blanks in code below so that the import statement and program run.
 
-### [Reading Tabular Data]({{site.github.url}}/07-reading-tabular/) (10:55)
+### [Reading Tabular Data]({{page.root}}/07-reading-tabular/) (10:55)
 
 *   Teaching: 10 min
     *   Import the Pandas library.
@@ -229,7 +223,7 @@ I know...
     *   What string(s) should you pass to `read_csv` to read files from other directories?
     *   How can you *write* CSV data?
 
-### [Data Frames]({{site.github.url}}/08-data-frames/) (11:15)
+### [Data Frames]({{page.root}}/08-data-frames/) (11:15)
 
 *   Teaching: 15 min
     *   Select individual values from a Pandas data frame.
@@ -248,7 +242,7 @@ I know...
         what would you do if asked to create a table of GDP per capita for Poland
         for the Twentieth Century?
 
-### [Plotting]({{site.github.url}}/09-plotting/) (11:45)
+### [Plotting]({{page.root}}/09-plotting/) (11:45)
 
 *   Teaching: 15 min
     *   Create a time series plot showing a single data set.
@@ -258,9 +252,9 @@ I know...
     *   Modify the example to create a scatter plot of GDP per capita in Asian countries.
     *   Explain what each argument to `plot` does in the following example.
 
-### [Lunch]({{site.github.url}}/10-lunch/) (12:15): 45 min
+### [Lunch]({{page.root}}/10-lunch/) (12:15): 45 min
 
-### [Lists]({{site.github.url}}/11-lists/) (13:00)
+### [Lists]({{page.root}}/11-lists/) (13:00)
 
 *   Teaching: 10 min
     *   Explain why programs need collections of values.
@@ -274,7 +268,7 @@ I know...
     *   What are the differences between sorting these two ways?
     *   What is the difference between `new = old` and `new = old[:]`?
 
-### [Loops]({{site.github.url}}/12-for-loops/) (13:20)
+### [Loops]({{page.root}}/12-for-loops/) (13:20)
 
 *   Teaching: 10 min
     *   Explain what for loops are normally used for.
@@ -287,7 +281,7 @@ I know...
     *   Fill in the blanks in this series of examples to get practice accumulating values.
     *   Reorder and indent these lins to calculate the cumulative sum of the list values.
 
-### [Looping Over Data Sets]({{site.github.url}}/13-looping-data-sets/) (13:45)
+### [Looping Over Data Sets]({{page.root}}/13-looping-data-sets/) (13:45)
 
 *   Teaching: 5 min
     *   Be able to read and write globbing expressions that match sets of files.
@@ -298,7 +292,7 @@ I know...
     *   Modify this program so that it prints the number of records in the shortest file.
     *   Write a program that reads and plots all of the regional data sets.
 
-### [Writing Functions]({{site.github.url}}/14-writing-functions/) (14:00)
+### [Writing Functions]({{page.root}}/14-writing-functions/) (14:00)
 
 *   Teaching: 10 min
     *   Explain and identify the difference between function definition and function call.
@@ -312,7 +306,7 @@ I know...
     *   Why is it sometimes useful to pass arguments by naming the corresponding parameters?
     *   Fill in the blanks and turn this short piece of code into a function.
 
-### [Variable Scope]({{site.github.url}}/15-scope/) (14:25)
+### [Variable Scope]({{page.root}}/15-scope/) (14:25)
 
 *   Teaching: 10 min
     *   Identify local and global variables.
@@ -322,9 +316,9 @@ I know...
     *   Trace the changes to the values in this program,
         being careful to distinguish local from global values.
 
-### [Coffee]({{site.github.url}}/16-coffee/) (14:45): 15 min
+### [Coffee]({{page.root}}/16-coffee/) (14:45): 15 min
 
-### [Conditionals]({{site.github.url}}/17-conditionals/) (15:00)
+### [Conditionals]({{page.root}}/17-conditionals/) (15:00)
 
 *   Teaching: 10 min
     *   Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
@@ -336,7 +330,7 @@ I know...
     *   Modify this program so that it always finds the largest and smallest values in a list
         no matter what the list's values are.
 
-### [Programming Style]({{site.github.url}}/18-style/) (15:25)
+### [Programming Style]({{page.root}}/18-style/) (15:25)
 
 *   Teaching: 15 min
     *   How can I make my programs more readable?
@@ -347,14 +341,14 @@ I know...
     *   Turn the comments in this program into docstrings.
     *   Rewrite this short program to be more readable.
 
-### [Wrap-Up]({{site.github.url}}/19-wrap/) (15:55)
+### [Wrap-Up]({{page.root}}/19-wrap/) (15:55)
 
 *   Teaching: 20 min
     *   Name and locate scientific Python community sites for software, workshops, and help.
 *   Challenges: 0 min
     *   None.
 
-### [Feedback]({{site.github.url}}/20-feedback/) (16:15)
+### [Feedback]({{page.root}}/20-feedback/) (16:15)
 
 *   Teaching: 0 min
 *   Challenges: 15 min

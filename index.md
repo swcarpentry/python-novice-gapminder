@@ -1,7 +1,8 @@
 ---
 layout: lesson
 ---
-This lesson is an introduction to programming Python
+
+This lesson is an introduction to programming in Python
 for people with little or no previous programming experience.
 It uses plotting as its motivating example,
 and is designed to be used in both [Data Carpentry]({{ site.dc_site }})
@@ -13,7 +14,7 @@ Please note that this lesson uses Python 3 rather than Python 2.
 > ## Under Design
 >
 > **This lesson is currently in its early design stage;
-> please check [the design notes]({{ site.github.url }}/design/)
+> please check [the design notes]({{ page.root }}/design/)
 > to see what we have so far.
 > Contributions are very welcome:
 > we would be particularly grateful for exercises
@@ -23,7 +24,7 @@ Please note that this lesson uses Python 3 rather than Python 2.
 > ## Prerequisites
 >
 > 1.  Learners need to understand what files and directories are,
->     what a working directory is
+>     what a working directory is,
 >     and how to start a Python interpreter.
 >
 > 2. Learners must install Python before the class starts.
@@ -32,6 +33,6 @@ Please note that this lesson uses Python 3 rather than Python 2.
 >    please download and unzip the file 
 >    [python-novice-gapminder-data.zip][data-zip].
 >
->    Please see [the setup instructions]({{ site.github.url }}/setup/))
+>    Please see [the setup instructions]({{ page.root }}/setup/))
 >    for details.
 {: .prereq}

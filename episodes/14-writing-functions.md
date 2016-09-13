@@ -116,7 +116,7 @@ None
 ~~~
 {: .output}
 
-*   Remember: [every function returns something]({{ site.github.url }}/04-built-in/).
+*   Remember: [every function returns something]({{ page.root }}/04-built-in/).
 *   A function that doesn't explicitly `return` a value automatically returns `None`.
 
 ~~~
