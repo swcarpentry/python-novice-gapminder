@@ -1,5 +1,6 @@
 ---
 layout: lesson
+root: .
 ---
 
 This lesson is an introduction to programming in Python
