@@ -170,7 +170,7 @@ Poland               False          False          False
 
 ## Select values or NaN using a Boolean mask.
 
-*   Aframe full of Booleans is sometimes called a *mask* because of how it can be used.
+*   A frame full of Booleans is sometimes called a *mask* because of how it can be used.
 
 ~~~
 mask = subset > 10000
