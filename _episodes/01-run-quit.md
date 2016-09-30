@@ -266,7 +266,7 @@ Or use [named links][data_carpentry].
 > and enter the following:
 >
 > ~~~
-> $\Sigma_{i=1}^{N} 2^{-i} \approx 1$
+> $\sum_{i=1}^{N} 2^{-i} \approx 1$
 > ~~~
 > {: .python}
 >
