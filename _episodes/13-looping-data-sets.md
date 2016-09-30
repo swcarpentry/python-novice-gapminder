@@ -123,7 +123,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > ~~~
 > fewest = ____
 > for filename in glob.glob('data/*.csv'):
->     fewest = ____
+>     fewest = min(____, ____)
 > print('smallest file has', fewest, 'records')
 > ~~~
 > {: .python}
