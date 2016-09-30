@@ -297,8 +297,8 @@ first is 2 and second is 5
 > {: .python}
 >
 > ~~~
-> string to float:, 3.4
-> float to int:, 3
+> string to float: 3.4
+> float to int: 3
 > ~~~
 > {: .output}
 >
