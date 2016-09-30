@@ -1,5 +1,5 @@
 ---
-title: "Reading Tabular Data into Data Frames"
+title: "Reading Tabular Data into DataFrames"
 teaching: 10
 exercises: 10
 questions:
@@ -7,19 +7,19 @@ questions:
 objectives:
 - "Import the Pandas library."
 - "Use Pandas to load a simple CSV data set."
-- "Get some basic information about a Pandas Data frame."
+- "Get some basic information about a Pandas DataFrame."
 keypoints:
 - "Use the Pandas library to do statistics on tabular data."
 - "Use `index_col` to specify that a column's values should be used as row headings."
-- "Use `DataFrame.info` to find out more about a data frame."
-- "The `DataFrame.columns` variable stores information about the data frame's columns."
-- "Use `DataFrame.T` to transpose a data frame."
+- "Use `DataFrame.info` to find out more about a dataframe."
+- "The `DataFrame.columns` variable stores information about the dataframe's columns."
+- "Use `DataFrame.T` to transpose a dataframe."
 - "Use `DataFrame.describe` to get summary statistics about data."
 ---
 ## Use the Pandas library to do statistics on tabular data.
 
 *   Pandas is a widely-used Python library for statistics, particularly on tabular data.
-    *   Borrows many features from R's data frames.
+    *   Borrows many features from R's dataframes.
 *   Load it with `import pandas`.
 *   Read a Comma Separate Values (CSV) data file with `pandas.read_csv`.
     *   Argument is the name of the file to be read.
@@ -51,7 +51,7 @@ print(data)
 ~~~
 {: .output}
 
-*   The columns in a data frame are the observed variables, and the rows are the observations.
+*   The columns in a dataframe are the observed variables, and the rows are the observations.
 *   Pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
 
 > ## File Not Found
@@ -98,7 +98,7 @@ New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ~~~
 {: .output}
 
-## Use `DataFrame.info` to find out more about a data frame.
+## Use `DataFrame.info` to find out more about a dataframe.
 
 ~~~
 data.info()
@@ -131,7 +131,7 @@ memory usage: 208.0+ bytes
     *   We will talk later about null values, which are used to represent missing observations.
 *   Uses 208 bytes of memory.
 
-## The `DataFrame.columns` variable stores information about the data frame's columns.
+## The `DataFrame.columns` variable stores information about the dataframe's columns.
 
 *   Note that this is data, *not* a method.
     *   Like `math.pi`.
@@ -150,7 +150,7 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 ~~~
 {: .output}
 
-## Use `DataFrame.T` to transpose a data frame.
+## Use `DataFrame.T` to transpose a dataframe.
 
 *   Sometimes want to treat columns as rows and vice versa.
 *   Transpose (written `.T`) doesn't copy the data, just changes the program's view of it.
@@ -262,8 +262,8 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > ## Writing Data
 > 
 > As well as the `read_csv` function for reading data from a file,
-> Pandas provides a `to_csv` function to write data frames to files.
+> Pandas provides a `to_csv` function to write dataframes to files.
 > Applying what you've learned about reading from files,
-> write one of your data frames to a file called `processed.csv`.
+> write one of your dataframes to a file called `processed.csv`.
 > You can use `help` to get information on how to use `to_csv`.
 {: .challenge}
