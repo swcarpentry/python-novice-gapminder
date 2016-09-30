@@ -180,5 +180,17 @@ cos(pi) is -1.0
 > {: .source}
 {: .challenge}
 
+> ## Identifying Input Variable Range Error
+>
+> 1. Read the code below and try to identify what the errors are without running it.
+> 2. Run the code, and read the error message. What type of error is it?
+> 3. Fix the error.
+>
+> ~~~
+> from math import log
+> log(0)
+> ~~~
+> {: .source}
+{: .challenge}
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
