@@ -125,9 +125,10 @@ h
 
 ## Use a slice to get a substring.
 
-*   A slice consists of `[low:high]`.
-*   From the lower bound (inclusive) up to but not including the upper bound (exclusive).
-*   So upper-lower is the slice's length.
+*   A slice extracts elements, based on a start and stop value
+*   A slice consists of `[start:stop]`.
+*   From the start value (inclusive) up to but not including the stop value (exclusive).
+*   So the difference between stop and start is the slice's length.
 
 ~~~
 element = 'sodium'
