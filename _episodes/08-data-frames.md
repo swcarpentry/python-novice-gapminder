@@ -218,7 +218,7 @@ max      13450.401510    16361.876470    18965.055510
 >
 > df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
-> {: .source}
+> {: .python}
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}

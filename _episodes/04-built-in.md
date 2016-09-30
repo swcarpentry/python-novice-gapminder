@@ -231,7 +231,7 @@ result of print is None
 > radiance = 1.0
 > radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Spot the Difference
@@ -246,7 +246,7 @@ result of print is None
 > print(max(rich, poor))
 > print(max(len(rich), len(poor)))
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Why Not?

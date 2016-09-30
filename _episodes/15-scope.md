@@ -70,7 +70,7 @@ NameError: name 'temperature' is not defined
 > value = -22.5
 > print(clip(value))
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Identifying Syntax Errors
@@ -88,7 +88,7 @@ NameError: name 'temperature' is not defined
 >    print("But at least python tells us about them!")
 >   print("So they are usually not too hard to fix.")
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Reading Error Messages

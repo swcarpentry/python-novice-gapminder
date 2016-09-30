@@ -126,7 +126,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >     fewest = ____
 > print('smallest file has', fewest, 'records')
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Comparing Data

@@ -174,7 +174,7 @@ result of call is: None
 >     data = ____
 >     return ____
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Find the First
@@ -289,6 +289,6 @@ result of call is: None
 > >             num_years = num_years + 1
 > >     return total/num_years
 > > ~~~
-> > {: .source}
+> > {: .python}
 > {: .solution}
 {: .challenge}

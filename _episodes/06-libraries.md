@@ -163,7 +163,7 @@ cos(pi) is -1.0
 > angle = ____.degrees(____.pi / 2)
 > print(____)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Importing Specific Items
@@ -177,7 +177,7 @@ cos(pi) is -1.0
 > angle = degrees(pi / 2)
 > print(angle)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Identifying Input Variable Range Error
@@ -190,7 +190,8 @@ cos(pi) is -1.0
 > from math import log
 > log(0)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
+
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/

@@ -86,9 +86,6 @@ for m in masses:
 *   Always associated with an `if`.
 *   Must come before the `else` (which is the "catch all").
 
-I can also generate more complex conditional statements with boolean operators
-like **and** and **or**, and use comparators like "<", ">"
-
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
@@ -234,15 +231,15 @@ final velocity: 30.0
 > {: .python}
 >
 > Just like with arithmetic, you can and should use parentheses whenever there
-> is possible ambiguity.  A good general rule is to _always_ use parentheses
-> when mixing `and` and `or` in the same condition.  That is, use
+> is possible ambiguity.  A good general rule is to *always* use parentheses
+> when mixing `and` and `or` in the same condition.  That is, instead of:
 >
 > ~~~
 > if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
 > ~~~
 > {: .python}
 >
-> should be written as one of these,
+> write one of these:
 >
 > ~~~
 > if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
@@ -251,7 +248,7 @@ final velocity: 30.0
 > {: .python}
 >
 > so it is perfectly clear to a reader (and to Python) what you really mean.
-{: .challenge}
+{: .callout}
 
 > ## Tracing Execution
 >
@@ -265,7 +262,7 @@ final velocity: 30.0
 >     pressure = 0.0
 > print(pressure)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Trimming Values
@@ -284,7 +281,7 @@ final velocity: 30.0
 >         ____
 > print(result)
 > ~~~
-> {: .source}
+> {: .python}
 >
 > ~~~
 > [0, 1, 1, 1, 0, 1]
@@ -304,7 +301,7 @@ final velocity: 30.0
 >     ____:
 >         print(filename, len(contents))
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Initializing
@@ -323,7 +320,7 @@ final velocity: 30.0
 >         largest = max(____, v)
 > print(smallest, largest)
 > ~~~
-> {: .source}
+> {: .python}
 >
 > What are the advantages and disadvantages of using this method
 > to find the range of the data?

@@ -95,7 +95,7 @@ average(values)
 >     # Report.
 >     return highest
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Document This
@@ -111,7 +111,7 @@ average(values)
 >     values.sort()
 >     return values[1]
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Clean Up This Code
@@ -142,7 +142,7 @@ average(values)
 >     print(s)
 >     i += 1
 > ~~~
-> {: .source}
+> {: .python}
 >
 > > ## Solution
 > >

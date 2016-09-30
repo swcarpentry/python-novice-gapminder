@@ -287,7 +287,7 @@ print(total)
 >         message = message + "b"
 > print(message)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Identifying Item Errors
@@ -301,5 +301,5 @@ print(total)
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
