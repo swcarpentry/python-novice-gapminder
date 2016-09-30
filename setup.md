@@ -74,9 +74,9 @@ If you run into any difficulties, please request help before the workshop begins
 
 The data we will be using is taken from the [gapminder][gapminder] dataset.
 To obtain it, download and unzip the file 
-[python-novice-gapminder-data.zip][data-zip].
+[python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
 In order to follow the presented material, you should launch a Jupyter 
-notebook in the "data" directory (see [Starting Python](#Starting-Python)).
+notebook in the root directory (see [Starting Python](#Starting-Python)).
 
 ## Starting Python
 
@@ -96,7 +96,7 @@ $ jupyter notebook
 {: .bash}
 
 To start the Python interpreter without the notebook, open a terminal 
-or git bash and type the command:
+or Git Bash and type the command:
 
 ~~~
 $ python
@@ -107,7 +107,6 @@ $ python
 [continuum-mac]: http://continuum.io/downloads#_macosx
 [continuum-linux]: http://continuum.io/downloads#_unix
 [continuum-windows]: http://continuum.io/downloads#_windows
-[data-zip]: {{site.github.repository_url}}/blob/gh-pages/files/python-novice-gapminder-data.zip?raw=true
 [gapminder]: http://gapminder.org
 [jupyter]: http://jupyter.org/
 [jupyter-install]: http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip
