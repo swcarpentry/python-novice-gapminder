@@ -21,23 +21,24 @@ keypoints:
 *   They have the `.py` extension to let everyone (including the operating system) 
     know it is a Python program.
     *   This is convention, not a requirement.
-*   It's common to write them using a text editor but we are going to use the Jupyter Notebook.
+*   It's common to write them using a text editor but we are going to use
+    the [Jupyter Notebook][jupyter].
 *   The bit of extra setup is well worth it because the Notebook provides code completion 
     and other helpful features.
-*   Notebook files have the extension ".ipynb" to distinguish them from plain-text Python programs.
+*   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
+    *   Can export as "pure Python" to run from the command line.
 
 ## Use the Jupyter Notebook for editing and running Python.
 
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
-    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation 
-        instructions.
+    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
 
     ~~~
     $ jupyter notebook
     ~~~
-    {: .source}
+    {: .python}
 
 *   This will start a Jupyter Notebook server and open your default web browser. 
 *   The server runs locally on your machine only and does not use an internet connection.
@@ -45,17 +46,13 @@ keypoints:
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
 *   This has several advantages:
-	- You can easily type, edit, and copy and paste blocks of code.
-	- Tab complete allows you to easily access the names of things you are 
-    using and learn more about them.
-	- It allows you to annotate your code with links, different sized text, bullets, 
-    etc to make it more accessible to you and your collaborators.
-	- It allows you to display figures next to the code that produces them to 
-    tell a complete story of the analysis.
-*   The notebook is stored as JSON but can be saved as a .py file if you would
-    like to run it from the bash shell or a python interpreter.
-*   Just like a webpage, the saved notebook looks different to what you see when 
-    it gets rendered by your browser.
+    *   You can easily type, edit, and copy and paste blocks of code.
+    *   Tab complete allows you to easily access the names of things you are using
+        and learn more about them.
+    *   It allows you to annotate your code with links, different sized text, bullets, etc.
+        to make it more accessible to you and your collaborators.
+    *   It allows you to display figures next to the code that produces them
+        to tell a complete story of the analysis.
 
 FIXME: diagram
 
@@ -74,8 +71,8 @@ FIXME: diagram
 
 > ## Code vs. Text
 >
-> We often use the term "code" to mean "the source code of 
-> software written in a language such as Python". 
+> We often use the term "code" to mean
+> "the source code of software written in a language such as Python". 
 > A "code cell" in a Notebook is a cell that contains software;
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
@@ -91,8 +88,8 @@ FIXME: diagram
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
-*   There are lots of shortcuts you can try out and most actions can be 
-    done with the menus at the top of the page if you forget the shortcuts.
+*   All actions can be done using the menus,
+    but there are lots of keyboard shortcuts to speed things up.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
 
 ## Use the keyboard and mouse to select and edit cells.
@@ -129,7 +126,7 @@ FIXME: diagram
 *   to create
 *   bullet lists.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 *   Use asterisks
@@ -145,7 +142,7 @@ FIXME: diagram
 1.  to create
 1.  numbered lists.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 1.  Use numbers
@@ -159,7 +156,7 @@ FIXME: diagram
 ~~~
 # A Level-1 Heading
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 # A Level-1 Heading
@@ -171,7 +168,7 @@ FIXME: diagram
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 ## A Level-2 Heading (etc.)
@@ -187,7 +184,7 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 Line breaks
@@ -206,7 +203,7 @@ Or use [named links][data_carpentry].
 
 [links]: http://datacarpentry.org
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 [Create links](http://software-carpentry.org) with `[...](...)`.
@@ -239,7 +236,7 @@ Or use [named links][data_carpentry].
 > 7 * 3
 > 2 + 1
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Change an Existing Cell from Code to Markdown
@@ -271,7 +268,7 @@ Or use [named links][data_carpentry].
 > ~~~
 > $\Sigma_{i=1}^{N} 2^{-i} \approx 1$
 > ~~~
-> {: .source}
+> {: .python}
 >
 > (It's probably easier to copy and paste.)
 > What does it display?
@@ -279,4 +276,5 @@ Or use [named links][data_carpentry].
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
+[jupyter]: http://jupyter.org/
 [markdown]: https://en.wikipedia.org/wiki/Markdown

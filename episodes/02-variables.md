@@ -59,15 +59,6 @@ Ahmed is 42 years old
 *   `print` automatically puts a single space between items to separate them.
 *   And wraps around to a new line at the end.
 
-## Variables persist between cells.
-
-*   Variables defined in one cell exist in all other cells once executed, 
-    so the relative location of cells in the notebook do not matter (i.e., cells
-    lower down can still affect those above).
-*   Notebook cells are just a way to organize a program;
-    as far as Python is concerned,
-    all of the source code is one long set of instructions.
-
 ## Variables must be created before they are used.
 
 *   If a variable doesn't exist yet, or if the name has been mis-spelled,
@@ -90,6 +81,15 @@ NameError: name 'last_name' is not defined
 
 *   The last line of an error message is usually the most informative.
 *   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
+
+> ## Variables Persist Between Cells
+> Variables defined in one cell exist in all other cells once executed,
+> so the relative location of cells in the notebook do not matter
+> (i.e., cells lower down can still affect those above).
+> Remember: Notebook cells are just a way to organize a program:
+> as far as Python is concerned,
+> all of the source code is one long set of instructions.
+{: .callout}
 
 ## Variables can be used in calculations.
 
@@ -142,10 +142,13 @@ sod
 ## Use the built-in function `len` to find the length of a string.
 
 ~~~
-element = 'helium'
-print(len(helium))
+print(len('helium'))
 ~~~
 {: .python}
+~~~
+6
+~~~
+{: .output}
 
 *   Nested functions are evaluated from the inside out,
     just like in mathematics.
@@ -187,7 +190,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > lowest = highest
 > highest = temp
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Predicting Values
@@ -201,7 +204,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > position = initial
 > initial = "right"
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Challenge
