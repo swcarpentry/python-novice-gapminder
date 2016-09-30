@@ -108,6 +108,7 @@ pythonic behavior.
 *   Usually don't just print a slice.
 *   All the statistical operators that work on entire dataframes
     work the same way on slices.
+*   E.g., calculate max of a slice.
 
 ~~~
 print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
