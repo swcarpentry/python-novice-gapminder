@@ -19,7 +19,9 @@ keypoints:
 ## Use the Pandas library to do statistics on tabular data.
 
 *   Pandas is a widely-used Python library for statistics, particularly on tabular data.
-    *   Borrows many features from R's dataframes.
+*   Borrows many features from R's dataframes.
+    *   A 2-dimenstional table whose columns have names
+        and potentially have different data types.
 *   Load it with `import pandas`.
 *   Read a Comma Separate Values (CSV) data file with `pandas.read_csv`.
     *   Argument is the name of the file to be read.
