@@ -361,7 +361,7 @@ final velocity: 30.0
 >
 > That function would typically be used within a `for` loop, but Pandas has
 > a different, more efficient way of doing the same thing, and that is by
-> *applying* a function to a data frame or a portion of a data frame.  Here
+> *applying* a function to a dataframe or a portion of a dataframe.  Here
 > is an example, using the definition above.
 >
 > ~~~
@@ -372,7 +372,7 @@ final velocity: 30.0
 >
 > There is a lot in that second line, so let's take it piece by piece.
 > On the right side of the `=` we start with `data['lifeExp']`, which is the
-> column in the data frame called `data` labeled `lifExp`.  We use the
+> column in the dataframe called `data` labeled `lifExp`.  We use the
 > `apply()` to do what it says, apply the `calculate_life_quartile` to the
-> value of this column for every row in the data frame.
+> value of this column for every row in the dataframe.
 {: .callout}

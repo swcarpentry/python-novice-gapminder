@@ -121,12 +121,12 @@ I know...
 *   ...that there is no magic: the programs they use are no different 
     in principle from those they build
 *   ...how to assign values to variables
-*   ...what integers, floats, strings, NumPy arrays, and Pandas data frames are
+*   ...what integers, floats, strings, NumPy arrays, and Pandas dataframes are
 *   ...how to trace the execution of a `for` loop
 *   ...how to trace the execution of `if`/`else` statements
 *   ...how to create and index lists
 *   ...how to create and index NumPy arrays
-*   ...how to create and index Pandas data frames
+*   ...how to create and index Pandas dataframes
 *   ...how to create time series plots
 *   ...the difference between defining and calling a function
 *   ...where to find documentation on standard libraries
@@ -137,7 +137,7 @@ I know...
 ### Summative Assessment
 
 *   Midpoint: create time-series plot for each file in a directory.
-*   Final: extract data from Pandas data frame
+*   Final: extract data from Pandas dataframe
     and create comparative multi-line time series plot.
 
 ### [Running and Quitting Interactively]({{page.root}}/01-run-quit/) (9:00)
@@ -216,20 +216,20 @@ I know...
 *   Teaching: 10 min
     *   Import the Pandas library.
     *   Use Pandas to load a simple CSV data set.
-    *   Get some basic information about a Pandas Data frame.
+    *   Get some basic information about a Pandas DataFrame.
 *   Challenges: 10 min
     *   Read the data for the Americas and display its summary statistics.
     *   What do `.head` and `.tail` do?
     *   What string(s) should you pass to `read_csv` to read files from other directories?
     *   How can you *write* CSV data?
 
-### [Data Frames]({{page.root}}/08-data-frames/) (11:15)
+### [DataFrames]({{page.root}}/08-data-frames/) (11:15)
 
 *   Teaching: 15 min
-    *   Select individual values from a Pandas data frame.
-    *   Select entire rows or entire columns from a data frame.
-    *   Select a subset of both rows and columns from a data frame in a single operation.
-    *   Select a subset of a data frame by a single Boolean criterion.
+    *   Select individual values from a Pandas dataframe.
+    *   Select entire rows or entire columns from a dataframe.
+    *   Select a subset of both rows and columns from a dataframe in a single operation.
+    *   Select a subset of a dataframe by a single Boolean criterion.
 *   Challenges: 15 min
     *   What expression will find the Per Capita GDP of Serbia in 2007?
     *   What rule governs what is (or isn't) included in numerical and named slices in Pandas?
