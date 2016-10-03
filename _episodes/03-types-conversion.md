@@ -287,8 +287,8 @@ first is 2 and second is 5
 
 > ## Strings to Numbers
 >
-> Where reasonable, `float` will convert a string to a floating point number,
-> and `int` will convert a floating point number to an integer:
+> Where reasonable, `float()` will convert a string to a floating point number,
+> and `int()` will convert a floating point number to an integer:
 >
 > ~~~
 > print("string to float:", float("3.4"))
@@ -319,9 +319,10 @@ first is 2 and second is 5
 > ~~~
 > {: .error}
 >
-> Given this information,
-> what do you expect this program to do?
+> Given this information, what do you expect the following program to do?
+>
 > What does it actually do?
+>
 > Why do you think it does that?
 >
 > ~~~
