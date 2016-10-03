@@ -1,7 +1,7 @@
 ---
 title: "For Loops"
 teaching: 10
-exercises: 10
+exercises: 15
 questions:
 - "How can I make a program do many things?"
 objectives:
@@ -11,8 +11,9 @@ objectives:
 keypoints:
 - "A *for loop* executes commands once for each value in a collection."
 - "The first line of the `for` loop must end with a colon, and the body must be indented."
+- "Indentation is always meaningful in Python."
 - "A `for` loop is made up of a collection, a loop variable, and a body."
-- "Loop variables can be called anything."
+- "Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable)."
 - "The body of a loop can contain many statements."
 - "Use `range` to iterate over a sequence of numbers."
 - "The Accumulator pattern turns many values into one."
@@ -65,6 +66,24 @@ print(number)
 IndentationError: expected an indented block
 ~~~
 {: .error}
+
+*   Indentation is always meaningful in Python.
+
+~~~
+firstName="Jon"
+  lastName="Smith"
+~~~
+{: .python}
+~~~
+  File "<ipython-input-7-f65f2962bf9c>", line 2
+    lastName="Smith"
+    ^
+IndentationError: unexpected indent
+~~~
+{: .error}
+
+*   This error can be fixed by removing the extra spaces
+    at the beginning of the second line.
 
 ## A `for` loop is made up of a collection, a loop variable, and a body.
 
@@ -120,8 +139,8 @@ for p in primes:
     *   Exactly the legal indices of a list or character string of length N
 
 ~~~
-print('a range is not a list:', range(3))
-for number in range(3):
+print('a range is not a list: range(0, 3)')
+for number in range(0,3):
     print(number)
 ~~~
 {: .python}
@@ -248,16 +267,39 @@ print(total)
 > {: .python}
 {: .challenge}
 
-> ## Indentation Errors
+> ## Identifying Variable Name Errors
 >
-> What kind of error does Python report
-> when we try to run the following program?
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code and read the error message.
+>    What type of `NameError` do you think this is?
+>    Is it a string with no quotes, a misspelled variable, or a 
+>    variable that should have been defined but was not?
+> 3. Fix the error.
+> 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 > ~~~
-> for char in 'helium':
-> print char
+> for number in range(10):
+>     # use a if the number is a multiple of 3, otherwise use b
+>     if (Number % 3) == 0:
+>         message = message + a
+>     else:
+>         message = message + "b"
+> print(message)
 > ~~~
 > {: .python}
+{: .challenge}
+
+> ## Identifying Item Errors
 >
-> Is this a syntax error or a runtime error?
+> 1. Read the code below and try to identify what the errors are
+>    *without* running it.
+> 2. Run the code, and read the error message. What type of error is it?
+> 3. Fix the error.
+>
+> ~~~
+> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+> print('My favorite season is ', seasons[4])
+> ~~~
+> {: .python}
 {: .challenge}

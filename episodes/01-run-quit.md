@@ -18,22 +18,27 @@ keypoints:
 ---
 ## Python programs are plain text files.
 
-*   They have the ".py" extension to let everyone know (including the operating system) it is a Python program.
-*   It's common to write them using a text editor but we are going to use the Jupyter Notebook.
-*   The bit of extra setup is well worth it because the Notebook provides code completion and other helpful features.
-*   Notebook files have the extension ".ipynb" to distinguish them from plain-text Python programs.
+*   They have the `.py` extension to let everyone (including the operating system) 
+    know it is a Python program.
+    *   This is convention, not a requirement.
+*   It's common to write them using a text editor but we are going to use
+    the [Jupyter Notebook][jupyter].
+*   The bit of extra setup is well worth it because the Notebook provides code completion 
+    and other helpful features.
+*   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
+    *   Can export as "pure Python" to run from the command line.
 
 ## Use the Jupyter Notebook for editing and running Python.
 
 *   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
-    *   See [the setup instructions]({{ site.github.url }}/setup/) for Anaconda installation instructions.
+    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
 *   It also installs all the extra libraries it needs to run.
 *   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
 
     ~~~
     $ jupyter notebook
     ~~~
-    {: .source}
+    {: .python}
 
 *   This will start a Jupyter Notebook server and open your default web browser. 
 *   The server runs locally on your machine only and does not use an internet connection.
@@ -41,12 +46,13 @@ keypoints:
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
 *   This has several advantages:
-	- You can easily type, edit, and copy and paste blocks of code.
-	- Tab complete allows you to easily access the names of things you are using and learn more about them.
-	- It allows you to annotate your code with links, different sized text, bullets, etc to make it more accessible to you and your collaborators.
-	- It allows you to display figures next to the code that produces them to tell a complete story of the analysis.
-*   The notebook is stored as JSON but can be saved as a .py file if you would like to run it from the bash shell or a python interpreter.
-*   Just like a webpage, the saved notebook looks different to what you see when it gets rendered by your browser.
+    *   You can easily type, edit, and copy and paste blocks of code.
+    *   Tab complete allows you to easily access the names of things you are using
+        and learn more about them.
+    *   It allows you to annotate your code with links, different sized text, bullets, etc.
+        to make it more accessible to you and your collaborators.
+    *   It allows you to display figures next to the code that produces them
+        to tell a complete story of the analysis.
 
 FIXME: diagram
 
@@ -54,7 +60,8 @@ FIXME: diagram
 >
 > *   The notebook file is stored in a format called JSON.
 > *   Just like a webpage, what's saved looks different from what you see in your browser.
-> *   But this format allows Jupyter to mix software (in several languages) with documentation and graphics, all in one file.
+> *   But this format allows Jupyter to mix software (in several languages) with documentation 
+      and graphics, all in one file.
 {: .callout}
 
 ## The Notebook has Control and Edit modes.
@@ -64,40 +71,51 @@ FIXME: diagram
 
 > ## Code vs. Text
 >
-> We often use the term "code" to mean "the source code of software written in a language such as Python".
+> We often use the term "code" to mean
+> "the source code of software written in a language such as Python". 
 > A "code cell" in a Notebook is a cell that contains software;
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press "esc" and "return" alternately, you will see the outer border of your code cell change from blue to green.
-    *   The difference in colour is subtle.
-*   These are the control (blue) and edit (green) modes of your notebook.
-*   If you use the "esc" and "return" keys to make the surround blue and then press the "H" key, a list of all the shortcut keys will appear.
-*   When in control mode (esc/blue),
+*   If you press "esc" and "return" alternately,
+    the outer border of your code cell will change from gray to green.
+    *   The difference in color is subtle.
+*   These are the control (gray) and edit (green) modes of your notebook.
+*   If you use the "esc" and "return" keys to make the surround gray
+    and then press the "H" key,
+    a list of all the shortcut keys will appear.
+*   When in control mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
-*   There are lots of shortcuts you can try out and most actions can be done with the menus at the top of the page if you forget the shortcuts.
+*   All actions can be done using the menus,
+    but there are lots of keyboard shortcuts to speed things up.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
 
 ## Use the keyboard and mouse to select and edit cells.
 
-*   Pressing the "return" key turns the surround green to signify edit mode and you can type into the cell.
+*   Pressing the "return" key turns the surround green to 
+    signify edit mode and you can type into the cell.
 *   Because we want to be able to write many lines of code in a single cell,
     pressing the "return" key when the border is green moves the cursor to the next line in the cell
     just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
 *   Pressing the "return" key and the "shift" key together will execute the contents of the cell.
-*   Notice that the "return" and "shift" keys on the right of the keyboard are right next to each other.
+*   Notice that the "return" and "shift" keys on the 
+    right of the keyboard are right next to each other.
 
 ## The Notebook will turn Markdown into pretty-printed documentation.
 
 *   Notebooks can also render [Markdown][markdown].
-    *   A simple plain-text format for writing lists, links, and other things that might go into a web page.
+    *   A simple plain-text format for writing lists, links, 
+        and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-*   Turn the current cell into a Markdown cell by entering the control mode (esc/blue) and press the "M" key.
-*   The `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in Markdown.
-*   Turn the current cell into a Code cell by entering the control mode (esc/blue) and press the "Y" key.
+*   Turn the current cell into a Markdown cell by entering 
+    the control mode (esc/gray) and press the "M" key.
+*   `In [ ]:` will disappear to show it is no longer a code cell
+    and you will be able to write in Markdown.
+*   Turn the current cell into a Code cell
+    by entering the control mode (esc/gray) and press the "Y" key.
 
 ## Markdown does most of what HTML does.
 
@@ -108,7 +126,7 @@ FIXME: diagram
 *   to create
 *   bullet lists.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 *   Use asterisks
@@ -124,7 +142,7 @@ FIXME: diagram
 1.  to create
 1.  numbered lists.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 1.  Use numbers
@@ -138,7 +156,7 @@ FIXME: diagram
 ~~~
 # A Level-1 Heading
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 # A Level-1 Heading
@@ -150,7 +168,7 @@ FIXME: diagram
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 ## A Level-2 Heading (etc.)
@@ -166,7 +184,7 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 Line breaks
@@ -185,7 +203,7 @@ Or use [named links][data_carpentry].
 
 [links]: http://datacarpentry.org
 ~~~
-{: .source}
+{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 [Create links](http://software-carpentry.org) with `[...](...)`.
@@ -210,19 +228,21 @@ Or use [named links][data_carpentry].
 
 > ## More Math
 >
-> What is displayed when a Python cell in a notebook that contains several calculations is executed?
+> What is displayed when a Python cell in a notebook
+> that contains several calculations is executed?
 > For example, what happens when this cell is executed?
 >
 > ~~~
 > 7 * 3
 > 2 + 1
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Change an Existing Cell from Code to Markdown
 >
-> What happens if you write some Python in a code cell and then you switch it to a Markdown cell?
+> What happens if you write some Python in a code cell
+> and then you switch it to a Markdown cell?
 > For example,
 > put the following in a code cell:
 >
@@ -238,7 +258,7 @@ Or use [named links][data_carpentry].
 > What happened and how might this be useful?
 {: .challenge}
 
-> ## Mathematics
+> ## Equations
 >
 > Standard Markdown (such as we're using for these notes) won't render equations,
 > but the Notebook will.
@@ -246,9 +266,9 @@ Or use [named links][data_carpentry].
 > and enter the following:
 >
 > ~~~
-> $\Sigma_{i=1}^{N} 2^{-i} \approx 1$
+> $\sum_{i=1}^{N} 2^{-i} \approx 1$
 > ~~~
-> {: .source}
+> {: .python}
 >
 > (It's probably easier to copy and paste.)
 > What does it display?
@@ -256,4 +276,5 @@ Or use [named links][data_carpentry].
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
+[jupyter]: http://jupyter.org/
 [markdown]: https://en.wikipedia.org/wiki/Markdown
