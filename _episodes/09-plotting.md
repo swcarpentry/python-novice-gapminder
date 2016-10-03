@@ -1,7 +1,7 @@
 ---
 title: "Plotting"
-teaching: 10
-exercises: 10
+teaching: 15
+exercises: 15
 questions:
 - "How can I plot my data?"
 objectives:
@@ -9,7 +9,7 @@ objectives:
 - "Create a scatter plot showing relationship between two data sets."
 keypoints:
 - "`matplotlib` is the most widely used scientific plotting library in Python."
-- "Plot data directly from a Pandas data frame."
+- "Plot data directly from a Pandas dataframe."
 - "Select and transform data, then plot it."
 - "Many styles of plot are available."
 - "Can plot many sets of data together."
@@ -37,9 +37,9 @@ plt.ylabel('Doubles')
 ~~~
 {: .python}
 
-## Plot data directly from a Pandas data frame.
+## Plot data directly from a Pandas dataframe.
 
-*   We can also plot Pandas data frames.
+*   We can also plot Pandas dataframes.
 *   This implicitly uses `matplotlib.pyplot`.
 
 ~~~
@@ -69,7 +69,7 @@ plt.xticks(rotation=90)
 
 ~~~
 plt.style.use('ggplot')
-data.T.plot()
+data.T.plot(kind='bar')
 plt.xticks(rotation=90)
 plt.ylabel('GDP per capita')
 ~~~
@@ -77,7 +77,7 @@ plt.ylabel('GDP per capita')
 
 *   Extract years from the last four characters of the columns' names.
     *   Store these in a list using the Accumulator pattern.
-*   Can also convert data frame data to a list.
+*   Can also convert dataframe data to a list.
 
 ~~~
 # Accumulator pattern to collect years (as character strings).

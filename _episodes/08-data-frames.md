@@ -1,14 +1,14 @@
 ---
-title: "Pandas Data Frames"
-teaching: 10
-exercises: 10
+title: "Pandas DataFrames"
+teaching: 15
+exercises: 15
 questions:
-- "How can do statistical analysis of tabular data?"
+- "How can I do statistical analysis of tabular data?"
 objectives:
-- "Select individual values from a Pandas data frame."
-- "Select entire rows or entire columns from a data frame."
-- "Select a subset of both rows and columns from a data frame in a single operation."
-- "Select a subset of a data frame by a single Boolean criterion."
+- "Select individual values from a Pandas dataframe."
+- "Select entire rows or entire columns from a dataframe."
+- "Select a subset of both rows and columns from a dataframe in a single operation."
+- "Select a subset of a dataframe by a single Boolean criterion."
 keypoints:
 - "Use `DataFrame.ix[..., ...]` to select values by location."
 - "Use `:` on its own to mean all columns or all rows."
@@ -106,8 +106,9 @@ pythonic behavior.
 ## Result of slicing can be used in further operations.
 
 *   Usually don't just print a slice.
-*   All the statistical operators that work on entire data frames
+*   All the statistical operators that work on entire dataframes
     work the same way on slices.
+*   E.g., calculate max of a slice.
 
 ~~~
 print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
@@ -136,7 +137,7 @@ dtype: float64
 ## Use comparisons to select data based on value.
 
 *   Comparison is applied element by element.
-*   Returns a similarly-shaped data frame of `True` and `False`.
+*   Returns a similarly-shaped dataframe of `True` and `False`.
 
 ~~~
 # Use a subset of data to keep output readable.
@@ -218,7 +219,7 @@ max      13450.401510    16361.876470    18965.055510
 >
 > df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
-> {: .source}
+> {: .python}
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}
@@ -264,7 +265,7 @@ max      13450.401510    16361.876470    18965.055510
 > {: .python}
 {: .challenge}
 
-> ## Practice with Selection.
+> ## Practice with Selection
 >
 > Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
 > Write an expression to select each of the following:
@@ -272,7 +273,8 @@ max      13450.401510    16361.876470    18965.055510
 > 1.  GDP per capita for all countries in 1982.
 > 2.  GDP per capita for Denmark for all years.
 > 3.  GDP per capita for all countries for years *after* 1985.
-> 4.  GDP per capita for each country in 2007 as a multiple of GDP per capita for that country in 1952.
+> 4.  GDP per capita for each country in 2007 as a multiple of 
+>     GDP per capita for that country in 1952.
 {: .challenge}
 
 > ## Interpretation

@@ -1,5 +1,5 @@
 ---
-title: "Lists and Indexing"
+title: "Lists"
 teaching: 10
 exercises: 10
 questions:
@@ -42,9 +42,7 @@ length: 5
 
 ## Use an item's index to fetch it from a list.
 
-*   Each value in a list is stored in a particular location.
-*   Locations are numbered from 0 rather than 1.
-*   Use the location's index in square brackets to access the value it contains.
+*   Just like strings.
 
 ~~~
 print('zeroth item of pressures:', pressures[0])
@@ -118,7 +116,7 @@ primes after removing last item: [2, 3, 5, 7]
 *   Use `[]` on its own to represent a list that doesn't contain any values.
     *   "The zero of lists."
 *   Helpful as a starting point for collecting values
-    (which we will see in the [next episode]({{site.github.url}}/09-for-loops/)).
+    (which we will see in the [next episode]({{page.root}}/09-for-loops/)).
 
 ## Lists may contain values of different types.
 
@@ -167,7 +165,7 @@ TypeError: 'str' object does not support item assignment
 ## Indexing beyond the end of the collection is an error.
 
 *   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of [runtime error]({{ site.github.url }}/05-error-messages/).
+    *   This is a kind of [runtime error]({{ page.root }}/05-error-messages/).
     *   Cannot be detected as the code is parsed
         because the index might be calculated based on data.
 
@@ -179,26 +177,6 @@ print('99th element of element is:', element[99])
 IndexError: string index out of range
 ~~~
 {: .output}
-
-> ## Slicing
->
-> What does the following program print?
->
-> ~~~
-> element = 'carbon'
-> print('element[1:3] is:', element[1:3])
-> ~~~
-> {: .python}
-> ~~~
-> element[1:3] is: ar
-> ~~~
-> {: .output}
->
-> 1.  What does `thing[low:high]` do?
-> 2.  What does `thing[low:]` (without a value after the colon) do?
-> 3.  What does `thing[:high]` (without a value before the colon) do?
-> 4.  What does `thing[:]` (just a colon) do?
-{: .challenge}
 
 > ## Fill in the Blanks
 >
@@ -289,6 +267,52 @@ IndexError: string index out of range
 > element = 'lithium'
 > print(element[0:20])
 > print(element[-1:3])
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Sort and Sorted
+>
+> What do these two programs print?
+> In simple terms, explain the difference between `sorted(letters)` and `letters.sort()`.
+>
+> ~~~
+> # Program A
+> letters = list('gold')
+> result = sorted(letters)
+> print('letters is', letters, 'and result is', result)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # Program B
+> letters = list('gold')
+> result = letters.sort()
+> print('letters is', letters, 'and result is', result)
+> ~~~
+> {: .python}
+{: .challenge}
+
+> ## Copying (or Not)
+>
+> What do these two programs print?
+> In simple terms, explain the difference between `new = old` and `new = old[:]`.
+>
+> ~~~
+> # Program A
+> old = list('gold')
+> new = old      # simple assignment
+> new[0] = 'D'
+> print('new is', new, 'and old is', old)
+> ~~~
+> {: .python}
+>
+> ~~~
+> # Program B
+> old = list('gold')
+> new = old[:]   # assigning a slice
+> new[0] = 'D'
+> print('new is', new, 'and old is', old)
 > ~~~
 > {: .python}
 {: .challenge}

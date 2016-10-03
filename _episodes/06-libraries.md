@@ -1,7 +1,7 @@
 ---
 title: "Libraries"
-teaching: 5
-exercises: 5
+teaching: 10
+exercises: 10
 questions:
 - "How can I use software that other people have written?"
 - "How can I find out what that software does?"
@@ -45,7 +45,8 @@ cos(pi) is -1.0
 {: .output}
 
 *   Have to refer to each item with the library's name.
-    *   `math.cos(pi)` won't work: the reference to `pi` doesn't somewhow "inherit" the function's reference to `math`.
+    *   `math.cos(pi)` won't work: the reference to `pi`
+        doesn't somehow "inherit" the function's reference to `math`.
 
 ## Use `help` to find out more about a library's contents.
 
@@ -89,7 +90,7 @@ FUNCTIONS
 *   Then refer to them directly without library name as prefix.
 
 ~~~
-from math load cos, pi
+from math import cos, pi
 
 print('cos(pi) is', cos(pi))
 ~~~
@@ -120,23 +121,22 @@ cos(pi) is -1.0
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
-> ## Locating the Right Library
->
-> You want to select a random value from your data:
-> ~~~
-> ids = [1, 2, 3, 4, 5, 6]
-> ~~~
->
-> 1. What [standard library][stdlib]
->    would you most expect to help?
-> 2. Which function would you select from that library? Are there alternatives?
-{: .challenge}
-
 > ## Exploring the Math Library
 >
 > 1. What function from the `math` library can you use to calculate a square root
 >    *without* using `sqrt`?
 > 2. Since the library contains this function, why does `sqrt` exist?
+{: .challenge}
+
+> ## Locating the Right Library
+>
+> You want to select a random character from a string:
+> ~~~
+> bases = 'ACTTGCTTGAC'
+> ~~~
+>
+> 1. What [standard library][stdlib] would you most expect to help?
+> 2. Which function would you select from that library? Are there alternatives?
 {: .challenge}
 
 > ## When Is Help Available?
@@ -163,7 +163,7 @@ cos(pi) is -1.0
 > angle = ____.degrees(____.pi / 2)
 > print(____)
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Importing Specific Items
@@ -177,7 +177,20 @@ cos(pi) is -1.0
 > angle = degrees(pi / 2)
 > print(angle)
 > ~~~
-> {: .source}
+> {: .python}
+{: .challenge}
+
+> ## Identifying Input Variable Range Error
+>
+> 1. Read the code below and try to identify what the errors are without running it.
+> 2. Run the code, and read the error message. What type of error is it?
+> 3. Fix the error.
+>
+> ~~~
+> from math import log
+> log(0)
+> ~~~
+> {: .python}
 {: .challenge}
 
 [pypi]: https://pypi.python.org/pypi/

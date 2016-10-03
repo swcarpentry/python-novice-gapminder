@@ -54,7 +54,8 @@ dtype: float64
     *   `*` meaning "match zero or more characters"
     *   `?` meaning "match exactly one character"
 *   Provided in Python by the `glob` library, which provides a function also called `glob`.
-*   E.g., `glob.glob('*.txt')` matches all files in the current directory whose names end with `.txt`.
+*   E.g., `glob.glob('*.txt')` matches all files in the current directory 
+    whose names end with `.txt`.
 *   Result is a (possibly empty) list of character strings.
 
 ~~~
@@ -86,7 +87,7 @@ all PDB files: []
 ~~~
 for filename in glob.glob('data/*.csv'):
     data = pandas.read_csv(filename)
-    print(filename, data.['gdpPercap_1952'].min())
+    print(filename, data['gdpPercap_1952'].min())
 ~~~
 {: .python}
 ~~~
@@ -114,7 +115,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 4. 1 and 2 are not matched.
 {: .challenge}
 
-> ## Maximum File Size
+> ## Minimum File Size
 >
 > Modify this program so that it prints the number of records in
 > the file that has the fewest records.
@@ -122,15 +123,15 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > ~~~
 > fewest = ____
 > for filename in glob.glob('data/*.csv'):
->     fewest = ____
+>     fewest = min(____, ____)
 > print('smallest file has', fewest, 'records')
 > ~~~
-> {: .source}
+> {: .python}
 {: .challenge}
 
 > ## Comparing Data
 >
-> Write a short program that reads in the regional data sets
+> Write a program that reads in the regional data sets
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 {: .challenge}
