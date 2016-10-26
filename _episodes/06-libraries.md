@@ -126,6 +126,14 @@ cos(pi) is -1.0
 > 1. What function from the `math` library can you use to calculate a square root
 >    *without* using `sqrt`?
 > 2. Since the library contains this function, why does `sqrt` exist?
+>
+> > ## Solution
+> > 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`
+> > 2. The `sqrt(x)` function (like much of the `math` library) has it's origins in
+> >    C's math library. Consequently, it might be somewhat faster than `pow(x,y)`.
+> >    Also, it might be more readable than `pow(x, 0.5)` when implementing equations.
+> >    However, `sqrt(x)` doesn't support negative arguments.
+> {: .solution}
 {: .challenge}
 
 > ## Locating the Right Library
