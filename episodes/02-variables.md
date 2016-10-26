@@ -185,13 +185,23 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > In simple terms, what do the last three lines of this program do?
 >
 > ~~~
-> lowest = 1.0
-> highest = 3.0
-> temp = lowest
-> lowest = highest
-> highest = temp
+> x = 1.0
+> y = 3.0
+> swap = x
+> x = y
+> y = swap
 > ~~~
 > {: .python}
+> > ## Solution
+> >
+> > ~~~
+> > swap = x  #  x->1.0 y->3.0 swap->1.0
+> > x = y     #  x->3.0 y->3.0 swap->1.0
+> > y = swap  #  x->3.0 y->1.0 swap->1.0
+> > ~~~
+> > These three lines exchange the values in `x` and `y` using the `swap`
+> > variable for temporary storage. This is a fairly common programming idiom.
+>{: .solution}
 {: .challenge}
 
 > ## Predicting Values
