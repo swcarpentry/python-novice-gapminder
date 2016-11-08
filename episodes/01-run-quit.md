@@ -54,7 +54,8 @@ keypoints:
     *   It allows you to display figures next to the code that produces them
         to tell a complete story of the analysis.
 
-FIXME: diagram
+![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
+*Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
 > ## How It's Stored
 >
