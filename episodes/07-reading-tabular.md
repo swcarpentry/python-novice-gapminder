@@ -229,7 +229,16 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > (which should be in the same directory as `gapminder_gdp_oceania.csv`)
 > into a variable called `americas`
 > and display its summary statistics.
+>
+> > ## Solution
+> > Test
+> > ~~~
+> > americas = pandas.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
+> > ~~~
+> {: .solution}
 {: .challenge}
+
+
 
 > ## Inspecting Data.
 >
@@ -240,6 +249,74 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > 1.  What method call will display the first three rows of this data?
 > 2.  What method call will display the last three columns of this data?
 >     (Hint: you may need to change your view of the data.)
+>
+> > ## Solution
+> > 1.
+> > ~~~
+> > americas.head(n=3)
+> > ~~~
+> >{: .python}
+> > 
+> > The output is
+> >~~~
+> >          continent  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
+> >country                                                               
+> >Argentina  Americas     5911.315053     6856.856212     7133.166023   
+> >Bolivia    Americas     2677.326347     2127.686326     2180.972546   
+> >Brazil     Americas     2108.944355     2487.365989     3336.585802   
+> >
+> >           gdpPercap_1967  gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  \
+> >country                                                                     
+> >Argentina     8052.953021     9443.038526    10079.026740     8997.897412   
+> >Bolivia       2586.886053     2980.331339     3548.097832     3156.510452   
+> >Brazil        3429.864357     4985.711467     6660.118654     7030.835878   
+> >
+> >           gdpPercap_1987  gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  \
+> >country                                                                     
+> >Argentina     9139.671389     9308.418710    10967.281950     8797.640716   
+> >Bolivia       2753.691490     2961.699694     3326.143191     3413.262690   
+> >Brazil        7807.095818     6950.283021     7957.980824     8131.212843   
+> >
+> >           gdpPercap_2007  
+> >country                    
+> >Argentina    12779.379640  
+> >Bolivia       3822.137084  
+> >Brazil        9065.800825 
+> > ~~~ 
+> >{: .output}
+> > 2.
+> > ~~~
+> > americas.T.tail(n=3)
+> > ~~~
+> >{: .python}
+> > The output is then
+> > ~~~
+> >           continent  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
+> > country                                                               
+> > Argentina  Americas     5911.315053     6856.856212     7133.166023   
+> > Bolivia    Americas     2677.326347     2127.686326     2180.972546   
+> > Brazil     Americas     2108.944355     2487.365989     3336.585802   
+> > 
+> >            gdpPercap_1967  gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  \
+> > country                                                                     
+> > Argentina     8052.953021     9443.038526    10079.026740     8997.897412   
+> > Bolivia       2586.886053     2980.331339     3548.097832     3156.510452   
+> > Brazil        3429.864357     4985.711467     6660.118654     7030.835878   
+> > 
+> >            gdpPercap_1987  gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  \
+> > country                                                                     
+> > Argentina     9139.671389     9308.418710    10967.281950     8797.640716   
+> > Bolivia       2753.691490     2961.699694     3326.143191     3413.262690   
+> > Brazil        7807.095818     6950.283021     7957.980824     8131.212843   
+> > 
+> >            gdpPercap_2007  
+> > country                    
+> > Argentina    12779.379640  
+> > Bolivia       3822.137084  
+> > Brazil        9065.800825  
+> > ~~~ 
+> >{: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Reading Files in Other Directories
@@ -259,6 +336,14 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > {: .output}
 >
 > What value(s) should you pass to `read_csv` to read `microbes.csv` in `analysis.ipynb`?
+> 
+> > ## Solution
+> > Like this!
+> > ~~~
+> > data_microbes = pandas.read_csv('../field_data/microbes.csv')
+> > ~~~
+> >{: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Writing Data
@@ -268,4 +353,16 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > Applying what you've learned about reading from files,
 > write one of your dataframes to a file called `processed.csv`.
 > You can use `help` to get information on how to use `to_csv`.
+> > ## Solution
+> > Like this!
+> > ~~~
+> > americas.to_csv('processed.csv')
+> > ~~~
+> >{: .python}
+> > For help, you could execute
+> > ~~~
+> > help(americas.to_csv)
+> > ~~~
+> >{: .python}
+> {: .solution}
 {: .challenge}
