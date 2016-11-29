@@ -46,8 +46,8 @@ if mass > 3.0:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 3.0:
-        print(mass, 'is large')
+    if m > 3.0:
+        print(m, 'is large')
 ~~~
 {: .python}
 ~~~
@@ -64,10 +64,10 @@ for m in masses:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 3.0:
-        print(mass, 'is large')
+    if m > 3.0:
+        print(m, 'is large')
     else:
-        print(mass, 'is small')
+        print(m, 'is small')
 ~~~
 {: .python}
 ~~~
@@ -89,12 +89,12 @@ for m in masses:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 9.0:
-        print(mass, 'is HUGE')
-    elif mass > 3.0:
-        print(mass, 'is large')
+    if m > 9.0:
+        print(m, 'is HUGE')
+    elif m > 3.0:
+        print(m, 'is large')
     else:
-        print(mass, 'is small')
+        print(m, 'is small')
 ~~~
 {: .python}
 ~~~
