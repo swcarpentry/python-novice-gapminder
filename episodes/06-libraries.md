@@ -126,17 +126,62 @@ cos(pi) is -1.0
 > 1. What function from the `math` library can you use to calculate a square root
 >    *without* using `sqrt`?
 > 2. Since the library contains this function, why does `sqrt` exist?
+>
+> > ## Solution
+> >
+> > 1. You could use the `pow` function to raise a number of interest to the power
+> >    of 1/2. To find the square root of 9, you would write `math.pow(9, 1/2)`.
+> > 2. To make the code more clear and easy to understand.
+> {: .solution}
 {: .challenge}
 
 > ## Locating the Right Library
 >
 > You want to select a random character from a string:
+>
 > ~~~
 > bases = 'ACTTGCTTGAC'
 > ~~~
+> {: .python}
 >
 > 1. What [standard library][stdlib] would you most expect to help?
 > 2. Which function would you select from that library? Are there alternatives?
+>
+> > ## Solution
+> >
+> > 1. The [random library](randomlib)
+> > 2. The string has 11 characters, each having a positional index from 0 to 10.
+> >    You could use `random.randrange` (or the alias `random.randint` if you
+> >    find that easier to remember) to get a random integer between 0 and 10, and
+> >    then pick out the character at that position:
+> >
+> >    ~~~
+> >    random_index = random.randrange(len(bases))
+> >    bases[random_index]
+> >    ~~~
+> >    {: .python}
+> >
+> >    or at one line:
+> >
+> >    ~~~
+> >    bases[random.randrange(len(bases))]
+> >    ~~~
+> >    {: .python}
+> >
+> >    Perhaps you found the `random.sample` function? It allows for slightly
+> >    less typing:
+> >
+> >    ~~~
+> >    random.sample(bases, 1)
+> >    ~~~
+> >    {: .python}
+> >
+> >    Note that this function returns a list of values. We will learn about
+> >    lists in episode 11.
+> >
+> >    There's also other functions you could use, but with more convoluted
+> >    code as a result.
+> {: .solution}
 {: .challenge}
 
 > ## When Is Help Available?
@@ -150,6 +195,11 @@ cos(pi) is -1.0
 > {: .error}
 >
 > What has your colleague forgotten to do?
+>
+> > ## Solution
+> >
+> > Importing the math library (`import math`)
+> {: .solution}
 {: .challenge}
 
 > ## Importing With Aliases
@@ -164,6 +214,31 @@ cos(pi) is -1.0
 > print(____)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > import math as m
+> > angle = m.degrees(m.pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > can bewritten as
+> >
+> > ~~~
+> > import math
+> > angle = math.degrees(math.pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > Since you just wrote the code and are familiar with it, you might actually
+> > find the first version easier to read. But when trying to read a huge piece
+> > of code written by someone else, or when getting back to your own huge piece
+> > of code after several months, non-abbreviated names are often easier, expect
+> > where there are clear abbreviation conventions.
+> {: .solution}
 {: .challenge}
 
 > ## Importing Specific Items
@@ -178,19 +253,43 @@ cos(pi) is -1.0
 > print(angle)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > from math import degrees, pi
+> > angle = degrees(pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > Most likely you find this version easier to read since it's less dense.
+> > The main reason not to use this form of import is to avoid name clashes.
+> > For instance, you wouldn't import `degrees` this way if you also wanted to
+> > use the name `degrees` for a variable or function of your own. Or if you
+> > were to also import a function named `degrees` from another library.
+> {: .solution}
 {: .challenge}
 
-> ## Identifying Input Variable Range Error
+> ## Reading Error Messages
 >
 > 1. Read the code below and try to identify what the errors are without running it.
 > 2. Run the code, and read the error message. What type of error is it?
-> 3. Fix the error.
 >
 > ~~~
 > from math import log
 > log(0)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
+> >    domain of the function.
+> > 2. You get an error of type "ValueError", indicating that the function
+> >    received an inappropriate argument value. The additional message
+> >    "math domain error" makes it clearer what the problem is.
+> {: .solution}
 {: .challenge}
 
 [pypi]: https://pypi.python.org/pypi/
