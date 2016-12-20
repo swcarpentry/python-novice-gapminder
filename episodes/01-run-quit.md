@@ -67,7 +67,7 @@ FIXME: diagram
 ## The Notebook has Control and Edit modes.
 
 *   Open a new notebook from the dropdown menu in the top right corner of the file browser page.
-*   Each notebook contains one or more cells of various types.
+*   Each notebook contains one or more cells that contain code, text, or images.
 
 > ## Code vs. Text
 >
@@ -78,11 +78,14 @@ FIXME: diagram
 {: .callout}
 
 *   If you press "esc" and "return" alternately,
-    the outer border of your code cell will change from gray to green.
+    the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
 *   These are the control (gray) and edit (green) modes of your notebook.
-*   If you use the "esc" and "return" keys to make the surround gray
-    and then press the "H" key,
+*   Control mode alows you to edit notebook-level features, and edit mode changes the content of cells.
+
+###Shortcuts
+*   If you use the "esc" key to make the surround gray
+    and then press the "H" key on your keyboard,
     a list of all the shortcut keys will appear.
 *   When in control mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
@@ -91,6 +94,23 @@ FIXME: diagram
 *   All actions can be done using the menus,
     but there are lots of keyboard shortcuts to speed things up.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
+
+> ## Control Vs. Edit
+>
+> In the Jupyter notebook page are you currently in control or edit mode?  
+> Switch between the modes. 
+> Use the shortcuts to generate a new cell
+> Use the shortcuts to delete a cell
+>
+> > ## Solution
+> >
+> > Control mode has a grey boarder and Edit mode has a green border
+> > Use "esc" and "Enter" to switch between modes
+> > You need to be in control mode (Hit "esc" if your cell is green).  Type "B" or "A".
+> > You need to be in control mode (Hit "esc" if your cell is green).  Type "X".
+> >
+> {: .solution}
+{: .challenge}
 
 ## Use the keyboard and mouse to select and edit cells.
 
