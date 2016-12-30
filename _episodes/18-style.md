@@ -28,7 +28,17 @@ keypoints:
 
 ## Use assertions to check for internal errors.
 
-FIXME
+Assertions are a simple, but powerful method for making sure that the context in which your code is executing is as you expect.
+
+~~~
+def calc_bulk_density(mass, volume):
+    '''Return dry bulk density = powder mass / powder volume.'''
+    assert volume > 0
+    return mass / volume
+~~~
+{: .python}
+
+If the assertion is False, the python interpreter raises an AssertionError runtime exception. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Assertions should contain only simple checks and never change the state of the program. For example, an assertion should never contain an assignment.
 
 ## Use docstrings to provide online help.
 
