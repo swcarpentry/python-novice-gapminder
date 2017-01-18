@@ -107,8 +107,8 @@ Age in three years: 45
 {: .output}
 
 ## Use an index to get a single character from a string.
-
-*   Sometimes called a "subscript".
+*   A string is a piece of text.
+*   The index is sometimes called a "subscript".
 *   Each character in a string is in a particular location.
 *   Use the location's index in square brackets to get the character.
 *   Locations are numbered from 0 rather than 1.
