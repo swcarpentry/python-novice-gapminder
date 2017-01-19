@@ -201,7 +201,7 @@ create new paragraphs.
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
-[links]: http://datacarpentry.org
+[data_carpentry]: http://datacarpentry.org
 ~~~
 {: .python}
   </div>
