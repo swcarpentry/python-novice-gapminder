@@ -224,6 +224,22 @@ Or use [named links][data_carpentry].
 >     *   Analyze.
 > 3.  Write up.
 > 4.  Publish.
+> 
+> > ## Solution
+> >
+> > This challenge integrates both the numbered list and bullet list. 
+> > Note that the bullet list is indented 2 spaces so that it is inline with the items of the numbered list.
+> > ~~~
+> > 1.  Get funding.
+> > 2.  Do work.
+> >     *   Design experiment.
+> >     *   Collect data.
+> >     *   Analyze.
+> > 3.  Write up.
+> > 4.  Publish.
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## More Math
