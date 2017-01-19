@@ -253,6 +253,15 @@ Or use [named links][data_carpentry].
 > 2 + 1
 > ~~~
 > {: .python}
+> 
+> > ## Solution
+> >
+> > Python returns the output of the last calculation.
+> > ~~~
+> > 3
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Change an Existing Cell from Code to Markdown
