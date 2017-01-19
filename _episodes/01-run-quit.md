@@ -281,6 +281,16 @@ Or use [named links][data_carpentry].
 > Now go back to the cell and use escape+M to switch the cell to Markdown
 > and "run" it with shift+return.
 > What happened and how might this be useful?
+> 
+> > ## Solution
+> >
+> > The python code gets treated like markdown text.
+> > The lines appear as if they are part of one contiguous paragraph. 
+> > ~~~
+> > x = 6 * 7 + 12 print(x)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Equations
