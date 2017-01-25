@@ -230,7 +230,7 @@ first is 2 and second is 5
 
 > ## Automatic Type Conversion
 >
-> What type of value is 3..25 + 4?
+> What type of value is 3.25 + 4?
 >
 > > ## Solution
 > >
