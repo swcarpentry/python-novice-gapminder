@@ -93,6 +93,14 @@ primes has become: [2, 3, 5, 7, 9]
     *   Deliberately resembles the way we refer to things in a library.
 *   We will meet other methods of lists as we go along.
     *   Use `help(list)` for a preview.
+*   `extend` is similar to `append`, except for another list.
+~~~
+twodigitprimes = [11, 13, 17, 19]
+print('primes is currently:', primes)
+primes.extend(twodigitprimes)
+print('primes has now become:', primes)
+~~~
+{: .python}
 
 ## Use `del` to remove items from a list entirely.
 
