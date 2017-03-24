@@ -127,9 +127,8 @@ h
 
 *   A slice extracts elements, based on a start and stop value
 *   A slice consists of `[start:stop]`.
-*   From the start value (inclusive) up to but not including the stop value (exclusive).
-*   So the difference between stop and start is the slice's length.
-
+*   The data specified/selected includes the start value and runs up to but excludes the stop value. So, mathematically, you might say thay a slice selects `[start:stop)`.
+*   The difference between stop and start is the slice's length.
 ~~~
 element = 'sodium'
 print(element[0:3])
