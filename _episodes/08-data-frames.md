@@ -258,7 +258,7 @@ max      13450.401510    16361.876470    18965.055510
 > When would you use these methods?
 >
 > ~~~
-> data = pandas.load_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > print(data.idxmin())
 > print(data.idxmax())
 > ~~~
