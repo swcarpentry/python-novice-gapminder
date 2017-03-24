@@ -139,12 +139,34 @@ cos(pi) is -1.0
 > ## Locating the Right Library
 >
 > You want to select a random character from a string:
+>
 > ~~~
 > bases = 'ACTTGCTTGAC'
 > ~~~
+> {: .python}
 >
 > 1. What [standard library][stdlib] would you most expect to help?
 > 2. Which function would you select from that library? Are there alternatives?
+>
+> > ## Solution
+> >
+> > 1. It seems likely that [random](https://docs.python.org/3/library/random.html)
+> >    might contain something relevant to making random choices.
+> > 2. We've used subscripts to select a character from a string, so perhaps using the
+> >    `randomint()` function to generate a random subscript would be good.
+> >    We could probably also use `randrange()` or `choice()`.
+> >
+> > Using `randomint()` we might write:
+> >
+> >~~~
+> >import random
+> >bases = 'ACTTGCTTGAC'
+> >choice = random.randint(0,len(bases)-1)
+> >bases[choice]
+> >~~~
+> > {: .python}
+> >
+> {: .solution}
 {: .challenge}
 
 > ## When Is Help Available?
