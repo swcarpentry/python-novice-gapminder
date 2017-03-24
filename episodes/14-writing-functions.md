@@ -139,6 +139,7 @@ result of call is: None
 >     print('pressure is', pressure)
 >
 > print('calling', report, 22.5)
+> ~~~
 {: .challenge}
 
 > ## Order of Operations
