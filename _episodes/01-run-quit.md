@@ -54,7 +54,7 @@ keypoints:
     *   It allows you to display figures next to the code that produces them
         to tell a complete story of the analysis.
 
-FIXME: diagram
+![Example Jupyter ipython notebook](../fig/jupyter-example-notebook.png)
 
 > ## How It's Stored
 >
