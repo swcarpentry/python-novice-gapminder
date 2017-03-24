@@ -220,13 +220,13 @@ final velocity: 30.0
 > i = 0
 > for i in range(5):
 >     if mass[i] > 5 and velocity[i] > 20:
->         print "Fast heavy object.  Duck!"
+>         print("Fast heavy object.  Duck!")
 >     elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
->         print "Normal traffic"
+>         print("Normal traffic")
 >     elif mass[i] <= 2 and velocity <= 20:
->         print "Slow light object.  Ignore it"
+>         print("Slow light object.  Ignore it")
 >     else:
->         print "Whoa!  Something is up with the data.  Check it"
+>         print("Whoa!  Something is up with the data.  Check it")
 > ~~~
 > {: .python}
 >
