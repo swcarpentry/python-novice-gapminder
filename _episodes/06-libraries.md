@@ -215,6 +215,24 @@ cos(pi) is -1.0
 > {: .python}
 {: .challenge}
 
+> ## There Are Many Ways To Import Libraries!
+>
+> Match the following print statements with the appropriate library calls
+> 
+> Library calls:
+> 1. `from math import sin,pi`
+> 2. `import math`
+> 3. `import math as m`
+> 4. `from math import *`
+> 
+> Print commands:
+> 7. `print("sin(pi/2) =",sin(pi/2))`
+> 8. `print("sin(pi/2) =",m.sin(m.pi/2))`
+> 9. `print("sin(pi/2) =",math.sin(math.pi/2))`
+>
+> {: .python}
+{: .challenge}
+
 > ## Importing Specific Items
 >
 > 1. Fill in the blanks so that the program below prints `90.0`.
