@@ -54,7 +54,8 @@ keypoints:
     *   It allows you to display figures next to the code that produces them
         to tell a complete story of the analysis.
 
-FIXME: diagram
+![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
+*Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
 > ## How It's Stored
 >
@@ -66,8 +67,9 @@ FIXME: diagram
 
 ## The Notebook has Control and Edit modes.
 
-*   Create a new notebook (Python 3) from the dropdown menu in the top right corner of the file browser page.
-*   Each notebook contains one or more cells of various types.
+*   Create a new notebook from the dropdown menu in the top right corner of the file browser page.
+*   Each notebook contains one or more cells that contain code, text, or images.
+
 
 > ## Code vs. Text
 >
@@ -78,11 +80,14 @@ FIXME: diagram
 {: .callout}
 
 *   If you press "esc" and "return" alternately,
-    the outer border of your code cell will change from gray to green.
+    the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
 *   These are the control (gray) and edit (green) modes of your notebook.
-*   If you use the "esc" and "return" keys to make the surround gray
-    and then press the "H" key,
+*   Control mode alows you to edit notebook-level features, and edit mode changes the content of cells.
+
+### Shortcuts
+*   If you use the "esc" key to make the surround gray
+    and then press the "H" key on your keyboard,
     a list of all the shortcut keys will appear.
 *   When in control mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
@@ -91,6 +96,23 @@ FIXME: diagram
 *   All actions can be done using the menus,
     but there are lots of keyboard shortcuts to speed things up.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
+
+> ## Control Vs. Edit
+>
+> In the Jupyter notebook page are you currently in control or edit mode?  
+> Switch between the modes. 
+> Use the shortcuts to generate a new cell
+> Use the shortcuts to delete a cell
+>
+> > ## Solution
+> >
+> > Control mode has a grey boarder and Edit mode has a green border
+> > Use "esc" and "Enter" to switch between modes
+> > You need to be in control mode (Hit "esc" if your cell is green).  Type "B" or "A".
+> > You need to be in control mode (Hit "esc" if your cell is green).  Type "X".
+> >
+> {: .solution}
+{: .challenge}
 
 ## Use the keyboard and mouse to select and edit cells.
 
@@ -201,7 +223,7 @@ create new paragraphs.
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
-[links]: http://datacarpentry.org
+[data_carpentry]: http://datacarpentry.org
 ~~~
 {: .python}
   </div>
@@ -224,6 +246,22 @@ Or use [named links][data_carpentry].
 >     *   Analyze.
 > 3.  Write up.
 > 4.  Publish.
+> 
+> > ## Solution
+> >
+> > This challenge integrates both the numbered list and bullet list. 
+> > Note that the bullet list is indented 2 spaces so that it is inline with the items of the numbered list.
+> > ~~~
+> > 1.  Get funding.
+> > 2.  Do work.
+> >     *   Design experiment.
+> >     *   Collect data.
+> >     *   Analyze.
+> > 3.  Write up.
+> > 4.  Publish.
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## More Math
@@ -237,6 +275,15 @@ Or use [named links][data_carpentry].
 > 2 + 1
 > ~~~
 > {: .python}
+> 
+> > ## Solution
+> >
+> > Python returns the output of the last calculation.
+> > ~~~
+> > 3
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Change an Existing Cell from Code to Markdown
@@ -256,6 +303,17 @@ Or use [named links][data_carpentry].
 > Now go back to the cell and use escape+M to switch the cell to Markdown
 > and "run" it with shift+return.
 > What happened and how might this be useful?
+> 
+> > ## Solution
+> >
+> > The python code gets treated like markdown text.
+> > The lines appear as if they are part of one contiguous paragraph.
+> > This could be useful to temporarly turn on and off cells in notebooks that get used for multiple purposes. 
+> > ~~~
+> > x = 6 * 7 + 12 print(x)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Equations
@@ -273,6 +331,16 @@ Or use [named links][data_carpentry].
 > (It's probably easier to copy and paste.)
 > What does it display?
 > What do you think the underscore `_`, circumflex `^`, and dollar sign `$` do?
+> 
+> > ## Solution
+> >
+> > The notebook shows the equation as it would be rendered from latex equation syntax.
+> > The dollar sign `$` is used to tell markdown that the text in between is a latex equation.
+> > If you're not familiar with latex,  underscore (`_`) is used for subscripts and circumflex `^` is used for superscripts.
+> > Curly braces `{` and `}` group text together so that the statement `i=1` becomes the the subscript and `N` becomes the superscript.
+> > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
+> > `\sum` and `\approx` are latex commands for sum over and the approximate symbols. 
+> {: .solution}
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
