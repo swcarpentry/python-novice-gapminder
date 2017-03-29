@@ -102,12 +102,12 @@ print('primes is currently:', primes)
 primes.extend(teen_primes)
 print('primes has now become:', primes)
 primes.append(middle_aged_primes)
-print('primes has now become:', primes)
+print('primes has finally become:', primes)
 ~~~
 {: .python}
 primes is currently: [2, 3, 5, 7, 9]
 primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
-primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
+primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
