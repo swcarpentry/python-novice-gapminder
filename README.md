@@ -8,6 +8,17 @@ for a rendered version of this material,
 for instructions on formatting, building, and submitting material,
 or run `make` in this directory for a list of helpful commands.
 
+## Run Jekyll in a Docker container
+
+If you download and install the latest versions of [Docker compose](https://docs.docker.com/compose/install/) and
+[Docker engine](https://docs.docker.com/engine/installation/) you can build a Jekyll container to serve this site with
+hot-reloading and incremental rebuilds by running `docker-compose up` and visiting `localhost:4000` in a browser. 
+
+The docker-compose file mounts this root directory into the Jekyll container so you can edit the lesson's Markdown files
+in place and see those changes when you refresh your browser window.
+
+To clean up and remove the docker containers, run `docker-compose down -v` or `docker system prune`.
+
 Maintainer(s):
 
 * [Bennet Fauber][fauber-bennet]
