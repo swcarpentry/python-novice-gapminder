@@ -85,7 +85,7 @@ print('primes has become:', primes)
 primes is initially: [2, 3, 5]
 primes has become: [2, 3, 5, 7, 9]
 ~~~
-{: .python}
+{: .output}
 
 *   `append` is a *method* of lists.
     *   Like a function, but tied to a particular object.
@@ -93,6 +93,24 @@ primes has become: [2, 3, 5, 7, 9]
     *   Deliberately resembles the way we refer to things in a library.
 *   We will meet other methods of lists as we go along.
     *   Use `help(list)` for a preview.
+*   `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+~~~
+{: .python}
+teen_primes = [11, 13, 17, 19]
+middle_aged_primes = [37, 41, 43, 47]
+print('primes is currently:', primes)
+primes.extend(teen_primes)
+print('primes has now become:', primes)
+primes.append(middle_aged_primes)
+print('primes has now become:', primes)
+~~~
+{: .python}
+primes is currently: [2, 3, 5, 7, 9]
+primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
+primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
+~~~
+{: .output}
+Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
 
 ## Use `del` to remove items from a list entirely.
 
