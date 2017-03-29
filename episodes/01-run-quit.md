@@ -84,7 +84,7 @@ keypoints:
 *   These are the control (gray) and edit (green) modes of your notebook.
 *   Control mode alows you to edit notebook-level features, and edit mode changes the content of cells.
 
-###Shortcuts
+### Shortcuts
 *   If you use the "esc" key to make the surround gray
     and then press the "H" key on your keyboard,
     a list of all the shortcut keys will appear.
@@ -222,7 +222,7 @@ create new paragraphs.
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
-[links]: http://datacarpentry.org
+[data_carpentry]: http://datacarpentry.org
 ~~~
 {: .python}
   </div>
@@ -245,6 +245,22 @@ Or use [named links][data_carpentry].
 >     *   Analyze.
 > 3.  Write up.
 > 4.  Publish.
+> 
+> > ## Solution
+> >
+> > This challenge integrates both the numbered list and bullet list. 
+> > Note that the bullet list is indented 2 spaces so that it is inline with the items of the numbered list.
+> > ~~~
+> > 1.  Get funding.
+> > 2.  Do work.
+> >     *   Design experiment.
+> >     *   Collect data.
+> >     *   Analyze.
+> > 3.  Write up.
+> > 4.  Publish.
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## More Math
@@ -258,6 +274,15 @@ Or use [named links][data_carpentry].
 > 2 + 1
 > ~~~
 > {: .python}
+> 
+> > ## Solution
+> >
+> > Python returns the output of the last calculation.
+> > ~~~
+> > 3
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Change an Existing Cell from Code to Markdown
@@ -277,6 +302,17 @@ Or use [named links][data_carpentry].
 > Now go back to the cell and use escape+M to switch the cell to Markdown
 > and "run" it with shift+return.
 > What happened and how might this be useful?
+> 
+> > ## Solution
+> >
+> > The python code gets treated like markdown text.
+> > The lines appear as if they are part of one contiguous paragraph.
+> > This could be useful to temporarly turn on and off cells in notebooks that get used for multiple purposes. 
+> > ~~~
+> > x = 6 * 7 + 12 print(x)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Equations
@@ -294,6 +330,16 @@ Or use [named links][data_carpentry].
 > (It's probably easier to copy and paste.)
 > What does it display?
 > What do you think the underscore `_`, circumflex `^`, and dollar sign `$` do?
+> 
+> > ## Solution
+> >
+> > The notebook shows the equation as it would be rendered from latex equation syntax.
+> > The dollar sign `$` is used to tell markdown that the text in between is a latex equation.
+> > If you're not familiar with latex,  underscore (`_`) is used for subscripts and circumflex `^` is used for superscripts.
+> > Curly braces `{` and `}` group text together so that the statement `i=1` becomes the the subscript and `N` becomes the superscript.
+> > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
+> > `\sum` and `\approx` are latex commands for sum over and the approximate symbols. 
+> {: .solution}
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
