@@ -45,6 +45,7 @@ first_name = 'Ahmed'
 *   Python has a built-in function called `print` that prints things as text.
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
+*   To add a string to the printout, wrap the string in single quotations.
 *   The values passed to the function are called 'arguments'
 
 ~~~
