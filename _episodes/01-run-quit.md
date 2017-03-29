@@ -82,12 +82,9 @@ keypoints:
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
 *   These are the control (gray) and edit (green) modes of your notebook.
+*   In control mode, pressing the "H" key will provide 
+    a list of all the shortcut keys.
 *   Control mode alows you to edit notebook-level features, and edit mode changes the content of cells.
-
-### Shortcuts
-*   If you use the "esc" key to make the surround gray
-    and then press the "H" key on your keyboard,
-    a list of all the shortcut keys will appear.
 *   When in control mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
@@ -115,13 +112,12 @@ keypoints:
 
 ## Use the keyboard and mouse to select and edit cells.
 
-*   Pressing the "return" key turns the surround green to 
-    signify edit mode and you can type into the cell.
+*   Pressing the "return" key turns the border green and engages edit mode,
+    which allows you to type within the cell.
 *   Because we want to be able to write many lines of code in a single cell,
-    pressing the "return" key when the border is green moves the cursor to the next line in the cell
-    just like in a text editor.
+    pressing the "return" key when in edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
-*   Pressing the "return" key and the "shift" key together will execute the contents of the cell.
+*   Pressing the "shift" and the "enter" key together will execute the contents of the cell.
 *   Notice that the "return" and "shift" keys on the 
     right of the keyboard are right next to each other.
 
