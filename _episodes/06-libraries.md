@@ -11,25 +11,36 @@ objectives:
 - "Find and read documentation for standard libraries interactively (in the interpreter) and online."
 keypoints:
 - "Most of the power of a programming language is in its libraries."
-- "A program must import a library in order to use it."
-- "Use `help` to find out more about a library's contents."
+- "A program must import a library module in order to use it."
+- "Use `help` to learn about the contents of a library module."
 - "Import specific items from a library to shorten programs."
 - "Create an alias for a library when importing it to shorten programs."
 ---
 ## Most of the power of a programming language is in its libraries.
 
-*   A *library* is a collection of functions that can be used by other programs.
-    *   May also contain data values (e.g., numerical constants).
+*   A *library* is a collection of files (called *modules*) that contains
+    functions for use by other programs.
+    *   May also contain data values (e.g., numerical constants) and other things.
     *   Library's contents are supposed to be related, but there's no way to enforce that.
-*   Python's [standard library][stdlib] is installed with it.
+*   The Python [standard library][stdlib] is an extensive suite of modules that comes
+    with Python itself.
 *   Many additional libraries are available from [PyPI][pypi] (the Python Package Index).
 *   We will see later how to write new libraries.
 
-## A program must import a library in order to use it.
+> ## Libraries and modules
+>
+> A library is a collection of modules, but the terms are often used
+> interchangeably, especially since many libraries only consist of a single
+> module, so don't worry if you mix them.
+{: .callout}
 
-*   Use `import` to load a library into a program's memory.
-*   Then refer to things from the library as `library_name.thing_name`.
+
+## A program must import a library module before using it.
+
+*   Use `import` to load a library module into a program's memory.
+*   Then refer to things from the module as `module_name.thing_name`.
     *   Python uses `.` to mean "part of".
+*   Using `math`, one of the modules in the standard library:
 
 ~~~
 import math
@@ -44,11 +55,11 @@ cos(pi) is -1.0
 ~~~
 {: .output}
 
-*   Have to refer to each item with the library's name.
+*   Have to refer to each item with the module's name.
     *   `math.cos(pi)` won't work: the reference to `pi`
         doesn't somehow "inherit" the function's reference to `math`.
 
-## Use `help` to find out more about a library's contents.
+## Use `help` to learn about the contents of a library module.
 
 *   Works just like help for a function.
 
@@ -84,9 +95,9 @@ FUNCTIONS
 ~~~
 {: .output}
 
-## Import specific items from a library to shorten programs.
+## Import specific items from a library module to shorten programs.
 
-*   Use `from...import...` to load only specific items from a library.
+*   Use `from ... import ...` to load only specific items from a library module.
 *   Then refer to them directly without library name as prefix.
 
 ~~~
@@ -100,9 +111,9 @@ cos(pi) is -1.0
 ~~~
 {: .output}
 
-## Create an alias for a library when importing it to shorten programs.
+## Create an alias for a library module when importing it to shorten programs.
 
-*   Use `import...as...` to give a library a short *alias* while importing it.
+*   Use `import ... as ...` to give a library a short *alias* while importing it.
 *   Then refer to items in the library using that shortened name.
 
 ~~~
@@ -121,10 +132,11 @@ cos(pi) is -1.0
 *   But can make programs harder to understand,
     since readers must learn your program's aliases.
 
-> ## Exploring the Math Library
+> ## Exploring the Math Module
 >
-> 1. What function from the `math` library can you use to calculate a square root
+> 1. What function from the `math` module can you use to calculate a square root
 >    *without* using `sqrt`?
+
 > 2. Since the library contains this function, why does `sqrt` exist?
 >
 > > ## Solution
@@ -136,7 +148,7 @@ cos(pi) is -1.0
 > {: .solution}
 {: .challenge}
 
-> ## Locating the Right Library
+> ## Locating the Right Module
 >
 > You want to select a random character from a string:
 >
@@ -145,31 +157,55 @@ cos(pi) is -1.0
 > ~~~
 > {: .python}
 >
-> 1. What [standard library][stdlib] would you most expect to help?
-> 2. Which function would you select from that library? Are there alternatives?
+> 1. Which [standard library][stdlib] module could help you?
+> 2. Which function would you select from that module? Are there alternatives?
+> 3. Try to write a program that uses the function.
 >
 > > ## Solution
 > >
-> > 1. It seems likely that [random](https://docs.python.org/3/library/random.html)
-> >    might contain something relevant to making random choices.
-> > 2. We've used subscripts to select a character from a string, so perhaps using the
-> >    `randomint()` function to generate a random subscript would be good.
-> >    We could probably also use `randrange()` or `choice()`.
+> > The [random module](randommod) seems like it could help you.
 > >
-> > Using `randomint()` we might write:
+> > The string has 11 characters, each having a positional index from 0 to 10.
+> > You could use `random.randrange` function (or the alias `random.randint`
+> > if you find that easier to remember) to get a random integer between 0 and
+> > 10, and then pick out the character at that position:
 > >
-> >~~~
-> >import random
-> >bases = 'ACTTGCTTGAC'
-> >choice = random.randint(0,len(bases)-1)
-> >bases[choice]
-> >~~~
+> > ~~~
+> > from random import randrange
+> >
+> > random_index = random.randrange(len(bases))
+> > print(bases[random_index])
+> > ~~~
 > > {: .python}
 > >
+> > or more compactly:
+> >
+> > ~~~
+> > from random import randrange
+> >
+> > print(bases[random.randrange(len(bases))])
+> > ~~~
+> > {: .python}
+> >
+> > Perhaps you found the `random.sample` function? It allows for slightly
+> > less typing:
+> >
+> > ~~~
+> > from random import sample
+> >
+> > print(sample(bases, 1)[0])
+> > ~~~
+> > {: .python}
+> >
+> > Note that this function returns a list of values. We will learn about
+> > lists in episode 11.
+> >
+> > There's also other functions you could use, but with more convoluted
+> > code as a result.
 > {: .solution}
-{: .challenge}
 
-> ## Jigsaw Puzzle Programming Example
+
+> ## Jigsaw Puzzle (Parson's Problem) Programming Example
 > 
 > Rearrange the following statements so that a random
 > DNA base is printed.  Not all statements may be needed.  Feel free to use/add 
@@ -199,6 +235,11 @@ cos(pi) is -1.0
 > {: .error}
 >
 > What has your colleague forgotten to do?
+>
+> > ## Solution
+> >
+> > Importing the math module (`import math`)
+> {: .solution}
 {: .challenge}
 
 > ## Importing With Aliases
@@ -213,6 +254,31 @@ cos(pi) is -1.0
 > print(____)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > import math as m
+> > angle = m.degrees(m.pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > can bewritten as
+> >
+> > ~~~
+> > import math
+> > angle = math.degrees(math.pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > Since you just wrote the code and are familiar with it, you might actually
+> > find the first version easier to read. But when trying to read a huge piece
+> > of code written by someone else, or when getting back to your own huge piece
+> > of code after several months, non-abbreviated names are often easier, expect
+> > where there are clear abbreviation conventions.
+> {: .solution}
 {: .challenge}
 
 > ## There Are Many Ways To Import Libraries!
@@ -236,8 +302,8 @@ cos(pi) is -1.0
 > ## Importing Specific Items
 >
 > 1. Fill in the blanks so that the program below prints `90.0`.
-> 2. Do you find this easier to read than preceding versions?
-> 3. Why *would't* programmers always use this form of `import`?
+> 2. Do you find this version easier to read than preceding ones?
+> 3. Why *wouldn't* programmers always use this form of `import`?
 >
 > ~~~
 > ____ math import ____, ____
@@ -245,20 +311,45 @@ cos(pi) is -1.0
 > print(angle)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > from math import degrees, pi
+> > angle = degrees(pi / 2)
+> > print(angle)
+> > ~~~
+> > {: .python}
+> >
+> > Most likely you find this version easier to read since it's less dense.
+> > The main reason not to use this form of import is to avoid name clashes.
+> > For instance, you wouldn't import `degrees` this way if you also wanted to
+> > use the name `degrees` for a variable or function of your own. Or if you
+> > were to also import a function named `degrees` from another library.
+> {: .solution}
 {: .challenge}
 
-> ## Identifying Input Variable Range Error
+> ## Reading Error Messages
 >
 > 1. Read the code below and try to identify what the errors are without running it.
 > 2. Run the code, and read the error message. What type of error is it?
-> 3. Fix the error.
 >
 > ~~~
 > from math import log
 > log(0)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
+> >    domain of the function.
+> > 2. You get an error of type "ValueError", indicating that the function
+> >    received an inappropriate argument value. The additional message
+> >    "math domain error" makes it clearer what the problem is.
+> {: .solution}
 {: .challenge}
 
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
+[randommod]: https://docs.python.org/3/library/random.html
