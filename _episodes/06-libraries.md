@@ -136,7 +136,6 @@ cos(pi) is -1.0
 >
 > 1. What function from the `math` module can you use to calculate a square root
 >    *without* using `sqrt`?
-
 > 2. Since the library contains this function, why does `sqrt` exist?
 >
 > > ## Solution
@@ -203,6 +202,7 @@ cos(pi) is -1.0
 > > There's also other functions you could use, but with more convoluted
 > > code as a result.
 > {: .solution}
+{: .challenge}
 
 
 > ## Jigsaw Puzzle (Parson's Problem) Programming Example
