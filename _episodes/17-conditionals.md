@@ -46,8 +46,8 @@ if mass > 3.0:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 3.0:
-        print(mass, 'is large')
+    if m > 3.0:
+        print(m, 'is large')
 ~~~
 {: .python}
 ~~~
@@ -64,10 +64,10 @@ for m in masses:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 3.0:
-        print(mass, 'is large')
+    if m > 3.0:
+        print(m, 'is large')
     else:
-        print(mass, 'is small')
+        print(m, 'is small')
 ~~~
 {: .python}
 ~~~
@@ -89,12 +89,12 @@ for m in masses:
 ~~~
 masses = [3.54, 2.07, 9.22, 1.86, 1.71]
 for m in masses:
-    if mass > 9.0:
-        print(mass, 'is HUGE')
-    elif mass > 3.0:
-        print(mass, 'is large')
+    if m > 9.0:
+        print(m, 'is HUGE')
+    elif m > 3.0:
+        print(m, 'is large')
     else:
-        print(mass, 'is small')
+        print(m, 'is small')
 ~~~
 {: .python}
 ~~~
@@ -220,13 +220,13 @@ final velocity: 30.0
 > i = 0
 > for i in range(5):
 >     if mass[i] > 5 and velocity[i] > 20:
->         print "Fast heavy object.  Duck!"
+>         print("Fast heavy object.  Duck!")
 >     elif mass[i] > 2 and mass[i] <= 5 and velocity[i] <= 20:
->         print "Normal traffic"
+>         print("Normal traffic")
 >     elif mass[i] <= 2 and velocity <= 20:
->         print "Slow light object.  Ignore it"
+>         print("Slow light object.  Ignore it")
 >     else:
->         print "Whoa!  Something is up with the data.  Check it"
+>         print("Whoa!  Something is up with the data.  Check it")
 > ~~~
 > {: .python}
 >
