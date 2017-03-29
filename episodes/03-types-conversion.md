@@ -252,7 +252,7 @@ first is 2 and second is 5
 > ## Choose a Type
 >
 > What type of value (integer, floating point number, or character string)
-> would you use to represent each of the following?  Try to come up with more than one good answer for each problem, eg, for # 1, when would it be better to count days with a floating point variable?  
+> would you use to represent each of the following?  Try to come up with more than one good answer for each problem.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?  
 >
 > 1. Number of days since the start of the year.
 > 2. Time elapsed since the start of the year.
