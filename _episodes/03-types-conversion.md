@@ -230,7 +230,7 @@ first is 2 and second is 5
 
 > ## Automatic Type Conversion
 >
-> What type of value is 3..25 + 4?
+> What type of value is 3.25 + 4?
 >
 > > ## Solution
 > >
@@ -287,8 +287,8 @@ first is 2 and second is 5
 
 > ## Strings to Numbers
 >
-> `float` will convert a string to a floating point number,
-> and `int` will convert a floating point number to an integer:
+> Where reasonable, `float()` will convert a string to a floating point number,
+> and `int()` will convert a floating point number to an integer:
 >
 > ~~~
 > print("string to float:", float("3.4"))
@@ -302,9 +302,27 @@ first is 2 and second is 5
 > ~~~
 > {: .output}
 >
-> Given that,
-> what do you expect this program to do?
+> If the conversion doesn't make sense, however, an error message will occur
+>
+> ~~~
+> print("string to float:", float("Hello world!"))
+> ~~~
+> {: .python}
+>
+> ~~~
+> ---------------------------------------------------------------------------
+> ValueError                                Traceback (most recent call last)
+> <ipython-input-5-df3b790bf0a2> in <module>()
+> ----> 1 print("string to float:", float("Hello world!"))
+>
+> ValueError: could not convert string to float: 'Hello world!'
+> ~~~
+> {: .error}
+>
+> Given this information, what do you expect the following program to do?
+>
 > What does it actually do?
+>
 > Why do you think it does that?
 >
 > ~~~

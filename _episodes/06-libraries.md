@@ -136,13 +136,15 @@ cos(pi) is -1.0
 >
 > 1. What function from the `math` module can you use to calculate a square root
 >    *without* using `sqrt`?
-> 2. Since the module contains this function, why does `sqrt` exist?
+
+> 2. Since the library contains this function, why does `sqrt` exist?
 >
 > > ## Solution
-> >
-> > 1. You could use the `pow` function to raise a number of interest to the power
-> >    of 1/2. To find the square root of 9, you would write `math.pow(9, 1/2)`.
-> > 2. To make the code more clear and easy to understand.
+> > 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`
+> > 2. The `sqrt(x)` function (like much of the `math` library) has it's origins in
+> >    C's math library. Consequently, it might be somewhat faster than `pow(x,y)`.
+> >    Also, it might be more readable than `pow(x, 0.5)` when implementing equations.
+> >    However, `sqrt(x)` doesn't support negative arguments.
 > {: .solution}
 {: .challenge}
 
@@ -201,6 +203,25 @@ cos(pi) is -1.0
 > > There's also other functions you could use, but with more convoluted
 > > code as a result.
 > {: .solution}
+
+
+> ## Jigsaw Puzzle (Parson's Problem) Programming Example
+> 
+> Rearrange the following statements so that a random
+> DNA base is printed.  Not all statements may be needed.  Feel free to use/add 
+> intermediate variables. 
+>
+> ~~~
+> bases="ACTTGCTTGAC"
+> import math
+> import random
+> len(bases)
+> len(bases)+1
+> math.floor(s1)
+> math.ceil(s1)
+> print("random base ",bases[])
+> random.random()*l
+> ~~~
 {: .challenge}
 
 > ## When Is Help Available?
@@ -258,6 +279,24 @@ cos(pi) is -1.0
 > > of code after several months, non-abbreviated names are often easier, expect
 > > where there are clear abbreviation conventions.
 > {: .solution}
+{: .challenge}
+
+> ## There Are Many Ways To Import Libraries!
+>
+> Match the following print statements with the appropriate library calls
+> 
+> Library calls:
+> 1. `from math import sin,pi`
+> 2. `import math`
+> 3. `import math as m`
+> 4. `from math import *`
+> 
+> Print commands:
+> 7. `print("sin(pi/2) =",sin(pi/2))`
+> 8. `print("sin(pi/2) =",m.sin(m.pi/2))`
+> 9. `print("sin(pi/2) =",math.sin(math.pi/2))`
+>
+> {: .python}
 {: .challenge}
 
 > ## Importing Specific Items
