@@ -107,15 +107,19 @@ Age in three years: 45
 {: .output}
 
 ## Use an index to get a single character from a string.
-*   A string is a piece of text.
-*   The index is sometimes called a "subscript".
-*   Each character in a string is in a particular location.
-*   Use the location's index in square brackets to get the character.
-*   Locations are numbered from 0 rather than 1.
+
+*   The characters (individual letters, numbers, and so on) in a string are
+    ordered. For example, the string 'AB' is not the same as 'BA'. Because of
+    this ordering, we can treat the string as a list of characters.
+*   Each position in the string (first, second, etc.) is given a number. This
+    number is called an index or sometimes a subscript.
+*   Indices are numbered from 0 rather than 1.
+*   Use the position's index in square brackets to get the character at that
+    position.
 
 ~~~
-element = 'helium'
-print(element[0])
+atom_name = 'helium'
+print(atom_name[0])
 ~~~
 {: .python}
 ~~~
@@ -125,13 +129,21 @@ h
 
 ## Use a slice to get a substring.
 
-*   A slice extracts elements, based on a start and stop value
-*   A slice consists of `[start:stop]`.
-*   The data specified/selected includes the start value and runs up to but excludes the stop value. So, mathematically, you might say thay a slice selects `[start:stop)`.
+*   A part of a string is called a substring. A substring can be as short as a
+    single character.
+*   An item in a list is called an element. Whenever we treat a string as if it
+    were a list, the string's elements are its individual characters.
+*   A slice is a part of a string (or, more generally, any list-like thing).
+*   We take a slice by using `[start:stop]`, where `start` is replaced with the
+    index of the first element we want and `stop` is replaced with the index of
+    the element just after the last element we want.
+*   Mathematically, you might say thay a slice selects `[start:stop)`.
 *   The difference between stop and start is the slice's length.
+*   Taking a slice does not change the contents of the original string. Instead,
+    the slice is a copy of part of the original string.
 ~~~
-element = 'sodium'
-print(element[0:3])
+atom_name = 'sodium'
+print(atom_name[0:3])
 ~~~
 {: .python}
 ~~~
@@ -261,12 +273,12 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > What does the following program print?
 >
 > ~~~
-> element = 'carbon'
-> print('element[1:3] is:', element[1:3])
+> atom_name = 'carbon'
+> print('atom_name[1:3] is:', atom_name[1:3])
 > ~~~
 > {: .python}
 > ~~~
-> element[1:3] is: ar
+> atom_name[1:3] is: ar
 > ~~~
 > {: .output}
 >
@@ -274,4 +286,5 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 2.  What does `thing[low:]` (without a value after the colon) do?
 > 3.  What does `thing[:high]` (without a value before the colon) do?
 > 4.  What does `thing[:]` (just a colon) do?
+> 5.  What does `thing[number:negative-number]` do?
 {: .challenge}
