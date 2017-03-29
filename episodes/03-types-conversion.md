@@ -81,7 +81,7 @@ TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ~~~
 {: .error}
 
-## You can use the "+" and "\*" operators on strings.
+## You can use the "+" and "*" operators on strings.
 
 *   "Adding" character strings concatenates them.
 
@@ -261,15 +261,6 @@ first is 2 and second is 5
 > 5. Current population of a city.
 > 6. Average population of a city over time.
 >
-> > ## Solution
-> >
-> > 1.  _integer_. Number of days since the start of the year.
-> > 2.  _integer (should also define granularity: milliseconds, seconds, etc). A character string grammar is also an option, like "10ms", "1s", "1d", "3w1d"_. Time elapsed since the start of the year.
-> > 3.  _character string (serial numbers can be alphanumeric)_. Serial number of a piece of lab equipment. 
-> > 4.  _integer or floating point, (define granularity again: days, hours, seconds, years)_. A lab specimen's age. 
-> > 5.  _integer_. Current population of a city.
-> > 6.  _floating point number_. Average population of a city over time.
-> {: .solution}
 {: .challenge}
 
 > ## Division Types
