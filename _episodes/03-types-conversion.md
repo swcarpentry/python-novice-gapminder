@@ -25,7 +25,7 @@ keypoints:
 *   Integer (`int`): counting numbers like 3 or -512.
 *   Floating point number (`float`): fractional numbers like 3.14159 or -2.5.
     *   Integers are used to count, floats are used to measure.
-*   Character string (usually just called "string", `str`): text.
+*   Character string (usually called "string", `str`): text.
     *   Written in either single quotes or double quotes (as long as they match).
     *   The quotation marks aren't printed when the string is displayed.
 
@@ -54,7 +54,7 @@ print(type(fitness))
 ~~~
 {: .output}
 
-## Types control what operations can be done on values.
+## Types control what operations (or methods) can be performed on a given value.
 
 *   A value's type determines what the program can do to it.
 
@@ -81,7 +81,7 @@ TypeError: unsupported operand type(s) for -: 'str' and 'str'
 ~~~
 {: .error}
 
-## Strings can be added and multiplied.
+## You can use the "+" and "*" operators on strings.
 
 *   "Adding" character strings concatenates them.
 
@@ -95,8 +95,8 @@ Ahmed Walsh
 ~~~
 {: .output}
 
-*   Multiplying a character string by an integer replicates it.
-    *   Since multiplication is just repeated addition.
+*   Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times.
+    *   Since multiplication is repeated addition.
 
 ~~~
 separator = '=' * 10
@@ -260,21 +260,24 @@ first is 2 and second is 5
 > 4. A lab specimen's age.
 > 5. Current population of a city.
 > 6. Average population of a city over time.
+>
 {: .challenge}
 
 > ## Division Types
 >
-> The `//` operator calculates the whole-number result of division,
-> while the '%' operator calculates the remainder from division:
+> In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
+> division, and the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
 >
 > ~~~
 > print('5 // 3:', 5//3)
+> print('5 / 3:', 5/3)
 > print('5 % 3:', 5%3)
 > ~~~
 > {: .python}
 >
 > ~~~
 > 5 // 3: 1
+> 5 / 3: 1.6666666666666667
 > 5 % 3: 2
 > ~~~
 > {: .output}
@@ -283,6 +286,27 @@ first is 2 and second is 5
 > and `num_per_survey` is the number that can take part in a single survey,
 > write an expression that calculates the number of surveys needed
 > to reach everyone once.
+>
+> > ## Solution
+> > Depending on requirements it might be important to detect when the number of subjects per survey doesn't divide the
+> > number of subjects evenly. Detect it with the `%` operator and test if the remainder that it returns is greater than
+> > 0.
+> > 
+> >
+> > ~~~
+> > num_subjects = 600
+> > num_per_survey = 42
+> > num_surveys = num_subjects // num_per_survey
+> > remainder = num_subjects % num_per_survey
+> >
+> > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
+> > ~~~
+> > {: .python}
+> > ~~~
+> > 600 subjects, 42 per survey: 14
+> > ~~~
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Strings to Numbers
@@ -329,6 +353,31 @@ first is 2 and second is 5
 > print("fractional string to int:", int("3.4"))
 > ~~~
 > {: .python}
+> 
+> > ## Solution
+> > What do you expect this program to do? It would not be so unreasonable to expect the Python 3 `int` command to
+> > convert the string "3.4" to 3.4 and an additional type conversion to 3. After all, Python 3 performs a lot of other
+> > magic - isn't that part of its charm?
+> > 
+> > However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
+> > typecasts, you must convert it explicitly in code.
+> >
+> > ~~~
+> > int("3.4")
+> > int(float("3.4"))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > In [2]: int("3.4")
+> > ---------------------------------------------------------------------------
+> > ValueError                                Traceback (most recent call last)
+> > <ipython-input-2-ec6729dfccdc> in <module>()
+> > ----> 1 int("3.4")
+> > ValueError: invalid literal for int() with base 10: '3.4'
+> > 3
+> > ~~~
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Arithmetic with Different Types
@@ -366,5 +415,15 @@ first is 2 and second is 5
 >
 > 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
 > 2.  What do you expect `1+2j + 3` to produce?
-> 3.  What do you expect '4j' to be?  What about `4 j' (with a space)?
+> 3.  What do you expect '4j' to be?  What about `4 j` or `4 + j'? > 
+> 
+> > ## Solution
+> >
+> > 1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
+> > was an early convention established from electrical engineering that now presents a technically expensive area to
+> > change. [Stack Overflow provides additional explanation and
+> > discussion](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+> > 2. _4+2j_
+> > 3. _4j, syntax error, depends on the value of j_
+> {: .solution}
 {: .challenge}
