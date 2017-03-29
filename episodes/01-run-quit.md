@@ -84,7 +84,7 @@ keypoints:
 *   These are the control (gray) and edit (green) modes of your notebook.
 *   Control mode alows you to edit notebook-level features, and edit mode changes the content of cells.
 
-###Shortcuts
+### Shortcuts
 *   If you use the "esc" key to make the surround gray
     and then press the "H" key on your keyboard,
     a list of all the shortcut keys will appear.
