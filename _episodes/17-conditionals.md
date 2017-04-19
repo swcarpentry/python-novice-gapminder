@@ -58,7 +58,7 @@ for m in masses:
 
 ## Use `else` to execute a block of code when an `if` condition is *not* true.
 
-*   `else` is always attached to `if`.
+*   `else` can be used following an `if`.
 *   Allows us to specify an alternative to execute when the `if` *branch* isn't taken.
 
 ~~~
