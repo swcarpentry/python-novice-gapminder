@@ -67,8 +67,9 @@ keypoints:
 
 ## The Notebook has Control and Edit modes.
 
-*   Open a new notebook from the dropdown menu in the top right corner of the file browser page.
+*   Create a new notebook from the dropdown menu in the top right corner of the file browser page.
 *   Each notebook contains one or more cells that contain code, text, or images.
+
 
 > ## Code vs. Text
 >
