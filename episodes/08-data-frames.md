@@ -17,28 +17,39 @@ keypoints:
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
 ---
-## Use `DataFrame.ix[..., ...]` to select values by location.
+## Use `DataFrame.iloc[..., ...]` to select values by numerical index.
 
-*   Can specify location by name or by numerical index.
+*   Can specify location by numerical index analogously to 2D version of character selection in strings.
 
 ~~~
 data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.ix["Albania", "gdpPercap_1952"])
-print(data.ix[0, 0])
+print(data.iloc[0, 0])
 ~~~
 {: .python}
 ~~~
 1601.056136
-1601.056136
 ~~~
 {: .output}
 
+## Use `DataFrame.loc[..., ...]` to select values by names.
+
+*   Can specify location by row name analogously to 2D version of dictionary keys.
+
+~~~
+data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+print(data.loc["Albania", "gdpPercap_1952"])
+~~~
+{: .python}
+~~~
+1601.056136
+~~~
+{: .output}
 ## Use `:` on its own to mean all columns or all rows.
 
 *   Just like Python's usual slicing notation.
 
 ~~~
-print(data.ix["Albania", :])
+print(data.loc["Albania", :])
 ~~~
 {: .python}
 ~~~
@@ -58,10 +69,10 @@ Name: Albania, dtype: float64
 ~~~
 {: .output}
 
-*   Would get the same result printing `data.ix["Albania"]` (without a second index).
+*   Would get the same result printing `data.loc["Albania"]` (without a second index).
 
 ~~~
-print(data.ix[:, "gdpPercap_1952"])
+print(data.loc[:, "gdpPercap_1952"])
 ~~~
 {: .python}
 ~~~
@@ -80,10 +91,10 @@ Name: gdpPercap_1952, dtype: float64
 *   Would get the same result printing `data["gdpPercap_1952"]`
 *   Also get the same result printing `data.gdpPercap_1952` (since it's a column name)
 
-## Select multiple columns or rows using `DataFrame.ix` and a named slice.
+## Select multiple columns or rows using `DataFrame.loc` and a named slice.
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
 ~~~
 {: .python}
 ~~~
@@ -97,11 +108,9 @@ Poland          5338.752143     6557.152776     8006.506993
 ~~~
 {: .output}
 
-In the above code, we discover that **slicing using indexes is inclusive at both
-ends**, which differs from typical python behavior, where slicing indicates
-everything up to but not including the final index.  However, if we use integers
-when our DataFrame is indexed by something else, slicing follows typical
-pythonic behavior.
+In the above code, we discover that **slicing using loc is inclusive at both
+ends**, which differs from **slicing using iloc**, where slicing indicates
+everything up to but not including the final index. 
 
 ## Result of slicing can be used in further operations.
 
@@ -111,7 +120,7 @@ pythonic behavior.
 *   E.g., calculate max of a slice.
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
 ~~~
 {: .python}
 ~~~
@@ -123,7 +132,7 @@ dtype: float64
 {: .output}
 
 ~~~
-print(data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
+print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
 ~~~
 {: .python}
 ~~~
@@ -141,7 +150,7 @@ dtype: float64
 
 ~~~
 # Use a subset of data to keep output readable.
-subset = data.ix['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
+subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
 print('Subset of data:\n', subset)
 
 # Which values were greater than 10000 ?
@@ -231,8 +240,8 @@ max      13450.401510    16361.876470    18965.055510
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 >
 > ~~~
-> print(data.ix[0:2, 0:2])
-> print(data.ix['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+> print(data.iloc[0:2, 0:2])
+> print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .python}
 {: .challenge}
