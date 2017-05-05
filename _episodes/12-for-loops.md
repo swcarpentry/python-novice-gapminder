@@ -228,7 +228,7 @@ print(total)
 > # List of word lengths: ["red", "green", "blue"] => [3, 5, 4]
 > lengths = ____
 > for word in ["red", "green", "blue"]:
->     lengths = lengths.____(____)
+>     lengths.____(____)
 > print(lengths)
 > ~~~
 > {: .python}
