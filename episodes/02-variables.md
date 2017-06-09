@@ -142,6 +142,7 @@ h
 *   The difference between stop and start is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
     the slice is a copy of part of the original string.
+
 ~~~
 atom_name = 'sodium'
 print(atom_name[0:3])
