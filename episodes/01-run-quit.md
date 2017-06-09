@@ -346,7 +346,7 @@ Or use [named links][data_carpentry].
 >
 > (It's probably easier to copy and paste.)
 > What does it display?
-> What do you think the underscore `_`, circumflex `^`, and dollar sign `$` do?
+> What do you think the underscore, `_`, circumflex, `^`, and dollar sign, `$`, do?
 > 
 > > ## Solution
 > >
