@@ -94,6 +94,7 @@ primes has become: [2, 3, 5, 7, 9]
 *   We will meet other methods of lists as we go along.
     *   Use `help(list)` for a preview.
 *   `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+
 ~~~
 {: .python}
 teen_primes = [11, 13, 17, 19]
@@ -110,6 +111,7 @@ primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
+
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
 
 ## Use `del` to remove items from a list entirely.
