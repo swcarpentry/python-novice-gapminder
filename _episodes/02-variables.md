@@ -34,8 +34,8 @@ first_name = 'Ahmed'
 {: .python}
 
 *   Variable names:
-    *   cannot start with a digit
-    *   cannot contain spaces, quotation marks, or other punctuation
+    *   can't start with a digit
+    *   can't contain spaces, quotation marks, or other punctuation
     *   *may* contain an underscore (typically used to separate words in long variable names)
 *   Underscores at the start like `__alistairs_real_age` have a special meaning
     so we won't do that until we understand the convention.
