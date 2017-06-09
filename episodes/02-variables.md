@@ -114,7 +114,7 @@ Age in three years: 45
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
     number is called an index or sometimes a subscript.
-*   Indices are numbered from 0 rather than 1.
+*   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
 
