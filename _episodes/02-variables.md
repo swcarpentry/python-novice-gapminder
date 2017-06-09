@@ -166,8 +166,6 @@ print(len('helium'))
 *   Nested functions are evaluated from the inside out,
     just like in mathematics.
 
-FIXME: need to introduce slices
-
 ## Python is case-sensitive.
 
 *   Python thinks that upper- and lower-case letters are different,
