@@ -98,7 +98,7 @@ Poland          5338.752143     6557.152776     8006.506993
 {: .output}
 
 In the above code, we discover that **slicing using indexes is inclusive at both
-ends**, which differs from typical python behavior, where slicing indicates
+ends**, which differs from typical Python behavior, where slicing indicates
 everything up to but not including the final index.  However, if we use integers
 when our DataFrame is indexed by something else, slicing follows typical
 pythonic behavior.
