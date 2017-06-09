@@ -322,7 +322,7 @@ Or use [named links][data_carpentry].
 > 
 > > ## Solution
 > >
-> > The python code gets treated like markdown text.
+> > The Python code gets treated like markdown text.
 > > The lines appear as if they are part of one contiguous paragraph.
 > > This could be useful to temporarly turn on and off cells in notebooks that get used for multiple purposes. 
 > > ~~~
