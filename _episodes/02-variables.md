@@ -193,7 +193,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > ## Swapping Values
 >
 > Fill the table showing the values of the variables in this program
-> after each statement is executed.
+> **after** each statement is executed.
 >
 > ~~~
 > # Command  # Value of x   # Value of y   # Value of swap #
