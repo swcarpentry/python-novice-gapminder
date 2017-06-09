@@ -166,7 +166,7 @@ third character: b
 ## Character strings are immutable.
 
 *   Cannot change the characters in a string after it has been created.
-    *   *Immutable*: cannot be changed after creation.
+    *   *Immutable*: can't be changed after creation.
     *   In contrast, lists are *mutable*: they can be modified in place.
 *   Python considers the string to be a single value with parts,
     not a collection of values.
