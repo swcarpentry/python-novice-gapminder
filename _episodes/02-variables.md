@@ -192,25 +192,30 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 > ## Swapping Values
 >
-> Draw a table showing the values of the variables in this program
+> Fill the table showing the values of the variables in this program
 > after each statement is executed.
-> In simple terms, what do the last three lines of this program do?
 >
 > ~~~
-> x = 1.0
-> y = 3.0
-> swap = x
-> x = y
-> y = swap
+> # Command  # Value of x   # Value of y   # Value of swap #
+> x = 1.0    #              #              #               #
+> y = 3.0    #              #              #               #
+> swap = x   #              #              #               #
+> x = y      #              #              #               #
+> y = swap   #              #              #               #
 > ~~~
 > {: .python}
 > > ## Solution
 > >
 > > ~~~
-> > swap = x  #  x->1.0 y->3.0 swap->1.0
-> > x = y     #  x->3.0 y->3.0 swap->1.0
-> > y = swap  #  x->3.0 y->1.0 swap->1.0
+> > # Command  # Value of x   # Value of y   # Value of swap #
+> > x = 1.0    # 1.0          # not defined  # not defined   #
+> > y = 3.0    # 1.0          # 3.0          # not defined   #
+> > swap = x   # 1.0          # 3.0          # 1.0           #
+> > x = y      # 3.0          # 3.0          # 1.0           #
+> > y = swap   # 3.0          # 1.0          # 1.0           #
 > > ~~~
+> > {: .output}
+> > 
 > > These three lines exchange the values in `x` and `y` using the `swap`
 > > variable for temporary storage. This is a fairly common programming idiom.
 >{: .solution}
