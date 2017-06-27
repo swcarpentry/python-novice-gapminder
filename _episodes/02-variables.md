@@ -34,8 +34,8 @@ first_name = 'Ahmed'
 {: .python}
 
 *   Variable names:
-    *   cannot start with a digit
-    *   cannot contain spaces, quotation marks, or other punctuation
+    *   can't start with a digit
+    *   can't contain spaces, quotation marks, or other punctuation
     *   *may* contain an underscore (typically used to separate words in long variable names)
 *   Underscores at the start like `__alistairs_real_age` have a special meaning
     so we won't do that until we understand the convention.
@@ -114,7 +114,7 @@ Age in three years: 45
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
     number is called an index or sometimes a subscript.
-*   Indices are numbered from 0 rather than 1.
+*   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
 
@@ -138,10 +138,11 @@ h
 *   We take a slice by using `[start:stop]`, where `start` is replaced with the
     index of the first element we want and `stop` is replaced with the index of
     the element just after the last element we want.
-*   Mathematically, you might say that a slice selects `[start:stop)`.
+*   Mathematically, you might say that a slice selects `[start:stop)`.
 *   The difference between stop and start is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
     the slice is a copy of part of the original string.
+
 ~~~
 atom_name = 'sodium'
 print(atom_name[0:3])
@@ -165,8 +166,6 @@ print(len('helium'))
 
 *   Nested functions are evaluated from the inside out,
     just like in mathematics.
-
-FIXME: need to introduce slices
 
 ## Python is case-sensitive.
 
@@ -192,25 +191,30 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 > ## Swapping Values
 >
-> Draw a table showing the values of the variables in this program
-> after each statement is executed.
-> In simple terms, what do the last three lines of this program do?
+> Fill the table showing the values of the variables in this program
+> **after** each statement is executed.
 >
 > ~~~
-> x = 1.0
-> y = 3.0
-> swap = x
-> x = y
-> y = swap
+> # Command  # Value of x   # Value of y   # Value of swap #
+> x = 1.0    #              #              #               #
+> y = 3.0    #              #              #               #
+> swap = x   #              #              #               #
+> x = y      #              #              #               #
+> y = swap   #              #              #               #
 > ~~~
 > {: .python}
 > > ## Solution
 > >
 > > ~~~
-> > swap = x  #  x->1.0 y->3.0 swap->1.0
-> > x = y     #  x->3.0 y->3.0 swap->1.0
-> > y = swap  #  x->3.0 y->1.0 swap->1.0
+> > # Command  # Value of x   # Value of y   # Value of swap #
+> > x = 1.0    # 1.0          # not defined  # not defined   #
+> > y = 3.0    # 1.0          # 3.0          # not defined   #
+> > swap = x   # 1.0          # 3.0          # 1.0           #
+> > x = y      # 3.0          # 3.0          # 1.0           #
+> > y = swap   # 3.0          # 1.0          # 1.0           #
 > > ~~~
+> > {: .output}
+> > 
 > > These three lines exchange the values in `x` and `y` using the `swap`
 > > variable for temporary storage. This is a fairly common programming idiom.
 >{: .solution}

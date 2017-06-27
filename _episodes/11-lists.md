@@ -94,6 +94,7 @@ primes has become: [2, 3, 5, 7, 9]
 *   We will meet other methods of lists as we go along.
     *   Use `help(list)` for a preview.
 *   `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+
 ~~~
 {: .python}
 teen_primes = [11, 13, 17, 19]
@@ -110,6 +111,7 @@ primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
+
 Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
 
 ## Use `del` to remove items from a list entirely.
@@ -164,7 +166,7 @@ third character: b
 ## Character strings are immutable.
 
 *   Cannot change the characters in a string after it has been created.
-    *   *Immutable*: cannot be changed after creation.
+    *   *Immutable*: can't be changed after creation.
     *   In contrast, lists are *mutable*: they can be modified in place.
 *   Python considers the string to be a single value with parts,
     not a collection of values.
