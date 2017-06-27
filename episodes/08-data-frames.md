@@ -112,6 +112,7 @@ In the above code, we discover that **slicing using loc is inclusive at both
 ends**, which differs from **slicing using iloc**, where slicing indicates
 everything up to but not including the final index. 
 
+
 ## Result of slicing can be used in further operations.
 
 *   Usually don't just print a slice.

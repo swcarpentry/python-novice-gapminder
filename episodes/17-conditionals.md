@@ -256,7 +256,7 @@ final velocity: 30.0
 >
 > ~~~
 > pressure = 71.9
-> if pressure 50.0:
+> if pressure > 50.0:
 >     pressure = 25.0
 > elif pressure <= 50.0:
 >     pressure = 0.0
