@@ -10,9 +10,9 @@ objectives:
 - "Select a subset of both rows and columns from a dataframe in a single operation."
 - "Select a subset of a dataframe by a single Boolean criterion."
 keypoints:
-- "Use `DataFrame.ix[..., ...]` to select values by location."
+- "Use `DataFrame.iloc[..., ...]` to select values by integer location."
 - "Use `:` on its own to mean all columns or all rows."
-- "Select multiple columns or rows using `DataFrame.ix` and a named slice."
+- "Select multiple columns or rows using `DataFrame.loc` and a named slice."
 - "Result of slicing can be used in further operations."
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
@@ -108,8 +108,8 @@ Poland          5338.752143     6557.152776     8006.506993
 ~~~
 {: .output}
 
-In the above code, we discover that **slicing using loc is inclusive at both
-ends**, which differs from **slicing using iloc**, where slicing indicates
+In the above code, we discover that **slicing using `loc` is inclusive at both
+ends**, which differs from **slicing using `iloc`**, where slicing indicates
 everything up to but not including the final index. 
 
 
