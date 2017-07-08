@@ -3,107 +3,63 @@ title: "Variable Scope"
 teaching: 10
 exercises: 10
 questions:
-- "How do function calls actually work?"
-- "How can I determine where errors occurred?"
+- "What is a variable’s scope?"
+- "What are the different types of variable scope?"
+- "What is the difference between a variable’s lifetime and it’s visibility?"
 objectives:
 - "Identify local and global variables."
 - "Identify parameters as local variables."
-- "Read a traceback and determine the file, function, and line number on which the error occurred, the type of error, and the error message."
+- "Identify when a variable’s lifetime ends and it can no longer be used to reference previous values."
+- "Identify when a variable is visible to a section of source code."
 keypoints:
-- "The scope of a variable is the part of a program that can 'see' that variable."
+- "Understanding variable scope by its lifetime and visibility."
 ---
-## The scope of a variable is the part of a program that can 'see' that variable.
+## The lifetime and visibility of a variable is its scope.
 
-*   There are only so many sensible names for variables.
-*   People using functions shouldn't have to worry about
-    what variable names the author of the function used.
-*   People writing functions shouldn't have to worry about
-    what variable names the function's caller uses.
-*   The part of a program in which a variable is visible is called its *scope*.
+A variable is a location in memory where a value can be stored. Variables have a finite lifetime within the execution of a program, during which it can be written to store a value, and read to retrieve the last value stored. This lifetime is referred to as the scope of the variable and it specifies the portion of the software source code that references to a variable is considered valid. 
+Assigning scope, or limited lifetime, to variables is a useful programming trait as it facilitates compartmentalization. In other words, you do not have to be concerned with the variable names used by a function you are invoking, neither do you need to be concerned about the variable names that may be used by software source code that is invoking your function.  
+Python 3 has both global and local variables, which are indicators of the variable’s scope. A global variable exists for the entire duration of the program’s execution (lifetime) and it can be referenced at any point of the program’s source code (visibility). A local variable more restricted in both these regards. When created within a function, a variable can only be referenced in this function and no longer exists when the function ends.  
+Understanding the scope of variables in Python is particularly important as errors from referencing a variable out of scope can lead to subtle and difficult to resolve runtime semantic anomalies.  
 
 ~~~
-pressure = 103.9
+pressure = 103.9  # global var
 
-def adjust(t):
-    temperature = t * 1.43 / pressure
-    return temperature
-~~~
-{: .python}
+def no_adjust():
+    print("1. Initial global pressure:", pressure)
 
-*   `pressure` is a *global variable*.
-    *   Defined outside any particular function.
-    *   Visible everywhere.
-*   `t` and `temperature` are *local variables* in `adjust`.
-    *   Defined in the function.
-    *   Not visible in the main program.
-    *   Remember: a function parameter is a variable
-        that is automatically assigned a value when the function is called.
+def local_adjust():
+    pressure = 99.9  # local var
+    print("2. Changing local pressure:", pressure)
 
-~~~
-print('adjusted:', adjust(0.9))
-print('temperature after call:', temperature)
+def global_adjust():
+    global pressure
+    pressure = 22.2  # , changing global var
 ~~~
 {: .python}
+
+*   `pressure` is a  used both as a *global* and *local* variable*  
+
+    *   It is first created as a global variable - outside any particular function - and is visible everywhere.  
+
+    *   It is then created as a local variable inside the local_adjust function and can only be used there.  
+
+    *   To update the global variable pressure in a function we use the global qualifier as a prefix as in the global_adjust function.  
+
+    *   Remember: a function parameter is a variable that is automatically assigned a value when the function is called.​  
+
 ~~~
-adjusted: 0.01238691049085659
+no_adjust()
+local_adjust()
+print("3. Unchanged global pressure:", pressure)  # no change to global
+global_adjust()
+print("4. Changed global pressure:", pressure)
 ~~~
 {: .output}
 ~~~
-Traceback (most recent call last):
-  File "/Users/swcarpentry/foo.py", line 8, in <module>
-    print('temperature after call:', temperature)
-NameError: name 'temperature' is not defined
+1. Initial global pressure: 103.9
+2. Changing local pressure: 99.9
+3. Unchanged global pressure: 103.9
+4. Changed global pressure: 22.2
 ~~~
-{: .error}
 
-> ## Local and Global Variable Use
->
-> Trace the values of all variables in this program as it is executed.
-> (Use '---' as the value of variables before and after they exist.)
->
-> ~~~
-> limit = 100
->
-> def clip(value):
->     return min(max(0.0, value), limit)
->
-> value = -22.5
-> print(clip(value))
-> ~~~
-> {: .python}
-{: .challenge}
-
-> ## Reading Error Messages
->
-> Read the traceback below, and identify the following:
->
-> 1. How many levels does the traceback have?
-> 2. What is the file name where the error occurred?
-> 3. What is the function name where the error occurred?
-> 4. On which line number in this function did the error occurr?
-> 5. What is the type of error?
-> 6. What is the error message?
->
-> ~~~
-> ---------------------------------------------------------------------------
-> KeyError                                  Traceback (most recent call last)
-> <ipython-input-2-e4c4cbafeeb5> in <module>()
->       1 import errors_02
-> ----> 2 errors_02.print_friday_message()
->
-> /Users/ghopper/thesis/code/errors_02.py in print_friday_message()
->      13
->      14 def print_friday_message():
-> ---> 15     print_message("Friday")
->
-> /Users/ghopper/thesis/code/errors_02.py in print_message(day)
->       9         "sunday": "Aw, the weekend is almost over."
->      10     }
-> ---> 11     print(messages[day])
->      12
->      13
->
-> KeyError: 'Friday'
-> ~~~
-> {: .error}
 {: .challenge}
