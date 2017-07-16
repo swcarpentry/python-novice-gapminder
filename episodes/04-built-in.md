@@ -241,6 +241,8 @@ result of print is None
 >    If it runs, does its result make any sense?
 >
 > ~~~
+> easy_string = "abc"
+> print(max(easy_string))
 > rich = "gold"
 > poor = "tin"
 > print(max(rich, poor))
