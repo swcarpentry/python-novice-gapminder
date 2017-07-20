@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Looping Over Data Sets"
 teaching: 5
 exercises: 10
@@ -115,7 +115,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 3. `data/gapminder_gdp_asia.csv`
 > 4. 1 and 2 are not matched.
 >
-> > ##Solution
+> > ## Solution
 > >
 > > 1 is not matched by the regular expresion.
 > {: .solution}
@@ -138,7 +138,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > Notice that the shape method returns a tuple with 
 > the number of rows and columns of the data frame.
 >
-> > ##Solution
+> > ## Solution
 > > ~~~
 > > import pandas
 > > fewest = 0
