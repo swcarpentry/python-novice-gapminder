@@ -254,7 +254,7 @@ max      13450.401510    16361.876470    18965.055510
 >
 > ~~~
 > first = pandas.read_csv('data/gapminder_gdp_all.csv', index_col='country')
-> second = df[df['continent'] == 'Americas']
+> second = first[first['continent'] == 'Americas']
 > third = second.drop('Puerto Rico')
 > fourth = third.drop('continent', axis = 1)
 > fourth.to_csv('result.csv')
