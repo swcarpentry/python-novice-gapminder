@@ -241,12 +241,18 @@ result of print is None
 >    If it runs, does its result make any sense?
 >
 > ~~~
+> easy_string = "abc"
+> print(max(easy_string))
 > rich = "gold"
 > poor = "tin"
 > print(max(rich, poor))
 > print(max(len(rich), len(poor)))
 > ~~~
 > {: .python}
+> > ## Solution
+> >
+> > `max` arguments can be either values separated by `,`, or iterable types like the `str` type. In this case python compares the characters that compose the variable `easy_string`, ordering them lexicographically, and returning the `max` character.
+> {: .solution}
 {: .challenge}
 
 > ## Why Not?
