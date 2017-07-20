@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Looping Over Data Sets"
 teaching: 5
 exercises: 10
