@@ -156,6 +156,7 @@ result of call is: None
 > >   print("So they are usually not too hard to fix.")
 > > ~~~
 > > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Definition and Use
