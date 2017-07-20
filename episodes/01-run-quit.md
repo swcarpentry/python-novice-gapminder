@@ -81,11 +81,11 @@ keypoints:
 *   If you press "esc" and "return" alternately,
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
-*   These are the control (gray) and edit (green) modes of your notebook.
-*   In control mode, pressing the "H" key will provide 
+*   These are the command (gray) and edit (green) modes of your notebook.
+*   In command mode, pressing the "H" key will provide 
     a list of all the shortcut keys.
 *   Command mode alows you to edit notebook-level features, and edit mode changes the content of cells.
-*   When in control mode (esc/gray),
+*   When in command mode (esc/gray),
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
@@ -95,7 +95,7 @@ keypoints:
 
 > ## Command Vs. Edit
 >
-> In the Jupyter notebook page are you currently in control or edit mode?  
+> In the Jupyter notebook page are you currently in command or edit mode?  
 > Switch between the modes. 
 > Use the shortcuts to generate a new cell
 > Use the shortcuts to delete a cell
@@ -104,8 +104,8 @@ keypoints:
 > >
 > > Command mode has a grey boarder and Edit mode has a green border
 > > Use "esc" and "Enter" to switch between modes
-> > You need to be in control mode (Hit "esc" if your cell is green).  Type "B" or "A".
-> > You need to be in control mode (Hit "esc" if your cell is green).  Type "X".
+> > You need to be in command mode (Hit "esc" if your cell is green).  Type "B" or "A".
+> > You need to be in command mode (Hit "esc" if your cell is green).  Type "X".
 > >
 > {: .solution}
 {: .challenge}
@@ -128,11 +128,11 @@ keypoints:
         and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
 *   Turn the current cell into a Markdown cell by entering 
-    the control mode (esc/gray) and press the "M" key.
+    the command mode (esc/gray) and press the "M" key.
 *   `In [ ]:` will disappear to show it is no longer a code cell
     and you will be able to write in Markdown.
 *   Turn the current cell into a Code cell
-    by entering the control mode (esc/gray) and press the "Y" key.
+    by entering the command mode (esc/gray) and press the "Y" key.
 
 ## Markdown does most of what HTML does.
 
