@@ -180,6 +180,10 @@ print(total)
 > ## Classifying Errors
 >
 > Is an indentation error a syntax error or a runtime error?
+> > ## Solution
+> > An IndentationError is a syntax error. Programs with syntax errors cannot be started.
+> > A program with a runtime will start but an error will be thrown under certain conditions.
+> {: .solution}
 {: .challenge}
 
 > ## Tracing Execution
@@ -193,6 +197,17 @@ print(total)
 >     total = total + 1
 > ~~~
 > {: .python}
+> > ## Solution
+> > | Line no | Variables            |
+> > |---------|----------------------|
+> > | 1       | total = 0            |
+> > | 2       | total = 0 char = 't' |
+> > | 3       | total = 1 char = 't' |
+> > | 2       | total = 1 char = 'i' |
+> > | 3       | total = 2 char = 'i' |
+> > | 2       | total = 2 char = 'n' |
+> > | 3       | total = 3 char = 'n' |
+> {. solution}
 {: .challenge}
 
 > ## Reversing a String
@@ -208,6 +223,16 @@ print(total)
 > print(result)
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > original = "tin"
+> > result = ""
+> > for char in original:
+> >     result = char + result
+> > print(result)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Practice Accumulating
@@ -223,6 +248,15 @@ print(total)
 > print(total)
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > total = 0
+> > for word in ["red", "green", "blue"]:
+> >     total = total + len(word)
+> > print(total)
+> > ~~~
+> > {: .python}
+> {: .solution}
 >
 > ~~~
 > # List of word lengths: ["red", "green", "blue"] => [3, 5, 4]
@@ -232,6 +266,15 @@ print(total)
 > print(lengths)
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > lengths = []
+> > for word in ["red", "green", "blue"]:
+> >     lengths.append(len(word))
+> > print(lengths)
+> > ~~~
+> > {: .python}
+> {: .solution}
 >
 > ~~~
 > # Concatenate all words: ["red", "green", "blue"] => "redgreenblue"
@@ -240,14 +283,33 @@ print(total)
 > for ____ in ____:
 >     ____
 > print(result)
-> ~~~~
+> ~~~
 > {: .python}
+> > ## Solution
+> > ~~~~
+> > words = ["red", "green", "blue"]
+> > result = ""
+> > for word in words:
+> >     result = result + word
+> > print(result)
+> > ~~~
+> > {: .python}
+> {: .solution}
 >
 > ~~~
 > # Create acronym: ["red", "green", "blue"] => "RGB"
 > # write the whole thing
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > acronym = ""
+> > for word in ["red", "green", "blue"]:
+> >     acronym = acronym + word[0].upper()
+> > print(acronym)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Cumulative Sum
@@ -261,10 +323,23 @@ print(total)
 > for number in data:
 > cumulative = []
 > sum += number
+> sum = 0
 > print(cumulative)
 > data = [1,2,2,5]
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > sum = 0
+> > data = [1,2,2,5]
+> > cumulative = []
+> > for number in data:
+> >     sum += number
+> >     cumulative += [sum]
+> > print(cumulative)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Identifying Variable Name Errors
@@ -288,6 +363,19 @@ print(total)
 > print(message)
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > message = ""
+> > for number in range(10):
+> >     # use a if the number is a multiple of 3, otherwise use b
+> >     if (number % 3) == 0:
+> >         message = message + "a"
+> >     else:
+> >         message = message + "b"
+> > print(message)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Identifying Item Errors
@@ -302,4 +390,11 @@ print(total)
 > print('My favorite season is ', seasons[4])
 > ~~~
 > {: .python}
+> > ## Solution
+> > ~~~
+> > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+> > print('My favorite season is ', seasons[3])
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
