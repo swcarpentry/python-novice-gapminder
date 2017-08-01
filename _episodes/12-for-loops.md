@@ -286,7 +286,7 @@ print(total)
 > ~~~
 > {: .python}
 > > ## Solution
-> > ~~~~
+> > ~~~
 > > words = ["red", "green", "blue"]
 > > result = ""
 > > for word in words:
