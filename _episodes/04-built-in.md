@@ -232,6 +232,14 @@ result of print is None
 > radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 > ~~~
 > {: .python}
+> > ## Solution
+> > 1a. `1.1 * radiance = 1.1`
+> > 1b. `1.1 - 0.5 = 0.6`
+> > 1c. `min(randiance, 0.6) = 0.6`
+> > 1d. `2.0 + 0.6 = 2.6`
+> > 1e. `max(2.1, 2.6) = 2.6`
+> > 2. At the end, `radiance = 2.6`
+> {: .solution}
 {: .challenge}
 
 > ## Spot the Difference
@@ -250,14 +258,47 @@ result of print is None
 > ~~~
 > {: .python}
 > > ## Solution
-> >
-> > `max` arguments can be either values separated by `,`, or iterable types like the `str` type. In this case python compares the characters that compose the variable `easy_string`, ordering them lexicographically, and returning the `max` character.
+> > 1. 
+> > ~~~
+> > print(max(easy_string))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > c
+> > ~~~
+> > {: .output}
+> > ~~~
+> > print(max(rich, poor))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > tin
+> > ~~~
+> > {: .output}
+> > ~~~
+> > print(max(len(rich), len(poor)))
+> > ~~~
+> > {: .python}
+> > ~~~
+> > 4
+> > ~~~
+> > {: .output}
+> > 
+> > 2. It throws a TypeError. The command is trying to run `max(4, 'tin')` and you can't compare
+> >    a string and an integer
 > {: .solution}
 {: .challenge}
 
 > ## Why Not?
 >
 > Why don't `max` and `min` return `None` when they are given no arguments?
+>
+> > ## Solution
+> > `max` and `min` return TypeErrors in this case because the correct number of parameters
+> > was not supplied. If it just returned `None`, the error would be much harder to trace as it
+> > would likely be stored into a variable and used later in the program, only to likely throw
+> > a runtime error.
+> {: .solution}
 {: .challenge}
 
 > ## Last Character of a String
