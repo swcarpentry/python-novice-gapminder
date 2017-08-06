@@ -22,6 +22,7 @@ keypoints:
 *   Can specify location by numerical index analogously to 2D version of character selection in strings.
 
 ~~~
+import pandas
 data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.iloc[0, 0])
 ~~~
