@@ -20,6 +20,7 @@ keypoints:
 *   And lists can contain character strings.
 
 ~~~
+import pandas
 for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
     data = pandas.read_csv(filename, index_col='country')
     print(filename, data.min())
