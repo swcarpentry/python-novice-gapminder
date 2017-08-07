@@ -288,22 +288,24 @@ first is 2 and second is 5
 > to reach everyone once.
 >
 > > ## Solution
-> > Depending on requirements it might be important to detect when the number of subjects per survey doesn't divide the
-> > number of subjects evenly. Detect it with the `%` operator and test if the remainder that it returns is greater than
-> > 0.
-> > 
+> > We want the minimum number of surveys that reaches everyone once, which is
+> > the ceiling of `num_subjects / num_per_survey`. Recalling the mathematical
+> > relationship between ceiling and floor:
 > >
+> > &rceil;x&lceil; = -&lfloor;-x&rfloor;
+> >
+> > we can calculate the number of surveys required using the `//` floor
+> > division operator:
 > > ~~~
 > > num_subjects = 600
 > > num_per_survey = 42
-> > num_surveys = num_subjects // num_per_survey
-> > remainder = num_subjects % num_per_survey
+> > num_surveys = -(-num_subjects // num_per_survey)
 > >
 > > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 > > ~~~
 > > {: .python}
 > > ~~~
-> > 600 subjects, 42 per survey: 14
+> > 600 subjects, 42 per survey: 15
 > > ~~~
 > > {: .output}
 > {: .solution}
