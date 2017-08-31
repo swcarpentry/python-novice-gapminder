@@ -46,7 +46,7 @@ plt.ylabel('Doubles')
 import pandas
 
 data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
-data.ix['Australia'].plot()
+data.loc['Australia'].plot()
 plt.xticks(rotation=90)
 ~~~
 {: .python}
@@ -87,7 +87,7 @@ for col in data.columns:
     years.append(year)
 
 # Australia data as list.
-gdp_australia = data.ix['Australia'].tolist()
+gdp_australia = data.loc['Australia'].tolist()
 
 # Plot: 'b-' sets the line style.
 plt.plot(years, gdp_australia, 'b-')
@@ -104,8 +104,8 @@ for col in data.columns:
     years.append(year)
 
 # Select two countries' worth of data.
-gdp_australia = data.ix['Australia']
-gdp_nz = data.ix['New Zealand']
+gdp_australia = data.iloc['Australia']
+gdp_nz = data.iloc['New Zealand']
 
 # Plot with differently-colored markers.
 plt.plot(years, gdp_australia, 'b-', label='Australia')
