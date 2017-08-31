@@ -138,12 +138,26 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > Modify it again to plot the maximum GDP per capita over time for Europe.
 >
 > ~~~
-> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv')
+> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
 > data_europe.____
 > plt.legend(loc='best')
+> plt.xticks(rotation=90)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> > 
+> > ~~~
+> > data_europe = pandas.read_csv('gapminder_gdp_europe.csv', index_col='country')
+> > data_europe.min().plot(label='min')
+> > data_europe.max().plot(label='max')
+> > plt.legend(loc='best')
+> > plt.xticks(rotation=90)
+> > ~~~
+> > {: .python}
+> > ![Minima Maxima Solution](../fig/9_minima_maxima_solution.png)
+> {: .solution}
 {: .challenge}
 
 > ## Correlations
@@ -154,21 +168,40 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > What relationship do you see (if any)?
 >
 > ~~~
-> data_asia = pandas.read_csv('gapminder_gdp_asia.csv')
+> data_asia = pandas.read_csv('gapminder_gdp_asia.csv', index_col='country')
 > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ![Correlations Solution 1](../fig/9_correlations_solution1.png)
+> > 
+> > No particular correlations can be seen between the minimum and maximum gdp values
+> > year on year. It seems the fortunes of asian countries do not rise and fall together. 
+> > 
+> {: .solution}
 >
 > You might note that the variability in the maximum is much higher than
 > that of the minimum.  Take a look at the maximum and the max indexes:
 >
 > ~~~
-> data_asia = pandas.read_csv('gapminder_gdp_asia.csv')
+> data_asia = pandas.read_csv('gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
 > print(data_asia.idxmax())
 > print(data_asia.idxmin())
 > ~~~
 > {: .python}
+> > ## Solution
+> > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
+> > 
+> > Seems the variability in this value is due to a sharp drop after 1972.
+> > Some geopolitics at play perhaps? Given the dominance of oil producing countries, 
+> > maybe the Brent crude index would make an interesting comparison?
+> > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
+> > more notably.
+> > 
+> {: .solution}
 {: .challenge}
 
 > ## More Correlations
@@ -178,7 +211,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > normalizing marker size by population:
 >
 > ~~~
-> data_all = pandas.read_csv('gapminder_all.csv')
+> data_all = pandas.read_csv('gapminder_all.csv', index_col='country')
 > data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 >               s=data_all['pop_2007']/1e6)
 > ~~~
@@ -186,4 +219,21 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 >
 > Using online help and other resources,
 > explain what each argument to `plot` does.
+>
+> > ## Solution
+> > ![More Correlations Solution](../fig/9_more_correlations_solution.png)
+> >
+> > A good place to look is the documentation for the plot function -
+> > help(data_all.plot).
+> >
+> > kind - As seen already this determines the kind of plot to be drawn.
+> >
+> > x and y - A column name or index that determines what data will be
+> > placed on the x and y axes of the plot
+> >
+> > s - Details for this can be found in the documentation of plt.scatter.
+> > A single number or one value for each data point. Determines the size
+> > of the plotted points.
+> > 
+> {: .solution}
 {: .challenge}
