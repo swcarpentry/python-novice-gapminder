@@ -104,8 +104,8 @@ for col in data.columns:
     years.append(year)
 
 # Select two countries' worth of data.
-gdp_australia = data.iloc['Australia']
-gdp_nz = data.iloc['New Zealand']
+gdp_australia = data.loc['Australia']
+gdp_nz = data.loc['New Zealand']
 
 # Plot with differently-colored markers.
 plt.plot(years, gdp_australia, 'b-', label='Australia')
