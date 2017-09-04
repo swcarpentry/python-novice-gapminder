@@ -234,6 +234,20 @@ max      13450.401510    16361.876470    18965.055510
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}
+>
+> > ## Solution
+> > The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
+> > ~~~
+> > print(df.loc['Serbia', 'gdpPercap_2007'])
+> > ~~~
+> >{: .python}
+> > The output is
+> > ~~~
+> > 9786.534714
+> > ~~~
+> >{: .output}
+> {: .solution}
+{: .challenge}
 
 > ## Extent of Slicing
 >
