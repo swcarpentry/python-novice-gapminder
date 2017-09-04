@@ -89,6 +89,7 @@ keypoints:
     *   The "B" key will make a new cell below the currently selected cell.
     *   The "A" key will make one above.
     *   The "X" key will delete the current cell.
+    *   The "Z" key will undo your last cell deletion.
 *   All actions can be done using the menus,
     but there are lots of keyboard shortcuts to speed things up.
 *   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
@@ -97,13 +98,13 @@ keypoints:
 >
 > In the Jupyter notebook page are you currently in command or edit mode?  
 > Switch between the modes. 
-> Use the shortcuts to generate a new cell
+> Use the shortcuts to generate a new cell. 
 > Use the shortcuts to delete a cell
 >
 > > ## Solution
 > >
-> > Command mode has a grey boarder and Edit mode has a green border
-> > Use "esc" and "Enter" to switch between modes
+> > Command mode has a grey boarder and Edit mode has a green border. 
+> > Use "esc" and "Enter" to switch between modes. 
 > > You need to be in command mode (Hit "esc" if your cell is green).  Type "B" or "A".
 > > You need to be in command mode (Hit "esc" if your cell is green).  Type "X".
 > >
