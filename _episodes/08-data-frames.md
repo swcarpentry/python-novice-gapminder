@@ -254,12 +254,38 @@ max      13450.401510    16361.876470    18965.055510
 > 1.  Do the two statements below produce the same output?
 > 2.  Based on this,
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
->
+> 
 > ~~~
 > print(data.iloc[0:2, 0:2])
 > print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .python}
+> 
+{: .challenge}
+> 
+> > ## Solution
+> > No, they do not produce the same output! The output of the first statement is:
+> > ~~~
+> >         gdpPercap_1952  gdpPercap_1957
+> > country                                
+> > Albania     1601.056136     1942.284244
+> > Austria     6137.076492     8842.598030
+> > ~~~
+> >{: .output}
+> > The second statement gives:
+> > ~~~
+> >         gdpPercap_1952  gdpPercap_1957  gdpPercap_1962
+> > country                                                
+> > Albania     1601.056136     1942.284244     2312.888958
+> > Austria     6137.076492     8842.598030    10750.721110
+> > Belgium     8343.105127     9714.960623    10991.206760
+> > ~~~
+> >{: .output}
+> > Clearly, the second statement produces an additional column compared to the first statement.  
+> > What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
+> > in the range provided,
+> > while a named slice, 'gdpPercap_1952':'gdpPercap_1962', *includes* the final element.
+> {: .solution}
 {: .challenge}
 
 > ## Reconstructing Data
