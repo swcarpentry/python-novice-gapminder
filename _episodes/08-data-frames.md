@@ -234,18 +234,58 @@ max      13450.401510    16361.876470    18965.055510
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}
+>
+> > ## Solution
+> > The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
+> > ~~~
+> > print(df.loc['Serbia', 'gdpPercap_2007'])
+> > ~~~
+> >{: .python}
+> > The output is
+> > ~~~
+> > 9786.534714
+> > ~~~
+> >{: .output}
+> {: .solution}
+{: .challenge}
 
 > ## Extent of Slicing
 >
 > 1.  Do the two statements below produce the same output?
 > 2.  Based on this,
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
->
+> 
 > ~~~
 > print(data.iloc[0:2, 0:2])
 > print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .python}
+> 
+{: .challenge}
+> 
+> > ## Solution
+> > No, they do not produce the same output! The output of the first statement is:
+> > ~~~
+> >         gdpPercap_1952  gdpPercap_1957
+> > country                                
+> > Albania     1601.056136     1942.284244
+> > Austria     6137.076492     8842.598030
+> > ~~~
+> >{: .output}
+> > The second statement gives:
+> > ~~~
+> >         gdpPercap_1952  gdpPercap_1957  gdpPercap_1962
+> > country                                                
+> > Albania     1601.056136     1942.284244     2312.888958
+> > Austria     6137.076492     8842.598030    10750.721110
+> > Belgium     8343.105127     9714.960623    10991.206760
+> > ~~~
+> >{: .output}
+> > Clearly, the second statement produces an additional column compared to the first statement.  
+> > What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
+> > in the range provided,
+> > while a named slice, 'gdpPercap_1952':'gdpPercap_1962', *includes* the final element.
+> {: .solution}
 {: .challenge}
 
 > ## Reconstructing Data
@@ -254,13 +294,54 @@ max      13450.401510    16361.876470    18965.055510
 > what is in `first`, `second`, etc.?
 >
 > ~~~
-> first = pandas.read_csv('data/gapminder_gdp_all.csv', index_col='country')
+> first = pandas.read_csv('data/gapminder_all.csv', index_col='country')
 > second = first[first['continent'] == 'Americas']
 > third = second.drop('Puerto Rico')
 > fourth = third.drop('continent', axis = 1)
 > fourth.to_csv('result.csv')
 > ~~~
 > {: .python}
+{: .challenge}
+>
+> > ## Solution
+> > Let's go through this piece of code line by line.
+> > ~~~
+> > first = pandas.read_csv('data/gapminder_all.csv', index_col='country')
+> > ~~~
+> > {: .python}
+> > This line loads the dataset containing the GDP data from all countries into a dataframe called 
+> > `first`. The `index_col='country'` parameter selects which column to use as the 
+> > row labels in the dataframe.  
+> > ~~~
+> > second = first[first['continent'] == 'Americas']
+> > ~~~
+> > {: .python}
+> > This line makes a selection: only those rows of `first` for which the 'continent' column matches 
+> > 'Americas' are extracted. Notice how the Boolean expression inside the brackets, 
+> > `first['continent'] == 'Americas'`, is used to select only those rows where the expression is true. 
+> > Try printing this expression! Can you print also its individual True/False elements? 
+> > (hint: first assign the expression to a variable)
+> > ~~~
+> > third = second.drop('Puerto Rico')
+> > ~~~
+> > {: .python}
+> > As the syntax suggests, this line drops the row from `second` where the label is 'Puerto Rico'. The 
+> > resulting dataframe `third` has one row less than the original dataframe `second`.
+> > ~~~
+> > fourth = third.drop('continent', axis = 1)
+> > ~~~
+> > {: .python}
+> > Again we apply the drop function, but in this case we are dropping not a row but a whole column. 
+> > To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column 
+> > which has index 1).
+> > ~~~
+> > fourth.to_csv('result.csv')
+> > ~~~
+> > {: .python}
+> > The final step is to write the data that we have been working on to a csv file. Pandas makes this easy 
+> > with the `to_csv()` function. The only required argument to the function is the filename. Note that the 
+> > file will be written in the directory from which you started the Jupyter or Python session.
+> {: .solution}
 {: .challenge}
 
 > ## Selecting Indices
