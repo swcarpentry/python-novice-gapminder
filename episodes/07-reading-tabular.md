@@ -9,7 +9,7 @@ objectives:
 - "Use Pandas to load a simple CSV data set."
 - "Get some basic information about a Pandas DataFrame."
 keypoints:
-- "Use the Pandas library to do statistics on tabular data."
+- "Use the Pandas library to get basic statistics out of tabular data."
 - "Use `index_col` to specify that a column's values should be used as row headings."
 - "Use `DataFrame.info` to find out more about a dataframe."
 - "The `DataFrame.columns` variable stores information about the dataframe's columns."
@@ -182,7 +182,7 @@ gdpPercap_2007  34435.36744  25185.00911
 ## Use `DataFrame.describe` to get summary statistics about data.
 
 DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
-All other columns are ignored.
+All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
 print(data.describe())
 ~~~
