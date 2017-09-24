@@ -17,6 +17,19 @@ keypoints:
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
 ---
+## First note about Pandas DataFrames/Series
+
+A [DataFrame][pandas-dataframe] is a collection of [Series][pandas-series];
+The DataFrame is the way Pandas represents a table, and Series is the data-structure
+Pandas use to represent a column.
+
+Pandas is built on top of the [Numpy][numpy] library, which in practice means that
+most of the methods defined for Numpy' Arrays apply to Pandas' Series/DataFrames.
+
+What makes Pandas so attractive is the powerful interface to access individual records
+of the table, proper handling of missing values, and relational-databases operations
+between DataFrames.
+
 ## Use `DataFrame.iloc[..., ...]` to select values by numerical index.
 
 *   Can specify location by numerical index analogously to 2D version of character selection in strings.
@@ -376,3 +389,8 @@ max      13450.401510    16361.876470    18965.055510
 > How would you handle this if you were creating a table of GDP per capita for Poland
 > for the entire Twentieth Century?
 {: .challenge}
+
+
+[pandas-dataframe]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
+[pandas-series]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.html
+[numpy]: http://www.numpy.org/
