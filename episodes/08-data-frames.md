@@ -220,6 +220,90 @@ max      13450.401510    16361.876470    18965.055510
 ~~~
 {: .output}
 
+## Select-Apply-Combine operations
+
+Pandas vectorizing methods and grouping operations are features that provide users 
+much flexibility to analyse their data.
+
+For instance, let's say we want to have a clearer view on how the european countries 
+split themselves according to their GDP.
+
+1.  We may have a glance by splitting the countries in two groups during the years surveyed,
+    those who presented a GDP *higher* than the european average and those with a *lower* GDP.
+2.  We then estimate a *wealthy score* based on the historical (from 1962 to 2007) values,
+    where we account how many times a country has participated in the groups of *lower* or *higher* GDP
+
+~~~
+mask_higher = data.apply(lambda x:x>x.mean())
+wealth_score = mask_higher.aggregate('sum',axis=1)/len(data.columns)
+wealth_score
+~~~
+{: .python}
+~~~
+country
+Albania                   0.000000
+Austria                   1.000000
+Belgium                   1.000000
+Bosnia and Herzegovina    0.000000
+Bulgaria                  0.000000
+Croatia                   0.000000
+Czech Republic            0.500000
+Denmark                   1.000000
+Finland                   1.000000
+France                    1.000000
+Germany                   1.000000
+Greece                    0.333333
+Hungary                   0.000000
+Iceland                   1.000000
+Ireland                   0.333333
+Italy                     0.500000
+Montenegro                0.000000
+Netherlands               1.000000
+Norway                    1.000000
+Poland                    0.000000
+Portugal                  0.000000
+Romania                   0.000000
+Serbia                    0.000000
+Slovak Republic           0.000000
+Slovenia                  0.333333
+Spain                     0.333333
+Sweden                    1.000000
+Switzerland               1.000000
+Turkey                    0.000000
+United Kingdom            1.000000
+dtype: float64
+~~~
+{: .output}
+
+Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
+across the years surveyed:
+
+~~~
+data.groupby(wealth_score).sum()
+~~~
+{: .python}
+~~~
+          gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
+0.000000    36916.854200    46110.918793    56850.065437    71324.848786   
+0.333333    16790.046878    20942.456800    25744.935321    33567.667670   
+0.500000    11807.544405    14505.000150    18380.449470    21421.846200   
+1.000000   104317.277560   127332.008735   149989.154201   178000.350040   
+
+          gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
+0.000000    88569.346898   104459.358438   113553.768507   119649.599409   
+0.333333    45277.839976    53860.456750    59679.634020    64436.912960   
+0.500000    25377.727380    29056.145370    31914.712050    35517.678220   
+1.000000   215162.343140   241143.412730   263388.781960   296825.131210   
+
+          gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007  
+0.000000    92380.047256   103772.937598   118590.929863   149577.357928  
+0.333333    67918.093220    80876.051580   102086.795210   122803.729520  
+0.500000    36310.666080    40723.538700    45564.308390    51403.028210  
+1.000000   315238.235970   346930.926170   385109.939210   427850.333420
+~~~
+{: .output}
+
+
 > ## Selection of Individual Values
 >
 > Assume Pandas has been imported into your notebook
