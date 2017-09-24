@@ -17,7 +17,16 @@ keypoints:
 - "Use comparisons to select data based on value."
 - "Select values or NaN using a Boolean mask."
 ---
-## Use `DataFrame.iloc[..., ...]` to select values by numerical index.
+
+## Selecting values
+
+To access a value at the position `[i,j]` of a DataFrame, we have two options, depending on
+what is the meaning of `i` in use.
+Remember that a DataFrame provides a *index* as a way to identify the rows of the table;
+a row, then, has a *position* inside the table as well as a *label*, which
+uniquely identifies its *entry* in the DataFrame.
+
+### Use `DataFrame.iloc[..., ...]` to select values their entry position
 
 *   Can specify location by numerical index analogously to 2D version of character selection in strings.
 
@@ -32,7 +41,7 @@ print(data.iloc[0, 0])
 ~~~
 {: .output}
 
-## Use `DataFrame.loc[..., ...]` to select values by names.
+## Use `DataFrame.loc[..., ...]` to select values by their entry label.
 
 *   Can specify location by row name analogously to 2D version of dictionary keys.
 
