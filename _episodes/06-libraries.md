@@ -20,24 +20,42 @@ keypoints:
 
 *   A *library* is a collection of files (called *modules*) that contains
     functions for use by other programs.
-    *   May also contain data values (e.g., numerical constants) and other things.
-    *   Library's contents are supposed to be related, but there's no way to enforce that.
+    *   May also contain data values (e.g., numerical constants), classes and other data structures.
+*   [Modules][python-modules] can be organized in (sub-)directories, 
+    being called then (sub-)[packages][python-packages].
 *   The Python [standard library][stdlib] is an extensive suite of modules that comes
     with Python itself.
 *   Many additional libraries are available from [PyPI][pypi] (the Python Package Index).
 *   We will see later how to write new libraries.
 
-> ## Libraries and modules
+### How to know which library provides the functionality we need?
+
+Documentation. And google.
+
+*   It all starts with at before mentioned Python's [standard library][stdlib], 
+    have a glance there to see what is available by default with your Python distribution.
+*   [Browse PyPI][pypi-browse] packages if have an idea of the subject the funcitonality you need fits.
+*   When googling for a funcionality, be explicit on what you want, chances are
+    your question has already been answered in a community site (e.g, StackOverflow)
+    or a blog. For example, suppose you have a huge data file to read and you want
+    to have a glance on it at first, explicit search for "how to sample large data file in python"
+    and see how well the internet answers you, with many alternatives to explore.
+*   Follow newsletter, blogs that explore Python libraries, [Python Modules of the Week][pymotw]
+    is a good one, for instance.
+
+> ## Libraries, modules and packages
 >
-> A library is a collection of modules, but the terms are often used
-> interchangeably, especially since many libraries only consist of a single
-> module, so don't worry if you mix them.
+> A library is a collection of modules and packages, but the terms are often used
+> interchangeably. There is no restriction on the number of modules or packages
+> a library may contain, neither how it should be organized. By all means,
+> a library/modules/packages will eventually provide a data structure, function
+> or class to be used by your code.
 {: .callout}
 
 
-## A program must import a library module before using it.
+## Very first step to use a library: *import* it.
 
-*   Use `import` to load a library module into a program's memory.
+*   Use `import` to load a library module/package into a program's namespace.
 *   Then refer to things from the module as `module_name.thing_name`.
     *   Python uses `.` to mean "part of".
 *   Using `math`, one of the modules in the standard library:
@@ -113,8 +131,11 @@ cos(pi) is -1.0
 
 ## Create an alias for a library module when importing it to shorten programs.
 
-*   Use `import ... as ...` to give a library a short *alias* while importing it.
-*   Then refer to items in the library using that shortened name.
+*   Use `import ... as ...` to give the import an *alias*.
+    An alias may be useful for two reasons:
+    *   to shorten the imported module's name
+    *   to avoid confusion or overwriting when importing modules with the same name
+*   Then refer to items in the library using the *alias*.
 
 ~~~
 import math as m
@@ -224,7 +245,7 @@ cos(pi) is -1.0
 > ~~~
 {: .challenge}
 
-> ## When Is Help Available?
+> ## When is a module's help available?
 >
 > When a colleague of yours types `help(math)`,
 > Python reports an error:
@@ -242,7 +263,7 @@ cos(pi) is -1.0
 > {: .solution}
 {: .challenge}
 
-> ## Importing With Aliases
+> ## Importing with aliases
 >
 > 1. Fill in the blanks so that the program below prints `90.0`.
 > 2. Rewrite the program so that it uses `import` *without* `as`.
@@ -264,7 +285,7 @@ cos(pi) is -1.0
 > > ~~~
 > > {: .python}
 > >
-> > can bewritten as
+> > can be written as
 > >
 > > ~~~
 > > import math
@@ -281,7 +302,7 @@ cos(pi) is -1.0
 > {: .solution}
 {: .challenge}
 
-> ## There Are Many Ways To Import Libraries!
+> ## There are many ways to import libraries!
 >
 > Match the following print statements with the appropriate library calls.
 > 
@@ -313,7 +334,7 @@ cos(pi) is -1.0
 > {: .solution}
 {: .challenge}
 
-> ## Importing Specific Items
+> ## Importing specific items
 >
 > 1. Fill in the blanks so that the program below prints `90.0`.
 > 2. Do you find this version easier to read than preceding ones?
@@ -366,4 +387,8 @@ cos(pi) is -1.0
 
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
+[python-modules]: https://docs.python.org/3/tutorial/modules.html
+[python-packages]: https://docs.python.org/3/tutorial/modules.html#packages
+[pypi-browse]: https://pypi.python.org/pypi?%3Aaction=browse
+[pymotw]: https://pymotw.com/3/
 [randommod]: https://docs.python.org/3/library/random.html
