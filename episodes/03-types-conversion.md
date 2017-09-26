@@ -300,17 +300,12 @@ first is 2 and second is 5
 >
 > > ## Solution
 > > We want the minimum number of surveys that reaches everyone once, which is
-> > the ceiling of `num_subjects / num_per_survey`. Recalling the mathematical
-> > relationship between ceiling and floor:
-> >
-> > &rceil;x&lceil; = -&lfloor;-x&rfloor;
-> >
-> > we can calculate the number of surveys required using the `//` floor
-> > division operator:
+> > the rounded up value of `num_subjects / num_per_survey`. This is 
+> > equivalent to performing an integer division with `//` and adding 1.
 > > ~~~
 > > num_subjects = 600
 > > num_per_survey = 42
-> > num_surveys = -(-num_subjects // num_per_survey)
+> > num_surveys = num_subjects // num_per_survey + 1
 > >
 > > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 > > ~~~
