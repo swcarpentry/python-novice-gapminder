@@ -23,7 +23,7 @@ Python proposes a standard style through one of its first Python Enhancement Pro
 
 We may highlight some points:
 *   document your code
-*   use clear, miningful variable names
+*   use clear, meaningful variable names
 *   use white-space, *not* tabs, to indent lines
 
 
