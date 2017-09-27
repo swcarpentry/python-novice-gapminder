@@ -261,6 +261,17 @@ first is 2 and second is 5
 > 5. Current population of a city.
 > 6. Average population of a city over time.
 >
+> > ## Solution
+> >
+> > The answers to the questions are:
+> > 1)Integer, since the number of days would lie between 1 and 365. 
+> > 2) Floating point, since the time would represent the days, months etc in total.
+> > 3) Character string, since the serial number has a long string with alphabets and numbers.
+> > 4) Integer, since the age of a specimen cannot be represented in floating point or character.
+> > 5) Floating point number, since larger numbers can be represented using floating point easily.
+> >
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Division Types
