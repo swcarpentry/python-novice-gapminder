@@ -356,6 +356,12 @@ max      13450.401510    16361.876470    18965.055510
 > ~~~
 > {: .python}
 {: .challenge}
+>
+> > ## Solution
+> > For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
+> > `idxmax` will do accordingly the same for each column's maximum value.
+> {: .solution}
+{: .challenge}
 
 > ## Practice with Selection
 >
@@ -367,6 +373,32 @@ max      13450.401510    16361.876470    18965.055510
 > 3.  GDP per capita for all countries for years *after* 1985.
 > 4.  GDP per capita for each country in 2007 as a multiple of 
 >     GDP per capita for that country in 1952.
+{: .challenge}
+>
+> > ## Solution
+> > 1:
+> > ~~~
+> > data['gdpPercap_1982']
+> > ~~~
+> > {: .python}
+> >
+> > 2:
+> > ~~~
+> > data.loc['Denmark',:]
+> > ~~~
+> > {: .python}
+> >
+> > 3:
+> > ~~~
+> > data.loc[:,'gdpPercap_1985':]
+> > ~~~
+> > {: .python}
+> >
+> > 4:
+> > ~~~
+> > data['gdpPercap_2007']/data['gdpPercap_1952']
+> > ~~~
+> > {: .python}
 {: .challenge}
 
 > ## Interpretation
