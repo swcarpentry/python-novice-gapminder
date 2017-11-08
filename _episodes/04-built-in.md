@@ -233,11 +233,12 @@ result of print is None
 > ~~~
 > {: .python}
 > > ## Solution
-> > 1a. `1.1 * radiance = 1.1`
-> > 1b. `1.1 - 0.5 = 0.6`
-> > 1c. `min(randiance, 0.6) = 0.6`
-> > 1d. `2.0 + 0.6 = 2.6`
-> > 1e. `max(2.1, 2.6) = 2.6`
+> > 1.
+> >    1. `1.1 * radiance = 1.1`
+> >    2. `1.1 - 0.5 = 0.6`
+> >    3. `min(randiance, 0.6) = 0.6`
+> >    4. `2.0 + 0.6 = 2.6`
+> >    5. `max(2.1, 2.6) = 2.6`
 > > 2. At the end, `radiance = 2.6`
 > {: .solution}
 {: .challenge}
