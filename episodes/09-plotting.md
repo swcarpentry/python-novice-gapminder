@@ -36,7 +36,7 @@ plt.xlabel('Numbers')
 plt.ylabel('Doubles')
 ~~~
 {: .python}
-
+![Numbers-doubles plot](../fig/9_numbers_doubles.png)  
 ## Plot data directly from a Pandas dataframe.
 
 *   We can also plot Pandas dataframes.
@@ -50,7 +50,7 @@ data.loc['Australia'].plot()
 plt.xticks(rotation=90)
 ~~~
 {: .python}
-
+![GDP plot for Australia](../fig/9_gdp_australia.png)  
 ## Select and transform data, then plot it.
 
 *   By default, `DataFrame.plot` plots with the rows as the X axis.
@@ -62,7 +62,7 @@ plt.ylabel('GDP per capita')
 plt.xticks(rotation=90)
 ~~~
 {: .python}
-
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)  
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
@@ -74,7 +74,7 @@ plt.xticks(rotation=90)
 plt.ylabel('GDP per capita')
 ~~~
 {: .python}
-
+![GDP barplot for Australia](../fig/9_gdp_bar.png)
 *   Extract years from the last four characters of the columns' names.
     *   Store these in a list using the Accumulator pattern.
 *   Can also convert dataframe data to a list.
@@ -89,11 +89,11 @@ for col in data.columns:
 # Australia data as list.
 gdp_australia = data.loc['Australia'].tolist()
 
-# Plot: 'b-' sets the line style.
-plt.plot(years, gdp_australia, 'b-')
+# Plot: 'g--' sets the line style.
+plt.plot(years, gdp_australia, 'g--')
 ~~~
 {: .python}
-
+![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.png)
 ## Can plot many sets of data together.
 
 ~~~
@@ -117,7 +117,7 @@ plt.xlabel('Year')
 plt.ylabel('GDP per capita ($)')
 ~~~
 {: .python}
-
+![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.png)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
 
@@ -125,12 +125,12 @@ plt.ylabel('GDP per capita ($)')
 plt.scatter(gdp_australia, gdp_nz)
 ~~~
 {: .python}
-
+![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.png)
 ~~~
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ~~~
 {: .python}
-
+![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.png)
 > ## Minima and Maxima
 >
 > Fill in the blanks below to plot the minimum GDP per capita over time
