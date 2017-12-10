@@ -170,7 +170,7 @@ result of call is: None
 > print('calling', report, 22.5)
 > ~~~
 > {: .python}
-> > ##Solution
+> > ## Solution
 > >
 > > ~~~
 > > calling <function report at 0x7fd128ff1bf8> 22.5
