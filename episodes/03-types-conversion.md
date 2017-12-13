@@ -261,6 +261,18 @@ first is 2 and second is 5
 > 5. Current population of a city.
 > 6. Average population of a city over time.
 >
+> > ## Solution
+> >
+> > The answers to the questions are:
+> > 1)Integer, since the number of days would lie between 1 and 365. 
+> > 2) Floating point, since the time would represent the days, months etc in total.
+> > 3) Character string, since the serial number has a long string with alphabets and numbers.
+> > 4) Integer, since the age of a specimen cannot be represented in floating point or character.
+> > 5) Floating point number, since larger numbers can be represented using floating point easily.
+> > 6) Floating point number, since an average is likely to have a fractional part (decimal point).
+> >
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Division Types
@@ -300,17 +312,12 @@ first is 2 and second is 5
 >
 > > ## Solution
 > > We want the minimum number of surveys that reaches everyone once, which is
-> > the ceiling of `num_subjects / num_per_survey`. Recalling the mathematical
-> > relationship between ceiling and floor:
-> >
-> > &rceil;x&lceil; = -&lfloor;-x&rfloor;
-> >
-> > we can calculate the number of surveys required using the `//` floor
-> > division operator:
+> > the rounded up value of `num_subjects / num_per_survey`. This is 
+> > equivalent to performing an integer division with `//` and adding 1.
 > > ~~~
 > > num_subjects = 600
 > > num_per_survey = 42
-> > num_surveys = -(-num_subjects // num_per_survey)
+> > num_surveys = num_subjects // num_per_survey + 1
 > >
 > > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 > > ~~~

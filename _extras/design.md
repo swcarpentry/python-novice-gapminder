@@ -7,7 +7,7 @@ permalink: /design/
 > ## Help Wanted
 > {:.no_toc}
 >
-> **We are filling in the exercises [below](#stage-3---learning-plan)
+> **We are filling in the exercises [below](#stage-3-learning-plan)
 > in order to make the lesson plan more concrete.
 > Contributions (both in the form of pull requests with filled-in exercises,
 > and comments on specific exercises, ordering, and timings) are greatly appreciated.**
@@ -94,7 +94,7 @@ How do I...
 *   ...plot a single vector of values?
 *   ...create a time series plot?
 *   ...create one plot for each of several data sets?
-*   ...extra data from a single data set for plotting?
+*   ...get extra data from a single data set for plotting?
 *   ...write programs I can read and re-use in future?
 
 ### Skills
@@ -206,7 +206,7 @@ I know...
     *   Write programs that import and use libraries from Python's standard library.
     *   Find and read documentation for standard libraries interactively (in the interpreter) and online.
 *   Challenges: 10 min
-    *   What function from the standard math library could you use to calculate a square root?
+    *   Which function from the standard math library could you use to calculate a square root?
     *   What library would you use to select a random value from data?
     *   If `help(math)` produces an error, what have you forgotten to do?
     *   Fill in the blanks in code below so that the import statement and program run.
@@ -231,7 +231,7 @@ I know...
     *   Select a subset of both rows and columns from a dataframe in a single operation.
     *   Select a subset of a dataframe by a single Boolean criterion.
 *   Challenges: 15 min
-    *   What expression will find the Per Capita GDP of Serbia in 2007?
+    *   Write an expression to find the Per Capita GDP of Serbia in 2007.
     *   What rule governs what is (or isn't) included in numerical and named slices in Pandas?
     *   What does each line in the following short program do?
     *   What do `idxmin` and `idxmax` do?
