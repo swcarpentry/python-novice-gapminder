@@ -269,6 +269,7 @@ first is 2 and second is 5
 > > 3) Character string, since the serial number has a long string with alphabets and numbers.
 > > 4) Integer, since the age of a specimen cannot be represented in floating point or character.
 > > 5) Floating point number, since larger numbers can be represented using floating point easily.
+> > 6) Floating point number, since an average is likely to have a fractional part (decimal point).
 > >
 > > {: .output}
 > {: .solution}
