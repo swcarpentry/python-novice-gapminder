@@ -149,7 +149,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ## Solution
 > > 
 > > ~~~
-> > data_europe = pandas.read_csv('gapminder_gdp_europe.csv', index_col='country')
+> > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
 > > data_europe.max().plot(label='max')
 > > plt.legend(loc='best')
@@ -168,7 +168,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > What relationship do you see (if any)?
 >
 > ~~~
-> data_asia = pandas.read_csv('gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
 > {: .python}
@@ -186,7 +186,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > that of the minimum.  Take a look at the maximum and the max indexes:
 >
 > ~~~
-> data_asia = pandas.read_csv('gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
 > print(data_asia.idxmax())
 > print(data_asia.idxmin())
@@ -211,7 +211,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > normalizing marker size by population:
 >
 > ~~~
-> data_all = pandas.read_csv('gapminder_all.csv', index_col='country')
+> data_all = pandas.read_csv('data/gapminder_all.csv', index_col='country')
 > data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 >               s=data_all['pop_2007']/1e6)
 > ~~~
