@@ -505,6 +505,7 @@ data.groupby(wealth_score).sum()
 > > data['gdpPercap_2007']/data['gdpPercap_1952']
 > > ~~~
 > > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Interpretation
