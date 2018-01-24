@@ -8,15 +8,15 @@ objectives:
 - "Create a time series plot showing a single data set."
 - "Create a scatter plot showing relationship between two data sets."
 keypoints:
-- "`matplotlib` is the most widely used scientific plotting library in Python."
+- "[`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python."
 - "Plot data directly from a Pandas dataframe."
 - "Select and transform data, then plot it."
 - "Many styles of plot are available."
 - "Can plot many sets of data together."
 ---
-## `matplotlib` is the most widely used scientific plotting library in Python.
+## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
-*   Commonly use a sub-library called `matplotlib.pyplot`.
+*   Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
 *   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command.
 
 ~~~
@@ -37,10 +37,10 @@ plt.ylabel('Doubles')
 ~~~
 {: .python}
 ![Numbers-doubles plot](../fig/9_numbers_doubles.png)  
-## Plot data directly from a Pandas dataframe.
+## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
-*   We can also plot Pandas dataframes.
-*   This implicitly uses `matplotlib.pyplot`.
+*   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+*   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
 
 ~~~
 import pandas
@@ -53,7 +53,7 @@ plt.xticks(rotation=90)
 ![GDP plot for Australia](../fig/9_gdp_australia.png)  
 ## Select and transform data, then plot it.
 
-*   By default, `DataFrame.plot` plots with the rows as the X axis.
+*   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
 *   We can transpose the data in order to plot multiple series.
 
 ~~~
