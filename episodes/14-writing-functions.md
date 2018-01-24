@@ -182,7 +182,7 @@ result of call is: None
 > > print("calling")
 > > report(22.5)
 > > ~~~
-<{: .solution}
+> {: .solution}
 {: .challenge}
 
 
