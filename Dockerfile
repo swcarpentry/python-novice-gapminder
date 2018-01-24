@@ -1,4 +1,4 @@
-FROM jekyll/jekyll:pages
+FROM jekyll/jekyll:3
 
 RUN apk add -q --no-cache python3 make
 COPY . /srv/jekyll
