@@ -33,11 +33,10 @@ first_name = 'Ahmed'
 ~~~
 {: .python}
 
-*   Variable names:
-    *   can't start with a digit
-    *   can't contain spaces, quotation marks, or other punctuation
-    *   *may* contain an underscore (typically used to separate words in long variable names)
-*   Underscores at the start like `__alistairs_real_age` have a special meaning
+*   Variable names
+    * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
+    * cannot start with a digit
+*   Variable names that start with underscores like `__alistairs_real_age` have a special meaning
     so we won't do that until we understand the convention.
 
 ## Use `print` to display values.
@@ -171,8 +170,7 @@ print(len('helium'))
 
 *   Python thinks that upper- and lower-case letters are different,
     so `Name` and `name` are different variables.
-*   There are conventions for using upper-case letters at the start of variable names
-    so we will use lower-case letters for now.
+*   There are conventions for using upper-case letters at the start of variable names so we will use lower-case letters for now.
 
 ## Use meaningful variable names.
 
