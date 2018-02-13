@@ -10,9 +10,11 @@ or run `make` in this directory for a list of helpful commands.
 
 Maintainer(s):
 
-* [Bennet Fauber][fauber-bennet]
-* [Greg Wilson][wilson-greg]
+* [Allen Lee][lee-allen]
+* [Nathan Moore][moore-nathan]
+* [Sourav Singh][singh-sourav]
 
-[fauber-bennet]: http://software-carpentry.org/team/#fauber_bennet
+[lee-allen]:
 [lesson-example]: https://swcarpentry.github.com/lesson-example/
-[wilson-greg]: http://software-carpentry.org/team/#wilson_g
+[moore-nathan]: https://software-carpentry.org/team/#moore_nathan
+[singh-sourav]:
