@@ -14,7 +14,7 @@ Maintainer(s):
 * [Nathan Moore][moore-nathan]
 * [Sourav Singh][singh-sourav]
 
-[lee-allen]:
+[lee-allen]: https://software-carpentry.org/team/#lee-allen
 [lesson-example]: https://swcarpentry.github.com/lesson-example/
 [moore-nathan]: https://software-carpentry.org/team/#moore_nathan
-[singh-sourav]:
+[singh-sourav]: https://software-carpentry.org/team/#singh-sourav
