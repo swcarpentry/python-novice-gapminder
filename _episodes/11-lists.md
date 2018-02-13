@@ -218,12 +218,32 @@ IndexError: string index out of range
 > second time: [3, 5]
 > ~~~
 > {: .output}
+>
+> > ## Solution
+> > ~~~
+> > values = []
+> > values.append(1)
+> > values.append(3)
+> > values.append(5)
+> > print('first time:', values)
+> > values = values[1:]
+> > print('second time:', values)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## How Large is a Slice?
 >
 > If 'low' and 'high' are both non-negative integers,
 > how long is the list `values[low:high]`?
+>
+> > ## Solution
+> > The list `values[low:high]` has `high - low` elements.  For example,
+> > `values[1:4]` has the 3 elements `values[1]`, `values[2]`, and `values[3]`.
+> > Note that the expression will only work if `high` is less than the total
+> > length of the list `values`.
+> {: .solution}
 {: .challenge}
 
 > ## From Strings to Lists and Back
@@ -243,6 +263,11 @@ IndexError: string index out of range
 >
 > 1.  Explain in simple terms what `list('some string')` does.
 > 2.  What does `'-'.join(['x', 'y'])` generate?
+>
+> > ## Solution
+> > 1. `list('some string')` "splits" a string into a list of its characters.
+> > 2. `x-y`
+> {: .solution}
 {: .challenge}
 
 > ## Working With the End
@@ -262,6 +287,16 @@ IndexError: string index out of range
 > 3.  If `values` is a list, what does `del values[-1]` do?
 > 4.  How can you display all elements but the last one without changing `values`?
 >     (Hint: you will need to combine slicing and negative indexing.)
+>
+> > ## Solution
+> > The program prints `m`.
+> > 1. Python interprets a negative index as starting from the end (as opposed to
+> >    starting from the beginning).  The last element is `-1`.
+> > 2. The last index that can safely be used with a list of N elements is element
+> >    `-N`, which represents the first element.
+> > 3. `del values[-1]` removes the last element from the list.
+> > 4. `values[:-1]`
+> {: .solution}
 {: .challenge}
 
 > ## Stepping Through a List
@@ -277,6 +312,20 @@ IndexError: string index out of range
 >
 > 1.  If we write a slice as `low:high:stride`, what does `stride` do?
 > 2.  What expression would select all of the even-numbered items from a collection?
+>
+> > ## Solution
+> > The program prints
+> > ~~~
+> > furn
+> > eniroulf
+> > ~~~
+> > {: .python}
+> > 1. `stride` is the step size of the slice
+> > 2. The slice `1::2` selects all even-numbered items from a collection: it starts
+> >    with element `1` (which is the second element, since indexing starts at `0`),
+> >    goes on until the end (since no `end` is given), and uses a step size of `2`
+> >    (i.e., selects every second element).
+> {: .solution}
 {: .challenge}
 
 > ## Slice Bounds
@@ -289,6 +338,14 @@ IndexError: string index out of range
 > print(element[-1:3])
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> > ~~~
+> > lithium
+> > 
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Sort and Sorted
@@ -311,6 +368,22 @@ IndexError: string index out of range
 > print('letters is', letters, 'and result is', result)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> > Program A prints
+> > ~~~
+> > letters is ['g', 'o', 'l', 'd'] and result is ['d', 'g', 'l', 'o']
+> > ~~~
+> > {: .python}
+> > Program B prints
+> > ~~~
+> > letters is ['d', 'g', 'l', 'o'] and result is None
+> > ~~~
+> > {: .python}
+> > `sorted(letters)` returns a sorted copy of the list `letters` (the original
+> > list `letters` remains unchanged), while `letters.sort()` sorts the list
+> > `letters` in-place and does not return anything.
+> {: .solution}
 {: .challenge}
 
 > ## Copying (or Not)
@@ -335,4 +408,21 @@ IndexError: string index out of range
 > print('new is', new, 'and old is', old)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> > Program A prints
+> > ~~~
+> > new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
+> > ~~~
+> > Program B prints
+> > ~~~
+> > new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
+> > ~~~
+> > {: .python}
+> > `new = old` makes `new` a reference to the list `old`; `new` and `old` point
+> > towards the same object.
+> > 
+> > `new = old[:]` however creates a new list object `new` containing all elements
+> > from the list `old`; `new` and `old` are different objects.
+> {: .solution}
 {: .challenge}
