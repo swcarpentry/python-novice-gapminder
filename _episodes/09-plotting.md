@@ -102,6 +102,9 @@ years = []
 for col in data.columns:
     year = col[-4:]
     years.append(year)
+# For loops is not introduced yet
+# Instead of for loop we can use pandas dataframe functions to get the year.
+years = data.columns.str.strip('gdpPercap_')
 
 # Select two countries' worth of data.
 gdp_australia = data.loc['Australia']
