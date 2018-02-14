@@ -28,15 +28,15 @@ import matplotlib.pyplot as plt
 *   Simple plots are then (fairly) simple to create.
 
 ~~~
-x = [1, 2, 3, 4, 5]
-y = [2, 4, 6, 8, 10]
+time = [0, 1, 2, 3]
+position = [0, 100, 200, 300]
 
-plt.plot(x, y)
-plt.xlabel('Numbers')
-plt.ylabel('Doubles')
+plt.plot(time, position)
+plt.xlabel('Time (hr)')
+plt.ylabel('Position (km)')
 ~~~
 {: .python}
-![Numbers-doubles plot](../fig/9_numbers_doubles.png)  
+![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)  
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
