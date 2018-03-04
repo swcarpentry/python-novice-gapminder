@@ -291,7 +291,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >{: .output}
 > > 2. To check out the last three rows of `americas`, we would use the command, `americas.tail(n=3)`,
 > > analogous to `head()` used above. However, here we want to look at the last three columns so we need
-> > to change our view and then use `tail()`. To do so, we create a new new DataFrame in which rows and 
+> > to change our view and then use `tail()`. To do so, we create a new DataFrame in which rows and 
 > > columns are switched
 > > 
 > > ~~~
