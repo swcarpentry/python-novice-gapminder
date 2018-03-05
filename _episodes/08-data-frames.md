@@ -247,11 +247,11 @@ max      13450.401510    16361.876470    18965.055510
 Pandas vectorizing methods and grouping operations are features that provide users 
 much flexibility to analyse their data.
 
-For instance, let's say we want to have a clearer view on how the european countries 
+For instance, let's say we want to have a clearer view on how the European countries 
 split themselves according to their GDP.
 
 1.  We may have a glance by splitting the countries in two groups during the years surveyed,
-    those who presented a GDP *higher* than the european average and those with a *lower* GDP.
+    those who presented a GDP *higher* than the European average and those with a *lower* GDP.
 2.  We then estimate a *wealthy score* based on the historical (from 1962 to 2007) values,
     where we account how many times a country has participated in the groups of *lower* or *higher* GDP
 
@@ -513,7 +513,7 @@ data.groupby(wealth_score).sum()
 > Poland's borders have been stable since 1945,
 > but changed several times in the years before then.
 > How would you handle this if you were creating a table of GDP per capita for Poland
-> for the entire Twentieth Century?
+> for the entire twentieth century?
 {: .challenge}
 
 
