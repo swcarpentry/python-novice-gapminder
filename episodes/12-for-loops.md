@@ -182,7 +182,7 @@ print(total)
 > Is an indentation error a syntax error or a runtime error?
 > > ## Solution
 > > An IndentationError is a syntax error. Programs with syntax errors cannot be started.
-> > A program with a runtime will start but an error will be thrown under certain conditions.
+> > A program with a runtime error will start but an error will be thrown under certain conditions.
 > {: .solution}
 {: .challenge}
 
