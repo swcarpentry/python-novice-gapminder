@@ -336,7 +336,7 @@ print(total)
 > > cumulative = []
 > > for number in data:
 > >     sum += number
-> >     cumulative += [sum]
+> >     cumulative.append(sum)
 > > print(cumulative)
 > > ~~~
 > > {: .python}
