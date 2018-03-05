@@ -387,7 +387,7 @@ data.groupby(wealth_score).sum()
 > > Belgium     8343.105127     9714.960623    10991.206760
 > > ~~~
 > >{: .output}
-> > Clearly, the second statement produces an additional column compared to the first statement.  
+> > Clearly, the second statement produces an additional column and an additional row compared to the first statement.  
 > > What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
 > > in the range provided,
 > > while a named slice, 'gdpPercap_1952':'gdpPercap_1962', *includes* the final element.
