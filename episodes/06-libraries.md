@@ -276,7 +276,7 @@ cos(pi) is -1.0
 > > Since you just wrote the code and are familiar with it, you might actually
 > > find the first version easier to read. But when trying to read a huge piece
 > > of code written by someone else, or when getting back to your own huge piece
-> > of code after several months, non-abbreviated names are often easier, expect
+> > of code after several months, non-abbreviated names are often easier, except
 > > where there are clear abbreviation conventions.
 > {: .solution}
 {: .challenge}
