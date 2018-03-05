@@ -118,7 +118,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >
 > > ## Solution
 > >
-> > 1 is not matched by the regular expresion.
+> > 1 is not matched by the glob.
 > {: .solution}
 {: .challenge}
 
