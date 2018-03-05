@@ -128,12 +128,12 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > the file that has the fewest records.
 >
 > ~~~
-> import pandas
-> fewest = ____
+> import glob, pandas
+> records = ____
 > for filename in glob.glob('data/*.csv'):
 >     dataframe = pandas.____(filename)
->     fewest = min(____, dataframe.shape[0]) 
-> print('smallest file has', fewest, 'records')
+>     ____.append(dataframe.shape[0])
+> print('smallest file has', min(records), 'records')
 > ~~~
 > {: .python}
 > Notice that the shape method returns a tuple with 
@@ -141,12 +141,12 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >
 > > ## Solution
 > > ~~~
-> > import pandas
-> > fewest = 0
+> > import glob, pandas
+> > records = []
 > > for filename in glob.glob('data/*.csv'):
 > >     dataframe = pandas.read_csv(filename)
-> >     fewest = min(fewest , dataframe.shape[0]) 
-> > print('smallest file has', fewest, 'records')
+> >     records.append(dataframe.shape[0])
+> > print('smallest file has', min(records), 'records')
 > > ~~~
 > > {: .python}
 > {: .solution}
