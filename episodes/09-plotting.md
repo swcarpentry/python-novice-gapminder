@@ -209,7 +209,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 
 > ## More Correlations
 >
-> This short programs creates a plot showing
+> This short program creates a plot showing
 > the correlation between GDP and life expectancy for 2007,
 > normalizing marker size by population:
 >
