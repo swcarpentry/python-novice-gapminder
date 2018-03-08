@@ -172,7 +172,7 @@ cos(pi) is -1.0
 > > ~~~
 > > from random import randrange
 > >
-> > random_index = random.randrange(len(bases))
+> > random_index = randrange(len(bases))
 > > print(bases[random_index])
 > > ~~~
 > > {: .python}
@@ -182,7 +182,7 @@ cos(pi) is -1.0
 > > ~~~
 > > from random import randrange
 > >
-> > print(bases[random.randrange(len(bases))])
+> > print(bases[randrange(len(bases))])
 > > ~~~
 > > {: .python}
 > >
