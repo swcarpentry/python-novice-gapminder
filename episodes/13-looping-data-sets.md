@@ -157,4 +157,18 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > Write a program that reads in the regional data sets
 > and plots the average GDP per capita for each region over time
 > in a single chart.
+> > ## Solution
+> > ~~~
+> > import pandas 
+> > import matplotlib.pyplot as plt
+> > fig, ax = plt.subplots(1,1)
+> > for filename in glob.glob('data/gapminder_gdp*.csv'):
+> >     dataframe = pandas.read_csv(filename)
+> >     region = filename.split('/')[-1][:-4].split('_')[-1]
+> >     dataframe.mean().plot(ax=ax, label=region)
+> > ax.legend()
+> > plt.show()
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
