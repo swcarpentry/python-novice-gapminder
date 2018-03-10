@@ -130,11 +130,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > ~~~
 > import glob
 > import pandas
-> records = ____
+> fewest = ____
 > for filename in glob.glob('data/*.csv'):
 >     dataframe = pandas.____(filename)
->     ____.append(dataframe.shape[0])
-> print('smallest file has', min(records), 'records')
+>     fewest = min(____, dataframe.shape[0])
+> print('smallest file has', fewest, 'records')
 > ~~~
 > {: .python}
 > Notice that the shape method returns a tuple with 
@@ -144,11 +144,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > ~~~
 > > import glob
 > > import pandas
-> > records = []
+> > fewest = float('Inf')
 > > for filename in glob.glob('data/*.csv'):
 > >     dataframe = pandas.read_csv(filename)
-> >     records.append(dataframe.shape[0])
-> > print('smallest file has', min(records), 'records')
+> >     fewest = min(fewest, dataframe.shape[0])
+> > print('smallest file has', fewest, 'records')
 > > ~~~
 > > {: .python}
 > {: .solution}
