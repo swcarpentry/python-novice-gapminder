@@ -118,7 +118,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >
 > > ## Solution
 > >
-> > 1 is not matched by the regular expresion.
+> > 1 is not matched by the glob.
 > {: .solution}
 {: .challenge}
 
@@ -128,11 +128,12 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > the file that has the fewest records.
 >
 > ~~~
+> import glob
 > import pandas
 > fewest = ____
 > for filename in glob.glob('data/*.csv'):
 >     dataframe = pandas.____(filename)
->     fewest = min(____, dataframe.shape[0]) 
+>     fewest = min(____, dataframe.shape[0])
 > print('smallest file has', fewest, 'records')
 > ~~~
 > {: .python}
@@ -141,11 +142,12 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >
 > > ## Solution
 > > ~~~
+> > import glob
 > > import pandas
-> > fewest = 0
+> > fewest = float('Inf')
 > > for filename in glob.glob('data/*.csv'):
 > >     dataframe = pandas.read_csv(filename)
-> >     fewest = min(fewest , dataframe.shape[0]) 
+> >     fewest = min(fewest, dataframe.shape[0])
 > > print('smallest file has', fewest, 'records')
 > > ~~~
 > > {: .python}
