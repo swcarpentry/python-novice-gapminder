@@ -263,6 +263,14 @@ final velocity: 30.0
 > print(pressure)
 > ~~~
 > {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > 25.0
+> > ~~~
+> > {: .output}
+> {: .solution}
 {: .challenge}
 
 > ## Trimming Values
@@ -287,6 +295,20 @@ final velocity: 30.0
 > [0, 1, 1, 1, 0, 1]
 > ~~~
 > {: .output}
+> > ## Solution
+> >
+> > ~~~
+> > original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
+> > result = []
+> > for value in original:
+> >     if value<0.0:
+> >         result.append(0)
+> >     else:
+> >         result.append(1)
+> > print(result)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Processing Small Files
@@ -302,6 +324,18 @@ final velocity: 30.0
 >         print(filename, len(contents))
 > ~~~
 > {: .python}
+> > ## Solution
+> >
+> > ~~~
+> > import glob
+> > import pandas
+> > for filename in glob.glob('data/*.csv'):
+> >     contents = pandas.read_csv(filename)
+> >     if len(contents)<50:
+> >         print(filename, len(contents))
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Initializing
@@ -324,6 +358,21 @@ final velocity: 30.0
 >
 > What are the advantages and disadvantages of using this method
 > to find the range of the data?
+> > ## Solution
+> >
+> > ~~~
+> > values = [-2,1,65,78,-54,-24,100]
+> > smallest, largest = None, None
+> > for v in values:
+> >     if smallest==None and largest==None:
+> >         smallest, largest = v, v
+> >     else:
+> >         smallest = min(smallest, v)
+> >         largest = max(largest, v)
+> > print(smallest, largest)
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Using Functions With Conditionals in Pandas
