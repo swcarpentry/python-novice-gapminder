@@ -138,6 +138,18 @@ average(values)
 >     return values[1]
 > ~~~
 > {: .python}
+> > ## Solution
+> >
+> > ~~~
+> > def middle(a, b, c):
+> >     '''Return the middle value of three.
+> >     Assumes the values can actually be compared.'''
+> >     values = [a, b, c]
+> >     values.sort()
+> >     return values[1]
+> > ~~~
+> > {: .python}
+> {: .solution}
 {: .challenge}
 
 > ## Clean Up This Code
@@ -151,9 +163,8 @@ average(values)
 >    What did you do differently, and why?
 >
 > ~~~
-> import sys
-> n = int(sys.argv[1])
-> s = sys.argv[2]
+> n = 10
+> s = 'et cetera'
 > print(s)
 > i = 0
 > while i < n:
@@ -187,9 +198,9 @@ average(values)
 > >     for i in range(iterations):
 > >         new = ''
 > >         # iterate through characters in previous string
-> >         for j in range(len(s)):
+> >         for j in range(len(input_string)):
 > >             left = j-1
-> >             right = (j+1)%len(s) # ensure right index wraps around
+> >             right = (j+1)%len(input_string) # ensure right index wraps around
 > >             if old[left]==old[right]:
 > >                 new += '-'
 > >             else:
@@ -201,5 +212,20 @@ average(values)
 > > string_machine('et cetera', 10)
 > > ~~~
 > > {: .python}
+> > 
+> > ~~~
+> > et cetera
+> > *****-***
+> > ----*-*--
+> > ---*---*-
+> > --*-*-*-*
+> > **-------
+> > ***-----*
+> > --**---**
+> > *****-***
+> > ----*-*--
+> > ---*---*-
+> > ~~~
+> > {: .output}
 > {: .solution}
 {: .challenge}
