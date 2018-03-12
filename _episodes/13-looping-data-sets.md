@@ -168,7 +168,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'
 > >     region = filename.rpartition('_')[2][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
-> > fig.legend()
+> > plt.legend()
 > > plt.show()
 > > ~~~
 > > {: .python}
