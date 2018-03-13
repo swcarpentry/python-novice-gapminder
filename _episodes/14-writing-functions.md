@@ -63,6 +63,8 @@ Hello!
 *   Specify *parameters* when defining a function.
     *   These become variables when the function is executed.
     *   Are assigned the arguments in the call (i.e., the values passed to the function).
+    *   If you don't name the arguments when using them in the call, the arguments will be matched to
+parameters in the order the parameters are defined in the function.
 
 ~~~
 def print_date(year, month, day):
@@ -70,6 +72,17 @@ def print_date(year, month, day):
     print(joined)
 
 print_date(1871, 3, 19)
+~~~
+{: .python}
+~~~
+1871/3/19
+~~~
+{: .output}
+
+Or, we can name the arguments when we call the function, which allows us to
+specify them in any order:
+~~~
+print_date(month=3, day=19, year=1871)
 ~~~
 {: .python}
 ~~~
@@ -289,26 +302,30 @@ result of call is: None
 
 > ## Calling by Name
 >
-> What does this short program print?
+> Earlier we saw this function:
 >
 > ~~~
 > def print_date(year, month, day):
 >     joined = str(year) + '/' + str(month) + '/' + str(day)
 >     print(joined)
->
+> ~~~
+> We saw that we can call the function using *named arguments*, like this:
+> ~~~
 > print_date(day=1, month=2, year=2003)
 > ~~~
 > {: .python}
 >
-> 1.  When have you seen a function call like this before?
-> 2.  When and why is it useful to call functions this way?
+> 1.  What does `print_date(day=1, month=2, year=2003)` print?
+> 2.  When have you seen a function call like this before?
+> 3.  When and why is it useful to call functions this way?
 > {: .python}
 > > ## Solution
 > > 
-> > 1. We saw examples of using *named arguments* when working with the pandas library. For example, when reading in a dataset 
+> > 1. `2003/2/1`
+> > 2. We saw examples of using *named arguments* when working with the pandas library. For example, when reading in a dataset 
 > > using `data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a 
 > > named argument.  
-> > 2. Using named arguments can make code more readable since one can see from the function call what name the different arguments 
+> > 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments 
 > > have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments 
 > > the order doesn't matter.
 > {: .solution}
