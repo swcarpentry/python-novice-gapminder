@@ -87,7 +87,7 @@ all PDB files: []
     so that simple patterns will find the right data.
 
 ~~~
-for filename in glob.glob('data/*.csv'):
+for filename in glob.glob('data/gapminder_*.csv'):
     data = pandas.read_csv(filename)
     print(filename, data['gdpPercap_1952'].min())
 ~~~
