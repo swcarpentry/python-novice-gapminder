@@ -13,8 +13,10 @@ Maintainer(s):
 * [Allen Lee][lee-allen]
 * [Nathan Moore][moore-nathan]
 * [Sourav Singh][singh-sourav]
+* [Olav Vahtras][olav-vahtras]
 
 [lee-allen]: https://software-carpentry.org/team/#lee-allen
 [lesson-example]: https://swcarpentry.github.com/lesson-example/
 [moore-nathan]: https://software-carpentry.org/team/#moore_nathan
 [singh-sourav]: https://software-carpentry.org/team/#singh-sourav
+[olav-vahtras]: https://software-carpentry.org/team/#vahtras_olav
