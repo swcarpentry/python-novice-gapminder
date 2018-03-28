@@ -21,14 +21,14 @@ turn out to be anything but when we have to explain them precisely.
 *   The [Python 3 documentation](https://docs.python.org/3/) covers the core language
     and the standard library.
 
-*   [PyCon](pycon.org/) is the largest annual conference for the Python community.
+*   [PyCon](https://pycon.org/) is the largest annual conference for the Python community.
 
-*   [SciPy](scipy.org) is a rich collection of scientific utilities.
+*   [SciPy](https://scipy.org) is a rich collection of scientific utilities.
     It is also the name of [a series of annual conferences](https://conference.scipy.org/).
 
-*   [Jupyter](jupyter.org) is the home of the Jupyter Notebook.
+*   [Jupyter](https://jupyter.org) is the home of the Jupyter Notebook.
 
-*   [Pandas](pandas.pydata.org) is the home of the Pandas data library.
+*   [Pandas](https://pandas.pydata.org) is the home of the Pandas data library.
 
 *   Stack Overflow's [general Python section](http://stackoverflow.com/questions/tagged/python)
     can be helpful,
