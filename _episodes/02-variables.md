@@ -44,7 +44,7 @@ first_name = 'Ahmed'
 *   Python has a built-in function called `print` that prints things as text.
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
-*   To add a string to the printout, wrap the string in single quotations.
+*   To add a string to the printout, wrap the string in single or double quotations.
 *   The values passed to the function are called 'arguments'
 
 ~~~
@@ -225,9 +225,9 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > then check your prediction.)
 >
 > ~~~
-> initial = "left"
+> initial = 'left'
 > position = initial
-> initial = "right"
+> initial = 'right'
 > ~~~
 > {: .python}
 > > ## Solution
@@ -237,11 +237,11 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > ~~~
 > > {: .output}
 > >
->> The `initial` variable is assigned the value "left".
+>> The `initial` variable is assigned the value 'left'.
 > > In the second line, the `position` variable also receives
->> the string value "left". In third line, the `initial` variable is given the
->> value "right", but the `position` variable retains its string value
->> of "left".
+>> the string value 'left'. In third line, the `initial` variable is given the
+>> value 'right', but the `position` variable retains its string value
+>> of 'left'.
 >{: .solution}
 {: .challenge}
 
