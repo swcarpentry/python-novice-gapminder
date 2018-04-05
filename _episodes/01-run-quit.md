@@ -183,7 +183,8 @@ keypoints:
   </div>
   <div class="col-md-6" markdown="1">
 *  You can use indents
-	*  To create sublists of the same type
+	*  To create sublists
+	*  of the same type
 *  Or sublists
 	1. Of different
 	1. types
