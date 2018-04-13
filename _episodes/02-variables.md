@@ -83,12 +83,26 @@ NameError: name 'last_name' is not defined
 *   We will look at error messages in detail [later]({{ page.root }}/05-error-messages/).
 
 > ## Variables Persist Between Cells
-> Variables defined in one cell exist in all other cells once executed,
-> so the relative location of cells in the notebook do not matter
-> (i.e., cells lower down can still affect those above).
-> Remember: Notebook cells are just a way to organize a program:
-> as far as Python is concerned,
-> all of the source code is one long set of instructions.
+>
+> Be aware that it is the order of **execution** of cells that is important in a Jupyter notebook, not the order
+> in which they appear. Python will remember **all** the code that was run previously, including any variables you have
+> defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
+> (re)run cells further up, those defined further down will still be present. As an example, create 2 cells with the
+> following content, in this order:
+>
+> ~~~
+> print(myval)
+> ~~~
+> {: .python}
+>
+> ~~~
+> myval = 1
+> ~~~
+> {: .python}
+>
+> If you execute this in order, the first cell will give an error. However, if you run the first cell **after** the second
+> cell it will print out ‘1’. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
+> clears the interpreter and runs everything from a clean slate going top to bottom.
 {: .callout}
 
 ## Variables can be used in calculations.
