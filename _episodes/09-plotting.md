@@ -75,19 +75,14 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .python}
 ![GDP barplot for Australia](../fig/9_gdp_bar.png)
-*   Extract years from the last four characters of the columns' names.
-    *   Store these in a list using the Accumulator pattern.
-*   Can also convert dataframe data to a list.
+*   Extract years from the last four characters of the column names using dataframes function.
 
 ~~~
-# Accumulator pattern to collect years (as character strings).
-years = []
-for col in data.columns:
-    year = col[-4:]
-    years.append(year)
+#dataframes function for string manipulation
+years = data.columns.str.strip('gdpPercap_')
 
-# Australia data as list.
-gdp_australia = data.loc['Australia'].tolist()
+# Australia data 
+gdp_australia = data.loc['Australia']
 
 # Plot: 'g--' sets the line style.
 plt.plot(years, gdp_australia, 'g--')
@@ -97,15 +92,6 @@ plt.plot(years, gdp_australia, 'g--')
 ## Can plot many sets of data together.
 
 ~~~
-# Accumulator pattern to collect years (as character strings).
-years = []
-for col in data.columns:
-    year = col[-4:]
-    years.append(year)
-# For loops is not introduced yet
-# Instead of for loop we can use pandas dataframe functions to get the year.
-years = data.columns.str.strip('gdpPercap_')
-
 # Select two countries' worth of data.
 gdp_australia = data.loc['Australia']
 gdp_nz = data.loc['New Zealand']
