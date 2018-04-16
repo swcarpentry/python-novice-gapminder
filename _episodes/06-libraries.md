@@ -206,22 +206,36 @@ cos(pi) is -1.0
 
 
 > ## Jigsaw Puzzle (Parson's Problem) Programming Example
-> 
+>
 > Rearrange the following statements so that a random
-> DNA base is printed.  Not all statements may be needed.  Feel free to use/add 
-> intermediate variables. 
+> DNA base is printed.  Not all statements may be needed.  Feel free to use/add
+> intermediate variables.
 >
 > ~~~
 > bases="ACTTGCTTGAC"
 > import math
 > import random
-> len(bases)
-> len(bases)+1
-> math.floor(s1)
-> math.ceil(s1)
+> ___ = math.floor(s1)
+> ___ = len(bases)
 > print("random base ",bases[])
-> random.random()*l
+> ___ = random.random()*l
 > ~~~
+> {: .python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > import math
+> > import random
+> > bases="ACTTGCTTGAC"
+> > l = len(bases)
+> > s1 = random.random()*l
+> > idx = math.floor(s1)
+> > print("random base ",bases[idx])
+> > ~~~
+> > {: .python}
+> >
+> {: .solution}
 {: .challenge}
 
 > ## When Is Help Available?
@@ -284,7 +298,7 @@ cos(pi) is -1.0
 > ## There Are Many Ways To Import Libraries!
 >
 > Match the following print statements with the appropriate library calls.
-> 
+>
 > Print commands:
 >
 > 1. `print("sin(pi/2) =",sin(pi/2))`
