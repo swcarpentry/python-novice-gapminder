@@ -11,6 +11,11 @@ for a rendered version of this material,
 for instructions on formatting, building, and submitting material,
 or run `make` in this directory for a list of helpful commands.
 
+To run the local development server or build the files a local installation of
+[Jekyll](https://jekyllrb.com/) is needed. See the
+[Jekyll installation documentation](https://jekyllrb.com/docs/installation/)
+for detailed instructions.
+
 Maintainer(s):
 
 * [Allen Lee][lee-allen]
