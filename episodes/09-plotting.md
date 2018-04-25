@@ -36,21 +36,27 @@ plt.xlabel('Time (hr)')
 plt.ylabel('Position (km)')
 ~~~
 {: .python}
-![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)  
+![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 *   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
+*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
 
 ~~~
 import pandas
 
 data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+
+# Extract year from last 4 characters of each column name
+years = data.columns.str.strip('gdpPercap_')
+# Convert year values to integers, saving results back to dataframe
+data.columns = years.astype(int)
+
 data.loc['Australia'].plot()
-plt.xticks(rotation=90)
 ~~~
 {: .python}
-![GDP plot for Australia](../fig/9_gdp_australia.png)  
+![GDP plot for Australia](../fig/9_gdp_australia.png)
 ## Select and transform data, then plot it.
 
 *   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
@@ -59,10 +65,9 @@ plt.xticks(rotation=90)
 ~~~
 data.T.plot()
 plt.ylabel('GDP per capita')
-plt.xticks(rotation=90)
 ~~~
 {: .python}
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)  
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
@@ -70,25 +75,24 @@ plt.xticks(rotation=90)
 ~~~
 plt.style.use('ggplot')
 data.T.plot(kind='bar')
-plt.xticks(rotation=90)
 plt.ylabel('GDP per capita')
 ~~~
 {: .python}
 ![GDP barplot for Australia](../fig/9_gdp_bar.png)
-*   Extract years from the last four characters of the column names using dataframes function.
 
+## Data can also be plotted by calling the `matplotlib` `plot` function directly.
+*   The command is `plt.plot(x, y)`
+*   The color / format of markers can also be specified as an optical argument: e.g. 'b-' is a blue line, 'g--' is a green dashed line.
 ~~~
-#dataframes function for string manipulation
-years = data.columns.str.strip('gdpPercap_')
-
-# Australia data 
+# Get Australia data from dataframe
+years = data.columns
 gdp_australia = data.loc['Australia']
 
-# Plot: 'g--' sets the line style.
 plt.plot(years, gdp_australia, 'g--')
 ~~~
 {: .python}
 ![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.png)
+
 ## Can plot many sets of data together.
 
 ~~~
@@ -136,7 +140,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .python}
 >
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
@@ -165,10 +169,10 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ## Solution
 > >
 > > ![Correlations Solution 1](../fig/9_correlations_solution1.png)
-> > 
+> >
 > > No particular correlations can be seen between the minimum and maximum gdp values
-> > year on year. It seems the fortunes of asian countries do not rise and fall together. 
-> > 
+> > year on year. It seems the fortunes of asian countries do not rise and fall together.
+> >
 > {: .solution}
 >
 > You might note that the variability in the maximum is much higher than
@@ -183,13 +187,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .python}
 > > ## Solution
 > > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
-> > 
+> >
 > > Seems the variability in this value is due to a sharp drop after 1972.
-> > Some geopolitics at play perhaps? Given the dominance of oil producing countries, 
+> > Some geopolitics at play perhaps? Given the dominance of oil producing countries,
 > > maybe the Brent crude index would make an interesting comparison?
 > > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
 > > more notably.
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -223,6 +227,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > s - Details for this can be found in the documentation of plt.scatter.
 > > A single number or one value for each data point. Determines the size
 > > of the plotted points.
-> > 
+> >
 > {: .solution}
 {: .challenge}
