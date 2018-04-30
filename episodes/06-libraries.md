@@ -215,10 +215,10 @@ cos(pi) is -1.0
 > bases="ACTTGCTTGAC"
 > import math
 > import random
-> ___ = math.floor(s1)
+> ___ = random.randrange(0, n_bases)
 > ___ = len(bases)
-> print("random base ",bases[])
-> ___ = random.random()*l
+> print("random base ", bases[])
+> ___ = len(bases)
 > ~~~
 > {: .python}
 >
@@ -227,11 +227,10 @@ cos(pi) is -1.0
 > > ~~~
 > > import math
 > > import random
-> > bases="ACTTGCTTGAC"
-> > l = len(bases)
-> > s1 = random.random()*l
-> > idx = math.floor(s1)
-> > print("random base ",bases[idx])
+> > bases = "ACTTGCTTGAC"
+> > n_bases = len(bases)
+> > idx = random.randrange(0, n_bases)
+> > print("random base ", bases[idx])
 > > ~~~
 > > {: .python}
 > >
