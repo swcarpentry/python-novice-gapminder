@@ -229,7 +229,7 @@ cos(pi) is -1.0
 > > bases = "ACTTGCTTGAC" 
 > > n_bases = len(bases)
 > > idx = random.randrange(n_bases)
-> > print("random base ", bases[idx], "base index", idx)
+> > print("random base", bases[idx], "base index", idx)
 > > ~~~
 > > {: .python}
 > >
