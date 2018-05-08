@@ -23,7 +23,7 @@ keypoints:
 %matplotlib inline
 import matplotlib.pyplot as plt
 ~~~
-{: .python}
+{: .language-python}
 
 *   Simple plots are then (fairly) simple to create.
 
@@ -35,22 +35,30 @@ plt.plot(time, position)
 plt.xlabel('Time (hr)')
 plt.ylabel('Position (km)')
 ~~~
-{: .python}
-![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)  
+{: .language-python}
+
+![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 *   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
+*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
 
 ~~~
 import pandas
 
 data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+
+# Extract year from last 4 characters of each column name
+years = data.columns.str.strip('gdpPercap_')
+# Convert year values to integers, saving results back to dataframe
+data.columns = years.astype(int)
+
 data.loc['Australia'].plot()
-plt.xticks(rotation=90)
 ~~~
-{: .python}
-![GDP plot for Australia](../fig/9_gdp_australia.png)  
+{: .language-python}
+
+![GDP plot for Australia](../fig/9_gdp_australia.png)
 ## Select and transform data, then plot it.
 
 *   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
@@ -59,10 +67,10 @@ plt.xticks(rotation=90)
 ~~~
 data.T.plot()
 plt.ylabel('GDP per capita')
-plt.xticks(rotation=90)
 ~~~
-{: .python}
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)  
+{: .language-python}
+
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
@@ -70,25 +78,28 @@ plt.xticks(rotation=90)
 ~~~
 plt.style.use('ggplot')
 data.T.plot(kind='bar')
-plt.xticks(rotation=90)
 plt.ylabel('GDP per capita')
 ~~~
-{: .python}
+{: .language-python}
+
 ![GDP barplot for Australia](../fig/9_gdp_bar.png)
-*   Extract years from the last four characters of the column names using dataframes function.
+
+## Data can also be plotted by calling the `matplotlib` `plot` function directly.
+*   The command is `plt.plot(x, y)`
+*   The color / format of markers can also be specified as an optical argument: e.g. 'b-' is a blue line, 'g--' is a green dashed line.
+
+## Get Australia data from dataframe
 
 ~~~
-#dataframes function for string manipulation
-years = data.columns.str.strip('gdpPercap_')
-
-# Australia data 
+years = data.columns
 gdp_australia = data.loc['Australia']
 
-# Plot: 'g--' sets the line style.
 plt.plot(years, gdp_australia, 'g--')
 ~~~
-{: .python}
+{: .language-python}
+
 ![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.png)
+
 ## Can plot many sets of data together.
 
 ~~~
@@ -105,7 +116,8 @@ plt.legend(loc='upper left')
 plt.xlabel('Year')
 plt.ylabel('GDP per capita ($)')
 ~~~
-{: .python}
+{: .language-python}
+
 ![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.png)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
@@ -113,12 +125,14 @@ plt.ylabel('GDP per capita ($)')
 ~~~
 plt.scatter(gdp_australia, gdp_nz)
 ~~~
-{: .python}
+{: .language-python}
+
 ![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.png)
 ~~~
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ~~~
-{: .python}
+{: .language-python}
+
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.png)
 > ## Minima and Maxima
 >
@@ -133,10 +147,10 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > plt.legend(loc='best')
 > plt.xticks(rotation=90)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > > ## Solution
-> > 
+> >
 > > ~~~
 > > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
@@ -144,7 +158,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > plt.legend(loc='best')
 > > plt.xticks(rotation=90)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ![Minima Maxima Solution](../fig/9_minima_maxima_solution.png)
 > {: .solution}
 {: .challenge}
@@ -160,15 +174,15 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > > ## Solution
 > >
 > > ![Correlations Solution 1](../fig/9_correlations_solution1.png)
-> > 
+> >
 > > No particular correlations can be seen between the minimum and maximum gdp values
-> > year on year. It seems the fortunes of asian countries do not rise and fall together. 
-> > 
+> > year on year. It seems the fortunes of asian countries do not rise and fall together.
+> >
 > {: .solution}
 >
 > You might note that the variability in the maximum is much higher than
@@ -180,16 +194,16 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > print(data_asia.idxmax())
 > print(data_asia.idxmin())
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
-> > 
+> >
 > > Seems the variability in this value is due to a sharp drop after 1972.
-> > Some geopolitics at play perhaps? Given the dominance of oil producing countries, 
+> > Some geopolitics at play perhaps? Given the dominance of oil producing countries,
 > > maybe the Brent crude index would make an interesting comparison?
 > > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
 > > more notably.
-> > 
+> >
 > {: .solution}
 {: .challenge}
 
@@ -204,7 +218,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 >               s=data_all['pop_2007']/1e6)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > Using online help and other resources,
 > explain what each argument to `plot` does.
@@ -223,6 +237,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > s - Details for this can be found in the documentation of plt.scatter.
 > > A single number or one value for each data point. Determines the size
 > > of the plotted points.
-> > 
+> >
 > {: .solution}
 {: .challenge}
