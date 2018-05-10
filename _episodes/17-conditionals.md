@@ -32,7 +32,6 @@ mass = 2.07
 if mass > 3.0:
     print (mass, 'is large')
 ~~~
-{: .python}
 ~~~
 3.54 is large
 ~~~
@@ -49,7 +48,6 @@ for m in masses:
     if m > 3.0:
         print(m, 'is large')
 ~~~
-{: .python}
 ~~~
 3.54 is large
 9.22 is large
@@ -69,7 +67,6 @@ for m in masses:
     else:
         print(m, 'is small')
 ~~~
-{: .python}
 ~~~
 3.54 is large
 2.07 is small
@@ -96,7 +93,6 @@ for m in masses:
     else:
         print(m, 'is small')
 ~~~
-{: .python}
 ~~~
 3.54 is large
 2.07 is small
@@ -120,7 +116,6 @@ elif grade >= 80:
 elif grade >= 90:
     print('grade is A')
 ~~~
-{: .python}
 ~~~
 grade is C
 ~~~
@@ -136,7 +131,6 @@ else:
     print('adjusting velocity')
     velocity = 50.0
 ~~~
-{: .python}
 ~~~
 adjusting velocity
 ~~~
@@ -156,7 +150,6 @@ for i in range(5): # execute the loop 5 times
         velocity = velocity + 10.0
 print('final velocity:', velocity)
 ~~~
-{: .python}
 ~~~
 0 : 10.0
 moving too slow
@@ -228,7 +221,6 @@ final velocity: 30.0
 >     else:
 >         print("Whoa!  Something is up with the data.  Check it")
 > ~~~
-> {: .python}
 >
 > Just like with arithmetic, you can and should use parentheses whenever there
 > is possible ambiguity.  A good general rule is to *always* use parentheses
@@ -237,7 +229,6 @@ final velocity: 30.0
 > ~~~
 > if mass[i] <= 2 or mass[i] >= 5 and velocity[i] > 20:
 > ~~~
-> {: .python}
 >
 > write one of these:
 >
@@ -245,7 +236,6 @@ final velocity: 30.0
 > if (mass[i] <= 2 or mass[i] >= 5) and velocity[i] > 20:
 > if mass[i] <= 2 or (mass[i] >= 5 and velocity[i] > 20):
 > ~~~
-> {: .python}
 >
 > so it is perfectly clear to a reader (and to Python) what you really mean.
 {: .callout}
@@ -262,7 +252,6 @@ final velocity: 30.0
 >     pressure = 0.0
 > print(pressure)
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >
@@ -289,7 +278,6 @@ final velocity: 30.0
 >         ____
 > print(result)
 > ~~~
-> {: .python}
 >
 > ~~~
 > [0, 1, 1, 1, 0, 1]
@@ -307,7 +295,6 @@ final velocity: 30.0
 > >         result.append(1)
 > > print(result)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -323,7 +310,6 @@ final velocity: 30.0
 >     ____:
 >         print(filename, len(contents))
 > ~~~
-> {: .python}
 > > ## Solution
 > >
 > > ~~~
@@ -334,7 +320,6 @@ final velocity: 30.0
 > >     if len(contents)<50:
 > >         print(filename, len(contents))
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -354,7 +339,6 @@ final velocity: 30.0
 >         largest = max(____, v)
 > print(smallest, largest)
 > ~~~
-> {: .python}
 >
 > What are the advantages and disadvantages of using this method
 > to find the range of the data?
@@ -371,7 +355,6 @@ final velocity: 30.0
 > >         largest = max(largest, v)
 > > print(smallest, largest)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -401,7 +384,6 @@ final velocity: 30.0
 >
 > calculate_life_quartile(62.5)
 > ~~~
-> {: .python}
 >
 > ~~~
 > 2
@@ -417,7 +399,6 @@ final velocity: 30.0
 > data = pd.read_csv('Americas-data.csv')
 > data['life_qrtl'] = data['lifeExp'].apply(calculate_life_quartile)
 > ~~~
-> {: .python}
 >
 > There is a lot in that second line, so let's take it piece by piece.
 > On the right side of the `=` we start with `data['lifeExp']`, which is the

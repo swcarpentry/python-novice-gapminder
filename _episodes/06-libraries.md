@@ -48,7 +48,6 @@ import math
 print('pi is', math.pi)
 print('cos(pi) is', math.cos(math.pi))
 ~~~
-{: .python}
 ~~~
 pi is 3.141592653589793
 cos(pi) is -1.0
@@ -66,7 +65,6 @@ cos(pi) is -1.0
 ~~~
 help(math)
 ~~~
-{: .python}
 ~~~
 Help on module math:
 
@@ -105,7 +103,6 @@ from math import cos, pi
 
 print('cos(pi) is', cos(pi))
 ~~~
-{: .python}
 ~~~
 cos(pi) is -1.0
 ~~~
@@ -121,7 +118,6 @@ import math as m
 
 print('cos(pi) is', m.cos(m.pi))
 ~~~
-{: .python}
 ~~~
 cos(pi) is -1.0
 ~~~
@@ -154,7 +150,6 @@ cos(pi) is -1.0
 > ~~~
 > bases = 'ACTTGCTTGAC'
 > ~~~
-> {: .python}
 >
 > 1. Which [standard library][stdlib] module could help you?
 > 2. Which function would you select from that module? Are there alternatives?
@@ -175,7 +170,6 @@ cos(pi) is -1.0
 > > random_index = randrange(len(bases))
 > > print(bases[random_index])
 > > ~~~
-> > {: .python}
 > >
 > > or more compactly:
 > >
@@ -184,7 +178,6 @@ cos(pi) is -1.0
 > >
 > > print(bases[randrange(len(bases))])
 > > ~~~
-> > {: .python}
 > >
 > > Perhaps you found the `random.sample` function? It allows for slightly
 > > less typing:
@@ -194,7 +187,6 @@ cos(pi) is -1.0
 > >
 > > print(sample(bases, 1)[0])
 > > ~~~
-> > {: .python}
 > >
 > > Note that this function returns a list of values. We will learn about
 > > lists in episode 11.
@@ -219,7 +211,6 @@ cos(pi) is -1.0
 > ___ = len(bases)
 > print("random base ", bases[], "base index", ___)
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >
@@ -231,7 +222,6 @@ cos(pi) is -1.0
 > > idx = random.randrange(n_bases)
 > > print("random base", bases[idx], "base index", idx)
 > > ~~~
-> > {: .python}
 > >
 > {: .solution}
 {: .challenge}
@@ -265,7 +255,6 @@ cos(pi) is -1.0
 > angle = ____.degrees(____.pi / 2)
 > print(____)
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >
@@ -274,7 +263,6 @@ cos(pi) is -1.0
 > > angle = m.degrees(m.pi / 2)
 > > print(angle)
 > > ~~~
-> > {: .python}
 > >
 > > can bewritten as
 > >
@@ -283,7 +271,6 @@ cos(pi) is -1.0
 > > angle = math.degrees(math.pi / 2)
 > > print(angle)
 > > ~~~
-> > {: .python}
 > >
 > > Since you just wrote the code and are familiar with it, you might actually
 > > find the first version easier to read. But when trying to read a huge piece
@@ -336,7 +323,6 @@ cos(pi) is -1.0
 > angle = degrees(pi / 2)
 > print(angle)
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >
@@ -345,7 +331,6 @@ cos(pi) is -1.0
 > > angle = degrees(pi / 2)
 > > print(angle)
 > > ~~~
-> > {: .python}
 > >
 > > Most likely you find this version easier to read since it's less dense.
 > > The main reason not to use this form of import is to avoid name clashes.
@@ -364,7 +349,6 @@ cos(pi) is -1.0
 > from math import log
 > log(0)
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >

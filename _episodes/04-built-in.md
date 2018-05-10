@@ -31,7 +31,6 @@ keypoints:
 # This sentence isn't executed by Python.
 adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 ~~~
-{: .python}
 
 ## A function may take zero or more arguments.
 
@@ -49,7 +48,6 @@ print('before')
 print()
 print('after')
 ~~~
-{: .python}
 ~~~
 before
 
@@ -68,7 +66,6 @@ after
 print(max(1, 2, 3))
 print(min('a', 'A', '0'))
 ~~~
-{: .python}
 ~~~
 3
 0
@@ -84,7 +81,6 @@ print(min('a', 'A', '0'))
 ~~~
 print(max(1, 'a'))
 ~~~
-{: .python}
 ~~~
 TypeError: unorderable types: str() > int()
 ~~~
@@ -98,7 +94,6 @@ TypeError: unorderable types: str() > int()
 ~~~
 round(3.712)
 ~~~
-{: .python}
 ~~~
 4
 ~~~
@@ -109,7 +104,6 @@ round(3.712)
 ~~~
 round(3.712, 1)
 ~~~
-{: .python}
 ~~~
 3.7
 ~~~
@@ -122,7 +116,6 @@ round(3.712, 1)
 ~~~
 help(round)
 ~~~
-{: .python}
 ~~~
 Help on built-in function round in module builtins:
 
@@ -143,7 +136,6 @@ round(...)
 # Forgot to close the quotation marks around the string.
 name = 'Feng
 ~~~
-{: .python}
 ~~~
 SyntaxError: EOL while scanning string literal
 ~~~
@@ -153,7 +145,6 @@ SyntaxError: EOL while scanning string literal
 # An extra '=' in the assignment.
 age = = 52
 ~~~
-{: .python}
 ~~~
 SyntaxError: invalid syntax
 ~~~
@@ -164,7 +155,6 @@ SyntaxError: invalid syntax
 ~~~
 print("hello world"
 ~~~
-{: .python}
 ~~~
   File "<ipython-input-6-d1cc229bf815>", line 1
     print ("hello world"
@@ -188,7 +178,6 @@ SyntaxError: unexpected EOF while parsing
 age = 53
 remaining = 100 - aege # mis-spelled 'age'
 ~~~
-{: .python}
 ~~~
 NameError: name 'aege' is not defined
 ~~~
@@ -213,7 +202,6 @@ NameError: name 'aege' is not defined
 result = print('example')
 print('result of print is', result)
 ~~~
-{: .python}
 ~~~
 example
 result of print is None
@@ -231,7 +219,6 @@ result of print is None
 > radiance = 1.0
 > radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 > ~~~
-> {: .python}
 > > ## Solution
 > > 1.
 > >    1. `1.1 * radiance = 1.1`
@@ -257,13 +244,11 @@ result of print is None
 > print(max(rich, poor))
 > print(max(len(rich), len(poor)))
 > ~~~
-> {: .python}
 > > ## Solution
 > > 1. 
 > > ~~~
 > > print(max(easy_string))
 > > ~~~
-> > {: .python}
 > > ~~~
 > > c
 > > ~~~
@@ -271,7 +256,6 @@ result of print is None
 > > ~~~
 > > print(max(rich, poor))
 > > ~~~
-> > {: .python}
 > > ~~~
 > > tin
 > > ~~~
@@ -279,7 +263,6 @@ result of print is None
 > > ~~~
 > > print(max(len(rich), len(poor)))
 > > ~~~
-> > {: .python}
 > > ~~~
 > > 4
 > > ~~~
