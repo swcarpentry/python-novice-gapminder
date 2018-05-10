@@ -33,7 +33,6 @@ import pandas
 data = pandas.read_csv('data/gapminder_gdp_oceania.csv')
 print(data)
 ~~~
-{: .python}
 ~~~
        country  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
 0    Australia     10039.59564     10949.64959     12217.22686
@@ -81,7 +80,6 @@ print(data)
 data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 print(data)
 ~~~
-{: .python}
 ~~~
              gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
 country
@@ -105,7 +103,6 @@ New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ~~~
 data.info()
 ~~~
-{: .python}
 ~~~
 <class 'pandas.core.frame.DataFrame'>
 Index: 2 entries, Australia to New Zealand
@@ -143,7 +140,6 @@ memory usage: 208.0+ bytes
 ~~~
 print(data.columns)
 ~~~
-{: .python}
 ~~~
 Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
        'gdpPercap_1972', 'gdpPercap_1977', 'gdpPercap_1982', 'gdpPercap_1987',
@@ -161,7 +157,6 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 ~~~
 print(data.T)
 ~~~
-{: .python}
 ~~~
 country           Australia  New Zealand
 gdpPercap_1952  10039.59564  10556.57566
@@ -186,7 +181,6 @@ All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
 print(data.describe())
 ~~~
-{: .python}
 ~~~
        gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
 count        2.000000        2.000000        2.000000        2.000000
@@ -236,7 +230,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > americas = pandas.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
 > > ~~~
-> >{: .python}
 > {: .solution}
 {: .challenge}
 
@@ -260,7 +253,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > americas.head(n=3)
 > > ~~~
-> >{: .python}
 > > 
 > > The output is then
 > > ~~~
@@ -297,13 +289,11 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > americas_flipped = americas.T
 > > ~~~
-> >{: .python}
 > >
 > > We can then view the last three columns of `americas` by viewing the last three rows of `americas_flipped`:
 > > ~~~
 > > americas_flipped.tail(n=3)
 > > ~~~
-> >{: .python}
 > > The output is then
 > > ~~~
 > > country        Argentina  Bolivia   Brazil   Canada    Chile Colombia  \
@@ -331,7 +321,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > americas.T.tail(n=3)
 > > ~~~
-> >{: .python}
 > {: .solution}
 {: .challenge}
 
@@ -360,7 +349,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > data_microbes = pandas.read_csv('../field_data/microbes.csv')
 > > ~~~
-> >{: .python}
 > {: .solution}
 {: .challenge}
 
@@ -376,12 +364,10 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > > americas.to_csv('processed.csv')
 > > ~~~
-> >{: .python}
 > > For help on `to_csv`, you could execute, for example,
 > > ~~~
 > > help(americas.to_csv)
 > > ~~~
-> >{: .python}
 > > Note that `help(to_csv)` throws an error! This is a subtlety and is due to the fact that `to_csv` is NOT a function in 
 > > and of itself and the actual call is `americas.to_csv`. 
 > > 
