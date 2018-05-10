@@ -25,7 +25,6 @@ for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']
     data = pandas.read_csv(filename, index_col='country')
     print(filename, data.min())
 ~~~
-{: .python}
 ~~~
 data/gapminder_gdp_africa.csv gdpPercap_1952    298.846212
 gdpPercap_1957    335.997115
@@ -64,7 +63,6 @@ dtype: float64
 import glob
 print('all csv files in data directory:', glob.glob('data/*.csv'))
 ~~~
-{: .python}
 ~~~
 all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_africa.csv', \
 'data/gapminder_gdp_americas.csv', 'data/gapminder_gdp_asia.csv', 'data/gapminder_gdp_europe.csv', \
@@ -75,7 +73,6 @@ all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_
 ~~~
 print('all PDB files:', glob.glob('*.pdb'))
 ~~~
-{: .python}
 ~~~
 all PDB files: []
 ~~~
@@ -91,7 +88,6 @@ for filename in glob.glob('data/gapminder_*.csv'):
     data = pandas.read_csv(filename)
     print(filename, data['gdpPercap_1952'].min())
 ~~~
-{: .python}
 ~~~
 data/gapminder_all.csv 298.8462121
 data/gapminder_gdp_africa.csv 298.8462121
@@ -136,7 +132,6 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >     fewest = min(____, dataframe.shape[0])
 > print('smallest file has', fewest, 'records')
 > ~~~
-> {: .python}
 > Notice that the shape method returns a tuple with 
 > the number of rows and columns of the data frame.
 >
@@ -150,7 +145,6 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > >     fewest = min(fewest, dataframe.shape[0])
 > > print('smallest file has', fewest, 'records')
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -173,6 +167,5 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > plt.legend()
 > > plt.show()
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}

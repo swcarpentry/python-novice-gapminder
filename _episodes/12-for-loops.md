@@ -31,7 +31,6 @@ keypoints:
 for number in [2, 3, 5]:
     print(number)
 ~~~
-{: .python}
 
 *   This `for` loop is equivalent to:
 
@@ -40,7 +39,6 @@ print(2)
 print(3)
 print(5)
 ~~~
-{: .python}
 
 *   And the `for` loop's output is:
 
@@ -61,7 +59,6 @@ print(5)
 for number in [2, 3, 5]:
 print(number)
 ~~~
-{: .python}
 ~~~
 IndentationError: expected an indented block
 ~~~
@@ -73,7 +70,6 @@ IndentationError: expected an indented block
 firstName="Jon"
   lastName="Smith"
 ~~~
-{: .python}
 ~~~
   File "<ipython-input-7-f65f2962bf9c>", line 2
     lastName="Smith"
@@ -91,7 +87,6 @@ IndentationError: unexpected indent
 for number in [2, 3, 5]:
     print(number)
 ~~~
-{: .python}
 
 *   The collection, `[2, 3, 5]`, is what the loop is being run on.
 *   The body, `print(number)`, specifies what to do for each value in the collection.
@@ -108,7 +103,6 @@ for number in [2, 3, 5]:
 for kitten in [2, 3, 5]:
     print(kitten)
 ~~~
-{: .python}
 
 ## The body of a loop can contain many statements.
 
@@ -122,7 +116,6 @@ for p in primes:
     cubed = p ** 3
     print(p, squared, cubed)
 ~~~
-{: .python}
 ~~~
 2 4 8
 3 9 27
@@ -143,7 +136,6 @@ print('a range is not a list: range(0, 3)')
 for number in range(0,3):
     print(number)
 ~~~
-{: .python}
 ~~~
 a range is not a list: range(0, 3)
 0
@@ -165,7 +157,6 @@ for number in range(10):
    total = total + (number + 1)
 print(total)
 ~~~
-{: .python}
 ~~~
 55
 ~~~
@@ -196,7 +187,6 @@ print(total)
 > for char in "tin":
 >     total = total + 1
 > ~~~
-> {: .python}
 > > ## Solution
 > > 
 > > | Line no | Variables            |
@@ -223,7 +213,6 @@ print(total)
 >     result = ____
 > print(result)
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > original = "tin"
@@ -232,7 +221,6 @@ print(total)
 > >     result = char + result
 > > print(result)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -248,7 +236,6 @@ print(total)
 >     ____ = ____ + len(word)
 > print(total)
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > total = 0
@@ -256,7 +243,6 @@ print(total)
 > >     total = total + len(word)
 > > print(total)
 > > ~~~
-> > {: .python}
 > {: .solution}
 >
 > ~~~
@@ -266,7 +252,6 @@ print(total)
 >     lengths.____(____)
 > print(lengths)
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > lengths = []
@@ -274,7 +259,6 @@ print(total)
 > >     lengths.append(len(word))
 > > print(lengths)
 > > ~~~
-> > {: .python}
 > {: .solution}
 >
 > ~~~
@@ -285,7 +269,6 @@ print(total)
 >     ____
 > print(result)
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > words = ["red", "green", "blue"]
@@ -294,14 +277,12 @@ print(total)
 > >     result = result + word
 > > print(result)
 > > ~~~
-> > {: .python}
 > {: .solution}
 >
 > ~~~
 > # Create acronym: ["red", "green", "blue"] => "RGB"
 > # write the whole thing
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > acronym = ""
@@ -309,7 +290,6 @@ print(total)
 > >     acronym = acronym + word[0].upper()
 > > print(acronym)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -328,7 +308,6 @@ print(total)
 > print(cumulative)
 > data = [1,2,2,5]
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > sum = 0
@@ -339,7 +318,6 @@ print(total)
 > >     cumulative.append(sum)
 > > print(cumulative)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -363,7 +341,6 @@ print(total)
 >         message = message + "b"
 > print(message)
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > message = ""
@@ -375,7 +352,6 @@ print(total)
 > >         message = message + "b"
 > > print(message)
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -390,12 +366,10 @@ print(total)
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
-> {: .python}
 > > ## Solution
 > > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[3])
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}

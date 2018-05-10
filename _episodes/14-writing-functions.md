@@ -40,7 +40,6 @@ keypoints:
 def print_greeting():
     print('Hello!')
 ~~~
-{: .python}
 
 ## Defining a function does not run it.
 
@@ -51,7 +50,6 @@ def print_greeting():
 ~~~
 print_greeting()
 ~~~
-{: .python}
 ~~~
 Hello!
 ~~~
@@ -73,7 +71,6 @@ def print_date(year, month, day):
 
 print_date(1871, 3, 19)
 ~~~
-{: .python}
 ~~~
 1871/3/19
 ~~~
@@ -84,7 +81,6 @@ specify them in any order:
 ~~~
 print_date(month=3, day=19, year=1871)
 ~~~
-{: .python}
 ~~~
 1871/3/19
 ~~~
@@ -108,13 +104,11 @@ def average(values):
         return None
     return sum(values) / len(values)
 ~~~
-{: .python}
 
 ~~~
 a = average([1, 3, 4])
 print('average of actual values:', a)
 ~~~
-{: .python}
 ~~~
 2.6666666666666665
 ~~~
@@ -123,7 +117,6 @@ print('average of actual values:', a)
 ~~~
 print('average of empty list:', average([]))
 ~~~
-{: .python}
 ~~~
 None
 ~~~
@@ -136,7 +129,6 @@ None
 result = print_date(1871, 3, 19)
 print('result of call is:', result)
 ~~~
-{: .python}
 ~~~
 1871/3/19
 result of call is: None
@@ -158,7 +150,6 @@ result of call is: None
 >    print("But at least python tells us about them!")
 >   print("So they are usually not too hard to fix.")
 > ~~~
-> {: .python}
 >
 > > ## Solution
 > >
@@ -168,7 +159,6 @@ result of call is: None
 > >   print("But at least Python tells us about them!")
 > >   print("So they are usually not too hard to fix.")
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -182,7 +172,6 @@ result of call is: None
 >
 > print('calling', report, 22.5)
 > ~~~
-> {: .python}
 > > ## Solution
 > >
 > > ~~~
@@ -207,7 +196,6 @@ result of call is: None
 > result = print_date(1871, 3, 19)
 > print('result of call is:', result)
 > ~~~
-> {: .python}
 >
 > printed:
 > ~~~
@@ -226,7 +214,6 @@ result of call is: None
 >    joined = str(year) + '/' + str(month) + '/' + str(day)
 >    print(joined)
 > ~~~
-> {: .python}
 > 
 > > ## Solution
 > > 
@@ -251,7 +238,6 @@ result of call is: None
 >     data = ____
 >     return ____
 > ~~~
-> {: .python}
 > > ## Solution
 > >
 > > ~~~
@@ -261,7 +247,6 @@ result of call is: None
 > >     data = pandas.read_csv(filename)
 > >     return data.min()
 > > ~~~
-> {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -277,7 +262,6 @@ result of call is: None
 >         if ____:
 >             return ____
 > ~~~
-> {: .python}
 > > ## Solution
 > >
 > > ~~~
@@ -286,13 +270,11 @@ result of call is: None
 > >         if v<0:
 > >             return v
 > > ~~~
-> > {: .python}
 > > If an empty list is passed to this function, it returns `None`:
 > > ~~~
 > > my_list = []
 > > print(first_negative(my_list)
 > > ~~~
-> > {: .python}
 > > ~~~
 > > None
 > > ~~~
@@ -313,12 +295,10 @@ result of call is: None
 > ~~~
 > print_date(day=1, month=2, year=2003)
 > ~~~
-> {: .python}
 >
 > 1.  What does `print_date(day=1, month=2, year=2003)` print?
 > 2.  When have you seen a function call like this before?
 > 3.  When and why is it useful to call functions this way?
-> {: .python}
 > > ## Solution
 > > 
 > > 1. `2003/2/1`
@@ -357,7 +337,6 @@ result of call is: None
 >     else:
 >        print("small")
 > ~~~
-> {: .python}
 >
 >
 > The simplified program  follows.  What function definition will make it functional?
@@ -374,7 +353,6 @@ result of call is: None
 >     print(mass,print_egg_label(mass))    
 >
 > ~~~
-> {: .python}
 >
 >
 > 1. Create a function definition for `print_egg_label()` that will work with the revised program above.  Note, the function's return value will be significant. Sample output might be `71.23 large`.
@@ -398,7 +376,6 @@ result of call is: None
 > >     else:
 > >         return("small")
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -412,7 +389,6 @@ result of call is: None
 > df = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
 > japan = df.loc['Japan']
 > ~~~
-> {: .python}
 >
 > 1.Complete the statements below to obtain the average GDP for Japan
 > across the years reported for the 1980s.
@@ -422,7 +398,6 @@ result of call is: None
 > gdp_decade = 'gdpPercap_' + str(year // ____)
 > avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
 > ~~~
-> {: .python}
 >
 > 2.Abstract the code above into a single function.
 >
@@ -434,7 +409,6 @@ result of call is: None
 >     ____
 >     return avg
 > ~~~
-> {: .python}
 >
 > 3.How would you generalize this function
 >    if you did not know beforehand which specific years occurred as columns in the data?
@@ -451,7 +425,6 @@ result of call is: None
 > > gdp_decade = 'gdpPercap_' + str(year // 10)
 > > avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
 > > ~~~
-> > {: .python}
 > >
 > > 2.
 > >
@@ -463,7 +436,6 @@ result of call is: None
 > >     avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
 > >     return avg
 > > ~~~
-> > {: .python}
 > >
 > > 3.
 > > 
@@ -483,12 +455,10 @@ result of call is: None
 > >             num_years = num_years + 1
 > >     return total/num_years
 > > ~~~
-> > {: .python}
 > > The function can now be called by:
 > > ~~~
 > > avg_gdp_in_decade('Japan','asia',1983)
 > > ~~~
-> > {: .python}
 > > 
 > > ~~~
 > > 20880.023800000003
@@ -516,7 +486,6 @@ result of call is: None
 > > def logistic_map(X, r):
 > >     return r * X * (1 - X)
 > > ~~~
-> > {: .python}
 > >
 > > 2.
 > >
@@ -528,7 +497,6 @@ result of call is: None
 > > for t in range(1, T):
 > >     trajectory[t] = logistic_map(trajectory[t-1], r)
 > > ~~~
-> > {: .python}
 > >
 > > 3.
 > > ~~~
@@ -538,6 +506,5 @@ result of call is: None
 > >         trajectory[t] = logistic_map(trajectory[t-1], r)
 > >     return trajectorys
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
