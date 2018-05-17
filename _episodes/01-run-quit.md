@@ -38,7 +38,6 @@ keypoints:
     ~~~
     $ jupyter notebook
     ~~~
-    {: .python}
 
 *   This will start a Jupyter Notebook server and open your default web browser. 
 *   The server runs locally on your machine only and does not use an internet connection.
@@ -144,7 +143,6 @@ keypoints:
 *   to create
 *   bullet lists.
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 *   Use asterisks
@@ -160,7 +158,6 @@ keypoints:
 1.  to create
 1.  numbered lists.
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 1.  Use numbers
@@ -179,7 +176,6 @@ keypoints:
 	1. Of different
 	1. types
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 *  You can use indents
@@ -196,7 +192,6 @@ keypoints:
 ~~~
 # A Level-1 Heading
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 # A Level-1 Heading
@@ -208,7 +203,6 @@ keypoints:
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 ## A Level-2 Heading (etc.)
@@ -224,7 +218,6 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 Line breaks
@@ -243,7 +236,6 @@ Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
 ~~~
-{: .python}
   </div>
   <div class="col-md-6" markdown="1">
 [Create links](http://software-carpentry.org) with `[...](...)`.
@@ -278,7 +270,6 @@ Or use [named links][data_carpentry].
 > > 3.  Write up.
 > > 4.  Publish.
 > > ~~~
-> > {: .python}
 > {: .solution}
 {: .challenge}
 
@@ -292,7 +283,7 @@ Or use [named links][data_carpentry].
 > 7 * 3
 > 2 + 1
 > ~~~
-> {: .python}
+> {: .language-python}
 > 
 > > ## Solution
 > >
@@ -300,7 +291,7 @@ Or use [named links][data_carpentry].
 > > ~~~
 > > 3
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -315,7 +306,7 @@ Or use [named links][data_carpentry].
 > x = 6 * 7 + 12
 > print(x)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > And then run it with shift+return to be sure that it works as a code cell.
 > Now go back to the cell and use escape+M to switch the cell to Markdown
@@ -326,11 +317,11 @@ Or use [named links][data_carpentry].
 > >
 > > The Python code gets treated like markdown text.
 > > The lines appear as if they are part of one contiguous paragraph.
-> > This could be useful to temporarly turn on and off cells in notebooks that get used for multiple purposes. 
+> > This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes. 
 > > ~~~
 > > x = 6 * 7 + 12 print(x)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -344,7 +335,6 @@ Or use [named links][data_carpentry].
 > ~~~
 > $\sum_{i=1}^{N} 2^{-i} \approx 1$
 > ~~~
-> {: .python}
 >
 > (It's probably easier to copy and paste.)
 > What does it display?
