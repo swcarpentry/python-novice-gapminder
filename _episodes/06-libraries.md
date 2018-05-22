@@ -217,7 +217,7 @@ cos(pi) is -1.0
 > import random
 > ___ = random.randrange(n_bases)
 > ___ = len(bases)
-> print("random base ", bases[], "base index", ___)
+> print("random base ", bases[___], "base index", ___)
 > ~~~
 > {: .python}
 >
