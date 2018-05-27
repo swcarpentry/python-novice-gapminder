@@ -140,7 +140,7 @@ round(...)
 *   Won't even try to run the program if it can't be parsed.
 
 ~~~
-# Forgot to close the quotation marks around the string.
+# Forgot to close the quote marks around the string.
 name = 'Feng
 ~~~
 {: .python}

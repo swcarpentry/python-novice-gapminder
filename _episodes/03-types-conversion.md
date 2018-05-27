@@ -26,7 +26,7 @@ keypoints:
 *   Floating point number (`float`): represents real numbers like 3.14159 or -2.5.
 *   Character string (usually called "string", `str`): text.
     *   Written in either single quotes or double quotes (as long as they match).
-    *   The quotation marks aren't printed when the string is displayed.
+    *   The quote marks aren't printed when the string is displayed.
 
 ## Use the built-in function `type` to find the type of a value.
 
