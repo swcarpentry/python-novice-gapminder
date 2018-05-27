@@ -25,7 +25,7 @@ keypoints:
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
-    and a name in quotation marks to a variable `first_name`.
+    and a name in quotes to a variable `first_name`.
 
 ~~~
 age = 42
@@ -44,7 +44,7 @@ first_name = 'Ahmed'
 *   Python has a built-in function called `print` that prints things as text.
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
-*   To add a string to the printout, wrap the string in single or double quotations.
+*   To add a string to the printout, wrap the string in single or double quotes.
 *   The values passed to the function are called 'arguments'
 
 ~~~
