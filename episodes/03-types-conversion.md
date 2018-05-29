@@ -256,17 +256,19 @@ first is 2 and second is 5
 > 1. Number of days since the start of the year.
 > 2. Time elapsed from the start of the year until now in days.
 > 3. Serial number of a piece of lab equipment.
+> 4. A lab specimen's age
 > 5. Current population of a city.
 > 6. Average population of a city over time.
 >
 > > ## Solution
 > >
 > > The answers to the questions are:
-> > 1) Integer, since the number of days would lie between 1 and 365. 
-> > 2) Floating point, since fractional days are required
-> > 3) Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals
-> > 4) Choose floating point to represent population as large aggreates (eg millions), or integer to represent population in units of individuals.
-> > 5) Floating point number, since an average is likely to have a fractional part (decimal point).
+> > 1. Integer, since the number of days would lie between 1 and 365. 
+> > 2. Floating point, since fractional days are required
+> > 3. Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals
+> > 4. This will vary! How do you define a specimen's age? whole days since collection (integer)? date and time (string)?
+> > 5. Choose floating point to represent population as large aggreates (eg millions), or integer to represent population in units of individuals.
+> > 6. Floating point number, since an average is likely to have a fractional part.
 > >
 > > {: .output}
 > {: .solution}
