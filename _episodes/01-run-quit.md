@@ -60,8 +60,7 @@ keypoints:
 >
 > *   The notebook file is stored in a format called JSON.
 > *   Just like a webpage, what's saved looks different from what you see in your browser.
-> *   But this format allows Jupyter to mix software (in several languages) with documentation 
-      and graphics, all in one file.
+> *   But this format allows Jupyter to mix source code, text, and images, all in one file.
 {: .callout}
 
 ## The Notebook has Command and Edit modes.
