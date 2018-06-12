@@ -19,7 +19,7 @@ Maintainer(s):
 * [Olav Vahtras][olav-vahtras]
 
 [lee-allen]: https://software-carpentry.org/team/#lee-allen
-[lesson-example]: https://swcarpentry.github.com/lesson-example/
+[lesson-example]: https://carpentries.github.com/lesson-example/
 [moore-nathan]: https://software-carpentry.org/team/#moore_nathan
 [singh-sourav]: https://software-carpentry.org/team/#singh-sourav
 [olav-vahtras]: https://software-carpentry.org/team/#vahtras_olav
