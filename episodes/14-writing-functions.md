@@ -498,14 +498,14 @@ result of call is: None
 
 > ## Simulating a dynamical system
 >
-> In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system in which a function describes the time dependence of a point in a geometrical space.  Canonical example of a dynamical system is a system called the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
+> In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system in which a function describes the time dependence of a point in a geometrical space.  A canonical example of a dynamical system is a system called the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
 >
 >
-> 1. Define a function called `logistic_map` that takes two inputs: `X`, representing the state of the system at time _t_, and a parameter `r`. This function should return a value representing the state of the system at time _t+1_.
+> 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the state of the system at time _t_, and a parameter `r`. This function should return a value representing the state of the system at time _t+1_.
 >
-> 2. Using a `for` loop, iterate the `logistic_map` function defined in part 1 starting from an initial condition of 0.5 for `T=10`, `100`, and `1000` periods. Store the intermediate results in a list so that after the `for` loop terminates you have accumulated a sequence of values representing the state of the logistic map at time _t=0,1,...,T_.
+> 2. Using a `for` loop, iterate the `logistic_map` function defined in part 1 starting from an initial condition of 0.5 for `t_final=10`, `100`, and `1000` periods. Store the intermediate results in a list so that after the `for` loop terminates you have accumulated a sequence of values representing the state of the logistic map at time _t=0,1,...,t_final_.
 >
-> 3. Encapsulate the logic of your `for` loop into a function called `iterate` that takes the initial condition as its first input, the parameter `T` as its second input and the parameter `r` as its third input. The function should return the list of values representing the state of the logistic map at time _t=0,1,...,T_.
+> 3. Encapsulate the logic of your `for` loop into a function called `iterate` that takes the initial condition as its first input, the parameter `t_final` as its second input and the parameter `r` as its third input. The function should return the list of values representing the state of the logistic map at time _t=0,1,...,t_final_.
 >
 >
 > > ## Solution
@@ -513,8 +513,8 @@ result of call is: None
 > > 1.
 > >
 > > ~~~
-> > def logistic_map(X, r):
-> >     return r * X * (1 - X)
+> > def logistic_map(x, r):
+> >     return r * x * (1 - x)
 > > ~~~
 > > {: .python}
 > >
@@ -522,19 +522,19 @@ result of call is: None
 > >
 > > ~~~
 > > initial_condition = 0.5
-> > T = 10
+> > t_final = 10
 > > r = 1.0
 > > trajectory = [initial_condition]
-> > for t in range(1, T):
+> > for t in range(1, t_final):
 > >     trajectory[t] = logistic_map(trajectory[t-1], r)
 > > ~~~
 > > {: .python}
 > >
 > > 3.
 > > ~~~
-> > def iterate(initial_condition, T, r):
+> > def iterate(initial_condition, t_final, r):
 > >     trajectory = [initial_condition]
-> >     for t in range(1, T):
+> >     for t in range(1, t_final):
 > >         trajectory[t] = logistic_map(trajectory[t-1], r)
 > >     return trajectorys
 > > ~~~
