@@ -171,7 +171,7 @@ print(str(1) + '2')
 ## Can mix integers and floats freely in operations.
 
 *   Integers and floating-point numbers can be mixed in arithmetic.
-    *   Python automatically converts integers to floats as needed.
+    *   Python 3 automatically converts integers to floats as needed. (Integer division in Python 2 will return an integer, the *floor* of the division.)
 
 ~~~
 print('half is', 1 / 2.0)
