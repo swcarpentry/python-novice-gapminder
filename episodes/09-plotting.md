@@ -4,6 +4,7 @@ teaching: 15
 exercises: 15
 questions:
 - "How can I plot my data?"
+- "How can I save my plot for publishing?"
 objectives:
 - "Create a time series plot showing a single data set."
 - "Create a scatter plot showing relationship between two data sets."
@@ -240,3 +241,42 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > >
 > {: .solution}
 {: .challenge}
+
+> ## Saving your plot to a file
+> 
+> If you are satisfied with the plot you see you may want to save it to a file,
+> perhaps to include it in a publication. There is a function in the
+> matplotlib.pyplot module that accomplishes this:
+> [savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html).
+> Calling this function, e.g. with
+> ~~~
+> plt.savefig('my_figure.png')
+> ~~~
+> {: .language-python}
+> 
+> will save the current figure to the file `my_figure.png`. The file format
+> will automatically be deduced from the file name extension (other formats
+> are pdf, ps, eps and svg).
+>
+> Note that functions in `plt` refer to a global figure variable
+> and after a figure has been displayed to the screen (e.g. with `plt.show`) 
+> matplotlib will make this  variable refer to a new empty figure.
+> Therefore, make sure you call `plt.savefig` before the plot is displayed to
+> the screen, otherwise you may find a file with an empty plot.
+>
+> When using dataframes, data is often generated and plotted to screen in one line,
+> and `plt.savefig` seems not to be a possible approach.
+> One possibility to save the figure to file is then to
+>
+> * save a reference to the current figure in a local variable (with `plt.gcf`) 
+> * call the `savefig` class method from that varible.
+>
+> ~~~
+> fig = plt.gcf() # get current figure
+> data.plot(kind='bar')
+> fig.savefig('my_figure.png')
+> ~~~
+> {: .language-python}
+{: .callout}
+
+
