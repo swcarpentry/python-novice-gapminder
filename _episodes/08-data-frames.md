@@ -260,6 +260,8 @@ mask_higher = data.apply(lambda x:x>x.mean())
 wealth_score = mask_higher.aggregate('sum',axis=1)/len(data.columns)
 wealth_score
 ~~~
+{: .python}
+
 By using lambda, we can create one-line functions to apply to dataframes. This code block applies a
 lambda function to x. The format used is `lambda variable: function` in which the function uses 
 the variable defined on the left side of the colon. For each value of x, we are applying the conditional
@@ -268,7 +270,7 @@ checking if x is greater than the mean of all values of x.
 Aggregate applies operations to the dataframe. Here, we are using aggregate to apply the operation 'sum'
 over each column (axis = 1) in the dataframe.
 
-{: .python}
+
 ~~~
 country
 Albania                   0.000000
