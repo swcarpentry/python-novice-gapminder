@@ -267,7 +267,7 @@ checking if x is greater than the mean of all values of x.
 
 Aggregate applies operations to the dataframe. Here, we are using aggregate to apply the operation 'sum'
 over each column (axis = 1) in the dataframe.
-~~~
+
 {: .python}
 ~~~
 country
