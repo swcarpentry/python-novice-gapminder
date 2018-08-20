@@ -139,10 +139,16 @@ cos(pi) is -1.0
 > 2. Since the library contains this function, why does `sqrt` exist?
 >
 > > ## Solution
-> > 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`
-> > 2. The `sqrt(x)` function (like much of the `math` library) has it's origins in
-> >    C's math library. Consequently, it might be somewhat faster than `pow(x,y)`.
-> >    Also, it might be more readable than `pow(x, 0.5)` when implementing equations.
+> > 1. Using `help(math)` we see that we've got `pow(x,y)` in addition to `sqrt(x)`,
+> >    so we could use `pow(x, 0.5)` to find a square root.
+> > 2. The `sqrt(x)` function is arguably more readable than `pow(x, 0.5)` when
+> >    implementing equations. Readability is a cornerstone of good programming, so it
+> >    makes sense to provide a special function for this specific common case.
+> >
+> >    Also, the design of Python's `math` library has its origin in the C standard,
+> >    which includes both `sqrt(x)` and `pow(x,y)`, so a little bit of the history
+> >    of programming is showing in Python's function names.
+> >
 > {: .solution}
 {: .challenge}
 
