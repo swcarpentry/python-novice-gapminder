@@ -143,7 +143,6 @@ cos(pi) is -1.0
 > > 2. The `sqrt(x)` function (like much of the `math` library) has it's origins in
 > >    C's math library. Consequently, it might be somewhat faster than `pow(x,y)`.
 > >    Also, it might be more readable than `pow(x, 0.5)` when implementing equations.
-> >    However, `sqrt(x)` doesn't support negative arguments.
 > {: .solution}
 {: .challenge}
 
