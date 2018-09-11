@@ -3,12 +3,13 @@ title: "Variables and Assignment"
 teaching: 10
 exercises: 10
 questions:
-- "How can I store data in programs?"
+- "How can I store information in programs?"
 objectives:
-- "Write programs that assign scalar values to variables and perform calculations with those values."
-- "Correctly trace value changes in programs that use scalar assignment."
+- "Write programs that assign numbers as variables and perform calculations with those numbers."
+- "Correctly trace changes to variables in programs."
 keypoints:
-- "Use variables to store values."
+- "Use variables to store information."
+- "Values are individual pieces or collections of information."
 - "Use `print` to display values."
 - "Variables persist between cells."
 - "Variables must be created before they are used."
@@ -19,10 +20,12 @@ keypoints:
 - "Python is case-sensitive."
 - "Use meaningful variable names."
 ---
-## Use variables to store values.
+## Use variables to store information.
 
-*   Variables are names for values.
-*   In Python the `=` symbol assigns the value on the right to the name on the left.
+*   Variables are names for information.
+*   Variables can be used for different types information and varying data structures.
+*   An individual piece of information is called a value.
+*   In Python the `=` symbol assigns the value on the right to the variable name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
     and a name in quotes to a variable `first_name`.
