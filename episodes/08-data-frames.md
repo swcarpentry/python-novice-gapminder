@@ -517,9 +517,10 @@ data.groupby(wealth_score).sum()
 > Python includes a "dir" function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a simple list are:
 > ~~~
 > potatoes=["Russet","Norkota","Yukon Gold","Pontiac"]
-> dir(potatoes)...
+> dir(potatoes)
 > ~~~
 > {: .python}
+>
 > This command returns:
 > ~~~
 > ['__add__',
@@ -538,9 +539,10 @@ data.groupby(wealth_score).sum()
 > 'sort']
 > ~~~
 > {: .python}
-> The double underscore functions can be ignored, and the functions without double underscore are the ones you can possibly use.  So, if you want to sort the list of potatoes, according to dir you should try,
+>
+> The double underscore functions can be ignored, and the functions without double underscore are the ones you would normally be able to use.  So, if you want to sort the list of potatoes, according to dir you should try,
 > ~~~
-potatoes.sort()
+> potatoes.sort()
 > ~~~
 > {: .python}
 >
