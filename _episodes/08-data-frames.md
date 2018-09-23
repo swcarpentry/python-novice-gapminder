@@ -511,6 +511,53 @@ data.groupby(wealth_score).sum()
 > {: .solution}
 {: .challenge}
 
+
+> ## Using the dir function to see available methods
+>
+> Python includes a "dir" function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a simple list are:
+> ~~~
+> potatoes=["Russet","Norkota","Yukon Gold","Pontiac"]
+> dir(potatoes)...
+> ~~~
+> {: .python}
+> This command returns:
+> ~~~
+> ['__add__',
+> ...
+> '__subclasshook__',
+>  'append',
+>  'clear',
+>  'copy',
+>  'count',
+> 'extend',
+> 'index',
+> 'insert',
+> 'pop',
+> 'remove',
+> 'reverse',
+> 'sort']
+> ~~~
+> {: .python}
+> The double underscore functions can be ignored, and the functions without double underscore are the ones you can possibly use.  So, if you want to sort the list of potatoes, according to dir you should try,
+> ~~~
+potatoes.sort()
+> ~~~
+> {: .python}
+>
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as 'data'.
+> use dir to find the function that prints out the median per-capita GDP across all European countries for each year the data is available.  
+{: .challenge}
+>
+> > ## Solution
+> > Among many possibilities, dir lists the 'median()' function as a possibility.  Thus,
+> > ~~~
+> > data.median()
+> > ~~~
+> > {: .python}
+> > {: .solution}
+{: .challenge}
+
+
 > ## Interpretation
 >
 > Poland's borders have been stable since 1945,
