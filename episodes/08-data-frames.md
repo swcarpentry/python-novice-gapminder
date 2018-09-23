@@ -514,7 +514,7 @@ data.groupby(wealth_score).sum()
 
 > ## Using the dir function to see available methods
 >
-> Python includes a "dir" function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a simple list are:
+> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a simple list are:
 > ~~~
 > potatoes=["Russet","Norkota","Yukon Gold","Pontiac"]
 > dir(potatoes)
@@ -546,12 +546,11 @@ data.groupby(wealth_score).sum()
 > ~~~
 > {: .python}
 >
-> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as 'data'.
-> use dir to find the function that prints out the median per-capita GDP across all European countries for each year the data is available.  
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use dir to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
 {: .challenge}
 >
 > > ## Solution
-> > Among many possibilities, dir lists the 'median()' function as a possibility.  Thus,
+> > Among many choices, dir lists the `median()` function as a possibility.  Thus,
 > > ~~~
 > > data.median()
 > > ~~~
