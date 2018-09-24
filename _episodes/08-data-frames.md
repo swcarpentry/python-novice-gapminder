@@ -547,7 +547,7 @@ data.groupby(wealth_score).sum()
 > {: .python}
 >
 > Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use dir to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
-{: .challenge}
+> {: .challenge}
 >
 > > ## Solution
 > > Among many choices, dir lists the `median()` function as a possibility.  Thus,
