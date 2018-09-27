@@ -48,7 +48,7 @@ import pandas
 data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.iloc[0, 0])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 1601.056136
 ~~~
@@ -62,7 +62,7 @@ print(data.iloc[0, 0])
 data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.loc["Albania", "gdpPercap_1952"])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 1601.056136
 ~~~
@@ -74,7 +74,7 @@ print(data.loc["Albania", "gdpPercap_1952"])
 ~~~
 print(data.loc["Albania", :])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 gdpPercap_1952    1601.056136
 gdpPercap_1957    1942.284244
@@ -97,7 +97,7 @@ Name: Albania, dtype: float64
 ~~~
 print(data.loc[:, "gdpPercap_1952"])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 country
 Albania                    1601.056136
@@ -119,7 +119,7 @@ Name: gdpPercap_1952, dtype: float64
 ~~~
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
 country
@@ -146,7 +146,7 @@ everything up to but not including the final index.
 ~~~
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 gdpPercap_1962    13450.40151
 gdpPercap_1967    16361.87647
@@ -158,7 +158,7 @@ dtype: float64
 ~~~
 print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 gdpPercap_1962    4649.593785
 gdpPercap_1967    5907.850937
@@ -180,7 +180,7 @@ print('Subset of data:\n', subset)
 # Which values were greater than 10000 ?
 print('\nWhere are values large?\n', subset > 10000)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Subset of data:
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
@@ -210,7 +210,7 @@ Poland               False          False          False
 mask = subset > 10000
 print(subset[mask])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
              gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
 country
@@ -228,7 +228,7 @@ Poland                  NaN             NaN             NaN
 ~~~
 print(subset[subset > 10000].describe())
 ~~~
-{: .python}
+{: .language-python}
 ~~~
        gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
 count        2.000000        3.000000        3.000000
@@ -260,7 +260,7 @@ mask_higher = data.apply(lambda x:x>x.mean())
 wealth_score = mask_higher.aggregate('sum',axis=1)/len(data.columns)
 wealth_score
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 country
 Albania                   0.000000
@@ -303,7 +303,7 @@ across the years surveyed:
 ~~~
 data.groupby(wealth_score).sum()
 ~~~
-{: .python}
+{: .language-python}
 ~~~
           gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
 0.000000    36916.854200    46110.918793    56850.065437    71324.848786   
@@ -336,7 +336,7 @@ data.groupby(wealth_score).sum()
 >
 > df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
 {: .challenge}
@@ -346,7 +346,7 @@ data.groupby(wealth_score).sum()
 > > ~~~
 > > print(df.loc['Serbia', 'gdpPercap_2007'])
 > > ~~~
-> >{: .python}
+> > {: .language-python}
 > > The output is
 > > ~~~
 > > 9786.534714
@@ -365,7 +365,7 @@ data.groupby(wealth_score).sum()
 > print(data.iloc[0:2, 0:2])
 > print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
-> {: .python}
+> {: .language-python}
 > 
 {: .challenge}
 > 
@@ -406,7 +406,7 @@ data.groupby(wealth_score).sum()
 > fourth = third.drop('continent', axis = 1)
 > fourth.to_csv('result.csv')
 > ~~~
-> {: .python}
+> {: .language-python}
 {: .challenge}
 >
 > > ## Solution
@@ -414,14 +414,14 @@ data.groupby(wealth_score).sum()
 > > ~~~
 > > first = pandas.read_csv('data/gapminder_all.csv', index_col='country')
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > This line loads the dataset containing the GDP data from all countries into a dataframe called 
 > > `first`. The `index_col='country'` parameter selects which column to use as the 
 > > row labels in the dataframe.  
 > > ~~~
 > > second = first[first['continent'] == 'Americas']
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > This line makes a selection: only those rows of `first` for which the 'continent' column matches 
 > > 'Americas' are extracted. Notice how the Boolean expression inside the brackets, 
 > > `first['continent'] == 'Americas'`, is used to select only those rows where the expression is true. 
@@ -430,20 +430,20 @@ data.groupby(wealth_score).sum()
 > > ~~~
 > > third = second.drop('Puerto Rico')
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > As the syntax suggests, this line drops the row from `second` where the label is 'Puerto Rico'. The 
 > > resulting dataframe `third` has one row less than the original dataframe `second`.
 > > ~~~
 > > fourth = third.drop('continent', axis = 1)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > Again we apply the drop function, but in this case we are dropping not a row but a whole column. 
 > > To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column 
 > > which has index 1).
 > > ~~~
 > > fourth.to_csv('result.csv')
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > The final step is to write the data that we have been working on to a csv file. Pandas makes this easy 
 > > with the `to_csv()` function. The only required argument to the function is the filename. Note that the 
 > > file will be written in the directory from which you started the Jupyter or Python session.
@@ -460,7 +460,7 @@ data.groupby(wealth_score).sum()
 > print(data.idxmin())
 > print(data.idxmax())
 > ~~~
-> {: .python}
+> {: .language-python}
 {: .challenge}
 >
 > > ## Solution
@@ -488,28 +488,76 @@ data.groupby(wealth_score).sum()
 > > ~~~
 > > data['gdpPercap_1982']
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > >
 > > 2:
 > > ~~~
 > > data.loc['Denmark',:]
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > >
 > > 3:
 > > ~~~
 > > data.loc[:,'gdpPercap_1985':]
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
 > >
 > > 4:
 > > ~~~
 > > data['gdpPercap_2007']/data['gdpPercap_1952']
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
+
+
+> ## Using the dir function to see available methods
+>
+> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a [list data type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) are:
+> ~~~
+> potatoes = ["Russet", "Norkota", "Yukon Gold", "Pontiac"]
+> dir(potatoes)
+> ~~~
+> {: .language-python}
+>
+> This command returns:
+> ~~~
+> ['__add__',
+> ...
+> '__subclasshook__',
+>  'append',
+>  'clear',
+>  'copy',
+>  'count',
+> 'extend',
+> 'index',
+> 'insert',
+> 'pop',
+> 'remove',
+> 'reverse',
+> 'sort']
+> ~~~
+> {: .language-python}
+>
+> The double underscore functions can be ignored for now; functions that are not surrounded by double underscores are the *public interface* of the [list type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). So, if you want to sort the list of potatoes, according to `dir` you should try,
+> ~~~
+> potatoes.sort()
+> ~~~
+> {: .language-python}
+>
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir` to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
+{: .challenge}
+>
+> > ## Solution
+> > Among many choices, dir lists the `median()` function as a possibility.  Thus,
+> > ~~~
+> > data.median()
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
 
 > ## Interpretation
 >
