@@ -526,7 +526,7 @@ result of call is: None
 > > r = 1.0
 > > trajectory = [initial_condition]
 > > for t in range(1, t_final):
-> >     trajectory[t] = logistic_map(trajectory[t-1], r)
+> >     trajectory.append( logistic_map(trajectory[t-1], r) )
 > > ~~~
 > > {: .python}
 > >
@@ -535,8 +535,8 @@ result of call is: None
 > > def iterate(initial_condition, t_final, r):
 > >     trajectory = [initial_condition]
 > >     for t in range(1, t_final):
-> >         trajectory[t] = logistic_map(trajectory[t-1], r)
-> >     return trajectorys
+> >         trajectory.append( logistic_map(trajectory[t-1], r) )
+> >     return trajectory
 > > ~~~
 > > {: .python}
 > {: .solution}
