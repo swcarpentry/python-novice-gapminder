@@ -100,14 +100,14 @@ NameError: name 'last_name' is not defined
 > {: .language-python}
 >
 > If you execute this in order, the first cell will give an error. However, if you run the first cell *after* the second
-> cell it will print out ‘1’. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
+> cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
 > clears the interpreter and runs everything from a clean slate going top to bottom.
 {: .callout}
 
 ## Variables can be used in calculations.
 
 *   We can use variables in calculations just as if they were values.
-    *   Remember, we assigned 42 to `age` a few lines ago.
+    *   Remember, we assigned the value `42` to `age` a few lines ago.
 
 ~~~
 age = age + 3
@@ -122,7 +122,7 @@ Age in three years: 45
 ## Use an index to get a single character from a string.
 
 *   The characters (individual letters, numbers, and so on) in a string are
-    ordered. For example, the string 'AB' is not the same as 'BA'. Because of
+    ordered. For example, the string `'AB'` is not the same as `'BA'`. Because of
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
     number is called an **index** or sometimes a subscript.
@@ -151,7 +151,7 @@ h
     index of the first element we want and `stop` is replaced with the index of
     the element just after the last element we want.
 *   Mathematically, you might say that a slice selects `[start:stop)`.
-*   The difference between stop and start is the slice's length.
+*   The difference between `stop` and `start` is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
     the slice is a copy of part of the original string.
 
@@ -250,11 +250,11 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > ~~~
 > > {: .output}
 > >
->> The `initial` variable is assigned the value 'left'.
+>> The `initial` variable is assigned the value `'left'`.
 > > In the second line, the `position` variable also receives
->> the string value 'left'. In third line, the `initial` variable is given the
->> value 'right', but the `position` variable retains its string value
->> of 'left'.
+>> the string value `'left'`. In third line, the `initial` variable is given the
+>> value `'right'`, but the `position` variable retains its string value
+>> of `'left'`.
 >{: .solution}
 {: .challenge}
 
