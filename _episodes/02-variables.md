@@ -21,7 +21,7 @@ keypoints:
 ---
 ## Use variables to store values.
 
-*   Variables are names for values.
+*   **Variables** are names for values.
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
@@ -31,7 +31,7 @@ keypoints:
 age = 42
 first_name = 'Ahmed'
 ~~~
-{: .python}
+{: .language-python}
 
 *   Variable names
     * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
@@ -45,12 +45,12 @@ first_name = 'Ahmed'
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
 *   To add a string to the printout, wrap the string in single or double quotes.
-*   The values passed to the function are called 'arguments'
+*   The values passed to the function are called **arguments**
 
 ~~~
 print(first_name, 'is', age, 'years old')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Ahmed is 42 years old
 ~~~
@@ -62,13 +62,12 @@ Ahmed is 42 years old
 ## Variables must be created before they are used.
 
 *   If a variable doesn't exist yet, or if the name has been mis-spelled,
-    Python reports an error.
-    *   Unlike some languages, which "guess" a default value.
+    Python reports an error. (Unlike some languages, which "guess" a default value.)
 
 ~~~
 print(last_name)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
@@ -84,37 +83,37 @@ NameError: name 'last_name' is not defined
 
 > ## Variables Persist Between Cells
 >
-> Be aware that it is the order of **execution** of cells that is important in a Jupyter notebook, not the order
-> in which they appear. Python will remember **all** the code that was run previously, including any variables you have
+> Be aware that it is the *order* of execution of cells that is important in a Jupyter notebook, not the order
+> in which they appear. Python will remember *all* the code that was run previously, including any variables you have
 > defined, irrespective of the order in the notebook. Therefore if you define variables lower down the notebook and then
-> (re)run cells further up, those defined further down will still be present. As an example, create 2 cells with the
+> (re)run cells further up, those defined further down will still be present. As an example, create two cells with the
 > following content, in this order:
 >
 > ~~~
 > print(myval)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > ~~~
 > myval = 1
 > ~~~
-> {: .python}
+> {: .language-python}
 >
-> If you execute this in order, the first cell will give an error. However, if you run the first cell **after** the second
-> cell it will print out ‘1’. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
+> If you execute this in order, the first cell will give an error. However, if you run the first cell *after* the second
+> cell it will print out `1`. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
 > clears the interpreter and runs everything from a clean slate going top to bottom.
 {: .callout}
 
 ## Variables can be used in calculations.
 
 *   We can use variables in calculations just as if they were values.
-    *   Remember, we assigned 42 to `age` a few lines ago.
+    *   Remember, we assigned the value `42` to `age` a few lines ago.
 
 ~~~
 age = age + 3
 print('Age in three years:', age)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Age in three years: 45
 ~~~
@@ -123,10 +122,10 @@ Age in three years: 45
 ## Use an index to get a single character from a string.
 
 *   The characters (individual letters, numbers, and so on) in a string are
-    ordered. For example, the string 'AB' is not the same as 'BA'. Because of
+    ordered. For example, the string `'AB'` is not the same as `'BA'`. Because of
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
-    number is called an index or sometimes a subscript.
+    number is called an **index** or sometimes a subscript.
 *   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
@@ -135,7 +134,7 @@ Age in three years: 45
 atom_name = 'helium'
 print(atom_name[0])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 h
 ~~~
@@ -143,7 +142,7 @@ h
 
 ## Use a slice to get a substring.
 
-*   A part of a string is called a substring. A substring can be as short as a
+*   A part of a string is called a **substring**. A substring can be as short as a
     single character.
 *   An item in a list is called an element. Whenever we treat a string as if it
     were a list, the string's elements are its individual characters.
@@ -152,7 +151,7 @@ h
     index of the first element we want and `stop` is replaced with the index of
     the element just after the last element we want.
 *   Mathematically, you might say that a slice selects `[start:stop)`.
-*   The difference between stop and start is the slice's length.
+*   The difference between `stop` and `start` is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
     the slice is a copy of part of the original string.
 
@@ -160,7 +159,7 @@ h
 atom_name = 'sodium'
 print(atom_name[0:3])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 sod
 ~~~
@@ -171,7 +170,7 @@ sod
 ~~~
 print(len('helium'))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 6
 ~~~
@@ -196,7 +195,7 @@ flabadab = 42
 ewr_422_yY = 'Ahmed'
 print(ewr_422_yY, 'is', flabadab, 'years old')
 ~~~
-{: .python}
+{: .language-python}
 
 *   Use meaningful variable names to help other people understand what the program does.
 *   The most important "other person" is your future self.
@@ -204,7 +203,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > ## Swapping Values
 >
 > Fill the table showing the values of the variables in this program
-> **after** each statement is executed.
+> *after* each statement is executed.
 >
 > ~~~
 > # Command  # Value of x   # Value of y   # Value of swap #
@@ -214,7 +213,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > x = y      #              #              #               #
 > y = swap   #              #              #               #
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > >
 > > ~~~
@@ -243,7 +242,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > position = initial
 > initial = 'right'
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > >
 > > ~~~
@@ -251,11 +250,11 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > ~~~
 > > {: .output}
 > >
->> The `initial` variable is assigned the value 'left'.
+>> The `initial` variable is assigned the value `'left'`.
 > > In the second line, the `position` variable also receives
->> the string value 'left'. In third line, the `initial` variable is given the
->> value 'right', but the `position` variable retains its string value
->> of 'left'.
+>> the string value `'left'`. In third line, the `initial` variable is given the
+>> value `'right'`, but the `position` variable retains its string value
+>> of `'left'`.
 >{: .solution}
 {: .challenge}
 
@@ -272,7 +271,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > a = 123
 > > print(a[1])
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > TypeError: 'int' object is not subscriptable
 > > ~~~
@@ -298,7 +297,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > {: .solution}
 {: .challenge}
 
-> ## Slicing
+> ## Slicing practice
 >
 > What does the following program print?
 >
@@ -306,11 +305,18 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > atom_name = 'carbon'
 > print('atom_name[1:3] is:', atom_name[1:3])
 > ~~~
-> {: .python}
-> ~~~
-> atom_name[1:3] is: ar
-> ~~~
-> {: .output}
+> {: .language-python}
+>
+> > ## Solution
+> >
+> > ~~~
+> > atom_name[1:3] is: ar
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+> ## Slicing concepts
 >
 > 1.  What does `thing[low:high]` do?
 > 2.  What does `thing[low:]` (without a value after the colon) do?
@@ -318,4 +324,15 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 4.  What does `thing[:]` (just a colon) do?
 > 5.  What does `thing[number:negative-number]` do?
 > 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
+>
+> > ## Solutions
+> >
+> > 1. `thing[low:high]` returns a slice from `low` to the value before `high`
+> > 2. `thing[low:]` returns a slice from `low` to the end of `thing`
+> > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`
+> > 4. `thing[:]` returns all of `thing`
+> > 5. `thing[number:negative-number]` returns a slice from `number` to `negative-number` values from the end of `thing`
+> > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
+> >
+> {: .solution}
 {: .challenge}
