@@ -79,11 +79,11 @@ keypoints:
 *   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately,
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
-*   These are the command (gray) and edit (green) modes of your notebook.
-*   In command mode, pressing the <kbd>H</kbd> key will provide 
+*   These are the **Command** (gray) and **Edit** (green) modes of your notebook.
+*   In Command mode, pressing the <kbd>H</kbd> key will provide 
     a list of all the shortcut keys.
-*   Command mode allows you to edit notebook-level features, and edit mode changes the content of cells.
-*   When in command mode (esc/gray),
+*   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
+*   When in Command mode (esc/gray),
     *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
     *   The <kbd>A</kbd> key will make one above.
     *   The <kbd>X</kbd> key will delete the current cell.
@@ -94,7 +94,7 @@ keypoints:
 
 > ## Command Vs. Edit
 >
-> In the Jupyter notebook page are you currently in command or edit mode?  
+> In the Jupyter notebook page are you currently in Command or Edit mode?  
 > Switch between the modes. 
 > Use the shortcuts to generate a new cell. 
 > Use the shortcuts to delete a cell
@@ -103,18 +103,18 @@ keypoints:
 > >
 > > Command mode has a grey boarder and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
+> > You need to be in Command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
+> > You need to be in Command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
 > >
 > {: .solution}
 {: .challenge}
 
 ## Use the keyboard and mouse to select and edit cells.
 
-*   Pressing the <kbd>Return</kbd> key turns the border green and engages edit mode,
+*   Pressing the <kbd>Return</kbd> key turns the border green and engages Edit mode,
     which allows you to type within the cell.
 *   Because we want to be able to write many lines of code in a single cell,
-    pressing the <kbd>Return</kbd> key when in edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
+    pressing the <kbd>Return</kbd> key when in Edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
 *   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
 *   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd keys on the 
@@ -127,11 +127,11 @@ keypoints:
         and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
 *   Turn the current cell into a Markdown cell by entering 
-    the command mode (<kbd>Esc</kbd>/gray) and press the <kbd>M</kbd> key.
+    the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>M</kbd> key.
 *   `In [ ]:` will disappear to show it is no longer a code cell
     and you will be able to write in Markdown.
 *   Turn the current cell into a Code cell
-    by entering the command mode (<kbd>Esc</kbd>/gray) and press the <kbd>Y</kbd> key.
+    by entering the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>Y</kbd> key.
 
 ## Markdown does most of what HTML does.
 
