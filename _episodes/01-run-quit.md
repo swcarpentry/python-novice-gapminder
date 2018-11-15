@@ -314,7 +314,7 @@ Or use [named links][data_carpentry].
 > 
 > > ## Solution
 > >
-> > The Python code gets treated like markdown text.
+> > The Python code gets treated like Markdown text.
 > > The lines appear as if they are part of one contiguous paragraph.
 > > This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes. 
 > > ~~~
@@ -341,12 +341,12 @@ Or use [named links][data_carpentry].
 > 
 > > ## Solution
 > >
-> > The notebook shows the equation as it would be rendered from latex equation syntax.
-> > The dollar sign, `$`, is used to tell markdown that the text in between is a latex equation.
-> > If you're not familiar with latex,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
+> > The notebook shows the equation as it would be rendered from LaTeX equation syntax.
+> > The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
+> > If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
 > > A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the the subscript and `N` becomes the superscript.
 > > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
-> > `\sum` and `\approx` are latex commands for "sum over" and "approximate" symbols. 
+> > `\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols. 
 > {: .solution}
 {: .challenge}
 
