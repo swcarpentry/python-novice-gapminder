@@ -21,7 +21,7 @@ keypoints:
 ---
 ## Use variables to store values.
 
-*   Variables are names for values.
+*   **Variables** are names for values.
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
@@ -45,7 +45,7 @@ first_name = 'Ahmed'
 *   Call the function (i.e., tell Python to run it) by using its name.
 *   Provide values to the function (i.e., the things to print) in parentheses.
 *   To add a string to the printout, wrap the string in single or double quotes.
-*   The values passed to the function are called 'arguments'
+*   The values passed to the function are called **arguments**
 
 ~~~
 print(first_name, 'is', age, 'years old')
@@ -126,7 +126,7 @@ Age in three years: 45
     ordered. For example, the string 'AB' is not the same as 'BA'. Because of
     this ordering, we can treat the string as a list of characters.
 *   Each position in the string (first, second, etc.) is given a number. This
-    number is called an index or sometimes a subscript.
+    number is called an **index** or sometimes a subscript.
 *   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
@@ -143,7 +143,7 @@ h
 
 ## Use a slice to get a substring.
 
-*   A part of a string is called a substring. A substring can be as short as a
+*   A part of a string is called a **substring**. A substring can be as short as a
     single character.
 *   An item in a list is called an element. Whenever we treat a string as if it
     were a list, the string's elements are its individual characters.
