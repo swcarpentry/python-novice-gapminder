@@ -82,7 +82,7 @@ keypoints:
 *   These are the command (gray) and edit (green) modes of your notebook.
 *   In command mode, pressing the <kbd>H</kbd> key will provide 
     a list of all the shortcut keys.
-*   Command mode alows you to edit notebook-level features, and edit mode changes the content of cells.
+*   Command mode allows you to edit notebook-level features, and edit mode changes the content of cells.
 *   When in command mode (esc/gray),
     *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
     *   The <kbd>A</kbd> key will make one above.
