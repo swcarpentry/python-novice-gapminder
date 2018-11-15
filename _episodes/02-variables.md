@@ -62,8 +62,7 @@ Ahmed is 42 years old
 ## Variables must be created before they are used.
 
 *   If a variable doesn't exist yet, or if the name has been mis-spelled,
-    Python reports an error.
-    *   Unlike some languages, which "guess" a default value.
+    Python reports an error. (Unlike some languages, which "guess" a default value.)
 
 ~~~
 print(last_name)
