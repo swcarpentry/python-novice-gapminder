@@ -76,25 +76,25 @@ keypoints:
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press "esc" and "return" alternately,
+*   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately,
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
-*   These are the command (gray) and edit (green) modes of your notebook.
-*   In command mode, pressing the "H" key will provide 
+*   These are the **Command** (gray) and **Edit** (green) modes of your notebook.
+*   In Command mode, pressing the <kbd>H</kbd> key will provide 
     a list of all the shortcut keys.
-*   Command mode alows you to edit notebook-level features, and edit mode changes the content of cells.
-*   When in command mode (esc/gray),
-    *   The "B" key will make a new cell below the currently selected cell.
-    *   The "A" key will make one above.
-    *   The "X" key will delete the current cell.
-    *   The "Z" key will undo your last cell deletion.
+*   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
+*   When in Command mode (esc/gray),
+    *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
+    *   The <kbd>A</kbd> key will make one above.
+    *   The <kbd>X</kbd> key will delete the current cell.
+    *   The <kbd>Z</kbd> key will undo your last cell deletion.
 *   All actions can be done using the menus,
     but there are lots of keyboard shortcuts to speed things up.
-*   If you remember the "esc" and "H" shortcut, you will be able to find out all the rest.
+*   If you remember the <kbd>Esc</kbd> and <kbd>H</kbd> shortcut, you will be able to find out all the rest.
 
 > ## Command Vs. Edit
 >
-> In the Jupyter notebook page are you currently in command or edit mode?  
+> In the Jupyter notebook page are you currently in Command or Edit mode?  
 > Switch between the modes. 
 > Use the shortcuts to generate a new cell. 
 > Use the shortcuts to delete a cell
@@ -102,22 +102,22 @@ keypoints:
 > > ## Solution
 > >
 > > Command mode has a grey boarder and Edit mode has a green border. 
-> > Use "esc" and "Enter" to switch between modes. 
-> > You need to be in command mode (Hit "esc" if your cell is green).  Type "B" or "A".
-> > You need to be in command mode (Hit "esc" if your cell is green).  Type "X".
+> > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
 > >
 > {: .solution}
 {: .challenge}
 
 ## Use the keyboard and mouse to select and edit cells.
 
-*   Pressing the "return" key turns the border green and engages edit mode,
+*   Pressing the <kbd>Return</kbd> key turns the border green and engages Edit mode,
     which allows you to type within the cell.
 *   Because we want to be able to write many lines of code in a single cell,
-    pressing the "return" key when in edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
+    pressing the <kbd>Return</kbd> key when in Edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
-*   Pressing the "shift" and the "enter" key together will execute the contents of the cell.
-*   Notice that the "return" and "shift" keys on the 
+*   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
+*   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd keys on the 
     right of the keyboard are right next to each other.
 
 ## The Notebook will turn Markdown into pretty-printed documentation.
@@ -127,11 +127,11 @@ keypoints:
         and other things that might go into a web page.
     *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
 *   Turn the current cell into a Markdown cell by entering 
-    the command mode (esc/gray) and press the "M" key.
+    the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>M</kbd> key.
 *   `In [ ]:` will disappear to show it is no longer a code cell
     and you will be able to write in Markdown.
 *   Turn the current cell into a Code cell
-    by entering the command mode (esc/gray) and press the "Y" key.
+    by entering the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>Y</kbd> key.
 
 ## Markdown does most of what HTML does.
 
@@ -307,14 +307,14 @@ Or use [named links][data_carpentry].
 > ~~~
 > {: .language-python}
 >
-> And then run it with shift+return to be sure that it works as a code cell.
-> Now go back to the cell and use escape+M to switch the cell to Markdown
-> and "run" it with shift+return.
+> And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
+> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>M</kbd> to switch the cell to Markdown
+> and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
 > What happened and how might this be useful?
 > 
 > > ## Solution
 > >
-> > The Python code gets treated like markdown text.
+> > The Python code gets treated like Markdown text.
 > > The lines appear as if they are part of one contiguous paragraph.
 > > This could be useful to temporarily turn on and off cells in notebooks that get used for multiple purposes. 
 > > ~~~
@@ -341,12 +341,12 @@ Or use [named links][data_carpentry].
 > 
 > > ## Solution
 > >
-> > The notebook shows the equation as it would be rendered from latex equation syntax.
-> > The dollar sign, `$`, is used to tell markdown that the text in between is a latex equation.
-> > If you're not familiar with latex,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
+> > The notebook shows the equation as it would be rendered from LaTeX equation syntax.
+> > The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
+> > If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
 > > A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the the subscript and `N` becomes the superscript.
 > > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
-> > `\sum` and `\approx` are latex commands for "sum over" and "approximate" symbols. 
+> > `\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols. 
 > {: .solution}
 {: .challenge}
 
