@@ -103,8 +103,8 @@ keypoints:
 > >
 > > Command mode has a grey boarder and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in Command mode (Hit <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
 > >
 > {: .solution}
 {: .challenge}
