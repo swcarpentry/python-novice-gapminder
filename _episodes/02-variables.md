@@ -297,7 +297,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > {: .solution}
 {: .challenge}
 
-> ## Slicing
+> ## Slicing practice
 >
 > What does the following program print?
 >
@@ -306,10 +306,17 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > print('atom_name[1:3] is:', atom_name[1:3])
 > ~~~
 > {: .language-python}
-> ~~~
-> atom_name[1:3] is: ar
-> ~~~
-> {: .output}
+>
+> > ## Solution
+> >
+> > ~~~
+> > atom_name[1:3] is: ar
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+> ## Slicing concepts
 >
 > 1.  What does `thing[low:high]` do?
 > 2.  What does `thing[low:]` (without a value after the colon) do?
@@ -317,4 +324,15 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 4.  What does `thing[:]` (just a colon) do?
 > 5.  What does `thing[number:negative-number]` do?
 > 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
+>
+> > ## Solutions
+> >
+> > 1. `thing[low:high]` returns a slice from `low` to the value before `high`
+> > 2. `thing[low:]` returns a slice from `low` to the end of `thing`
+> > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`
+> > 4. `thing[:]` returns all of `thing`
+> > 5. `thing[number:negative-number]` returns a slice from `number` to `negative-number` values from the end of `thing`
+> > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
+> >
+> {: .solution}
 {: .challenge}
