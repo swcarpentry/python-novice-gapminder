@@ -31,7 +31,7 @@ keypoints:
 age = 42
 first_name = 'Ahmed'
 ~~~
-{: .python}
+{: .language-python}
 
 *   Variable names
     * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
@@ -50,7 +50,7 @@ first_name = 'Ahmed'
 ~~~
 print(first_name, 'is', age, 'years old')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Ahmed is 42 years old
 ~~~
@@ -68,7 +68,7 @@ Ahmed is 42 years old
 ~~~
 print(last_name)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
@@ -93,12 +93,12 @@ NameError: name 'last_name' is not defined
 > ~~~
 > print(myval)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > ~~~
 > myval = 1
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > If you execute this in order, the first cell will give an error. However, if you run the first cell **after** the second
 > cell it will print out ‘1’. To prevent confusion, it can be helpful to use the `Kernel` -> `Restart & Run All` option which
@@ -114,7 +114,7 @@ NameError: name 'last_name' is not defined
 age = age + 3
 print('Age in three years:', age)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Age in three years: 45
 ~~~
@@ -135,7 +135,7 @@ Age in three years: 45
 atom_name = 'helium'
 print(atom_name[0])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 h
 ~~~
@@ -160,7 +160,7 @@ h
 atom_name = 'sodium'
 print(atom_name[0:3])
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 sod
 ~~~
@@ -171,7 +171,7 @@ sod
 ~~~
 print(len('helium'))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 6
 ~~~
@@ -196,7 +196,7 @@ flabadab = 42
 ewr_422_yY = 'Ahmed'
 print(ewr_422_yY, 'is', flabadab, 'years old')
 ~~~
-{: .python}
+{: .language-python}
 
 *   Use meaningful variable names to help other people understand what the program does.
 *   The most important "other person" is your future self.
@@ -214,7 +214,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > x = y      #              #              #               #
 > y = swap   #              #              #               #
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > >
 > > ~~~
@@ -243,7 +243,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > position = initial
 > initial = 'right'
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > >
 > > ~~~
@@ -272,7 +272,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > a = 123
 > > print(a[1])
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > TypeError: 'int' object is not subscriptable
 > > ~~~
@@ -306,7 +306,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > atom_name = 'carbon'
 > print('atom_name[1:3] is:', atom_name[1:3])
 > ~~~
-> {: .python}
+> {: .language-python}
 > ~~~
 > atom_name[1:3] is: ar
 > ~~~
