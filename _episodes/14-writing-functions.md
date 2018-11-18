@@ -568,6 +568,7 @@ result of call is: None
 > > plt.title("Bifurcation diagram for the logistic map\n $x_{n+1}=r x_n(1-x_n)$")
 > > ~~~
 > > {: .python}
+> > 
 > > The plotting part of the solution above can be made more compact with the [numpy arange](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.arange.html) function.  Specifically, the iteration over different rvalues could be accomplished with the following lines: 
 > > ~~~
 > > import numpy as np
