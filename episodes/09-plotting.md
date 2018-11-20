@@ -59,7 +59,7 @@ data.loc['Australia'].plot()
 ~~~
 {: .language-python}
 
-![GDP plot for Australia](../fig/9_gdp_australia.png)
+![GDP plot for Australia](../fig/9_gdp_australia.svg)
 ## Select and transform data, then plot it.
 
 *   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
