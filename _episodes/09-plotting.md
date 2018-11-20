@@ -71,7 +71,7 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .language-python}
 
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
