@@ -38,7 +38,7 @@ plt.ylabel('Position (km)')
 ~~~
 {: .language-python}
 
-![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)
+![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
