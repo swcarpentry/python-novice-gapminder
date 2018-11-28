@@ -362,8 +362,8 @@ data.groupby(wealth_score).sum()
 >     what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 > 
 > ~~~
-> print(data.iloc[0:2, 0:2])
-> print(data.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+> print(df.iloc[0:2, 0:2])
+> print(df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .language-python}
 > 
