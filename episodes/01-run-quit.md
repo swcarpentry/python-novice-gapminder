@@ -117,7 +117,7 @@ keypoints:
     pressing the <kbd>Return</kbd> key when in Edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
 *   We need some other way to tell the Notebook we want to run what's in the cell.
 *   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
-*   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd keys on the 
+*   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the 
     right of the keyboard are right next to each other.
 
 ## The Notebook will turn Markdown into pretty-printed documentation.
