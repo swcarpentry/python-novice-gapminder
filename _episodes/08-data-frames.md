@@ -438,7 +438,7 @@ data.groupby(wealth_score).sum()
 > > ~~~
 > > {: .language-python}
 > > Again we apply the drop function, but in this case we are dropping not a row but a whole column. 
-> > To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column 
+> > To accomplish this, we need to specify also the `axis` parameter (we want to drop the second axis 
 > > which has index 1).
 > > ~~~
 > > fourth.to_csv('result.csv')
