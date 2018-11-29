@@ -13,7 +13,7 @@ It's all right not to get through the whole lesson.
     but expect that many offerings will only get as far as the introduction to Pandas.
 
 Don't tell people to Google things.
-:   One of the goals of this less is
+:   One of the goals of this lesson is
     to help novices build a workable mental model of how programming works.
     Until they have that model,
     they will not know what to search for or how to recognize a helpful answer.
