@@ -539,5 +539,33 @@ result of call is: None
 > >     return trajectory
 > > ~~~
 > > {: .python}
+> > 
+> > 4. With these functions defined, you can make a visualization of the behavior of the logistic map with the following set commands.  "Standard" images of this diagram are online, [https://en.wikipedia.org/wiki/Bifurcation_diagram]
+> > ~~~
+> > # we'll use a few libraries
+> > import matplotlib.pyplot as plt
+> > %matplotlib inline
+> > import numpy as np
+> > import random
+> > # using lists to store the "final" values in the recursion series
+> > r_list=[]
+> > final_value=[]
+> > # iterate over multiple values of the growth parameter r
+> > # note, np.arange() gives a list of floating point numbers, 
+> > # consider thinking about why range() wouldn't work in this context
+> > for r in np.arange(2.4,4.0,0.0003):
+> >     # this function from above computes the final series value
+> >     trajectory=iterate(0.1+0.8*random.random(),10,r)
+> >     # store these values in a list (for plotting, later)
+> >     r_list.append(r)
+> >     final_value.append(trajectory[-1])
+> > # Then plot the final recursion values as they depend on the growth parameter
+> > plt.plot(r_list,final_value,",")  # "," plots a single pixel
+> > plt.xlabel("growth parameter, r")
+> > plt.ylabel("final series value, aka \'attractor\'")
+> > plt.title("Bifurcation diagram for the logistic map\n $x_{n+1}=r x_n(1-x_n)$")
+> > ~~~
+> > {: .python}
+> > 
 > {: .solution}
 {: .challenge}
