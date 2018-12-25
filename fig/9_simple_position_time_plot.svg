@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
 <svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="m0 346h461v-346h-461z" fill="#ffffff"/>
-  <path d="m58 308h357v-266h-357z" fill="#ffffff"/>
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#fff"/>
   <defs>
     <path id="b" d="m0 0v4" stroke="#000"/>
     <path id="a" d="m0 0h-4" stroke="#000"/>
