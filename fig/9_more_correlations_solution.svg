@@ -152,30 +152,32 @@
     <clipPath id="a">
       <rect x="58" y="41" width="357" height="266"/>
     </clipPath>
-  <use x="71.996817" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="71.996817" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">0</text>
-  <use x="138.145323" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="138.145323" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">10000</text>
-  <use x="204.29383" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="204.29383" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">20000</text>
-  <use x="270.442336" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="270.442336" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">30000</text>
-  <use x="336.590843" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="336.590843" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">40000</text>
-  <use x="402.739349" y="307.584" stroke="#000" xlink:href="#b"/>
-  <text x="402.739349" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">50000</text>
-  <text x="236.16" y="335.860562" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">gdpPercap_2007</text>
-  <use x="57.6" y="293.30296" stroke="#000" xlink:href="#c"/>
-  <text x="50.6" y="297.102178" font-family="DejaVu Sans" font-size="10px" text-anchor="end">40</text>
-  <use x="57.6" y="237.051277" stroke="#000" xlink:href="#c"/>
-  <text x="50.6" y="240.850496" font-family="DejaVu Sans" font-size="10px" text-anchor="end">50</text>
-  <use x="57.6" y="180.799594" stroke="#000" xlink:href="#c"/>
-  <text x="50.6" y="184.598813" font-family="DejaVu Sans" font-size="10px" text-anchor="end">60</text>
-  <use x="57.6" y="124.547912" stroke="#000" xlink:href="#c"/>
-  <text x="50.6" y="128.34713" font-family="DejaVu Sans" font-size="10px" text-anchor="end">70</text>
-  <use x="57.6" y="68.296229" stroke="#000" xlink:href="#c"/>
-  <text x="50.6" y="72.095448" font-family="DejaVu Sans" font-size="10px" text-anchor="end">80</text>
-  <text transform="rotate(-90 32 175)" x="31.517187" y="174.528" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">lifeExp_2007</text>
+  <use x="72" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="138" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="204" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="270" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="337" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="403" y="308" stroke="#000" xlink:href="#b"/>
+  <use x="58" y="293" stroke="#000" xlink:href="#c"/>
+  <use x="58" y="237" stroke="#000" xlink:href="#c"/>
+  <use x="58" y="181" stroke="#000" xlink:href="#c"/>
+  <use x="58" y="125" stroke="#000" xlink:href="#c"/>
+  <use x="58" y="68" stroke="#000" xlink:href="#c"/>
+  
+  <text x="72" y="322" font-size="10px" text-anchor="middle">0</text>
+  <text x="138" y="322" font-size="10px" text-anchor="middle">10000</text>
+  <text x="204" y="322" font-size="10px" text-anchor="middle">20000</text>
+  <text x="270" y="322" font-size="10px" text-anchor="middle">30000</text>
+  <text x="337" y="322" font-size="10px" text-anchor="middle">40000</text>
+  <text x="403" y="322" font-size="10px" text-anchor="middle">50000</text>
+  <text x="236" y="336" font-size="10px" text-anchor="middle">gdpPercap_2007</text>
+  <text x="51" y="297" font-size="10px" text-anchor="end">40</text>
+  <text x="51" y="241" font-size="10px" text-anchor="end">50</text>
+  <text x="51" y="185" font-size="10px" text-anchor="end">60</text>
+  <text x="51" y="128" font-size="10px" text-anchor="end">70</text>
+  <text x="51" y="72" font-size="10px" text-anchor="end">80</text>
+  <text transform="rotate(-90 32 175)" x="32" y="175" font-size="10px" text-anchor="middle">lifeExp_2007</text>
+
   <path d="m58 308v-266" fill="none" stroke="#000" stroke-linecap="square"/>
   <path d="m415 308v-266" fill="none" stroke="#000" stroke-linecap="square"/>
   <path d="m58 308h357" fill="none" stroke="#000" stroke-linecap="square"/>
