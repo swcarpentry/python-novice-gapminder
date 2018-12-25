@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
 <svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="m0 346h461v-346h-461z" fill="#fff"/>
-  <path d="m58 308h357v-266h-357z" fill="#fff"/>
   <defs>
     <path id="b" d="m0 0v4" stroke="#000"/>
     <path id="a" d="m0 0h-4" stroke="#000"/>
@@ -10,29 +8,32 @@
       <rect x="58" y="41" width="357" height="266"/>
     </clipPath>
   </defs>
+  <!-- White Background -->
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#fff"/>
   <use x="62" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="62" y="322" font-size="10px" text-anchor="middle">1950</text>
   <use x="121" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="121" y="322" font-size="10px" text-anchor="middle">1960</text>
   <use x="180" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="180" y="322" font-size="10px" text-anchor="middle">1970</text>
   <use x="239" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="239" y="322" font-size="10px" text-anchor="middle">1980</text>
   <use x="298" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="298" y="322" font-size="10px" text-anchor="middle">1990</text>
   <use x="357" y="308" stroke="#000" xlink:href="#b"/>
-  <text x="357" y="322" font-size="10px" text-anchor="middle">2000</text>
   <use x="58" y="296" stroke="#000" xlink:href="#a"/>
-  <text x="51" y="300" font-size="10px" text-anchor="end">10000</text>
   <use x="58" y="246" stroke="#000" xlink:href="#a"/>
-  <text x="51" y="250" font-size="10px" text-anchor="end">15000</text>
   <use x="58" y="197" stroke="#000" xlink:href="#a"/>
-  <text x="51" y="201" font-size="10px" text-anchor="end">20000</text>
   <use x="58" y="147" stroke="#000" xlink:href="#a"/>
-  <text x="51" y="151" font-size="10px" text-anchor="end">25000</text>
   <use x="58" y="98" stroke="#000" xlink:href="#a"/>
-  <text x="51" y="101" font-size="10px" text-anchor="end">30000</text>
   <use x="58" y="48" stroke="#000" xlink:href="#a"/>
+  <text x="62" y="322" font-size="10px" text-anchor="middle">1950</text>
+  <text x="121" y="322" font-size="10px" text-anchor="middle">1960</text>
+  <text x="180" y="322" font-size="10px" text-anchor="middle">1970</text>
+  <text x="239" y="322" font-size="10px" text-anchor="middle">1980</text>
+  <text x="298" y="322" font-size="10px" text-anchor="middle">1990</text>
+  <text x="357" y="322" font-size="10px" text-anchor="middle">2000</text>
+  <text x="51" y="300" font-size="10px" text-anchor="end">10000</text>
+  <text x="51" y="250" font-size="10px" text-anchor="end">15000</text>
+  <text x="51" y="201" font-size="10px" text-anchor="end">20000</text>
+  <text x="51" y="151" font-size="10px" text-anchor="end">25000</text>
+  <text x="51" y="101" font-size="10px" text-anchor="end">30000</text>
   <text x="51" y="52" font-size="10px" text-anchor="end">35000</text>
   <path d="m74 295 148-82 59-35 30-15 89-109" clip-path="url(#c)" fill="none" stroke="#1f77b4" stroke-linecap="square" stroke-width="2"/>
   <path d="m58 308v-266" fill="none" stroke="#000" stroke-linecap="square"/>

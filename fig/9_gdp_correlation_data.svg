@@ -13,49 +13,53 @@
     </clipPath>
   </defs>
   <use x="73" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
-  <text x="73" y="322" fill="#555" font-size="10px" text-anchor="middle">10000</text>
-  <path d="m140 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="140" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
-  <text x="140" y="322" fill="#555" font-size="10px" text-anchor="middle">15000</text>
-  <path d="m206 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="206" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
-  <text x="206" y="322" fill="#555" font-size="10px" text-anchor="middle">20000</text>
-  <path d="m273 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="273" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
-  <text x="273" y="322" fill="#555" font-size="10px" text-anchor="middle">25000</text>
-  <path d="m339 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="339" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
-  <text x="339" y="322" fill="#555" font-size="10px" text-anchor="middle">30000</text>
-  <path d="m406 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="406" y="308" fill="#555" stroke="#555" xlink:href="#d"/>
+  <use x="58" y="305" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="272" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="239" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="205" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="172" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="139" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="106" fill="#555" stroke="#555" xlink:href="#c"/>
+  <use x="58" y="73" fill="#555" stroke="#555" xlink:href="#c"/>
+  <text x="73" y="322" fill="#555" font-size="10px" text-anchor="middle">10000</text>
+  <text x="140" y="322" fill="#555" font-size="10px" text-anchor="middle">15000</text>
+  <text x="206" y="322" fill="#555" font-size="10px" text-anchor="middle">20000</text>
+  <text x="273" y="322" fill="#555" font-size="10px" text-anchor="middle">25000</text>
+  <text x="339" y="322" fill="#555" font-size="10px" text-anchor="middle">30000</text>
   <text x="406" y="322" fill="#555" font-size="10px" text-anchor="middle">35000</text>
   <text x="236" y="337" fill="#555" font-size="12px" text-anchor="middle">Australia</text>
-  <path d="m58 305h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="305" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="308" fill="#555" font-size="10px" text-anchor="end">10000</text>
-  <path d="m58 272h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="272" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="275" fill="#555" font-size="10px" text-anchor="end">12000</text>
-  <path d="m58 239h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="239" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="242" fill="#555" font-size="10px" text-anchor="end">14000</text>
-  <path d="m58 205h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="205" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="209" fill="#555" font-size="10px" text-anchor="end">16000</text>
-  <path d="m58 172h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="172" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="176" fill="#555" font-size="10px" text-anchor="end">18000</text>
-  <path d="m58 139h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="139" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="143" fill="#555" font-size="10px" text-anchor="end">20000</text>
-  <path d="m58 106h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="106" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="110" fill="#555" font-size="10px" text-anchor="end">22000</text>
-  <path d="m58 73h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <use x="58" y="73" fill="#555" stroke="#555" xlink:href="#c"/>
   <text x="51" y="77" fill="#555" font-size="10px" text-anchor="end">24000</text>
   <text transform="rotate(-90 12 175)" x="12.291875" y="174.528" fill="#555" font-size="12px" text-anchor="middle">New Zealand</text>
-  <g clip-path="url(#a)" fill="#348abd" stroke="#348abd" stroke-width=".5">
+  <path d="m140 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m206 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m273 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m339 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m406 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 305h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 272h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 239h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 205h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 172h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 139h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 106h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 73h357" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m415 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 308h357" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m58 41h357" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <g clip-path="url(#a)" fill="#348abd" stroke="#348abd">
     <use x="74" y="295" xlink:href="#b"/>
     <use x="86" y="268" xlink:href="#b"/>
     <use x="103" y="252" xlink:href="#b"/>
@@ -69,8 +73,4 @@
     <use x="349" y="87" xlink:href="#b"/>
     <use x="398" y="54" xlink:href="#b"/>
   </g>
-  <path d="m58 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <path d="m415 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <path d="m58 308h357" fill="none" stroke="#fff" stroke-linecap="square"/>
-  <path d="m58 41h357" fill="none" stroke="#fff" stroke-linecap="square"/>
 </svg>
