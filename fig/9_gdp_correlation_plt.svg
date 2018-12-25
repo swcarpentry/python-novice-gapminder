@@ -6,6 +6,11 @@
   <path d="m73 308v-266" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
   <defs>
     <path id="d" d="m0 0v4" stroke="#555555" stroke-width=".8"/>
+    <path id="c" d="m0 0h-4" stroke="#555555" stroke-width=".8"/>
+    <path id="b" d="m0 3c0.8 0 2-0.3 2-0.9 0.6-0.6 0.9-1 0.9-2s-0.3-2-0.9-2c-0.6-0.6-1-0.9-2-0.9s-2 0.3-2 0.9c-0.6 0.6-0.9 1-0.9 2s0.3 2 0.9 2c0.6 0.6 1 0.9 2 0.9z" stroke="#e24a33" stroke-width=".5"/>
+    <clipPath id="a">
+      <rect x="58" y="41" width="357" height="266"/>
+    </clipPath>
   </defs>
   <use x="73.305876" y="307.584" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#d"/>
   <text transform="rotate(-0 73 322)" x="73.305876" y="322.182437" fill="#555555" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">10000</text>
@@ -25,9 +30,6 @@
   <use x="406.001217" y="307.584" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#d"/>
   <text transform="rotate(-0 406 322)" x="406.001217" y="322.182437" fill="#555555" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">35000</text>
   <path d="m58 305h357" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
-  <defs>
-    <path id="c" d="m0 0h-4" stroke="#555555" stroke-width=".8"/>
-  </defs>
   <use x="57.6" y="304.692312" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#c"/>
   <text transform="rotate(-0 51 308)" x="50.6" y="308.491531" fill="#555555" font-family="DejaVu Sans" font-size="10px" text-anchor="end">10000</text>
   <path d="m58 272h357" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
@@ -51,9 +53,6 @@
   <path d="m58 73h357" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
   <use x="57.6" y="73.165385" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#c"/>
   <text transform="rotate(-0 51 77)" x="50.6" y="76.964604" fill="#555555" font-family="DejaVu Sans" font-size="10px" text-anchor="end">24000</text>
-  <defs>
-    <path id="b" d="m0 3c0.8 0 2-0.3 2-0.9 0.6-0.6 0.9-1 0.9-2s-0.3-2-0.9-2c-0.6-0.6-1-0.9-2-0.9s-2 0.3-2 0.9c-0.6 0.6-0.9 1-0.9 2s0.3 2 0.9 2c0.6 0.6 1 0.9 2 0.9z" stroke="#e24a33" stroke-width=".5"/>
-  </defs>
   <g clip-path="url(#a)" fill="#e24a33" stroke="#e24a33" stroke-width=".5">
     <use x="73.832808" y="295.487866" xlink:href="#b"/>
     <use x="85.943636" y="267.525703" xlink:href="#b"/>
@@ -72,9 +71,4 @@
   <path d="m415 308v-266" fill="none" stroke="#ffffff" stroke-linecap="square"/>
   <path d="m58 308h357" fill="none" stroke="#ffffff" stroke-linecap="square"/>
   <path d="m58 41h357" fill="none" stroke="#ffffff" stroke-linecap="square"/>
-  <defs>
-    <clipPath id="a">
-      <rect x="58" y="41" width="357" height="266"/>
-    </clipPath>
-  </defs>
 </svg>
