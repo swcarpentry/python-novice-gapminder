@@ -13,7 +13,7 @@
   </defs>
   <use x="62" y="308" fill="#555" stroke="#555" stroke-width=".8" xlink:href="#c"/>
   <text x="62" y="322" fill="#555" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1950</text>
-  <path d="m121 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width=".8"/>
+  <path d="m121 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
   <use x="121" y="308" fill="#555" stroke="#555" stroke-width=".8" xlink:href="#c"/>
   <text x="121" y="322" fill="#555" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1960</text>
   <path d="m180 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square" stroke-width=".8"/>
