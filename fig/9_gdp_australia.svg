@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
 <svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="m0 346h461v-346h-461z" fill="#ffffff"/>
-  <path d="m58 308h357v-266h-357z" fill="#ffffff"/>
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#fff"/>
   <defs>
-    <path id="b" d="m0 0v4" stroke="#000000" stroke-width=".8"/>
-    <path id="a" d="m0 0h-4" stroke="#000000" stroke-width=".8"/>
+    <path id="b" d="m0 0v4" stroke="#000" stroke-width=".8"/>
+    <path id="a" d="m0 0h-4" stroke="#000" stroke-width=".8"/>
     <clipPath id="c">
       <rect x="58" y="41" width="357" height="266"/>
     </clipPath>
   </defs>
-  <use x="62.027107" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="62.027107" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="62.027107" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1950</text>
-  <use x="121.055207" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="121.055207" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="121.055207" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1960</text>
-  <use x="180.083306" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="180.083306" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="180.083306" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1970</text>
-  <use x="239.111405" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="239.111405" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="239.111405" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1980</text>
-  <use x="298.139504" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="298.139504" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="298.139504" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">1990</text>
-  <use x="357.167603" y="307.584" stroke="#000000" stroke-width=".8" xlink:href="#b"/>
+  <use x="357.167603" y="307.584" stroke="#000" stroke-width=".8" xlink:href="#b"/>
   <text x="357.167603" y="322.182437" font-family="DejaVu Sans" font-size="10px" text-anchor="middle">2000</text>
-  <use x="57.6" y="295.880649" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="295.880649" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="299.679868" font-family="DejaVu Sans" font-size="10px" text-anchor="end">10000</text>
-  <use x="57.6" y="246.298287" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="246.298287" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="250.097505" font-family="DejaVu Sans" font-size="10px" text-anchor="end">15000</text>
-  <use x="57.6" y="196.715924" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="196.715924" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="200.515143" font-family="DejaVu Sans" font-size="10px" text-anchor="end">20000</text>
-  <use x="57.6" y="147.133562" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="147.133562" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="150.93278" font-family="DejaVu Sans" font-size="10px" text-anchor="end">25000</text>
-  <use x="57.6" y="97.551199" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="97.551199" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="101.350418" font-family="DejaVu Sans" font-size="10px" text-anchor="end">30000</text>
-  <use x="57.6" y="47.968837" stroke="#000000" stroke-width=".8" xlink:href="#a"/>
+  <use x="57.6" y="47.968837" stroke="#000" stroke-width=".8" xlink:href="#a"/>
   <text x="50.6" y="51.768056" font-family="DejaVu Sans" font-size="10px" text-anchor="end">35000</text>
   <path d="m74 295 148-82 59-35 30-15 89-109" clip-path="url(#c)" fill="none" stroke="#1f77b4" stroke-linecap="square" stroke-width="2"/>
-  <path d="m58 308v-266" fill="none" stroke="#000000" stroke-linecap="square" stroke-width=".8"/>
-  <path d="m415 308v-266" fill="none" stroke="#000000" stroke-linecap="square" stroke-width=".8"/>
-  <path d="m58 308h357" fill="none" stroke="#000000" stroke-linecap="square" stroke-width=".8"/>
-  <path d="m58 41h357" fill="none" stroke="#000000" stroke-linecap="square" stroke-width=".8"/>
+  <path d="m58 308v-266" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+  <path d="m415 308v-266" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+  <path d="m58 308h357" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
+  <path d="m58 41h357" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".8"/>
 </svg>
