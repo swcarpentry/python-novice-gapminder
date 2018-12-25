@@ -6,6 +6,10 @@
   <path d="m72 308v-266" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
   <defs>
     <path id="b" d="m0 0v4" stroke="#555555" stroke-width=".8"/>
+    <path id="c" d="m0 0h-4" stroke="#555555" stroke-width=".8"/>
+    <clipPath id="a">
+      <rect x="58" y="41" width="357" height="266"/>
+    </clipPath>
   </defs>
   <use x="72.48" y="307.584" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#b"/>
   <text transform="translate(75 340) rotate(-90)" fill="#555555" font-family="DejaVu Sans" font-size="10px">1952</text>
@@ -43,9 +47,6 @@
   <use x="399.84" y="307.584" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#b"/>
   <text transform="translate(403 340) rotate(-90)" fill="#555555" font-family="DejaVu Sans" font-size="10px">2007</text>
   <path d="m58 308h357" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
-  <defs>
-    <path id="c" d="m0 0h-4" stroke="#555555" stroke-width=".8"/>
-  </defs>
   <use x="57.6" y="307.584" fill="#555555" stroke="#555555" stroke-width=".8" xlink:href="#c"/>
   <text transform="rotate(-0 51 311)" x="50.6" y="311.383219" fill="#555555" font-family="DejaVu Sans" font-size="10px" text-anchor="end">0</text>
   <path d="m58 271h357" clip-path="url(#a)" fill="none" stroke="#ffffff" stroke-linecap="square" stroke-width=".8"/>
@@ -104,9 +105,4 @@
   <text transform="rotate(-0 95 73)" x="94.6" y="72.748563" font-family="DejaVu Sans" font-size="10px">Australia</text>
   <path d="m67 87h20v-7h-20z" fill="#348abd"/>
   <text transform="rotate(-0 95 87)" x="94.6" y="87.426688" font-family="DejaVu Sans" font-size="10px">New Zealand</text>
-  <defs>
-    <clipPath id="a">
-      <rect x="58" y="41" width="357" height="266"/>
-    </clipPath>
-  </defs>
 </svg>
