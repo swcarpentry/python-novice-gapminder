@@ -4,46 +4,57 @@
   <path d="m0 346h461v-346h-461z" fill="#fff"/>
   <path d="m58 308h357v-266h-357z" fill="#fff"/>
   <defs>
-    <path id="b" d="m0 0v4" stroke="#000"/>
-    <path id="a" d="m0 0h-4" stroke="#000"/>
-    <clipPath id="c">
+    <path id="d" d="m0 0v4" stroke="#000"/>
+    <path id="e" d="m0 0h-4" stroke="#000"/>
+    <clipPath id="f">
       <rect x="58" y="41" width="357" height="266"/>
     </clipPath>
   </defs>
-  <use x="74" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="128" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="182" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="236" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="290" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="344" y="308" stroke="#000" xlink:href="#b"/>
-  <use x="398" y="308" stroke="#000" xlink:href="#b"/>
-
-  <use x="58" y="295" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="255" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="215" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="175" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="134" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="94" stroke="#000" xlink:href="#a"/>
-  <use x="58" y="54" stroke="#000" xlink:href="#a"/>
-  <text x="74" y="322" font-size="10px" text-anchor="middle">0.0</text>
-  <text x="128" y="322" font-size="10px" text-anchor="middle">0.5</text>
-  <text x="182" y="322" font-size="10px" text-anchor="middle">1.0</text>
-  <text x="236" y="322" font-size="10px" text-anchor="middle">1.5</text>
-  <text x="290" y="322" font-size="10px" text-anchor="middle">2.0</text>
-  <text x="344" y="322" font-size="10px" text-anchor="middle">2.5</text>
-  <text x="398" y="322" font-size="10px" text-anchor="middle">3.0</text>
-  <text x="236" y="336" font-size="10px" text-anchor="middle">Time (hr)</text>
-  <text x="51" y="299" font-size="10px" text-anchor="end">0</text>
-  <text x="51" y="259" font-size="10px" text-anchor="end">50</text>
-  <text x="51" y="219" font-size="10px" text-anchor="end">100</text>
-  <text x="51" y="178" font-size="10px" text-anchor="end">150</text>
-  <text x="51" y="138" font-size="10px" text-anchor="end">200</text>
-  <text x="51" y="98" font-size="10px" text-anchor="end">250</text>
-  <text x="51" y="57" font-size="10px" text-anchor="end">300</text>
-  <text transform="rotate(-90 25 175)" x="25" y="175" font-size="10px" text-anchor="middle">Position (km)</text>
-  <path d="m74 295 325-242" clip-path="url(#c)" fill="none" stroke="#1f77b4" stroke-linecap="square" stroke-width="2"/>
-  <path d="m58 308v-266" fill="none" stroke="#000" stroke-linecap="square"/>
-  <path d="m415 308v-266" fill="none" stroke="#000" stroke-linecap="square"/>
-  <path d="m58 308h357" fill="none" stroke="#000" stroke-linecap="square"/>
-  <path d="m58 41h357" fill="none" stroke="#000" stroke-linecap="square"/>
+  <g stroke="#000">
+    <use x="74" y="308" xlink:href="#d"/>
+    <use x="128" y="308" xlink:href="#d"/>
+    <use x="182" y="308" xlink:href="#d"/>
+    <use x="236" y="308" xlink:href="#d"/>
+    <use x="290" y="308" xlink:href="#d"/>
+    <use x="344" y="308" xlink:href="#d"/>
+    <use x="398" y="308" xlink:href="#d"/>
+    <use x="58" y="295" xlink:href="#e"/>
+    <use x="58" y="255" xlink:href="#e"/>
+    <use x="58" y="215" xlink:href="#e"/>
+    <use x="58" y="175" xlink:href="#e"/>
+    <use x="58" y="134" xlink:href="#e"/>
+    <use x="58" y="94" xlink:href="#e"/>
+    <use x="58" y="54" xlink:href="#e"/>
+  </g>
+  <g font-size="10px">
+    <g text-anchor="middle">
+      <text x="74" y="322">0.0</text>
+      <text x="128" y="322">0.5</text>
+      <text x="182" y="322">1.0</text>
+      <text x="236" y="322">1.5</text>
+      <text x="290" y="322">2.0</text>
+      <text x="344" y="322">2.5</text>
+      <text x="398" y="322">3.0</text>
+      <text x="236" y="336">Time (hr)</text>
+    </g>
+    <g text-anchor="end">
+      <text x="51" y="299">0</text>
+      <text x="51" y="259">50</text>
+      <text x="51" y="219">100</text>
+      <text x="51" y="178">150</text>
+      <text x="51" y="138">200</text>
+      <text x="51" y="98">250</text>
+      <text x="51" y="57">300</text>
+    </g>
+    <text transform="rotate(-90 25 175)" x="25" y="175" text-anchor="middle">Position (km)</text>
+  </g>
+  <g fill="none" stroke-linecap="square">
+    <path d="m74 295 325-242" clip-path="url(#f)" stroke="#1f77b4" stroke-width="2"/>
+    <g stroke="#000">
+      <path d="m58 308v-266"/>
+      <path d="m415 308v-266"/>
+      <path d="m58 308h357"/>
+      <path d="m58 41h357"/>
+    </g>
+  </g>
 </svg>
