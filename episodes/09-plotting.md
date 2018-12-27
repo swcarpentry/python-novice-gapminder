@@ -38,7 +38,7 @@ plt.ylabel('Position (km)')
 ~~~
 {: .language-python}
 
-![Simple Position-Time Plot](../fig/9_simple_position_time_plot.png)
+![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
@@ -59,7 +59,7 @@ data.loc['Australia'].plot()
 ~~~
 {: .language-python}
 
-![GDP plot for Australia](../fig/9_gdp_australia.png)
+![GDP plot for Australia](../fig/9_gdp_australia.svg)
 ## Select and transform data, then plot it.
 
 *   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
@@ -71,7 +71,7 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .language-python}
 
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.png)
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
@@ -83,7 +83,7 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .language-python}
 
-![GDP barplot for Australia](../fig/9_gdp_bar.png)
+![GDP barplot for Australia](../fig/9_gdp_bar.svg)
 
 ## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 *   The command is `plt.plot(x, y)`
@@ -99,7 +99,7 @@ plt.plot(years, gdp_australia, 'g--')
 ~~~
 {: .language-python}
 
-![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.png)
+![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.svg)
 
 ## Can plot many sets of data together.
 
@@ -119,7 +119,7 @@ plt.ylabel('GDP per capita ($)')
 ~~~
 {: .language-python}
 
-![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.png)
+![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
 
@@ -128,13 +128,13 @@ plt.scatter(gdp_australia, gdp_nz)
 ~~~
 {: .language-python}
 
-![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.png)
+![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
 ~~~
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ~~~
 {: .language-python}
 
-![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.png)
+![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
 > ## Minima and Maxima
 >
 > Fill in the blanks below to plot the minimum GDP per capita over time
@@ -179,7 +179,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 >
 > > ## Solution
 > >
-> > ![Correlations Solution 1](../fig/9_correlations_solution1.png)
+> > ![Correlations Solution 1](../fig/9_correlations_solution1.svg)
 > >
 > > No particular correlations can be seen between the minimum and maximum gdp values
 > > year on year. It seems the fortunes of asian countries do not rise and fall together.
@@ -225,7 +225,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > explain what each argument to `plot` does.
 >
 > > ## Solution
-> > ![More Correlations Solution](../fig/9_more_correlations_solution.png)
+> > ![More Correlations Solution](../fig/9_more_correlations_solution.svg)
 > >
 > > A good place to look is the documentation for the plot function -
 > > help(data_all.plot).
