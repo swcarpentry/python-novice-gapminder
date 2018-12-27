@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="d" d="m0 0v4" stroke="#000"/>
+    <path id="e" d="m0 0h-4" stroke="#000"/>
+  </defs>
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#fff"/>
+  <g stroke="#000">
+    <use x="62" y="308" xlink:href="#d"/>
+    <use x="121" y="308" xlink:href="#d"/>
+    <use x="180" y="308" xlink:href="#d"/>
+    <use x="239" y="308" xlink:href="#d"/>
+    <use x="298" y="308" xlink:href="#d"/>
+    <use x="357" y="308" xlink:href="#d"/>
+    <use x="58" y="296" xlink:href="#e"/>
+    <use x="58" y="246" xlink:href="#e"/>
+    <use x="58" y="197" xlink:href="#e"/>
+    <use x="58" y="147" xlink:href="#e"/>
+    <use x="58" y="98" xlink:href="#e"/>
+    <use x="58" y="48" xlink:href="#e"/>
+  </g>
+  <g fill="none" stroke-linecap="square">
+    <path d="m74 295 207-117 30-15 89-109" stroke="#1f77b4" stroke-width="2"/>
+    <path d="m74 290 30-17 89-38 89-29 30 6 30-27 59-41" stroke="#ff7f0e" stroke-width="2"/>
+    <rect x="58" y="41" width="357" height="267" stroke="#000"/>
+  </g>
+  <path d="m65 94h98q2 0 2-2v-43q0-2-2-2h-98q-2 0-2 2v43q0 2 2 2z" fill="#fff" opacity=".8" stroke="#ccc"/>
+  <path d="m67 69h20" fill="none" stroke="#1f77b4" stroke-linecap="square" stroke-width="2"/>
+  <path d="m67 84h20" fill="none" stroke="#ff7f0e" stroke-linecap="square" stroke-width="2"/>
+  <g font-size="10px">
+    <text x="94" y="58">country</text>
+    <text x="95" y="73">Australia</text>
+    <text x="95" y="87">New Zealand</text>
+    <g text-anchor="middle">
+      <text x="62" y="322">1950</text>
+      <text x="121" y="322">1960</text>
+      <text x="180" y="322">1970</text>
+      <text x="239" y="322">1980</text>
+      <text x="298" y="322">1990</text>
+      <text x="357" y="322">2000</text>
+    </g>
+    <g text-anchor="end">
+      <text x="51" y="300">10000</text>
+      <text x="51" y="250">15000</text>
+      <text x="51" y="201">20000</text>
+      <text x="51" y="151">25000</text>
+      <text x="51" y="101">30000</text>
+      <text x="51" y="52">35000</text>
+    </g>
+    <text transform="rotate(-90 13 175)" x="13" y="175" text-anchor="middle">GDP per capita</text>
+  </g>
+</svg>
