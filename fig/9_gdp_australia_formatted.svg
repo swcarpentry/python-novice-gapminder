@@ -21,7 +21,7 @@
   </g>
   <path d="m0 346h461v-346h-461z" fill="#fff"/>
   <path d="m58 308h357v-266h-357z" fill="#e5e5e5"/>
-  <g  fill="none" stroke="#fff" stroke-linecap="square">
+  <g fill="none" stroke="#fff" stroke-linecap="square">
     <path d="m62 308v-266"/>
     <path d="m121 308v-266"/>
     <path d="m180 308v-266"/>
