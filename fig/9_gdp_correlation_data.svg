@@ -3,14 +3,11 @@
 <svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="m0 346h461v-346h-461z" fill="#fff"/>
   <path d="m58 308h357v-266h-357z" fill="#e5e5e5"/>
-  <path d="m73 308v-266" clip-path="url(#a)" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <path d="m73 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
   <defs>
     <path id="d" d="m0 0v4" stroke="#555"/>
     <path id="c" d="m0 0h-4" stroke="#555"/>
-    <path id="b" d="m0 2c0.6 0 1-0.2 2-0.7s0.7-1 0.7-2-0.2-1-0.7-2-1-0.7-2-0.7-1 0.2-2 0.7-0.7 1-0.7 2 0.2 1 0.7 2 1 0.7 2 0.7z" stroke="#348abd" stroke-width=".5"/>
-    <clipPath id="a">
-      <rect x="58" y="41" width="357" height="266"/>
-    </clipPath>
+    <path id="b" d="m0 2c0.6 0 1-0.2 2-0.7s0.7-1 0.7-2-0.2-1-0.7-2-1-0.7-2-0.7-1 0.2-2 0.7-0.7 1-0.7 2 0.2 1 0.7 2 1 0.7 2 0.7z" stroke="#348abd"/>
   </defs>
   <g fill="#555">
     <g stroke="#555">
@@ -48,28 +45,25 @@
       <text x="51" y="110">22000</text>
       <text x="51" y="77">24000</text>
     </g>
-    <text transform="rotate(-90 12 175)" x="12.291875" y="174.528" font-size="12px" text-anchor="middle">New Zealand</text>
+    <text transform="rotate(-90 12 175)" x="12" y="175" font-size="12px" text-anchor="middle">New Zealand</text>
   </g>
   <g fill="none" stroke="#fff" stroke-linecap="square">
-    <path d="m140 308v-266" clip-path="url(#a)"/>
-    <path d="m206 308v-266" clip-path="url(#a)"/>
-    <path d="m273 308v-266" clip-path="url(#a)"/>
-    <path d="m339 308v-266" clip-path="url(#a)"/>
-    <path d="m406 308v-266" clip-path="url(#a)"/>
-    <path d="m58 305h357" clip-path="url(#a)"/>
-    <path d="m58 272h357" clip-path="url(#a)"/>
-    <path d="m58 239h357" clip-path="url(#a)"/>
-    <path d="m58 205h357" clip-path="url(#a)"/>
-    <path d="m58 172h357" clip-path="url(#a)"/>
-    <path d="m58 139h357" clip-path="url(#a)"/>
-    <path d="m58 106h357" clip-path="url(#a)"/>
-    <path d="m58 73h357" clip-path="url(#a)"/>
-    <path d="m58 308v-266"/>
-    <path d="m415 308v-266"/>
-    <path d="m58 308h357"/>
-    <path d="m58 41h357"/>
+    <path d="m140 308v-266"/>
+    <path d="m206 308v-266"/>
+    <path d="m273 308v-266"/>
+    <path d="m339 308v-266"/>
+    <path d="m406 308v-266"/>
+    <path d="m58 305h357"/>
+    <path d="m58 272h357"/>
+    <path d="m58 239h357"/>
+    <path d="m58 205h357"/>
+    <path d="m58 172h357"/>
+    <path d="m58 139h357"/>
+    <path d="m58 106h357"/>
+    <path d="m58 73h357"/>
+    <rect x="58" y="41" width="357" height="267"/>
   </g>
-  <g clip-path="url(#a)" fill="#348abd" stroke="#348abd">
+  <g fill="#348abd" stroke="#348abd">
     <use x="74" y="295" xlink:href="#b"/>
     <use x="86" y="268" xlink:href="#b"/>
     <use x="103" y="252" xlink:href="#b"/>
