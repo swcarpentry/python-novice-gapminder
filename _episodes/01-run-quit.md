@@ -79,11 +79,11 @@ keypoints:
 *   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately,
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
-*   These are the **Command** (gray) and **Edit** (green) modes of your notebook.
+*   These are the **Command** (blue) and **Edit** (green) modes of your notebook.
 *   In Command mode, pressing the <kbd>H</kbd> key will provide 
     a list of all the shortcut keys.
 *   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
-*   When in Command mode (esc/gray),
+*   When in Command mode (esc/blue),
     *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
     *   The <kbd>A</kbd> key will make one above.
     *   The <kbd>X</kbd> key will delete the current cell.
@@ -101,7 +101,7 @@ keypoints:
 >
 > > ## Solution
 > >
-> > Command mode has a grey boarder and Edit mode has a green border. 
+> > Command mode has a blue border and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
