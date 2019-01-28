@@ -89,7 +89,13 @@ installed Python using Anaconda, Jupyter should already be on your system. If
 you did not use Anaconda, use the Python package manager pip
 (see the [Jupyter website][jupyter-install] for details.)
 
-To start the notebook, open a terminal or git bash and type the command:
+### Mac OS X Users
+To start the notebook, you will need to access the command line through Terminal or Git Bash.
+There are two ways to open Terminal on Mac:
+1) In your Applications folder, open Utilities and double-click on Terminal
+2) Press Command - spacebar to launch Spotlight and type "Terminal," then double-click the search result
+
+After you have launched Terminal, type the command:
 
 ~~~
 $ jupyter notebook
@@ -103,6 +109,17 @@ or Git Bash and type the command:
 $ python
 ~~~
 {: .bash}
+
+### Windows Users
+To start the notebook, you will need to access the command line through the Command Prompt.
+Use the shortcut keys Win + R to launch the Run window, then type in cmd and press Enter.
+
+After you have launched the Command Prompt, type the command:
+
+~~~
+jupyter notebook
+~~~
+
 
 [anaconda]: https://www.anaconda.com/
 [continuum-mac]: https://www.anaconda.com/download/#macos
