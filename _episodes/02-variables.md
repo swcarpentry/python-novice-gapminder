@@ -177,7 +177,7 @@ print(len('helium'))
 {: .output}
 
 *   Nested functions are evaluated from the inside out,
-    just like in mathematics.
+     like in mathematics.
 
 ## Python is case-sensitive.
 
