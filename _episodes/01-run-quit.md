@@ -1,100 +1,96 @@
 ---
-title: "Running and Quitting"
+title: "Jupyter Notebook Overview"
 teaching: 15
 exercises: 0
 questions:
-- "How can I run Python programs?"
+- "What environment can I use with Python?"
+- "How can I create and run Python programs?"
 objectives:
 - "Launch the Jupyter Notebook, create new notebooks, and exit the Notebook."
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
 - "Python programs are plain text files."
-- "Use the Jupyter Notebook for editing and running Python."
-- "The Notebook has Command and Edit modes."
-- "Use the keyboard and mouse to select and edit cells."
-- "The Notebook will turn Markdown into pretty-printed documentation."
-- "Markdown does most of what HTML does."
+- "Use the Jupyter Notebook application for editing and running Python."
+- "Each Notebook contains cells that can house code, text, or images."
+- "Command mode edits the Notebook as a whole, while Edit mode edits individual cells."
+- "The Markdown cell option is like HTML, allowing you to create formatted text."
 ---
 ## Python programs are plain text files.
 
-*   They have the `.py` extension to let everyone (including the operating system) 
-    know it is a Python program.
-    *   This is convention, not a requirement.
-*   It's common to write them using a text editor but we are going to use
-    the [Jupyter Notebook][jupyter].
-*   The bit of extra setup is well worth it because the Notebook provides code completion 
-    and other helpful features.
-*   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
-    *   Can export as "pure Python" to run from the command line.
+Python files typically have `.py` extension to let everyone know it is a Python program. Although you can write Python programs using
+a text editor, but we are going to use the [Jupyter Notebook][jupyter] application. Jupyter Notebook provides code completion and other 
+helpful features. Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs. 
 
-## Use the Jupyter Notebook for editing and running Python.
+## Jupyter Notebook runs and edits Python programs.
 
-*   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
-    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
-*   It also installs all the extra libraries it needs to run.
-*   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
+Jupyter Notebook is automatically installed with the [Anaconda package manager][anaconda]. See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
+
+The application is launched through the command line, by typing
 
     ~~~
     $ jupyter notebook
     ~~~
 
-*   This will start a Jupyter Notebook server and open your default web browser. 
-*   The server runs locally on your machine only and does not use an internet connection.
-*   The server sends messages to your browser.
-*   The server does the work and the web browser renders the notebook.
-*   You can type code into the browser and see the result when the web page talks to the server.
-*   This has several advantages:
+in the Mac OS X or Linux Terminal, or 
+
+    ~~~
+    jupyter notebook
+    ~~~
+
+in the Windows Command Prompt. 
+
+This will start a local Jupyter Notebook server by opening your default web browser. The application uses your web browser to render the 
+notebook, not to use your internet connection. Using Jupyter Notebook has several advantages:
     *   You can easily type, edit, and copy and paste blocks of code.
-    *   Tab complete allows you to easily access the names of things you are using
-        and learn more about them.
-    *   It allows you to annotate your code with links, different sized text, bullets, etc.
-        to make it more accessible to you and your collaborators.
-    *   It allows you to display figures next to the code that produces them
-        to tell a complete story of the analysis.
+    *   Tab complete allows easy access the names of things you are using and information to learn more about them.
+    *   Code annotation makes notebooks more accessible to you and your collaborators.
+    *   Displaying graph next to the code that produces them provides a complete story of the analysis.
 
 ![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
 *Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
 > ## How It's Stored
 >
-> *   The notebook file is stored in a format called JSON.
-> *   Just like a webpage, what's saved looks different from what you see in your browser.
-> *   But this format allows Jupyter to mix source code, text, and images, all in one file.
+> The notebook file is stored in a format called JSON. This format allows Jupyter to mix source code, text, and images, all in one file.
 {: .callout}
 
-## The Notebook has Command and Edit modes.
+## Creating a new notebook file.
 
-*   Open a new notebook from the dropdown menu (that says 'New') in the top right corner of the file browser page.
-*   Each notebook contains one or more cells that contain code, text, or images.
+When Jupyter Notebook launches in your web browser, it opens your local machine directory. To create a new notebook, select the folder
+where you would like to house the file, and then click on the 'New' dropdown menu in the top right corner of the Files browser page.
+Select 'Python 3' under the heading Notebook, and a new browser windows will open with an Untitled notebook. To rename, click on the 
+file name 'Untitled', next to the Jupyter Notebook logo. Jupyter will autosave your changes, but you can also click on the 'Save and 
+Checkpoint' icon to manually save.
+
+Right now, our new notebook looks pretty empty, containing a single box with the text 'ln []'. In Jupyter, this box is referred to as a
+cell. The 'ln' stands for 'line', and the empty bracket indicates that the cell has not been 'run' by the server. 'Running' the cell 
+means that we are telling the server to process whatever is in the cell.
+Each notebook contains one or more cells that may contain code, text, or images.
 
 > ## Code vs. Text
 >
-> We often use the term "code" to mean
-> "the source code of software written in a language such as Python". 
+> We often use the term "code" to mean "the source code of software written in a language such as Python". 
 > A "code cell" in a Notebook is a cell that contains software;
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
-*   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately,
-    the outer border of your code cell will change from gray/blue to green.
-    *   The difference in color is subtle.
-*   These are the **Command** (gray) and **Edit** (green) modes of your notebook.
-*   In Command mode, pressing the <kbd>H</kbd> key will provide 
-    a list of all the shortcut keys.
-*   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
-*   When in Command mode (esc/gray),
+Cells are automatically designated as code cells. When you click inside the cell, your code cell border will change from blue/gray to 
+green. Clicking outside of the cell turns it back to blue/gray. You can also toggle this selection by pressing <kbd>Esc</kbd> and 
+<kbd>Return</kbd> alternately.
+These are the **Command** (gray) and **Edit** (green) modes of your notebook. Command mode allows you to edit notebook-level features, 
+and Edit mode changes the content of cells.
+
+When in Command mode, pressing the <kbd>H</kbd> key will provide a list of all the shortcut keys:
     *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
     *   The <kbd>A</kbd> key will make one above.
     *   The <kbd>X</kbd> key will delete the current cell.
     *   The <kbd>Z</kbd> key will undo your last cell deletion.
-*   All actions can be done using the menus,
-    but there are lots of keyboard shortcuts to speed things up.
-*   If you remember the <kbd>Esc</kbd> and <kbd>H</kbd> shortcut, you will be able to find out all the rest.
+These actions can be also be done using the menus, but keyboard shortcuts can help you complete tasks faster.
 
 > ## Command Vs. Edit
 >
-> In the Jupyter notebook page are you currently in Command or Edit mode?  
+> Determine if you are currently in Command or Edit mode.  
 > Switch between the modes. 
 > Use the shortcuts to generate a new cell. 
 > Use the shortcuts to delete a cell
@@ -103,37 +99,30 @@ keypoints:
 > >
 > > Command mode has a grey boarder and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green). Type <kbd>B</kbd> or <kbd>A</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green). Type <kbd>X</kbd>.
 > >
 > {: .solution}
 {: .challenge}
 
-## Use the keyboard and mouse to select and edit cells.
+## Editting and running cells.
 
-*   Pressing the <kbd>Return</kbd> key turns the border green and engages Edit mode,
-    which allows you to type within the cell.
-*   Because we want to be able to write many lines of code in a single cell,
-    pressing the <kbd>Return</kbd> key when in Edit mode (green) moves the cursor to the next line in the cell just like in a text editor.
-*   We need some other way to tell the Notebook we want to run what's in the cell.
-*   Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> together will execute the contents of the cell.
-*   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the 
-    right of the keyboard are right next to each other.
+Clicking within the cell or pressing the <kbd>Return</kbd> key turns the border green and engages Edit mode,
+which allows you to type within the cell. Pressing the <kbd>Return</kbd> key when in Edit mode (green) moves the cursor to the next line 
+in the cell just like in a text editor.
 
-## The Notebook will turn Markdown into pretty-printed documentation.
+Pressing <kbd>Shift</kbd>+<kbd>Return</kbd> (<kbd>Shift</kbd>+<kbd>Enter</kbd> for Windows users) together will 'run' the cell, 
+executing the contents of the cell. Notice that running the cell changes the empty brackets `[]` to the left of the cell contents to 
+`[1]`. Each time the cell is run, this number will increase by one.   
 
-*   Notebooks can also render [Markdown][markdown].
-    *   A simple plain-text format for writing lists, links, 
-        and other things that might go into a web page.
-    *   Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-*   Turn the current cell into a Markdown cell by entering 
-    the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>M</kbd> key.
-*   `In [ ]:` will disappear to show it is no longer a code cell
-    and you will be able to write in Markdown.
-*   Turn the current cell into a Code cell
-    by entering the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>Y</kbd> key.
+## Using Markdown for documentation.
 
-## Markdown does most of what HTML does.
+Notebooks can also render [Markdown][markdown], which allows you to format plain text much like HTML did in an old-fashioned email.
+To turn the current cell into a Markdown cell, enter the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>M</kbd> key. You can also 
+select "Markdown" from the dropdown menu with the word "Code". `In [ ]:` will disappear to show it is no longer a code cell and you will 
+be able to write in Markdown. To turn the current cell back into a Code cell, enter the Command mode and press the <kbd>Y</kbd> key.
+
+## Markdown basics.
 
 <div class="row">
   <div class="col-md-6" markdown="1">
@@ -272,28 +261,6 @@ Or use [named links][data_carpentry].
 > {: .solution}
 {: .challenge}
 
-> ## More Math
->
-> What is displayed when a Python cell in a notebook
-> that contains several calculations is executed?
-> For example, what happens when this cell is executed?
->
-> ~~~
-> 7 * 3
-> 2 + 1
-> ~~~
-> {: .language-python}
-> 
-> > ## Solution
-> >
-> > Python returns the output of the last calculation.
-> > ~~~
-> > 3
-> > ~~~
-> > {: .language-python}
-> {: .solution}
-{: .challenge}
-
 > ## Change an Existing Cell from Code to Markdown
 >
 > What happens if you write some Python in a code cell
@@ -349,6 +316,29 @@ Or use [named links][data_carpentry].
 > > `\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols. 
 > {: .solution}
 {: .challenge}
+
+> ## More Math
+>
+> What is displayed when a Python cell in a notebook
+> that contains several calculations is executed?
+> For example, what happens when this cell is executed?
+>
+> ~~~
+> 7 * 3
+> 2 + 1
+> ~~~
+> {: .language-python}
+> 
+> > ## Solution
+> >
+> > Python returns the output of the last calculation.
+> > ~~~
+> > 3
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
+
 
 [anaconda]: https://docs.continuum.io/anaconda/install
 [jupyter]: http://jupyter.org/
