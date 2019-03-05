@@ -281,7 +281,7 @@ cos(pi) is -1.0
 > > ~~~
 > > {: .python}
 > >
-> > can bewritten as
+> > can be written as
 > >
 > > ~~~
 > > import math
