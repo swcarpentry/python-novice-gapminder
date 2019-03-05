@@ -119,6 +119,34 @@ plt.ylabel('GDP per capita ($)')
 ~~~
 {: .language-python}
 
+> ## Adding a Legend
+> 
+> Often when plotting multiple datasets on the same figure it is desirable to have 
+> a legend describing the data.
+>
+> This can be done in `matplotlib` in two stages:
+> 
+> * Provide a label for each dataset in the figure:
+>
+> ~~~
+> plt.plot(years, gdp_australia, label='Australia')
+> plt.plot(years, gdp_nz, label='New Zealand')
+> ~~~
+>
+> * Instruct `matplotlib` to create the legend.
+>
+> ~~~
+> plt.legend()
+> ~~~
+>
+> By default matplotlib will attempt to place the legend in a suitable position. If you
+> would rather specify a position this can be done with the `loc=` argument, e.g to place
+> the legend in the upper left corner of the plot, specify `loc='upper left'`
+>
+> {: .language-python}
+{: .callout}
+
+
 ![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
@@ -135,6 +163,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 {: .language-python}
 
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
+
 > ## Minima and Maxima
 >
 > Fill in the blanks below to plot the minimum GDP per capita over time
