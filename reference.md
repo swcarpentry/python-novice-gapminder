@@ -15,84 +15,84 @@ root: ..
 
 ## [Variables and Assignment]({{ page.root }}/02-variables/)
 - Variables are stored using `=`.
-  - Strings are defined in quotations `''`.
+  - Strings are defined in quotations `'...'`.
   - Integers and floating point numbers are defined without quotations.
- - Variables can contain letters, digits, and underscores `_`.
-   - Cannot start with a digit.
-   - Variables that start with underscores should be avoided.
+- Variables can contain letters, digits, and underscores `_`.
+  - Cannot start with a digit.
+  - Variables that start with underscores should be avoided.
 - Use `print(...)` to display values as text.
 - Can use indexing on strings.
- - Indexing starts at 0.
- - Position is given in square brackets `[position]` following the variable name.
- - Take a slice using `[start:stop]`. This makes a copy of part of the original string.
-  - `start` is the index of the first element.
-  - `stop` is the index of the element after the last desired element.
- - Use `len(...)` to find the length of a variable or string. 
+  - Indexing starts at 0.
+  - Position is given in square brackets `[position]` following the variable name.
+  - Take a slice using `[start:stop]`. This makes a copy of part of the original string.
+    - `start` is the index of the first element.
+    - `stop` is the index of the element after the last desired element.
+- Use `len(...)` to find the length of a variable or string. 
 
 ## [Data Types and Type Conversion]({{ page.root }}/03-types-conversion/)
 - Each value has a type. This controls what can be done with it.
- - `int` represents an integer
- - `float` represents a floating point number.
- - `str` represents a string.
+  - `int` represents an integer
+  - `float` represents a floating point number.
+  - `str` represents a string.
 - To determine a variables type, use the built-in function `type(...)`, including the variable name in the parenthesis.
 - Modifying strings:
- - Use `+` to concatenate strings.
- - Use `*` to repeat a string.
- - Numbers and strings cannot be added to on another.
-  - Convert string to integer: `int(...)`.
-  - Convert integer to string: `str(...)`.
+  - Use `+` to concatenate strings.
+  - Use `*` to repeat a string.
+  - Numbers and strings cannot be added to on another.
+    - Convert string to integer: `int(...)`.
+    - Convert integer to string: `str(...)`.
 
 ## [Built-in Functions and Help]({{ page.root }}/04-built-in/)
 - To add a comment, place `#` before the thing you do not with to be executed.
 - Commonly used built-in functions:
- - `min()` finds the smallest value.
- - `max()` finds the largest value.
- - `round()` rounds off a floating point number.
- - `help()` displays documentation for the function in the parenthesis.
-  - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
+  - `min()` finds the smallest value.
+  - `max()` finds the largest value.
+  - `round()` rounds off a floating point number.
+  - `help()` displays documentation for the function in the parenthesis.
+    - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
 
 ## [Libraries]({{ page.root }}/06-libraries/)
 - Importing a library:
- - Use `import ...` to load a library.
- - Refer to this library by using `module_name.thing_name`.
-  - `.` indicates 'part of'.
+  - Use `import ...` to load a library.
+  - Refer to this library by using `module_name.thing_name`.
+    - `.` indicates 'part of'.
 - To import a specific item from a library: `from ... import ...`
 - To import a library using an alias: `import ... as ...`
 - Importing the math library: `import math`
- - Example of referring to an item with the module's name: `math.cos(math.pi)`.
+  - Example of referring to an item with the module's name: `math.cos(math.pi)`.
 - Importing the plotting library as an alias: `import matplotlib as mpl`
 
 ## [Reading Tabular Data into DataFrames]({{ page.root }}/07-reading-tabular/)
-- We use the pandas library to do statistics on tabular data. Load with `import pandas`.
- - To read in a csv: `pandas.read_csv()`, including the path name in the parenthesis.
-  - To specify a column's values should be used as row headings: `pandas.read_csv('path',index_col='column name')`, where path and column name should be replaced with the relevant values.
+- Use the pandas library to do statistics on tabular data. Load with `import pandas`.
+  - To read in a csv: `pandas.read_csv()`, including the path name in the parenthesis.
+    - To specify a column's values should be used as row headings: `pandas.read_csv('path',index_col='column name')`, where path and column name should be replaced with the relevant values.
 - To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
 - Use `DataFrame.columns` to view the column names.
 - Use `DataFrame.T` to transpose a DataFrame.
 - Use `DataFrame.describe` to get summary statistics about your data.
 
- ## [Pandas DataFrames]({{ page.root }}/08-data-frames/)
+## [Pandas DataFrames]({{ page.root }}/08-data-frames/)
 - Select data using `[i,j]`
- - To select by entry position: `DataFrame.iloc[..., ...]`
-   - This is includive of everything except the final index.
- - To select by entry label: `DataFrame.loc[..., ...]`
-   - Can select multiple rows or columns by listing labels.
-   - This is inclusive to both ends.
- - Use `:` to select all rows or columns.
+  - To select by entry position: `DataFrame.iloc[..., ...]`
+    - This is inclusive of everything except the final index.
+  - To select by entry label: `DataFrame.loc[..., ...]`
+    - Can select multiple rows or columns by listing labels.
+    - This is inclusive to both ends.
+  - Use `:` to select all rows or columns.
 - Can also select data based on values using `true` and `false`. This is a Boolean mask.
- - `mask = subset > 10000`
- - We can then use this to select values.
+  - `mask = subset > 10000`
+  - We can then use this to select values.
 - To use a select-apply-combine operation we use `data.apply(lambda x: x>x.mean())` where `mean()` can be any operation the user would like to be applied to x.
 
 ## [Plotting]({{ page.root }}/09-plotting/)
 - The most widely used plotting library is `matplotlib`.
- - Usually imported using `import matplotlib.pyplot as plt`.
- - To plot we use the command `plt.plot(time, position)`.
- - To create a legend use `plt.legend(['label1','label2', loc='upper left'])`
-   - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
- - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
-- Pandas DataFrames can be used to plot too by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
- - To plot a bar plot `data.plot(kind='bar')`
+  - Usually imported using `import matplotlib.pyplot as plt`.
+  - To plot we use the command `plt.plot(time, position)`.
+  - To create a legend use `plt.legend(['label1','label2', loc='upper left'])`
+    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
+  - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
+- Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
+  - To plot a bar plot `data.plot(kind='bar')`
 
 ```Python
 import matplotlib.puplot as plot
@@ -101,21 +101,22 @@ plt.xlabel('x axis label')
 plt.ylabel('y axis label')
 plt.legend()
 ```
+
 ## [Lists]({{ page.root }}/11-lists/)
 - Defined within `[...]` and separated by `,`.
- - An empty list can be created by using `[]`.
-- Can use `len()` to determine how many values are in a list.
+  - An empty list can be created by using `[]`.
+- Can use `len(...)` to determine how many values are in a list.
 - Can index just as done in previous lessons.
- - Indexing can be used to reassign values `list_name[0] = newvalue`.
+  - Indexing can be used to reassign values `list_name[0] = newvalue`.
 - To add an item to a list use `list_name.append()`, with the item to append in the parenthesis.
 - To combine two lists use `list_name_1.extend(list_name_2)`.
 - To remove an item from a list use `del list_name[index]`.
 
 ## [For Loops]({{ page.root }}/12-for-loops/)
 - Start a for loop with `for number in [1,2,3]:`, with the following lines indented.
- - `[1, 2, 3]` is considered the collection.
- - `number` is the loop variable.
- - The action following the collection is the body.
+  - `[1, 2, 3]` is considered the collection.
+  - `number` is the loop variable.
+  - The action following the collection is the body.
 - To iterate over a sequence of numbers use `range(start, end)`
 
 ```Python
@@ -126,10 +127,10 @@ for number in range(0,5):
 ## [Looping Over Data Sets]({{ page.root }}/13-looping-data-sets/)
 - Use a for loop: `for filename in [file1, file2]:`
 - To find a set of files using a pattern use `glob.glob`
- - Must import first using `import glob`.
- - `*` indicates "match zero or more characters"
- - `?` indicates "match exactly one character"
-   - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
+  - Must import first using `import glob`.
+  - `*` indicates "match zero or more characters"
+  - `?` indicates "match exactly one character"
+    - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
 - Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
 
 ```Python
@@ -155,17 +156,17 @@ add_numbers(1, 4)
 
 ## [Conditionals]({{ page.root }}/17-conditionals/)
 - Defined similarly to a loop, using `if variable conditional value:`.
- - For example, `if variable > 5:`.
+  - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
 - Use `else:` for when if statement is not true.
 - Can Combine more than one conditional by using `and` or `or`.
 - Often used in combination with for loops.
 - Conditions that can be used:
- - `==` equal to.
- - `>=` greater than or equal to.
- - `<=` less than or equal to.
- - `>` greater than.
- - `<` less than.
+  - `==` equal to.
+  - `>=` greater than or equal to.
+  - `<=` less than or equal to.
+  - `>` greater than.
+  - `<` less than.
 
 ```Python
 for m in [3, 6, 7, 2, 8]:
