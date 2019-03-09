@@ -10,9 +10,9 @@ objectives:
 - "Write for loops that use the Accumulator pattern to aggregate values."
 keypoints:
 - "A *for loop* executes commands once for each value in a collection."
+- "A `for` loop is made up of a collection, a loop variable, and a body."
 - "The first line of the `for` loop must end with a colon, and the body must be indented."
 - "Indentation is always meaningful in Python."
-- "A `for` loop is made up of a collection, a loop variable, and a body."
 - "Loop variables can be called anything (but it is strongly advised to have a meaningful name to the looping variable)."
 - "The body of a loop can contain many statements."
 - "Use `range` to iterate over a sequence of numbers."
@@ -51,6 +51,19 @@ print(5)
 ~~~
 {: .output}
 
+## A `for` loop is made up of a collection, a loop variable, and a body.
+
+~~~
+for number in [2, 3, 5]:
+    print(number)
+~~~
+{: .python}
+
+*   The collection, `[2, 3, 5]`, is what the loop is being run on.
+*   The body, `print(number)`, specifies what to do for each value in the collection.
+*   The loop variable, `number`, is what changes for each *iteration* of the loop.
+    *   The "current thing".
+
 ## The first line of the `for` loop must end with a colon, and the body must be indented.
 
 *   The colon at the end of the first line signals the start of a *block* of statements.
@@ -84,19 +97,6 @@ IndentationError: unexpected indent
 
 *   This error can be fixed by removing the extra spaces
     at the beginning of the second line.
-
-## A `for` loop is made up of a collection, a loop variable, and a body.
-
-~~~
-for number in [2, 3, 5]:
-    print(number)
-~~~
-{: .python}
-
-*   The collection, `[2, 3, 5]`, is what the loop is being run on.
-*   The body, `print(number)`, specifies what to do for each value in the collection.
-*   The loop variable, `number`, is what changes for each *iteration* of the loop.
-    *   The "current thing".
 
 ## Loop variables can be called anything.
 
