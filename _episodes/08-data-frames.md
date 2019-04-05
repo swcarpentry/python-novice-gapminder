@@ -514,7 +514,7 @@ data.groupby(wealth_score).sum()
 
 > ## Using the dir function to see available methods
 >
-> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a [list data type](https://docs.language-python.org/3/tutorial/datastructures.html#more-on-lists) are:
+> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a [list data type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) are:
 > ~~~
 > potatoes = ["Russet", "Norkota", "Yukon Gold", "Pontiac"]
 > dir(potatoes)
@@ -540,7 +540,7 @@ data.groupby(wealth_score).sum()
 > ~~~
 > {: .language-python}
 >
-> The double underscore functions can be ignored for now; functions that are not surrounded by double underscores are the *public interface* of the [list type](https://docs.language-python.org/3/tutorial/datastructures.html#more-on-lists). So, if you want to sort the list of potatoes, according to `dir` you should try,
+> The double underscore functions can be ignored for now; functions that are not surrounded by double underscores are the *public interface* of the [list type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). So, if you want to sort the list of potatoes, according to `dir` you should try,
 > ~~~
 > potatoes.sort()
 > ~~~
