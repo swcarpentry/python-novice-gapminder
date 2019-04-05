@@ -18,7 +18,7 @@ turn out to be anything but when we have to explain them precisely.
 
 ## Python supports a large community within and outwith research.
 
-*   The [Python 3 documentation](https://docs.language-python.org/3/) covers the core language
+*   The [Python 3 documentation](https://docs.python.org/3/) covers the core language
     and the standard library.
 
 *   [PyCon](https://pycon.org/) is the largest annual conference for the Python community.
