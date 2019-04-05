@@ -19,7 +19,7 @@ keypoints:
 
 Coding style helps us to understand the code better. It helps to maintain and change the code.
 Python relies strongly on coding style, as we may notice by the indentation we apply to lines to define different blocks of code.
-Python proposes a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.language-python.org/dev/peps/pep-0008), and highlight the importance of readability in the [Zen of Python](https://www.language-python.org/dev/peps/pep-0020).
+Python proposes a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008), and highlight the importance of readability in the [Zen of Python](https://www.python.org/dev/peps/pep-0020).
 
 We may highlight some points:
 *   document your code
@@ -29,14 +29,14 @@ We may highlight some points:
 
 ## Follow standard Python style in your code.
 
-*   [PEP8](https://www.language-python.org/dev/peps/pep-0008):
+*   [PEP8](https://www.python.org/dev/peps/pep-0008):
     a style guide for Python that discusses topics such as how you should name variables,
     how you should use indentation in your code,
     how you should structure your `import` statements,
     etc.
     Adhering to PEP8 makes it easier for other Python developers to read and understand your code,
     and to understand what their contributions should look like.
-    The [PEP8 application and Python library](https://pypi.language-python.org/pypi/pep8)
+    The [PEP8 application and Python library](https://pypi.python.org/pypi/pep8)
     can check your code for compliance with PEP8.
 *   [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) 
     supports the use of PEP8 and extend the coding style to more specific structure of 
