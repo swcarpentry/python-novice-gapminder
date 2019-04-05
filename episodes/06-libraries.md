@@ -74,7 +74,7 @@ NAME
     math
 
 MODULE REFERENCE
-    http://docs.language-python.org/3.5/library/math
+    http://docs.python.org/3/library/math
 
     The following documentation is automatically generated from the Python
     source files.  It may be incomplete, incorrect or include features that
@@ -381,6 +381,6 @@ cos(pi) is -1.0
 > {: .solution}
 {: .challenge}
 
-[pypi]: https://pypi.language-python.org/pypi/
-[stdlib]: https://docs.language-python.org/3/library/
-[randommod]: https://docs.language-python.org/3/library/random.html
+[pypi]: https://pypi.python.org/pypi/
+[stdlib]: https://docs.python.org/3/library/
+[randommod]: https://docs.python.org/3/library/random.html
