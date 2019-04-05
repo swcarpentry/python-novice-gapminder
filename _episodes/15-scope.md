@@ -28,7 +28,7 @@ def adjust(t):
     temperature = t * 1.43 / pressure
     return temperature
 ~~~
-{: .python}
+{: .language-python}
 
 *   `pressure` is a *global variable*.
     *   Defined outside any particular function.
@@ -43,7 +43,7 @@ def adjust(t):
 print('adjusted:', adjust(0.9))
 print('temperature after call:', temperature)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 adjusted: 0.01238691049085659
 ~~~
@@ -70,7 +70,7 @@ NameError: name 'temperature' is not defined
 > value = -22.5
 > print(clip(value))
 > ~~~
-> {: .python}
+> {: .language-python}
 {: .challenge}
 
 > ## Reading Error Messages
