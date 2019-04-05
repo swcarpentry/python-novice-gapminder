@@ -31,7 +31,7 @@ keypoints:
 # This sentence isn't executed by Python.
 adjustment = 0.5   # Neither is this - anything after '#' is ignored.
 ~~~
-{: .python}
+{: .language-python}
 
 ## A function may take zero or more arguments.
 
@@ -49,7 +49,7 @@ print('before')
 print()
 print('after')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 before
 
@@ -68,7 +68,7 @@ after
 print(max(1, 2, 3))
 print(min('a', 'A', '0'))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 3
 0
@@ -84,7 +84,7 @@ print(min('a', 'A', '0'))
 ~~~
 print(max(1, 'a'))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 TypeError: unorderable types: str() > int()
 ~~~
@@ -98,7 +98,7 @@ TypeError: unorderable types: str() > int()
 ~~~
 round(3.712)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 4
 ~~~
@@ -109,7 +109,7 @@ round(3.712)
 ~~~
 round(3.712, 1)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 3.7
 ~~~
@@ -122,7 +122,7 @@ round(3.712, 1)
 ~~~
 help(round)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Help on built-in function round in module builtins:
 
@@ -143,7 +143,7 @@ round(...)
 # Forgot to close the quote marks around the string.
 name = 'Feng
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 SyntaxError: EOL while scanning string literal
 ~~~
@@ -153,7 +153,7 @@ SyntaxError: EOL while scanning string literal
 # An extra '=' in the assignment.
 age = = 52
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 SyntaxError: invalid syntax
 ~~~
@@ -164,7 +164,7 @@ SyntaxError: invalid syntax
 ~~~
 print("hello world"
 ~~~
-{: .python}
+{: .language-python}
 ~~~
   File "<ipython-input-6-d1cc229bf815>", line 1
     print ("hello world"
@@ -188,7 +188,7 @@ SyntaxError: unexpected EOF while parsing
 age = 53
 remaining = 100 - aege # mis-spelled 'age'
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 NameError: name 'aege' is not defined
 ~~~
@@ -213,7 +213,7 @@ NameError: name 'aege' is not defined
 result = print('example')
 print('result of print is', result)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 example
 result of print is None
@@ -231,7 +231,7 @@ result of print is None
 > radiance = 1.0
 > radiance = max(2.1, 2.0 + min(radiance, 1.1 * radiance - 0.5))
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > > 1.
 > >    1. `1.1 * radiance = 1.1`
@@ -257,13 +257,13 @@ result of print is None
 > print(max(rich, poor))
 > print(max(len(rich), len(poor)))
 > ~~~
-> {: .python}
+> {: .language-python}
 > > ## Solution
 > > 1. 
 > > ~~~
 > > print(max(easy_string))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > c
 > > ~~~
@@ -271,7 +271,7 @@ result of print is None
 > > ~~~
 > > print(max(rich, poor))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > tin
 > > ~~~
@@ -279,7 +279,7 @@ result of print is None
 > > ~~~
 > > print(max(len(rich), len(poor)))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > 4
 > > ~~~
