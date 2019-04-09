@@ -495,6 +495,7 @@ result of call is: None
 > > ~~~
 > > {: .output}
 > {: .solution}
+{: .challenge}
 
 > ## Simulating a dynamical system
 >
