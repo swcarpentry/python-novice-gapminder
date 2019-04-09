@@ -261,7 +261,7 @@ result of call is: None
 > >     data = pandas.read_csv(filename)
 > >     return data.min()
 > > ~~~
-> {: .language-python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
@@ -290,7 +290,7 @@ result of call is: None
 > > If an empty list is passed to this function, it returns `None`:
 > > ~~~
 > > my_list = []
-> > print(first_negative(my_list)
+> > print(first_negative(my_list))
 > > ~~~
 > > {: .language-python}
 > > ~~~
@@ -495,6 +495,7 @@ result of call is: None
 > > ~~~
 > > {: .output}
 > {: .solution}
+{: .challenge}
 
 > ## Simulating a dynamical system
 >
