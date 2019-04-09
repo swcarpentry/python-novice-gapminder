@@ -290,7 +290,7 @@ result of call is: None
 > > If an empty list is passed to this function, it returns `None`:
 > > ~~~
 > > my_list = []
-> > print(first_negative(my_list)
+> > print(first_negative(my_list))
 > > ~~~
 > > {: .language-python}
 > > ~~~
