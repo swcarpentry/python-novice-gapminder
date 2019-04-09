@@ -261,7 +261,7 @@ result of call is: None
 > >     data = pandas.read_csv(filename)
 > >     return data.min()
 > > ~~~
-> {: .language-python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
