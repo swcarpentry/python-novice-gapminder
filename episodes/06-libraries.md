@@ -167,7 +167,7 @@ cos(pi) is -1.0
 >
 > > ## Solution
 > >
-> > The [random module](randommod) seems like it could help you.
+> > The [random module][randommod] seems like it could help you.
 > >
 > > The string has 11 characters, each having a positional index from 0 to 10.
 > > You could use `random.randrange` function (or the alias `random.randint`
