@@ -245,7 +245,7 @@ result of call is: None
 > and returns the minimum value in that data.
 >
 > ~~~
-> import pandas
+> import pandas as pd
 >
 > def min_in_data(____):
 >     data = ____
@@ -255,10 +255,10 @@ result of call is: None
 > > ## Solution
 > >
 > > ~~~
-> > import pandas
+> > import pandas as pd
 > > 
 > > def min_in_data(filename):
-> >     data = pandas.read_csv(filename)
+> >     data = pd.read_csv(filename)
 > >     return data.min()
 > > ~~~
 > > {: .language-python}
@@ -323,7 +323,7 @@ result of call is: None
 > > 
 > > 1. `2003/2/1`
 > > 2. We saw examples of using *named arguments* when working with the pandas library. For example, when reading in a dataset 
-> > using `data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a 
+> > using `data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')`, the last argument `index_col` is a 
 > > named argument.  
 > > 3. Using named arguments can make code more readable since one can see from the function call what name the different arguments 
 > > have inside the function. It can also reduce the chances of passing arguments in the wrong order, since by using named arguments 
@@ -407,9 +407,9 @@ result of call is: None
 > Assume that the following code has been executed:
 >
 > ~~~
-> import pandas
+> import pandas as pd
 >
-> df = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
+> df = pd.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
 > japan = df.loc['Japan']
 > ~~~
 > {: .language-python}
@@ -428,7 +428,7 @@ result of call is: None
 >
 > ~~~
 > def avg_gdp_in_decade(country, continent, year):
->     df = pandas.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+>     df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
 >     ____
 >     ____
 >     ____
@@ -457,7 +457,7 @@ result of call is: None
 > >
 > > ~~~
 > > def avg_gdp_in_decade(country, continent, year):
-> >     df = pandas.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
 > >     c = df.loc[country]
 > >     gdp_decade = 'gdpPercap_' + str(year // 10)
 > >     avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
@@ -472,7 +472,7 @@ result of call is: None
 > >
 > > ~~~
 > > def avg_gdp_in_decade(country, continent, year):
-> >     df = pandas.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
 > >     c = df.loc[country]
 > >     gdp_decade = 'gdpPercap_' + str(year // 10)
 > >     total = 0.0
