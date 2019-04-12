@@ -317,9 +317,9 @@ final velocity: 30.0
 >
 > ~~~
 > import glob
-> import pandas
+> import pandas as pd
 > for filename in glob.glob('data/*.csv'):
->     contents = pandas.read_csv(filename)
+>     contents = pd.read_csv(filename)
 >     ____:
 >         print(filename, len(contents))
 > ~~~
@@ -328,9 +328,9 @@ final velocity: 30.0
 > >
 > > ~~~
 > > import glob
-> > import pandas
+> > import pandas as pd
 > > for filename in glob.glob('data/*.csv'):
-> >     contents = pandas.read_csv(filename)
+> >     contents = pd.read_csv(filename)
 > >     if len(contents)<50:
 > >         print(filename, len(contents))
 > > ~~~
