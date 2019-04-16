@@ -63,9 +63,9 @@ root: ..
 - Importing the plotting library as an alias: `import matplotlib as mpl`
 
 ## [Reading Tabular Data into DataFrames]({{ page.root }}/07-reading-tabular/)
-- Use the pandas library to do statistics on tabular data. Load with `import pandas`.
-  - To read in a csv: `pandas.read_csv()`, including the path name in the parenthesis.
-    - To specify a column's values should be used as row headings: `pandas.read_csv('path',index_col='column name')`, where path and column name should be replaced with the relevant values.
+- Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
+  - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
+    - To specify a column's values should be used as row headings: `pd.read_csv('path',index_col='column name')`, where path and column name should be replaced with the relevant values.
 - To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
 - Use `DataFrame.columns` to view the column names.
 - Use `DataFrame.T` to transpose a DataFrame.
@@ -135,7 +135,7 @@ for number in range(0,5):
 
 ```Python
 for filename in glob.glob(*.txt):
-  data = pandas.read_csv(filename)
+  data = pd.read_csv(filename)
 ```
 
 ## [Writing Functions]({{ page.root }}/14-writing-functions/)
