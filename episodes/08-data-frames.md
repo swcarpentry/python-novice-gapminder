@@ -44,8 +44,8 @@ uniquely identifies its *entry* in the DataFrame.
 *   Can specify location by numerical index analogously to 2D version of character selection in strings.
 
 ~~~
-import pandas
-data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+import pandas as pd
+data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.iloc[0, 0])
 ~~~
 {: .language-python}
@@ -59,7 +59,7 @@ print(data.iloc[0, 0])
 *   Can specify location by row name analogously to 2D version of dictionary keys.
 
 ~~~
-data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.loc["Albania", "gdpPercap_1952"])
 ~~~
 {: .language-python}
@@ -332,9 +332,9 @@ data.groupby(wealth_score).sum()
 > and the Gapminder GDP data for Europe has been loaded:
 >
 > ~~~
-> import pandas
+> import pandas as pd
 >
-> df = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> df = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > ~~~
 > {: .language-python}
 >
@@ -400,7 +400,7 @@ data.groupby(wealth_score).sum()
 > what is in `first`, `second`, etc.?
 >
 > ~~~
-> first = pandas.read_csv('data/gapminder_all.csv', index_col='country')
+> first = pd.read_csv('data/gapminder_all.csv', index_col='country')
 > second = first[first['continent'] == 'Americas']
 > third = second.drop('Puerto Rico')
 > fourth = third.drop('continent', axis = 1)
@@ -412,7 +412,7 @@ data.groupby(wealth_score).sum()
 > > ## Solution
 > > Let's go through this piece of code line by line.
 > > ~~~
-> > first = pandas.read_csv('data/gapminder_all.csv', index_col='country')
+> > first = pd.read_csv('data/gapminder_all.csv', index_col='country')
 > > ~~~
 > > {: .language-python}
 > > This line loads the dataset containing the GDP data from all countries into a dataframe called 
@@ -456,7 +456,7 @@ data.groupby(wealth_score).sum()
 > When would you use these methods?
 >
 > ~~~
-> data = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > print(data.idxmin())
 > print(data.idxmax())
 > ~~~
