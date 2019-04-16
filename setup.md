@@ -93,7 +93,7 @@ you did not use Anaconda, use the Python package manager pip
 To start the notebook, you will need to access the command line through Terminal or Git Bash.
 There are two ways to open Terminal on Mac:
 1) In your Applications folder, open Utilities and double-click on Terminal
-2) Press Command - spacebar to launch Spotlight and type "Terminal," then double-click the search result
+2) Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then double-click the search result or hit <kbd>Enter</kbd>
 
 After you have launched Terminal, type the command:
 
@@ -112,7 +112,7 @@ $ python
 
 ### Windows Users
 To start the notebook, you will need to access the command line through the Command Prompt.
-Use the shortcut keys Win + R to launch the Run window, then type in cmd and press Enter.
+Use the shortcut keys <kbd>Windows Logo Key</kbd> + <kbd>R</kbd> to launch the Run window, then type in `cmd` and press Enter.
 
 After you have launched the Command Prompt, type the command:
 
