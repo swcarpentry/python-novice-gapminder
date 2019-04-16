@@ -46,9 +46,9 @@ plt.ylabel('Position (km)')
 *   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
 
 ~~~
-import pandas
+import pandas as pd
 
-data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 
 # Extract year from last 4 characters of each column name
 years = data.columns.str.strip('gdpPercap_')
@@ -171,7 +171,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > Modify it again to plot the maximum GDP per capita over time for Europe.
 >
 > ~~~
-> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
 > data_europe.____
 > plt.legend(loc='best')
@@ -182,7 +182,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ## Solution
 > >
 > > ~~~
-> > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
 > > data_europe.max().plot(label='max')
 > > plt.legend(loc='best')
@@ -201,7 +201,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > What relationship do you see (if any)?
 >
 > ~~~
-> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
 > {: .language-python}
@@ -219,7 +219,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > that of the minimum.  Take a look at the maximum and the max indexes:
 >
 > ~~~
-> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
 > print(data_asia.idxmax())
 > print(data_asia.idxmin())
@@ -244,7 +244,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > normalizing marker size by population:
 >
 > ~~~
-> data_all = pandas.read_csv('data/gapminder_all.csv', index_col='country')
+> data_all = pd.read_csv('data/gapminder_all.csv', index_col='country')
 > data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 >               s=data_all['pop_2007']/1e6)
 > ~~~
