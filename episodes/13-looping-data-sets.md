@@ -20,9 +20,9 @@ keypoints:
 *   And lists can contain character strings.
 
 ~~~
-import pandas
+import pandas as pd
 for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
-    data = pandas.read_csv(filename, index_col='country')
+    data = pd.read_csv(filename, index_col='country')
     print(filename, data.min())
 ~~~
 {: .language-python}
@@ -88,7 +88,7 @@ all PDB files: []
 
 ~~~
 for filename in glob.glob('data/gapminder_*.csv'):
-    data = pandas.read_csv(filename)
+    data = pd.read_csv(filename)
     print(filename, data['gdpPercap_1952'].min())
 ~~~
 {: .language-python}
@@ -129,10 +129,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 >
 > ~~~
 > import glob
-> import pandas
+> import pandas as pd
 > fewest = ____
 > for filename in glob.glob('data/*.csv'):
->     dataframe = pandas.____(filename)
+>     dataframe = pd.____(filename)
 >     fewest = min(____, dataframe.shape[0])
 > print('smallest file has', fewest, 'records')
 > ~~~
@@ -143,10 +143,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > ## Solution
 > > ~~~
 > > import glob
-> > import pandas
+> > import pandas as pd
 > > fewest = float('Inf')
 > > for filename in glob.glob('data/*.csv'):
-> >     dataframe = pandas.read_csv(filename)
+> >     dataframe = pd.read_csv(filename)
 > >     fewest = min(fewest, dataframe.shape[0])
 > > print('smallest file has', fewest, 'records')
 > > ~~~
@@ -162,11 +162,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > ## Solution
 > > ~~~
 > > import glob
-> > import pandas 
+> > import pandas as pd
 > > import matplotlib.pyplot as plt
 > > fig, ax = plt.subplots(1,1)
 > > for filename in glob.glob('data/gapminder_gdp*.csv'):
-> >     dataframe = pandas.read_csv(filename)
+> >     dataframe = pd.read_csv(filename)
 > >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'
 > >     region = filename.rpartition('_')[2][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
