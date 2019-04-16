@@ -22,7 +22,7 @@ keypoints:
 *   Borrows many features from R's dataframes.
     *   A 2-dimenstional table whose columns have names
         and potentially have different data types.
-*   Load it with `import pandas as pd`.The alias pd is commonly used for Pandas.
+*   Load it with `import pandas as pd`. The alias pd is commonly used for Pandas.
 *   Read a Comma Separate Values (CSV) data file with `pd.read_csv`.
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
