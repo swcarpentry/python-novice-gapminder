@@ -22,15 +22,15 @@ keypoints:
 *   Borrows many features from R's dataframes.
     *   A 2-dimenstional table whose columns have names
         and potentially have different data types.
-*   Load it with `import pandas`.
-*   Read a Comma Separate Values (CSV) data file with `pandas.read_csv`.
+*   Load it with `import pandas as pd`. The alias pd is commonly used for Pandas.
+*   Read a Comma Separate Values (CSV) data file with `pd.read_csv`.
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
 
 ~~~
-import pandas
+import pandas as pd
 
-data = pandas.read_csv('data/gapminder_gdp_oceania.csv')
+data = pd.read_csv('data/gapminder_gdp_oceania.csv')
 print(data)
 ~~~
 {: .language-python}
@@ -78,7 +78,7 @@ print(data)
 *   Pass the name of the column to `read_csv` as its `index_col` parameter to do this.
 
 ~~~
-data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 print(data)
 ~~~
 {: .language-python}
@@ -231,10 +231,10 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > and display its summary statistics.
 >
 > > ## Solution
-> > To read in a CSV, we use `pandas.read_csv` and pass the filename 'data/gapminder_gdp_americas.csv' to it. We also once again pass the
+> > To read in a CSV, we use `pd.read_csv` and pass the filename 'data/gapminder_gdp_americas.csv' to it. We also once again pass the
 > > column name 'country' to the parameter `index_col` in order to index by country:
 > > ~~~
-> > americas = pandas.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
+> > americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
 > > ~~~
 > >{: .language-python}
 > {: .solution}
@@ -354,11 +354,11 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > What value(s) should you pass to `read_csv` to read `microbes.csv` in `analysis.ipynb`?
 > 
 > > ## Solution
-> > We need to specify the path to the file of interest in the call to `pandas.read_csv`. We first need to 'jump' out of
+> > We need to specify the path to the file of interest in the call to `pd.read_csv`. We first need to 'jump' out of
 > > the folder `thesis` using '../' and then into the folder `field_data` using 'field_data/'. Then we can specify the filename `microbes.csv.
 > > The result is as follows:
 > > ~~~
-> > data_microbes = pandas.read_csv('../field_data/microbes.csv')
+> > data_microbes = pd.read_csv('../field_data/microbes.csv')
 > > ~~~
 > >{: .language-python}
 > {: .solution}
