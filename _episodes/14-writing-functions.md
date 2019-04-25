@@ -116,7 +116,7 @@ print('average of actual values:', a)
 ~~~
 {: .language-python}
 ~~~
-2.6666666666666665
+average of actual values: 2.6666666666666665
 ~~~
 {: .output}
 
@@ -125,7 +125,7 @@ print('average of empty list:', average([]))
 ~~~
 {: .language-python}
 ~~~
-None
+average of empty list: None
 ~~~
 {: .output}
 
