@@ -40,6 +40,8 @@ keypoints:
     ~~~
 
 *   This will start a Jupyter Notebook server and open your default web browser. 
+*   The server first opens a file browser page where new notebooks can be created
+    or existing notebooks can be opened.
 *   The server runs locally on your machine only and does not use an internet connection.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
@@ -52,6 +54,9 @@ keypoints:
         to make it more accessible to you and your collaborators.
     *   It allows you to display figures next to the code that produces them
         to tell a complete story of the analysis.
+
+An example of an open notebook is shown below. We will create a new notebook in
+later steps.
 
 ![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
 *Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
