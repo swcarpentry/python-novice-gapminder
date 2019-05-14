@@ -46,9 +46,9 @@ plt.ylabel('Position (km)')
 *   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
 
 ~~~
-import pandas
+import pandas as pd
 
-data = pandas.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 
 # Extract year from last 4 characters of each column name
 years = data.columns.str.strip('gdpPercap_')
@@ -119,6 +119,34 @@ plt.ylabel('GDP per capita ($)')
 ~~~
 {: .language-python}
 
+> ## Adding a Legend
+> 
+> Often when plotting multiple datasets on the same figure it is desirable to have 
+> a legend describing the data.
+>
+> This can be done in `matplotlib` in two stages:
+> 
+> * Provide a label for each dataset in the figure:
+>
+> ~~~
+> plt.plot(years, gdp_australia, label='Australia')
+> plt.plot(years, gdp_nz, label='New Zealand')
+> ~~~
+>
+> * Instruct `matplotlib` to create the legend.
+>
+> ~~~
+> plt.legend()
+> ~~~
+>
+> By default matplotlib will attempt to place the legend in a suitable position. If you
+> would rather specify a position this can be done with the `loc=` argument, e.g to place
+> the legend in the upper left corner of the plot, specify `loc='upper left'`
+>
+> {: .language-python}
+{: .callout}
+
+
 ![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
@@ -135,6 +163,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 {: .language-python}
 
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
+
 > ## Minima and Maxima
 >
 > Fill in the blanks below to plot the minimum GDP per capita over time
@@ -142,7 +171,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > Modify it again to plot the maximum GDP per capita over time for Europe.
 >
 > ~~~
-> data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
 > data_europe.____
 > plt.legend(loc='best')
@@ -153,7 +182,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ## Solution
 > >
 > > ~~~
-> > data_europe = pandas.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
 > > data_europe.max().plot(label='max')
 > > plt.legend(loc='best')
@@ -172,7 +201,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > What relationship do you see (if any)?
 >
 > ~~~
-> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 > ~~~
 > {: .language-python}
@@ -190,7 +219,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > that of the minimum.  Take a look at the maximum and the max indexes:
 >
 > ~~~
-> data_asia = pandas.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
+> data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
 > print(data_asia.idxmax())
 > print(data_asia.idxmin())
@@ -215,7 +244,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > normalizing marker size by population:
 >
 > ~~~
-> data_all = pandas.read_csv('data/gapminder_all.csv', index_col='country')
+> data_all = pd.read_csv('data/gapminder_all.csv', index_col='country')
 > data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
 >               s=data_all['pop_2007']/1e6)
 > ~~~
@@ -279,4 +308,10 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > {: .language-python}
 {: .callout}
 
-
+> ## Making your plots accessible
+>
+> Whenever you are generating plots to go into a paper or a presentation, there are a few things you can do to make sure that everyone can understand your plots.
+> * Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.tick_params.html) to increase the text size of the numbers on your axes.
+> * Similarly, you should make your graph elements easy to see. Use `s` to increase the size of your scatterplot markers and `linewidth` to increase the sizes of your plot lines.
+> * Using color (and nothing else) to distinguish between different plot elements will make your plots unreadable to anyone who is colorblind, or who happens to have a black-and-white office printer. For lines, the `linestyle` parameter lets you use different types of lines. For scatterplots, `marker` lets you change the shape of your points. If you're unsure about your colors, you can use [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) or [Color Oracle](https://colororacle.org/) to simulate what your plots would look like to those with colorblindness.
+{: .callout}

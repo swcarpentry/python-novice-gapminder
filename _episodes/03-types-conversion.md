@@ -37,7 +37,7 @@ keypoints:
 ~~~
 print(type(52))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 <class 'int'>
 ~~~
@@ -47,7 +47,7 @@ print(type(52))
 fitness = 'average'
 print(type(fitness))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 <class 'str'>
 ~~~
@@ -60,7 +60,7 @@ print(type(fitness))
 ~~~
 print(5 - 3)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 2
 ~~~
@@ -69,7 +69,7 @@ print(5 - 3)
 ~~~
 print('hello' - 'h')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -88,7 +88,7 @@ TypeError: unsupported operand type(s) for -: 'str' and 'str'
 full_name = 'Ahmed' + ' ' + 'Walsh'
 print(full_name)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 Ahmed Walsh
 ~~~
@@ -101,7 +101,7 @@ Ahmed Walsh
 separator = '=' * 10
 print(separator)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ==========
 ~~~
@@ -114,7 +114,7 @@ print(separator)
 ~~~
 print(len(full_name))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 11
 ~~~
@@ -125,7 +125,7 @@ print(len(full_name))
 ~~~
 print(len(52))
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -143,7 +143,7 @@ TypeError: object of type 'int' has no len()
 ~~~
 print(1 + '2')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
@@ -161,7 +161,7 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 print(1 + int('2'))
 print(str(1) + '2')
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 3
 12
@@ -177,7 +177,7 @@ print(str(1) + '2')
 print('half is', 1 / 2.0)
 print('three squared is', 3.0 ** 2)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 half is 0.5
 three squared is 9.0
@@ -197,7 +197,7 @@ second = 5 * first
 first = 2
 print('first is', first, 'and second is', second)
 ~~~
-{: .python}
+{: .language-python}
 ~~~
 first is 2 and second is 5
 ~~~
@@ -219,7 +219,7 @@ first is 2 and second is 5
 > > ~~~
 > > print(type(3.4))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > <class 'float'>
 > > ~~~
@@ -240,7 +240,7 @@ first is 2 and second is 5
 > > result = 3.25 + 4
 > > print(result, 'is', type(result))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > 7.25 is <class 'float'>
 > > ~~~
@@ -284,7 +284,7 @@ first is 2 and second is 5
 > print('5 / 3:', 5/3)
 > print('5 % 3:', 5%3)
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > ~~~
 > 5 // 3: 1
@@ -320,7 +320,7 @@ first is 2 and second is 5
 > >
 > > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > 600 subjects, 42 per survey: 15
 > > ~~~
@@ -337,7 +337,7 @@ first is 2 and second is 5
 > print("string to float:", float("3.4"))
 > print("float to int:", int(3.4))
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > ~~~
 > string to float: 3.4
@@ -350,7 +350,7 @@ first is 2 and second is 5
 > ~~~
 > print("string to float:", float("Hello world!"))
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > ~~~
 > ---------------------------------------------------------------------------
@@ -371,7 +371,7 @@ first is 2 and second is 5
 > ~~~
 > print("fractional string to int:", int("3.4"))
 > ~~~
-> {: .python}
+> {: .language-python}
 > 
 > > ## Solution
 > > What do you expect this program to do? It would not be so unreasonable to expect the Python 3 `int` command to
@@ -385,7 +385,7 @@ first is 2 and second is 5
 > > int("3.4")
 > > int(float("3.4"))
 > > ~~~
-> > {: .python}
+> > {: .language-python}
 > > ~~~
 > > In [2]: int("3.4")
 > > ---------------------------------------------------------------------------
@@ -409,7 +409,7 @@ first is 2 and second is 5
 > second = "1"
 > third = "1.1"
 > ~~~
-> {: .python}
+> {: .language-python}
 >
 > 1. `first + float(second)`
 > 2. `float(second) + float(third)`
