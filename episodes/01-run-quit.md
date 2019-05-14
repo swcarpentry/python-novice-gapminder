@@ -35,6 +35,45 @@ keypoints:
 
 *   This will start the JupyterLab server and open your default web browser.
 *   The server runs locally on your machine only and does not use an internet connection.
+*   The server sends messages to your browser.
+*   The server does the work and the web browser renders the notebook.
+*   You will type code into the browser and see the result when the web page talks to the server.
+*   Below is a screenshot of the JupyterLab landing page that should open in your default wbe browser after you start the JupyterLab server.
+
+![JupyterLab landing page](../fig/0_jupyterlab_landing_page.png)
+
+## The JupyterLab Interface
+
+*   The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs of documents and activities.
+
+### Menu Bar
+
+The Menu Bar at the top of JupyterLab has the top-level menus that expose various actions available in JupyterLab along with their keyboard shortcuts (where applicable). The following menus are included by default.
+
+*   **File:** Actions related to files and directories such as *New*, *Open*, *Close*, *Save*, etc. The *File* menu also includes the *Quit* action used to shutdown the JupyterLab server.
+*   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
+*   **View:** Actions that alter the appearance of JupyterLab.
+*   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
+*   **Kernel:** Actions for managing kernels which, as mentioned above, are separate processes for running code.
+*   **Tabs:** A list of the open documents and activities in the dock panel.
+*   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
+*   **Help:** A list of JupyterLab and kernel help links.
+
+A screenshot of the default Menu Bar is provided below.
+
+![JupyterLab Menu Bar](../fig/0_jupyterlab_menu_bar.png)
+
+### Left Sidebar
+
+The left sidebar contains a number of commonly-used tabs, such as a file browser, a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area.
+
+![JupyterLab Left Side Bar](../fig/0_jupyterlab_left_side_bar.png)
+
+The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar” in the View menu or by clicking on the active sidebar tab.
+
+### Main Work Area
+
+![JupyterLab Main Work Area](../fig/0_jupyterlab_main_work_area.png)
 
 ## Creating a Python Program
 
@@ -49,14 +88,12 @@ keypoints:
 *   While it's common to write Python programs using a text editor, we are going to use
     the [Jupyter Notebook][jupyter] because the Notebook provides code completion 
     and other helpful features.
+*   To open a new notebook click the Python 3 icon under the Notebook header in the Launcher tab in the main work area. 
 *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
     *   Can export as "pure Python" to run from the command line.
 
 ### Use the Jupyter Notebook for editing and running Python.
 
-*   The server sends messages to your browser.
-*   The server does the work and the web browser renders the notebook.
-*   You can type code into the browser and see the result when the web page talks to the server.
 *   This has several advantages:
     *   You can easily type, edit, and copy and paste blocks of code.
     *   Tab complete allows you to easily access the names of things you are using
@@ -78,7 +115,6 @@ keypoints:
 
 ### The Notebook has Command and Edit modes.
 
-*   Open a new notebook from the dropdown menu (that says 'New') in the top right corner of the file browser page.
 *   Each notebook contains one or more cells that contain code, text, or images.
 
 > ## Code vs. Text
@@ -365,7 +401,7 @@ Or use [named links][data_carpentry].
 
 ## Closing JupyterLab
 
-*   From the Menu Bar select the "File" menu and the choose "Quit". You will be prompted to confirm that you wish to shutdown the JupyterLab server (dont't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
+*   From the Menu Bar select the "File" menu and the choose "Quit" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (dont't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
 *   To restart the JupyterLab server you will need to re-run the following command from a shell.
 
 ~~~
