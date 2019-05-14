@@ -145,8 +145,6 @@ Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide 
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
 *   These are the **Command** (gray) and **Edit** (green) modes of your notebook.
-*   In Command mode, pressing the <kbd>H</kbd> key will provide 
-    a list of all the shortcut keys.
 *   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
 *   When in Command mode (esc/gray),
     *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
@@ -155,7 +153,6 @@ Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide 
     *   The <kbd>Z</kbd> key will undo your last cell deletion.
 *   All actions can be done using the menus,
     but there are lots of keyboard shortcuts to speed things up.
-*   If you remember the <kbd>Esc</kbd> and <kbd>H</kbd> shortcut, you will be able to find out all the rest.
 
 > ## Command Vs. Edit
 >
