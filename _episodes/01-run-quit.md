@@ -17,6 +17,7 @@ keypoints:
 - "The Notebook will turn Markdown into pretty-printed documentation."
 - "Markdown does most of what HTML does."
 ---
+
 ## Installing JupyterLab 
 *   The [Anaconda package manager][anaconda] is an automated way to install JupyterLab.
     *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
@@ -41,11 +42,15 @@ keypoints:
 *   You will type code into the browser and see the result when the web page talks to the server.
 *   Below is a screenshot of the JupyterLab landing page that should open in your default wbe browser after you start the JupyterLab server.
 
-![JupyterLab landing page](../fig/0_jupyterlab_landing_page.png)
+<center>
+    <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
+</center>
 
 ## The JupyterLab Interface
 
-*   The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs of documents and activities.
+JupyterLab provides flexible building blocks for interactive, exploratory computing. While JupyterLab has many features found in traditional integrated development environments (IDEs), it remains focused on interactive, exploratory computing.
+
+The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs of documents and activities.
 
 ### Menu Bar
 
@@ -62,14 +67,17 @@ The Menu Bar at the top of JupyterLab has the top-level menus that expose variou
 
 A screenshot of the default Menu Bar is provided below.
 
-![JupyterLab Menu Bar](../fig/0_jupyterlab_menu_bar.png)
+<center>
+    <img alt="JupyterLab Menu Bar" src="../fig/0_jupyterlab_menu_bar.png" width="750"/>
+</center>
 
 ### Left Sidebar
 
 The left sidebar contains a number of commonly-used tabs, such as a file browser, a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of the default Left Side Bar is provided below.
 
-
-![JupyterLab Left Side Bar](../fig/0_jupyterlab_left_side_bar.png)
+<center>
+    <img alt="JupyterLab Left Side Bar" src="../fig/0_jupyterlab_left_side_bar.png" width="250"/>
+</center>
 
 The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar” in the View menu or by clicking on the active sidebar tab.
 
@@ -77,7 +85,9 @@ The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar�
 
 The main work area in JupyterLab enables you to arrange documents (notebooks, text files, etc.) and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or subdivided. A screenshot of the default Menu Bar is provided below.
 
-![JupyterLab Main Work Area](../fig/0_jupyterlab_main_work_area.png)
+<center>
+    <img alt="JupyterLab Main Work Area" src="../fig/0_jupyterlab_main_work_area.png" width="750"/>
+</center>
 
 Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current activity. The tab for the current activity is marked with a colored top border (blue by default).
 
@@ -96,7 +106,10 @@ Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide 
 *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
     *   Notebooks can be exported as Python scripts that can be run from the command line.
 
-![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
+<center>
+    <img alt="Example Jupyter Notebook" src="../fig/0_jupyter_notebook_example.jpg" width="750"/>
+</center>
+
 *Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
 > ## How It's Stored
