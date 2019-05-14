@@ -5,11 +5,12 @@ exercises: 0
 questions:
 - "How can I run Python programs?"
 objectives:
-- "Launch the JupyterLab server, create a new Python program or Jupyter notebook, save your work, and exit the JupyterLab server."
+- "Launch the JupyterLab server, create a new Python script and Jupyter notebook, save your work, and exit the JupyterLab server."
+- "Understand the difference between a Python script and a Jupyter notebook."
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
-- "Python programs are plain text files."
+- "Python scripts are plain text files."
 - "Use the Jupyter Notebook for editing and running Python."
 - "The Notebook has Command and Edit modes."
 - "Use the keyboard and mouse to select and edit cells."
@@ -65,7 +66,8 @@ A screenshot of the default Menu Bar is provided below.
 
 ### Left Sidebar
 
-The left sidebar contains a number of commonly-used tabs, such as a file browser, a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area.
+The left sidebar contains a number of commonly-used tabs, such as a file browser, a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of the default Left Side Bar is provided below.
+
 
 ![JupyterLab Left Side Bar](../fig/0_jupyterlab_left_side_bar.png)
 
@@ -73,35 +75,26 @@ The left sidebar can be collapsed or expanded by selecting â€œShow Left Sidebarâ
 
 ### Main Work Area
 
+The main work area in JupyterLab enables you to arrange documents (notebooks, text files, etc.) and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or subdivided. A screenshot of the default Menu Bar is provided below.
+
 ![JupyterLab Main Work Area](../fig/0_jupyterlab_main_work_area.png)
 
-## Creating a Python Program
+Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current activity. The tab for the current activity is marked with a colored top border (blue by default).
 
-### Python programs are plain text files.
+## Creating a Python script
 
-*   They have the `.py` extension to let everyone (including the operating system) 
-    know it is a Python program.
+*   To start writing a new Python program click the Text File icon under the *Other* header in the Launcher tab of the Main Work Area.
+    *   You can also create a new plain text file by selecting the *New -> Text File* from the *File* menu in the Menu Bar.
+*   To convert this plain text file to a Python program, select the *Save File As* action from the *File* menu in the Menu Bar and give your new text file a name that ends with the `.py` extension.
+    *   The `.py` extension lets everyone (including the operating system) know that this text file is a Python program.
     *   This is convention, not a requirement.
 
 ## Creating a Jupyter Notebook
 
-*   While it's common to write Python programs using a text editor, we are going to use
-    the [Jupyter Notebook][jupyter] because the Notebook provides code completion 
-    and other helpful features.
-*   To open a new notebook click the Python 3 icon under the Notebook header in the Launcher tab in the main work area. 
+*   To open a new notebook click the Python 3 icon under the *Notebook* header in the Launcher tab in the main work area. 
+    *   You can also create a new notebook by selecting *New -> Notebook* from the *File* menu in the Menu Bar.
 *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
-    *   Can export as "pure Python" to run from the command line.
-
-### Use the Jupyter Notebook for editing and running Python.
-
-*   This has several advantages:
-    *   You can easily type, edit, and copy and paste blocks of code.
-    *   Tab complete allows you to easily access the names of things you are using
-        and learn more about them.
-    *   It allows you to annotate your code with links, different sized text, bullets, etc.
-        to make it more accessible to you and your collaborators.
-    *   It allows you to display figures next to the code that produces them
-        to tell a complete story of the analysis.
+    *   Notebooks can be exported as Python scripts that can be run from the command line.
 
 ![Example Jupyter Notebook](../fig/0_jupyter_notebook_example.jpg)  
 *Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
@@ -112,6 +105,29 @@ The left sidebar can be collapsed or expanded by selecting â€œShow Left Sidebarâ
 > *   Just like a webpage, what's saved looks different from what you see in your browser.
 > *   But this format allows Jupyter to mix source code, text, and images, all in one file.
 {: .callout}
+
+> ## Arranging Documents into Panels of Tabs
+>
+> In the JupyterLab Main Work Area you can arrange documents into panels of tabs. First, create a text file, Python console, and terminal window and arrange then into three panels in the main work area. Next, create a notebook, terminal window, and text file and arrange then into three panels in the main work area. Finally, create your own combination of panels and tabs. What combination of panels and tabs do you think will be most useful for your workflow?
+>
+> > ## Solution
+> >
+> >  After creating the necessary tabs, you can drag one of the tabs to the center of a panel to move the tab to the panel; next you can subdivide a tab panel by dragging a tab to the left, right, top, or bottom of the panel.
+> >
+> {: .solution}
+{: .challenge}
+
+## Use the Jupyter Notebook for editing and running Python.
+
+*   While it's common to write Python scripts using a text editor, we are going to use the [Jupyter Notebook][jupyter] for the remainder of this workshop.
+*   This has several advantages:
+    *   You can easily type, edit, and copy and paste blocks of code.
+    *   Tab complete allows you to easily access the names of things you are using
+        and learn more about them.
+    *   It allows you to annotate your code with links, different sized text, bullets, etc.
+        to make it more accessible to you and your collaborators.
+    *   It allows you to display figures next to the code that produces them
+        to tell a complete story of the analysis.
 
 ### The Notebook has Command and Edit modes.
 
