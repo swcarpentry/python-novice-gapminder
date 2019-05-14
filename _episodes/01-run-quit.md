@@ -36,19 +36,23 @@ keypoints:
 *   This will start the JupyterLab server and open your default web browser.
 *   The server runs locally on your machine only and does not use an internet connection.
 
-## Python programs are plain text files.
+## Creating a Python Program
+
+### Python programs are plain text files.
 
 *   They have the `.py` extension to let everyone (including the operating system) 
     know it is a Python program.
     *   This is convention, not a requirement.
-*   It's common to write them using a text editor but we are going to use
-    the [Jupyter Notebook][jupyter].
-*   The bit of extra setup is well worth it because the Notebook provides code completion 
+
+## Creating a Jupyter Notebook
+
+*   While it's common to write Python programs using a text editor, we are going to use
+    the [Jupyter Notebook][jupyter] because the Notebook provides code completion 
     and other helpful features.
 *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
     *   Can export as "pure Python" to run from the command line.
 
-## Use the Jupyter Notebook for editing and running Python.
+### Use the Jupyter Notebook for editing and running Python.
 
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
@@ -72,7 +76,7 @@ keypoints:
 > *   But this format allows Jupyter to mix source code, text, and images, all in one file.
 {: .callout}
 
-## The Notebook has Command and Edit modes.
+### The Notebook has Command and Edit modes.
 
 *   Open a new notebook from the dropdown menu (that says 'New') in the top right corner of the file browser page.
 *   Each notebook contains one or more cells that contain code, text, or images.
@@ -118,7 +122,7 @@ keypoints:
 > {: .solution}
 {: .challenge}
 
-## Use the keyboard and mouse to select and edit cells.
+### Use the keyboard and mouse to select and edit cells.
 
 *   Pressing the <kbd>Return</kbd> key turns the border green and engages Edit mode,
     which allows you to type within the cell.
@@ -129,7 +133,7 @@ keypoints:
 *   Notice that the <kbd>Return</kbd> and <kbd>Shift</kbd> keys on the 
     right of the keyboard are right next to each other.
 
-## The Notebook will turn Markdown into pretty-printed documentation.
+### The Notebook will turn Markdown into pretty-printed documentation.
 
 *   Notebooks can also render [Markdown][markdown].
     *   A simple plain-text format for writing lists, links, 
@@ -142,7 +146,7 @@ keypoints:
 *   Turn the current cell into a Code cell
     by entering the Command mode (<kbd>Esc</kbd>/gray) and press the <kbd>Y</kbd> key.
 
-## Markdown does most of what HTML does.
+### Markdown does most of what HTML does.
 
 <div class="row">
   <div class="col-md-6" markdown="1">
@@ -359,6 +363,22 @@ Or use [named links][data_carpentry].
 > {: .solution}
 {: .challenge}
 
+## Closing JupyterLab
+
+*   From the Menu Bar select the "File" menu and the choose "Quit". You will be prompted to confirm that you wish to shutdown the JupyterLab server (dont't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
+*   To restart the JupyterLab server you will need to re-run the following command from a shell.
+
+~~~
+$ jupyter lab
+~~~
+
+> ## Closing JupyerLab
+>
+> Practice closing and restarting the JupyterLab server.
+> 
+{: .challenge}
+
 [anaconda]: https://docs.continuum.io/anaconda/install
 [jupyter]: http://jupyter.org/
 [markdown]: https://en.wikipedia.org/wiki/Markdown
+
