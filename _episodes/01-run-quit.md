@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "How can I run Python programs?"
 objectives:
-- "Launch the Jupyter Notebook, create new notebooks, and exit the Notebook."
+- "Launch the JupyterLab server, create a new Python program or Jupyter notebook, save your work, and exit the JupyterLab server."
 - "Create Markdown cells in a notebook."
 - "Create and run Python cells in a notebook."
 keypoints:
@@ -16,6 +16,26 @@ keypoints:
 - "The Notebook will turn Markdown into pretty-printed documentation."
 - "Markdown does most of what HTML does."
 ---
+## Installing JupyterLab 
+*   The [Anaconda package manager][anaconda] is an automated way to install JupyterLab.
+    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
+*   Once you have installed Anaconda, then open a shell and run the following command to install JupyerLab and all of its necessary dependencies.
+
+  ~~~
+  $ conda install -c conda-forge jupyterlab
+  ~~~
+
+## Starting JupyterLab
+
+*   Once you have installed JupyterLab, you can start JupyterLab by opening a shell and typing the following command.
+
+  ~~~
+  $ jupyter lab
+  ~~~
+
+*   This will start the JupyterLab server and open your default web browser.
+*   The server runs locally on your machine only and does not use an internet connection.
+
 ## Python programs are plain text files.
 
 *   They have the `.py` extension to let everyone (including the operating system) 
@@ -30,17 +50,6 @@ keypoints:
 
 ## Use the Jupyter Notebook for editing and running Python.
 
-*   The [Anaconda package manager][anaconda] is an automated way to install the Jupyter notebook.
-    *   See [the setup instructions]({{ page.root }}/setup/) for Anaconda installation instructions.
-*   It also installs all the extra libraries it needs to run.
-*   Once you have installed Python and the Jupyter Notebook requirements, open a shell and type:
-
-    ~~~
-    $ jupyter notebook
-    ~~~
-
-*   This will start a Jupyter Notebook server and open your default web browser. 
-*   The server runs locally on your machine only and does not use an internet connection.
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
 *   You can type code into the browser and see the result when the web page talks to the server.
