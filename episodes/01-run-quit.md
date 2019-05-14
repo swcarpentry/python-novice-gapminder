@@ -135,12 +135,16 @@ Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide 
 
 > ## Code vs. Text
 >
-> We often use the term "code" to mean
-> "the source code of software written in a language such as Python". 
+> Jupyter mixes code and text in different types of blocks, called cells. We often use the term
+> "code" to mean "the source code of software written in a language such as Python".
 > A "code cell" in a Notebook is a cell that contains software;
 > a "text cell" is one that contains ordinary prose written for human beings.
 {: .callout}
 
+## The Notebook has Command and Edit modes.
+
+*   Open a new notebook from the dropdown menu (that says 'New') in the top right corner of the file browser page.
+*   Each notebook contains one or more cells that contain code, text, or images.
 *   If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately,
     the outer border of your code cell will change from gray/blue to green.
     *   The difference in color is subtle.
