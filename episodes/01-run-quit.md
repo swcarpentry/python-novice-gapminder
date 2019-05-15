@@ -40,7 +40,7 @@ keypoints:
 *   The server sends messages to your browser.
 *   The server does the work and the web browser renders the notebook.
 *   You will type code into the browser and see the result when the web page talks to the server.
-*   Below is a screenshot of the JupyterLab landing page that should open in your default wbe browser after you start the JupyterLab server.
+*   Below is a screenshot of a similar JupyterLab landing page to the one that should open in your default web browser after starting the JupyterLab server.
 
 <center>
     <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
@@ -73,7 +73,7 @@ A screenshot of the default Menu Bar is provided below.
 
 ### Left Sidebar
 
-The left sidebar contains a number of commonly-used tabs, such as a file browser, a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of the default Left Side Bar is provided below.
+The left sidebar contains a number of commonly-used tabs, such as a file browser (showing the contents of the directory in which the JupyterLab server was launched!), a list of running kernels and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of the default Left Side Bar is provided below.
 
 <center>
     <img alt="JupyterLab Left Side Bar" src="../fig/0_jupyterlab_left_side_bar.png" width="250"/>
@@ -447,4 +447,3 @@ $ jupyter lab
 [anaconda]: https://docs.continuum.io/anaconda/install
 [jupyter]: http://jupyter.org/
 [markdown]: https://en.wikipedia.org/wiki/Markdown
-
