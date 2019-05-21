@@ -80,7 +80,7 @@ NameError: name 'temperature' is not defined
 > 1. How many levels does the traceback have?
 > 2. What is the file name where the error occurred?
 > 3. What is the function name where the error occurred?
-> 4. On which line number in this function did the error occurr?
+> 4. On which line number in this function did the error occur?
 > 5. What is the type of error?
 > 6. What is the error message?
 >
