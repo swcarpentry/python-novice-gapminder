@@ -22,15 +22,17 @@ keypoints:
 ---
 
 ## Getting Started with JupyterLab
-We will teach Python using the [JupyterLab][jupyterlab], a programming environment that runs in a 
-web browser. Jupyter requires a reasonably up-to-date browser, preferably a current version of 
+
+We will teach Python using [JupyterLab][jupyterlab], a programming environment that runs in a 
+web browser. JupyterLab requires a reasonably up-to-date browser, preferably a current version of 
 Chrome, Safari, or Firefox (note that Internet Explorer version 9 and below are *not* supported).
 
 JupyterLab is included as part of the the Anaconda Python distribution. If you have not already 
 installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
 for installation instructions.
 
-JupyterLab server is an application whose frontend user interface runs in a web browser.
+JupyterLab is an application whose frontend user interface runs in a web browser.
+
 *   The server runs locally on your machine only and does not use an internet connection.
 *   The server sends messages to your web browser.
 *   The server does the work and the web browser renders the result.
