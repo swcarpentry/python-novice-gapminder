@@ -70,9 +70,9 @@ $ jupyter lab
 Below is a screenshot of a similar JupyterLab landing page to the one that should open in your 
 default web browser after starting the JupyterLab server on wither Mac OS X or Windows.
 
-<center>
-    <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
-</center>
+<p align='center'>
+  <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
+</p>
 
 ## The JupyterLab Interface
 
@@ -101,9 +101,9 @@ menus are included by default.
 
 A screenshot of the default Menu Bar is provided below.
 
-<center>
+<p align='center'>
     <img alt="JupyterLab Menu Bar" src="../fig/0_jupyterlab_menu_bar.png" width="750"/>
-</center>
+</p>
 
 ### Left Sidebar
 
@@ -112,9 +112,9 @@ contents of the directory in which the JupyterLab server was launched!), a list 
 and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of 
 the default Left Side Bar is provided below.
 
-<center>
+<p align='center'>
     <img alt="JupyterLab Left Side Bar" src="../fig/0_jupyterlab_left_side_bar.png" width="250"/>
-</center>
+</p>
 
 The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar” in the View menu or 
 by clicking on the active sidebar tab.
@@ -125,9 +125,9 @@ The main work area in JupyterLab enables you to arrange documents (notebooks, te
 and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or 
 subdivided. A screenshot of the default Menu Bar is provided below.
 
-<center>
+<p align='center'>
     <img alt="JupyterLab Main Work Area" src="../fig/0_jupyterlab_main_work_area.png" width="750"/>
-</center>
+</p>
 
 Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by 
 dragging a tab to the left, right, top, or bottom of the panel. The work area has a single current 
@@ -148,9 +148,9 @@ activity. The tab for the current activity is marked with a colored top border (
 *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
     *   Notebooks can be exported as Python scripts that can be run from the command line.
 
-<center>
+<p align='center'>
     <img alt="Example Jupyter Notebook" src="../fig/0_jupyter_notebook_example.jpg" width="750"/>
-</center>
+</p>
 
 *Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
