@@ -2,4 +2,4 @@ name: python-novice-gapminder
 
 dependencies:
   - python=3.7.*
-  - anaconda=5.3.*
+  - anaconda=5.3.1
