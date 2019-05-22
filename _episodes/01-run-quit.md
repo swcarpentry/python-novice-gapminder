@@ -27,9 +27,8 @@ While many software developers will often use an integrated development environm
 text editor to create and edit their Python programs we will be using [JupyterLab][jupyterlab] 
 during this lesson. 
 
-JupyterLab is a programming environment that runs in a web browser. JupyterLab requires a 
-reasonably up-to-date browser, preferably a current version of Chrome, Safari, or Firefox (note 
-that Internet Explorer version 9 and below are *not* supported).
+JupyterLab is a programming environment developed as part of the [Jupyter](jupyter) project that runs in a 
+web browser. JupyterLab requires a reasonably up-to-date browser, preferably a current version of Chrome, Safari, or Firefox (note that Internet Explorer version 9 and below are *not* supported).
 
 JupyterLab is included as part of the the Anaconda Python distribution. If you have not already 
 installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
@@ -490,4 +489,5 @@ $ jupyter lab
 
 [anaconda]: https://docs.continuum.io/anaconda/install
 [jupyter]: http://jupyter.org/
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [markdown]: https://en.wikipedia.org/wiki/Markdown
