@@ -76,9 +76,8 @@ default web browser after starting the JupyterLab server on wither Mac OS X or W
 
 ## The JupyterLab Interface
 
-JupyterLab provides flexible building blocks for interactive, exploratory computing. While 
-JupyterLab has many features found in traditional integrated development environments (IDEs), it 
-remains focused on interactive, exploratory computing.
+JupyterLab has many features found in traditional integrated development environments (IDEs) but 
+is focused on providing flexible building blocks for interactive, exploratory computing.
 
 The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) 
 consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs 
