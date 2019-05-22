@@ -1,0 +1,4 @@
+name: python-novice-gapminder
+
+dependencies:
+  - anaconda=5.3.*
