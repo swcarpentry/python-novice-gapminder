@@ -46,7 +46,7 @@ keypoints:
 *   You can type code into the browser and see the result when the web page talks to the server.
 *   This has several advantages:
     *   You can easily type, edit, and copy and paste blocks of code.
-    *   Tab complete allows you to easily access the names of things you are using
+    *   Tab completion allows you to easily access the names of things you are using
         and learn more about them.
     *   It allows you to annotate your code with links, different sized text, bullets, etc.
         to make it more accessible to you and your collaborators.
@@ -100,7 +100,7 @@ keypoints:
 >
 > > ## Solution
 > >
-> > Command mode has a grey boarder and Edit mode has a green border. 
+> > Command mode has a grey border and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>B</kbd> or <kbd>A</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is green).  Type <kbd>X</kbd>.
