@@ -162,16 +162,20 @@ activity. The tab for the current activity is marked with a colored top border (
 
 ## Creating a Jupyter Notebook
 
-*   To open a new notebook click the Python 3 icon under the *Notebook* header in the Launcher tab in the main work area. 
-    *   You can also create a new notebook by selecting *New -> Notebook* from the *File* menu in the Menu Bar.
-*   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
-    *   Notebooks can be exported as Python scripts that can be run from the command line.
+To open a new notebook click the Python 3 icon under the *Notebook* header in the Launcher tab in 
+the main work area. You can also create a new notebook by selecting *New -> Notebook* from the *File* menu in the Menu Bar.
+
+Couple of additional notes on Jupyter notebooks.
+
+  *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
+  *   Notebooks can be exported as Python scripts that can be run from the command line.
+
+Below is a screenshot of a Jupyter notebook running inside JupyterLab. If you are interested in 
+more details, then see the [official notebook documentation][jupyterlab-notebook-docs].
 
 <p align='center'>
-    <img alt="Example Jupyter Notebook" src="../fig/0_jupyter_notebook_example.jpg" width="750"/>
+    <img alt="Example Jupyter Notebook" src="../fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
 </p>
-
-*Screenshot of a [Jupyter Notebook on quantum mechanics](https://github.com/jrjohansson/qutip-lectures) by Robert Johansson*
 
 > ## How It's Stored
 >
@@ -182,11 +186,18 @@ activity. The tab for the current activity is marked with a colored top border (
 
 > ## Arranging Documents into Panels of Tabs
 >
-> In the JupyterLab Main Work Area you can arrange documents into panels of tabs. First, create a 
-> text file, Python console, and terminal window and arrange then into three panels in the main 
-> work area. Next, create a notebook, terminal window, and text file and arrange then into three 
-> panels in the main work area. Finally, create your own combination of panels and tabs. What 
-> combination of panels and tabs do you think will be most useful for your workflow?
+> In the JupyterLab Main Work Area you can arrange documents into panels of tabs. Here is an 
+> example from the official documentation.
+> 
+> <p align='center'>
+>    <img alt="Multi-panel JupyterLab" src="../fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
+> </p>
+>
+> First, create a text file, Python console, and terminal window and arrange then into three 
+> panels in the main work area. Next, create a notebook, terminal window, and text file and 
+> arrange then into three panels in the main work area. Finally, create your own combination of 
+> panels and tabs. What combination of panels and tabs do you think will be most useful for your 
+> workflow?
 >
 > > ## Solution
 > >
@@ -508,4 +519,5 @@ $ jupyter lab
 [jupyter]: http://jupyter.org/
 [jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
+[jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
 [markdown]: https://en.wikipedia.org/wiki/Markdown
