@@ -187,7 +187,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > ## Arranging Documents into Panels of Tabs
 >
 > In the JupyterLab Main Work Area you can arrange documents into panels of tabs. Here is an 
-> example from the official documentation.
+> example from the [official documentation][jupyterlab].
 > 
 > <p align='center'>
 >    <img alt="Multi-panel JupyterLab" src="../fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
