@@ -27,17 +27,15 @@ While many software developers will often use an integrated development environm
 text editor to create and edit their Python programs we will be using [JupyterLab][jupyterlab] 
 during this lesson. 
 
-JupyterLab is the next-generation web-based user interface from [Project Jupyter][jupyter]. 
-JupyterLab enables you to work with documents and activities such as Jupyter notebooks, text 
-editors, terminals, and even custom components in a flexible, integrated, and extensible manner. 
+JupyterLab is an application with a web-based user interface from [Project Jupyter][jupyter] that 
+enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
+and even custom components in a flexible, integrated, and extensible manner. JupyterLab requires a
+reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
+Explorer versions 9 and below are *not* supported.
 
 JupyterLab is included as part of the the Anaconda Python distribution. If you have not already 
 installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
 for installation instructions.
-
-JupyterLab is an application whose frontend user interface runs in a web browser and as such 
-JupyterLab requires a reasonably up-to-date browser (ideally a current version of Chrome, 
-Safari, or Firefox); Internet Explorer versions 9 and below are *not* supported.
 
 Even though JupyterLab is a web-based application, JupyterLab runs locally on your machine and 
 does not require an internet connection.
@@ -46,15 +44,15 @@ does not require an internet connection.
 *   You will type code into the browser and see the result when the web page talks to the 
     JupyterLab server.
 
-> ## JupyterLab? What about Jupyter notebooks!
+> ## JupyterLab? What about Jupyter notebooks?
 > 
-> JupyterLab is the next stage in the evolution of the Jupyter Notebook. If you have prior 
+> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview). If you have prior 
 > experience working with Jupyter notebooks, then you will have a a good idea of what to expect 
 > from JupyterLab. 
 > 
-> If you are an experienced user of Jupyter notebooks and are intested in a detailed discussion of the 
-> similarities and differences between JupyterLab user interface and the Jupyter notebook user 
-> interface check out the [JupyterLab user interface documentation][jupyterlab-ui].
+> Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
+> between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
+> [JupyterLab user interface documentation][jupyterlab-ui].
 >
 {: .callout}
 
