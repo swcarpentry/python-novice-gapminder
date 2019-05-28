@@ -298,7 +298,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > One possibility to save the figure to file is then to
 >
 > * save a reference to the current figure in a local variable (with `plt.gcf`) 
-> * call the `savefig` class method from that varible.
+> * call the `savefig` class method from that variable.
 >
 > ~~~
 > fig = plt.gcf() # get current figure

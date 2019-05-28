@@ -139,7 +139,7 @@ for filename in glob.glob(*.txt):
 ```
 
 ## [Writing Functions]({{ page.root }}/14-writing-functions/)
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the funciton is executed.
+- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
 - Run by using `function_name(parameters)`.
 - To return a result to the caller use `return ...` in the function.
 
@@ -182,7 +182,7 @@ for m in [3, 6, 7, 2, 8]:
 - Document your code.
 - Use clear and meaningful variable names.
 - Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.
-- Use assertions to check for interal errors.
+- Use assertions to check for internal errors.
 - Use docstrings to provide help.
 
 ## Glossary
@@ -201,7 +201,7 @@ DataFrame
 :     The way Pandas represents a table; a collection of series.
 
 Element
-:     An item in a list or an array. For a string, these are the individual charactors.
+:     An item in a list or an array. For a string, these are the individual characters.
 
 Function
 :     A block of code that can be called and re-used elsewhere.

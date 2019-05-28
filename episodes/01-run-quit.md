@@ -163,7 +163,7 @@ activity. The tab for the current activity is marked with a colored top border (
 To open a new notebook click the Python 3 icon under the *Notebook* header in the Launcher tab in 
 the main work area. You can also create a new notebook by selecting *New -> Notebook* from the *File* menu in the Menu Bar.
 
-Couple of additional notes on Jupyter notebooks.
+Additional notes on Jupyter notebooks.
 
   *   Notebook files have the extension `.ipynb` to distinguish them from plain-text Python programs.
   *   Notebooks can be exported as Python scripts that can be run from the command line.
@@ -248,7 +248,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 >
 > > ## Solution
 > >
-> > Command mode has a grey boarder and Edit mode has a green border. 
+> > Command mode has a grey border and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>B</kbd> or <kbd>A</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>X</kbd>.
