@@ -85,6 +85,7 @@ exclude:
   - Makefile
   - bin/
   - .Rproj.user/
+  - gems/
 
 # Turn on built-in syntax highlighting.
 highlighter: rouge
