@@ -1,0 +1,3 @@
+ruby-full
+build-essential
+zlib1g-dev
