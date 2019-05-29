@@ -9,4 +9,7 @@ gem install jekyll -v 3.7.3
 gem install bundler
 
 # build the lesson website
+echo $PWD
+ls
+cat _config.yml
 make site
