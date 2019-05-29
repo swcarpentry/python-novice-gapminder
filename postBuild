@@ -2,14 +2,12 @@
 
 # install gems without needing root
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+export PATH="$GEM_HOME/bin:$PATH"
 
 # install Jekyll
 gem install jekyll -v 3.7.3
 gem install bundler
 
 # build the lesson website
-echo $PWD
-ls
-cat _config.yml
+ls gems
 make site
