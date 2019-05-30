@@ -79,7 +79,7 @@ NameError: name 'last_name' is not defined
 {: .error}
 
 *   The last line of an error message is usually the most informative.
-*   We will look at error messages in detail [later]({{ page.root }}/15-scope/#reading-error-messages).
+*   We will look at error messages in detail [later]({% link _episodes/15-scope.md %}/#reading-error-messages).
 
 > ## Variables Persist Between Cells
 >
