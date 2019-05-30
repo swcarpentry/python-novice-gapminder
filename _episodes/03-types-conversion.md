@@ -136,6 +136,17 @@ TypeError: object of type 'int' has no len()
 ~~~
 {: .error}
 
+*  You also can't get a digit from a number by index as you could with a string representation of a number 
+~~~
+test_num = 52
+print(test_num[0])
+~~~
+{: .language-python}
+~~~
+==========
+~~~
+{: .output}
+
 ## Must convert numbers to strings or vice versa when operating on them.
 
 *   Cannot add numbers and strings.
