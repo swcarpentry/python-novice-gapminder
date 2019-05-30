@@ -143,9 +143,14 @@ print(test_num[0])
 ~~~
 {: .language-python}
 ~~~
-==========
+TypeError                                 Traceback (most recent call last)
+<ipython-input-1-3cccc3fe7a58> in <module>
+      1 test_num = 52
+----> 2 print(test_num[0])
+
+TypeError: 'int' object is not subscriptable
 ~~~
-{: .output}
+{: .error}
 
 ## Must convert numbers to strings or vice versa when operating on them.
 
