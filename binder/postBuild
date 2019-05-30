@@ -10,3 +10,6 @@ gem install jekyll -v 3.7.3
 # build the lesson website
 ls gems
 make site
+
+# install jupyterlab_html extension
+jupyter labextension install @mflevine/jupyterlab_html
