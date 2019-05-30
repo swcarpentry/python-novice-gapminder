@@ -267,7 +267,7 @@ first is 2 and second is 5
 > > 2. Floating point, since fractional days are required
 > > 3. Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals
 > > 4. This will vary! How do you define a specimen's age? whole days since collection (integer)? date and time (string)?
-> > 5. Choose floating point to represent population as large aggreates (eg millions), or integer to represent population in units of individuals.
+> > 5. Choose floating point to represent population as large aggregates (eg millions), or integer to represent population in units of individuals.
 > > 6. Floating point number, since an average is likely to have a fractional part.
 > >
 > > {: .output}
