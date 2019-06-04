@@ -182,7 +182,7 @@ SyntaxError: unexpected EOF while parsing
 *   Next is the problematic line of code,
     indicating the problem with a `^` pointer.
 
-## Python reports a runtime error when something goes wrong while a program is executing.
+## <a name='runtime-error'></a> Python reports a runtime error when something goes wrong while a program is executing.
 
 ~~~
 age = 53
