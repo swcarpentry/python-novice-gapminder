@@ -136,7 +136,7 @@ TypeError: object of type 'int' has no len()
 ~~~
 {: .error}
 
-## Must convert numbers to strings or vice versa when operating on them.
+## <a name='convert-numbers-and-strings'></a> Must convert numbers to strings or vice versa when operating on them.
 
 *   Cannot add numbers and strings.
 
