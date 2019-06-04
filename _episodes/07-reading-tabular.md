@@ -62,7 +62,7 @@ print(data)
 > which is why the path to the file is `data/gapminder_gdp_oceania.csv`.
 > If you forget to include `data/`,
 > or if you include it but your copy of the file is somewhere else,
-> you will get a [runtime error]({{ page.root }}/05-error-messages/)
+> you will get a [runtime error]({{ page.root }}/04-built-in/#runtime-error)
 > that ends with a line like this:
 >
 > ~~~
