@@ -20,7 +20,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial][video-windows]
 
-1. Open [https://www.anaconda.com/download][continuum-windows]
+1. Open [https://www.anaconda.com/download][anaconda-windows]
    with your web browser.
 
 2. Download the Python 3 installer for Windows.
@@ -31,7 +31,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Mac OS X - [Video tutorial][video-mac]
 
-1. Open [https://www.anaconda.com/download][continuum-mac]
+1. Open [https://www.anaconda.com/download][anaconda-mac]
    with your web browser.
 
 2. Download the Python 3 installer for OS X.
@@ -43,7 +43,7 @@ you are ready to go as soon as the workshop begins.
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [https://www.anaconda.com/download][continuum-linux] with your web browser.
+1.  Open [https://www.anaconda.com/download][anaconda-linux] with your web browser.
 
 2.  Download the Python 3 installer for Linux.
 
@@ -77,16 +77,15 @@ The data we will be using is taken from the [gapminder][gapminder] dataset.
 To obtain it, download and unzip the file 
 [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
 In order to follow the presented material, you should launch the JupyterLab 
-server in the root directory (see [Starting Python](#Starting-Python)).
+server in the root directory (see [Starting JupyterLab]({{ page.root }}/01-run-quit/#starting-jupyterlab)).
 
 
 [anaconda]: https://www.anaconda.com/
-[continuum-mac]: https://www.anaconda.com/download/#macos
-[continuum-linux]: https://www.anaconda.com/download/#linux
-[continuum-windows]: https://www.anaconda.com/download/#windows
+[anaconda-mac]: https://www.anaconda.com/download/#macos
+[anaconda-linux]: https://www.anaconda.com/download/#linux
+[anaconda-windows]: https://www.anaconda.com/download/#windows
 [gapminder]: http://gapminder.org
 [jupyter]: http://jupyter.org/
-[jupyter-install]: http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip
 [python]: https://python.org
 [video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
 [video-windows]: https://www.youtube.com/watch?v=xxQ0mzZ8UvA
