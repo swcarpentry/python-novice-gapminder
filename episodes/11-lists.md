@@ -185,7 +185,7 @@ TypeError: 'str' object does not support item assignment
 ## Indexing beyond the end of the collection is an error.
 
 *   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of [runtime error]({{ page.root }}/05-error-messages/).
+    *   This is a kind of [runtime error]({{ page.root }}/04-built-in/#runtime-error).
     *   Cannot be detected as the code is parsed
         because the index might be calculated based on data.
 
