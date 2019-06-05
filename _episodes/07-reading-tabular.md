@@ -27,6 +27,7 @@ keypoints:
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
 * In a jupyter notebook, use `display()` not `print()` to see view the output of a dataframe.
+
 ~~~
 import pandas as pd
 
