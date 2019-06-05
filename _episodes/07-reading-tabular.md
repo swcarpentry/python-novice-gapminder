@@ -26,7 +26,7 @@ keypoints:
 *   Read a Comma Separate Values (CSV) data file with `pd.read_csv`.
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
-
+* In a jupyter notebook, use `display()` not `print()` to see view the output of a dataframe.
 ~~~
 import pandas as pd
 
@@ -56,6 +56,70 @@ print(data)
 *   The columns in a dataframe are the observed variables, and the rows are the observations.
 *   Pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
 
+note that `print()` does not produce an output that makes it easy to view tabular data.
+If you are viewing this in a jupyter notebook, we recommend you use the `display()` function.
+~~~
+from IPython.display import display
+display(data)
+~~~
+{: .language-python}
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>gdpPercap_1952</th>
+      <th>gdpPercap_1957</th>
+      <th>gdpPercap_1962</th>
+      <th>gdpPercap_1967</th>
+      <th>gdpPercap_1972</th>
+      <th>gdpPercap_1977</th>
+      <th>gdpPercap_1982</th>
+      <th>gdpPercap_1987</th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_1997</th>
+      <th>gdpPercap_2002</th>
+      <th>gdpPercap_2007</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Australia</td>
+      <td>10039.59564</td>
+      <td>10949.64959</td>
+      <td>12217.22686</td>
+      <td>14526.12465</td>
+      <td>16788.62948</td>
+      <td>18334.19751</td>
+      <td>19477.00928</td>
+      <td>21888.88903</td>
+      <td>23424.76683</td>
+      <td>26997.93657</td>
+      <td>30687.75473</td>
+      <td>34435.36744</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>New Zealand</td>
+      <td>10556.57566</td>
+      <td>12247.39532</td>
+      <td>13175.67800</td>
+      <td>14463.91893</td>
+      <td>16046.03728</td>
+      <td>16233.71770</td>
+      <td>17632.41040</td>
+      <td>19007.19129</td>
+      <td>18363.32494</td>
+      <td>21050.41377</td>
+      <td>23189.80135</td>
+      <td>25185.00911</td>
+    </tr>
+  </tbody>
+</table>
+{: .output}
+
 > ## File Not Found
 >
 > Our lessons store their data files in a `data` sub-directory,
@@ -79,25 +143,75 @@ print(data)
 
 ~~~
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
-print(data)
+display(data)
 ~~~
 {: .language-python}
-~~~
-             gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
-country
-Australia       10039.59564     10949.64959     12217.22686     14526.12465
-New Zealand     10556.57566     12247.39532     13175.67800     14463.91893
-
-             gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
-country
-Australia       16788.62948     18334.19751     19477.00928     21888.88903
-New Zealand     16046.03728     16233.71770     17632.41040     19007.19129
-
-             gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007
-country
-Australia       23424.76683     26997.93657     30687.75473     34435.36744
-New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
-~~~
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdpPercap_1952</th>
+      <th>gdpPercap_1957</th>
+      <th>gdpPercap_1962</th>
+      <th>gdpPercap_1967</th>
+      <th>gdpPercap_1972</th>
+      <th>gdpPercap_1977</th>
+      <th>gdpPercap_1982</th>
+      <th>gdpPercap_1987</th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_1997</th>
+      <th>gdpPercap_2002</th>
+      <th>gdpPercap_2007</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Australia</th>
+      <td>10039.59564</td>
+      <td>10949.64959</td>
+      <td>12217.22686</td>
+      <td>14526.12465</td>
+      <td>16788.62948</td>
+      <td>18334.19751</td>
+      <td>19477.00928</td>
+      <td>21888.88903</td>
+      <td>23424.76683</td>
+      <td>26997.93657</td>
+      <td>30687.75473</td>
+      <td>34435.36744</td>
+    </tr>
+    <tr>
+      <th>New Zealand</th>
+      <td>10556.57566</td>
+      <td>12247.39532</td>
+      <td>13175.67800</td>
+      <td>14463.91893</td>
+      <td>16046.03728</td>
+      <td>16233.71770</td>
+      <td>17632.41040</td>
+      <td>19007.19129</td>
+      <td>18363.32494</td>
+      <td>21050.41377</td>
+      <td>23189.80135</td>
+      <td>25185.00911</td>
+    </tr>
+  </tbody>
+</table>
 {: .output}
 
 ## Use `DataFrame.info` to find out more about a dataframe.
@@ -141,7 +255,7 @@ memory usage: 208.0+ bytes
 *   Called a *member variable*, or just *member*.
 
 ~~~
-print(data.columns)
+display(data.columns)
 ~~~
 {: .language-python}
 ~~~
@@ -162,21 +276,77 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 print(data.T)
 ~~~
 {: .language-python}
-~~~
-country           Australia  New Zealand
-gdpPercap_1952  10039.59564  10556.57566
-gdpPercap_1957  10949.64959  12247.39532
-gdpPercap_1962  12217.22686  13175.67800
-gdpPercap_1967  14526.12465  14463.91893
-gdpPercap_1972  16788.62948  16046.03728
-gdpPercap_1977  18334.19751  16233.71770
-gdpPercap_1982  19477.00928  17632.41040
-gdpPercap_1987  21888.88903  19007.19129
-gdpPercap_1992  23424.76683  18363.32494
-gdpPercap_1997  26997.93657  21050.41377
-gdpPercap_2002  30687.75473  23189.80135
-gdpPercap_2007  34435.36744  25185.00911
-~~~
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>country</th>
+      <th>Australia</th>
+      <th>New Zealand</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>gdpPercap_1952</th>
+      <td>10039.59564</td>
+      <td>10556.57566</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1957</th>
+      <td>10949.64959</td>
+      <td>12247.39532</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1962</th>
+      <td>12217.22686</td>
+      <td>13175.67800</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1967</th>
+      <td>14526.12465</td>
+      <td>14463.91893</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1972</th>
+      <td>16788.62948</td>
+      <td>16046.03728</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1977</th>
+      <td>18334.19751</td>
+      <td>16233.71770</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1982</th>
+      <td>19477.00928</td>
+      <td>17632.41040</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1987</th>
+      <td>21888.88903</td>
+      <td>19007.19129</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1992</th>
+      <td>23424.76683</td>
+      <td>18363.32494</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_1997</th>
+      <td>26997.93657</td>
+      <td>21050.41377</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_2002</th>
+      <td>30687.75473</td>
+      <td>23189.80135</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_2007</th>
+      <td>34435.36744</td>
+      <td>25185.00911</td>
+    </tr>
+  </tbody>
+</table>
 {: .output}
 
 ## Use `DataFrame.describe` to get summary statistics about data.
@@ -184,40 +354,151 @@ gdpPercap_2007  34435.36744  25185.00911
 DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
 All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
-print(data.describe())
+display(data.describe())
 ~~~
 {: .language-python}
-~~~
-       gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
-count        2.000000        2.000000        2.000000        2.000000
-mean     10298.085650    11598.522455    12696.452430    14495.021790
-std        365.560078      917.644806      677.727301       43.986086
-min      10039.595640    10949.649590    12217.226860    14463.918930
-25%      10168.840645    11274.086022    12456.839645    14479.470360
-50%      10298.085650    11598.522455    12696.452430    14495.021790
-75%      10427.330655    11922.958888    12936.065215    14510.573220
-max      10556.575660    12247.395320    13175.678000    14526.124650
 
-       gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
-count         2.00000        2.000000        2.000000        2.000000
-mean      16417.33338    17283.957605    18554.709840    20448.040160
-std         525.09198     1485.263517     1304.328377     2037.668013
-min       16046.03728    16233.717700    17632.410400    19007.191290
-25%       16231.68533    16758.837652    18093.560120    19727.615725
-50%       16417.33338    17283.957605    18554.709840    20448.040160
-75%       16602.98143    17809.077557    19015.859560    21168.464595
-max       16788.62948    18334.197510    19477.009280    21888.889030
-
-       gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007
-count        2.000000        2.000000        2.000000        2.000000
-mean     20894.045885    24024.175170    26938.778040    29810.188275
-std       3578.979883     4205.533703     5301.853680     6540.991104
-min      18363.324940    21050.413770    23189.801350    25185.009110
-25%      19628.685413    22537.294470    25064.289695    27497.598692
-50%      20894.045885    24024.175170    26938.778040    29810.188275
-75%      22159.406358    25511.055870    28813.266385    32122.777857
-max      23424.766830    26997.936570    30687.754730    34435.367440
-~~~
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>gdpPercap_1952</th>
+      <th>gdpPercap_1957</th>
+      <th>gdpPercap_1962</th>
+      <th>gdpPercap_1967</th>
+      <th>gdpPercap_1972</th>
+      <th>gdpPercap_1977</th>
+      <th>gdpPercap_1982</th>
+      <th>gdpPercap_1987</th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_1997</th>
+      <th>gdpPercap_2002</th>
+      <th>gdpPercap_2007</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.00000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>10298.085650</td>
+      <td>11598.522455</td>
+      <td>12696.452430</td>
+      <td>14495.021790</td>
+      <td>16417.33338</td>
+      <td>17283.957605</td>
+      <td>18554.709840</td>
+      <td>20448.040160</td>
+      <td>20894.045885</td>
+      <td>24024.175170</td>
+      <td>26938.778040</td>
+      <td>29810.188275</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>365.560078</td>
+      <td>917.644806</td>
+      <td>677.727301</td>
+      <td>43.986086</td>
+      <td>525.09198</td>
+      <td>1485.263517</td>
+      <td>1304.328377</td>
+      <td>2037.668013</td>
+      <td>3578.979883</td>
+      <td>4205.533703</td>
+      <td>5301.853680</td>
+      <td>6540.991104</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>10039.595640</td>
+      <td>10949.649590</td>
+      <td>12217.226860</td>
+      <td>14463.918930</td>
+      <td>16046.03728</td>
+      <td>16233.717700</td>
+      <td>17632.410400</td>
+      <td>19007.191290</td>
+      <td>18363.324940</td>
+      <td>21050.413770</td>
+      <td>23189.801350</td>
+      <td>25185.009110</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>10168.840645</td>
+      <td>11274.086022</td>
+      <td>12456.839645</td>
+      <td>14479.470360</td>
+      <td>16231.68533</td>
+      <td>16758.837652</td>
+      <td>18093.560120</td>
+      <td>19727.615725</td>
+      <td>19628.685413</td>
+      <td>22537.294470</td>
+      <td>25064.289695</td>
+      <td>27497.598692</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>10298.085650</td>
+      <td>11598.522455</td>
+      <td>12696.452430</td>
+      <td>14495.021790</td>
+      <td>16417.33338</td>
+      <td>17283.957605</td>
+      <td>18554.709840</td>
+      <td>20448.040160</td>
+      <td>20894.045885</td>
+      <td>24024.175170</td>
+      <td>26938.778040</td>
+      <td>29810.188275</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>10427.330655</td>
+      <td>11922.958888</td>
+      <td>12936.065215</td>
+      <td>14510.573220</td>
+      <td>16602.98143</td>
+      <td>17809.077557</td>
+      <td>19015.859560</td>
+      <td>21168.464595</td>
+      <td>22159.406358</td>
+      <td>25511.055870</td>
+      <td>28813.266385</td>
+      <td>32122.777857</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>10556.575660</td>
+      <td>12247.395320</td>
+      <td>13175.678000</td>
+      <td>14526.124650</td>
+      <td>16788.62948</td>
+      <td>18334.197510</td>
+      <td>19477.009280</td>
+      <td>21888.889030</td>
+      <td>23424.766830</td>
+      <td>26997.936570</td>
+      <td>30687.754730</td>
+      <td>34435.367440</td>
+    </tr>
+  </tbody>
+</table>
 {: .output}
 
 *   Not particularly useful with just two records,
@@ -259,36 +540,98 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >
 > > ~~~
 > > americas.head(n=3)
-> > ~~~
+> > 
 > >{: .language-python}
 > > 
 > > The output is then
-> > ~~~
-> >          continent  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
-> >country                                                               
-> >Argentina  Americas     5911.315053     6856.856212     7133.166023   
-> >Bolivia    Americas     2677.326347     2127.686326     2180.972546   
-> >Brazil     Americas     2108.944355     2487.365989     3336.585802   
-> >
-> >           gdpPercap_1967  gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  \
-> >country                                                                     
-> >Argentina     8052.953021     9443.038526    10079.026740     8997.897412   
-> >Bolivia       2586.886053     2980.331339     3548.097832     3156.510452   
-> >Brazil        3429.864357     4985.711467     6660.118654     7030.835878   
-> >
-> >           gdpPercap_1987  gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  \
-> >country                                                                     
-> >Argentina     9139.671389     9308.418710    10967.281950     8797.640716   
-> >Bolivia       2753.691490     2961.699694     3326.143191     3413.262690   
-> >Brazil        7807.095818     6950.283021     7957.980824     8131.212843   
-> >
-> >           gdpPercap_2007  
-> >country                    
-> >Argentina    12779.379640  
-> >Bolivia       3822.137084  
-> >Brazil        9065.800825 
-> > ~~~ 
-> >{: .output}
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>continent</th>
+      <th>gdpPercap_1952</th>
+      <th>gdpPercap_1957</th>
+      <th>gdpPercap_1962</th>
+      <th>gdpPercap_1967</th>
+      <th>gdpPercap_1972</th>
+      <th>gdpPercap_1977</th>
+      <th>gdpPercap_1982</th>
+      <th>gdpPercap_1987</th>
+      <th>gdpPercap_1992</th>
+      <th>gdpPercap_1997</th>
+      <th>gdpPercap_2002</th>
+      <th>gdpPercap_2007</th>
+    </tr>
+    <tr>
+      <th>country</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Argentina</th>
+      <td>Americas</td>
+      <td>5911.315053</td>
+      <td>6856.856212</td>
+      <td>7133.166023</td>
+      <td>8052.953021</td>
+      <td>9443.038526</td>
+      <td>10079.026740</td>
+      <td>8997.897412</td>
+      <td>9139.671389</td>
+      <td>9308.418710</td>
+      <td>10967.281950</td>
+      <td>8797.640716</td>
+      <td>12779.379640</td>
+    </tr>
+    <tr>
+      <th>Bolivia</th>
+      <td>Americas</td>
+      <td>2677.326347</td>
+      <td>2127.686326</td>
+      <td>2180.972546</td>
+      <td>2586.886053</td>
+      <td>2980.331339</td>
+      <td>3548.097832</td>
+      <td>3156.510452</td>
+      <td>2753.691490</td>
+      <td>2961.699694</td>
+      <td>3326.143191</td>
+      <td>3413.262690</td>
+      <td>3822.137084</td>
+    </tr>
+    <tr>
+      <th>Brazil</th>
+      <td>Americas</td>
+      <td>2108.944355</td>
+      <td>2487.365989</td>
+      <td>3336.585802</td>
+      <td>3429.864357</td>
+      <td>4985.711467</td>
+      <td>6660.118654</td>
+      <td>7030.835878</td>
+      <td>7807.095818</td>
+      <td>6950.283021</td>
+      <td>7957.980824</td>
+      <td>8131.212843</td>
+      <td>9065.800825</td>
+    </tr>
+  </tbody>
+</table>
+{: .output}
+>
 > > 2. To check out the last three rows of `americas`, we would use the command, `americas.tail(n=3)`,
 > > analogous to `head()` used above. However, here we want to look at the last three columns so we need
 > > to change our view and then use `tail()`. To do so, we create a new DataFrame in which rows and 
@@ -305,28 +648,127 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > ~~~
 > >{: .language-python}
 > > The output is then
-> > ~~~
-> > country        Argentina  Bolivia   Brazil   Canada    Chile Colombia  \
-> > gdpPercap_1997   10967.3  3326.14  7957.98  28954.9  10118.1  6117.36   
-> > gdpPercap_2002   8797.64  3413.26  8131.21    33329  10778.8  5755.26   
-> > gdpPercap_2007   12779.4  3822.14   9065.8  36319.2  13171.6  7006.58   
-> > 
-> > country        Costa Rica     Cuba Dominican Republic  Ecuador    ...     \
-> > gdpPercap_1997    6677.05  5431.99             3614.1  7429.46    ...      
-> > gdpPercap_2002    7723.45  6340.65            4563.81  5773.04    ...      
-> > gdpPercap_2007    9645.06   8948.1            6025.37  6873.26    ...      
-> > 
-> > country          Mexico Nicaragua   Panama Paraguay     Peru Puerto Rico  \
-> > gdpPercap_1997   9767.3   2253.02  7113.69   4247.4  5838.35     16999.4   
-> > gdpPercap_2002  10742.4   2474.55  7356.03  3783.67  5909.02     18855.6   
-> > gdpPercap_2007  11977.6   2749.32  9809.19  4172.84  7408.91     19328.7   
-> > 
-> > country        Trinidad and Tobago United States  Uruguay Venezuela  
-> > gdpPercap_1997             8792.57       35767.4  9230.24   10165.5  
-> > gdpPercap_2002             11460.6       39097.1     7727   8605.05  
-> > gdpPercap_2007             18008.5       42951.7  10611.5   11415.8  
-> > ~~~ 
-> >{: .output}
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>country</th>
+      <th>Argentina</th>
+      <th>Bolivia</th>
+      <th>Brazil</th>
+      <th>Canada</th>
+      <th>Chile</th>
+      <th>Colombia</th>
+      <th>Costa Rica</th>
+      <th>Cuba</th>
+      <th>Dominican Republic</th>
+      <th>Ecuador</th>
+      <th>El Salvador</th>
+      <th>Guatemala</th>
+      <th>Haiti</th>
+      <th>Honduras</th>
+      <th>Jamaica</th>
+      <th>Mexico</th>
+      <th>Nicaragua</th>
+      <th>Panama</th>
+      <th>Paraguay</th>
+      <th>Peru</th>
+      <th>Puerto Rico</th>
+      <th>Trinidad and Tobago</th>
+      <th>United States</th>
+      <th>Uruguay</th>
+      <th>Venezuela</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>gdpPercap_1997</th>
+      <td>10967.3</td>
+      <td>3326.14</td>
+      <td>7957.98</td>
+      <td>28954.9</td>
+      <td>10118.1</td>
+      <td>6117.36</td>
+      <td>6677.05</td>
+      <td>5431.99</td>
+      <td>3614.1</td>
+      <td>7429.46</td>
+      <td>5154.83</td>
+      <td>4684.31</td>
+      <td>1341.73</td>
+      <td>3160.45</td>
+      <td>7121.92</td>
+      <td>9767.3</td>
+      <td>2253.02</td>
+      <td>7113.69</td>
+      <td>4247.4</td>
+      <td>5838.35</td>
+      <td>16999.4</td>
+      <td>8792.57</td>
+      <td>35767.4</td>
+      <td>9230.24</td>
+      <td>10165.5</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_2002</th>
+      <td>8797.64</td>
+      <td>3413.26</td>
+      <td>8131.21</td>
+      <td>33329</td>
+      <td>10778.8</td>
+      <td>5755.26</td>
+      <td>7723.45</td>
+      <td>6340.65</td>
+      <td>4563.81</td>
+      <td>5773.04</td>
+      <td>5351.57</td>
+      <td>4858.35</td>
+      <td>1270.36</td>
+      <td>3099.73</td>
+      <td>6994.77</td>
+      <td>10742.4</td>
+      <td>2474.55</td>
+      <td>7356.03</td>
+      <td>3783.67</td>
+      <td>5909.02</td>
+      <td>18855.6</td>
+      <td>11460.6</td>
+      <td>39097.1</td>
+      <td>7727</td>
+      <td>8605.05</td>
+    </tr>
+    <tr>
+      <th>gdpPercap_2007</th>
+      <td>12779.4</td>
+      <td>3822.14</td>
+      <td>9065.8</td>
+      <td>36319.2</td>
+      <td>13171.6</td>
+      <td>7006.58</td>
+      <td>9645.06</td>
+      <td>8948.1</td>
+      <td>6025.37</td>
+      <td>6873.26</td>
+      <td>5728.35</td>
+      <td>5186.05</td>
+      <td>1201.64</td>
+      <td>3548.33</td>
+      <td>7320.88</td>
+      <td>11977.6</td>
+      <td>2749.32</td>
+      <td>9809.19</td>
+      <td>4172.84</td>
+      <td>7408.91</td>
+      <td>19328.7</td>
+      <td>18008.5</td>
+      <td>42951.7</td>
+      <td>10611.5</td>
+      <td>11415.8</td>
+    </tr>
+  </tbody>
+</table>
+
+{: .output}
+>
 > > Note: we could have done the above in a single line of code by 'chaining' the commands:
 > > ~~~
 > > americas.T.tail(n=3)
