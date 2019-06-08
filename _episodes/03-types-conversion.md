@@ -136,7 +136,7 @@ TypeError: object of type 'int' has no len()
 ~~~
 {: .error}
 
-## Must convert numbers to strings or vice versa when operating on them.
+## <a name='convert-numbers-and-strings'></a> Must convert numbers to strings or vice versa when operating on them.
 
 *   Cannot add numbers and strings.
 
@@ -401,7 +401,7 @@ first is 2 and second is 5
 
 > ## Arithmetic with Different Types
 >
-> Which of the following will print 2.0?
+> Which of the following will return the floating point number `2.0`?
 > Note: there may be more than one right answer.
 >
 > ~~~
@@ -432,17 +432,31 @@ first is 2 and second is 5
 > its real and imaginary parts can be accessed using *dot notation*
 > as `val.real` and `val.imag`.
 >
+> ~~~
+> complex = 6 + 2j
+> print(complex.real)
+> print(complex.imag)
+> ~~~
+> {: .language-python}
+>
+> ~~~
+> 6.0
+> 2.0
+> ~~~
+> {: .output}
+>
+>
 > 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
 > 2.  What do you expect `1+2j + 3` to produce?
-> 3.  What do you expect `4j` to be?  What about `4 j` or `4 + j`? > 
+> 3.  What do you expect `4j` to be?  What about `4 j` or `4 + j`?
 > 
 > > ## Solution
 > >
 > > 1. Standard mathematics treatments typically use `i` to denote an imaginary number. However, from media reports it
 > > was an early convention established from electrical engineering that now presents a technically expensive area to
 > > change. [Stack Overflow provides additional explanation and
-> > discussion](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
-> > 2. _4+2j_
-> > 3. _4j, syntax error, depends on the value of j_
+> > discussion.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
+> > 2. `(4+2j)`
+> > 3. `4j`, `Syntax Error: invalid syntax`, in this case _j_ is considered a variable and this depends on if _j_ is defined and if so, its assigned value
 > {: .solution}
 {: .challenge}
