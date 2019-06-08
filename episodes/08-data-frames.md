@@ -242,7 +242,7 @@ max      13450.401510    16361.876470    18965.055510
 ~~~
 {: .output}
 
-## Select-Apply-Combine operations
+## Group By: split-apply-combine
 
 Pandas vectorizing methods and grouping operations are features that provide users 
 much flexibility to analyse their data.
@@ -256,8 +256,8 @@ split themselves according to their GDP.
     where we account how many times a country has participated in the groups of *lower* or *higher* GDP
 
 ~~~
-mask_higher = data.apply(lambda x:x>x.mean())
-wealth_score = mask_higher.aggregate('sum',axis=1)/len(data.columns)
+mask_higher = data > data.mean()
+wealth_score = mask_higher.aggregate('sum', axis=1) / len(data.columns)
 wealth_score
 ~~~
 {: .language-python}
