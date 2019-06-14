@@ -84,7 +84,7 @@ server in the root directory (see [Starting JupyterLab]({{ page.root }}/01-run-q
 [anaconda-mac]: https://www.anaconda.com/download/#macos
 [anaconda-linux]: https://www.anaconda.com/download/#linux
 [anaconda-windows]: https://www.anaconda.com/download/#windows
-[gapminder]: http://gapminder.org
+[gapminder]: https://en.wikipedia.org/wiki/Gapminder_Foundation
 [jupyter]: http://jupyter.org/
 [python]: https://python.org
 [video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
