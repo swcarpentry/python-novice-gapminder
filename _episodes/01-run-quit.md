@@ -514,10 +514,9 @@ $ jupyter lab
 > Practice closing and restarting the JupyterLab server.
 > 
 {: .challenge}
-
 [anaconda]: https://docs.continuum.io/anaconda/install
-[jupyter]: http://jupyter.org/
-[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
 [jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
 [markdown]: https://en.wikipedia.org/wiki/Markdown
+
+{% include links.md %}
