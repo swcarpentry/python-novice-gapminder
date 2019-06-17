@@ -22,11 +22,11 @@ keypoints:
 *   Borrows many features from R's dataframes.
     *   A 2-dimensional table whose columns have names
         and potentially have different data types.
-*   Load it with `import pandas as pd`. The alias pd is commonly used for Pandas.
-*   Read a Comma Separate Values (CSV) data file with `pd.read_csv`.
+*   Load it with `import pandas as pd`. The alias `pd` is commonly used for Pandas.
+*   Read a Comma Separated Values (CSV) data file with `pd.read_csv`.
     *   Argument is the name of the file to be read.
     *   Assign result to a variable to store the data that was read.
-* In a jupyter notebook, use `display()` not `print()` to see view the output of a dataframe.
+* In a jupyter notebook, use `display()` not `print()` to view the output of a dataframe.
 
 ~~~
 import pandas as pd
@@ -35,6 +35,7 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv')
 print(data)
 ~~~
 {: .language-python}
+
 ~~~
        country  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
 0    Australia     10039.59564     10949.64959     12217.22686
@@ -119,7 +120,6 @@ display(data)
     </tr>
   </tbody>
 </table>
-{: .output}
 
 > ## File Not Found
 >
@@ -213,7 +213,6 @@ display(data)
     </tr>
   </tbody>
 </table>
-{: .output}
 
 ## Use `DataFrame.info` to find out more about a dataframe.
 
@@ -518,13 +517,13 @@ display(data.describe())
 > > ~~~
 > > americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
 > > ~~~
-> >{: .language-python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
 
 
-> ## Inspecting Data.
+> ## Inspecting Data
 >
 > After reading the data for the Americas,
 > use `help(americas.head)` and `help(americas.tail)`
@@ -541,98 +540,97 @@ display(data.describe())
 > >
 > > ~~~
 > > americas.head(n=3)
-> > 
-> >{: .language-python}
+> > ~~~
+> > {: .language-python}
 > > 
 > > The output is then
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>continent</th>
-      <th>gdpPercap_1952</th>
-      <th>gdpPercap_1957</th>
-      <th>gdpPercap_1962</th>
-      <th>gdpPercap_1967</th>
-      <th>gdpPercap_1972</th>
-      <th>gdpPercap_1977</th>
-      <th>gdpPercap_1982</th>
-      <th>gdpPercap_1987</th>
-      <th>gdpPercap_1992</th>
-      <th>gdpPercap_1997</th>
-      <th>gdpPercap_2002</th>
-      <th>gdpPercap_2007</th>
-    </tr>
-    <tr>
-      <th>country</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Argentina</th>
-      <td>Americas</td>
-      <td>5911.315053</td>
-      <td>6856.856212</td>
-      <td>7133.166023</td>
-      <td>8052.953021</td>
-      <td>9443.038526</td>
-      <td>10079.026740</td>
-      <td>8997.897412</td>
-      <td>9139.671389</td>
-      <td>9308.418710</td>
-      <td>10967.281950</td>
-      <td>8797.640716</td>
-      <td>12779.379640</td>
-    </tr>
-    <tr>
-      <th>Bolivia</th>
-      <td>Americas</td>
-      <td>2677.326347</td>
-      <td>2127.686326</td>
-      <td>2180.972546</td>
-      <td>2586.886053</td>
-      <td>2980.331339</td>
-      <td>3548.097832</td>
-      <td>3156.510452</td>
-      <td>2753.691490</td>
-      <td>2961.699694</td>
-      <td>3326.143191</td>
-      <td>3413.262690</td>
-      <td>3822.137084</td>
-    </tr>
-    <tr>
-      <th>Brazil</th>
-      <td>Americas</td>
-      <td>2108.944355</td>
-      <td>2487.365989</td>
-      <td>3336.585802</td>
-      <td>3429.864357</td>
-      <td>4985.711467</td>
-      <td>6660.118654</td>
-      <td>7030.835878</td>
-      <td>7807.095818</td>
-      <td>6950.283021</td>
-      <td>7957.980824</td>
-      <td>8131.212843</td>
-      <td>9065.800825</td>
-    </tr>
-  </tbody>
-</table>
-{: .output}
->
+> > <table border="1" class="dataframe">
+> >   <thead>
+> >     <tr style="text-align: right;">
+> >       <th></th>
+> >       <th>continent</th>
+> >       <th>gdpPercap_1952</th>
+> >       <th>gdpPercap_1957</th>
+> >       <th>gdpPercap_1962</th>
+> >       <th>gdpPercap_1967</th>
+> >       <th>gdpPercap_1972</th>
+> >       <th>gdpPercap_1977</th>
+> >       <th>gdpPercap_1982</th>
+> >       <th>gdpPercap_1987</th>
+> >       <th>gdpPercap_1992</th>
+> >       <th>gdpPercap_1997</th>
+> >       <th>gdpPercap_2002</th>
+> >       <th>gdpPercap_2007</th>
+> >     </tr>
+> >     <tr>
+> >       <th>country</th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >       <th></th>
+> >     </tr>
+> >   </thead>
+> >   <tbody>
+> >     <tr>
+> >       <th>Argentina</th>
+> >       <td>Americas</td>
+> >       <td>5911.315053</td>
+> >       <td>6856.856212</td>
+> >       <td>7133.166023</td>
+> >       <td>8052.953021</td>
+> >       <td>9443.038526</td>
+> >       <td>10079.026740</td>
+> >       <td>8997.897412</td>
+> >       <td>9139.671389</td>
+> >       <td>9308.418710</td>
+> >       <td>10967.281950</td>
+> >       <td>8797.640716</td>
+> >       <td>12779.379640</td>
+> >     </tr>
+> >     <tr>
+> >       <th>Bolivia</th>
+> >       <td>Americas</td>
+> >       <td>2677.326347</td>
+> >       <td>2127.686326</td>
+> >       <td>2180.972546</td>
+> >       <td>2586.886053</td>
+> >       <td>2980.331339</td>
+> >       <td>3548.097832</td>
+> >       <td>3156.510452</td>
+> >       <td>2753.691490</td>
+> >       <td>2961.699694</td>
+> >       <td>3326.143191</td>
+> >       <td>3413.262690</td>
+> >       <td>3822.137084</td>
+> >     </tr>
+> >     <tr>
+> >       <th>Brazil</th>
+> >       <td>Americas</td>
+> >       <td>2108.944355</td>
+> >       <td>2487.365989</td>
+> >       <td>3336.585802</td>
+> >       <td>3429.864357</td>
+> >       <td>4985.711467</td>
+> >       <td>6660.118654</td>
+> >       <td>7030.835878</td>
+> >       <td>7807.095818</td>
+> >       <td>6950.283021</td>
+> >       <td>7957.980824</td>
+> >       <td>8131.212843</td>
+> >       <td>9065.800825</td>
+> >     </tr>
+> >   </tbody>
+> > </table>
+> >
 > > 2. To check out the last three rows of `americas`, we would use the command, `americas.tail(n=3)`,
 > > analogous to `head()` used above. However, here we want to look at the last three columns so we need
 > > to change our view and then use `tail()`. To do so, we create a new DataFrame in which rows and 
@@ -641,140 +639,140 @@ display(data.describe())
 > > ~~~
 > > americas_flipped = americas.T
 > > ~~~
-> >{: .language-python}
+> > {: .language-python}
 > >
 > > We can then view the last three columns of `americas` by viewing the last three rows of `americas_flipped`:
 > > ~~~
 > > americas_flipped.tail(n=3)
 > > ~~~
-> >{: .language-python}
+> > {: .language-python}
+> > 
 > > The output is then
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>country</th>
-      <th>Argentina</th>
-      <th>Bolivia</th>
-      <th>Brazil</th>
-      <th>Canada</th>
-      <th>Chile</th>
-      <th>Colombia</th>
-      <th>Costa Rica</th>
-      <th>Cuba</th>
-      <th>Dominican Republic</th>
-      <th>Ecuador</th>
-      <th>El Salvador</th>
-      <th>Guatemala</th>
-      <th>Haiti</th>
-      <th>Honduras</th>
-      <th>Jamaica</th>
-      <th>Mexico</th>
-      <th>Nicaragua</th>
-      <th>Panama</th>
-      <th>Paraguay</th>
-      <th>Peru</th>
-      <th>Puerto Rico</th>
-      <th>Trinidad and Tobago</th>
-      <th>United States</th>
-      <th>Uruguay</th>
-      <th>Venezuela</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>gdpPercap_1997</th>
-      <td>10967.3</td>
-      <td>3326.14</td>
-      <td>7957.98</td>
-      <td>28954.9</td>
-      <td>10118.1</td>
-      <td>6117.36</td>
-      <td>6677.05</td>
-      <td>5431.99</td>
-      <td>3614.1</td>
-      <td>7429.46</td>
-      <td>5154.83</td>
-      <td>4684.31</td>
-      <td>1341.73</td>
-      <td>3160.45</td>
-      <td>7121.92</td>
-      <td>9767.3</td>
-      <td>2253.02</td>
-      <td>7113.69</td>
-      <td>4247.4</td>
-      <td>5838.35</td>
-      <td>16999.4</td>
-      <td>8792.57</td>
-      <td>35767.4</td>
-      <td>9230.24</td>
-      <td>10165.5</td>
-    </tr>
-    <tr>
-      <th>gdpPercap_2002</th>
-      <td>8797.64</td>
-      <td>3413.26</td>
-      <td>8131.21</td>
-      <td>33329</td>
-      <td>10778.8</td>
-      <td>5755.26</td>
-      <td>7723.45</td>
-      <td>6340.65</td>
-      <td>4563.81</td>
-      <td>5773.04</td>
-      <td>5351.57</td>
-      <td>4858.35</td>
-      <td>1270.36</td>
-      <td>3099.73</td>
-      <td>6994.77</td>
-      <td>10742.4</td>
-      <td>2474.55</td>
-      <td>7356.03</td>
-      <td>3783.67</td>
-      <td>5909.02</td>
-      <td>18855.6</td>
-      <td>11460.6</td>
-      <td>39097.1</td>
-      <td>7727</td>
-      <td>8605.05</td>
-    </tr>
-    <tr>
-      <th>gdpPercap_2007</th>
-      <td>12779.4</td>
-      <td>3822.14</td>
-      <td>9065.8</td>
-      <td>36319.2</td>
-      <td>13171.6</td>
-      <td>7006.58</td>
-      <td>9645.06</td>
-      <td>8948.1</td>
-      <td>6025.37</td>
-      <td>6873.26</td>
-      <td>5728.35</td>
-      <td>5186.05</td>
-      <td>1201.64</td>
-      <td>3548.33</td>
-      <td>7320.88</td>
-      <td>11977.6</td>
-      <td>2749.32</td>
-      <td>9809.19</td>
-      <td>4172.84</td>
-      <td>7408.91</td>
-      <td>19328.7</td>
-      <td>18008.5</td>
-      <td>42951.7</td>
-      <td>10611.5</td>
-      <td>11415.8</td>
-    </tr>
-  </tbody>
-</table>
-
-{: .output}
->
-> > Note: we could have done the above in a single line of code by 'chaining' the commands:
+> > <table border="1" class="dataframe">
+> >   <thead>
+> >     <tr style="text-align: right;">
+> >       <th>country</th>
+> >       <th>Argentina</th>
+> >       <th>Bolivia</th>
+> >       <th>Brazil</th>
+> >       <th>Canada</th>
+> >       <th>Chile</th>
+> >       <th>Colombia</th>
+> >       <th>Costa Rica</th>
+> >       <th>Cuba</th>
+> >       <th>Dominican Republic</th>
+> >       <th>Ecuador</th>
+> >       <th>El Salvador</th>
+> >       <th>Guatemala</th>
+> >       <th>Haiti</th>
+> >       <th>Honduras</th>
+> >       <th>Jamaica</th>
+> >       <th>Mexico</th>
+> >       <th>Nicaragua</th>
+> >       <th>Panama</th>
+> >       <th>Paraguay</th>
+> >       <th>Peru</th>
+> >       <th>Puerto Rico</th>
+> >       <th>Trinidad and Tobago</th>
+> >       <th>United States</th>
+> >       <th>Uruguay</th>
+> >       <th>Venezuela</th>
+> >     </tr>
+> >   </thead>
+> >   <tbody>
+> >     <tr>
+> >       <th>gdpPercap_1997</th>
+> >       <td>10967.3</td>
+> >       <td>3326.14</td>
+> >       <td>7957.98</td>
+> >       <td>28954.9</td>
+> >       <td>10118.1</td>
+> >       <td>6117.36</td>
+> >       <td>6677.05</td>
+> >       <td>5431.99</td>
+> >       <td>3614.1</td>
+> >       <td>7429.46</td>
+> >       <td>5154.83</td>
+> >       <td>4684.31</td>
+> >       <td>1341.73</td>
+> >       <td>3160.45</td>
+> >       <td>7121.92</td>
+> >       <td>9767.3</td>
+> >       <td>2253.02</td>
+> >       <td>7113.69</td>
+> >       <td>4247.4</td>
+> >       <td>5838.35</td>
+> >       <td>16999.4</td>
+> >       <td>8792.57</td>
+> >       <td>35767.4</td>
+> >       <td>9230.24</td>
+> >       <td>10165.5</td>
+> >     </tr>
+> >     <tr>
+> >       <th>gdpPercap_2002</th>
+> >       <td>8797.64</td>
+> >       <td>3413.26</td>
+> >       <td>8131.21</td>
+> >       <td>33329</td>
+> >       <td>10778.8</td>
+> >       <td>5755.26</td>
+> >       <td>7723.45</td>
+> >       <td>6340.65</td>
+> >       <td>4563.81</td>
+> >       <td>5773.04</td>
+> >       <td>5351.57</td>
+> >       <td>4858.35</td>
+> >       <td>1270.36</td>
+> >       <td>3099.73</td>
+> >       <td>6994.77</td>
+> >       <td>10742.4</td>
+> >       <td>2474.55</td>
+> >       <td>7356.03</td>
+> >       <td>3783.67</td>
+> >       <td>5909.02</td>
+> >       <td>18855.6</td>
+> >       <td>11460.6</td>
+> >       <td>39097.1</td>
+> >       <td>7727</td>
+> >       <td>8605.05</td>
+> >     </tr>
+> >     <tr>
+> >       <th>gdpPercap_2007</th>
+> >       <td>12779.4</td>
+> >       <td>3822.14</td>
+> >       <td>9065.8</td>
+> >       <td>36319.2</td>
+> >       <td>13171.6</td>
+> >       <td>7006.58</td>
+> >       <td>9645.06</td>
+> >       <td>8948.1</td>
+> >       <td>6025.37</td>
+> >       <td>6873.26</td>
+> >       <td>5728.35</td>
+> >       <td>5186.05</td>
+> >       <td>1201.64</td>
+> >       <td>3548.33</td>
+> >       <td>7320.88</td>
+> >       <td>11977.6</td>
+> >       <td>2749.32</td>
+> >       <td>9809.19</td>
+> >       <td>4172.84</td>
+> >       <td>7408.91</td>
+> >       <td>19328.7</td>
+> >       <td>18008.5</td>
+> >       <td>42951.7</td>
+> >       <td>10611.5</td>
+> >       <td>11415.8</td>
+> >     </tr>
+> >   </tbody>
+> > </table>
+> >
+> > Note: we could have done the above in a single line of code by
+> > [chaining](https://en.wikipedia.org/wiki/Method_chaining) the commands:
 > > ~~~
 > > americas.T.tail(n=3)
 > > ~~~
-> >{: .language-python}
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
