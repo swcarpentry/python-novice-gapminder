@@ -8,7 +8,7 @@ root: ..
 
 ## [Running and Quitting]({{ page.root }}/01-run-quit/)
 - Python files have the `.py` extension.
-- Can be written in a text file or a [Jupyter Notebook](http://jupyter.org/).
+- Can be written in a text file or a [Jupyter Notebook][jupyter].
   - Jupyter notebooks have the extension `.ipynb`
   - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `$ jupyter notebook`
     - Markdown and HTML are allowed in markdown cells for documenting code.
@@ -94,13 +94,14 @@ root: ..
 - Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
   - To plot a bar plot `data.plot(kind='bar')`
 
-```Python
+~~~
 import matplotlib.puplot as plot
 plt.plot(time,position,label='label')
 plt.xlabel('x axis label')
 plt.ylabel('y axis label')
 plt.legend()
-```
+~~~
+{: .language-python}
 
 ## [Lists]({{ page.root }}/11-lists/)
 - Defined within `[...]` and separated by `,`.
@@ -119,10 +120,11 @@ plt.legend()
   - The action following the collection is the body.
 - To iterate over a sequence of numbers use `range(start, end)`
 
-```Python
+~~~
 for number in range(0,5):
   print(number)
-```
+~~~
+{: .language-python}
 
 ## [Looping Over Data Sets]({{ page.root }}/13-looping-data-sets/)
 - Use a for loop: `for filename in [file1, file2]:`
@@ -133,23 +135,26 @@ for number in range(0,5):
     - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
 - Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
 
-```Python
+~~~
 for filename in glob.glob(*.txt):
   data = pd.read_csv(filename)
-```
+~~~
+{: .language-python}
 
 ## [Writing Functions]({{ page.root }}/14-writing-functions/)
 - Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
 - Run by using `function_name(parameters)`.
 - To return a result to the caller use `return ...` in the function.
 
-```Python
+~~~
 def add_numbers(a, b):
   result = a + b
   return result
 
 add_numbers(1, 4)
-```
+~~~
+{: .language-python}
+
 ## [Variable Scope]({{ page.root }}/15-scope/)
 - A local variable is defined in a function and can only be seen and used within that function.
 - A global variable is defined outside of a function and can be seen or used anywhere after definition.
@@ -168,7 +173,7 @@ add_numbers(1, 4)
   - `>` greater than.
   - `<` less than.
 
-```Python
+~~~
 for m in [3, 6, 7, 2, 8]:
   if m > 5:
     print(m, 'is large')
@@ -176,7 +181,8 @@ for m in [3, 6, 7, 2, 8]:
     print(m, 'is 5')
   else: 
     print(m, 'is small')
-```
+~~~
+{: .language-python}
 
 ## [Programming Style]({{ page.root }}/18-style/)
 - Document your code.
@@ -241,3 +247,5 @@ Substring
 
 Variables
 :     Names for values.
+
+{% include links.md %}
