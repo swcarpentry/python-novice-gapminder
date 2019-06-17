@@ -8,9 +8,9 @@ root: ..
 
 ## [Running and Quitting]({{ page.root }}/01-run-quit/)
 - Python files have the `.py` extension.
-- Can be written in a text file or a [Jupyter Notebook](http://jupyter.org/).
+- Can be written in a text file or a [Jupyter Notebook][jupyter].
   - Jupyter notebooks have the extension `.ipynb`
-  - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `jupyter notebook`
+  - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `$ jupyter notebook`
     - Markdown and HTML are allowed in markdown cells for documenting code.
 
 ## [Variables and Assignment]({{ page.root }}/02-variables/)
@@ -247,3 +247,5 @@ Substring
 
 Variables
 :     Names for values.
+
+{% include links.md %}
