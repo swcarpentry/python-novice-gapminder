@@ -194,7 +194,7 @@ Conda has already been installed on your machine.
 > 
 {: .callout}
 
-## Getting started with Conda
+## Managing Conda Environments
 
 ### New Project, New Directory
 
@@ -393,6 +393,7 @@ from the environment.
 > > {: .language-bash}
 > {: .solution}
 {: .challenge}
+
 ### Deactivating the Environment
 
 When you are done working on your project it is a good idea to deactivate the current environment. 
