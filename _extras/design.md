@@ -279,7 +279,7 @@ I know...
     *   Trace which lines of this program are executed in what order.
     *   Fill in the blanks in this program so that it reverses a string.
     *   Fill in the blanks in this series of examples to get practice accumulating values.
-    *   Reorder and indent these lins to calculate the cumulative sum of the list values.
+    *   Reorder and indent these lines to calculate the cumulative sum of the list values.
 
 ### [Looping Over Data Sets]({{page.root}}/13-looping-data-sets/) (13:45)
 
