@@ -50,16 +50,14 @@ $ which conda
 ~~~
 {: .language-bash}
 
-For Windows users the command is slightly different.
-
-~~~
-$ where conda
-~~~
-
 If Conda has already been installed on your machine, then this command should return the 
-absolute path to the `conda` executable. If Conda has not been installed on your machine, then 
-install the Python 3 version of [Miniconda](https://docs.conda.io/en/latest/miniconda.html) from 
-Anaconda for your OS. Miniconda is a mini version of the 
+absolute path to the `conda` executable.
+
+Windows users will need to search for the "Anaconda Powershell Prompt". If this program is already 
+installed, then Conda has also already been installed on your machine.
+
+If Conda has not been installed on your machine, then install the Python 3 version of 
+[Miniconda][miniconda] from Anaconda for your OS. Miniconda is a mini version of the 
 [Anaconda Python distribution](https://www.anaconda.com/distribution/) that includes only Conda 
 and its dependencies.
 
@@ -75,9 +73,8 @@ on your OS.
 
 2. Download the Python 3 installer for Windows.
 
-3. Double-click the executable and install Python 3 using _MOST_ of the
-   default settings. The only exception is to check the 
-   **Make Anaconda the default Python** option.
+3. Double-click the executable and install Python 3 using _MOST_ of the default settings. The only 
+   exception is to check the **Make Anaconda the default Python** option.
 
 #### Mac OS X - [Video tutorial][video-mac]
 
