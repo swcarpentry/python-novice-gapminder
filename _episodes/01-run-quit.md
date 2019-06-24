@@ -513,9 +513,8 @@ $ jupyter lab
 {: .challenge}
 
 [anaconda]: https://docs.continuum.io/anaconda/install
-[jupyter]: http://jupyter.org/
-[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
-[jupyterlab-overview]: https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
 [jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
 [markdown]: https://en.wikipedia.org/wiki/Markdown
+[jupyter]: http://jupyter.org/
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
