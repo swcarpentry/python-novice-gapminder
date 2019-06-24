@@ -5,20 +5,70 @@ permalink: /setup/
 root: ..
 ---
 
-## Installing Python Using Anaconda
+## Installing Python
 
-[Python][python] is a popular language for scientific computing, and great for
-general-purpose programming as well. Installing all of its scientific packages
-individually can be a bit difficult, however, so we recommend the all-in-one
-installer [Anaconda][anaconda].
+[Python][python] is a popular language for scientific computing, and great for general-purpose 
+programming as well. Installing all of its scientific packages individually can be a bit 
+difficult, however, so we recommend using [Miniconda Python Distribution][miniconda] from 
+[Anaconda][anaconda] for your OS. Miniconda is mini version of the 
+[Anaconda Python Distribution][anaconda-distribution] that includes Python as well as the Conda 
+environment and package management tool (and its core dependencies). If, however, you would prefer 
+to install the full Anaconda Python Distribution, instructions are also provided below.
 
-Regardless of how you choose to install it, please make sure you install Python
-version 3.x (e.g., 3.4 is fine). Also, please set up your python environment at 
-least a day in advance of the workshop.  If you encounter problems with the 
-installation procedure, ask your workshop organizers via e-mail for assistance so
-you are ready to go as soon as the workshop begins.
+> ## Prefer Miniconda to Anaconda
+>
+> I suggest installing Miniconda which combines Conda with Python 3 (and a small number of core 
+> systems packages) instead of the full Anaconda distribution. Installing only Miniconda will 
+> encourage you to create separate environments for each project (and to install only those packages 
+> that you actually need for each project!). Project specific environments enhance portability and 
+> reproducibility of your research and workflows. 
+> 
+> Besides, if you *really* want the full Anaconda distribution you can always create an new conda 
+> environment and install it using the following command.
+>
+> ~~~
+> $ conda create --name my-anaconda-env anaconda=5.3
+> ~~~
+> {: .language-bash}
+>
+> We will discuss the above command in great depth in this lesson.
+{: .callout}
 
-### Windows - [Video tutorial][video-windows]
+Regardless of how you choose to install it, please make sure you install Python 3 version of the 
+installer. Also, please set up your python environment at least a day in advance of the workshop. 
+If you encounter problems with the installation procedure, ask your workshop organizers via e-mail 
+for assistance so you are ready to go as soon as the workshop begins.
+
+### Installing Python Using Miniconda
+
+First check whether Conda has already been installed on your local machine by running the 
+following command in a terminal if you are running macOS or Linux.
+
+~~~
+$ which conda
+/Users/$USERNAME/miniconda3/bin/conda
+~~~
+{: .language-bash}
+
+For Windows users the command is slightly different.
+
+~~~
+$ where conda
+~~~
+
+If Conda has already been installed on your machine, then this command should return the 
+absolute path to the `conda` executable. If Conda has not been installed on your machine, then 
+install the Python 3 version of [Miniconda](https://docs.conda.io/en/latest/miniconda.html) from 
+Anaconda for your OS. Miniconda is a mini version of the 
+[Anaconda Python distribution](https://www.anaconda.com/distribution/) that includes only Conda 
+and its dependencies.
+
+### Installing Python Using Anaconda
+
+The exact procedure for installing the full Anaconda Python Distibution differs slightly depending 
+on your OS.
+
+#### Windows - [Video tutorial][video-windows]
 
 1. Open [https://www.anaconda.com/download][continuum-windows]
    with your web browser.
@@ -29,7 +79,7 @@ you are ready to go as soon as the workshop begins.
    default settings. The only exception is to check the 
    **Make Anaconda the default Python** option.
 
-### Mac OS X - [Video tutorial][video-mac]
+#### Mac OS X - [Video tutorial][video-mac]
 
 1. Open [https://www.anaconda.com/download][continuum-mac]
    with your web browser.
@@ -38,7 +88,7 @@ you are ready to go as soon as the workshop begins.
 
 3. Install Python 3 using all of the defaults for installation.
 
-### Linux
+#### Linux
 
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
@@ -79,14 +129,13 @@ To obtain it, download and unzip the file
 In order to follow the presented material, you should launch the JupyterLab 
 server in the root directory (see [Starting Python](#Starting-Python)).
 
-
 [anaconda]: https://www.anaconda.com/
+[anaconda-distribution]: https://www.anaconda.com/distribution/
+[miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [continuum-mac]: https://www.anaconda.com/download/#macos
 [continuum-linux]: https://www.anaconda.com/download/#linux
 [continuum-windows]: https://www.anaconda.com/download/#windows
 [gapminder]: http://gapminder.org
-[jupyter]: http://jupyter.org/
-[jupyter-install]: http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip
 [python]: https://python.org
 [video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
 [video-windows]: https://www.youtube.com/watch?v=xxQ0mzZ8UvA
