@@ -150,9 +150,24 @@ Conda has already been installed on your machine.
 
 > ## Verifying your Conda installation
 >
-> In order to verify that you have installed Conda correctly run the `conda info` command. Output 
-> of the command should look similar to the following. Note that the conda version number is 
-> provided as part of the output of this command.
+> In order to verify that you have installed Conda correctly run the `conda info` command in the 
+> Terminal (Mac OS or Linux) or Anaconda Powershell Prompt (Windows) 
+>
+> ### Mac OS 
+> 
+> There are two ways to open Terminal on Mac.
+>
+> 1. In your Applications folder, open Utilities and double-click on Terminal
+> 2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
+> double-click the search result or hit <kbd>Enter</kbd>.
+> 
+> ### Windows
+> 
+> Windows users will need to search for the "Anaconda Prompt" in the search menu. Clicking on the 
+> application will launch the prompt.
+> 
+> Regardless of OS, the output of the command should look similar to the following. Note that the 
+> conda version number is provided as part of the output of this command.
 > 
 > ~~~
 > $ conda info
