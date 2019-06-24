@@ -394,6 +394,24 @@ from the environment.
 > {: .solution}
 {: .challenge}
 
+> ## Getting the Gapminder Data
+> 
+> The data we will be using is taken from the [gapminder][gapminder] dataset. To obtain it, 
+> download [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip) 
+> and then unzip the contents of the file within the `python-novice-gapminder` directory.
+> 
+> On Mac OS or Linux the following commands should move the `.zip` archive from the downloads 
+> folder to the `python-novice-gapminder` directory we previously created on the desktop. Unzipping 
+> the `zip` archive will create a `data` directory containing the `*.csv` files that we will use in 
+> the remaining lessons. 
+> ~~~
+> $ mv ~/Downloads/python-novice-gapminder-data.zip ~/Desktop/python-novice-gapminder
+> $ cd ~/Desktop/python-novice-gapminder
+> $ unzip python-novice-gapminder-data.zip
+> ~~~
+> {: .language-bash}
+{: .callout}
+
 ### Deactivating the Environment
 
 When you are done working on your project it is a good idea to deactivate the current environment. 
@@ -423,4 +441,5 @@ $ conda deactivate
 ~~~
 {: .language-bash}
 
+[gapminder]: http://gapminder.org
 [good-enough-practices]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510

@@ -121,21 +121,12 @@ If you run into any difficulties, please request help before the workshop begins
         press enter to prepend Anaconda to your `PATH` (this makes the Anaconda 
         distribution the default Python).
 
-## Getting the Data
-
-The data we will be using is taken from the [gapminder][gapminder] dataset.
-To obtain it, download and unzip the file 
-[python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
-In order to follow the presented material, you should launch the JupyterLab 
-server in the root directory (see [Starting Python](#Starting-Python)).
-
 [anaconda]: https://www.anaconda.com/
 [anaconda-distribution]: https://www.anaconda.com/distribution/
 [miniconda]: https://docs.conda.io/en/latest/miniconda.html
 [continuum-mac]: https://www.anaconda.com/download/#macos
 [continuum-linux]: https://www.anaconda.com/download/#linux
 [continuum-windows]: https://www.anaconda.com/download/#windows
-[gapminder]: http://gapminder.org
 [python]: https://python.org
 [video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
 [video-windows]: https://www.youtube.com/watch?v=xxQ0mzZ8UvA
