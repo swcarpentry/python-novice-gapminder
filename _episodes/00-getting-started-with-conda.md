@@ -146,68 +146,63 @@ your usual version of Python in your normal environment.
 ## Installing Conda
 
 As long as you have already installed the Python 3 Miniconda or Anaconda Python distributions, then 
-Conda has already been installed on your machine.
+Conda has already been installed on your machine. In order to verify that you have installed Conda 
+correctly run the `conda info` command in the Terminal (Mac OS or Linux) or Anaconda Powershell 
+Prompt (Windows) 
 
-> ## Verifying your Conda installation
->
-> In order to verify that you have installed Conda correctly run the `conda info` command in the 
-> Terminal (Mac OS or Linux) or Anaconda Powershell Prompt (Windows) 
->
-> ### Mac OS 
-> 
-> There are two ways to open Terminal on Mac.
->
-> 1. In your Applications folder, open Utilities and double-click on Terminal
-> 2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
-> double-click the search result or hit <kbd>Enter</kbd>.
-> 
-> ### Windows
-> 
-> Windows users will need to search for the "Anaconda Prompt" in the search menu. Clicking on the 
-> application will launch the prompt.
-> 
-> Regardless of OS, the output of the command should look similar to the following. Note that the 
-> conda version number is provided as part of the output of this command.
-> 
-> ~~~
-> $ conda info
->     active environment : base
->    active env location : /Users/<USERNAME>/miniconda3
->            shell level : 1
->       user config file : /Users/<USERNAME>/.condarc
-> populated config files : 
->          conda version : 4.6.14
->    conda-build version : not installed
->         python version : 3.7.1.final.0
->       base environment : /Users/<USERNAME>/miniconda3  (writable)
->           channel URLs : https://repo.anaconda.com/pkgs/main/osx-64
->                          https://repo.anaconda.com/pkgs/main/noarch
->                          https://repo.anaconda.com/pkgs/free/osx-64
->                          https://repo.anaconda.com/pkgs/free/noarch
->                          https://repo.anaconda.com/pkgs/r/osx-64
->                          https://repo.anaconda.com/pkgs/r/noarch
->          package cache : /Users/<USERNAME>/miniconda3/pkgs
->                          /Users/<USERNAME>/.conda/pkgs
->       envs directories : /Users/<USERNAME>/miniconda3/envs
->                          /Users/<USERNAME>/.conda/envs
->               platform : osx-64
->             user-agent : conda/4.6.14 requests/2.19.1 CPython/3.7.1 Darwin/18.6.0 OSX/10.14.5
->                UID:GID : 1682265470:1840429327
->             netrc file : None
->           offline mode : False
-> ~~~
-> {: .language-bash}
->
-> An alternative solution is to run the `conda` command and pass the `--version` flag which will 
-> return the version number if Conda has been properly installed.
-> 
-> ~~~
-> $ conda --version
-> conda 4.6.14
-> ~~~
-> {: .language-bash}
-> 
-{: .callout}
+### Mac OS 
+
+There are two ways to open Terminal on Mac.
+
+1. In your Applications folder, open Utilities and double-click on Terminal
+2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
+double-click the search result or hit <kbd>Enter</kbd>.
+ 
+### Windows
+
+Windows users will need to search for the "Anaconda Prompt" in the search menu. Clicking on the 
+application will launch the prompt.
+
+Regardless of OS, the output of the command should look similar to the following. Note that the 
+`conda` version number is provided as part of the output of this command.
+
+~~~
+$ conda info
+    active environment : base
+   active env location : /Users/<USERNAME>/miniconda3
+           shell level : 1
+      user config file : /Users/<USERNAME>/.condarc
+populated config files : 
+         conda version : 4.6.14
+   conda-build version : not installed
+        python version : 3.7.1.final.0
+      base environment : /Users/<USERNAME>/miniconda3  (writable)
+          channel URLs : https://repo.anaconda.com/pkgs/main/osx-64
+                         https://repo.anaconda.com/pkgs/main/noarch
+                         https://repo.anaconda.com/pkgs/free/osx-64
+                         https://repo.anaconda.com/pkgs/free/noarch
+                         https://repo.anaconda.com/pkgs/r/osx-64
+                         https://repo.anaconda.com/pkgs/r/noarch
+         package cache : /Users/<USERNAME>/miniconda3/pkgs
+                         /Users/<USERNAME>/.conda/pkgs
+      envs directories : /Users/<USERNAME>/miniconda3/envs
+                         /Users/<USERNAME>/.conda/envs
+              platform : osx-64
+            user-agent : conda/4.6.14 requests/2.19.1 CPython/3.7.1 Darwin/18.6.0 OSX/10.14.5
+               UID:GID : 1682265470:1840429327
+            netrc file : None
+          offline mode : False
+~~~
+{: .language-bash}
+
+An alternative solution is to run the `conda` command and pass the `--version` flag which will 
+return the version number if Conda has been properly installed.
+
+~~~
+$ conda --version
+conda 4.6.14
+~~~
+{: .language-bash}
 
 ## Managing Conda Environments
 
