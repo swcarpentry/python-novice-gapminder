@@ -1,6 +1,6 @@
 [![Create a Slack Account with us](https://img.shields.io/badge/Create_Slack_Account-The_Carpentries-071159.svg)](https://swc-slack-invite.herokuapp.com/) 
- [![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--py--gapminder-E01563.svg)](https://swcarpentry.slack.com/messages/C9X4W03KL) 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kaust-vislab/python-novice-gapminder/add-binder-button?urlpath=lab)
+[![Slack Status](https://img.shields.io/badge/Slack_Channel-swc--py--gapminder-E01563.svg)](https://swcarpentry.slack.com/messages/C9X4W03KL) 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/swcarpentry/python-novice-gapminder/binder?urlpath=lab)
 
 python-novice-gapminder
 =======================
