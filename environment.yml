@@ -1,4 +1,4 @@
-name: null
+name: python-novice-gapminder-environment
 
 channels:
   - defaults
