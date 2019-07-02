@@ -547,17 +547,17 @@ result of call is: None
 > > %matplotlib inline
 > > import random
 > > # using lists to store the "final" values in the recursion series
-> > r_list=[]
-> > final_value=[]
-> > num_r_vals=5000
+> > r_list = []
+> > final_value = []
+> > num_r_vals = 5000
 > > # iterate over multiple values of the growth parameter r
 > > for i in range(num_r_vals):
 > >   # using the index variable, i, to iterate over different r values
-> >   r=2.4+(4-2.4)*(i/num_r_vals)
+> >   r = 2.4 + (4 - 2.4) * (i / num_r_vals)
 > >   # the series needs a random starting point in [0.1,0.9]
-> >   start=0.1+0.8*random.random()
+> >   start = 0.1 + 0.8 * random.random()
 > >   # Then, the function defined above computes the final series value
-> >   trajectory=iterate(start,5000,r)
+> >   trajectory = iterate(start,5000,r)
 > >   # store the (r,final series value) pair for plotting
 > >   r_list.append(r)
 > >   final_value.append(trajectory[-1])
@@ -572,10 +572,10 @@ result of call is: None
 > > The plotting part of the solution above can be made more compact with the [numpy arange](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.arange.html) function.  Specifically, the iteration over different rvalues could be accomplished with the following lines: 
 > > ~~~
 > > import numpy as np
-> > r_list=np.arange(2.4,4.0,0.0001)
-> > final_value=[]
+> > r_list = np.arange(2.4,4.0,0.0001)
+> > final_value = []
 > > for r in r_list:
-> >     trajectory=iterate(0.1+0.8*random.random(),1000,r)
+> >     trajectory = iterate(0.1 + 0.8 * random.random(),1000,r)
 > >     final_value.append(trajectory[-1])
 > > plt.plot(r_list,final_value,",")
 > > ~~~
