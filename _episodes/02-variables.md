@@ -264,8 +264,10 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > what happens if you try to get the second digit of `a` via `a[1]`?
 >
 > > ## Solution
-> > Numbers are not stored in the written representation,
-> > so they can't be treated like strings.
+> > Numbers are not strings or sequences and Python will raise an error if you try to perform an index operation on a
+> > number. In the [next lesson on types and type conversion]({{ page.root }}/03-types-conversion/#convert-numbers-and-strings)
+> > we will learn more about types and how to convert between different types. If you want the Nth digit of a number you
+> > can convert it into a string using the `str` built-in function and then perform an index operation on that string.
 > >
 > > ~~~
 > > a = 123
@@ -276,6 +278,17 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > TypeError: 'int' object is not subscriptable
 > > ~~~
 > > {: .error}
+> > 
+> > 
+> > ~~~
+> > a = str(123)
+> > print(a[1])
+> > ~~~
+> > {: .language-python}
+> > ~~~
+> > 1
+> > ~~~
+> > {: .output}
 > {: .solution}
 {: .challenge}
 
@@ -293,7 +306,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > ## Solution
 > >
 > > `minutes` is better because `min` might mean something like "minimum"
-> > (and actually does in Python, but we haven't seen that yet).
+> > (and actually is an existing built-in function in Python that we will cover later).
 > {: .solution}
 {: .challenge}
 
@@ -322,16 +335,16 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 2.  What does `thing[low:]` (without a value after the colon) do?
 > 3.  What does `thing[:high]` (without a value before the colon) do?
 > 4.  What does `thing[:]` (just a colon) do?
-> 5.  What does `thing[number:negative-number]` do?
+> 5.  What does `thing[number:some-negative-number]` do?
 > 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
 >
 > > ## Solutions
 > >
 > > 1. `thing[low:high]` returns a slice from `low` to the value before `high`
-> > 2. `thing[low:]` returns a slice from `low` to the end of `thing`
+> > 2. `thing[low:]` returns a slice from `low` all the way to the end of `thing`
 > > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`
 > > 4. `thing[:]` returns all of `thing`
-> > 5. `thing[number:negative-number]` returns a slice from `number` to `negative-number` values from the end of `thing`
+> > 5. `thing[number:some-negative-number]` returns a slice from `number` to `some-negative-number` values from the end of `thing`
 > > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
 > >
 > {: .solution}

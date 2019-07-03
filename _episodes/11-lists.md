@@ -112,7 +112,8 @@ primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
 
-Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result two-dimensional.
+Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result
+two-dimensional - the last element in `primes` is a list, not an integer.
 
 ## Use `del` to remove items from a list entirely.
 
@@ -120,6 +121,7 @@ Note that while `extend` maintains the "flat" structure of the list, appending a
 *   Not a function or a method, but a statement in the language.
 
 ~~~
+primes = [2, 3, 5, 7, 9]
 print('primes before removing last item:', primes)
 del primes[4]
 print('primes after removing last item:', primes)
@@ -136,7 +138,7 @@ primes after removing last item: [2, 3, 5, 7]
 *   Use `[]` on its own to represent a list that doesn't contain any values.
     *   "The zero of lists."
 *   Helpful as a starting point for collecting values
-    (which we will see in the [next episode]({{page.root}}/09-for-loops/)).
+        (which we will see in the [next episode]({% link _episodes/12-for-loops.md %}).
 
 ## Lists may contain values of different types.
 
@@ -185,7 +187,7 @@ TypeError: 'str' object does not support item assignment
 ## Indexing beyond the end of the collection is an error.
 
 *   Python reports an `IndexError` if we attempt to access a value that doesn't exist.
-    *   This is a kind of [runtime error]({{ page.root }}/05-error-messages/).
+    *   This is a kind of [runtime error]({{ page.root }}/04-built-in/#runtime-error).
     *   Cannot be detected as the code is parsed
         because the index might be calculated based on data.
 
@@ -261,12 +263,14 @@ IndexError: string index out of range
 > ~~~
 > {: .output}
 >
-> 1.  Explain in simple terms what `list('some string')` does.
-> 2.  What does `'-'.join(['x', 'y'])` generate?
+> 1.  What does `list('some string')` do?
+> 2.  What does `'-'.join(['x', 'y', 'z'])` generate?
 >
 > > ## Solution
-> > 1. `list('some string')` "splits" a string into a list of its characters.
-> > 2. `x-y`
+> > 1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
+> > 2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the _concatenation_
+> >    of each each string element in the list and adds the separator between each element in the list. This results in
+> >    `x-y-z`. The separator between the elements is the string that provides this method.
 > {: .solution}
 {: .challenge}
 
