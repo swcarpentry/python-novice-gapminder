@@ -23,15 +23,41 @@ Maintainer(s):
 
 ## Running locally
 
-### Install Conda
+The instructions below assume that Git and Miniconda have already been installed locally. On Mac 
+OS or Linux you can run the `which` command to check whether Git and Miniconda are installed.
+
+```bash
+$ which git
+/usr/bin/git
+$ which conda
+/Users/$USERNAME/miniconda3/bin/conda
+```
+
+If both Git and Miniconda are properly installed, then the `which` command should return the 
+absolute path to their respective executables.
+
+### Cloning the Git repository
+
+First you will either need to clone the entire repository and checkout the `binder` branch.
+
+```bash
+$ git clone https://github.com/swcarpentry/python-novice-gapminder.git
+$ cd python-novice-gapminder/
+$ git checkout -b binder
+```
+
+Alternatively, you can clone only the `binder` branch.
+
+```bash
+$ git clone -b binder --single-branch https://github.com/swcarpentry/python-novice-gapminder.git
+$ cd python-novice-gapminder/
+```
 
 ### Creating the Conda environment
 
-After cloning the repo you can use the following commands to build the environment on your local machine.
+After cloning the repo you can use the following command to build the environment on your local machine.
 
 ```bash
-$ cd /python-novice-gapminder
-$ git checkout -b binder
 $ conda env create --file environment.yml --prefix ./env
 ```
 
