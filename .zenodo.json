@@ -1,0 +1,235 @@
+{
+  "contributors": [
+    {
+      "type": "Editor",
+      "name": "Nathan Thomas Moore",
+      "orcid": "0000-0001-8590-8349"
+    },
+    {
+      "type": "Editor",
+      "name": "Allen Lee",
+      "orcid": "0000-0002-6523-6079"
+    },
+    {
+      "type": "Editor",
+      "name": "Sourav Singh",
+      "orcid": "0000-0002-9184-3091"
+    },
+    {
+      "type": "Editor",
+      "name": "Olav Vahtras",
+      "orcid": "0000-0002-9123-8174"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Allen Lee",
+      "orcid": "0000-0002-6523-6079"
+    },
+    {
+      "name": "Florian Goth",
+      "orcid": "0000-0003-2707-4790"
+    },
+    {
+      "name": "Olav Vahtras",
+      "orcid": "0000-0002-9123-8174"
+    },
+    {
+      "name": "Raniere Silva"
+    },
+    {
+      "name": "Steven Koenig"
+    },
+    {
+      "name": "Lex Nederbragt",
+      "orcid": "0000-0001-5539-0999"
+    },
+    {
+      "name": "Sourav Singh",
+      "orcid": "0000-0002-9184-3091"
+    },
+    {
+      "name": "Thor Wikfeldt"
+    },
+    {
+      "name": "Carlos Henrique Brandt",
+      "orcid": "0000-0001-6679-3777"
+    },
+    {
+      "name": "Shyam Dwaraknath"
+    },
+    {
+      "name": "Jarno Rantaharju",
+      "orcid": "0000-0002-0072-7707"
+    },
+    {
+      "name": "Jacob Deppen"
+    },
+    {
+      "name": "Jeremy Zucker"
+    },
+    {
+      "name": "Mike Henry"
+    },
+    {
+      "name": "Pablo Hernandez-Cerdan"
+    },
+    {
+      "name": "Kees den Heijer",
+      "orcid": "0000-0003-0314-2779"
+    },
+    {
+      "name": "Maxim Belkin"
+    },
+    {
+      "name": "Andreas Hilboll",
+      "orcid": "0000-0002-1038-6248"
+    },
+    {
+      "name": "Taylor Smith"
+    },
+    {
+      "name": "Adam Steer"
+    },
+    {
+      "name": "David Matten",
+      "orcid": "0000-0003-1085-4344"
+    },
+    {
+      "name": "Erin Alison Becker",
+      "orcid": "0000-0002-6832-0233"
+    },
+    {
+      "name": "Francisco J. Martínez"
+    },
+    {
+      "name": "Paul Anzel"
+    },
+    {
+      "name": "Robert Woodward"
+    },
+    {
+      "name": "Ashley Champagne"
+    },
+    {
+      "name": "Benjamin"
+    },
+    {
+      "name": "Benjamin Roberts"
+    },
+    {
+      "name": "CanWood"
+    },
+    {
+      "name": "Cephalopd"
+    },
+    {
+      "name": "Cian Wilson"
+    },
+    {
+      "name": "Daniel W Kerchner",
+      "orcid": "0000-0002-5921-2193"
+    },
+    {
+      "name": "Dan Mønster"
+    },
+    {
+      "name": "Daria Orlowska"
+    },
+    {
+      "name": "Dave Lampert",
+      "orcid": "0000-0001-7357-1873"
+    },
+    {
+      "name": "Greg Wilson"
+    },
+    {
+      "name": "ian"
+    },
+    {
+      "name": "Jonah Duckles",
+      "orcid": "0000-0002-8985-3119"
+    },
+    {
+      "name": "Keith Gilbertson"
+    },
+    {
+      "name": "Kyle E Niemeyer",
+      "orcid": "0000-0003-4425-7097"
+    },
+    {
+      "name": "Logan Cox",
+      "orcid": "0000-0003-1566-542X"
+    },
+    {
+      "name": "Louis Vernon"
+    },
+    {
+      "name": "Lucy Dorothy Whalley",
+      "orcid": "0000-0002-2992-9871"
+    },
+    {
+      "name": "Madeleine Bonsma-Fisher",
+      "orcid": "0000-0002-5813-4664"
+    },
+    {
+      "name": "Mark Phillips"
+    },
+    {
+      "name": "Mark Slater"
+    },
+    {
+      "name": "Michael Beyeler"
+    },
+    {
+      "name": "mzc9"
+    },
+    {
+      "name": "Narayanan Raghupathy"
+    },
+    {
+      "name": "Nigel Bosch"
+    },
+    {
+      "name": "Carlos M Ortiz Marrero",
+      "orcid": "0000-0001-8302-1322"
+    },
+    {
+      "name": "Phil Tooley"
+    },
+    {
+      "name": "Ryan Avery"
+    },
+    {
+      "name": "Ryan Gregory James",
+      "orcid": "0000-0003-2149-9085"
+    },
+    {
+      "name": "Sarah M Brown",
+      "orcid": "0000-0001-5728-0822"
+    },
+    {
+      "name": "SBolo"
+    },
+    {
+      "name": "Stéphane Guillou",
+      "orcid": "0000-0001-8992-0951"
+    },
+    {
+      "name": "Timothy Warren"
+    },
+    {
+      "name": "Tyler Martin"
+    },
+    {
+      "name": "Vasu Venkateshwaran",
+      "orcid": "0000-0002-0690-0056"
+    },
+    {
+      "name": "Vikas Pejaver"
+    }
+  ],
+  "license": {
+    "id": "CC-BY-4.0"
+  }
+}
