@@ -211,25 +211,24 @@ print(total)
 > {: .solution}
 {: .challenge}
 
-> ## Reversing a String
+> ## Looping a Sliced List
 >
-> Fill in the blanks in the program below so that it prints "nit"
-> (the reverse of the original character string "tin").
+> Fill in the blanks in the program below so that it prints every other list item after skipping the first item.
 >
 > ~~~
-> original = "tin"
+> original = ['Ireland', 'Italy', 'Montenegro', 'Netherlands']
 > result = ____
-> for char in original:
->     result = ____
+> for country in original[____]:
+>     result._____(country)
 > print(result)
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > original = "tin"
-> > result = ""
-> > for char in original:
-> >     result = char + result
+> > original = ['Ireland', 'Italy', 'Montenegro','Netherlands']
+> > result = []
+> > for country in original[1::2]:
+> >     result.append(country)
 > > print(result)
 > > ~~~
 > > {: .language-python}
