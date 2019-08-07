@@ -233,10 +233,10 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
 *   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
 *   When in Command mode (esc/gray),
-    *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
-    *   The <kbd>A</kbd> key will make one above.
-    *   The <kbd>X</kbd> key will delete the current cell.
-    *   The <kbd>Z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
+    *   The <kbd>b</kbd> key will make a new cell below the currently selected cell.
+    *   The <kbd>a</kbd> key will make one above.
+    *   The <kbd>x</kbd> key will delete the current cell.
+    *   The <kbd>z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
 *   All actions can be done using the menus, but there are lots of keyboard shortcuts to speed things up.
 
 > ## Command Vs. Edit
