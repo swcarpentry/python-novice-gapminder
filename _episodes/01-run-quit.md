@@ -251,9 +251,9 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > >
 > > Command mode has a grey border and Edit mode has a green border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>X</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>Z</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
 > >
 > {: .solution}
 {: .challenge}
@@ -281,7 +281,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in 
     Markdown.
 *   Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and 
-    press the <kbd>Y</kbd> key.
+    press the <kbd>y</kbd> key.
 
 ### Markdown does most of what HTML does.
 
@@ -458,7 +458,7 @@ Or use [named links][data_carpentry].
 > {: .language-python}
 >
 > And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
-> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>M</kbd> to switch the cell to Markdown
+> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
 > and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
 > What happened and how might this be useful?
 > 
