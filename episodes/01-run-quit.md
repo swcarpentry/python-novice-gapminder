@@ -249,7 +249,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 >
 > > ## Solution
 > >
-> > Command mode has a grey border and Edit mode has a green border. 
+> > Command mode has a grey border and Edit mode has a blue border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
