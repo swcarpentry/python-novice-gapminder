@@ -74,11 +74,11 @@ $ jupyter lab
 {: .bash}
 
 ### Windows Users
-To start the JupyterLab server you will need to access the command line through the Command 
-Prompt. Use the shortcut keys <kbd>Windows Logo Key</kbd> + <kbd>R</kbd> to launch the Run window, 
-then type in `cmd` and press Enter.
+To start the JupyterLab server you will need to access the open Anaconda Prompt.
 
-After you have launched the Command Prompt, type the command:
+Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
+
+After you have launched the Anaconda Prompt, type the command:
 
 ~~~
 $ jupyter lab
