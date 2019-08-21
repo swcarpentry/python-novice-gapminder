@@ -39,11 +39,9 @@ plt.ylabel('Position (km)')
 {: .language-python}
 
 ![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
-## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
-*   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
-*   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
-*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
+
+## Data can be plotted from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 ~~~
 import pandas as pd
@@ -54,38 +52,9 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 years = data.columns.str.strip('gdpPercap_')
 # Convert year values to integers, saving results back to dataframe
 data.columns = years.astype(int)
-
-data.loc['Australia'].plot()
 ~~~
 {: .language-python}
 
-![GDP plot for Australia](../fig/9_gdp_australia.svg)
-## Select and transform data, then plot it.
-
-*   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
-*   We can transpose the data in order to plot multiple series.
-
-~~~
-data.T.plot()
-plt.ylabel('GDP per capita')
-~~~
-{: .language-python}
-
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
-## Many styles of plot are available.
-
-*   For example, do a bar plot using a fancier style.
-
-~~~
-plt.style.use('ggplot')
-data.T.plot(kind='bar')
-plt.ylabel('GDP per capita')
-~~~
-{: .language-python}
-
-![GDP barplot for Australia](../fig/9_gdp_bar.svg)
-
-## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 *   The command is `plt.plot(x, y)`
 *   The color / format of markers can also be specified as an optical argument: e.g. 'b-' is a blue line, 'g--' is a green dashed line.
 
@@ -157,6 +126,45 @@ plt.scatter(gdp_australia, gdp_nz)
 {: .language-python}
 
 ![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
+
+## Data can also be plottted using the inbuilt functions of a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+
+*   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+*   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
+*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
+
+~~~
+data.loc['Australia'].plot()
+~~~
+{: .language-python}
+
+![GDP plot for Australia](../fig/9_gdp_australia.svg)
+
+## Select and transform data, then plot it.
+
+*   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
+*   We can transpose the data in order to plot multiple series.
+
+~~~
+data.T.plot()
+plt.ylabel('GDP per capita')
+~~~
+{: .language-python}
+
+![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
+## Many styles of plot are available.
+
+*   For example, do a bar plot using a fancier style.
+
+~~~
+plt.style.use('ggplot')
+data.T.plot(kind='bar')
+plt.ylabel('GDP per capita')
+~~~
+{: .language-python}
+
+![GDP barplot for Australia](../fig/9_gdp_bar.svg)
+
 ~~~
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ~~~
