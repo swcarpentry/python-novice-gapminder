@@ -12,6 +12,7 @@
 [cran-stringr]: https://cran.r-project.org/package=stringr
 [dc-lessons]: http://www.datacarpentry.org/lessons/
 [email]: mailto:team@carpentries.org
+[gapminder]: http://gapminder.org
 [github-importer]: https://import.github.com/
 [good-enough-practices]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
 [importer]: https://github.com/new/import
