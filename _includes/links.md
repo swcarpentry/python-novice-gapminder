@@ -13,6 +13,7 @@
 [dc-lessons]: http://www.datacarpentry.org/lessons/
 [email]: mailto:team@carpentries.org
 [github-importer]: https://import.github.com/
+[good-enough-practices]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
 [importer]: https://github.com/new/import
 [jekyll-collection]: https://jekyllrb.com/docs/collections/
 [jekyll-install]: https://jekyllrb.com/docs/installation/
@@ -34,6 +35,7 @@
 [numfocus]: https://numfocus.org/
 [osi]: https://opensource.org
 [pandoc]: https://pandoc.org/
+[pandas]: https://pandas.pydata.org/
 [paper-now]: https://github.com/PeerJ/paper-now
 [python-gapminder]: https://swcarpentry.github.io/python-novice-gapminder/
 [pyyaml]: https://pypi.python.org/pypi/PyYAML
