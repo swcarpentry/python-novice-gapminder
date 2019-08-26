@@ -68,7 +68,7 @@ on your OS.
 
 #### Windows - [Video tutorial][video-windows]
 
-1. Open [https://www.anaconda.com/download][continuum-windows]
+1. Open [https://www.anaconda.com/download][anaconda-windows]
    with your web browser.
 
 2. Download the Python 3 installer for Windows.
@@ -78,7 +78,7 @@ on your OS.
 
 #### Mac OS X - [Video tutorial][video-mac]
 
-1. Open [https://www.anaconda.com/download][continuum-mac]
+1. Open [https://www.anaconda.com/download][anaconda-mac]
    with your web browser.
 
 2. Download the Python 3 installer for OS X.
@@ -90,7 +90,7 @@ on your OS.
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [https://www.anaconda.com/download][continuum-linux] with your web browser.
+1.  Open [https://www.anaconda.com/download][anaconda-linux] with your web browser.
 
 2.  Download the Python 3 installer for Linux.
 
@@ -118,12 +118,21 @@ If you run into any difficulties, please request help before the workshop begins
         press enter to prepend Anaconda to your `PATH` (this makes the Anaconda 
         distribution the default Python).
 
+## Getting the Data
+
+The data we will be using is taken from the [gapminder][gapminder] dataset.
+To obtain it, download and unzip the file 
+[python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
+In order to follow the presented material, you should launch the JupyterLab 
+server in the root directory (see [Starting JupyterLab]({{ page.root }}/01-run-quit/#starting-jupyterlab)).
+
+
 [anaconda]: https://www.anaconda.com/
-[anaconda-distribution]: https://www.anaconda.com/distribution/
-[miniconda]: https://docs.conda.io/en/latest/miniconda.html
-[continuum-mac]: https://www.anaconda.com/download/#macos
-[continuum-linux]: https://www.anaconda.com/download/#linux
-[continuum-windows]: https://www.anaconda.com/download/#windows
+[anaconda-mac]: https://www.anaconda.com/download/#macos
+[anaconda-linux]: https://www.anaconda.com/download/#linux
+[anaconda-windows]: https://www.anaconda.com/download/#windows
+[gapminder]: https://en.wikipedia.org/wiki/Gapminder_Foundation
+[jupyter]: http://jupyter.org/
 [python]: https://python.org
 [video-mac]: https://www.youtube.com/watch?v=TcSAln46u9U
 [video-windows]: https://www.youtube.com/watch?v=xxQ0mzZ8UvA

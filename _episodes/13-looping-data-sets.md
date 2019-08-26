@@ -16,7 +16,7 @@ keypoints:
 
 ## Use a `for` loop to process files given a list of their names.
 
-*   A filename is just a character string.
+*   A filename is a character string.
 *   And lists can contain character strings.
 
 ~~~
@@ -48,14 +48,14 @@ dtype: float64
 ~~~
 {: .output}
 
-## Use `glob.glob` to find sets of files whose names match a pattern.
+## Use [`glob.glob`](https://docs.python.org/3/library/glob.html#glob.glob) to find sets of files whose names match a pattern.
 
 *   In Unix, the term "globbing" means "matching a set of files with a pattern".
 *   The most common patterns are:
     *   `*` meaning "match zero or more characters"
     *   `?` meaning "match exactly one character"
-*   Python contains the `glob` library to provide pattern matching functionality
-*   The `glob` library contains a function also called `glob` to match file patterns
+*   Python contains the [`glob`](https://docs.python.org/3/library/glob.html) library to provide pattern matching functionality
+*   The [`glob`](https://docs.python.org/3/library/glob.html) library contains a function also called `glob` to match file patterns
 *   E.g., `glob.glob('*.txt')` matches all files in the current directory 
     whose names end with `.txt`.
 *   Result is a (possibly empty) list of character strings.
@@ -137,8 +137,8 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > print('smallest file has', fewest, 'records')
 > ~~~
 > {: .language-python}
-> Notice that the shape method returns a tuple with 
-> the number of rows and columns of the data frame.
+> Note that the [shape method](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html)
+> returns a tuple with the number of rows and columns of the data frame.
 >
 > > ## Solution
 > > ~~~
@@ -160,6 +160,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 > > ## Solution
+> > This solution uses string [`rpartition method`](https://docs.python.org/3/library/stdtypes.html#str.rpartition) to
+> > split the string filename into piece but we could have also used the [pathlib
+> > module](https://docs.python.org/3/library/pathlib.html) to help us split the filename into relevant pieces for a
+> > useful legend.
 > > ~~~
 > > import glob
 > > import pandas as pd
@@ -167,8 +171,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > fig, ax = plt.subplots(1,1)
 > > for filename in glob.glob('data/gapminder_gdp*.csv'):
 > >     dataframe = pd.read_csv(filename)
-> >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'
-> >     region = filename.rpartition('_')[2][:-4] 
+> >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
+> >     # we split the string using rpartition using
+> >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
+> >     region = filename.rpartition('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
 > > plt.legend()
 > > plt.show()

@@ -87,9 +87,7 @@ DESCRIPTION
     mathematical functions defined by the C standard.
 
 FUNCTIONS
-    acos(...)
-        acos(x)
-
+    acos(x, /)
         Return the arc cosine (measured in radians) of x.
 ⋮ ⋮ ⋮
 ~~~
@@ -202,7 +200,7 @@ cos(pi) is -1.0
 > > {: .language-python}
 > >
 > > Note that this function returns a list of values. We will learn about
-> > lists in episode 11.
+> > lists in [episode 11]({% link _episodes/11-lists.md %}).
 > >
 > > There's also other functions you could use, but with more convoluted
 > > code as a result.
@@ -304,13 +302,13 @@ cos(pi) is -1.0
 >
 > Print commands:
 >
-> 1. `print("sin(pi/2) =",sin(pi/2))`
-> 2. `print("sin(pi/2) =",m.sin(m.pi/2))`
-> 3. `print("sin(pi/2) =",math.sin(math.pi/2))`
+> 1. `print("sin(pi/2) =", sin(pi/2))`
+> 2. `print("sin(pi/2) =", m.sin(m.pi/2))`
+> 3. `print("sin(pi/2) =", math.sin(math.pi/2))`
 >
 > Library calls:
 >
-> 1. `from math import sin,pi`
+> 1. `from math import sin, pi`
 > 2. `import math`
 > 3. `import math as m`
 > 4. `from math import *`

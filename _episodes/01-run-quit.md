@@ -20,6 +20,25 @@ keypoints:
 - "The Notebook will turn Markdown into pretty-printed documentation."
 - "Markdown does most of what HTML does."
 ---
+## Activate the Conda environment
+
+At the end of the previous episode we deactivated our Conda environment. If you have not already 
+done so, then go ahead and activate the Conda environment.
+
+~~~
+$ cd ~/Desktop/python-novice-gapminder
+$ source activate ./env
+(absolute/path/to/Desktop/python-novice-gapminder/env) $
+~~~
+{: .language-bash}
+
+Windows users will need to run the following commands from the Anaconda Prompt.
+
+~~~
+> cd ~\Desktop\python-novice-gapminder
+> activate .\env
+(absolute\path\to\Desktop\python-novice-gapminder\env) >
+~~~
 
 ## Getting Started with JupyterLab
 
@@ -33,10 +52,6 @@ and even custom components in a flexible, integrated, and extensible manner. Jup
 reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
 Explorer versions 9 and below are *not* supported.
 
-JupyterLab is included as part of the the Anaconda Python distribution. If you have not already 
-installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
-for installation instructions.
-
 Even though JupyterLab is a web-based application, JupyterLab runs locally on your machine and 
 does not require an internet connection.
 *   The JupyterLab server sends messages to your web browser.
@@ -46,44 +61,28 @@ does not require an internet connection.
 
 > ## JupyterLab? What about Jupyter notebooks?
 > 
-> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview). If you have prior 
-> experience working with Jupyter notebooks, then you will have a a good idea of what to expect 
-> from JupyterLab. 
+> JupyterLab is the [next stage in the evolution of the Jupyter Notebook][jupyterlab-overview]. 
+> If you have prior experience working with Jupyter notebooks, then you will have a a good idea of 
+> what to expect from JupyterLab. 
 > 
-> Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
-> between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
-> [JupyterLab user interface documentation][jupyterlab-ui].
+> Experienced users of Jupyter notebooks interested in a more detailed discussion of the 
+> similarities and differences between the JupyterLab and Jupyter notebook user interfaces can 
+> find more information in the [JupyterLab user interface documentation][jupyterlab-ui].
 >
 {: .callout}
 
 ## Starting JupyterLab
 
-### Mac OS X
-To start the JupyterLab server you will need to access the command line through the Terminal. 
-There are two ways to open Terminal on Mac.
-
-1. In your Applications folder, open Utilities and double-click on Terminal
-2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
-double-click the search result or hit <kbd>Enter</kbd>
-
-After you have launched Terminal, type the command to launch the JupyerLab server.
+Since we already installed JupyterLab into our Conda environment in the previous episode, to 
+launch the JupyterLab server we only need to run the following command.
 
 ~~~
-$ jupyter lab
+(absolute/path/to/Desktop/python-novice-gapminder/env) $ jupyter lab
 ~~~
-{: .bash}
+{: .language-bash}
 
-### Windows Users
-To start the JupyterLab server you will need to access the command line through the Command 
-Prompt. Use the shortcut keys <kbd>Windows Logo Key</kbd> + <kbd>R</kbd> to launch the Run window, 
-then type in `cmd` and press Enter.
-
-After you have launched the Command Prompt, type the command:
-
-~~~
-$ jupyter lab
-~~~
-{: .bash}
+For Windows users the command is exactly the same (even though the Powershell prompt will look a 
+little different).
 
 Below is a screenshot of a similar JupyterLab landing page to the one that should open in your 
 default web browser after starting the JupyterLab server on wither Mac OS X or Windows.
@@ -233,10 +232,10 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
 *   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
 *   When in Command mode (esc/gray),
-    *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
-    *   The <kbd>A</kbd> key will make one above.
-    *   The <kbd>X</kbd> key will delete the current cell.
-    *   The <kbd>Z</kbd> key will undo your last cell deletion.
+    *   The <kbd>b</kbd> key will make a new cell below the currently selected cell.
+    *   The <kbd>a</kbd> key will make one above.
+    *   The <kbd>x</kbd> key will delete the current cell.
+    *   The <kbd>z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
 *   All actions can be done using the menus, but there are lots of keyboard shortcuts to speed things up.
 
 > ## Command Vs. Edit
@@ -244,14 +243,16 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > In the Jupyter notebook page are you currently in Command or Edit mode?  
 > Switch between the modes. 
 > Use the shortcuts to generate a new cell. 
-> Use the shortcuts to delete a cell
+> Use the shortcuts to delete a cell.
+> Use the shortcuts to undo the last cell operation you performed.
 >
 > > ## Solution
 > >
-> > Command mode has a grey border and Edit mode has a green border. 
+> > Command mode has a grey border and Edit mode has a blue border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>X</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
 > >
 > {: .solution}
 {: .challenge}
@@ -279,7 +280,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in 
     Markdown.
 *   Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and 
-    press the <kbd>Y</kbd> key.
+    press the <kbd>y</kbd> key.
 
 ### Markdown does most of what HTML does.
 
@@ -366,7 +367,7 @@ But blank lines
 create new paragraphs.
 ~~~
   </div>
-  <div class="col-md-6" markdown="1">
+<div class="col-md-6" markdown="1">
 Line breaks
 don't matter.
 
@@ -456,7 +457,7 @@ Or use [named links][data_carpentry].
 > {: .language-python}
 >
 > And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
-> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>M</kbd> to switch the cell to Markdown
+> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
 > and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
 > What happened and how might this be useful?
 > 
@@ -500,7 +501,7 @@ Or use [named links][data_carpentry].
 
 ## Closing JupyterLab
 
-*   From the Menu Bar select the "File" menu and the choose "Quit" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (dont't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
+*   From the Menu Bar select the "File" menu and the choose "Quit" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (don't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
 *   To restart the JupyterLab server you will need to re-run the following command from a shell.
 
 ~~~
@@ -512,10 +513,11 @@ $ jupyter lab
 > Practice closing and restarting the JupyterLab server.
 > 
 {: .challenge}
-
 [anaconda]: https://docs.continuum.io/anaconda/install
-[jupyter]: http://jupyter.org/
-[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
 [jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
 [markdown]: https://en.wikipedia.org/wiki/Markdown
+[jupyter]: http://jupyter.org/
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
+
+{% include links.md %}

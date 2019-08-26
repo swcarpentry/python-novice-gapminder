@@ -3,7 +3,7 @@ title: "Getting Started with Conda"
 teaching: 15
 exercises: 5
 questions:
-- "Why should I use a package and environment management system as part of my research workflow?"
+- "Why should I use a package and environment management system?"
 - "What is Conda?"
 - "How should I organize my project directory?"
 objectives:
@@ -11,11 +11,10 @@ objectives:
 - "Verify your Conda installation."
 - "Learn to manage (create, update, remove, etc) Conda environments."
 keypoints:
--   "Using a package and environment management tool, such as Conda, facilitates reproducibility of 
-    research workflows."
+-   "Using a package and environment management tool facilitates reproducible research workflows."
 -   "Conda is a platform agnostic, open source package and environment management system."
--   "Every project should has its own directory and its own environment (installed as a 
-    sub-directory within the project directory)." 
+-   "Every project should have its own directory and its own environment."
+-   "A project's environment should be installed as a sub-directory within the project directory." 
 ---
 
 > ## TLDR;
@@ -24,12 +23,12 @@ keypoints:
 > ~~~
 > $ mkdir project-dir
 > $ cd project-dir
-> $ nano environment.yml # describe your environment
+> $ nano environment.yml # describe the environment
 > $ conda env create --prefix ./env --file environment.yml # create the environment
 > $ source activate ./env # activate the environment
-> (absolute/path/to/project-dir/env) $ nano environment.yml # forgot to add some deps
-> (absolute/path/to/project-dir/env) $ conda env update --prefix ./env --file environment.yml --prune) # update the environment
-> (absolute/path/to/project-dir/env) $ conda deactivate # done working for now
+> (/path/to/env) $ nano environment.yml # forgot to add some deps
+> (/path/to/env) $ conda env update --prefix ./env --file environment.yml --prune) # update the environment
+> (/path/to/env) $ conda deactivate # done working on project (for now!)
 > ~~~
 > {: .language-bash}
 {: .callout}
@@ -146,61 +145,74 @@ your usual version of Python in your normal environment.
 ## Installing Conda
 
 As long as you have already installed the Python 3 Miniconda or Anaconda Python distributions, then 
-Conda has already been installed on your machine.
+Conda has already been installed on your machine. If you have not already installed one of the 
+recommended Python 3 distibutions then please see the [setup instructions][lesson-setup] for 
+details.
 
-> ## Verifying your Conda installation
->
-> In order to verify that you have installed Conda correctly run the `conda info` command. Output 
-> of the command should look similar to the following. Note that the conda version number is 
-> provided as part of the output of this command.
-> 
-> ~~~
-> $ conda info
->     active environment : base
->    active env location : /Users/<USERNAME>/miniconda3
->            shell level : 1
->       user config file : /Users/<USERNAME>/.condarc
-> populated config files : 
->          conda version : 4.6.14
->    conda-build version : not installed
->         python version : 3.7.1.final.0
->       base environment : /Users/<USERNAME>/miniconda3  (writable)
->           channel URLs : https://repo.anaconda.com/pkgs/main/osx-64
->                          https://repo.anaconda.com/pkgs/main/noarch
->                          https://repo.anaconda.com/pkgs/free/osx-64
->                          https://repo.anaconda.com/pkgs/free/noarch
->                          https://repo.anaconda.com/pkgs/r/osx-64
->                          https://repo.anaconda.com/pkgs/r/noarch
->          package cache : /Users/<USERNAME>/miniconda3/pkgs
->                          /Users/<USERNAME>/.conda/pkgs
->       envs directories : /Users/<USERNAME>/miniconda3/envs
->                          /Users/<USERNAME>/.conda/envs
->               platform : osx-64
->             user-agent : conda/4.6.14 requests/2.19.1 CPython/3.7.1 Darwin/18.6.0 OSX/10.14.5
->                UID:GID : 1682265470:1840429327
->             netrc file : None
->           offline mode : False
-> ~~~
-> {: .language-bash}
->
-> An alternative solution is to run the `conda` command and pass the `--version` flag which will 
-> return the version number if Conda has been properly installed.
-> 
-> ~~~
-> $ conda --version
-> conda 4.6.14
-> ~~~
-> {: .language-bash}
-> 
-{: .callout}
+In order to verify that you have installed Conda correctly run the `conda info` command in the 
+Terminal (Mac OS or Linux) or Anaconda Powershell Prompt (Windows) 
+
+### Mac OS 
+
+There are two ways to open Terminal on Mac.
+
+1. In your Applications folder, open Utilities and double-click on Terminal
+2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
+double-click the search result or hit <kbd>Enter</kbd>.
+ 
+### Windows
+
+Windows users will need to search for the "Anaconda Prompt" in the search menu. Clicking on the 
+application will launch the prompt.
+
+Regardless of OS, the output of the command should look similar to the following. Note that the 
+`conda` version number is provided as part of the output of this command.
+
+~~~
+$ conda info
+    active environment : base
+   active env location : /Users/<USERNAME>/miniconda3
+           shell level : 1
+      user config file : /Users/<USERNAME>/.condarc
+populated config files : 
+         conda version : 4.6.14
+   conda-build version : not installed
+        python version : 3.7.1.final.0
+      base environment : /Users/<USERNAME>/miniconda3  (writable)
+          channel URLs : https://repo.anaconda.com/pkgs/main/osx-64
+                         https://repo.anaconda.com/pkgs/main/noarch
+                         https://repo.anaconda.com/pkgs/free/osx-64
+                         https://repo.anaconda.com/pkgs/free/noarch
+                         https://repo.anaconda.com/pkgs/r/osx-64
+                         https://repo.anaconda.com/pkgs/r/noarch
+         package cache : /Users/<USERNAME>/miniconda3/pkgs
+                         /Users/<USERNAME>/.conda/pkgs
+      envs directories : /Users/<USERNAME>/miniconda3/envs
+                         /Users/<USERNAME>/.conda/envs
+              platform : osx-64
+            user-agent : conda/4.6.14 requests/2.19.1 CPython/3.7.1 Darwin/18.6.0 OSX/10.14.5
+               UID:GID : 1682265470:1840429327
+            netrc file : None
+          offline mode : False
+~~~
+{: .language-bash}
+
+An alternative solution is to run the `conda` command and pass the `--version` flag which will 
+return the version number if Conda has been properly installed.
+
+~~~
+$ conda --version
+conda 4.6.14
+~~~
+{: .language-bash}
 
 ## Managing Conda Environments
 
 ### New Project, New Directory
 
-Every new project (no matter how small!) should live in its own directory. WHile the topic of 
+Every new project (no matter how small!) should live in its own directory. While the topic of 
 project organization "best practices" could be an episode in itself, a good reference to get 
-started is [Good Enough Practices for Scientific Computing][good-enough-practices]. Let's create a 
+started is [_Good Enough Practices for Scientific Computing_][good-enough-practices]. Let's create a 
 new project directory for today's workshop.
 
 ~~~
@@ -223,7 +235,7 @@ these steps in turn.
 In order to make sure that your environment is truly shareable, we need to make sure that 
 that the contents of your environment are described in such a way that the resulting 
 environment file can be used to re-create your environment on Linux, Mac OS, and Windows. Conda 
-uses YAML ("YAML Ain't Markup Language") for writing its environment files. YAML is a 
+uses [YAML ("YAML Ain't Markup Language")][yaml] for writing its environment files. YAML is a 
 human-readable data-serialization language that is commonly used for configuration files and that 
 uses Python-style indentation to indicate nesting.
 
@@ -236,7 +248,8 @@ uses Python-style indentation to indicate nesting.
 {: .callout}
 
 Let's take a look at a canonical `environment.yml` file to give you an idea of how to write 
-your own environment files.
+your own environment files. The following is a minimal `environment.yml`file. Note that we specify 
+a `name` for the environment (which can be `null`) followed by our project `dependencies`.
 
 ~~~
 name: python-novice-gapminder-env
@@ -244,8 +257,30 @@ name: python-novice-gapminder-env
 dependencies:
   - python=3.7
   - matplotlib=3.1
-  - pandas=0.24
+  - pandas=0.25
 ~~~
+
+> ## Always specify version numbers for your dependencies!
+>
+> In order to make your results more reproducible and to make it easier for research colleagues to 
+> recreate your Conda environments on their machines it is a "best practice" to always explicitly 
+> specify the version number for each package that you install into an environment. If you are not 
+> sure exactly which version of a package you want to use, then you can use search to see what 
+> versions are available using the following command.
+>
+> ~~~
+> $ conda search $PACKAGE_NAME
+> ~~~
+> 
+> So, for example, if you wanted to see what versions of [Pandas][pandas] are available you would 
+> run the following. 
+>
+> ~~~
+> $ conda search pandas
+> ~~~
+> 
+> As always you can run `conda search --help` to learn about available options.
+{: .callout}
 
 > ## Creating an `environment.yml` file
 >
@@ -441,5 +476,4 @@ $ conda deactivate
 ~~~
 {: .language-bash}
 
-[gapminder]: http://gapminder.org
-[good-enough-practices]: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
+{% include links.md %}

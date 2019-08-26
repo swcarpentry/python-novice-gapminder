@@ -86,7 +86,11 @@ print(max(1, 'a'))
 ~~~
 {: .language-python}
 ~~~
-TypeError: unorderable types: str() > int()
+TypeError                                 Traceback (most recent call last)
+<ipython-input-52-3f049acf3762> in <module>
+----> 1 print(max(1, 'a'))
+
+TypeError: '>' not supported between instances of 'str' and 'int'
 ~~~
 {: .error}
 
@@ -126,12 +130,11 @@ help(round)
 ~~~
 Help on built-in function round in module builtins:
 
-round(...)
-    round(number[, ndigits]) -> number
-
-    Round a number to a given precision in decimal digits (default 0 digits).
-    This returns an int when called with one argument, otherwise the
-    same type as the number. ndigits may be negative.
+round(number, ndigits=None)
+    Round a number to a given precision in decimal digits.
+    
+    The return value is an integer if ndigits is omitted or None.  Otherwise
+    the return value has the same type as the number.  ndigits may be negative.
 ~~~
 {: .output}
 
@@ -145,6 +148,9 @@ name = 'Feng
 ~~~
 {: .language-python}
 ~~~
+  File "<ipython-input-56-f42768451d55>", line 2
+    name = 'Feng
+                ^
 SyntaxError: EOL while scanning string literal
 ~~~
 {: .error}
@@ -155,6 +161,9 @@ age = = 52
 ~~~
 {: .language-python}
 ~~~
+  File "<ipython-input-57-ccc3df3cf902>", line 2
+    age = = 52
+          ^
 SyntaxError: invalid syntax
 ~~~
 {: .error}
@@ -182,7 +191,7 @@ SyntaxError: unexpected EOF while parsing
 *   Next is the problematic line of code,
     indicating the problem with a `^` pointer.
 
-## Python reports a runtime error when something goes wrong while a program is executing.
+## <a name='runtime-error'></a> Python reports a runtime error when something goes wrong while a program is executing.
 
 ~~~
 age = 53
@@ -190,6 +199,11 @@ remaining = 100 - aege # mis-spelled 'age'
 ~~~
 {: .language-python}
 ~~~
+NameError                                 Traceback (most recent call last)
+<ipython-input-59-1214fb6c55fc> in <module>
+      1 age = 53
+----> 2 remaining = 100 - aege # mis-spelled 'age'
+
 NameError: name 'aege' is not defined
 ~~~
 {: .error}
@@ -198,7 +212,8 @@ NameError: name 'aege' is not defined
 
 ## The Jupyter Notebook has two ways to get help.
 
-*   Place the cursor inside the parenthesis of the function,
+*   Place the cursor anywhere in the function invocation 
+    (i.e., the function name or its parameters),
     hold down `shift`,
     and press `tab`.
 *   Or type a function name with a question mark after it.
@@ -236,7 +251,7 @@ result of print is None
 > > 1.
 > >    1. `1.1 * radiance = 1.1`
 > >    2. `1.1 - 0.5 = 0.6`
-> >    3. `min(randiance, 0.6) = 0.6`
+> >    3. `min(radiance, 0.6) = 0.6`
 > >    4. `2.0 + 0.6 = 2.6`
 > >    5. `max(2.1, 2.6) = 2.6`
 > > 2. At the end, `radiance = 2.6`
@@ -259,7 +274,6 @@ result of print is None
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > 1. 
 > > ~~~
 > > print(max(easy_string))
 > > ~~~
@@ -284,9 +298,16 @@ result of print is None
 > > 4
 > > ~~~
 > > {: .output}
+> > `max(len(rich), poor)` throws a TypeError. This turns into `max(4, 'tin')` and 
+> > as we discussed earlier a string and integer cannot meaningfully be compared.
+> > ~~~
+> > TypeError                                 Traceback (most recent call last)
+> > <ipython-input-65-bc82ad05177a> in <module>
+> > ----> 1 max(len(rich), poor)
 > > 
-> > 2. It throws a TypeError. The command is trying to run `max(4, 'tin')` and you can't compare
-> >    a string and an integer
+> > TypeError: '>' not supported between instances of 'str' and 'int'
+> > ~~~
+> > {: .error }
 > {: .solution}
 {: .challenge}
 

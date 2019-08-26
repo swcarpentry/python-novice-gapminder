@@ -132,7 +132,7 @@ for p in primes:
 
 ## Use `range` to iterate over a sequence of numbers.
 
-*   The built-in function `range` produces a sequence of numbers.
+*   The built-in function [`range`](https://docs.python.org/3/library/stdtypes.html#range) produces a sequence of numbers.
     *   *Not* a list: the numbers are produced on demand
         to make looping over large ranges more efficient.
 *   `range(N)` is the numbers 0..N-1
@@ -365,6 +365,8 @@ print(total)
 > ~~~
 > {: .language-python}
 > > ## Solution
+> > The variable `message` needs to be initialized and Python variable names are case sensitive: `number` and `Number`
+> > refer to different variables.
 > > ~~~
 > > message = ""
 > > for number in range(10):
@@ -392,6 +394,7 @@ print(total)
 > ~~~
 > {: .language-python}
 > > ## Solution
+> > This list has 4 elements and the index to access the last element in the list is `3`.
 > > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[3])

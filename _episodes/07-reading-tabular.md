@@ -20,7 +20,7 @@ keypoints:
 
 *   Pandas is a widely-used Python library for statistics, particularly on tabular data.
 *   Borrows many features from R's dataframes.
-    *   A 2-dimenstional table whose columns have names
+    *   A 2-dimensional table whose columns have names
         and potentially have different data types.
 *   Load it with `import pandas as pd`. The alias pd is commonly used for Pandas.
 *   Read a Comma Separate Values (CSV) data file with `pd.read_csv`.
@@ -62,7 +62,7 @@ print(data)
 > which is why the path to the file is `data/gapminder_gdp_oceania.csv`.
 > If you forget to include `data/`,
 > or if you include it but your copy of the file is somewhere else,
-> you will get a [runtime error]({{ page.root }}/05-error-messages/)
+> you will get a [runtime error]({{ page.root }}/04-built-in/#runtime-error)
 > that ends with a line like this:
 >
 > ~~~
