@@ -232,10 +232,10 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
 *   Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
 *   When in Command mode (esc/gray),
-    *   The <kbd>B</kbd> key will make a new cell below the currently selected cell.
-    *   The <kbd>A</kbd> key will make one above.
-    *   The <kbd>X</kbd> key will delete the current cell.
-    *   The <kbd>Z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
+    *   The <kbd>b</kbd> key will make a new cell below the currently selected cell.
+    *   The <kbd>a</kbd> key will make one above.
+    *   The <kbd>x</kbd> key will delete the current cell.
+    *   The <kbd>z</kbd> key will undo your last cell operation (which could be a deletion, creation, etc).
 *   All actions can be done using the menus, but there are lots of keyboard shortcuts to speed things up.
 
 > ## Command Vs. Edit
@@ -248,11 +248,11 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 >
 > > ## Solution
 > >
-> > Command mode has a grey border and Edit mode has a green border. 
+> > Command mode has a grey border and Edit mode has a blue border. 
 > > Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes. 
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>B</kbd> or <kbd>A</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>X</kbd>.
-> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>Z</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
+> > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
 > >
 > {: .solution}
 {: .challenge}
@@ -280,7 +280,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 *   `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in 
     Markdown.
 *   Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and 
-    press the <kbd>Y</kbd> key.
+    press the <kbd>y</kbd> key.
 
 ### Markdown does most of what HTML does.
 
@@ -457,7 +457,7 @@ Or use [named links][data_carpentry].
 > {: .language-python}
 >
 > And then run it with <kbd>Shift</kbd>+<kbd>Return</kbd> to be sure that it works as a code cell.
-> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>M</kbd> to switch the cell to Markdown
+> Now go back to the cell and use <kbd>Esc</kbd> then <kbd>m</kbd> to switch the cell to Markdown
 > and "run" it with <kbd>Shift</kbd>+<kbd>Return</kbd>.
 > What happened and how might this be useful?
 > 
