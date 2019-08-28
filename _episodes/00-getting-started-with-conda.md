@@ -206,6 +206,20 @@ conda 4.6.14
 ~~~
 {: .language-bash}
 
+### Make sure you have the most recent version
+
+The version of Conda included with the most recent version of Miniconda might not be the latest 
+version of Conda. Run the following command to make sure that you have the most recent version and 
+of Conda (including bug fixes!).
+
+~~~
+$ conda update --name base --channel defaults --yes conda
+~~~
+{: .language-bash}
+
+You can re-run this command at any time to update to the most recent version of Conda.
+
+
 ## Managing Conda Environments
 
 ### New Project, New Directory
