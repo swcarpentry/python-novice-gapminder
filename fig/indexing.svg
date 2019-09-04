@@ -46,11 +46,7 @@
      inkscape:window-y="-18"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg50" />
-  <defs
-     id="defs4">
-    <style
-       id="style2">.cls-1{fill:#b3ef54;}.cls-12,.cls-2{font-size:48px;}.cls-2,.cls-4{font-family:Consolas, Consolas;}.cls-3{fill:#93278f;}.cls-13,.cls-4{font-size:24px;}.cls-5{letter-spacing:0.4em;}.cls-6{letter-spacing:0.8em;}.cls-7{letter-spacing:0em;}.cls-8{letter-spacing:0.4em;}.cls-9{letter-spacing:0.8em;}.cls-10{letter-spacing:0.4em;}.cls-11{letter-spacing:-0.15em;}.cls-12{font-family:Consolas-Bold, Consolas;font-weight:700;}</style>
-  </defs>
+ 
   <title
      id="title6">indexing</title>
   <g
@@ -66,26 +62,6 @@
        id="rect8"
        style="fill:#b3ef54" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="40"
-     y="196.5"
-     id="text58"><tspan
-       sodipodi:role="line"
-       id="tspan56"
-       x="40"
-       y="232.99321"></tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:Consolas, Consolas;-inkscape-font-specification:'Consolas, Consolas';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     x="42"
-     y="206"
-     id="text62"><tspan
-       sodipodi:role="line"
-       id="tspan60"
-       x="42"
-       y="240.70703" /></text>
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:48px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -122,14 +98,4 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:85.33333588px;font-family:Consolas;-inkscape-font-specification:Consolas"><tspan
    style="font-size:85.33333588px;fill:#800080"
    id="tspan80">print</tspan>(atom_name[0])</tspan></text>
-  <flowRoot
-     xml:space="preserve"
-     id="flowRoot92"
-     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
-       id="flowRegion94"><rect
-         id="rect96"
-         width="574"
-         height="54"
-         x="831"
-         y="225" /></flowRegion><flowPara
-       id="flowPara98"></flowPara></flowRoot></svg>
+  </svg>
