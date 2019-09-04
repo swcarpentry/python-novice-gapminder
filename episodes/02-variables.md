@@ -129,7 +129,7 @@ Age in three years: 45
 *   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
-
+![an illustration of indexing](../fig/2_indexing.svg)
 ~~~
 atom_name = 'helium'
 print(atom_name[0])
