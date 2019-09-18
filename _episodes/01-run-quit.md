@@ -66,7 +66,7 @@ There are two ways to open Terminal on Mac.
 2. Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Terminal` and then 
 double-click the search result or hit <kbd>Enter</kbd>
 
-After you have launched Terminal, type the command to launch the JupyerLab server.
+After you have launched Terminal, type the command to launch the JupyterLab server.
 
 ~~~
 $ jupyter lab
