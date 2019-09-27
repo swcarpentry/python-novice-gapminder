@@ -288,7 +288,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > ~~~
 > > {: .language-python}
 > > ~~~
-> > 1
+> > 2
 > > ~~~
 > > {: .output}
 > {: .solution}
