@@ -160,7 +160,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 > > ## Solution
-> > This solution uses string [`rpartition method`](https://docs.python.org/3/library/stdtypes.html#str.rpartition) to
+> > This solution uses string [`split method`](https://docs.python.org/3/library/stdtypes.html#str.split) to
 > > split the string filename into piece but we could have also used the [pathlib
 > > module](https://docs.python.org/3/library/pathlib.html) to help us split the filename into relevant pieces for a
 > > useful legend.
@@ -174,7 +174,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
 > >     # we split the string using rpartition using
 > >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
-> >     region = filename.rpartition('_')[-1][:-4] 
+> >     region = filename.split('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
 > > plt.legend()
 > > plt.show()
