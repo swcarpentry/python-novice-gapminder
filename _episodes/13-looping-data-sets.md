@@ -172,7 +172,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > for filename in glob.glob('data/gapminder_gdp*.csv'):
 > >     dataframe = pd.read_csv(filename)
 > >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-> >     # we split the string using rpartition using
+> >     # we will split the string using the split method and
 > >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
 > >     region = filename.split('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
