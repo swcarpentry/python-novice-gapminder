@@ -173,7 +173,8 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > >     dataframe = pd.read_csv(filename)
 > >     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
 > >     # we will split the string using the split method and `_` as our separator,
-> >     # extract `_<region>.csv` via the [-1] operator, then remove the .csv extension
+> >     # retrieve the last string in the list that split returns (`<region>.csv`), 
+> >     # and then remove the `.csv` extension from that string.
 > >     region = filename.split('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
 > > plt.legend()
