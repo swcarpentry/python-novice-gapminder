@@ -160,10 +160,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > and plots the average GDP per capita for each region over time
 > in a single chart.
 > > ## Solution
-> > This solution uses string [`rpartition method`](https://docs.python.org/3/library/stdtypes.html#str.rpartition) to
-> > split the string filename into piece but we could have also used the [pathlib
-> > module](https://docs.python.org/3/library/pathlib.html) to help us split the filename into relevant pieces for a
-> > useful legend.
+> > This solution builds a useful legend by using the string [`split`](https://docs.python.org/3/library/stdtypes.html#str.split) method to
+> > extract the `region` from the path 'data/gapminder_gdp_a_specific_region.csv'. The [`pathlib module`]
+> > also provides useful abstractions for file and path manipulation like returning the name of a file 
+> > without the file extension.
 > > ~~~
 > > import glob
 > > import pandas as pd
@@ -171,10 +171,11 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > fig, ax = plt.subplots(1,1)
 > > for filename in glob.glob('data/gapminder_gdp*.csv'):
 > >     dataframe = pd.read_csv(filename)
-> >     # extract region from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
-> >     # we split the string using rpartition using
-> >     # `_` as our separator, extract the _<region>.csv, and then strip the .csv extension
-> >     region = filename.rpartition('_')[-1][:-4] 
+> >     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
+> >     # we will split the string using the split method and `_` as our separator,
+> >     # retrieve the last string in the list that split returns (`<region>.csv`), 
+> >     # and then remove the `.csv` extension from that string.
+> >     region = filename.split('_')[-1][:-4] 
 > >     dataframe.mean().plot(ax=ax, label=region)
 > > plt.legend()
 > > plt.show()
