@@ -83,13 +83,13 @@ IndentationError: expected an indented block
 *   Indentation is always meaningful in Python.
 
 ~~~
-firstName="Jon"
-  lastName="Smith"
+firstName = "Jon"
+  lastName = "Smith"
 ~~~
 {: .language-python}
 ~~~
   File "<ipython-input-7-f65f2962bf9c>", line 2
-    lastName="Smith"
+    lastName = "Smith"
     ^
 IndentationError: unexpected indent
 ~~~
@@ -140,7 +140,7 @@ for p in primes:
 
 ~~~
 print('a range is not a list: range(0, 3)')
-for number in range(0,3):
+for number in range(0, 3):
     print(number)
 ~~~
 {: .language-python}
@@ -198,7 +198,7 @@ print(total)
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > 
+> >
 > > | Line no | Variables            |
 > > |---------|----------------------|
 > > | 1       | total = 0            |
@@ -349,7 +349,7 @@ print(total)
 >    *without* running it.
 > 2. Run the code and read the error message.
 >    What type of `NameError` do you think this is?
->    Is it a string with no quotes, a misspelled variable, or a 
+>    Is it a string with no quotes, a misspelled variable, or a
 >    variable that should have been defined but was not?
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
