@@ -112,7 +112,7 @@ Name: gdpPercap_1952, dtype: float64
 {: .output}
 
 *   Would get the same result printing `data["gdpPercap_1952"]`
-*   Also get the same result printing `data.gdpPercap_1952` (since it's a column name)
+*   Also get the same result printing `data.gdpPercap_1952` (not recommended, because `.method` syntax used for column name)
 
 ## Select multiple columns or rows using `DataFrame.loc` and a named slice.
 
