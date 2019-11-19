@@ -41,6 +41,7 @@ We may highlight some points:
 *   [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) 
     supports the use of PEP8 and extend the coding style to more specific structure of 
     a Python code, which may be interesting also to follow.
+    Google's [formatting application is called "yapf"](https://github.com/google/yapf/).
 
 ## Use assertions to check for internal errors.
 
