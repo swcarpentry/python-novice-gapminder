@@ -12,7 +12,7 @@ objectives:
 - "Use Python community coding standards (PEP-8)."
 keypoints:
 - "Follow standard Python style in your code."
-- "Use docstrings to provide online help."
+- "Use docstrings to provide builtin help."
 ---
 
 ## Coding style
@@ -56,11 +56,11 @@ def calc_bulk_density(mass, volume):
 
 If the assertion is `False`, the Python interpreter raises an `AssertionError` runtime exception. The source code for the expression that failed will be displayed as part of the error message. To ignore assertions in your code run the interpreter with the '-O' (optimize) switch. Assertions should contain only simple checks and never change the state of the program. For example, an assertion should never contain an assignment.
 
-## Use docstrings to provide online help.
+## Use docstrings to provide builtin help.
 
 *   If the first thing in a function is a character string
-    that is not assigned to a variable,
-    Python attaches it to the function as the online help.
+    that is not assigned directly to a variable,
+    Python attaches it to the function as the builtin help variable.
 *   Called a *docstring* (short for "documentation string").
 
 ~~~
