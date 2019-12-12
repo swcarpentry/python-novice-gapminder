@@ -36,7 +36,8 @@ you are ready to go as soon as the workshop begins.
 
 2. Download the Python 3 installer for OS X.
 
-3. Install Python 3 using all of the defaults for installation.
+3. Install Python 3 following instructions. Note: Be sure to click "change install location", and select "Install only for me", which will install the software under home directory. Otherwise, the standard installation will install the software under your root directory and create problems in the long run.   
+
 
 ### Linux
 
