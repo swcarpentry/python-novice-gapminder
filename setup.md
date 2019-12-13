@@ -20,8 +20,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial][video-windows]
 
-1. Open [https://www.anaconda.com/download][anaconda-windows]
-   with your web browser.
+1. Open [https://www.anaconda.com/distribution/][anaconda-windows] with your web browser.
 
 2. Download the Python 3 installer for Windows.
 
@@ -31,12 +30,11 @@ you are ready to go as soon as the workshop begins.
 
 ### Mac OS X - [Video tutorial][video-mac]
 
-1. Open [https://www.anaconda.com/download][anaconda-mac]
-   with your web browser.
+1. Visit [https://www.anaconda.com/distribution/][anaconda-mac] with your web browser.
 
-2. Download the Python 3 installer for OS X.
+2. Download the Python 3 installer for OS X. These instructions assume that you use the graphical installer `.pkg` file.
 
-3. Install Python 3 following instructions. Note: Be sure to click "change install location", and select "Install only for me", which will install the software under home directory. Otherwise, the standard installation will install the software under your root directory and create problems in the long run.   
+3. Follow the Python 3 installation instructions. Make sure that the install location is set to "Install only for me" so Anaconda will install its files locally, relative to home directory. Installing the software for all users tends to create problems in the long run and should be avoided.
 
 
 ### Linux
@@ -44,7 +42,7 @@ you are ready to go as soon as the workshop begins.
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [https://www.anaconda.com/download][anaconda-linux] with your web browser.
+1.  Open [https://www.anaconda.com/distribution/][anaconda-linux] with your web browser.
 
 2.  Download the Python 3 installer for Linux.
 
