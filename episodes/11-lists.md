@@ -269,7 +269,7 @@ IndexError: string index out of range
 > > ## Solution
 > > 1. [`list('some string')`](https://docs.python.org/3/library/stdtypes.html#list) converts a string into a list containing all of its characters.
 > > 2. [`join`](https://docs.python.org/3/library/stdtypes.html#str.join) returns a string that is the _concatenation_
-> >    of each each string element in the list and adds the separator between each element in the list. This results in
+> >    of each string element in the list and adds the separator between each element in the list. This results in
 > >    `x-y-z`. The separator between the elements is the string that provides this method.
 > {: .solution}
 {: .challenge}
