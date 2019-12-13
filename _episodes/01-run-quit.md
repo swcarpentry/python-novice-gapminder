@@ -33,7 +33,7 @@ and even custom components in a flexible, integrated, and extensible manner. Jup
 reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
 Explorer versions 9 and below are *not* supported.
 
-JupyterLab is included as part of the the Anaconda Python distribution. If you have not already 
+JupyterLab is included as part of the Anaconda Python distribution. If you have not already 
 installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
 for installation instructions.
 
@@ -494,7 +494,7 @@ Or use [named links][data_carpentry].
 > > The notebook shows the equation as it would be rendered from LaTeX equation syntax.
 > > The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
 > > If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
-> > A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the the subscript and `N` becomes the superscript.
+> > A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the subscript and `N` becomes the superscript.
 > > Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
 > > `\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols. 
 > {: .solution}

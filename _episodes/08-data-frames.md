@@ -35,7 +35,7 @@ between DataFrames.
 
 To access a value at the position `[i,j]` of a DataFrame, we have two options, depending on
 what is the meaning of `i` in use.
-Remember that a DataFrame provides a *index* as a way to identify the rows of the table;
+Remember that a DataFrame provides an *index* as a way to identify the rows of the table;
 a row, then, has a *position* inside the table as well as a *label*, which
 uniquely identifies its *entry* in the DataFrame.
 
