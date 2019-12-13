@@ -62,11 +62,11 @@ If you run into any difficulties, please request help before the workshop begins
     d.  Press enter.
 
     e.  Follow the text-only prompts.  When the license agreement appears (a colon
-        will be present at the bottom of the screen) hold the down arrow until the 
+        will be present at the bottom of the screen) press the space bar until you see the 
         bottom of the text. Type `yes` and press enter to approve the license. Press 
         enter again to approve the default location for the files. Type `yes` and 
         press enter to prepend Anaconda to your `PATH` (this makes the Anaconda 
-        distribution the default Python).
+        distribution your user's default Python).
 
 ## Getting the Data
 
