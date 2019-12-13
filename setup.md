@@ -20,30 +20,27 @@ you are ready to go as soon as the workshop begins.
 
 ### Windows - [Video tutorial][video-windows]
 
-1. Open [https://www.anaconda.com/download][anaconda-windows]
-   with your web browser.
+1. Open [https://www.anaconda.com/distribution/][anaconda-windows] with your web browser.
 
 2. Download the Python 3 installer for Windows.
 
-3. Double-click the executable and install Python 3 using _MOST_ of the
-   default settings. The only exception is to check the 
-   **Make Anaconda the default Python** option.
+3. Double-click the executable and install Python 3 using the recommended settings. Make sure that **Register Anaconda as my default Python 3.x** option is checked - it should be in the latest version of Anaconda
 
 ### Mac OS X - [Video tutorial][video-mac]
 
-1. Open [https://www.anaconda.com/download][anaconda-mac]
-   with your web browser.
+1. Visit [https://www.anaconda.com/distribution/][anaconda-mac] with your web browser.
 
-2. Download the Python 3 installer for OS X.
+2. Download the Python 3 installer for OS X. These instructions assume that you use the graphical installer `.pkg` file.
 
-3. Install Python 3 using all of the defaults for installation.
+3. Follow the Python 3 installation instructions. Make sure that the install location is set to "Install only for me" so Anaconda will install its files locally, relative to your home directory. Installing the software for all users tends to create problems in the long run and should be avoided.
+
 
 ### Linux
 
 Note that the following installation steps require you to work from the shell. 
 If you run into any difficulties, please request help before the workshop begins.
 
-1.  Open [https://www.anaconda.com/download][anaconda-linux] with your web browser.
+1.  Open [https://www.anaconda.com/distribution/][anaconda-linux] with your web browser.
 
 2.  Download the Python 3 installer for Linux.
 
@@ -65,11 +62,11 @@ If you run into any difficulties, please request help before the workshop begins
     d.  Press enter.
 
     e.  Follow the text-only prompts.  When the license agreement appears (a colon
-        will be present at the bottom of the screen) hold the down arrow until the 
+        will be present at the bottom of the screen) press the space bar until you see the 
         bottom of the text. Type `yes` and press enter to approve the license. Press 
         enter again to approve the default location for the files. Type `yes` and 
         press enter to prepend Anaconda to your `PATH` (this makes the Anaconda 
-        distribution the default Python).
+        distribution your user's default Python).
 
 ## Getting the Data
 
