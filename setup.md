@@ -24,9 +24,7 @@ you are ready to go as soon as the workshop begins.
 
 2. Download the Python 3 installer for Windows.
 
-3. Double-click the executable and install Python 3 using _MOST_ of the
-   default settings. The only exception is to check the 
-   **Make Anaconda the default Python** option.
+3. Double-click the executable and install Python 3 using the recommended settings. Make sure that **Register Anaconda as my default Python 3.x** option is checked - it should be in the latest version of Anaconda
 
 ### Mac OS X - [Video tutorial][video-mac]
 
@@ -34,7 +32,7 @@ you are ready to go as soon as the workshop begins.
 
 2. Download the Python 3 installer for OS X. These instructions assume that you use the graphical installer `.pkg` file.
 
-3. Follow the Python 3 installation instructions. Make sure that the install location is set to "Install only for me" so Anaconda will install its files locally, relative to home directory. Installing the software for all users tends to create problems in the long run and should be avoided.
+3. Follow the Python 3 installation instructions. Make sure that the install location is set to "Install only for me" so Anaconda will install its files locally, relative to your home directory. Installing the software for all users tends to create problems in the long run and should be avoided.
 
 
 ### Linux
