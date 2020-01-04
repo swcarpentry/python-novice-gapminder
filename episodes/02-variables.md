@@ -36,6 +36,7 @@ first_name = 'Ahmed'
 *   Variable names
     * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
     * cannot start with a digit
+    * are **case sensitive** (age, Age and AGE are three different variables)
 *   Variable names that start with underscores like `__alistairs_real_age` have a special meaning
     so we won't do that until we understand the convention.
 
