@@ -110,7 +110,7 @@ average(values)
 >
 > def overall_max(sequences):
 >     '''Determine overall maximum edit distance.'''
->
+> 
 >     highest = 0
 >     for left in sequences:
 >         for right in sequences:
@@ -118,7 +118,7 @@ average(values)
 >             if left != right:
 >                 this = edit_distance(left, right)
 >                 highest = max(highest, this)
->
+> 
 >     # Report.
 >     return highest
 > ~~~
