@@ -110,7 +110,7 @@ average(values)
 >
 > def overall_max(sequences):
 >     '''Determine overall maximum edit distance.'''
->
+> 
 >     highest = 0
 >     for left in sequences:
 >         for right in sequences:
@@ -118,7 +118,7 @@ average(values)
 >             if left != right:
 >                 this = edit_distance(left, right)
 >                 highest = max(highest, this)
->
+> 
 >     # Report.
 >     return highest
 > ~~~
@@ -195,20 +195,21 @@ average(values)
 > >     strings for the supplied number of iterations.
 > >     """
 > >     print(input_string)
+> >     input_string_length = len(input_string)
 > >     old = input_string
 > >     for i in range(iterations):
 > >         new = ''
 > >         # iterate through characters in previous string
-> >         for j in range(len(input_string)):
+> >         for j in range(input_string_length):
 > >             left = j-1
-> >             right = (j+1)%len(input_string) # ensure right index wraps around
-> >             if old[left]==old[right]:
+> >             right = (j+1) % input_string_length  # ensure right index wraps around
+> >             if old[left] == old[right]:
 > >                 new += '-'
 > >             else:
 > >                 new += '*'
 > >         print(new)
 > >         # store new string as old
-> >         old = new
+> >         old = new     
 > >
 > > string_machine('et cetera', 10)
 > > ~~~
