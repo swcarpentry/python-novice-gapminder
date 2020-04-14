@@ -30,8 +30,8 @@ keypoints:
 ~~~
 import pandas as pd
 
-data = pd.read_csv('data/gapminder_gdp_oceania.csv')
-print(data)
+data_oceania = pd.read_csv('data/gapminder_gdp_oceania.csv')
+print(data_oceania)
 ~~~
 {: .language-python}
 ~~~
@@ -55,6 +55,7 @@ print(data)
 
 *   The columns in a dataframe are the observed variables, and the rows are the observations.
 *   Pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
+*   It's better to use a descriptive dataframe name than to just call it data. When you're working with multiple dataframes, you can tell which is which and avoid overwriting a different dataframe in memory.
 
 > ## File Not Found
 >
@@ -76,10 +77,11 @@ print(data)
 *   Row headings are numbers (0 and 1 in this case).
 *   Really want to index by country.
 *   Pass the name of the column to `read_csv` as its `index_col` parameter to do this.
+*   Naming the dataframe `data_oceania_country` tells which region the data includes (`oceania`) and how it is indexed (`country`).
 
 ~~~
-data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
-print(data)
+data_oceania_country = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+print(data_oceania_country)
 ~~~
 {: .language-python}
 ~~~
@@ -103,7 +105,7 @@ New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ## Use `DataFrame.info` to find out more about a dataframe.
 
 ~~~
-data.info()
+data_oceania_country.info()
 ~~~
 {: .language-python}
 ~~~
@@ -141,7 +143,7 @@ memory usage: 208.0+ bytes
 *   Called a *member variable*, or just *member*.
 
 ~~~
-print(data.columns)
+print(data_oceania_country.columns)
 ~~~
 {: .language-python}
 ~~~
@@ -159,7 +161,7 @@ Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
 *   Like `columns`, it is a member variable.
 
 ~~~
-print(data.T)
+print(data_oceania_country.T)
 ~~~
 {: .language-python}
 ~~~
@@ -184,7 +186,7 @@ gdpPercap_2007  34435.36744  25185.00911
 DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
 All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
-print(data.describe())
+print(data_oceania_country.describe())
 ~~~
 {: .language-python}
 ~~~
@@ -227,14 +229,14 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 >
 > Read the data in `gapminder_gdp_americas.csv`
 > (which should be in the same directory as `gapminder_gdp_oceania.csv`)
-> into a variable called `americas`
+> into a variable called `data_americas`
 > and display its summary statistics.
 >
 > > ## Solution
 > > To read in a CSV, we use `pd.read_csv` and pass the filename 'data/gapminder_gdp_americas.csv' to it. We also once again pass the
 > > column name 'country' to the parameter `index_col` in order to index by country:
 > > ~~~
-> > americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
+> > data_americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
 > > ~~~
 > >{: .language-python}
 > {: .solution}
@@ -245,7 +247,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > ## Inspecting Data.
 >
 > After reading the data for the Americas,
-> use `help(americas.head)` and `help(americas.tail)`
+> use `help(data_americas.head)` and `help(data_americas.tail)`
 > to find out what `DataFrame.head` and `DataFrame.tail` do.
 >
 > 1.  What method call will display the first three rows of this data?
@@ -253,12 +255,12 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 >     (Hint: you may need to change your view of the data.)
 >
 > > ## Solution
-> > 1. We can check out the first five rows of `americas` by executing `americas.head()` (allowing us to view the head
+> > 1. We can check out the first five rows of `data_americas` by executing `data_americas.head()` (allowing us to view the head
 > > of the DataFrame). We can specify the number of rows we wish to see by specifying the parameter `n` in our call
-> > to `americas.head()`. To view the first three rows, execute:
+> > to `data_americas.head()`. To view the first three rows, execute:
 > >
 > > ~~~
-> > americas.head(n=3)
+> > data_americas.head(n=3)
 > > ~~~
 > >{: .language-python}
 > > 
@@ -289,17 +291,17 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >Brazil        9065.800825 
 > > ~~~ 
 > >{: .output}
-> > 2. To check out the last three rows of `americas`, we would use the command, `americas.tail(n=3)`,
+> > 2. To check out the last three rows of `data_americas`, we would use the command, `data_americas.tail(n=3)`,
 > > analogous to `head()` used above. However, here we want to look at the last three columns so we need
 > > to change our view and then use `tail()`. To do so, we create a new DataFrame in which rows and 
 > > columns are switched
 > > 
 > > ~~~
-> > americas_flipped = americas.T
+> > americas_flipped = data_americas.T
 > > ~~~
 > >{: .language-python}
 > >
-> > We can then view the last three columns of `americas` by viewing the last three rows of `americas_flipped`:
+> > We can then view the last three columns of `data_americas` by viewing the last three rows of `americas_flipped`:
 > > ~~~
 > > americas_flipped.tail(n=3)
 > > ~~~
@@ -329,7 +331,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >{: .output}
 > > Note: we could have done the above in a single line of code by 'chaining' the commands:
 > > ~~~
-> > americas.T.tail(n=3)
+> > data_americas.T.tail(n=3)
 > > ~~~
 > >{: .language-python}
 > {: .solution}
@@ -372,14 +374,14 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > write one of your dataframes to a file called `processed.csv`.
 > You can use `help` to get information on how to use `to_csv`.
 > > ## Solution
-> > In order to write the DataFrame `americas` to a file called `processed.csv`, execute the following command:
+> > In order to write the DataFrame `data_americas` to a file called `processed.csv`, execute the following command:
 > > ~~~
-> > americas.to_csv('processed.csv')
+> > data_americas.to_csv('processed.csv')
 > > ~~~
 > >{: .language-python}
 > > For help on `to_csv`, you could execute, for example,
 > > ~~~
-> > help(americas.to_csv)
+> > help(data_americas.to_csv)
 > > ~~~
 > >{: .language-python}
 > > Note that `help(to_csv)` throws an error! This is a subtlety and is due to the fact that `to_csv` is NOT a function in 
