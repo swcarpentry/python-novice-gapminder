@@ -1,0 +1,41 @@
+I"F<p>This lesson is an introduction to programming in Python for people with little or no previous 
+programming experience. It uses plotting as its motivating example, and is designed to be used in 
+both <a href="http://www.datacarpentry.org/lessons/">Data Carpentry</a> and <a href="https://software-carpentry.org/lessons/">Software Carpentry</a> workshops. 
+This lesson references <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a>, but can be taught using a regular Python interpreter 
+as well. Please note that this lesson uses Python 3 rather than Python 2.</p>
+
+<blockquote class="callout">
+  <h2 id="under-design">Under Design</h2>
+
+  <p><strong>This lesson is currently in its early design stage;
+please check <a href="./design/">the design notes</a>
+to see what we have so far.
+Contributions are very welcome:
+we would be particularly grateful for exercises
+and for commentary on the ones already there.</strong></p>
+</blockquote>
+
+<blockquote class="prereq">
+  <h2 id="prerequisites">Prerequisites</h2>
+
+  <ol>
+    <li>
+      <p>Learners need to understand what files and directories are,
+what a working directory is,
+and how to start a Python interpreter.</p>
+    </li>
+    <li>
+      <p>Learners must install Python before the class starts.</p>
+    </li>
+    <li>
+      <p>Learners must get the gapminder data before class starts:
+please download and unzip the file 
+<a href="./files/python-novice-gapminder-data.zip">python-novice-gapminder-data.zip</a>.</p>
+
+      <p>Please see <a href="./setup/">the setup instructions</a>
+for details.</p>
+    </li>
+  </ol>
+</blockquote>
+
+:ET

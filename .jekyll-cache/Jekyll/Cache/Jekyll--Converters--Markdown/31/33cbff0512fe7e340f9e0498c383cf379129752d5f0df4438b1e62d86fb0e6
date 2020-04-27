@@ -1,0 +1,385 @@
+I"ZZ<h2 id="most-of-the-power-of-a-programming-language-is-in-its-libraries">Most of the power of a programming language is in its libraries.</h2>
+
+<ul>
+  <li>A <em>library</em> is a collection of files (called <em>modules</em>) that contains
+functions for use by other programs.
+    <ul>
+      <li>May also contain data values (e.g., numerical constants) and other things.</li>
+      <li>Library’s contents are supposed to be related, but there’s no way to enforce that.</li>
+    </ul>
+  </li>
+  <li>The Python <a href="https://docs.python.org/3/library/">standard library</a> is an extensive suite of modules that comes
+with Python itself.</li>
+  <li>Many additional libraries are available from <a href="https://pypi.python.org/pypi/">PyPI</a> (the Python Package Index).</li>
+  <li>We will see later how to write new libraries.</li>
+</ul>
+
+<blockquote class="callout">
+  <h2 id="libraries-and-modules">Libraries and modules</h2>
+
+  <p>A library is a collection of modules, but the terms are often used
+interchangeably, especially since many libraries only consist of a single
+module, so don’t worry if you mix them.</p>
+</blockquote>
+
+<h2 id="a-program-must-import-a-library-module-before-using-it">A program must import a library module before using it.</h2>
+
+<ul>
+  <li>Use <code class="highlighter-rouge">import</code> to load a library module into a program’s memory.</li>
+  <li>Then refer to things from the module as <code class="highlighter-rouge">module_name.thing_name</code>.
+    <ul>
+      <li>Python uses <code class="highlighter-rouge">.</code> to mean “part of”.</li>
+    </ul>
+  </li>
+  <li>Using <code class="highlighter-rouge">math</code>, one of the modules in the standard library:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'pi is'</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'cos(pi) is'</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi is 3.141592653589793
+cos(pi) is -1.0
+</code></pre></div></div>
+
+<ul>
+  <li>Have to refer to each item with the module’s name.
+    <ul>
+      <li><code class="highlighter-rouge">math.cos(pi)</code> won’t work: the reference to <code class="highlighter-rouge">pi</code>
+doesn’t somehow “inherit” the function’s reference to <code class="highlighter-rouge">math</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="use-help-to-learn-about-the-contents-of-a-library-module">Use <code class="highlighter-rouge">help</code> to learn about the contents of a library module.</h2>
+
+<ul>
+  <li>Works just like help for a function.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help on module math:
+
+NAME
+    math
+
+MODULE REFERENCE
+    http://docs.python.org/3/library/math
+
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DESCRIPTION
+    This module is always available.  It provides access to the
+    mathematical functions defined by the C standard.
+
+FUNCTIONS
+    acos(x, /)
+        Return the arc cosine (measured in radians) of x.
+⋮ ⋮ ⋮
+</code></pre></div></div>
+
+<h2 id="import-specific-items-from-a-library-module-to-shorten-programs">Import specific items from a library module to shorten programs.</h2>
+
+<ul>
+  <li>Use <code class="highlighter-rouge">from ... import ...</code> to load only specific items from a library module.</li>
+  <li>Then refer to them directly without library name as prefix.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'cos(pi) is'</span><span class="p">,</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cos(pi) is -1.0
+</code></pre></div></div>
+
+<h2 id="create-an-alias-for-a-library-module-when-importing-it-to-shorten-programs">Create an alias for a library module when importing it to shorten programs.</h2>
+
+<ul>
+  <li>Use <code class="highlighter-rouge">import ... as ...</code> to give a library a short <em>alias</em> while importing it.</li>
+  <li>Then refer to items in the library using that shortened name.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="n">m</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'cos(pi) is'</span><span class="p">,</span> <span class="n">m</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cos(pi) is -1.0
+</code></pre></div></div>
+
+<ul>
+  <li>Commonly used for libraries that are frequently used or have long names.
+    <ul>
+      <li>E.g., <code class="highlighter-rouge">matplotlib</code> plotting library is often aliased as <code class="highlighter-rouge">mpl</code>.</li>
+    </ul>
+  </li>
+  <li>But can make programs harder to understand,
+since readers must learn your program’s aliases.</li>
+</ul>
+
+<blockquote class="challenge">
+  <h2 id="exploring-the-math-module">Exploring the Math Module</h2>
+
+  <ol>
+    <li>What function from the <code class="highlighter-rouge">math</code> module can you use to calculate a square root
+<em>without</em> using <code class="highlighter-rouge">sqrt</code>?</li>
+    <li>Since the library contains this function, why does <code class="highlighter-rouge">sqrt</code> exist?</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <ol>
+      <li>Using <code class="highlighter-rouge">help(math)</code> we see that we’ve got <code class="highlighter-rouge">pow(x,y)</code> in addition to <code class="highlighter-rouge">sqrt(x)</code>,
+so we could use <code class="highlighter-rouge">pow(x, 0.5)</code> to find a square root.</li>
+      <li>
+        <p>The <code class="highlighter-rouge">sqrt(x)</code> function is arguably more readable than <code class="highlighter-rouge">pow(x, 0.5)</code> when
+implementing equations. Readability is a cornerstone of good programming, so it
+makes sense to provide a special function for this specific common case.</p>
+
+        <p>Also, the design of Python’s <code class="highlighter-rouge">math</code> library has its origin in the C standard,
+which includes both <code class="highlighter-rouge">sqrt(x)</code> and <code class="highlighter-rouge">pow(x,y)</code>, so a little bit of the history
+of programming is showing in Python’s function names.</p>
+      </li>
+    </ol>
+
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="locating-the-right-module">Locating the Right Module</h2>
+
+  <p>You want to select a random character from a string:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bases</span> <span class="o">=</span> <span class="s">'ACTTGCTTGAC'</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li>Which <a href="https://docs.python.org/3/library/">standard library</a> module could help you?</li>
+    <li>Which function would you select from that module? Are there alternatives?</li>
+    <li>Try to write a program that uses the function.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+
+    <p>The <a href="https://docs.python.org/3/library/random.html">random module</a> seems like it could help you.</p>
+
+    <p>The string has 11 characters, each having a positional index from 0 to 10.
+You could use <code class="highlighter-rouge">random.randrange</code> function (or the alias <code class="highlighter-rouge">random.randint</code>
+if you find that easier to remember) to get a random integer between 0 and
+10, and then pick out the character at that position:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+
+<span class="n">random_index</span> <span class="o">=</span> <span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">bases</span><span class="p">[</span><span class="n">random_index</span><span class="p">])</span>
+</code></pre></div>    </div>
+
+    <p>or more compactly:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">bases</span><span class="p">[</span><span class="n">randrange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">))])</span>
+</code></pre></div>    </div>
+
+    <p>Perhaps you found the <code class="highlighter-rouge">random.sample</code> function? It allows for slightly
+less typing:</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sample</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">sample</span><span class="p">(</span><span class="n">bases</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div>    </div>
+
+    <p>Note that this function returns a list of values. We will learn about
+lists in <a href="/11-lists/index.html">episode 11</a>.</p>
+
+    <p>There’s also other functions you could use, but with more convoluted
+code as a result.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="jigsaw-puzzle-parsons-problem-programming-example">Jigsaw Puzzle (Parson’s Problem) Programming Example</h2>
+
+  <p>Rearrange the following statements so that a random
+DNA base is printed and its index in the string.  Not all statements may be needed.  Feel free to use/add
+intermediate variables.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bases</span><span class="o">=</span><span class="s">"ACTTGCTTGAC"</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">___</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">n_bases</span><span class="p">)</span>
+<span class="n">___</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"random base "</span><span class="p">,</span> <span class="n">bases</span><span class="p">[</span><span class="n">___</span><span class="p">],</span> <span class="s">"base index"</span><span class="p">,</span> <span class="n">___</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span> 
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="n">bases</span> <span class="o">=</span> <span class="s">"ACTTGCTTGAC"</span> 
+<span class="n">n_bases</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bases</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="n">n_bases</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"random base"</span><span class="p">,</span> <span class="n">bases</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="s">"base index"</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="when-is-help-available">When Is Help Available?</h2>
+
+  <p>When a colleague of yours types <code class="highlighter-rouge">help(math)</code>,
+Python reports an error:</p>
+
+  <div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NameError: name 'math' is not defined
+</code></pre></div>  </div>
+
+  <p>What has your colleague forgotten to do?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+
+    <p>Importing the math module (<code class="highlighter-rouge">import math</code>)</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="importing-with-aliases">Importing With Aliases</h2>
+
+  <ol>
+    <li>Fill in the blanks so that the program below prints <code class="highlighter-rouge">90.0</code>.</li>
+    <li>Rewrite the program so that it uses <code class="highlighter-rouge">import</code> <em>without</em> <code class="highlighter-rouge">as</code>.</li>
+    <li>Which form do you find easier to read?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="n">m</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">____</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">____</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">____</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-4">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="n">m</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>can be written as</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>Since you just wrote the code and are familiar with it, you might actually
+find the first version easier to read. But when trying to read a huge piece
+of code written by someone else, or when getting back to your own huge piece
+of code after several months, non-abbreviated names are often easier, except
+where there are clear abbreviation conventions.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="there-are-many-ways-to-import-libraries">There Are Many Ways To Import Libraries!</h2>
+
+  <p>Match the following print statements with the appropriate library calls.</p>
+
+  <p>Print commands:</p>
+
+  <ol>
+    <li><code class="highlighter-rouge">print("sin(pi/2) =", sin(pi/2))</code></li>
+    <li><code class="highlighter-rouge">print("sin(pi/2) =", m.sin(m.pi/2))</code></li>
+    <li><code class="highlighter-rouge">print("sin(pi/2) =", math.sin(math.pi/2))</code></li>
+  </ol>
+
+  <p>Library calls:</p>
+
+  <ol>
+    <li><code class="highlighter-rouge">from math import sin, pi</code></li>
+    <li><code class="highlighter-rouge">import math</code></li>
+    <li><code class="highlighter-rouge">import math as m</code></li>
+    <li><code class="highlighter-rouge">from math import *</code></li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-5">Solution</h2>
+
+    <ol>
+      <li>Library calls 1 and 4. In order to directly refer to <code class="highlighter-rouge">sin</code> and <code class="highlighter-rouge">pi</code> without
+the library name as prefix, you need to use the <code class="highlighter-rouge">from ... import ...</code>
+statement. Whereas library call 1 specifically imports the two functions
+<code class="highlighter-rouge">sin</code> and <code class="highlighter-rouge">pi</code>, library call 4 imports all functions in the <code class="highlighter-rouge">math</code> module.</li>
+      <li>Library call 3. Here <code class="highlighter-rouge">sin</code> and <code class="highlighter-rouge">pi</code> are referred to with a shortened library
+name <code class="highlighter-rouge">m</code> instead of <code class="highlighter-rouge">math</code>. Library call 3 does exactly that using the
+<code class="highlighter-rouge">import ... as ...</code> syntax - it creates an alias for <code class="highlighter-rouge">math</code> in the form of
+the shortened name <code class="highlighter-rouge">m</code>.</li>
+      <li>Library call 2. Here <code class="highlighter-rouge">sin</code> and <code class="highlighter-rouge">pi</code> are referred to with the regular library
+name <code class="highlighter-rouge">math</code>, so the regular <code class="highlighter-rouge">import ...</code> call suffices.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="importing-specific-items">Importing Specific Items</h2>
+
+  <ol>
+    <li>Fill in the blanks so that the program below prints <code class="highlighter-rouge">90.0</code>.</li>
+    <li>Do you find this version easier to read than preceding ones?</li>
+    <li>Why <em>wouldn’t</em> programmers always use this form of <code class="highlighter-rouge">import</code>?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">____</span> <span class="n">math</span> <span class="kn">import</span> <span class="nn">____</span><span class="p">,</span> <span class="n">____</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-6">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">degrees</span><span class="p">,</span> <span class="n">pi</span>
+<span class="n">angle</span> <span class="o">=</span> <span class="n">degrees</span><span class="p">(</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span>
+</code></pre></div>    </div>
+
+    <p>Most likely you find this version easier to read since it’s less dense.
+The main reason not to use this form of import is to avoid name clashes.
+For instance, you wouldn’t import <code class="highlighter-rouge">degrees</code> this way if you also wanted to
+use the name <code class="highlighter-rouge">degrees</code> for a variable or function of your own. Or if you
+were to also import a function named <code class="highlighter-rouge">degrees</code> from another library.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="reading-error-messages">Reading Error Messages</h2>
+
+  <ol>
+    <li>Read the code below and try to identify what the errors are without running it.</li>
+    <li>Run the code, and read the error message. What type of error is it?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">log</span>
+<span class="n">log</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-7">Solution</h2>
+
+    <ol>
+      <li>The logarithm of <code class="highlighter-rouge">x</code> is only defined for <code class="highlighter-rouge">x &gt; 0</code>, so 0 is outside the
+domain of the function.</li>
+      <li>You get an error of type “ValueError”, indicating that the function
+received an inappropriate argument value. The additional message
+“math domain error” makes it clearer what the problem is.</li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+:ET

@@ -1,0 +1,382 @@
+I"��<h2 id="use-if-statements-to-control-whether-or-not-a-block-of-code-is-executed">Use <code class="highlighter-rouge">if</code> statements to control whether or not a block of code is executed.</h2>
+
+<ul>
+  <li>An <code class="highlighter-rouge">if</code> statement (more properly called a <em>conditional</em> statement)
+controls whether some block of code is executed or not.</li>
+  <li>Structure is similar to a <code class="highlighter-rouge">for</code> statement:
+    <ul>
+      <li>First line opens with <code class="highlighter-rouge">if</code> and ends with a colon</li>
+      <li>Body containing one or more statements is indented (usually by 4 spaces)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mass</span> <span class="o">=</span> <span class="mf">3.54</span>
+<span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+
+<span class="n">mass</span> <span class="o">=</span> <span class="mf">2.07</span>
+<span class="k">if</span> <span class="n">mass</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
+    <span class="k">print</span> <span class="p">(</span><span class="n">mass</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.54 is large
+</code></pre></div></div>
+
+<h2 id="conditionals-are-often-used-inside-loops">Conditionals are often used inside loops.</h2>
+
+<ul>
+  <li>Not much point using a conditional when we know the value (as above).</li>
+  <li>But useful when we have a collection to process.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.54</span><span class="p">,</span> <span class="mf">2.07</span><span class="p">,</span> <span class="mf">9.22</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.54 is large
+9.22 is large
+</code></pre></div></div>
+
+<h2 id="use-else-to-execute-a-block-of-code-when-an-if-condition-is-not-true">Use <code class="highlighter-rouge">else</code> to execute a block of code when an <code class="highlighter-rouge">if</code> condition is <em>not</em> true.</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">else</code> can be used following an <code class="highlighter-rouge">if</code>.</li>
+  <li>Allows us to specify an alternative to execute when the <code class="highlighter-rouge">if</code> <em>branch</em> isn’t taken.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.54</span><span class="p">,</span> <span class="mf">2.07</span><span class="p">,</span> <span class="mf">9.22</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is small'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.54 is large
+2.07 is small
+9.22 is large
+1.86 is small
+1.71 is small
+</code></pre></div></div>
+
+<h2 id="use-elif-to-specify-additional-tests">Use <code class="highlighter-rouge">elif</code> to specify additional tests.</h2>
+
+<ul>
+  <li>May want to provide several alternative choices, each with its own test.</li>
+  <li>Use <code class="highlighter-rouge">elif</code> (short for “else if”) and a condition to specify these.</li>
+  <li>Always associated with an <code class="highlighter-rouge">if</code>.</li>
+  <li>Must come before the <code class="highlighter-rouge">else</code> (which is the “catch all”).</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">masses</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.54</span><span class="p">,</span> <span class="mf">2.07</span><span class="p">,</span> <span class="mf">9.22</span><span class="p">,</span> <span class="mf">1.86</span><span class="p">,</span> <span class="mf">1.71</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">masses</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mf">9.0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is HUGE'</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mf">3.0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is small'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.54 is large
+2.07 is small
+9.22 is HUGE
+1.86 is small
+1.71 is small
+</code></pre></div></div>
+
+<h2 id="conditions-are-tested-once-in-order">Conditions are tested once, in order.</h2>
+
+<ul>
+  <li>Python steps through the branches of the conditional in order, testing each in turn.</li>
+  <li>So ordering matters.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">grade</span> <span class="o">=</span> <span class="mi">85</span>
+<span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'grade is C'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'grade is B'</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'grade is A'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grade is C
+</code></pre></div></div>
+
+<ul>
+  <li>Does <em>not</em> automatically go back and re-evaluate if values change.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">velocity</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="k">if</span> <span class="n">velocity</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'moving too fast'</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'adjusting velocity'</span><span class="p">)</span>
+    <span class="n">velocity</span> <span class="o">=</span> <span class="mf">50.0</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adjusting velocity
+</code></pre></div></div>
+
+<ul>
+  <li>Often use conditionals in a loop to “evolve” the values of variables.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">velocity</span> <span class="o">=</span> <span class="mf">10.0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span> <span class="c1"># execute the loop 5 times
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s">':'</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">velocity</span> <span class="o">&gt;</span> <span class="mf">20.0</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'moving too fast'</span><span class="p">)</span>
+        <span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span> <span class="o">-</span> <span class="mf">5.0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'moving too slow'</span><span class="p">)</span>
+        <span class="n">velocity</span> <span class="o">=</span> <span class="n">velocity</span> <span class="o">+</span> <span class="mf">10.0</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'final velocity:'</span><span class="p">,</span> <span class="n">velocity</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 : 10.0
+moving too slow
+1 : 20.0
+moving too slow
+2 : 30.0
+moving too fast
+3 : 25.0
+moving too fast
+4 : 20.0
+moving too slow
+final velocity: 30.0
+</code></pre></div></div>
+
+<h2 id="create-a-table-showing-variables-values-to-trace-a-programs-execution">Create a table showing variables’ values to trace a program’s execution.</h2>
+
+<table>
+  <tr>
+    <td><strong>i</strong></td>
+    <td>0</td>
+    <td>.</td>
+    <td>1</td>
+    <td>.</td>
+    <td>2</td>
+    <td>.</td>
+    <td>3</td>
+    <td>.</td>
+    <td>4</td>
+    <td>.</td>
+  </tr>
+  <tr>
+    <td><strong>velocity</strong></td>
+    <td>10.0</td>
+    <td>20.0</td>
+    <td>.</td>
+    <td>30.0</td>
+    <td>.</td>
+    <td>25.0</td>
+    <td>.</td>
+    <td>20.0</td>
+    <td>.</td>
+    <td>30.0</td>
+  </tr>
+</table>
+
+<ul>
+  <li>The program must have a <code class="highlighter-rouge">print</code> statement <em>outside</em> the body of the loop
+to show the final value of <code class="highlighter-rouge">velocity</code>,
+since its value is updated by the last iteration of the loop.</li>
+</ul>
+
+<blockquote class="callout">
+  <h2 id="compound-relations-using-and-or-and-parentheses">Compound Relations Using <code class="highlighter-rouge">and</code>, <code class="highlighter-rouge">or</code>, and Parentheses</h2>
+
+  <p>Often, you want some combination of things to be true.  You can combine
+relations within a conditional using <code class="highlighter-rouge">and</code> and <code class="highlighter-rouge">or</code>.  Continuing the example
+above, suppose you have</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mass</span>     <span class="o">=</span> <span class="p">[</span> <span class="mf">3.54</span><span class="p">,</span>  <span class="mf">2.07</span><span class="p">,</span>  <span class="mf">9.22</span><span class="p">,</span>  <span class="mf">1.86</span><span class="p">,</span>  <span class="mf">1.71</span><span class="p">]</span>
+<span class="n">velocity</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.00</span><span class="p">,</span> <span class="mf">20.00</span><span class="p">,</span> <span class="mf">30.00</span><span class="p">,</span> <span class="mf">25.00</span><span class="p">,</span> <span class="mf">20.00</span><span class="p">]</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Fast heavy object.  Duck!"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Normal traffic"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Slow light object.  Ignore it"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Whoa!  Something is up with the data.  Check it"</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>Just like with arithmetic, you can and should use parentheses whenever there
+is possible ambiguity.  A good general rule is to <em>always</em> use parentheses
+when mixing <code class="highlighter-rouge">and</code> and <code class="highlighter-rouge">or</code> in the same condition.  That is, instead of:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+</code></pre></div>  </div>
+
+  <p>write one of these:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">)</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">2</span> <span class="ow">or</span> <span class="p">(</span><span class="n">mass</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">5</span> <span class="ow">and</span> <span class="n">velocity</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">):</span>
+</code></pre></div>  </div>
+
+  <p>so it is perfectly clear to a reader (and to Python) what you really mean.</p>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="tracing-execution">Tracing Execution</h2>
+
+  <p>What does this program print?</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pressure</span> <span class="o">=</span> <span class="mf">71.9</span>
+<span class="k">if</span> <span class="n">pressure</span> <span class="o">&gt;</span> <span class="mf">50.0</span><span class="p">:</span>
+    <span class="n">pressure</span> <span class="o">=</span> <span class="mf">25.0</span>
+<span class="k">elif</span> <span class="n">pressure</span> <span class="o">&lt;=</span> <span class="mf">50.0</span><span class="p">:</span>
+    <span class="n">pressure</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pressure</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25.0
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="trimming-values">Trimming Values</h2>
+
+  <p>Fill in the blanks so that this program creates a new list
+containing zeroes where the original list’s values were negative
+and ones where the original list’s values were positive.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">original</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">____</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">original</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">____</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">____</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[0, 1, 1, 1, 0, 1]
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">original</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">original</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">value</span><span class="o">&lt;</span><span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="processing-small-files">Processing Small Files</h2>
+
+  <p>Modify this program so that it only processes files with fewer than 50 records.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/*.csv'</span><span class="p">):</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">____</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">contents</span><span class="p">))</span>
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/*.csv'</span><span class="p">):</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span><span class="o">&lt;</span><span class="mi">50</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">contents</span><span class="p">))</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="initializing">Initializing</h2>
+
+  <p>Modify this program so that it finds the largest and smallest values in the list
+no matter what the range of values originally is.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="n">some</span> <span class="n">test</span> <span class="n">data</span><span class="o">...</span><span class="p">]</span>
+<span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">____</span><span class="p">:</span>
+        <span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span> <span class="o">=</span> <span class="n">v</span><span class="p">,</span> <span class="n">v</span>
+    <span class="n">____</span><span class="p">:</span>
+        <span class="n">smallest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="n">largest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>What are the advantages and disadvantages of using this method
+to find the range of the data?</p>
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="o">-</span><span class="mi">54</span><span class="p">,</span><span class="o">-</span><span class="mi">24</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span>
+<span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="bp">None</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">smallest</span><span class="o">==</span><span class="bp">None</span> <span class="ow">and</span> <span class="n">largest</span><span class="o">==</span><span class="bp">None</span><span class="p">:</span>
+        <span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span> <span class="o">=</span> <span class="n">v</span><span class="p">,</span> <span class="n">v</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">smallest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">smallest</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+        <span class="n">largest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">largest</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">smallest</span><span class="p">,</span> <span class="n">largest</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="callout">
+  <h2 id="using-functions-with-conditionals-in-pandas">Using Functions With Conditionals in Pandas</h2>
+
+  <p>Functions will often contain conditionals.  Here is a short example that
+will indicate which quartile the argument is in based on hand-coded values
+for the quartile cut points.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">calculate_life_quartile</span><span class="p">(</span><span class="n">exp</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">exp</span> <span class="o">&lt;</span> <span class="mf">58.41</span><span class="p">:</span>
+        <span class="c1"># This observation is in the first quartile
+</span>        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">exp</span> <span class="o">&gt;=</span> <span class="mf">58.41</span> <span class="ow">and</span> <span class="n">exp</span> <span class="o">&lt;</span> <span class="mf">67.05</span><span class="p">:</span>
+        <span class="c1"># This observation is in the second quartile
+</span>       <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">exp</span> <span class="o">&gt;=</span> <span class="mf">67.05</span> <span class="ow">and</span> <span class="n">exp</span> <span class="o">&lt;</span> <span class="mf">71.70</span><span class="p">:</span>
+        <span class="c1"># This observation is in the third quartile
+</span>       <span class="k">return</span> <span class="mi">3</span>
+    <span class="k">elif</span> <span class="n">exp</span> <span class="o">&gt;=</span> <span class="mf">71.70</span><span class="p">:</span>
+        <span class="c1"># This observation is in the fourth quartile
+</span>       <span class="k">return</span> <span class="mi">4</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># This observation has bad data
+</span>       <span class="k">return</span> <span class="bp">None</span>
+
+<span class="n">calculate_life_quartile</span><span class="p">(</span><span class="mf">62.5</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+</code></pre></div>  </div>
+
+  <p>That function would typically be used within a <code class="highlighter-rouge">for</code> loop, but Pandas has
+a different, more efficient way of doing the same thing, and that is by
+<em>applying</em> a function to a dataframe or a portion of a dataframe.  Here
+is an example, using the definition above.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'Americas-data.csv'</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s">'life_qrtl'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'lifeExp'</span><span class="p">]</span><span class="o">.</span><span class="nb">apply</span><span class="p">(</span><span class="n">calculate_life_quartile</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <p>There is a lot in that second line, so let’s take it piece by piece.
+On the right side of the <code class="highlighter-rouge">=</code> we start with <code class="highlighter-rouge">data['lifeExp']</code>, which is the
+column in the dataframe called <code class="highlighter-rouge">data</code> labeled <code class="highlighter-rouge">lifExp</code>.  We use the
+<code class="highlighter-rouge">apply()</code> to do what it says, apply the <code class="highlighter-rouge">calculate_life_quartile</code> to the
+value of this column for every row in the dataframe.</p>
+</blockquote>
+:ET

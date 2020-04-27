@@ -1,0 +1,98 @@
+I"�<h2 id="the-scope-of-a-variable-is-the-part-of-a-program-that-can-see-that-variable">The scope of a variable is the part of a program that can ‘see’ that variable.</h2>
+
+<ul>
+  <li>There are only so many sensible names for variables.</li>
+  <li>People using functions shouldn’t have to worry about
+what variable names the author of the function used.</li>
+  <li>People writing functions shouldn’t have to worry about
+what variable names the function’s caller uses.</li>
+  <li>The part of a program in which a variable is visible is called its <em>scope</em>.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pressure</span> <span class="o">=</span> <span class="mf">103.9</span>
+
+<span class="k">def</span> <span class="nf">adjust</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">t</span> <span class="o">*</span> <span class="mf">1.43</span> <span class="o">/</span> <span class="n">pressure</span>
+    <span class="k">return</span> <span class="n">temperature</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="highlighter-rouge">pressure</code> is a <em>global variable</em>.
+    <ul>
+      <li>Defined outside any particular function.</li>
+      <li>Visible everywhere.</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">t</code> and <code class="highlighter-rouge">temperature</code> are <em>local variables</em> in <code class="highlighter-rouge">adjust</code>.
+    <ul>
+      <li>Defined in the function.</li>
+      <li>Not visible in the main program.</li>
+      <li>Remember: a function parameter is a variable
+that is automatically assigned a value when the function is called.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'adjusted:'</span><span class="p">,</span> <span class="n">adjust</span><span class="p">(</span><span class="mf">0.9</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'temperature after call:'</span><span class="p">,</span> <span class="n">temperature</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>adjusted: 0.01238691049085659
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback (most recent call last):
+  File "/Users/swcarpentry/foo.py", line 8, in &lt;module&gt;
+    print('temperature after call:', temperature)
+NameError: name 'temperature' is not defined
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="local-and-global-variable-use">Local and Global Variable Use</h2>
+
+  <p>Trace the values of all variables in this program as it is executed.
+(Use ‘—’ as the value of variables before and after they exist.)</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">limit</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">def</span> <span class="nf">clip</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">value</span><span class="p">),</span> <span class="n">limit</span><span class="p">)</span>
+
+<span class="n">value</span> <span class="o">=</span> <span class="o">-</span><span class="mf">22.5</span>
+<span class="k">print</span><span class="p">(</span><span class="n">clip</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="reading-error-messages">Reading Error Messages</h2>
+
+  <p>Read the traceback below, and identify the following:</p>
+
+  <ol>
+    <li>How many levels does the traceback have?</li>
+    <li>What is the file name where the error occurred?</li>
+    <li>What is the function name where the error occurred?</li>
+    <li>On which line number in this function did the error occur?</li>
+    <li>What is the type of error?</li>
+    <li>What is the error message?</li>
+  </ol>
+
+  <div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+&lt;ipython-input-2-e4c4cbafeeb5&gt; in &lt;module&gt;()
+      1 import errors_02
+----&gt; 2 errors_02.print_friday_message()
+
+/Users/ghopper/thesis/code/errors_02.py in print_friday_message()
+     13
+     14 def print_friday_message():
+---&gt; 15     print_message("Friday")
+
+/Users/ghopper/thesis/code/errors_02.py in print_message(day)
+      9         "sunday": "Aw, the weekend is almost over."
+     10     }
+---&gt; 11     print(messages[day])
+     12
+     13
+
+KeyError: 'Friday'
+</code></pre></div>  </div>
+</blockquote>
+:ET

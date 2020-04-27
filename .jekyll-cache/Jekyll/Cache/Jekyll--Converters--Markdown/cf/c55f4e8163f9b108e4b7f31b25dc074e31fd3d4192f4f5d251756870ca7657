@@ -1,0 +1,87 @@
+I"B<h2 id="installing-python-using-anaconda">Installing Python Using Anaconda</h2>
+
+<p><a href="https://python.org">Python</a> is a popular language for scientific computing, and great for
+general-purpose programming as well. Installing all of its scientific packages
+individually can be a bit difficult, however, so we recommend the all-in-one
+installer <a href="https://www.anaconda.com/">Anaconda</a>.</p>
+
+<p>Regardless of how you choose to install it, please make sure you install Python
+version 3.x (e.g., 3.4 is fine). Also, please set up your python environment at 
+least a day in advance of the workshop.  If you encounter problems with the 
+installation procedure, ask your workshop organizers via e-mail for assistance so
+you are ready to go as soon as the workshop begins.</p>
+
+<h3 id="windows---video-tutorial">Windows - <a href="https://www.youtube.com/watch?v=xxQ0mzZ8UvA">Video tutorial</a></h3>
+
+<ol>
+  <li>
+    <p>Open <a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/distribution/</a> with your web browser.</p>
+  </li>
+  <li>
+    <p>Download the Python 3 installer for Windows.</p>
+  </li>
+  <li>
+    <p>Double-click the executable and install Python 3 using the recommended settings. Make sure that <strong>Register Anaconda as my default Python 3.x</strong> option is checked - it should be in the latest version of Anaconda</p>
+  </li>
+</ol>
+
+<h3 id="mac-os-x---video-tutorial">Mac OS X - <a href="https://www.youtube.com/watch?v=TcSAln46u9U">Video tutorial</a></h3>
+
+<ol>
+  <li>
+    <p>Visit <a href="https://www.anaconda.com/download/#macos">https://www.anaconda.com/distribution/</a> with your web browser.</p>
+  </li>
+  <li>
+    <p>Download the Python 3 installer for OS X. These instructions assume that you use the graphical installer <code class="highlighter-rouge">.pkg</code> file.</p>
+  </li>
+  <li>
+    <p>Follow the Python 3 installation instructions. Make sure that the install location is set to “Install only for me” so Anaconda will install its files locally, relative to your home directory. Installing the software for all users tends to create problems in the long run and should be avoided.</p>
+  </li>
+</ol>
+
+<h3 id="linux">Linux</h3>
+
+<p>Note that the following installation steps require you to work from the shell. 
+If you run into any difficulties, please request help before the workshop begins.</p>
+
+<ol>
+  <li>
+    <p>Open <a href="https://www.anaconda.com/download/#linux">https://www.anaconda.com/distribution/</a> with your web browser.</p>
+  </li>
+  <li>
+    <p>Download the Python 3 installer for Linux.</p>
+  </li>
+  <li>
+    <p>Install Python 3 using all of the defaults for installation.</p>
+
+    <p>a.  Open a terminal window.</p>
+
+    <p>b.  Navigate to the folder where you downloaded the installer</p>
+
+    <p>c.  Type</p>
+
+    <div class="bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bash Anaconda3-
+</code></pre></div>    </div>
+
+    <p>and press tab.  The name of the file you just downloaded should appear.</p>
+
+    <p>d.  Press enter.</p>
+
+    <p>e.  Follow the text-only prompts.  When the license agreement appears (a colon
+    will be present at the bottom of the screen) press the space bar until you see the 
+    bottom of the text. Type <code class="highlighter-rouge">yes</code> and press enter to approve the license. Press 
+    enter again to approve the default location for the files. Type <code class="highlighter-rouge">yes</code> and 
+    press enter to prepend Anaconda to your <code class="highlighter-rouge">PATH</code> (this makes the Anaconda 
+    distribution your user’s default Python).</p>
+  </li>
+</ol>
+
+<h2 id="getting-the-data">Getting the Data</h2>
+
+<p>The data we will be using is taken from the <a href="https://en.wikipedia.org/wiki/Gapminder_Foundation">gapminder</a> dataset.
+To obtain it, download and unzip the file 
+<a href="../files/python-novice-gapminder-data.zip">python-novice-gapminder-data.zip</a>.
+In order to follow the presented material, you should launch the JupyterLab 
+server in the root directory (see <a href="../01-run-quit/#starting-jupyterlab">Starting JupyterLab</a>).</p>
+
+:ET

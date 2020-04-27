@@ -1,0 +1,297 @@
+I"�E<h2 id="use-comments-to-add-documentation-to-programs">Use comments to add documentation to programs.</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This sentence isn't executed by Python.
+</span><span class="n">adjustment</span> <span class="o">=</span> <span class="mf">0.5</span>   <span class="c1"># Neither is this - anything after '#' is ignored.
+</span></code></pre></div></div>
+
+<h2 id="a-function-may-take-zero-or-more-arguments">A function may take zero or more arguments.</h2>
+
+<ul>
+  <li>We have seen some functions already — now let’s take a closer look.</li>
+  <li>An <em>argument</em> is a value passed into a function.</li>
+  <li><code class="highlighter-rouge">len</code> takes exactly one.</li>
+  <li><code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">str</code>, and <code class="highlighter-rouge">float</code> create a new value from an existing one.</li>
+  <li><code class="highlighter-rouge">print</code> takes zero or more.</li>
+  <li><code class="highlighter-rouge">print</code> with no arguments prints a blank line.
+    <ul>
+      <li>Must always use parentheses, even if they’re empty,
+so that Python knows a function is being called.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'before'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'after'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>before
+
+after
+</code></pre></div></div>
+
+<h2 id="commonly-used-built-in-functions-include-max-min-and-round">Commonly-used built-in functions include <code class="highlighter-rouge">max</code>, <code class="highlighter-rouge">min</code>, and <code class="highlighter-rouge">round</code>.</h2>
+
+<ul>
+  <li>Use <code class="highlighter-rouge">max</code> to find the largest value of one or more values.</li>
+  <li>Use <code class="highlighter-rouge">min</code> to find the smallest.</li>
+  <li>Both work on character strings as well as numbers.
+    <ul>
+      <li>“Larger” and “smaller” use (0-9, A-Z, a-z) to compare letters.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="s">'a'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">,</span> <span class="s">'0'</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+0
+</code></pre></div></div>
+
+<h2 id="functions-may-only-work-for-certain-combinations-of-arguments">Functions may only work for certain (combinations of) arguments.</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">max</code> and <code class="highlighter-rouge">min</code> must be given at least one argument.
+    <ul>
+      <li>“Largest of the empty set” is a meaningless question.</li>
+    </ul>
+  </li>
+  <li>And they must be given things that can meaningfully be compared.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s">'a'</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-52-3f049acf3762&gt; in &lt;module&gt;
+----&gt; 1 print(max(1, 'a'))
+
+TypeError: '&gt;' not supported between instances of 'str' and 'int'
+</code></pre></div></div>
+
+<h2 id="functions-may-have-default-values-for-some-arguments">Functions may have default values for some arguments.</h2>
+
+<ul>
+  <li><code class="highlighter-rouge">round</code> will round off a floating-point number.</li>
+  <li>By default, rounds to zero decimal places.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">round</span><span class="p">(</span><span class="mf">3.712</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+</code></pre></div></div>
+
+<ul>
+  <li>We can specify the number of decimal places we want.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">round</span><span class="p">(</span><span class="mf">3.712</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3.7
+</code></pre></div></div>
+
+<h2 id="use-the-built-in-function-help-to-get-help-for-a-function">Use the built-in function <code class="highlighter-rouge">help</code> to get help for a function.</h2>
+
+<ul>
+  <li>Every built-in function has online documentation.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">help</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Help on built-in function round in module builtins:
+
+round(number, ndigits=None)
+    Round a number to a given precision in decimal digits.
+    
+    The return value is an integer if ndigits is omitted or None.  Otherwise
+    the return value has the same type as the number.  ndigits may be negative.
+</code></pre></div></div>
+
+<h2 id="python-reports-a-syntax-error-when-it-cant-understand-the-source-of-a-program">Python reports a syntax error when it can’t understand the source of a program.</h2>
+
+<ul>
+  <li>Won’t even try to run the program if it can’t be parsed.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Forgot to close the quote marks around the string.
+</span><span class="n">name</span> <span class="o">=</span> <span class="s">'Feng</span><span class="err">
+</span></code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  File "&lt;ipython-input-56-f42768451d55&gt;", line 2
+    name = 'Feng
+                ^
+SyntaxError: EOL while scanning string literal
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># An extra '=' in the assignment.
+</span><span class="n">age</span> <span class="o">=</span> <span class="o">=</span> <span class="mi">52</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  File "&lt;ipython-input-57-ccc3df3cf902&gt;", line 2
+    age = = 52
+          ^
+SyntaxError: invalid syntax
+</code></pre></div></div>
+
+<ul>
+  <li>Look more closely at the error message:</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"hello world"</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  File "&lt;ipython-input-6-d1cc229bf815&gt;", line 1
+    print ("hello world"
+                        ^
+SyntaxError: unexpected EOF while parsing
+</code></pre></div></div>
+
+<ul>
+  <li>The message indicates a problem on first line of the input (“line 1”).
+    <ul>
+      <li>In this case the “ipython-input” section of the file name tells us that
+we are working with input into IPython,
+the Python interpreter used by the Jupyter Notebook.</li>
+    </ul>
+  </li>
+  <li>The <code class="highlighter-rouge">-6-</code> part of the filename indicates that
+the error occurred in cell 6 of our Notebook.</li>
+  <li>Next is the problematic line of code,
+indicating the problem with a <code class="highlighter-rouge">^</code> pointer.</li>
+</ul>
+
+<h2 id="-python-reports-a-runtime-error-when-something-goes-wrong-while-a-program-is-executing"><a name="runtime-error"></a> Python reports a runtime error when something goes wrong while a program is executing.</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">age</span> <span class="o">=</span> <span class="mi">53</span>
+<span class="n">remaining</span> <span class="o">=</span> <span class="mi">100</span> <span class="o">-</span> <span class="n">aege</span> <span class="c1"># mis-spelled 'age'
+</span></code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NameError                                 Traceback (most recent call last)
+&lt;ipython-input-59-1214fb6c55fc&gt; in &lt;module&gt;
+      1 age = 53
+----&gt; 2 remaining = 100 - aege # mis-spelled 'age'
+
+NameError: name 'aege' is not defined
+</code></pre></div></div>
+
+<ul>
+  <li>Fix syntax errors by reading the source and runtime errors by tracing execution.</li>
+</ul>
+
+<h2 id="the-jupyter-notebook-has-two-ways-to-get-help">The Jupyter Notebook has two ways to get help.</h2>
+
+<ul>
+  <li>Place the cursor anywhere in the function invocation 
+(i.e., the function name or its parameters),
+hold down <code class="highlighter-rouge">shift</code>,
+and press <code class="highlighter-rouge">tab</code>.</li>
+  <li>Or type a function name with a question mark after it.</li>
+</ul>
+
+<h2 id="every-function-returns-something">Every function returns something.</h2>
+
+<ul>
+  <li>Every function call produces some result.</li>
+  <li>If the function doesn’t have a useful result to return,
+it usually returns the special value <code class="highlighter-rouge">None</code>.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="k">print</span><span class="p">(</span><span class="s">'example'</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'result of print is'</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>example
+result of print is None
+</code></pre></div></div>
+
+<blockquote class="challenge">
+  <h2 id="what-happens-when">What Happens When</h2>
+
+  <ol>
+    <li>Explain in simple terms the order of operations in the following program:
+when does the addition happen, when does the subtraction happen,
+when is each function called, etc.</li>
+    <li>What is the final value of <code class="highlighter-rouge">radiance</code>?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">radiance</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">radiance</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mf">2.1</span><span class="p">,</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="nb">min</span><span class="p">(</span><span class="n">radiance</span><span class="p">,</span> <span class="mf">1.1</span> <span class="o">*</span> <span class="n">radiance</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">))</span>
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+    <p>1.</p>
+    <ol>
+      <li><code class="highlighter-rouge">1.1 * radiance = 1.1</code></li>
+      <li><code class="highlighter-rouge">1.1 - 0.5 = 0.6</code></li>
+      <li><code class="highlighter-rouge">min(radiance, 0.6) = 0.6</code></li>
+      <li><code class="highlighter-rouge">2.0 + 0.6 = 2.6</code></li>
+      <li><code class="highlighter-rouge">max(2.1, 2.6) = 2.6</code></li>
+      <li>At the end, <code class="highlighter-rouge">radiance = 2.6</code></li>
+    </ol>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="spot-the-difference">Spot the Difference</h2>
+
+  <ol>
+    <li>Predict what each of the <code class="highlighter-rouge">print</code> statements in the program below will print.</li>
+    <li>Does <code class="highlighter-rouge">max(len(rich), poor)</code> run or produce an error message?
+If it runs, does its result make any sense?</li>
+  </ol>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">easy_string</span> <span class="o">=</span> <span class="s">"abc"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">easy_string</span><span class="p">))</span>
+<span class="n">rich</span> <span class="o">=</span> <span class="s">"gold"</span>
+<span class="n">poor</span> <span class="o">=</span> <span class="s">"tin"</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">rich</span><span class="p">,</span> <span class="n">poor</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rich</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poor</span><span class="p">)))</span>
+</code></pre></div>  </div>
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">easy_string</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">rich</span><span class="p">,</span> <span class="n">poor</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tin
+</code></pre></div>    </div>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">rich</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">poor</span><span class="p">)))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4
+</code></pre></div>    </div>
+    <p><code class="highlighter-rouge">max(len(rich), poor)</code> throws a TypeError. This turns into <code class="highlighter-rouge">max(4, 'tin')</code> and 
+as we discussed earlier a string and integer cannot meaningfully be compared.</p>
+    <div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-65-bc82ad05177a&gt; in &lt;module&gt;
+----&gt; 1 max(len(rich), poor)
+
+TypeError: '&gt;' not supported between instances of 'str' and 'int'
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="why-not">Why Not?</h2>
+
+  <p>Why don’t <code class="highlighter-rouge">max</code> and <code class="highlighter-rouge">min</code> return <code class="highlighter-rouge">None</code> when they are given no arguments?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <p><code class="highlighter-rouge">max</code> and <code class="highlighter-rouge">min</code> return TypeErrors in this case because the correct number of parameters
+was not supplied. If it just returned <code class="highlighter-rouge">None</code>, the error would be much harder to trace as it
+would likely be stored into a variable and used later in the program, only to likely throw
+a runtime error.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="last-character-of-a-string">Last Character of a String</h2>
+
+  <p>If Python starts counting from zero,
+and <code class="highlighter-rouge">len</code> returns the number of characters in a string,
+what index expression will get the last character in the string <code class="highlighter-rouge">name</code>?
+(Note: we will see a simpler way to do this in a later episode.)</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+
+    <p><code class="highlighter-rouge">name[len(name) - 1]</code></p>
+  </blockquote>
+</blockquote>
+:ET
