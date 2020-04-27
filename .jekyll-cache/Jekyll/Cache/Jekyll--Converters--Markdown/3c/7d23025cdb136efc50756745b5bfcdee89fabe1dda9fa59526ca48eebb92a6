@@ -1,0 +1,552 @@
+I"�P<blockquote class="callout">
+  <h2 class="no_toc" id="help-wanted">Help Wanted</h2>
+
+  <p><strong>We are filling in the exercises <a href="#stage-3-learning-plan">below</a>
+in order to make the lesson plan more concrete.
+Contributions (both in the form of pull requests with filled-in exercises,
+and comments on specific exercises, ordering, and timings) are greatly appreciated.</strong></p>
+</blockquote>
+
+<h2 id="process-used">Process Used</h2>
+
+<blockquote class="quotation">
+  <p>Michael Pollan’s advice if he taught R or Python programming:</p>
+
+  <ol>
+    <li>Write code.</li>
+    <li>Not too much.</li>
+    <li>Mostly plots.</li>
+  </ol>
+
+  <p>— <a href="https://twitter.com/_mikoontz/status/758021742078025728">Michael Koontz</a></p>
+</blockquote>
+
+<p>This lesson was developed using a slimmed-down variant of the “Understanding by Design” process.
+The main sections are:</p>
+
+<ol>
+  <li>
+    <p>Assumptions about audience, time, etc.
+(The current draft also includes some conclusions and decisions in this 
+section - that should be refactored.)</p>
+  </li>
+  <li>
+    <p>Desired results:
+overall goals, summative assessments at half-day granularity, what learners 
+will be able to do, what learners will know.</p>
+  </li>
+  <li>
+    <p>Learning plan:
+each episode has a heading that summarizes what will be covered,
+then estimates time that will be spent on teaching and on exercises,
+while the exercises are given as bullet points.</p>
+  </li>
+</ol>
+
+<h2 id="stage-1-assumptions">Stage 1: Assumptions</h2>
+
+<ul>
+  <li>Audience
+    <ul>
+      <li>Graduate students in numerate disciplines from cosmology to archaeology</li>
+      <li>Who have manipulated data in spreadsheets and with interactive tools like SAS</li>
+      <li>But have <em>not</em> programmed beyond CPD (copy-paste-despair)</li>
+    </ul>
+  </li>
+  <li>Constraints
+    <ul>
+      <li>One full day 09:00-16:30
+        <ul>
+          <li>06:15 class time</li>
+          <li>0:45 lunch</li>
+          <li>0:30 total for two coffee breaks</li>
+        </ul>
+      </li>
+      <li>Learners use native installs on their own machines
+        <ul>
+          <li>May use VMs or cloud resources at instructor’s discretion</li>
+          <li>But must keep native local install as an option</li>
+        </ul>
+      </li>
+      <li>No dependence on other Carpentry modules
+        <ul>
+          <li>In particular, does not require knowledge of shell or version control</li>
+        </ul>
+      </li>
+      <li>Use the Jupyter Notebook
+        <ul>
+          <li>Authentic tool used by many instructors</li>
+          <li>There isn’t really an alternative</li>
+          <li>And means that even people who have seen a bit of Python before
+will probably learn something</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Motivating Example
+    <ul>
+      <li>Creating 2D plots suitable for inclusion in papers</li>
+      <li>Appeals to almost everyone</li>
+      <li>Makes lesson usable by both Carpentries
+        <ul>
+          <li>And means that even people who have seen a bit of Python before 
+will probably learn something</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Data
+    <ul>
+      <li>Use the gapminder data throughout</li>
+      <li>But break into multiple files by continent
+        <ul>
+          <li>To make display of output from examples tidier
+(e.g., use Australia/New Zealand, which is only two lines)</li>
+          <li>And allow examples showing use of multiple data sets</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Focus on Pandas instead of NumPy
+    <ul>
+      <li>Makes lesson usable by both Data Carpentry and Software Carpentry</li>
+      <li>Genuine novices are likely to want data analysis</li>
+      <li>And people with some prior experience:
+        <ul>
+          <li>will accept data analysis as an authentic task,</li>
+          <li>and are unlikely to have encountered Pandas,
+so they’ll still get something useful out of the lesson</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Challenges will mostly <em>not</em> be “write this code from scratch”
+    <ul>
+      <li>Want lots of short exercises that can reliably be finished in allotted time</li>
+      <li>So use MCQs, fill-in-the-blanks, Parsons Problems, “tweak this code”, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="stage-2-desired-results">Stage 2: Desired Results</h2>
+
+<h3 id="questions">Questions</h3>
+
+<p>How do I…</p>
+
+<ul>
+  <li>…read tabular data?</li>
+  <li>…plot a single vector of values?</li>
+  <li>…create a time series plot?</li>
+  <li>…create one plot for each of several data sets?</li>
+  <li>…get extra data from a single data set for plotting?</li>
+  <li>…write programs I can read and re-use in future?</li>
+</ul>
+
+<h3 id="skills">Skills</h3>
+
+<p>I can…</p>
+
+<ul>
+  <li>…write short scripts using loops and conditionals.</li>
+  <li>…write functions with a fixed number of parameters that return a single result.</li>
+  <li>…import libraries using aliases and refer to those libraries’ contents.</li>
+  <li>…do simple data extraction and formatting using Pandas.</li>
+</ul>
+
+<h3 id="concepts">Concepts</h3>
+
+<p>I know…</p>
+
+<ul>
+  <li>…that a program is a piece of lab equipment that implements an analysis
+    <ul>
+      <li>Needs to be validated/calibrated before/during use</li>
+      <li>Makes analysis reproducible, reviewable, shareable</li>
+    </ul>
+  </li>
+  <li>…that programs are written for people, not for computers
+    <ul>
+      <li>Meaningful variable names</li>
+      <li>Modularity for readability as well as re-use</li>
+      <li>No duplication</li>
+      <li>Document purpose and use</li>
+    </ul>
+  </li>
+  <li>…that there is no magic: the programs they use are no different 
+in principle from those they build</li>
+  <li>…how to assign values to variables</li>
+  <li>…what integers, floats, strings, NumPy arrays, and Pandas dataframes are</li>
+  <li>…how to trace the execution of a <code class="highlighter-rouge">for</code> loop</li>
+  <li>…how to trace the execution of <code class="highlighter-rouge">if</code>/<code class="highlighter-rouge">else</code> statements</li>
+  <li>…how to create and index lists</li>
+  <li>…how to create and index NumPy arrays</li>
+  <li>…how to create and index Pandas dataframes</li>
+  <li>…how to create time series plots</li>
+  <li>…the difference between defining and calling a function</li>
+  <li>…where to find documentation on standard libraries</li>
+  <li>…how to find out what else scientific Python offers</li>
+</ul>
+
+<h2 id="stage-3-learning-plan">Stage 3: Learning Plan</h2>
+
+<h3 id="summative-assessment">Summative Assessment</h3>
+
+<ul>
+  <li>Midpoint: create time-series plot for each file in a directory.</li>
+  <li>Final: extract data from Pandas dataframe
+and create comparative multi-line time series plot.</li>
+</ul>
+
+<h3 id="running-and-quitting-interactively-900"><a href="../01-run-quit/">Running and Quitting Interactively</a> (9:00)</h3>
+
+<ul>
+  <li>Teaching: 15 min (because setup issues)
+    <ul>
+      <li>Launch the Jupyter Notebook, create new notebooks, and exit the Notebook.</li>
+      <li>Create Markdown cells in a notebook.</li>
+      <li>Create and run Python cells in a notebook.</li>
+    </ul>
+  </li>
+  <li>Challenges: 0 min (accounted for in teaching time - no separate exercise)
+    <ul>
+      <li>Creating lists in Markdown</li>
+      <li>What is displayed when several expressions are put in a single cell?</li>
+      <li>Change an existing cell from code to Markdown</li>
+      <li>Rendering LaTeX-style equations</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variables-and-assignment-915"><a href="../02-variables/">Variables and Assignment</a> (9:15)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Write programs that assign scalar values to variables and perform calculations with those values.</li>
+      <li>Correctly trace value changes in programs that use scalar assignment.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Trace execution of code swapping two values using an intermediate variable.</li>
+      <li>Predict final values of variables after several assignments.</li>
+      <li>What happens if you try to index a number?</li>
+      <li>Which is a better variable name, <code class="highlighter-rouge">m</code>, <code class="highlighter-rouge">min</code>, or <code class="highlighter-rouge">minutes</code>?</li>
+      <li>What do the following slice expressions produce?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="data-types-and-type-conversion-0935"><a href="../03-types-conversion/">Data Types and Type Conversion</a> (09:35)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Explain key differences between integers and floating point numbers.</li>
+      <li>Explain key differences between numbers and character strings.</li>
+      <li>Use built-in functions to convert between integers, floating point numbers, and strings.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>What type of value is 3.4?</li>
+      <li>What type of value is 3.25 + 4?</li>
+      <li>What type of value would you use to represent:
+        <ul>
+          <li>Number of days since the start of the year.</li>
+          <li>Time elapsed since the start of the year.</li>
+          <li>Etc.</li>
+        </ul>
+      </li>
+      <li>How can you use <code class="highlighter-rouge">//</code> (integer division) and <code class="highlighter-rouge">%</code> (modulo)?</li>
+      <li>What does <code class="highlighter-rouge">int("3.4")</code> do?</li>
+      <li>Given these float, int, and string values, which expressions will print a particular result?</li>
+      <li>What do you expect <code class="highlighter-rouge">1+2j + 3</code> to produce?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="built-in-functions-and-help-0955"><a href="../04-built-in/">Built-in Functions and Help</a> (09:55)</h3>
+
+<ul>
+  <li>Teaching: 15 min
+    <ul>
+      <li>Explain the purpose of functions.</li>
+      <li>Correctly call built-in Python functions.</li>
+      <li>Correctly nest calls to built-in functions.</li>
+      <li>Use help to display documentation for built-in functions.</li>
+      <li>Correctly describe situations in which SyntaxError and NameError occur.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Explain the order of operations in the following complex expression.</li>
+      <li>What will each nested combination of <code class="highlighter-rouge">min</code> and <code class="highlighter-rouge">max</code> calls produce?</li>
+      <li>Why don’t <code class="highlighter-rouge">max</code> and <code class="highlighter-rouge">min</code> return <code class="highlighter-rouge">None</code> when given no arguments?</li>
+      <li>Given what we have seen so far,
+what index expression will get the last character in a string?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="coffee-15-min-1020"><a href="../05-coffee/">Coffee</a>: 15 min (10:20)</h3>
+
+<h3 id="libraries-1035"><a href="../06-libraries/">Libraries</a> (10:35)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Explain what software libraries are and why programmers create and use them.</li>
+      <li>Write programs that import and use libraries from Python’s standard library.</li>
+      <li>Find and read documentation for standard libraries interactively (in the interpreter) and online.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Which function from the standard math library could you use to calculate a square root?</li>
+      <li>What library would you use to select a random value from data?</li>
+      <li>If <code class="highlighter-rouge">help(math)</code> produces an error, what have you forgotten to do?</li>
+      <li>Fill in the blanks in code below so that the import statement and program run.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="reading-tabular-data-1055"><a href="../07-reading-tabular/">Reading Tabular Data</a> (10:55)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Import the Pandas library.</li>
+      <li>Use Pandas to load a simple CSV data set.</li>
+      <li>Get some basic information about a Pandas DataFrame.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Read the data for the Americas and display its summary statistics.</li>
+      <li>What do <code class="highlighter-rouge">.head</code> and <code class="highlighter-rouge">.tail</code> do?</li>
+      <li>What string(s) should you pass to <code class="highlighter-rouge">read_csv</code> to read files from other directories?</li>
+      <li>How can you <em>write</em> CSV data?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="dataframes-1115"><a href="../08-data-frames/">DataFrames</a> (11:15)</h3>
+
+<ul>
+  <li>Teaching: 15 min
+    <ul>
+      <li>Select individual values from a Pandas dataframe.</li>
+      <li>Select entire rows or entire columns from a dataframe.</li>
+      <li>Select a subset of both rows and columns from a dataframe in a single operation.</li>
+      <li>Select a subset of a dataframe by a single Boolean criterion.</li>
+    </ul>
+  </li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>Write an expression to find the Per Capita GDP of Serbia in 2007.</li>
+      <li>What rule governs what is (or isn’t) included in numerical and named slices in Pandas?</li>
+      <li>What does each line in the following short program do?</li>
+      <li>What do <code class="highlighter-rouge">idxmin</code> and <code class="highlighter-rouge">idxmax</code> do?</li>
+      <li>Write expressions to get the GDP per capita for all countries in 1982,
+for all countries <em>after</em> 1985,
+etc.</li>
+      <li>Given the way its borders have changed since 1900,
+what would you do if asked to create a table of GDP per capita for Poland
+for the Twentieth Century?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="plotting-1145"><a href="../09-plotting/">Plotting</a> (11:45)</h3>
+
+<ul>
+  <li>Teaching: 15 min
+    <ul>
+      <li>Create a time series plot showing a single data set.</li>
+      <li>Create a scatter plot showing relationship between two data sets.</li>
+    </ul>
+  </li>
+  <li>Exercise: 15 min
+    <ul>
+      <li>Fill in the blanks to plot the minimum GDP per capita over time for European countries.</li>
+      <li>Modify the example to create a scatter plot of GDP per capita in Asian countries.</li>
+      <li>Explain what each argument to <code class="highlighter-rouge">plot</code> does in the following example.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="lunch-1215-45-min"><a href="../10-lunch/">Lunch</a> (12:15): 45 min</h3>
+
+<h3 id="lists-1300"><a href="../11-lists/">Lists</a> (13:00)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Explain why programs need collections of values.</li>
+      <li>Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Fill in the blanks so that the program produces the output shown.</li>
+      <li>How large are the following slices?</li>
+      <li>What do negative index expressions print?</li>
+      <li>What does a “stride” in a slice do?</li>
+      <li>How do slices treat out-of-range bounds?</li>
+      <li>What are the differences between sorting these two ways?</li>
+      <li>What is the difference between <code class="highlighter-rouge">new = old</code> and <code class="highlighter-rouge">new = old[:]</code>?</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="loops-1320"><a href="../12-for-loops/">Loops</a> (13:20)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Explain what for loops are normally used for.</li>
+      <li>Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.</li>
+      <li>Write for loops that use the Accumulator pattern to aggregate values.</li>
+    </ul>
+  </li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>Is an indentation error a syntax error or a runtime error?</li>
+      <li>Trace which lines of this program are executed in what order.</li>
+      <li>Fill in the blanks in this program so that it reverses a string.</li>
+      <li>Fill in the blanks in this series of examples to get practice accumulating values.</li>
+      <li>Reorder and indent these lines to calculate the cumulative sum of the list values.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="looping-over-data-sets-1345"><a href="../13-looping-data-sets/">Looping Over Data Sets</a> (13:45)</h3>
+
+<ul>
+  <li>Teaching: 5 min
+    <ul>
+      <li>Be able to read and write globbing expressions that match sets of files.</li>
+      <li>Use glob to create lists of files.</li>
+      <li>Write for loops to perform operations on files given their names in a list.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Which filenames are <em>not</em> matched by this glob expression?</li>
+      <li>Modify this program so that it prints the number of records in the shortest file.</li>
+      <li>Write a program that reads and plots all of the regional data sets.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="writing-functions-1400"><a href="../14-writing-functions/">Writing Functions</a> (14:00)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Explain and identify the difference between function definition and function call.</li>
+      <li>Write a function that takes a small, fixed number of arguments and produces a single result.</li>
+    </ul>
+  </li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>This code defines and calls a function - what does it print when run?</li>
+      <li>Explain why this short program prints things in the order it does.</li>
+      <li>Fill in the blanks to create a function that finds the minimum value in a data file.</li>
+      <li>Fill in the blanks to create a function that finds the first negative value in a list.
+What does your function do if the list is empty?</li>
+      <li>Why is it sometimes useful to pass arguments by naming the corresponding parameters?</li>
+      <li>Fill in the blanks and turn this short piece of code into a function.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variable-scope-1425"><a href="../15-scope/">Variable Scope</a> (14:25)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Identify local and global variables.</li>
+      <li>Identify parameters as local variables.</li>
+      <li>Read a traceback and determine the file, function, and line number on which the error occurred.</li>
+    </ul>
+  </li>
+  <li>Challenges: 10 min
+    <ul>
+      <li>Trace the changes to the values in this program,
+being careful to distinguish local from global values.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="coffee-1445-15-min"><a href="../16-coffee/">Coffee</a> (14:45): 15 min</h3>
+
+<h3 id="conditionals-1500"><a href="../17-conditionals/">Conditionals</a> (15:00)</h3>
+
+<ul>
+  <li>Teaching: 10 min
+    <ul>
+      <li>Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).</li>
+      <li>Trace the execution of unnested conditionals and conditionals inside loops.</li>
+    </ul>
+  </li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>Trace the execution of this conditional statement.</li>
+      <li>Fill in the blanks so that this function replaces negative values with zeroes.</li>
+      <li>Modify this program so that it only processes files with fewer than 50 records.</li>
+      <li>Modify this program so that it always finds the largest and smallest values in a list
+no matter what the list’s values are.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="programming-style-1525"><a href="../18-style/">Programming Style</a> (15:25)</h3>
+
+<ul>
+  <li>Teaching: 15 min
+    <ul>
+      <li>How can I make my programs more readable?</li>
+      <li>How do most programmers format their code?</li>
+      <li>How can programs check their own operation?</li>
+    </ul>
+  </li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>Which lines in this code will be available as online help?</li>
+      <li>Turn the comments in this program into docstrings.</li>
+      <li>Rewrite this short program to be more readable.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="wrap-up-1555"><a href="../19-wrap/">Wrap-Up</a> (15:55)</h3>
+
+<ul>
+  <li>Teaching: 20 min
+    <ul>
+      <li>Name and locate scientific Python community sites for software, workshops, and help.</li>
+    </ul>
+  </li>
+  <li>Challenges: 0 min
+    <ul>
+      <li>None.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="feedback-1615"><a href="../20-feedback/">Feedback</a> (16:15)</h3>
+
+<ul>
+  <li>Teaching: 0 min</li>
+  <li>Challenges: 15 min
+    <ul>
+      <li>Collect feedback</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="finish-1630">Finish (16:30)</h3>
+:ET

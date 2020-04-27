@@ -1,0 +1,167 @@
+I"�6<h2 id="use-a-for-loop-to-process-files-given-a-list-of-their-names">Use a <code class="highlighter-rouge">for</code> loop to process files given a list of their names.</h2>
+
+<ul>
+  <li>A filename is a character string.</li>
+  <li>And lists can contain character strings.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="p">[</span><span class="s">'data/gapminder_gdp_africa.csv'</span><span class="p">,</span> <span class="s">'data/gapminder_gdp_asia.csv'</span><span class="p">]:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s">'country'</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="nb">min</span><span class="p">())</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/gapminder_gdp_africa.csv gdpPercap_1952    298.846212
+gdpPercap_1957    335.997115
+gdpPercap_1962    355.203227
+gdpPercap_1967    412.977514
+⋮ ⋮ ⋮
+gdpPercap_1997    312.188423
+gdpPercap_2002    241.165877
+gdpPercap_2007    277.551859
+dtype: float64
+data/gapminder_gdp_asia.csv gdpPercap_1952    331
+gdpPercap_1957    350
+gdpPercap_1962    388
+gdpPercap_1967    349
+⋮ ⋮ ⋮
+gdpPercap_1997    415
+gdpPercap_2002    611
+gdpPercap_2007    944
+dtype: float64
+</code></pre></div></div>
+
+<h2 id="use-globglob-to-find-sets-of-files-whose-names-match-a-pattern">Use <a href="https://docs.python.org/3/library/glob.html#glob.glob"><code class="highlighter-rouge">glob.glob</code></a> to find sets of files whose names match a pattern.</h2>
+
+<ul>
+  <li>In Unix, the term “globbing” means “matching a set of files with a pattern”.</li>
+  <li>The most common patterns are:
+    <ul>
+      <li><code class="highlighter-rouge">*</code> meaning “match zero or more characters”</li>
+      <li><code class="highlighter-rouge">?</code> meaning “match exactly one character”</li>
+    </ul>
+  </li>
+  <li>Python contains the <a href="https://docs.python.org/3/library/glob.html"><code class="highlighter-rouge">glob</code></a> library to provide pattern matching functionality</li>
+  <li>The <a href="https://docs.python.org/3/library/glob.html"><code class="highlighter-rouge">glob</code></a> library contains a function also called <code class="highlighter-rouge">glob</code> to match file patterns</li>
+  <li>E.g., <code class="highlighter-rouge">glob.glob('*.txt')</code> matches all files in the current directory 
+whose names end with <code class="highlighter-rouge">.txt</code>.</li>
+  <li>Result is a (possibly empty) list of character strings.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'all csv files in data directory:'</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/*.csv'</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>all csv files in data directory: ['data/gapminder_all.csv', 'data/gapminder_gdp_africa.csv', \
+'data/gapminder_gdp_americas.csv', 'data/gapminder_gdp_asia.csv', 'data/gapminder_gdp_europe.csv', \
+'data/gapminder_gdp_oceania.csv']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'all PDB files:'</span><span class="p">,</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'*.pdb'</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>all PDB files: []
+</code></pre></div></div>
+
+<h2 id="use-glob-and-for-to-process-batches-of-files">Use <code class="highlighter-rouge">glob</code> and <code class="highlighter-rouge">for</code> to process batches of files.</h2>
+
+<ul>
+  <li>Helps a lot if the files are named and stored systematically and consistently
+so that simple patterns will find the right data.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/gapminder_*.csv'</span><span class="p">):</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s">'gdpPercap_1952'</span><span class="p">]</span><span class="o">.</span><span class="nb">min</span><span class="p">())</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data/gapminder_all.csv 298.8462121
+data/gapminder_gdp_africa.csv 298.8462121
+data/gapminder_gdp_americas.csv 1397.717137
+data/gapminder_gdp_asia.csv 331.0
+data/gapminder_gdp_europe.csv 973.5331948
+data/gapminder_gdp_oceania.csv 10039.59564
+</code></pre></div></div>
+
+<ul>
+  <li>This includes all data, as well as per-region data.</li>
+  <li>Use a more specific pattern in the exercises to exclude the whole data set.</li>
+  <li>But note that the minimum of the entire data set is also the minimum of one of the data sets,
+which is a nice check on correctness.</li>
+</ul>
+
+<blockquote class="challenge">
+  <h2 id="determining-matches">Determining Matches</h2>
+
+  <p>Which of these files is <em>not</em> matched by the expression <code class="highlighter-rouge">glob.glob('data/*as*.csv')</code>?</p>
+
+  <ol>
+    <li><code class="highlighter-rouge">data/gapminder_gdp_africa.csv</code></li>
+    <li><code class="highlighter-rouge">data/gapminder_gdp_americas.csv</code></li>
+    <li><code class="highlighter-rouge">data/gapminder_gdp_asia.csv</code></li>
+    <li>1 and 2 are not matched.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+
+    <p>1 is not matched by the glob.</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="minimum-file-size">Minimum File Size</h2>
+
+  <p>Modify this program so that it prints the number of records in
+the file that has the fewest records.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="n">fewest</span> <span class="o">=</span> <span class="n">____</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/*.csv'</span><span class="p">):</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">____</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">fewest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">____</span><span class="p">,</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'smallest file has'</span><span class="p">,</span> <span class="n">fewest</span><span class="p">,</span> <span class="s">'records'</span><span class="p">)</span>
+</code></pre></div>  </div>
+  <p>Note that the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html">shape method</a>
+returns a tuple with the number of rows and columns of the data frame.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="n">fewest</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s">'Inf'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/*.csv'</span><span class="p">):</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">fewest</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">fewest</span><span class="p">,</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'smallest file has'</span><span class="p">,</span> <span class="n">fewest</span><span class="p">,</span> <span class="s">'records'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="comparing-data">Comparing Data</h2>
+
+  <p>Write a program that reads in the regional data sets
+and plots the average GDP per capita for each region over time
+in a single chart.</p>
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+    <p>This solution builds a useful legend by using the string <a href="https://docs.python.org/3/library/stdtypes.html#str.split"><code class="highlighter-rouge">split</code></a> method to
+extract the <code class="highlighter-rouge">region</code> from the path ‘data/gapminder_gdp_a_specific_region.csv’. The [<code class="highlighter-rouge">pathlib module</code>]
+also provides useful abstractions for file and path manipulation like returning the name of a file 
+without the file extension.</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">glob</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s">'data/gapminder_gdp*.csv'</span><span class="p">):</span>
+    <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="c1"># extract &lt;region&gt; from the filename, expected to be in the format 'data/gapminder_gdp_&lt;region&gt;.csv'.
+</span>    <span class="c1"># we will split the string using the split method and `_` as our separator,
+</span>    <span class="c1"># retrieve the last string in the list that split returns (`&lt;region&gt;.csv`), 
+</span>    <span class="c1"># and then remove the `.csv` extension from that string.
+</span>    <span class="n">region</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">'_'</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">][:</span><span class="o">-</span><span class="mi">4</span><span class="p">]</span> 
+    <span class="n">dataframe</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">region</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+:ET

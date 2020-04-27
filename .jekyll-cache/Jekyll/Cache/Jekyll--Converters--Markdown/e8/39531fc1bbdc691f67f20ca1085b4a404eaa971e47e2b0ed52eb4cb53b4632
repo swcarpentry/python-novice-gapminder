@@ -1,0 +1,415 @@
+I"�c<h2 id="every-value-has-a-type">Every value has a type.</h2>
+
+<ul>
+  <li>Every value in a program has a specific type.</li>
+  <li>Integer (<code class="highlighter-rouge">int</code>): represents positive or negative whole numbers like 3 or -512.</li>
+  <li>Floating point number (<code class="highlighter-rouge">float</code>): represents real numbers like 3.14159 or -2.5.</li>
+  <li>Character string (usually called “string”, <code class="highlighter-rouge">str</code>): text.
+    <ul>
+      <li>Written in either single quotes or double quotes (as long as they match).</li>
+      <li>The quote marks aren’t printed when the string is displayed.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="use-the-built-in-function-type-to-find-the-type-of-a-value">Use the built-in function <code class="highlighter-rouge">type</code> to find the type of a value.</h2>
+
+<ul>
+  <li>Use the built-in function <code class="highlighter-rouge">type</code> to find out what type a value has.</li>
+  <li>Works on variables as well.
+    <ul>
+      <li>But remember: the <em>value</em> has the type — the <em>variable</em> is just a label.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">52</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'int'&gt;
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fitness</span> <span class="o">=</span> <span class="s">'average'</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">fitness</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'str'&gt;
+</code></pre></div></div>
+
+<h2 id="types-control-what-operations-or-methods-can-be-performed-on-a-given-value">Types control what operations (or methods) can be performed on a given value.</h2>
+
+<ul>
+  <li>A value’s type determines what the program can do to it.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'hello'</span> <span class="o">-</span> <span class="s">'h'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-2-67f5626a1e07&gt; in &lt;module&gt;()
+----&gt; 1 print('hello' - 'h')
+
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+</code></pre></div></div>
+
+<h2 id="you-can-use-the--and--operators-on-strings">You can use the “+” and “*” operators on strings.</h2>
+
+<ul>
+  <li>“Adding” character strings concatenates them.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">full_name</span> <span class="o">=</span> <span class="s">'Ahmed'</span> <span class="o">+</span> <span class="s">' '</span> <span class="o">+</span> <span class="s">'Walsh'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">full_name</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ahmed Walsh
+</code></pre></div></div>
+
+<ul>
+  <li>Multiplying a character string by an integer <em>N</em> creates a new string that consists of that character string repeated  <em>N</em> times.
+    <ul>
+      <li>Since multiplication is repeated addition.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">separator</span> <span class="o">=</span> <span class="s">'='</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="n">separator</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>==========
+</code></pre></div></div>
+
+<h2 id="strings-have-a-length-but-numbers-dont">Strings have a length (but numbers don’t).</h2>
+
+<ul>
+  <li>The built-in function <code class="highlighter-rouge">len</code> counts the number of characters in a string.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">full_name</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>11
+</code></pre></div></div>
+
+<ul>
+  <li>But numbers don’t have a length (not even zero).</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="mi">52</span><span class="p">))</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-3-f769e8e8097d&gt; in &lt;module&gt;()
+----&gt; 1 print(len(52))
+
+TypeError: object of type 'int' has no len()
+</code></pre></div></div>
+
+<h2 id="-must-convert-numbers-to-strings-or-vice-versa-when-operating-on-them"><a name="convert-numbers-and-strings"></a> Must convert numbers to strings or vice versa when operating on them.</h2>
+
+<ul>
+  <li>Cannot add numbers and strings.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="s">'2'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-4-fe4f54a023c6&gt; in &lt;module&gt;()
+----&gt; 1 print(1 + '2')
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</code></pre></div></div>
+
+<ul>
+  <li>Not allowed because it’s ambiguous: should <code class="highlighter-rouge">1 + '2'</code> be <code class="highlighter-rouge">3</code> or <code class="highlighter-rouge">'12'</code>?</li>
+  <li>Some types can be converted to other types by using the type name as a function.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="s">'2'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">'2'</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+12
+</code></pre></div></div>
+
+<h2 id="can-mix-integers-and-floats-freely-in-operations">Can mix integers and floats freely in operations.</h2>
+
+<ul>
+  <li>Integers and floating-point numbers can be mixed in arithmetic.
+    <ul>
+      <li>Python 3 automatically converts integers to floats as needed. (Integer division in Python 2 will return an integer, the <em>floor</em> of the division.)</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'half is'</span><span class="p">,</span> <span class="mi">1</span> <span class="o">/</span> <span class="mf">2.0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'three squared is'</span><span class="p">,</span> <span class="mf">3.0</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>half is 0.5
+three squared is 9.0
+</code></pre></div></div>
+
+<h2 id="variables-only-change-value-when-something-is-assigned-to-them">Variables only change value when something is assigned to them.</h2>
+
+<ul>
+  <li>If we make one cell in a spreadsheet depend on another,
+and update the latter,
+the former updates automatically.</li>
+  <li>This does <strong>not</strong> happen in programming languages.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">second</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">first</span>
+<span class="n">first</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'first is'</span><span class="p">,</span> <span class="n">first</span><span class="p">,</span> <span class="s">'and second is'</span><span class="p">,</span> <span class="n">second</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>first is 2 and second is 5
+</code></pre></div></div>
+
+<ul>
+  <li>The computer reads the value of <code class="highlighter-rouge">first</code> when doing the multiplication,
+creates a new value, and assigns it to <code class="highlighter-rouge">second</code>.</li>
+  <li>After that, <code class="highlighter-rouge">second</code> does not remember where it came from.</li>
+</ul>
+
+<blockquote class="challenge">
+  <h2 id="fractions">Fractions</h2>
+
+  <p>What type of value is 3.4?
+How can you find out?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution">Solution</h2>
+
+    <p>It is a floating-point number (often abbreviated “float”).</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">3.4</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;class 'float'&gt;
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="automatic-type-conversion">Automatic Type Conversion</h2>
+
+  <p>What type of value is 3.25 + 4?</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-1">Solution</h2>
+
+    <p>It is a float:
+integers are automatically converted to floats as necessary.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="mf">3.25</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s">'is'</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7.25 is &lt;class 'float'&gt;
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="choose-a-type">Choose a Type</h2>
+
+  <p>What type of value (integer, floating point number, or character string)
+would you use to represent each of the following?  Try to come up with more than one good answer for each problem.  For example, in  # 1, when would counting days with a floating point variable make more sense than using an integer?</p>
+
+  <ol>
+    <li>Number of days since the start of the year.</li>
+    <li>Time elapsed from the start of the year until now in days.</li>
+    <li>Serial number of a piece of lab equipment.</li>
+    <li>A lab specimen’s age</li>
+    <li>Current population of a city.</li>
+    <li>Average population of a city over time.</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-2">Solution</h2>
+
+    <p>The answers to the questions are:</p>
+    <ol>
+      <li>Integer, since the number of days would lie between 1 and 365.</li>
+      <li>Floating point, since fractional days are required</li>
+      <li>Character string if serial number contains letters and numbers, otherwise integer if the serial number consists only of numerals</li>
+      <li>This will vary! How do you define a specimen’s age? whole days since collection (integer)? date and time (string)?</li>
+      <li>Choose floating point to represent population as large aggregates (eg millions), or integer to represent population in units of individuals.</li>
+      <li>Floating point number, since an average is likely to have a fractional part.</li>
+    </ol>
+
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="division-types">Division Types</h2>
+
+  <p>In Python 3, the <code class="highlighter-rouge">//</code> operator performs integer (whole-number) floor division, the <code class="highlighter-rouge">/</code> operator performs floating-point
+division, and the ‘%’ (or <em>modulo</em>) operator calculates and returns the remainder from integer division:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">'5 // 3:'</span><span class="p">,</span> <span class="mi">5</span><span class="o">//</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'5 / 3:'</span><span class="p">,</span> <span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">'5 </span><span class="si">% 3</span><span class="s">:'</span><span class="p">,</span> <span class="mi">5</span><span class="o">%</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 // 3: 1
+5 / 3: 1.6666666666666667
+5 % 3: 2
+</code></pre></div>  </div>
+
+  <p>However in Python2 (and other languages), the <code class="highlighter-rouge">/</code> operator between two integer types perform a floor (<code class="highlighter-rouge">//</code>) division. To perform a float division, we have to convert one of the integers to float.</p>
+
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print('5 // 3:', 1)
+print('5 / 3:', 1 )
+print('5 / float(3):', 1.6666667 )
+print('float(5) / 3:', 1.6666667 )
+print('float(5 / 3):', 1.0 )
+print('5 % 3:', 2)
+</code></pre></div>  </div>
+
+  <p>If <code class="highlighter-rouge">num_subjects</code> is the number of subjects taking part in a study,
+and <code class="highlighter-rouge">num_per_survey</code> is the number that can take part in a single survey,
+write an expression that calculates the number of surveys needed
+to reach everyone once.</p>
+
+  <blockquote class="solution">
+    <h2 id="solution-3">Solution</h2>
+    <p>We want the minimum number of surveys that reaches everyone once, which is
+the rounded up value of <code class="highlighter-rouge">num_subjects / num_per_survey</code>. This is 
+equivalent to performing an integer division with <code class="highlighter-rouge">//</code> and adding 1.</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_subjects</span> <span class="o">=</span> <span class="mi">600</span>
+<span class="n">num_per_survey</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">num_surveys</span> <span class="o">=</span> <span class="n">num_subjects</span> <span class="o">//</span> <span class="n">num_per_survey</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">num_subjects</span><span class="p">,</span> <span class="s">'subjects,'</span><span class="p">,</span> <span class="n">num_per_survey</span><span class="p">,</span> <span class="s">'per survey:'</span><span class="p">,</span> <span class="n">num_surveys</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>600 subjects, 42 per survey: 15
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="strings-to-numbers">Strings to Numbers</h2>
+
+  <p>Where reasonable, <code class="highlighter-rouge">float()</code> will convert a string to a floating point number,
+and <code class="highlighter-rouge">int()</code> will convert a floating point number to an integer:</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"string to float:"</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s">"3.4"</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"float to int:"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="mf">3.4</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>string to float: 3.4
+float to int: 3
+</code></pre></div>  </div>
+
+  <p>If the conversion doesn’t make sense, however, an error message will occur</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"string to float:"</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s">"Hello world!"</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <div class="error highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+&lt;ipython-input-5-df3b790bf0a2&gt; in &lt;module&gt;()
+----&gt; 1 print("string to float:", float("Hello world!"))
+
+ValueError: could not convert string to float: 'Hello world!'
+</code></pre></div>  </div>
+
+  <p>Given this information, what do you expect the following program to do?</p>
+
+  <p>What does it actually do?</p>
+
+  <p>Why do you think it does that?</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"fractional string to int:"</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="s">"3.4"</span><span class="p">))</span>
+</code></pre></div>  </div>
+
+  <blockquote class="solution">
+    <h2 id="solution-4">Solution</h2>
+    <p>What do you expect this program to do? It would not be so unreasonable to expect the Python 3 <code class="highlighter-rouge">int</code> command to
+convert the string “3.4” to 3.4 and an additional type conversion to 3. After all, Python 3 performs a lot of other
+magic - isn’t that part of its charm?</p>
+
+    <p>However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
+typecasts, you must convert it explicitly in code.</p>
+
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">int</span><span class="p">(</span><span class="s">"3.4"</span><span class="p">)</span>
+<span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s">"3.4"</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In [2]: int("3.4")
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+&lt;ipython-input-2-ec6729dfccdc&gt; in &lt;module&gt;()
+----&gt; 1 int("3.4")
+ValueError: invalid literal for int() with base 10: '3.4'
+3
+</code></pre></div>    </div>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="arithmetic-with-different-types">Arithmetic with Different Types</h2>
+
+  <p>Which of the following will return the floating point number <code class="highlighter-rouge">2.0</code>?
+Note: there may be more than one right answer.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">first</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">second</span> <span class="o">=</span> <span class="s">"1"</span>
+<span class="n">third</span> <span class="o">=</span> <span class="s">"1.1"</span>
+</code></pre></div>  </div>
+
+  <ol>
+    <li><code class="highlighter-rouge">first + float(second)</code></li>
+    <li><code class="highlighter-rouge">float(second) + float(third)</code></li>
+    <li><code class="highlighter-rouge">first + int(third)</code></li>
+    <li><code class="highlighter-rouge">first + int(float(third))</code></li>
+    <li><code class="highlighter-rouge">int(first) + int(float(third))</code></li>
+    <li><code class="highlighter-rouge">2.0 * second</code></li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-5">Solution</h2>
+
+    <p>Answer: 1 and 4</p>
+  </blockquote>
+</blockquote>
+
+<blockquote class="challenge">
+  <h2 id="complex-numbers">Complex Numbers</h2>
+
+  <p>Python provides complex numbers,
+which are written as <code class="highlighter-rouge">1.0+2.0j</code>.
+If <code class="highlighter-rouge">val</code> is an imaginary number,
+its real and imaginary parts can be accessed using <em>dot notation</em>
+as <code class="highlighter-rouge">val.real</code> and <code class="highlighter-rouge">val.imag</code>.</p>
+
+  <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">complex</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">+</span> <span class="mf">2j</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">complex</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">complex</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+</code></pre></div>  </div>
+
+  <div class="output highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6.0
+2.0
+</code></pre></div>  </div>
+
+  <ol>
+    <li>Why do you think Python uses <code class="highlighter-rouge">j</code> instead of <code class="highlighter-rouge">i</code> for the imaginary part?</li>
+    <li>What do you expect <code class="highlighter-rouge">1+2j + 3</code> to produce?</li>
+    <li>What do you expect <code class="highlighter-rouge">4j</code> to be?  What about <code class="highlighter-rouge">4 j</code> or <code class="highlighter-rouge">4 + j</code>?</li>
+  </ol>
+
+  <blockquote class="solution">
+    <h2 id="solution-6">Solution</h2>
+
+    <ol>
+      <li>Standard mathematics treatments typically use <code class="highlighter-rouge">i</code> to denote an imaginary number. However, from media reports it
+was an early convention established from electrical engineering that now presents a technically expensive area to
+change. <a href="http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i">Stack Overflow provides additional explanation and
+discussion.</a></li>
+      <li><code class="highlighter-rouge">(4+2j)</code></li>
+      <li><code class="highlighter-rouge">4j</code>, <code class="highlighter-rouge">Syntax Error: invalid syntax</code>, in this case <em>j</em> is considered a variable and this depends on if <em>j</em> is defined and if so, its assigned value</li>
+    </ol>
+  </blockquote>
+</blockquote>
+:ET

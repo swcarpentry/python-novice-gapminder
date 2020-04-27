@@ -1,0 +1,339 @@
+I"'N<h2 id="reference">Reference</h2>
+
+<h2 id="running-and-quitting"><a href="../01-run-quit/">Running and Quitting</a></h2>
+<ul>
+  <li>Python files have the <code class="highlighter-rouge">.py</code> extension.</li>
+  <li>Can be written in a text file or a <a href="https://jupyter.org/">Jupyter Notebook</a>.
+    <ul>
+      <li>Jupyter notebooks have the extension <code class="highlighter-rouge">.ipynb</code></li>
+      <li>Jupyter notebooks can be opened from <a href="https://docs.continuum.io/anaconda/install">Anaconda</a> or through the command line by entering <code class="highlighter-rouge">$ jupyter notebook</code>
+        <ul>
+          <li>Markdown and HTML are allowed in markdown cells for documenting code.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="variables-and-assignment"><a href="../02-variables/">Variables and Assignment</a></h2>
+<ul>
+  <li>Variables are stored using <code class="highlighter-rouge">=</code>.
+    <ul>
+      <li>Strings are defined in quotations <code class="highlighter-rouge">'...'</code>.</li>
+      <li>Integers and floating point numbers are defined without quotations.</li>
+    </ul>
+  </li>
+  <li>Variables can contain letters, digits, and underscores <code class="highlighter-rouge">_</code>.
+    <ul>
+      <li>Cannot start with a digit.</li>
+      <li>Variables that start with underscores should be avoided.</li>
+    </ul>
+  </li>
+  <li>Use <code class="highlighter-rouge">print(...)</code> to display values as text.</li>
+  <li>Can use indexing on strings.
+    <ul>
+      <li>Indexing starts at 0.</li>
+      <li>Position is given in square brackets <code class="highlighter-rouge">[position]</code> following the variable name.</li>
+      <li>Take a slice using <code class="highlighter-rouge">[start:stop]</code>. This makes a copy of part of the original string.
+        <ul>
+          <li><code class="highlighter-rouge">start</code> is the index of the first element.</li>
+          <li><code class="highlighter-rouge">stop</code> is the index of the element after the last desired element.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use <code class="highlighter-rouge">len(...)</code> to find the length of a variable or string.</li>
+</ul>
+
+<h2 id="data-types-and-type-conversion"><a href="../03-types-conversion/">Data Types and Type Conversion</a></h2>
+<ul>
+  <li>Each value has a type. This controls what can be done with it.
+    <ul>
+      <li><code class="highlighter-rouge">int</code> represents an integer</li>
+      <li><code class="highlighter-rouge">float</code> represents a floating point number.</li>
+      <li><code class="highlighter-rouge">str</code> represents a string.</li>
+    </ul>
+  </li>
+  <li>To determine a variables type, use the built-in function <code class="highlighter-rouge">type(...)</code>, including the variable name in the parenthesis.</li>
+  <li>Modifying strings:
+    <ul>
+      <li>Use <code class="highlighter-rouge">+</code> to concatenate strings.</li>
+      <li>Use <code class="highlighter-rouge">*</code> to repeat a string.</li>
+      <li>Numbers and strings cannot be added to on another.
+        <ul>
+          <li>Convert string to integer: <code class="highlighter-rouge">int(...)</code>.</li>
+          <li>Convert integer to string: <code class="highlighter-rouge">str(...)</code>.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="built-in-functions-and-help"><a href="../04-built-in/">Built-in Functions and Help</a></h2>
+<ul>
+  <li>To add a comment, place <code class="highlighter-rouge">#</code> before the thing you do not with to be executed.</li>
+  <li>Commonly used built-in functions:
+    <ul>
+      <li><code class="highlighter-rouge">min()</code> finds the smallest value.</li>
+      <li><code class="highlighter-rouge">max()</code> finds the largest value.</li>
+      <li><code class="highlighter-rouge">round()</code> rounds off a floating point number.</li>
+      <li><code class="highlighter-rouge">help()</code> displays documentation for the function in the parenthesis.
+        <ul>
+          <li>Other ways to get help include holding down <code class="highlighter-rouge">shift</code> and pressing <code class="highlighter-rouge">tab</code> in Jupyter Notebooks.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="libraries"><a href="../06-libraries/">Libraries</a></h2>
+<ul>
+  <li>Importing a library:
+    <ul>
+      <li>Use <code class="highlighter-rouge">import ...</code> to load a library.</li>
+      <li>Refer to this library by using <code class="highlighter-rouge">module_name.thing_name</code>.
+        <ul>
+          <li><code class="highlighter-rouge">.</code> indicates ‘part of’.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>To import a specific item from a library: <code class="highlighter-rouge">from ... import ...</code></li>
+  <li>To import a library using an alias: <code class="highlighter-rouge">import ... as ...</code></li>
+  <li>Importing the math library: <code class="highlighter-rouge">import math</code>
+    <ul>
+      <li>Example of referring to an item with the module’s name: <code class="highlighter-rouge">math.cos(math.pi)</code>.</li>
+    </ul>
+  </li>
+  <li>Importing the plotting library as an alias: <code class="highlighter-rouge">import matplotlib as mpl</code></li>
+</ul>
+
+<h2 id="reading-tabular-data-into-dataframes"><a href="../07-reading-tabular/">Reading Tabular Data into DataFrames</a></h2>
+<ul>
+  <li>Use the pandas library to do statistics on tabular data. Load with <code class="highlighter-rouge">import pandas as pd</code>.
+    <ul>
+      <li>To read in a csv: <code class="highlighter-rouge">pd.read_csv()</code>, including the path name in the parenthesis.
+        <ul>
+          <li>To specify a column’s values should be used as row headings: <code class="highlighter-rouge">pd.read_csv('path',index_col='column name')</code>, where path and column name should be replaced with the relevant values.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>To get more information about a DataFrame, use <code class="highlighter-rouge">DataFrame.info</code>, replacing <code class="highlighter-rouge">DataFrame</code> with the variable name of your DataFrame.</li>
+  <li>Use <code class="highlighter-rouge">DataFrame.columns</code> to view the column names.</li>
+  <li>Use <code class="highlighter-rouge">DataFrame.T</code> to transpose a DataFrame.</li>
+  <li>Use <code class="highlighter-rouge">DataFrame.describe</code> to get summary statistics about your data.</li>
+</ul>
+
+<h2 id="pandas-dataframes"><a href="../08-data-frames/">Pandas DataFrames</a></h2>
+<ul>
+  <li>Select data using <code class="highlighter-rouge">[i,j]</code>
+    <ul>
+      <li>To select by entry position: <code class="highlighter-rouge">DataFrame.iloc[..., ...]</code>
+        <ul>
+          <li>This is inclusive of everything except the final index.</li>
+        </ul>
+      </li>
+      <li>To select by entry label: <code class="highlighter-rouge">DataFrame.loc[..., ...]</code>
+        <ul>
+          <li>Can select multiple rows or columns by listing labels.</li>
+          <li>This is inclusive to both ends.</li>
+        </ul>
+      </li>
+      <li>Use <code class="highlighter-rouge">:</code> to select all rows or columns.</li>
+    </ul>
+  </li>
+  <li>Can also select data based on values using <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>. This is a Boolean mask.
+    <ul>
+      <li><code class="highlighter-rouge">mask = subset &gt; 10000</code></li>
+      <li>We can then use this to select values.</li>
+    </ul>
+  </li>
+  <li>To use a select-apply-combine operation we use <code class="highlighter-rouge">data.apply(lambda x: x&gt;x.mean())</code> where <code class="highlighter-rouge">mean()</code> can be any operation the user would like to be applied to x.</li>
+</ul>
+
+<h2 id="plotting"><a href="../09-plotting/">Plotting</a></h2>
+<ul>
+  <li>The most widely used plotting library is <code class="highlighter-rouge">matplotlib</code>.
+    <ul>
+      <li>Usually imported using <code class="highlighter-rouge">import matplotlib.pyplot as plt</code>.</li>
+      <li>To plot we use the command <code class="highlighter-rouge">plt.plot(time, position)</code>.</li>
+      <li>To create a legend use <code class="highlighter-rouge">plt.legend(['label1','label2', loc='upper left'])</code>
+        <ul>
+          <li>Can also define labels within the plot statements by using <code class="highlighter-rouge">plt.plot(time, position, label='label')</code>. To make the legend show up, use <code class="highlighter-rouge">plt.legend()</code></li>
+        </ul>
+      </li>
+      <li>To label x and y axis <code class="highlighter-rouge">plt.xlabel('label')</code> and <code class="highlighter-rouge">plt.ylabel('label')</code> are used.</li>
+    </ul>
+  </li>
+  <li>Pandas DataFrames can be used to plot by using <code class="highlighter-rouge">DataFrame.plot()</code>. Any operations that can be used on a DataFrame can be applied while plotting.
+    <ul>
+      <li>To plot a bar plot <code class="highlighter-rouge">data.plot(kind='bar')</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.puplot</span> <span class="k">as</span> <span class="n">plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">position</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s">'label'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s">'x axis label'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s">'y axis label'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="lists"><a href="../11-lists/">Lists</a></h2>
+<ul>
+  <li>Defined within <code class="highlighter-rouge">[...]</code> and separated by <code class="highlighter-rouge">,</code>.
+    <ul>
+      <li>An empty list can be created by using <code class="highlighter-rouge">[]</code>.</li>
+    </ul>
+  </li>
+  <li>Can use <code class="highlighter-rouge">len(...)</code> to determine how many values are in a list.</li>
+  <li>Can index just as done in previous lessons.
+    <ul>
+      <li>Indexing can be used to reassign values <code class="highlighter-rouge">list_name[0] = newvalue</code>.</li>
+    </ul>
+  </li>
+  <li>To add an item to a list use <code class="highlighter-rouge">list_name.append()</code>, with the item to append in the parenthesis.</li>
+  <li>To combine two lists use <code class="highlighter-rouge">list_name_1.extend(list_name_2)</code>.</li>
+  <li>To remove an item from a list use <code class="highlighter-rouge">del list_name[index]</code>.</li>
+</ul>
+
+<h2 id="for-loops"><a href="../12-for-loops/">For Loops</a></h2>
+<ul>
+  <li>Start a for loop with <code class="highlighter-rouge">for number in [1,2,3]:</code>, with the following lines indented.
+    <ul>
+      <li><code class="highlighter-rouge">[1, 2, 3]</code> is considered the collection.</li>
+      <li><code class="highlighter-rouge">number</code> is the loop variable.</li>
+      <li>The action following the collection is the body.</li>
+    </ul>
+  </li>
+  <li>To iterate over a sequence of numbers use <code class="highlighter-rouge">range(start, end)</code></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="looping-over-data-sets"><a href="../13-looping-data-sets/">Looping Over Data Sets</a></h2>
+<ul>
+  <li>Use a for loop: <code class="highlighter-rouge">for filename in [file1, file2]:</code></li>
+  <li>To find a set of files using a pattern use <code class="highlighter-rouge">glob.glob</code>
+    <ul>
+      <li>Must import first using <code class="highlighter-rouge">import glob</code>.</li>
+      <li><code class="highlighter-rouge">*</code> indicates “match zero or more characters”</li>
+      <li><code class="highlighter-rouge">?</code> indicates “match exactly one character”
+        <ul>
+          <li>For example: <code class="highlighter-rouge">glob.glob(*.txt)</code> will find all files that end with .txt in the current directory.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Combine these by writing a loop using: <code class="highlighter-rouge">for filename in glob.glob(*.txt):</code></li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="o">*.</span><span class="n">txt</span><span class="p">):</span>
+  <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="writing-functions"><a href="../14-writing-functions/">Writing Functions</a></h2>
+<ul>
+  <li>Define a function using <code class="highlighter-rouge">def function_name(parameters):</code>. Replace <code class="highlighter-rouge">parameters</code> with the variables to use when the function is executed.</li>
+  <li>Run by using <code class="highlighter-rouge">function_name(parameters)</code>.</li>
+  <li>To return a result to the caller use <code class="highlighter-rouge">return ...</code> in the function.</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add_numbers</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+  <span class="k">return</span> <span class="n">result</span>
+
+<span class="n">add_numbers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="variable-scope"><a href="../15-scope/">Variable Scope</a></h2>
+<ul>
+  <li>A local variable is defined in a function and can only be seen and used within that function.</li>
+  <li>A global variable is defined outside of a function and can be seen or used anywhere after definition.</li>
+</ul>
+
+<h2 id="conditionals"><a href="../17-conditionals/">Conditionals</a></h2>
+<ul>
+  <li>Defined similarly to a loop, using <code class="highlighter-rouge">if variable conditional value:</code>.
+    <ul>
+      <li>For example, <code class="highlighter-rouge">if variable &gt; 5:</code>.</li>
+    </ul>
+  </li>
+  <li>Use <code class="highlighter-rouge">elif:</code> for additional tests.</li>
+  <li>Use <code class="highlighter-rouge">else:</code> for when if statement is not true.</li>
+  <li>Can Combine more than one conditional by using <code class="highlighter-rouge">and</code> or <code class="highlighter-rouge">or</code>.</li>
+  <li>Often used in combination with for loops.</li>
+  <li>Conditions that can be used:
+    <ul>
+      <li><code class="highlighter-rouge">==</code> equal to.</li>
+      <li><code class="highlighter-rouge">&gt;=</code> greater than or equal to.</li>
+      <li><code class="highlighter-rouge">&lt;=</code> less than or equal to.</li>
+      <li><code class="highlighter-rouge">&gt;</code> greater than.</li>
+      <li><code class="highlighter-rouge">&lt;</code> less than.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">]:</span>
+  <span class="k">if</span> <span class="n">m</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is large'</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">m</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is 5'</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span> 
+    <span class="k">print</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="s">'is small'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="programming-style"><a href="../18-style/">Programming Style</a></h2>
+<ul>
+  <li>Document your code.</li>
+  <li>Use clear and meaningful variable names.</li>
+  <li>Follow <a href="https://www.python.org/dev/peps/pep-0008">the PEP8 style guide</a> when setting up your code.</li>
+  <li>Use assertions to check for internal errors.</li>
+  <li>Use docstrings to provide help.</li>
+</ul>
+
+<h2 id="glossary">Glossary</h2>
+
+<dl>
+  <dt id="arguments">Arguments</dt>
+  <dd>Values passed to functions.</dd>
+  <dt id="array">Array</dt>
+  <dd>A container holding elements of the same type.</dd>
+  <dt id="boolean">Boolean</dt>
+  <dd>An object composed of <code class="highlighter-rouge">true</code> and <code class="highlighter-rouge">false</code>.</dd>
+  <dt id="dataframe">DataFrame</dt>
+  <dd>The way Pandas represents a table; a collection of series.</dd>
+  <dt id="element">Element</dt>
+  <dd>An item in a list or an array. For a string, these are the individual characters.</dd>
+  <dt id="function">Function</dt>
+  <dd>A block of code that can be called and re-used elsewhere.</dd>
+  <dt id="global-variable">Global variable</dt>
+  <dd>A variable defined outside of a function that can be used anywhere.</dd>
+  <dt id="index">Index</dt>
+  <dd>The position of a given element.</dd>
+  <dt id="jupyter-notebook">Jupyter Notebook</dt>
+  <dd>Interactive coding environment allowing a combination of code and markdown.</dd>
+  <dt id="library">Library</dt>
+  <dd>A collection of files containing functions used by other programs.</dd>
+  <dt id="local-variable">Local Variable</dt>
+  <dd>A variable defined inside of a function that can only be used inside of that function.</dd>
+  <dt id="mask">Mask</dt>
+  <dd>A boolean object used for selecting data from another object.</dd>
+  <dt id="method">Method</dt>
+  <dd>An action tied to a particular object. Called by using <code class="highlighter-rouge">object.method</code>.</dd>
+  <dt id="modules">Modules</dt>
+  <dd>The files within a library containing functions used by other programs.</dd>
+  <dt id="parameters">Parameters</dt>
+  <dd>Variables used when executing a function.</dd>
+  <dt id="series">Series</dt>
+  <dd>A Pandas data structure to represent a column.</dd>
+  <dt id="substring">Substring</dt>
+  <dd>A part of a string.</dd>
+  <dt id="variables">Variables</dt>
+  <dd>Names for values.</dd>
+</dl>
+
+:ET
