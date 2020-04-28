@@ -126,40 +126,7 @@ for number in range(0,5):
 ~~~
 {: .language-python}
 
-## [Looping Over Data Sets]({{ page.root }}/13-looping-data-sets/)
-- Use a for loop: `for filename in [file1, file2]:`
-- To find a set of files using a pattern use `glob.glob`
-  - Must import first using `import glob`.
-  - `*` indicates "match zero or more characters"
-  - `?` indicates "match exactly one character"
-    - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
-- Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
-
-~~~
-for filename in glob.glob(*.txt):
-  data = pd.read_csv(filename)
-~~~
-{: .language-python}
-
-## [Writing Functions]({{ page.root }}/14-writing-functions/)
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
-- Run by using `function_name(parameters)`.
-- To return a result to the caller use `return ...` in the function.
-
-~~~
-def add_numbers(a, b):
-  result = a + b
-  return result
-
-add_numbers(1, 4)
-~~~
-{: .language-python}
-
-## [Variable Scope]({{ page.root }}/15-scope/)
-- A local variable is defined in a function and can only be seen and used within that function.
-- A global variable is defined outside of a function and can be seen or used anywhere after definition.
-
-## [Conditionals]({{ page.root }}/17-conditionals/)
+## [Conditionals]({{ page.root }}/13-conditionals/)
 - Defined similarly to a loop, using `if variable conditional value:`.
   - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
@@ -179,10 +146,43 @@ for m in [3, 6, 7, 2, 8]:
     print(m, 'is large')
   elif m == 5:
     print(m, 'is 5')
-  else: 
+  else:
     print(m, 'is small')
 ~~~
 {: .language-python}
+
+## [Looping Over Data Sets]({{ page.root }}/14-looping-data-sets/)
+- Use a for loop: `for filename in [file1, file2]:`
+- To find a set of files using a pattern use `glob.glob`
+  - Must import first using `import glob`.
+  - `*` indicates "match zero or more characters"
+  - `?` indicates "match exactly one character"
+    - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
+- Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
+
+~~~
+for filename in glob.glob(*.txt):
+  data = pd.read_csv(filename)
+~~~
+{: .language-python}
+
+## [Writing Functions]({{ page.root }}/16-writing-functions/)
+- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
+- Run by using `function_name(parameters)`.
+- To return a result to the caller use `return ...` in the function.
+
+~~~
+def add_numbers(a, b):
+  result = a + b
+  return result
+
+add_numbers(1, 4)
+~~~
+{: .language-python}
+
+## [Variable Scope]({{ page.root }}/17-scope/)
+- A local variable is defined in a function and can only be seen and used within that function.
+- A global variable is defined outside of a function and can be seen or used anywhere after definition.
 
 ## [Programming Style]({{ page.root }}/18-style/)
 - Document your code.
