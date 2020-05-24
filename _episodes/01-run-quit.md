@@ -53,7 +53,6 @@ does not require an internet connection.
 > Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
 > between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
 > [JupyterLab user interface documentation][jupyterlab-ui].
->
 {: .callout}
 
 ## Starting JupyterLab
@@ -202,7 +201,6 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > > After creating the necessary tabs, you can drag one of the tabs to the center of a panel to 
 > > move the tab to the panel; next you can subdivide a tab panel by dragging a tab to the left, 
 > > right, top, or bottom of the panel.
-> >
 > {: .solution}
 {: .challenge}
 
@@ -254,7 +252,6 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
 > > You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
-> >
 > {: .solution}
 {: .challenge}
 
@@ -512,7 +509,6 @@ $ jupyter lab
 > ## Closing JupyerLab
 >
 > Practice closing and restarting the JupyterLab server.
-> 
 {: .challenge}
 [anaconda]: https://docs.continuum.io/anaconda/install
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html

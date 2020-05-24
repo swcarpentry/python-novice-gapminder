@@ -349,6 +349,5 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > 4. `thing[:]` returns all of `thing`
 > > 5. `thing[number:some-negative-number]` returns a slice from `number` to `some-negative-number` values from the end of `thing`
 > > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
-> >
 > {: .solution}
 {: .challenge}

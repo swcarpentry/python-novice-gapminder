@@ -384,6 +384,5 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >{: .language-python}
 > > Note that `help(to_csv)` throws an error! This is a subtlety and is due to the fact that `to_csv` is NOT a function in 
 > > and of itself and the actual call is `americas.to_csv`. 
-> > 
 > {: .solution}
 {: .challenge}
