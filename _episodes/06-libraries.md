@@ -146,7 +146,6 @@ cos(pi) is -1.0
 > >    Also, the design of Python's `math` library has its origin in the C standard,
 > >    which includes both `sqrt(x)` and `pow(x,y)`, so a little bit of the history
 > >    of programming is showing in Python's function names.
-> >
 > {: .solution}
 {: .challenge}
 
@@ -235,7 +234,6 @@ cos(pi) is -1.0
 > > print("random base", bases[idx], "base index", idx)
 > > ~~~
 > > {: .language-python}
-> >
 > {: .solution}
 {: .challenge}
 

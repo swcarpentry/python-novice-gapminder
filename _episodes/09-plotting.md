@@ -149,7 +149,6 @@ plt.ylabel('GDP per capita ($)')
 > By default matplotlib will attempt to place the legend in a suitable position. If you
 > would rather specify a position this can be done with the `loc=` argument, e.g to place
 > the legend in the upper left corner of the plot, specify `loc='upper left'`
->
 > {: .language-python}
 {: .callout}
 
@@ -219,7 +218,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > >
 > > No particular correlations can be seen between the minimum and maximum gdp values
 > > year on year. It seems the fortunes of asian countries do not rise and fall together.
-> >
 > {: .solution}
 >
 > You might note that the variability in the maximum is much higher than
@@ -240,7 +238,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > maybe the Brent crude index would make an interesting comparison?
 > > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
 > > more notably.
-> >
 > {: .solution}
 {: .challenge}
 
@@ -274,7 +271,6 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > s - Details for this can be found in the documentation of plt.scatter.
 > > A single number or one value for each data point. Determines the size
 > > of the plotted points.
-> >
 > {: .solution}
 {: .challenge}
 

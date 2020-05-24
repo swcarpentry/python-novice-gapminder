@@ -366,7 +366,6 @@ data.groupby(wealth_score).sum()
 > print(df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .language-python}
-> 
 {: .challenge}
 > 
 > > ## Solution
