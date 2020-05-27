@@ -499,46 +499,65 @@ result of call is: None
 
 > ## Simulating a dynamical system
 >
-> In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system in which a function describes the time dependence of a point in a geometrical space.  A canonical example of a dynamical system is a system called the [logistic map](https://en.wikipedia.org/wiki/Logistic_map).
+> In mathematics, a [dynamical system](https://en.wikipedia.org/wiki/Dynamical_system) is a system
+> in which a function describes the time dependence of a point in a geometrical space. A canonical
+> example of a dynamical system is the [logistic map](https://en.wikipedia.org/wiki/Logistic_map),
+> a growth model that computes a new population density (between  0 and 1) based on the current
+> density. In the model, time takes discrete values 0, 1, 2, ...
 >
+> 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
+>    population (at time _t_), and a parameter `r=1`. This function should return a value 
+>    representing the state of the system (population) at time _t_+1, using the mapping function 
 >
-> 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the state of the system at time _t_, and a parameter `r`. This function should return a value representing the state of the system at time _t+1_.
+>    x(t+1) = r * x(t) * [1 - x(t)]
 >
-> 2. Using a `for` loop, iterate the `logistic_map` function defined in part 1 starting from an initial condition of 0.5 for `t_final=10`, `100`, and `1000` periods. Store the intermediate results in a list so that after the `for` loop terminates you have accumulated a sequence of values representing the state of the logistic map at time _t=0,1,...,t_final_.
+> 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
+>    from an initial population of 0.5, for a period of time `t_final=10`. Store the intermediate
+>    results in a list so that after the loop terminates you have accumulated a sequence of values
+>    representing the state of the logistic map at times _t_=0,1,...,_t_final_. Print this list to
+>    see the evolution of the population.
 >
-> 3. Encapsulate the logic of your `for` loop into a function called `iterate` that takes the initial condition as its first input, the parameter `t_final` as its second input and the parameter `r` as its third input. The function should return the list of values representing the state of the logistic map at time _t=0,1,...,t_final_.
->
+> 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
+>    population as its first input, the parameter `t_final` as its second input and the parameter
+>    `r` as its third input. The function should return the list of values representing the state of
+>    the logistic map at times _t_=0,1,...,_t_final_. Run this function for periods `t_final=100`
+>    and `1000` and print some of the values. Is the population trending toward a steady state?
 >
 > > ## Solution
 > >
-> > 1.
+> > 1. ~~~
+> >    def logistic_map(x, r):
+> >        return r * x * (1 - x)
+> >    ~~~
+> >    {: .language-python}
 > >
-> > ~~~
-> > def logistic_map(x, r):
-> >     return r * x * (1 - x)
-> > ~~~
-> > {: .language-python}
+> > 2. ~~~
+> >    initial_population = 0.5
+> >    t_final = 10
+> >    r = 1.0
+> >    population = [initial_population]
+> >    for t in range(1, t_final):
+> >        population.append( logistic_map(population[t-1], r) )
+> >    ~~~
+> >    {: .language-python}
 > >
-> > 2.
+> > 3. ~~~
+> >    def iterate(initial_population, t_final, r):
+> >        population = [initial_population]
+> >        for t in range(1, t_final):
+> >            population.append( logistic_map(population[t-1], r) )
+> >        return population
 > >
-> > ~~~
-> > initial_condition = 0.5
-> > t_final = 10
-> > r = 1.0
-> > trajectory = [initial_condition]
-> > for t in range(1, t_final):
-> >     trajectory.append( logistic_map(trajectory[t-1], r) )
-> > ~~~
-> > {: .language-python}
-> >
-> > 3.
-> > ~~~
-> > def iterate(initial_condition, t_final, r):
-> >     trajectory = [initial_condition]
-> >     for t in range(1, t_final):
-> >         trajectory.append( logistic_map(trajectory[t-1], r) )
-> >     return trajectory
-> > ~~~
-> > {: .language-python}
+> >    for period in (10, 100, 1000):
+> >        population = iterate(0.5, period, 1)
+> >        print(population[-1])
+> >    ~~~
+> >    {: .language-python}
+> >    ~~~
+> >    0.07508929631879595
+> >    0.009485759503982033
+> >    0.0009923756709128578
+> >    ~~~
+> >    {: .output}
 > {: .solution}
 {: .challenge}
