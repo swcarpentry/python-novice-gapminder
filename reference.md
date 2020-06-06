@@ -65,7 +65,7 @@ root: ..
 ## [Reading Tabular Data into DataFrames]({{ page.root }}/07-reading-tabular/)
 - Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
   - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
-    - To specify a column's values should be used as row headings: `pd.read_csv('path',index_col='column name')`, where path and column name should be replaced with the relevant values.
+    - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
 - To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
 - Use `DataFrame.columns` to view the column names.
 - Use `DataFrame.T` to transpose a DataFrame.
@@ -79,16 +79,16 @@ root: ..
     - Can select multiple rows or columns by listing labels.
     - This is inclusive to both ends.
   - Use `:` to select all rows or columns.
-- Can also select data based on values using `true` and `false`. This is a Boolean mask.
+- Can also select data based on values using `True` and `False`. This is a Boolean mask.
   - `mask = subset > 10000`
   - We can then use this to select values.
-- To use a select-apply-combine operation we use `data.apply(lambda x: x>x.mean())` where `mean()` can be any operation the user would like to be applied to x.
+- To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
 
 ## [Plotting]({{ page.root }}/09-plotting/)
 - The most widely used plotting library is `matplotlib`.
   - Usually imported using `import matplotlib.pyplot as plt`.
   - To plot we use the command `plt.plot(time, position)`.
-  - To create a legend use `plt.legend(['label1','label2', loc='upper left'])`
+  - To create a legend use `plt.legend(['label1', 'label2'], loc='upper left')`
     - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
   - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
 - Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
@@ -96,7 +96,7 @@ root: ..
 
 ~~~
 import matplotlib.puplot as plot
-plt.plot(time,position,label='label')
+plt.plot(time, position, label='label')
 plt.xlabel('x axis label')
 plt.ylabel('y axis label')
 plt.legend()
@@ -114,7 +114,7 @@ plt.legend()
 - To remove an item from a list use `del list_name[index]`.
 
 ## [For Loops]({{ page.root }}/12-for-loops/)
-- Start a for loop with `for number in [1,2,3]:`, with the following lines indented.
+- Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
   - `[1, 2, 3]` is considered the collection.
   - `number` is the loop variable.
   - The action following the collection is the body.
@@ -122,7 +122,7 @@ plt.legend()
 
 ~~~
 for number in range(0,5):
-  print(number)
+    print(number)
 ~~~
 {: .language-python}
 
@@ -131,7 +131,7 @@ for number in range(0,5):
   - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
 - Use `else:` for when if statement is not true.
-- Can Combine more than one conditional by using `and` or `or`.
+- Can combine more than one conditional by using `and` or `or`.
 - Often used in combination with for loops.
 - Conditions that can be used:
   - `==` equal to.
@@ -142,12 +142,12 @@ for number in range(0,5):
 
 ~~~
 for m in [3, 6, 7, 2, 8]:
-  if m > 5:
-    print(m, 'is large')
-  elif m == 5:
-    print(m, 'is 5')
-  else:
-    print(m, 'is small')
+    if m > 5:
+        print(m, 'is large')
+    elif m == 5:
+        print(m, 'is 5')
+    else:
+        print(m, 'is small')
 ~~~
 {: .language-python}
 
@@ -157,7 +157,7 @@ for m in [3, 6, 7, 2, 8]:
   - Must import first using `import glob`.
   - `*` indicates "match zero or more characters"
   - `?` indicates "match exactly one character"
-    - For example: `glob.glob(*.txt)` will find all files that end with .txt in the current directory.
+    - For example: `glob.glob(*.txt)` will find all files that end with `.txt` in the current directory.
 - Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
 
 ~~~
@@ -173,8 +173,8 @@ for filename in glob.glob(*.txt):
 
 ~~~
 def add_numbers(a, b):
-  result = a + b
-  return result
+    result = a + b
+    return result
 
 add_numbers(1, 4)
 ~~~
@@ -201,7 +201,7 @@ Array
 :     A container holding elements of the same type.
 
 Boolean
-:     An object composed of `true` and `false`.
+:     An object composed of `True` and `False`.
 
 DataFrame
 :     The way Pandas represents a table; a collection of series.
