@@ -190,9 +190,9 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 >    <img alt="Multi-panel JupyterLab" src="../fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
 > </p>
 >
-> First, create a text file, Python console, and terminal window and arrange then into three 
+> First, create a text file, Python console, and terminal window and arrange them into three 
 > panels in the main work area. Next, create a notebook, terminal window, and text file and 
-> arrange then into three panels in the main work area. Finally, create your own combination of 
+> arrange them into three panels in the main work area. Finally, create your own combination of 
 > panels and tabs. What combination of panels and tabs do you think will be most useful for your 
 > workflow?
 >
