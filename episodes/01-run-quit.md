@@ -111,7 +111,7 @@ menus are included by default.
 *   **View:** Actions that alter the appearance of JupyterLab.
 *   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
 *   **Kernel:** Actions for managing kernels which, as mentioned above, are separate processes for running code.
-*   **Tabs:** A list of the open documents and activities in the dock panel.
+*   **Tabs:** A list of the open documents and activities in the main work area.
 *   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
 *   **Help:** A list of JupyterLab and kernel help links.
 
