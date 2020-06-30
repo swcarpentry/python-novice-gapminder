@@ -199,7 +199,7 @@ cos(pi) is -1.0
 > > {: .language-python}
 > >
 > > Note that this function returns a list of values. We will learn about
-> > lists in [episode 11]({% link _episodes/11-lists.md %}).
+> > lists in [episode 11]({{ page.root }}/11-lists/).
 > >
 > > There's also other functions you could use, but with more convoluted
 > > code as a result.
