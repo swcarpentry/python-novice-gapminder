@@ -427,7 +427,7 @@ first is 2 and second is 5
 >
 > Python provides complex numbers,
 > which are written as `1.0+2.0j`.
-> If `val` is an imaginary number,
+> If `val` is a complex number,
 > its real and imaginary parts can be accessed using *dot notation*
 > as `val.real` and `val.imag`.
 >
