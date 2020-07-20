@@ -94,7 +94,7 @@ plt.ylabel('GDP per capita')
 
 ## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 *   The command is `plt.plot(x, y)`
-*   The color / format of markers can also be specified as an optical argument: e.g. 'b-' is a blue line, 'g--' is a green dashed line.
+*   The color / format of markers can also be specified as an optical argument: e.g. `b-` is a blue line, `g--` is a green dashed line.
 
 ## Get Australia data from dataframe
 
