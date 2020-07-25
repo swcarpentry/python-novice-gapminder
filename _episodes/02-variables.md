@@ -131,7 +131,7 @@ Age in three years: 45
 *   Use the position's index in square brackets to get the character at that
     position.
     
-![an illustration of indexing](../fig/2_indexing.svg)
+![an illustration of indexing]({{ site.baseurl }}/fig/2_indexing.svg)
 
 ~~~
 atom_name = 'helium'

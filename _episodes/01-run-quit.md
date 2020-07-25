@@ -88,7 +88,7 @@ Below is a screenshot of a similar JupyterLab landing page to the one that shoul
 default web browser after starting the JupyterLab server on wither Mac OS X or Windows.
 
 <p align='center'>
-  <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
+  <img alt="JupyterLab landing page" src="{{ site.baseurl }}/fig/0_jupyterlab_landing_page.png" width="750"/>
 </p>
 
 ## The JupyterLab Interface
@@ -118,7 +118,7 @@ menus are included by default.
 A screenshot of the default Menu Bar is provided below.
 
 <p align='center'>
-    <img alt="JupyterLab Menu Bar" src="../fig/0_jupyterlab_menu_bar.png" width="750"/>
+    <img alt="JupyterLab Menu Bar" src="{{ site.baseurl }}/fig/0_jupyterlab_menu_bar.png" width="750"/>
 </p>
 
 ### Left Sidebar
@@ -129,7 +129,7 @@ and terminals, the command palette, and a list of open tabs in the main work are
 the default Left Side Bar is provided below.
 
 <p align='center'>
-    <img alt="JupyterLab Left Side Bar" src="../fig/0_jupyterlab_left_side_bar.png" width="250"/>
+    <img alt="JupyterLab Left Side Bar" src="{{ site.baseurl }}/fig/0_jupyterlab_left_side_bar.png" width="250"/>
 </p>
 
 The left sidebar can be collapsed or expanded by selecting “Show Left Sidebar” in the View menu or 
@@ -142,7 +142,7 @@ and other activities (terminals, code consoles, etc.) into panels of tabs that c
 subdivided. A screenshot of the default Menu Bar is provided below.
 
 <p align='center'>
-    <img alt="JupyterLab Main Work Area" src="../fig/0_jupyterlab_main_work_area.png" width="750"/>
+    <img alt="JupyterLab Main Work Area" src="{{ site.baseurl }}/fig/0_jupyterlab_main_work_area.png" width="750"/>
 </p>
 
 Drag a tab to the center of a tab panel to move the tab to the panel. Subdivide a tab panel by 
@@ -171,7 +171,7 @@ Below is a screenshot of a Jupyter notebook running inside JupyterLab. If you ar
 more details, then see the [official notebook documentation][jupyterlab-notebook-docs].
 
 <p align='center'>
-    <img alt="Example Jupyter Notebook" src="../fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
+    <img alt="Example Jupyter Notebook" src="{{ site.baseurl }}/fig/0_jupyterlab_notebook_screenshot.png" width="750"/>
 </p>
 
 > ## How It's Stored
@@ -187,7 +187,7 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > example from the [official documentation][jupyterlab].
 > 
 > <p align='center'>
->    <img alt="Multi-panel JupyterLab" src="../fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
+>    <img alt="Multi-panel JupyterLab" src="{{ site.baseurl }}/fig/0_multipanel_jupyterlab_screenshot.png" width="750"/>
 > </p>
 >
 > First, create a text file, Python console, and terminal window and arrange them into three 
