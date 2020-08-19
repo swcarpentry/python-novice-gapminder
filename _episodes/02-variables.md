@@ -109,6 +109,16 @@ NameError: name 'last_name' is not defined
 
 *   We can use variables in calculations just as if they were values.
     *   Remember, we assigned the value `42` to `age` a few lines ago.
+*   Python has a set of built-in arithmetic operators for calculations. 
+
+| Operation     | Operator | 
+|-------------- | -------- |
+| Addition      |    +     |
+| Subtraction   |    -     | 
+| Division      |    /     |
+| Multiplication|    *     |
+| Exponentiation|    **    |
+| Modulus       |    %     |
 
 ~~~
 age = age + 3
