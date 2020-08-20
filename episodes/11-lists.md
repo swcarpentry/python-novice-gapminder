@@ -77,13 +77,12 @@ pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
 primes = [2, 3, 5]
 print('primes is initially:', primes)
 primes.append(7)
-primes.append(9)
 print('primes has become:', primes)
 ~~~
 {: .language-python}
 ~~~
 primes is initially: [2, 3, 5]
-primes has become: [2, 3, 5, 7, 9]
+primes has become: [2, 3, 5, 7]
 ~~~
 {: .output}
 
@@ -106,9 +105,9 @@ print('primes has finally become:', primes)
 ~~~
 {: .language-python}
 ~~~
-primes is currently: [2, 3, 5, 7, 9]
-primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
-primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
+primes is currently: [2, 3, 5, 7]
+primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
+primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
 
@@ -117,8 +116,8 @@ two-dimensional - the last element in `primes` is a list, not an integer.
 
 ## Use `del` to remove items from a list entirely.
 
-*   `del list_name[index]` removes an item from a list and shortens the list.
-*   Not a function or a method, but a statement in the language.
+*   We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
+*   `del` is not a function or a method, but a statement in the language.
 
 ~~~
 primes = [2, 3, 5, 7, 9]
