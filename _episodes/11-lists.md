@@ -116,7 +116,7 @@ two-dimensional - the last element in `primes` is a list, not an integer.
 
 ## Use `del` to remove items from a list entirely.
 
-*   We use `del listtname[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
+*   We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
 *   `del` is not a function or a method, but a statement in the language.
 
 ~~~
