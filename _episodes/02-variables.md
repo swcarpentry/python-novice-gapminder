@@ -26,6 +26,7 @@ keypoints:
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
     and a name in quotes to a variable `first_name`.
+*   Jupyter performs automatic syntax highlighting, showing strings in red. 
 
 ~~~
 age = 42
