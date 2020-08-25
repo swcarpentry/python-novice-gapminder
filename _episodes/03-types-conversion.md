@@ -310,12 +310,14 @@ first is 2 and second is 5
 >
 > > ## Solution
 > > We want the minimum number of surveys that reaches everyone once, which is
-> > the rounded up value of `num_subjects / num_per_survey`. This is 
-> > equivalent to performing an integer division with `//` and adding 1.
+> > the rounded up value of `num_subjects/ num_per_survey`. This is 
+> > equivalent to performing a floor division with `//` and adding 1. Before
+> > the division we need to subtract 1 from the number of subjects to deal with 
+> > the case where `num_subjects` is evenly divisible by `num_per_survey`.
 > > ~~~
 > > num_subjects = 600
 > > num_per_survey = 42
-> > num_surveys = num_subjects // num_per_survey + 1
+> > num_surveys = (num_subjects - 1) // num_per_survey + 1
 > >
 > > print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
 > > ~~~
