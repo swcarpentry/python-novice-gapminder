@@ -94,16 +94,16 @@ Ahmed Walsh
 ~~~
 {: .output}
 
-*   Multiplying a character string by an integer _N_ creates a new string that consists of that character string repeated  _N_ times.
+*   Multiplying a string of characters by an integer _N_ creates a new string that consists of that character string repeated  _N_ times.
     *   Since multiplication is repeated addition.
 
 ~~~
-separator = '=' * 10
-print(separator)
+chitchat = 'bla' * 4
+print(chitchat)
 ~~~
 {: .language-python}
 ~~~
-==========
+blablablabla
 ~~~
 {: .output}
 
