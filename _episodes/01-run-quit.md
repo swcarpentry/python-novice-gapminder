@@ -284,36 +284,45 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 *   Use asterisks
 *   to create
 *   bullet lists.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 *   Use asterisks
 *   to create
 *   bullet lists.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 1.  Use numbers
 1.  to create
 1.  numbered lists.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+
 1.  Use numbers
 1.  to create
 1.  numbered lists.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 *  You can use indents
 	*  To create sublists 
@@ -322,41 +331,53 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 	1. Of different
 	1. types
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 *  You can use indents
 	*  To create sublists
 	*  of the same type
 *  Or sublists
 	1. Of different
 	1. types
+  
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 # A Level-1 Heading
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 # A Level-1 Heading
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 ## A Level-2 Heading (etc.)
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 Line breaks
 don't matter.
@@ -364,30 +385,37 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 Line breaks
 don't matter.
 
 But blank lines
 create new paragraphs.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
+
   </div>
 </div>
 
