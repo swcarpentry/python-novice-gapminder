@@ -186,10 +186,23 @@ three squared is 9.0
 
 ## Variables only change value when something is assigned to them.
 
-*   If we make one cell in a spreadsheet depend on another,
-    and update the latter,
-    the former updates automatically.
-*   This does **not** happen in programming languages.
+Most of the time, variable assignment creates a new storage location for the value, so in this simple example:
+
+~~~
+a = 1
+b = a
+a = 2
+print('a is', a, 'and b is', b)
+~~~
+{: .language-python}
+~~~
+a is 2 and b is 1
+~~~
+{: .output}
+
+`b` is a **copy** of `a`, a separate storage location, so subsequent assignment of a new value to `a` leaves `b` completely unaffected. 
+
+Here is a slightly more complicated example involving computation on the second value:
 
 ~~~
 first = 1
@@ -206,6 +219,8 @@ first is 2 and second is 5
 *   The computer reads the value of `first` when doing the multiplication,
     creates a new value, and assigns it to `second`.
 *   After that, `second` does not remember where it came from.
+
+Sometimes, however (and this can happen with Python list types, described in more detail in Episode 11:Lists), variables can point to the same storage location.  Think of a cell in a spreadsheet which depends on another cell.  Updating the latter will automatically update the former.  The dependent cell is actually a **reference** to the original, not a distinct copy of it.  
 
 > ## Fractions
 >
