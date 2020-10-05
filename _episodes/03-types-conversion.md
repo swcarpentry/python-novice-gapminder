@@ -220,7 +220,7 @@ first is 2 and second is 5
     creates a new value, and assigns it to `second`.
 *   After that, `second` does not remember where it came from.
 
-Sometimes, however (and this can happen with Python list types, described in more detail in Episode 11:Lists), more than one variable can point to the same storage location.  Think of a cell in a spreadsheet which depends on another cell.  Updating the latter will automatically update the former.  The dependent cell is actually a **reference** to the original, not a distinct copy of it.  
+Sometimes, however (e.g. with Python list types, described in more detail in Episode 11:Lists - under section 'Copying (or Not)'), more than one variable *can* point to the same storage location.  Think of a cell in a spreadsheet which depends on another cell.  Updating the latter will automatically update the former.  The dependent cell is actually a **reference** to the original, not a distinct copy of it.  
 
 > ## Fractions
 >
