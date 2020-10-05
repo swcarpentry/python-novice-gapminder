@@ -180,6 +180,23 @@ three squared is 9.0
   the former updates automatically.
 - This does **not** happen in programming languages.
 
+Most of the time, variable assignment creates a new storage location for the value, so in this simple example:
+
+```python
+a = 1
+b = a
+a = 2
+print('a is', a, 'and b is', b)
+```
+
+```output
+a is 2 and b is 1
+```
+
+`b` is a **copy** of `a`, a separate storage location, so subsequent assignment of a new value to `a` leaves `b` completely unaffected. 
+
+Here is a slightly more complicated example involving computation on the second value:
+
 ```python
 variable_one = 1
 variable_two = 5 * variable_one
@@ -195,6 +212,8 @@ first is 2 and second is 5
   creates a new value, and assigns it to `variable_two`.
 - Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
   does not automatically change when `variable_one` changes.
+
+Sometimes, however (and this can happen with Python list types, described in more detail in Episode 11:Lists), variables can point to the same storage location.  Think of a cell in a spreadsheet which depends on another cell.  Updating the latter will automatically update the former.  The dependent cell is actually a **reference** to the original, not a distinct copy of it.  
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
