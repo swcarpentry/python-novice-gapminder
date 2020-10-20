@@ -59,10 +59,7 @@ If the assertion is `False`, the Python interpreter raises an `AssertionError` r
 
 ## Use docstrings to provide builtin help.
 
-*   If the first thing in a function is a character string
-    that is not assigned directly to a variable,
-    Python attaches it to the function as the builtin help variable.
-*   Called a *docstring* (short for "documentation string").
+If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function as the builtin help variable. This string (that provides documentation) is also known as a *docstring*.
 
 ~~~
 def average(values):
