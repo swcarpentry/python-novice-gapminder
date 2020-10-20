@@ -1,7 +1,5 @@
 ---
-layout: page
 title: "Instructors' Guide"
-permalink: /guide/
 ---
 
 ## General Notes

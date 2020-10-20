@@ -1,8 +1,5 @@
 ---
-layout: page
 title: "Setup"
-permalink: /setup/
-root: ..
 ---
 
 ## Installing Python Using Anaconda
@@ -13,8 +10,8 @@ individually can be a bit difficult, however, so we recommend the all-in-one
 installer [Anaconda][anaconda].
 
 Regardless of how you choose to install it, please make sure you install Python
-version 3.x (e.g., 3.4 is fine). Also, please set up your python environment at 
-least a day in advance of the workshop.  If you encounter problems with the 
+version 3.x (e.g., 3.4 is fine). Also, please set up your python environment at
+least a day in advance of the workshop.  If you encounter problems with the
 installation procedure, ask your workshop organizers via e-mail for assistance so
 you are ready to go as soon as the workshop begins.
 
@@ -37,7 +34,7 @@ you are ready to go as soon as the workshop begins.
 
 ### Linux
 
-Note that the following installation steps require you to work from the shell. 
+Note that the following installation steps require you to work from the shell.
 If you run into any difficulties, please request help before the workshop begins.
 
 1.  Open [https://www.anaconda.com/distribution/][anaconda-linux] with your web browser.
@@ -62,18 +59,18 @@ If you run into any difficulties, please request help before the workshop begins
     d.  Press enter.
 
     e.  Follow the text-only prompts.  When the license agreement appears (a colon
-        will be present at the bottom of the screen) press the space bar until you see the 
-        bottom of the text. Type `yes` and press enter to approve the license. Press 
-        enter again to approve the default location for the files. Type `yes` and 
-        press enter to prepend Anaconda to your `PATH` (this makes the Anaconda 
+        will be present at the bottom of the screen) press the space bar until you see the
+        bottom of the text. Type `yes` and press enter to approve the license. Press
+        enter again to approve the default location for the files. Type `yes` and
+        press enter to prepend Anaconda to your `PATH` (this makes the Anaconda
         distribution your user's default Python).
 
 ## Getting the Data
 
 The data we will be using is taken from the [gapminder][gapminder] dataset.
-To obtain it, download and unzip the file 
+To obtain it, download and unzip the file
 [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
-In order to follow the presented material, you should launch the JupyterLab 
+In order to follow the presented material, you should launch the JupyterLab
 server in the root directory (see [Starting JupyterLab]({{ page.root }}/01-run-quit/#starting-jupyterlab)).
 
 
