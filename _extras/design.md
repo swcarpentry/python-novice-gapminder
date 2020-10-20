@@ -1,7 +1,5 @@
 ---
-layout: page
 title: "Lesson Design"
-permalink: /design/
 ---
 
 > ## Help Wanted
@@ -28,11 +26,11 @@ This lesson was developed using a slimmed-down variant of the "Understanding by 
 The main sections are:
 
 1.  Assumptions about audience, time, etc.
-    (The current draft also includes some conclusions and decisions in this 
+    (The current draft also includes some conclusions and decisions in this
     section - that should be refactored.)
 
 2.  Desired results:
-    overall goals, summative assessments at half-day granularity, what learners 
+    overall goals, summative assessments at half-day granularity, what learners
     will be able to do, what learners will know.
 
 3.  Learning plan:
@@ -65,7 +63,7 @@ The main sections are:
     *   Creating 2D plots suitable for inclusion in papers
     *   Appeals to almost everyone
     *   Makes lesson usable by both Carpentries
-        *   And means that even people who have seen a bit of Python before 
+        *   And means that even people who have seen a bit of Python before
             will probably learn something
 *   Data
     *   Use the gapminder data throughout
@@ -118,7 +116,7 @@ I know...
     *   Modularity for readability as well as re-use
     *   No duplication
     *   Document purpose and use
-*   ...that there is no magic: the programs they use are no different 
+*   ...that there is no magic: the programs they use are no different
     in principle from those they build
 *   ...how to assign values to variables
 *   ...what integers, floats, strings, NumPy arrays, and Pandas dataframes are
