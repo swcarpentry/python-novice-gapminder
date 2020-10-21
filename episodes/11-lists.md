@@ -257,8 +257,8 @@ IndexError: string index out of range
 > ~~~
 > {: .language-python}
 > ~~~
-> ['t', 'i', 'n']
-> 'gold'
+> string to list: ['t', 'i', 'n']
+> list to string: gold
 > ~~~
 > {: .output}
 >
