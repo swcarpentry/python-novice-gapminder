@@ -160,8 +160,8 @@ round(number, ndigits=None)
 
 *   Option 1: Place the cursor near where the function is invoked in a cell
     (i.e., the function name or its parameters),
-  * Hold down `shift`, and press `tab`.
-  * Do this several times to expand the information returned.
+    * Hold down `shift`, and press `tab`.
+    * Do this several times to expand the information returned.
 *   Option 2: Type the function name in a cell with a question mark after it. Then run the cell.
 
 
