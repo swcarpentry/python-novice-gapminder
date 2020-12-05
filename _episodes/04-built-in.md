@@ -57,6 +57,24 @@ after
 ~~~
 {: .output}
 
+## Every function returns something.
+
+*   Every function call produces some result.
+*   If the function doesn't have a useful result to return,
+    it usually returns the special value `None`. `None` is a Python
+    object that stands in anytime there is no value.
+
+~~~
+result = print('example')
+print('result of print is', result)
+~~~
+{: .language-python}
+~~~
+example
+result of print is None
+~~~
+{: .output}
+
 ## Commonly-used built-in functions include `max`, `min`, and `round`.
 
 *   Use `max` to find the largest value of one or more values.
@@ -138,6 +156,15 @@ round(number, ndigits=None)
 ~~~
 {: .output}
 
+## The Jupyter Notebook has two ways to get help.
+
+*   Option 1: Place the cursor near where the function is invoked in a cell
+    (i.e., the function name or its parameters),
+  * Hold down `shift`, and press `tab`.
+  * Do this several times to expand the information returned.
+*   Option 2: Type the function name in a cell with a question mark after it. Then run the cell.
+
+
 ## Python reports a syntax error when it can't understand the source of a program.
 
 *   Won't even try to run the program if it can't be parsed.
@@ -209,31 +236,6 @@ NameError: name 'aege' is not defined
 {: .error}
 
 *   Fix syntax errors by reading the source and runtime errors by tracing execution.
-
-## The Jupyter Notebook has two ways to get help.
-
-*   Place the cursor anywhere in the function invocation 
-    (i.e., the function name or its parameters),
-    hold down `shift`,
-    and press `tab`.
-*   Or type a function name with a question mark after it.
-
-## Every function returns something.
-
-*   Every function call produces some result.
-*   If the function doesn't have a useful result to return,
-    it usually returns the special value `None`.
-
-~~~
-result = print('example')
-print('result of print is', result)
-~~~
-{: .language-python}
-~~~
-example
-result of print is None
-~~~
-{: .output}
 
 > ## What Happens When
 >
