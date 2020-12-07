@@ -201,24 +201,7 @@ result of call is: None
 
 > ## Order of Operations
 >
-> The example above:
->
-> ~~~
-> result = print_date(1871, 3, 19)
-> print('result of call is:', result)
-> ~~~
-> {: .language-python}
->
-> printed:
-> ~~~
-> 1871/3/19
-> result of call is: None
-> ~~~
-> {: .output}
->
-> Explain why the two lines of output appeared in the order they did.
->
-> What's wrong in this example?
+> 1. What's wrong in this example?
 > ~~~
 > result = print_date(1871,3,19)
 >
@@ -228,13 +211,34 @@ result of call is: None
 > ~~~
 > {: .language-python}
 > 
+> 2. After fixing print_date(), explain why running this example code:
+>
+> ~~~
+> result = print_date(1871, 3, 19)
+> print('result of call is:', result)
+> ~~~
+> {: .language-python}
+>
+> gives this output?
+> ~~~
+> 1871/3/19
+> result of call is: None
+> ~~~
+> {: .output}
+>
+> 3. Why is the result of the call `None`?
+>
 > > ## Solution
 > > 
-> > 1. The first line of output (`1871/3/19`) is from the print function inside `print_date()`, while the second line
-> > is from the print function below the function call. All of the code inside `print_date()` is executed first, and
-> > the program then "leaves" the function and executes the rest of the code.   
-> > 2. The problem with the example is that the function is defined *after* the call to the function is made. Python
+> > 1. The problem with the example is that the function `print_date()` is defined *after* the call to the function is made. Python
 > > therefore doesn't understand the function call.
+> >
+> > 2. The first line of output (`1871/3/19`) is from the print function inside `print_date()`, while the second line
+> > is from the print function below the function call. All of the code inside `print_date()` is executed first, and
+> > the program then "leaves" the function and executes the rest of the code. 
+> >
+> > 3. `print_date()` doesn't explicitly `return`, so it automatically returns `None`.
+> >
 > {: .solution}
 {: .challenge}
 
@@ -318,7 +322,7 @@ result of call is: None
 > 1.  What does `print_date(day=1, month=2, year=2003)` print?
 > 2.  When have you seen a function call like this before?
 > 3.  When and why is it useful to call functions this way?
-> {: .language-python}
+>
 > > ## Solution
 > > 
 > > 1. `2003/2/1`
@@ -331,28 +335,29 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-> ## Encapsulate of If/Print Block
+> ## Encapsulation of an If/Print Block
 >
-> The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) to the computer and then the computer will print a label.  
+> The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) 
+> to the computer and then the computer will print a label.  
 >
 > Please re-write the code so that the if-block is folded into a function.
 >
 > ~~~
->  import random
->  for i in range(10):
+> import random
+> for i in range(10):
 >
 >     # simulating the mass of a chicken egg
 >     # the (random) mass will be 70 +/- 20 grams
->     mass=70+20.0*(2.0*random.random()-1.0)
+>     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
 >     print(mass)
 >    
->     #egg sizing machinery prints a label
->     if(mass>=85):
+>     # egg sizing machinery prints a label
+>     if mass >= 85:
 >        print("jumbo")
->     elif(mass>=70):
+>     elif mass >= 70:
 >        print("large")
->     elif(mass<70 and mass>=55):
+>     elif mass < 70 and mass >= 55:
 >        print("medium")
 >     else:
 >        print("small")
@@ -360,40 +365,40 @@ result of call is: None
 > {: .language-python}
 >
 >
-> The simplified program  follows.  What function definition will make it functional?
+> The simplified program follows.  What function definition will make it functional?
 >
 > ~~~
->  # revised version
->  import random
->  for i in range(10):
+> # revised version
+> import random
+> for i in range(10):
 >
 >     # simulating the mass of a chicken egg
 >     # the (random) mass will be 70 +/- 20 grams
->     mass=70+20.0*(2.0*random.random()-1.0)
+>     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
->     print(mass,print_egg_label(mass))    
+>     print(mass, print_egg_label(mass))    
 >
 > ~~~
 > {: .language-python}
 >
 >
 > 1. Create a function definition for `print_egg_label()` that will work with the revised program above.  Note, the function's return value will be significant. Sample output might be `71.23 large`.
-> 2.  A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+> 2. A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
 >
 > > ## Solution
 > >
 > > ~~~
 > > def print_egg_label(mass):
 > >     #egg sizing machinery prints a label
-> >     if(mass>=90):
+> >     if mass >= 90:
 > >         return "warning: egg might be dirty"
-> >     elif(mass>=85):
+> >     elif mass >= 85:
 > >         return "jumbo"
-> >     elif(mass>=70):
+> >     elif mass >= 70:
 > >         return "large"
-> >     elif(mass<70 and mass>=55):
+> >     elif mass < 70 and mass >= 55:
 > >         return "medium"
-> >     elif(mass<50):
+> >     elif mass < 50:
 > >         return "too light, probably spoiled"
 > >     else:
 > >         return "small"
@@ -414,8 +419,8 @@ result of call is: None
 > ~~~
 > {: .language-python}
 >
-> 1.Complete the statements below to obtain the average GDP for Japan
-> across the years reported for the 1980s.
+> 1. Complete the statements below to obtain the average GDP for Japan
+>    across the years reported for the 1980s.
 >
 > ~~~
 > year = 1983
@@ -424,7 +429,7 @@ result of call is: None
 > ~~~
 > {: .language-python}
 >
-> 2.Abstract the code above into a single function.
+> 2. Abstract the code above into a single function.
 >
 > ~~~
 > def avg_gdp_in_decade(country, continent, year):
@@ -436,7 +441,7 @@ result of call is: None
 > ~~~
 > {: .language-python}
 >
-> 3.How would you generalize this function
+> 3. How would you generalize this function
 >    if you did not know beforehand which specific years occurred as columns in the data?
 >    For instance, what if we also had data from years ending in 1 and 9 for each decade?
 >    (Hint: use the columns to filter out the ones that correspond to the decade,
