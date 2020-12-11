@@ -43,7 +43,7 @@ plt.ylabel('Position (km)')
 
 
 
-> ## Display all open figures
+> ## Display All Open Figures
 > 
 > Within the Jupyter Notebook environment, a created figure will by output when
 > the cell is run. However, in other Python environments, an additional command
@@ -165,17 +165,19 @@ plt.ylabel('GDP per capita ($)')
 > plt.plot(years, gdp_australia, label='Australia')
 > plt.plot(years, gdp_nz, label='New Zealand')
 > ~~~
+> {: .language-python}
 >
 > * Instruct `matplotlib` to create the legend.
 >
 > ~~~
 > plt.legend()
 > ~~~
+> {: .language-python}
 >
 > By default matplotlib will attempt to place the legend in a suitable position. If you
 > would rather specify a position this can be done with the `loc=` argument, e.g to place
 > the legend in the upper left corner of the plot, specify `loc='upper left'`
-> {: .language-python}
+>
 {: .callout}
 
 
