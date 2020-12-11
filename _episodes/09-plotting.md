@@ -39,6 +39,32 @@ plt.ylabel('Position (km)')
 {: .language-python}
 
 ![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
+
+
+
+
+> ## Display all open figures
+> 
+> Within the Jupyter Notebook environment, a created figure will by output when
+> the cell is run. However, in other Python environments, an additional command
+> is needed to display the figure.
+>
+> * Instruct `matplotlib` to create show the figure.
+>
+> ~~~
+> plt.show()
+> ~~~
+> {: .language-python}
+>
+> Note: this command can also be used within a Notebook to display all the figures
+> if several are created in the same cell.
+{: .callout}
+
+
+
+
+
+
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
