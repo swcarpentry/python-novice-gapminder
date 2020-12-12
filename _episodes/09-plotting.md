@@ -45,18 +45,18 @@ plt.ylabel('Position (km)')
 
 > ## Display All Open Figures
 > 
-> Within the Jupyter Notebook environment, the last created figure will be output when
-> the cell is run. However, in other Python environments, an additional command
-> is needed to display the figure.
+> In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code. 
+> The figure is also included in the Notebook document for future viewing.
+> However, other Python environments require an additional command in order to display the figure.
 >
-> Instruct `matplotlib` to show the figure:
+> Instruct `matplotlib` to show a figure:
 > ~~~
 > plt.show()
 > ~~~
 > {: .language-python}
 >
-> Note: this command can also be used within a Notebook to display all the figures
-> if several are created in the same cell.
+> This command can also be used within a Notebook - for instance, to display multiple figures
+> if several are created by a single cell.
 >
 {: .callout}
 
