@@ -40,9 +40,6 @@ plt.ylabel('Position (km)')
 
 ![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
 
-
-
-
 > ## Display All Open Figures
 > 
 > In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code. 
@@ -59,11 +56,6 @@ plt.ylabel('Position (km)')
 > if several are created by a single cell.
 >
 {: .callout}
-
-
-
-
-
 
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
