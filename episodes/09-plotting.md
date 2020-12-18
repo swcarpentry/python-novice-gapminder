@@ -39,6 +39,24 @@ plt.ylabel('Position (km)')
 {: .language-python}
 
 ![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
+
+> ## Display All Open Figures
+> 
+> In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code. 
+> The figure is also included in the Notebook document for future viewing.
+> However, other Python environments require an additional command in order to display the figure.
+>
+> Instruct `matplotlib` to show a figure:
+> ~~~
+> plt.show()
+> ~~~
+> {: .language-python}
+>
+> This command can also be used within a Notebook - for instance, to display multiple figures
+> if several are created by a single cell.
+>
+{: .callout}
+
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
@@ -139,17 +157,19 @@ plt.ylabel('GDP per capita ($)')
 > plt.plot(years, gdp_australia, label='Australia')
 > plt.plot(years, gdp_nz, label='New Zealand')
 > ~~~
+> {: .language-python}
 >
 > * Instruct `matplotlib` to create the legend.
 >
 > ~~~
 > plt.legend()
 > ~~~
+> {: .language-python}
 >
 > By default matplotlib will attempt to place the legend in a suitable position. If you
 > would rather specify a position this can be done with the `loc=` argument, e.g to place
 > the legend in the upper left corner of the plot, specify `loc='upper left'`
-> {: .language-python}
+>
 {: .callout}
 
 
