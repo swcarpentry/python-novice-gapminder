@@ -198,33 +198,34 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-
 > ## Order of Operations
 >
 > 1. What's wrong in this example?
-> ~~~
-> result = print_date(1871,3,19)
 >
-> def print_date(year, month, day):
->    joined = str(year) + '/' + str(month) + '/' + str(day)
->    print(joined)
-> ~~~
-> {: .language-python}
+>     ~~~
+>     result = print_date(1871,3,19)
+>
+>     def print_date(year, month, day):
+>        joined = str(year) + '/' + str(month) + '/' + str(day)
+>        print(joined)
+>     ~~~
+>     {: .language-python}
 > 
-> 2. After fixing print_date(), explain why running this example code:
+> 2. After fixing the problem above, explain why running this example code:
 >
-> ~~~
-> result = print_date(1871, 3, 19)
-> print('result of call is:', result)
-> ~~~
-> {: .language-python}
+>     ~~~
+>     result = print_date(1871, 3, 19)
+>     print('result of call is:', result)
+>     ~~~
+>     {: .language-python}
 >
-> gives this output?
-> ~~~
-> 1871/3/19
-> result of call is: None
-> ~~~
-> {: .output}
+>     gives this output:
+>
+>     ~~~
+>     1871/3/19
+>     result of call is: None
+>     ~~~
+>     {: .output}
 >
 > 3. Why is the result of the call `None`?
 >
@@ -422,24 +423,24 @@ result of call is: None
 > 1. Complete the statements below to obtain the average GDP for Japan
 >    across the years reported for the 1980s.
 >
-> ~~~
-> year = 1983
-> gdp_decade = 'gdpPercap_' + str(year // ____)
-> avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
-> ~~~
-> {: .language-python}
+>     ~~~
+>     year = 1983
+>     gdp_decade = 'gdpPercap_' + str(year // ____)
+>     avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
+>     ~~~
+>     {: .language-python}
 >
 > 2. Abstract the code above into a single function.
 >
-> ~~~
-> def avg_gdp_in_decade(country, continent, year):
->     df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
->     ____
->     ____
->     ____
->     return avg
-> ~~~
-> {: .language-python}
+>     ~~~
+>     def avg_gdp_in_decade(country, continent, year):
+>         df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+>         ____
+>         ____
+>         ____
+>         return avg
+>     ~~~
+>     {: .language-python}
 >
 > 3. How would you generalize this function
 >    if you did not know beforehand which specific years occurred as columns in the data?
@@ -449,47 +450,46 @@ result of call is: None
 >
 > > ## Solution
 > >
-> > 1.
+> > 1. The average GDP for Japan across the years reported for the 1980s is computed with:
 > >
-> > ~~~
-> > year = 1983
-> > gdp_decade = 'gdpPercap_' + str(year // 10)
-> > avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
-> > ~~~
-> > {: .language-python}
-> >
-> > 2.
-> >
-> > ~~~
-> > def avg_gdp_in_decade(country, continent, year):
-> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-> >     c = df.loc[country]
+> >     ~~~
+> >     year = 1983
 > >     gdp_decade = 'gdpPercap_' + str(year // 10)
-> >     avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
-> >     return avg
-> > ~~~
-> > {: .language-python}
+> >     avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
+> >     ~~~
+> >     {: .language-python}
 > >
-> > 3.
-> > 
-> > We need to loop over the reported years
-> >    to obtain the average for the relevant ones in the data.
+> > 2. That code as a function is:
 > >
-> > ~~~
-> > def avg_gdp_in_decade(country, continent, year):
-> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-> >     c = df.loc[country]
-> >     gdp_decade = 'gdpPercap_' + str(year // 10)
-> >     total = 0.0
-> >     num_years = 0
-> >     for yr_header in c.index: # c's index contains reported years
-> >         if yr_header.startswith(gdp_decade):
-> >             total = total + c.loc[yr_header]
-> >             num_years = num_years + 1
-> >     return total/num_years
-> > ~~~
-> > {: .language-python}
+> >     ~~~
+> >     def avg_gdp_in_decade(country, continent, year):
+> >         df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >         c = df.loc[country]
+> >         gdp_decade = 'gdpPercap_' + str(year // 10)
+> >         avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
+> >         return avg
+> >     ~~~
+> >     {: .language-python}
+> >
+> > 3. To obtain the average for the relevant years, we need to loop over them:
+> >
+> >    ~~~
+> >    def avg_gdp_in_decade(country, continent, year):
+> >         df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >         c = df.loc[country]
+> >         gdp_decade = 'gdpPercap_' + str(year // 10)
+> >         total = 0.0
+> >         num_years = 0
+> >         for yr_header in c.index: # c's index contains reported years
+> >             if yr_header.startswith(gdp_decade):
+> >                 total = total + c.loc[yr_header]
+> >                 num_years = num_years + 1
+> >         return total/num_years
+> >     ~~~
+> >     {: .language-python}
+> >
 > > The function can now be called by:
+> >
 > > ~~~
 > > avg_gdp_in_decade('Japan','asia',1983)
 > > ~~~
