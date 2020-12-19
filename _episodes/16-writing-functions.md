@@ -232,13 +232,14 @@ result of call is: None
 > > ## Solution
 > > 
 > > 1. The problem with the example is that the function `print_date()` is defined *after* the call to the function is made. Python
-> > therefore doesn't understand the function call.
+> > doesn't know how to resolve the name `print_date` since it hasn't been defined yet and will raise a `NameError` e.g.,
+> > `NameError: name 'print_date' is not defined`
 > >
 > > 2. The first line of output (`1871/3/19`) is from the print function inside `print_date()`, while the second line
 > > is from the print function below the function call. All of the code inside `print_date()` is executed first, and
 > > the program then "leaves" the function and executes the rest of the code. 
 > >
-> > 3. `print_date()` doesn't explicitly `return`, so it automatically returns `None`.
+> > 3. `print_date()` doesn't explicitly `return` a value, so it automatically returns `None`.
 > >
 > {: .solution}
 {: .challenge}
