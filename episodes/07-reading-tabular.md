@@ -100,7 +100,7 @@ New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ~~~
 {: .output}
 
-## Use `DataFrame.info` to find out more about a dataframe.
+## Use the `DataFrame.info()` method to find out more about a dataframe.
 
 ~~~
 data.info()
@@ -135,7 +135,7 @@ memory usage: 208.0+ bytes
 
 ## The `DataFrame.columns` variable stores information about the dataframe's columns.
 
-*   Note that this is data, *not* a method.
+*   Note that this is data, *not* a method.  (It doesn't have parentheses.)
     *   Like `math.pi`.
     *   So do not use `()` to try to call it.
 *   Called a *member variable*, or just *member*.
@@ -179,9 +179,9 @@ gdpPercap_2007  34435.36744  25185.00911
 ~~~
 {: .output}
 
-## Use `DataFrame.describe` to get summary statistics about data.
+## Use `DataFrame.describe()` to get summary statistics about data.
 
-DataFrame.describe() gets the summary statistics of only the columns that have numerical data. 
+`DataFrame.describe()` gets the summary statistics of only the columns that have numerical data. 
 All other columns are ignored, unless you use the argument `include='all'`.
 ~~~
 print(data.describe())
