@@ -137,6 +137,44 @@ round(3.712, 1)
 ~~~
 {: .output}
 
+## Functions attached to objects are called methods
+
+* Functions take another form that will be common in the pandas episodes.
+* Methods have parentheses like functions, but come after the variable.
+* Some methods aren't used often, and are marked with double underlines.
+
+~~~
+my_string = 'Hello world!'  # creation of a string object 
+
+print(len(my_string))       # function with the string as an argument
+
+print(my_string.__len__())  # method acting upon the string object
+~~~
+{: .language-python}
+
+~~~
+12
+12
+~~~
+{: .output}
+
+* You might even see them chained together.  They operate left to right.
+
+~~~
+print(my_string.isupper())          # Not all the letters are uppercase
+print(my_string.upper())            # This capitalizes all the letters
+
+print(my_string.upper().isupper())  # Now all the letters are uppercase
+~~~
+{: .language-python}
+
+~~~
+False
+HELLO WORLD
+True
+~~~
+{: .output}
+
 ## Use the built-in function `help` to get help for a function.
 
 *   Every built-in function has online documentation.
