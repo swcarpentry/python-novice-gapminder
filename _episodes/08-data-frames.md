@@ -298,7 +298,7 @@ dtype: float64
 {: .output}
 
 Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
-across the years surveyed:
+across the years surveyed using chained methods:
 
 ~~~
 data.groupby(wealth_score).sum()
@@ -511,45 +511,38 @@ data.groupby(wealth_score).sum()
 {: .challenge}
 
 
-> ## Using the dir function to see available methods
+> ## Exploring available methods using the `dir()` function
 >
-> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a [list data type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) are:
+> Python includes a `dir()` function that can be used to display all of the available methods (functions) that are built into a data object.  In Episode 4, we used some methods with a string. But we can see many more are available by using `dir()`:
+>
 > ~~~
-> potatoes = ["Russet", "Norkota", "Yukon Gold", "Pontiac"]
-> dir(potatoes)
+> my_string = 'Hello world!'   # creation of a string object 
+> dir(myString)
 > ~~~
 > {: .language-python}
 >
 > This command returns:
+>
 > ~~~
 > ['__add__',
 > ...
 > '__subclasshook__',
->  'append',
->  'clear',
->  'copy',
->  'count',
-> 'extend',
-> 'index',
-> 'insert',
-> 'pop',
-> 'remove',
-> 'reverse',
-> 'sort']
+> 'capitalize',
+> 'casefold',
+> 'center',
+> ...
+> 'upper',
+> 'zfill']
 > ~~~
 > {: .language-python}
 >
-> The double underscore functions can be ignored for now; functions that are not surrounded by double underscores are the *public interface* of the [list type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). So, if you want to sort the list of potatoes, according to `dir` you should try,
-> ~~~
-> potatoes.sort()
-> ~~~
-> {: .language-python}
+> You can use `help()` or shift-tab to get more information about what these methods do.
 >
-> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir` to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()` to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
 {: .challenge}
 >
 > > ## Solution
-> > Among many choices, dir lists the `median()` function as a possibility.  Thus,
+> > Among many choices, `dir()` lists the `median()` function as a possibility.  Thus,
 > > ~~~
 > > data.median()
 > > ~~~
