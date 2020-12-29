@@ -332,6 +332,32 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > {: .solution}
 {: .challenge}
 
+> ## Slicing riddle
+>
+> How can you turn "TOM MARVOLO RIDDLE" into "I AM LORD VOLDEMORT" using slicing?
+>
+> ~~~
+> riddle = 'TOM MARVOLO RIDDLE'
+> ~~~
+> {: .language-python}
+>
+> > ## One solution
+> >
+> > ~~~
+> > voldemort = riddle[13] + ' ' + riddle[5] + riddle[2] + ' ' + riddle[16] + riddle[8] + riddle[12] + riddle[15] + ' ' + riddle[7] + riddle[10] + riddle[9] + riddle[14] + riddle[17] + riddle[2] + riddle[1] + riddle[6] + riddle[0]
+> > ~~~
+> > 
+> > ## Movie-compliant solution
+> > Check on [https://www.youtube.com/watch?v=EEFsJ-43pnA](https://www.youtube.com/watch?v=EEFsJ-43pnA) how letters are reordered
+> >
+> > ~~~
+> > voldemort = riddle[13] + ' ' + riddle[5] + riddle[4] + ' ' + riddle[9:11] + riddle[6] + riddle[14] + ' ' + riddle[7:10] + riddle[14] + riddle[17] + riddle[2] + riddle[1] + riddle[6] + riddle[0]
+> > ~~~
+> > {: .output}
+> {: .solution}
+{: .challenge}
+
+
 > ## Slicing concepts
 >
 > 1.  What does `thing[low:high]` do?
