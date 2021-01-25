@@ -85,7 +85,7 @@ $ jupyter lab
 {: .bash}
 
 Below is a screenshot of a similar JupyterLab landing page to the one that should open in your 
-default web browser after starting the JupyterLab server on wither Mac OS X or Windows.
+default web browser after starting the JupyterLab server on either Mac OS X or Windows.
 
 <p align='center'>
   <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
