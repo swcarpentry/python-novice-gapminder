@@ -365,8 +365,10 @@ print(total)
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > The variable `message` needs to be initialized and Python variable names are case sensitive: `number` and `Number`
-> > refer to different variables.
+> > - Python variable names are case sensitive: `number` and `Number` refer to different variables.
+> > - The variable `message` needs to be initialized as an empty string.
+> > - We want to add the string `"a"` to `message`, not the undefined variable `a`.
+> >
 > > ~~~
 > > message = ""
 > > for number in range(10):
