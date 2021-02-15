@@ -320,23 +320,23 @@ print(total)
 > The result should be `[1, 3, 5, 10]`.
 >
 > ~~~
-> cumulative.append(sum)
+> cumulative.append(total)
 > for number in data:
 > cumulative = []
-> sum += number
-> sum = 0
+> total += number
+> total = 0
 > print(cumulative)
 > data = [1,2,2,5]
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > sum = 0
+> > total = 0
 > > data = [1,2,2,5]
 > > cumulative = []
 > > for number in data:
-> >     sum += number
-> >     cumulative.append(sum)
+> >     total += number
+> >     cumulative.append(total)
 > > print(cumulative)
 > > ~~~
 > > {: .language-python}
