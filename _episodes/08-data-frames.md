@@ -59,7 +59,6 @@ print(data.iloc[0, 0])
 *   Can specify location by row name analogously to 2D version of dictionary keys.
 
 ~~~
-data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.loc["Albania", "gdpPercap_1952"])
 ~~~
 {: .language-python}
