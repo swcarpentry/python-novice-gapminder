@@ -27,11 +27,11 @@ keypoints:
 *   Here, Python assigns an age to a variable `age`
     and a name in quotes to a variable `first_name`.
 
-~~~
-age = 42
-first_name = 'Ahmed'
-~~~
-{: .language-python}
+    ~~~
+    age = 42
+    first_name = 'Ahmed'
+    ~~~
+    {: .language-python}
 
 *   Variable names
     * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
