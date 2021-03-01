@@ -167,8 +167,8 @@ cos(pi) is -1.0
 > > The [random module][randommod] seems like it could help you.
 > >
 > > The string has 11 characters, each having a positional index from 0 to 10.
-> > You could use `random.randrange` function (or the alias `random.randint`
-> > if you find that easier to remember) to get a random integer between 0 and
+> > You could use either `random.randrange` or `random.randint` functions
+> > to get a random integer between 0 and
 > > 10, and then pick out the character at that position:
 > >
 > > ~~~
