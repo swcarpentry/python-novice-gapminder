@@ -288,7 +288,7 @@ NameError: name 'aege' is not defined
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > 1.
+> > 1. Order of operations:
 > >    1. `1.1 * radiance = 1.1`
 > >    2. `1.1 - 0.5 = 0.6`
 > >    3. `min(radiance, 0.6) = 0.6`
