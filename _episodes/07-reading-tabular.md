@@ -242,7 +242,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 
 
 
-> ## Inspecting Data.
+> ## Inspecting Data
 >
 > After reading the data for the Americas,
 > use `help(americas.head)` and `help(americas.tail)`
