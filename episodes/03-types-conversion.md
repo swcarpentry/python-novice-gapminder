@@ -276,7 +276,7 @@ first is 2 and second is 5
 > ## Division Types
 >
 > In Python 3, the `//` operator performs integer (whole-number) floor division, the `/` operator performs floating-point
-> division, and the '%' (or *modulo*) operator calculates and returns the remainder from integer division:
+> division, and the `%` (or *modulo*) operator calculates and returns the remainder from integer division:
 >
 > ~~~
 > print('5 // 3:', 5//3)
