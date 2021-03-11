@@ -301,7 +301,7 @@ final velocity: 30.0
 > > original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
 > > result = []
 > > for value in original:
-> >     if value<0.0:
+> >     if value < 0.0:
 > >         result.append(0)
 > >     else:
 > >         result.append(1)
@@ -331,7 +331,7 @@ final velocity: 30.0
 > > import pandas as pd
 > > for filename in glob.glob('data/*.csv'):
 > >     contents = pd.read_csv(filename)
-> >     if len(contents)<50:
+> >     if len(contents) < 50:
 > >         print(filename, len(contents))
 > > ~~~
 > > {: .language-python}
@@ -364,7 +364,7 @@ final velocity: 30.0
 > > values = [-2,1,65,78,-54,-24,100]
 > > smallest, largest = None, None
 > > for v in values:
-> >     if smallest==None and largest==None:
+> >     if smallest == None and largest == None:
 > >         smallest, largest = v, v
 > >     else:
 > >         smallest = min(smallest, v)
