@@ -141,14 +141,17 @@ round(3.712, 1)
 
 * Functions take another form that will be common in the pandas episodes.
 * Methods have parentheses like functions, but come after the variable.
-* Some methods aren't used often, and are marked with double underlines.
+* Some methods are used for internal Python operations, and are marked with double underlines.
 
 ~~~
 my_string = 'Hello world!'  # creation of a string object 
 
-print(len(my_string))       # function with the string as an argument
+print(len(my_string))       # the len function takes a string as an argument and returns the length of the string
 
-print(my_string.__len__())  # method acting upon the string object
+print(my_string.swapcase()) # calling the swapcase method on the my_string object
+
+print(my_string.__len__())  # calling the internal __len__ method on the my_string object, used by len(my_string)
+
 ~~~
 {: .language-python}
 
@@ -353,7 +356,7 @@ NameError: name 'aege' is not defined
 
 > ## Why Not?
 >
-> Why don't `max` and `min` return `None` when they are given no arguments?
+> Why is it that `max` and `min` do not return `None` when they are called with no arguments?
 >
 > > ## Solution
 > > `max` and `min` return TypeErrors in this case because the correct number of parameters
