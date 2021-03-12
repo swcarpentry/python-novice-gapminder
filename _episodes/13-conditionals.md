@@ -414,8 +414,8 @@ final velocity: 30.0
 > is an example, using the definition above.
 >
 > ~~~
-> data = pd.read_csv('Americas-data.csv')
-> data['life_qrtl'] = data['lifeExp'].apply(calculate_life_quartile)
+> data = pd.read_csv('data/gapminder_all.csv')
+> data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 > ~~~
 > {: .language-python}
 >
