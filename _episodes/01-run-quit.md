@@ -67,7 +67,10 @@ does not require an internet connection.
 
 ## Starting JupyterLab
 
-### Mac OS X
+You can start the Jupyterlab server through the command line, or through an application called 
+`Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
+
+### Mac OS X - Command Line
 To start the JupyterLab server you will need to access the command line through the Terminal. 
 There are two ways to open Terminal on Mac.
 
@@ -82,7 +85,16 @@ $ jupyter lab
 ~~~
 {: .bash}
 
-### Windows Users
+### Mac OS X - Anaconda Navigator
+To start the JupyterLab server you will need to access Anaconda Navigator.
+
+Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Anaconda Navigator` and then 
+double-click the search result or hit <kbd>Enter</kbd>
+
+After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+to scroll down to find it.
+
+### Windows Users - Command Line
 To start the JupyterLab server you will need to access the open Anaconda Prompt.
 
 Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
@@ -93,6 +105,21 @@ After you have launched the Anaconda Prompt, type the command:
 $ jupyter lab
 ~~~
 {: .bash}
+
+### Windows Users - Anaconda Navigator
+To start the JupyterLab server you will need to access Anaconda Navigator.
+
+Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Navigator`, click the result or press enter.
+
+After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+to scroll down to find it.
+
+Below is a screenshot of a similar Anaconda Navigator to the one that should open on either Mac OS X
+or Windows.
+<p align='center'>
+  <img alt="Anaconda Navigator landing page" src="../fig/0_anaconda_navigator_landing_page.png" width="750"/>
+</p>
+
 
 Below is a screenshot of a similar JupyterLab landing page to the one that should open in your 
 default web browser after starting the JupyterLab server on either Mac OS X or Windows.
