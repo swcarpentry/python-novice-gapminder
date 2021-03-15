@@ -36,7 +36,7 @@ We may highlight some points:
     etc.
     Adhering to PEP8 makes it easier for other Python developers to read and understand your code,
     and to understand what their contributions should look like.
-    The [PEP8 application and Python library](https://pypi.python.org/pypi/pep8)
+    The [pycodestyle application and Python library](https://pypi.org/project/pycodestyle/) (formerly known as *pep8*)
     can check your code for compliance with PEP8.
 *   [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) 
     supports the use of PEP8 and extend the coding style to more specific structure of 
