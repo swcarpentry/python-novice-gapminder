@@ -157,6 +157,7 @@ print(my_string.__len__())  # calling the internal __len__ method on the my_stri
 
 ~~~
 12
+hELLO WORLD!
 12
 ~~~
 {: .output}
