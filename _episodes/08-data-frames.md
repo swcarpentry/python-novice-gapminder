@@ -509,6 +509,155 @@ data.groupby(wealth_score).sum()
 > {: .solution}
 {: .challenge}
 
+> ## Many Ways of Access
+>
+> There are at least two ways of accessing a value or slice of a DataFrame: by name or index.
+> However, there are many others. For example, a single column or row can be accessed either as a `DataFrame`
+> or a `Series` object.
+>
+> Suggest different ways of doing the following operations on a DataFrame:
+> 1. Access a single column
+> 2. Access a single row
+> 3. Access an individual DataFrame element
+> 4. Access several columns
+> 5. Access several rows
+> 6. Access a subset of specific rows and columns
+> 7. Access a subset of row and column ranges
+>
+{: .challenge}
+>
+> > ## Solution
+> > 1\. Access a single column:
+> > ~~~
+> > # by name
+> > data["col_name"]   # as a Series
+> > data[["col_name"]] # as a DataFrame
+> >
+> > # by name using .loc
+> > data.T.loc["col_name"]  # as a Series
+> > data.T.loc[["col_name"]].T  # as a DataFrame
+> >
+> > # Dot notation (Series)
+> > data.col_name
+> >
+> > # by index (iloc)
+> > data.iloc[:, col_index]   # as a Series
+> > data.iloc[:, [col_index]] # as a DataFrame
+> >
+> > # using a mask
+> > data.T[data.T.index == "col_name"].T
+> > ~~~
+> > {: .language-python}
+> >
+> > 2\. Access a single row:
+> > ~~~
+> > # by name using .loc
+> > data.loc["row_name"] # as a Series
+> > data.loc[["row_name"]] # as a DataFrame
+> >
+> > # by name
+> > data.T["row_name"] # as a Series
+> > data.T[["row_name"]].T as a DataFrame
+> >
+> > # by index
+> > data.iloc[row_index]   # as a Series
+> > data.iloc[[row_index]]   # as a DataFrame
+> >
+> > # using mask
+> > data[data.index == "row_name"]
+> > ~~~
+> > {: .language-python}
+> >
+> > 3\. Access an individual DataFrame element:
+> > ~~~
+> > # by column/row names
+> > data["column_name"]["row_name"]         # as a Series
+> >
+> > data[["col_name"]].loc["row_name"]  # as a Series
+> > data[["col_name"]].loc[["row_name"]]  # as a DataFrame
+> >
+> > data.loc["row_name"]["col_name"]  # as a value
+> > data.loc[["row_name"]]["col_name"]  # as a Series
+> > data.loc[["row_name"]][["col_name"]]  # as a DataFrame
+> >
+> > data.loc["row_name", "col_name"]  # as a value
+> > data.loc[["row_name"], "col_name"]  # as a Series. Preserves index. Column name is moved to `.name`.
+> > data.loc["row_name", ["col_name"]]  # as a Series. Index is moved to `.name.` Sets index to column name.
+> > data.loc[["row_name"], ["col_name"]]  # as a DataFrame (preserves original index and column name)
+> >
+> > # by column/row names: Dot notation
+> > data.col_name.row_name
+> >
+> > # by column/row indices
+> > data.iloc[row_index, col_index] # as a value
+> > data.iloc[[row_index], col_index] # as a Series. Preserves index. Column name is moved to `.name`
+> > data.iloc[row_index, [col_index]] # as a Series. Index is moved to `.name.` Sets index to column name.
+> > data.iloc[[row_index], [col_index]] # as a DataFrame (preserves original index and column name)
+> >
+> > # column name + row index
+> > data["col_name"][row_index]
+> > data.col_name[row_index]
+> > data["col_name"].iloc[row_index]
+> >
+> > # column index + row name
+> > data.iloc[:, [col_index]].loc["row_name"]  # as a Series
+> > data.iloc[:, [col_index]].loc[["row_name"]]  # as a DataFrame
+> >
+> > # using masks
+> > data[data.index == "row_name"].T[data.T.index == "col_name"].T
+> > ~~~
+> > {: .language-python}
+> > 4\. Access several columns:
+> > ~~~
+> > # by name
+> > data[["col1", "col2", "col3"]]
+> > data.loc[:, ["col1", "col2", "col3"]]
+> >
+> > # by index
+> > data.iloc[:, [col1_index, col2_index, col3_index]]
+> > ~~~
+> > {: .language-python}
+> > 5\. Access several rows
+> > ~~~
+> > # by name
+> > data.loc[["row1", "row2", "row3"]]
+> >
+> > # by index
+> > data.iloc[[row1_index, row2_index, row3_index]]
+> > ~~~
+> > {: .language-python}
+> > 6\. Access a subset of specific rows and columns
+> > ~~~
+> > # by names
+> > data.loc[["row1", "row2", "row3"], ["col1", "col2", "col3"]]
+> >
+> > # by indices
+> > data.iloc[[row1_index, row2_index, row3_index], [col1_index, col2_index, col3_index]]
+> >
+> > # column names + row indices
+> > data[["col1", "col2", "col3"]].iloc[[row1_index, row2_index, row3_index]]
+> >
+> > # column indices + row names
+> > data.iloc[:, [col1_index, col2_index, col3_index]].loc[["row1", "row2", "row3"]]
+> > ~~~
+> > {: .language-python}
+> > 7\. Access a subset of row and column ranges
+> > ~~~
+> > # by name
+> > data.loc["row1":"row2", "col1":"col2"]
+> >
+> > # by index
+> > data.iloc[row1_index:row2_index, col1_index:col2_index]
+> >
+> > # column names + row indices
+> > data.loc[:, "col1_name":"col2_name"].iloc[row1_index:row2_index]
+> >
+> > # column indices + row names
+> > data.iloc[:, col1_index:col2_index].loc["row1":"row2"]
+> > ~~~
+> > {: .language-python}
+> {: .solution}
+{: .challenge}
 
 > ## Exploring available methods using the `dir()` function
 >
