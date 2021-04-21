@@ -270,7 +270,6 @@ first is 2 and second is 5
 > > 4. This will vary! How do you define a specimen's age? whole days since collection (integer)? date and time (string)?
 > > 5. Choose floating point to represent population as large aggregates (eg millions), or integer to represent population in units of individuals.
 > > 6. Floating point number, since an average is likely to have a fractional part.
-> > {: .output}
 > {: .solution}
 {: .challenge}
 
