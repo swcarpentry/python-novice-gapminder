@@ -231,16 +231,16 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > and display its summary statistics.
 >
 > > ## Solution
-> > To read in a CSV, we use `pd.read_csv` and pass the filename 'data/gapminder_gdp_americas.csv' to it. We also once again pass the
-> > column name 'country' to the parameter `index_col` in order to index by country:
+> > To read in a CSV, we use `pd.read_csv` and pass the filename `'data/gapminder_gdp_americas.csv'` to it.
+> > We also once again pass the column name `'country'` to the parameter `index_col` in order to index by country.
+> > The summary statistics can be displayed with the `DataFrame.describe()` method.
 > > ~~~
 > > americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
+> > americas.describe()
 > > ~~~
 > >{: .language-python}
 > {: .solution}
 {: .challenge}
-
-
 
 > ## Inspecting Data
 >
