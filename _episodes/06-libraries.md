@@ -374,6 +374,16 @@ cos(pi) is -1.0
 > {: .language-python}
 >
 > > ## Solution
+> > ~~~
+> > ---------------------------------------------------------------------------
+> > ValueError                                Traceback (most recent call last)
+> > <ipython-input-1-d72e1d780bab> in <module>
+> >       1 from math import log
+> > ----> 2 log(0)
+> > 
+> > ValueError: math domain error
+> > ~~~
+> > {: .output}
 > >
 > > 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
 > >    domain of the function.
