@@ -18,7 +18,8 @@ keypoints:
 ## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
 *   Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
-*   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command.
+*   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command, which have a `%` character
+preceding them.
 
 ~~~
 %matplotlib inline
@@ -226,13 +227,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > among the countries in Asia for each year in the data set.
 > What relationship do you see (if any)?
 >
-> ~~~
-> data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
-> data_asia.describe().T.plot(kind='scatter', x='min', y='max')
-> ~~~
-> {: .language-python}
 >
 > > ## Solution
+> > ~~~
+> > data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
+> > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
+> > ~~~
+> > {: .language-python}
 > >
 > > ![Correlations Solution 1](../fig/9_correlations_solution1.svg)
 > >
