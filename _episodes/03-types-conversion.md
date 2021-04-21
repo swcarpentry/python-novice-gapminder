@@ -451,6 +451,7 @@ first is 2 and second is 5
 > > change. [Stack Overflow provides additional explanation and
 > > discussion.](http://stackoverflow.com/questions/24812444/why-are-complex-numbers-in-python-denoted-with-j-instead-of-i)
 > > 2. `(4+2j)`
-> > 3. `4j`, `Syntax Error: invalid syntax`, in this case _j_ is considered a variable and this depends on if _j_ is defined and if so, its assigned value
+> > 3. `4j` and `Syntax Error: invalid syntax`. In the latter cases, `j` is considered a variable and the statement
+> > depends on if `j` is defined and if so, its assigned value.
 > {: .solution}
 {: .challenge}
