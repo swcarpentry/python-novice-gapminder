@@ -323,6 +323,12 @@ cos(pi) is -1.0
 > >    the shortened name `m`.
 > > 3. Library call 2. Here `sin` and `pi` are referred to with the regular library
 > >    name `math`, so the regular `import ...` call suffices.
+> >
+> > __Note:__ although library call 4 works, importing all names using a wildcard is a 
+> > [documented Python anti-pattern][anti-pattern], that is, it is best avoided. The
+> > reason for this is because it is best to make imports as specific as possible. In library
+> > call 1, the `import` statement explicitly tells us that the `sin` function is imported from the `math` module,
+> > but library call 4 does not convey this information.
 > {: .solution}
 {: .challenge}
 
@@ -380,3 +386,4 @@ cos(pi) is -1.0
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
 [randommod]: https://docs.python.org/3/library/random.html
+[anti-pattern]: https://docs.quantifiedcode.com/python-anti-patterns/maintainability/from_module_import_all_used.html
