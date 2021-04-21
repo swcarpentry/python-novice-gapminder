@@ -338,8 +338,6 @@ data.groupby(wealth_score).sum()
 > {: .language-python}
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
-{: .challenge}
->
 > > ## Solution
 > > The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
 > > ~~~
@@ -365,7 +363,6 @@ data.groupby(wealth_score).sum()
 > print(df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .language-python}
-{: .challenge}
 > 
 > > ## Solution
 > > No, they do not produce the same output! The output of the first statement is:
@@ -405,7 +402,6 @@ data.groupby(wealth_score).sum()
 > fourth.to_csv('result.csv')
 > ~~~
 > {: .language-python}
-{: .challenge}
 >
 > > ## Solution
 > > Let's go through this piece of code line by line.
@@ -459,7 +455,6 @@ data.groupby(wealth_score).sum()
 > print(data.idxmax())
 > ~~~
 > {: .language-python}
-{: .challenge}
 >
 > > ## Solution
 > > For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
@@ -479,7 +474,6 @@ data.groupby(wealth_score).sum()
 > 3.  GDP per capita for all countries for years *after* 1985.
 > 4.  GDP per capita for each country in 2007 as a multiple of 
 >     GDP per capita for that country in 1952.
-{: .challenge}
 >
 > > ## Solution
 > > 1:
@@ -537,8 +531,8 @@ data.groupby(wealth_score).sum()
 >
 > You can use `help()` or <kbd>Shift</kbd>+<kbd>Tab</kbd> to get more information about what these methods do.
 >
-> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()` to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
-{: .challenge}
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()` 
+> to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
 >
 > > ## Solution
 > > Among many choices, `dir()` lists the `median()` function as a possibility.  Thus,
