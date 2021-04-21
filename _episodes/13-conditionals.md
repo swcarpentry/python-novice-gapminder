@@ -372,6 +372,18 @@ final velocity: 30.0
 > > print(smallest, largest)
 > > ~~~
 > > {: .language-python}
+> > It can be argued that an advantage of using this method would be explicitly checking for each value in the list.
+> > However, this would also present a disadvantage, because the `min()` and `max()` functions are run for each value `v`.
+> > A more efficient solution would be to run the functions on the whole list, so only one operation is performed for
+> > each function call.
+> > ~~~
+> > values = [-2,1,65,78,-54,-24,100]
+> > smallest, largest = None, None
+> > if len(values) > 0:
+> >     smallest, largest = min(values), max(values)
+> > print(smallest, largest)
+> > ~~~
+> > {: .language-python}
 > {: .solution}
 {: .challenge}
 
