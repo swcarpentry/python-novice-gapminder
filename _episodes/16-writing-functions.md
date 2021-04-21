@@ -321,6 +321,7 @@ result of call is: None
 >     joined = str(year) + '/' + str(month) + '/' + str(day)
 >     print(joined)
 > ~~~
+> {: .language-python}
 > We saw that we can call the function using *named arguments*, like this:
 > ~~~
 > print_date(day=1, month=2, year=2003)
