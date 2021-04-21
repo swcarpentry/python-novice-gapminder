@@ -66,7 +66,7 @@ print(data)
 > that ends with a line like this:
 >
 > ~~~
-> OSError: File b'gapminder_gdp_oceania.csv' does not exist
+> FileNotFoundError: [Errno 2] No such file or directory: 'data/gapminder_gdp_oceania.csv'
 > ~~~
 > {: .error}
 {: .callout}
