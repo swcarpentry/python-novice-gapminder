@@ -297,11 +297,10 @@ print(total)
 > > {: .language-python}
 > {: .solution}
 >
-> ~~~
-> # Create acronym: ["red", "green", "blue"] => "RGB"
-> # write the whole thing
-> ~~~
-> {: .language-python}
+> __Create an acronym:__ Starting from the list `["red", "green", "blue"]`, create the acronym `"RGB"` using
+> a for loop.
+> 
+> __Hint:__ You may need to use a string method to properly format the acronym.
 > > ## Solution
 > > ~~~
 > > acronym = ""
