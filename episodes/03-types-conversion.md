@@ -335,7 +335,7 @@ first is 2 and second is 5
 > ~~~
 > {: .output}
 >
-> If the conversion doesn't make sense, however, an error message will occur
+> If the conversion doesn't make sense, however, an error message will occur.
 >
 > ~~~
 > print("string to float:", float("Hello world!"))
@@ -345,7 +345,7 @@ first is 2 and second is 5
 > ~~~
 > ---------------------------------------------------------------------------
 > ValueError                                Traceback (most recent call last)
-> <ipython-input-5-df3b790bf0a2> in <module>()
+> <ipython-input-5-df3b790bf0a2> in <module>
 > ----> 1 print("string to float:", float("Hello world!"))
 >
 > ValueError: could not convert string to float: 'Hello world!'
@@ -367,22 +367,26 @@ first is 2 and second is 5
 > > What do you expect this program to do? It would not be so unreasonable to expect the Python 3 `int` command to
 > > convert the string "3.4" to 3.4 and an additional type conversion to 3. After all, Python 3 performs a lot of other
 > > magic - isn't that part of its charm?
-> > 
-> > However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
-> > typecasts, you must convert it explicitly in code.
 > >
 > > ~~~
 > > int("3.4")
+> > ~~~
+> > {: .language-python}
+> > ~~~
+> > ---------------------------------------------------------------------------
+> > ValueError                                Traceback (most recent call last)
+> > <ipython-input-2-ec6729dfccdc> in <module>
+> > ----> 1 int("3.4")
+> > ValueError: invalid literal for int() with base 10: '3.4'
+> > ~~~
+> > {: .output}
+> > However, Python 3 throws an error. Why? To be consistent, possibly. If you ask Python to perform two consecutive
+> > typecasts, you must convert it explicitly in code.
+> > ~~~
 > > int(float("3.4"))
 > > ~~~
 > > {: .language-python}
 > > ~~~
-> > In [2]: int("3.4")
-> > ---------------------------------------------------------------------------
-> > ValueError                                Traceback (most recent call last)
-> > <ipython-input-2-ec6729dfccdc> in <module>()
-> > ----> 1 int("3.4")
-> > ValueError: invalid literal for int() with base 10: '3.4'
 > > 3
 > > ~~~
 > > {: .output}
