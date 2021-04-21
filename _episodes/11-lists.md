@@ -379,12 +379,12 @@ IndexError: string index out of range
 > > ~~~
 > > letters is ['g', 'o', 'l', 'd'] and result is ['d', 'g', 'l', 'o']
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > Program B prints
 > > ~~~
 > > letters is ['d', 'g', 'l', 'o'] and result is None
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > `sorted(letters)` returns a sorted copy of the list `letters` (the original
 > > list `letters` remains unchanged), while `letters.sort()` sorts the list
 > > `letters` in-place and does not return anything.
