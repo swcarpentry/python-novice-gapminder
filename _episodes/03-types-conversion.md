@@ -215,6 +215,7 @@ first is 2 and second is 5
 > > ## Solution
 > >
 > > It is a floating-point number (often abbreviated "float").
+> > It is possible to find out by using the built-in function `type()`.
 > >
 > > ~~~
 > > print(type(3.4))
