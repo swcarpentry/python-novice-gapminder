@@ -106,4 +106,12 @@ NameError: name 'temperature' is not defined
 > KeyError: 'Friday'
 > ~~~
 > {: .error}
+> > ## Solution
+> > 1. Three levels.
+> > 2. `errors_02.py`
+> > 3. `print_message`
+> > 4. Line 11
+> > 5. `KeyError`
+> > 6. `KeyError: 'Friday'`
+> {: .solution}
 {: .challenge}
