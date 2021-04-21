@@ -262,8 +262,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >    americas.head(n=3)
 > >    ~~~
 > >    {: .language-python}
-> >
-> >    The output is then
 > >    ~~~
 > >              continent  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
 > >    country
@@ -293,7 +291,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > 2. To check out the last three rows of `americas`, we would use the command,
 > >    `americas.tail(n=3)`, analogous to `head()` used above. However, here we want to look at
 > >    the last three columns so we need to change our view and then use `tail()`. To do so, we
->      create a new DataFrame in which rows and columns are switched
+> >     create a new DataFrame in which rows and columns are switched:
 > >
 > >    ~~~
 > >    americas_flipped = americas.T
@@ -306,7 +304,6 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >    americas_flipped.tail(n=3)
 > >    ~~~
 > >    {: .language-python}
-> >    The output is then
 > >    ~~~
 > >    country        Argentina  Bolivia   Brazil   Canada    Chile Colombia  \
 > >    gdpPercap_1997   10967.3  3326.14  7957.98  28954.9  10118.1  6117.36
@@ -329,13 +326,21 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > >    gdpPercap_2007             18008.5       42951.7  10611.5   11415.8
 > >    ~~~
 > >    {: .output}
-> >    Note: we could have done the above in a single line of code by 'chaining' the commands:
+> >    
+> >    This shows the data that we want, but we may prefer to display three columns instead of three rows,
+> >    so we can flip it back:
 > >    ~~~
-> >    americas.T.tail(n=3)
+> >    americas_flipped.tail(n=3).T    
+> >    ~~~
+> >    {: .language-python}    
+> >    __Note:__ we could have done the above in a single line of code by 'chaining' the commands:
+> >    ~~~
+> >    americas.T.tail(n=3).T
 > >    ~~~
 > >    {: .language-python}
 > {: .solution}
 {: .challenge}
+
 
 > ## Reading Files in Other Directories
 >
@@ -379,7 +384,7 @@ max      23424.766830    26997.936570    30687.754730    34435.367440
 > > americas.to_csv('processed.csv')
 > > ~~~
 > >{: .language-python}
-> > For help on `to_csv`, you could execute, for example,
+> > For help on `to_csv`, you could execute, for example:
 > > ~~~
 > > help(americas.to_csv)
 > > ~~~
