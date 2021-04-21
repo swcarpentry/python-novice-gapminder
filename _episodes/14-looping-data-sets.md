@@ -114,7 +114,6 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > 1. `data/gapminder_gdp_africa.csv`
 > 2. `data/gapminder_gdp_americas.csv`
 > 3. `data/gapminder_gdp_asia.csv`
-> 4. 1 and 2 are not matched.
 >
 > > ## Solution
 > >
