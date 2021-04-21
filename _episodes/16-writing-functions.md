@@ -195,6 +195,12 @@ result of call is: None
 > > print("calling")
 > > report(22.5)
 > > ~~~
+> > {: .language-python}
+> > ~~~
+> > calling
+> > pressure is 22.5
+> > ~~~
+> > {: .output}
 > {: .solution}
 {: .challenge}
 
