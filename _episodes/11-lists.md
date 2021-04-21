@@ -419,11 +419,12 @@ IndexError: string index out of range
 > > ~~~
 > > new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
 > > ~~~
+> > {: .output}
 > > Program B prints
 > > ~~~
 > > new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > `new = old` makes `new` a reference to the list `old`; `new` and `old` point
 > > towards the same object.
 > > 
