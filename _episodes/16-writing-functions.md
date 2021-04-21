@@ -519,21 +519,21 @@ result of call is: None
 > density. In the model, time takes discrete values 0, 1, 2, ...
 >
 > 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
->    population (at time _t_), and a parameter `r=1`. This function should return a value 
->    representing the state of the system (population) at time _t_+1, using the mapping function 
+>    population (at time `t`), and a parameter `r = 1`. This function should return a value 
+>    representing the state of the system (population) at time `t + 1`, using the mapping function:
 >
->    x(t+1) = r * x(t) * [1 - x(t)]
+>    `x[t + 1] = r * x[t] * [1 - x[t]]`
 >
 > 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
->    from an initial population of 0.5, for a period of time `t_final=10`. Store the intermediate
+>    from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
 >    results in a list so that after the loop terminates you have accumulated a sequence of values
->    representing the state of the logistic map at times _t_=0,1,...,_t_final_. Print this list to
+>    representing the state of the logistic map at times `t = [0,1,...,t_final]`. Print this list to
 >    see the evolution of the population.
 >
 > 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
 >    population as its first input, the parameter `t_final` as its second input and the parameter
 >    `r` as its third input. The function should return the list of values representing the state of
->    the logistic map at times _t_=0,1,...,_t_final_. Run this function for periods `t_final=100`
+>    the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
 >    and `1000` and print some of the values. Is the population trending toward a steady state?
 >
 > > ## Solution
@@ -572,5 +572,6 @@ result of call is: None
 > >    0.0009923756709128578
 > >    ~~~
 > >    {: .output}
+> >    The population seems to be approaching zero.
 > {: .solution}
 {: .challenge}
