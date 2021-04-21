@@ -379,3 +379,13 @@ NameError: name 'aege' is not defined
 > > `name[len(name) - 1]`
 > {: .solution}
 {: .challenge}
+
+> ## Explore the Python docs!
+>
+> The [official Python documentation](https://docs.python.org/3/) is arguably the most complete
+> source of information about the language. It is available in different languages and contains a lot of useful
+> resources. The [Built-in Functions page](https://docs.python.org/3/library/functions.html) contains a catalogue of
+> all of these functions, including the ones that we've covered in this lesson. Some of these are more advanced and 
+> unnecessary at the moment, but others are very simple and useful.
+> 
+{: .callout}
