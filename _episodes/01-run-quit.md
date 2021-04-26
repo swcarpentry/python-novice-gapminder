@@ -111,10 +111,17 @@ menus are included by default.
 *   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
 *   **View:** Actions that alter the appearance of JupyterLab.
 *   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
-*   **Kernel:** Actions for managing kernels which, as mentioned above, are separate processes for running code.
+*   **Kernel:** Actions for managing kernels. See the block below to learn what is a kernel.
 *   **Tabs:** A list of the open documents and activities in the main work area.
 *   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
 *   **Help:** A list of JupyterLab and kernel help links.
+
+> ## Kernels
+> According to the JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html),
+> kernels are "separate processes started by the server that run your code in different programming languages and environments."
+> When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code. It's also possible to
+> connect a text file to a kernel, so we can run code interactively in the kernel.
+{: .callout}
 
 A screenshot of the default Menu Bar is provided below.
 
