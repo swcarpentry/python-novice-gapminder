@@ -47,9 +47,8 @@ does not require an internet connection.
 
 > ## JupyterLab? What about Jupyter notebooks?
 > 
-> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview). If you have prior 
-> experience working with Jupyter notebooks, then you will have a a good idea of what to expect 
-> from JupyterLab. 
+> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
+> If you have prior experience working with Jupyter notebooks, then you will have a a good idea of what to expect from JupyterLab. 
 > 
 > Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
 > between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
@@ -111,16 +110,21 @@ menus are included by default.
 *   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
 *   **View:** Actions that alter the appearance of JupyterLab.
 *   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
-*   **Kernel:** Actions for managing kernels. See the block below to learn what is a kernel.
+*   **Kernel:** Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.
 *   **Tabs:** A list of the open documents and activities in the main work area.
 *   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
 *   **Help:** A list of JupyterLab and kernel help links.
 
 > ## Kernels
-> According to the JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html),
-> kernels are "separate processes started by the server that run your code in different programming languages and environments."
-> When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code. It's also possible to
-> connect a text file to a kernel, so we can run code interactively in the kernel.
+> The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html) 
+> define kernels as "separate processes started by the server that run your code in different programming languages and environments."
+> When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code. 
+> In this lesson, we'll be using the Jupyter ipython kernel which lets us run Python 3 code interactively.
+> 
+> Using other Jupyter [kernels for other programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) would let us 
+> write and execute code in other programming languages in the same JupyterLab interface, like R, Java, Julia, Ruby, JavaScript, Fortran, 
+> etc.
+> 
 {: .callout}
 
 A screenshot of the default Menu Bar is provided below.
