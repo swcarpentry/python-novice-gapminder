@@ -522,7 +522,7 @@ result of call is: None
 >    population (at time `t`), and a parameter `r = 1`. This function should return a value 
 >    representing the state of the system (population) at time `t + 1`, using the mapping function:
 >
->    `x[t + 1] = r * x[t] * [1 - x[t]]`
+>    `f(t+1) = r * f(t) * [1 - f(t)]`
 >
 > 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
 >    from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
