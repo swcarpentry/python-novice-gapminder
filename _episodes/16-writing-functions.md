@@ -203,10 +203,10 @@ result of call is: None
 > 1. What's wrong in this example?
 >
 >     ~~~
->     result = print_date(1871,3,19)
+>     result = print_time(11,37,59)
 >
->     def print_date(year, month, day):
->        joined = str(year) + '/' + str(month) + '/' + str(day)
+>     def print_date(hour, minute, second):
+>        joined = str(hour) + ':' + str(minute) + ':' + str(second)
 >        print(joined)
 >     ~~~
 >     {: .language-python}
@@ -214,7 +214,7 @@ result of call is: None
 > 2. After fixing the problem above, explain why running this example code:
 >
 >     ~~~
->     result = print_date(1871, 3, 19)
+>     result = print_time(11,37,59)
 >     print('result of call is:', result)
 >     ~~~
 >     {: .language-python}
@@ -222,7 +222,7 @@ result of call is: None
 >     gives this output:
 >
 >     ~~~
->     1871/3/19
+>     11:37:59
 >     result of call is: None
 >     ~~~
 >     {: .output}
@@ -231,15 +231,15 @@ result of call is: None
 >
 > > ## Solution
 > > 
-> > 1. The problem with the example is that the function `print_date()` is defined *after* the call to the function is made. Python
-> > doesn't know how to resolve the name `print_date` since it hasn't been defined yet and will raise a `NameError` e.g.,
-> > `NameError: name 'print_date' is not defined`
+> > 1. The problem with the example is that the function `print_time()` is defined *after* the call to the function is made. Python
+> > doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
+> > `NameError: name 'print_time' is not defined`
 > >
-> > 2. The first line of output (`1871/3/19`) is from the print function inside `print_date()`, while the second line
-> > is from the print function below the function call. All of the code inside `print_date()` is executed first, and
+> > 2. The first line of output (`11:13:59`) is from the print function inside `print_time()`, while the second line
+> > is from the print function below the function call. All of the code inside `print_time()` is executed first, and
 > > the program then "leaves" the function and executes the rest of the code. 
 > >
-> > 3. `print_date()` doesn't explicitly `return` a value, so it automatically returns `None`.
+> > 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
 > >
 > {: .solution}
 {: .challenge}
