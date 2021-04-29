@@ -210,7 +210,8 @@ cos(pi) is -1.0
 > ## Jigsaw Puzzle (Parson's Problem) Programming Example
 >
 > Rearrange the following statements so that a random
-> DNA base is printed and its index in the string.  Not all statements may be needed.  Feel free to use/add
+> DNA base is printed and its index in the string. 
+> Not all statements may be needed.  Feel free to use/add
 > intermediate variables.
 >
 > ~~~
@@ -324,11 +325,12 @@ cos(pi) is -1.0
 > > 3. Library call 2. Here `sin` and `pi` are referred to with the regular library
 > >    name `math`, so the regular `import ...` call suffices.
 > >
-> > __Note:__ although library call 4 works, importing all names using a wildcard is a 
-> > [documented Python anti-pattern][pep8-imports], that is, it is best avoided. The
-> > reason for this is because it is best to make imports as specific as possible. In library
-> > call 1, the `import` statement explicitly tells us that the `sin` function is imported from the `math` module,
-> > but library call 4 does not convey this information.
+> > __Note:__ although library call 4 works, importing all names from a module using a wildcard 
+> > import is [not recommended][pep8-imports] as it makes it unclear which names from the module
+> > are used in the code. In general it is best to make your imports as specific as possible and to 
+> > only import what your code uses. In library call 1, the `import` statement explicitly tells us
+> > that the `sin` function is imported from the `math` module, but library call 4 does not
+> > convey this information.
 > {: .solution}
 {: .challenge}
 
