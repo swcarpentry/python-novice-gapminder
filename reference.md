@@ -49,59 +49,7 @@ layout: reference
   - `help()` displays documentation for the function in the parenthesis.
     - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
 
-## [Libraries]({{ page.root }}/06-libraries/)
-- Importing a library:
-  - Use `import ...` to load a library.
-  - Refer to this library by using `module_name.thing_name`.
-    - `.` indicates 'part of'.
-- To import a specific item from a library: `from ... import ...`
-- To import a library using an alias: `import ... as ...`
-- Importing the math library: `import math`
-  - Example of referring to an item with the module's name: `math.cos(math.pi)`.
-- Importing the plotting library as an alias: `import matplotlib as mpl`
-
-## [Reading Tabular Data into DataFrames]({{ page.root }}/07-reading-tabular/)
-- Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
-  - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
-    - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
-- To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
-- Use `DataFrame.columns` to view the column names.
-- Use `DataFrame.T` to transpose a DataFrame.
-- Use `DataFrame.describe` to get summary statistics about your data.
-
-## [Pandas DataFrames]({{ page.root }}/08-data-frames/)
-- Select data using `[i,j]`
-  - To select by entry position: `DataFrame.iloc[..., ...]`
-    - This is inclusive of everything except the final index.
-  - To select by entry label: `DataFrame.loc[..., ...]`
-    - Can select multiple rows or columns by listing labels.
-    - This is inclusive to both ends.
-  - Use `:` to select all rows or columns.
-- Can also select data based on values using `True` and `False`. This is a Boolean mask.
-  - `mask = subset > 10000`
-  - We can then use this to select values.
-- To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
-
-## [Plotting]({{ page.root }}/09-plotting/)
-- The most widely used plotting library is `matplotlib`.
-  - Usually imported using `import matplotlib.pyplot as plt`.
-  - To plot we use the command `plt.plot(time, position)`.
-  - To create a legend use `plt.legend(['label1', 'label2'], loc='upper left')`
-    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
-  - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
-- Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
-  - To plot a bar plot `data.plot(kind='bar')`
-
-~~~
-import matplotlib.puplot as plot
-plt.plot(time, position, label='label')
-plt.xlabel('x axis label')
-plt.ylabel('y axis label')
-plt.legend()
-~~~
-{: .language-python}
-
-## [Lists]({{ page.root }}/11-lists/)
+## [Lists]({{ page.root }}/05-lists/)
 - Defined within `[...]` and separated by `,`.
   - An empty list can be created by using `[]`.
 - Can use `len(...)` to determine how many values are in a list.
@@ -111,7 +59,7 @@ plt.legend()
 - To combine two lists use `list_name_1.extend(list_name_2)`.
 - To remove an item from a list use `del list_name[index]`.
 
-## [For Loops]({{ page.root }}/12-for-loops/)
+## [For Loops]({{ page.root }}/07-for-loops/)
 - Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
   - `[1, 2, 3]` is considered the collection.
   - `number` is the loop variable.
@@ -124,7 +72,7 @@ for number in range(0,5):
 ~~~
 {: .language-python}
 
-## [Conditionals]({{ page.root }}/13-conditionals/)
+## [Conditionals]({{ page.root }}/08-conditionals/)
 - Defined similarly to a loop, using `if variable conditional value:`.
   - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
@@ -149,7 +97,58 @@ for m in [3, 6, 7, 2, 8]:
 ~~~
 {: .language-python}
 
-## [Looping Over Data Sets]({{ page.root }}/14-looping-data-sets/)
+## [Writing Functions]({{ page.root }}/09-writing-functions/)
+- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
+- Run by using `function_name(parameters)`.
+- To return a result to the caller use `return ...` in the function.
+
+~~~
+def add_numbers(a, b):
+    result = a + b
+    return result
+
+add_numbers(1, 4)
+~~~
+{: .language-python}
+
+## [Variable Scope]({{ page.root }}/10-scope/)
+- A local variable is defined in a function and can only be seen and used within that function.
+- A global variable is defined outside of a function and can be seen or used anywhere after definition.
+
+## [Libraries]({{ page.root }}/12-libraries/)
+- Importing a library:
+  - Use `import ...` to load a library.
+  - Refer to this library by using `module_name.thing_name`.
+    - `.` indicates 'part of'.
+- To import a specific item from a library: `from ... import ...`
+- To import a library using an alias: `import ... as ...`
+- Importing the math library: `import math`
+  - Example of referring to an item with the module's name: `math.cos(math.pi)`.
+- Importing the plotting library as an alias: `import matplotlib as mpl`
+
+## [Reading Tabular Data into DataFrames]({{ page.root }}/13-reading-tabular/)
+- Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
+  - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
+    - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
+- To get more information about a DataFrame, use `DataFrame.info`, replacing `DataFrame` with the variable name of your DataFrame.
+- Use `DataFrame.columns` to view the column names.
+- Use `DataFrame.T` to transpose a DataFrame.
+- Use `DataFrame.describe` to get summary statistics about your data.
+
+## [Pandas DataFrames]({{ page.root }}/14-data-frames/)
+- Select data using `[i,j]`
+  - To select by entry position: `DataFrame.iloc[..., ...]`
+    - This is inclusive of everything except the final index.
+  - To select by entry label: `DataFrame.loc[..., ...]`
+    - Can select multiple rows or columns by listing labels.
+    - This is inclusive to both ends.
+  - Use `:` to select all rows or columns.
+- Can also select data based on values using `True` and `False`. This is a Boolean mask.
+  - `mask = subset > 10000`
+  - We can then use this to select values.
+- To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
+
+## [Looping Over Data Sets]({{ page.root }}/15-looping-data-sets/)
 - Use a for loop: `for filename in [file1, file2]:`
 - To find a set of files using a pattern use `glob.glob`
   - Must import first using `import glob`.
@@ -164,23 +163,24 @@ for filename in glob.glob(*.txt):
 ~~~
 {: .language-python}
 
-## [Writing Functions]({{ page.root }}/16-writing-functions/)
-- Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
-- Run by using `function_name(parameters)`.
-- To return a result to the caller use `return ...` in the function.
+## [Plotting]({{ page.root }}/17-plotting/)
+- The most widely used plotting library is `matplotlib`.
+  - Usually imported using `import matplotlib.pyplot as plt`.
+  - To plot we use the command `plt.plot(time, position)`.
+  - To create a legend use `plt.legend(['label1', 'label2'], loc='upper left')`
+    - Can also define labels within the plot statements by using `plt.plot(time, position, label='label')`. To make the legend show up, use `plt.legend()`
+  - To label x and y axis `plt.xlabel('label')` and `plt.ylabel('label')` are used.
+- Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
+  - To plot a bar plot `data.plot(kind='bar')`
 
 ~~~
-def add_numbers(a, b):
-    result = a + b
-    return result
-
-add_numbers(1, 4)
+import matplotlib.puplot as plot
+plt.plot(time, position, label='label')
+plt.xlabel('x axis label')
+plt.ylabel('y axis label')
+plt.legend()
 ~~~
 {: .language-python}
-
-## [Variable Scope]({{ page.root }}/17-scope/)
-- A local variable is defined in a function and can only be seen and used within that function.
-- A global variable is defined outside of a function and can be seen or used anywhere after definition.
 
 ## [Programming Style]({{ page.root }}/18-style/)
 - Document your code.

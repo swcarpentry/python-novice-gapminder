@@ -39,11 +39,11 @@ plt.ylabel('Position (km)')
 ~~~
 {: .language-python}
 
-![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
+![Simple Position-Time Plot](../fig/17_simple_position_time_plot.svg)
 
 > ## Display All Open Figures
-> 
-> In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code. 
+>
+> In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code.
 > The figure is also included in the Notebook document for future viewing.
 > However, other Python environments require an additional command in order to display the figure.
 >
@@ -70,7 +70,7 @@ import pandas as pd
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 
 # Extract year from last 4 characters of each column name
-# The current column names are structured as 'gdpPercap_(year)', 
+# The current column names are structured as 'gdpPercap_(year)',
 # so we want to keep the (year) part only for clarity when plotting GDP vs. years
 # To do this we use strip(), which removes from the string the characters stated in the argument
 # This method works on strings, so we call str before strip()
@@ -85,7 +85,7 @@ data.loc['Australia'].plot()
 ~~~
 {: .language-python}
 
-![GDP plot for Australia](../fig/9_gdp_australia.svg)
+![GDP plot for Australia](../fig/17_gdp_australia.svg)
 ## Select and transform data, then plot it.
 
 *   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
@@ -97,7 +97,7 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .language-python}
 
-![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
+![GDP plot for Australia and New Zealand](../fig/17_gdp_australia_nz.svg)
 ## Many styles of plot are available.
 
 *   For example, do a bar plot using a fancier style.
@@ -109,7 +109,7 @@ plt.ylabel('GDP per capita')
 ~~~
 {: .language-python}
 
-![GDP barplot for Australia](../fig/9_gdp_bar.svg)
+![GDP barplot for Australia](../fig/17_gdp_bar.svg)
 
 ## Data can also be plotted by calling the `matplotlib` `plot` function directly.
 *   The command is `plt.plot(x, y)`
@@ -125,7 +125,7 @@ plt.plot(years, gdp_australia, 'g--')
 ~~~
 {: .language-python}
 
-![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.svg)
+![GDP formatted plot for Australia](../fig/17_gdp_australia_formatted.svg)
 
 ## Can plot many sets of data together.
 
@@ -146,12 +146,12 @@ plt.ylabel('GDP per capita ($)')
 {: .language-python}
 
 > ## Adding a Legend
-> 
-> Often when plotting multiple datasets on the same figure it is desirable to have 
+>
+> Often when plotting multiple datasets on the same figure it is desirable to have
 > a legend describing the data.
 >
 > This can be done in `matplotlib` in two stages:
-> 
+>
 > * Provide a label for each dataset in the figure:
 >
 > ~~~
@@ -174,7 +174,7 @@ plt.ylabel('GDP per capita ($)')
 {: .callout}
 
 
-![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
+![GDP formatted plot for Australia and New Zealand](../fig/17_gdp_australia_nz_formatted.svg)
 *   Plot a scatter plot correlating the GDP of Australia and New Zealand
 *   Use either `plt.scatter` or `DataFrame.plot.scatter`
 
@@ -183,13 +183,13 @@ plt.scatter(gdp_australia, gdp_nz)
 ~~~
 {: .language-python}
 
-![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
+![GDP correlation using plt.scatter](../fig/17_gdp_correlation_plt.svg)
 ~~~
 data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 ~~~
 {: .language-python}
 
-![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
+![GDP correlation using data.T.plot.scatter](../fig/17_gdp_correlation_data.svg)
 
 > ## Minima and Maxima
 >
@@ -216,7 +216,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > plt.xticks(rotation=90)
 > > ~~~
 > > {: .language-python}
-> > ![Minima Maxima Solution](../fig/9_minima_maxima_solution.png)
+> > ![Minima Maxima Solution](../fig/17_minima_maxima_solution.png)
 > {: .solution}
 {: .challenge}
 
@@ -235,7 +235,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > > ~~~
 > > {: .language-python}
 > >
-> > ![Correlations Solution 1](../fig/9_correlations_solution1.svg)
+> > ![Correlations Solution 1](../fig/17_correlations_solution1.svg)
 > >
 > > No particular correlations can be seen between the minimum and maximum gdp values
 > > year on year. It seems the fortunes of asian countries do not rise and fall together.
@@ -252,7 +252,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
+> > ![Correlations Solution 2](../fig/17_correlations_solution2.png)
 > >
 > > Seems the variability in this value is due to a sharp drop after 1972.
 > > Some geopolitics at play perhaps? Given the dominance of oil producing countries,
@@ -279,7 +279,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > explain what each argument to `plot` does.
 >
 > > ## Solution
-> > ![More Correlations Solution](../fig/9_more_correlations_solution.svg)
+> > ![More Correlations Solution](../fig/17_more_correlations_solution.svg)
 > >
 > > A good place to look is the documentation for the plot function -
 > > help(data_all.plot).
@@ -296,7 +296,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 {: .challenge}
 
 > ## Saving your plot to a file
-> 
+>
 > If you are satisfied with the plot you see you may want to save it to a file,
 > perhaps to include it in a publication. There is a function in the
 > matplotlib.pyplot module that accomplishes this:
@@ -306,13 +306,13 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > plt.savefig('my_figure.png')
 > ~~~
 > {: .language-python}
-> 
+>
 > will save the current figure to the file `my_figure.png`. The file format
 > will automatically be deduced from the file name extension (other formats
 > are pdf, ps, eps and svg).
 >
 > Note that functions in `plt` refer to a global figure variable
-> and after a figure has been displayed to the screen (e.g. with `plt.show`) 
+> and after a figure has been displayed to the screen (e.g. with `plt.show`)
 > matplotlib will make this  variable refer to a new empty figure.
 > Therefore, make sure you call `plt.savefig` before the plot is displayed to
 > the screen, otherwise you may find a file with an empty plot.
@@ -321,7 +321,7 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > and `plt.savefig` seems not to be a possible approach.
 > One possibility to save the figure to file is then to
 >
-> * save a reference to the current figure in a local variable (with `plt.gcf`) 
+> * save a reference to the current figure in a local variable (with `plt.gcf`)
 > * call the `savefig` class method from that variable.
 >
 > ~~~
