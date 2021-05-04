@@ -42,6 +42,9 @@ The main sections are:
 
 *   Audience
     *   Graduate students in numerate disciplines from cosmology to archaeology
+        * These fields have quite different amounts of computer literacy. Cosmology
+        requires use of Python/HPC software at the start, so could be useful to someone
+        just starting. Archaeology is quite different.
     *   Who have manipulated data in spreadsheets and with interactive tools like SAS
     *   But have *not* programmed beyond CPD (copy-paste-despair)
 *   Constraints
@@ -195,9 +198,74 @@ I know...
     *   Given what we have seen so far,
         what index expression will get the last character in a string?
 
-### [Coffee]({{page.root}}/05-coffee/): 15 min (10:20)
+### [Lists]({{page.root}}/05-lists/) (10:20)
 
-### [Libraries]({{page.root}}/06-libraries/) (10:35)
+*   Teaching: 10 min
+    *   Explain why programs need collections of values.
+    *   Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
+*   Challenges: 10 min
+    *   Fill in the blanks so that the program produces the output shown.
+    *   How large are the following slices?
+    *   What do negative index expressions print?
+    *   What does a "stride" in a slice do?
+    *   How do slices treat out-of-range bounds?
+    *   What are the differences between sorting these two ways?
+    *   What is the difference between `new = old` and `new = old[:]`?
+
+### [Coffee]({{page.root}}/06-coffee/): 15 min (10:40)
+
+### [Loops]({{page.root}}/07-for-loops/) (10:55)
+
+*   Teaching: 10 min
+    *   Explain what for loops are normally used for.
+    *   Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
+    *   Write for loops that use the Accumulator pattern to aggregate values.
+*   Challenges: 15 min
+    *   Is an indentation error a syntax error or a runtime error?
+    *   Trace which lines of this program are executed in what order.
+    *   Fill in the blanks in this program so that it reverses a string.
+    *   Fill in the blanks in this series of examples to get practice accumulating values.
+    *   Reorder and indent these lines to calculate the cumulative sum of the list values.
+
+### [Conditionals]({{page.root}}/08-conditionals/) (11:20)
+
+*   Teaching: 10 min
+    *   Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
+    *   Trace the execution of unnested conditionals and conditionals inside loops.
+*   Challenges: 15 min
+    *   Trace the execution of this conditional statement.
+    *   Fill in the blanks so that this function replaces negative values with zeroes.
+    *   Modify this program so that it only processes files with fewer than 50 records.
+    *   Modify this program so that it always finds the largest and smallest values in a list
+        no matter what the list's values are.
+
+### [Writing Functions]({{page.root}}/09-writing-functions/) (11:45)
+
+*   Teaching: 10 min
+    *   Explain and identify the difference between function definition and function call.
+    *   Write a function that takes a small, fixed number of arguments and produces a single result.
+*   Challenges: 15 min
+    *   This code defines and calls a function - what does it print when run?
+    *   Explain why this short program prints things in the order it does.
+    *   Fill in the blanks to create a function that finds the minimum value in a data file.
+    *   Fill in the blanks to create a function that finds the first negative value in a list.
+        What does your function do if the list is empty?
+    *   Why is it sometimes useful to pass arguments by naming the corresponding parameters?
+    *   Fill in the blanks and turn this short piece of code into a function.
+
+### [Variable Scope]({{page.root}}/10-scope/) (12:10)
+
+*   Teaching: 10 min
+    *   Identify local and global variables.
+    *   Identify parameters as local variables.
+    *   Read a traceback and determine the file, function, and line number on which the error occurred.
+*   Challenges: 10 min
+    *   Trace the changes to the values in this program,
+        being careful to distinguish local from global values.
+
+### [Lunch]({{page.root}}/11-lunch/) (12:30): 45 min
+
+### [Libraries]({{page.root}}/12-libraries/) (13:15)
 
 *   Teaching: 10 min
     *   Explain what software libraries are and why programmers create and use them.
@@ -209,7 +277,7 @@ I know...
     *   If `help(math)` produces an error, what have you forgotten to do?
     *   Fill in the blanks in code below so that the import statement and program run.
 
-### [Reading Tabular Data]({{page.root}}/07-reading-tabular/) (10:55)
+### [Reading Tabular Data]({{page.root}}/13-reading-tabular/) (13:35)
 
 *   Teaching: 10 min
     *   Import the Pandas library.
@@ -221,7 +289,7 @@ I know...
     *   What string(s) should you pass to `read_csv` to read files from other directories?
     *   How can you *write* CSV data?
 
-### [DataFrames]({{page.root}}/08-data-frames/) (11:15)
+### [DataFrames]({{page.root}}/14-data-frames/) (13:55)
 
 *   Teaching: 15 min
     *   Select individual values from a Pandas dataframe.
@@ -240,46 +308,7 @@ I know...
         what would you do if asked to create a table of GDP per capita for Poland
         for the Twentieth Century?
 
-### [Plotting]({{page.root}}/09-plotting/) (11:45)
-
-*   Teaching: 15 min
-    *   Create a time series plot showing a single data set.
-    *   Create a scatter plot showing relationship between two data sets.
-*   Exercise: 15 min
-    *   Fill in the blanks to plot the minimum GDP per capita over time for European countries.
-    *   Modify the example to create a scatter plot of GDP per capita in Asian countries.
-    *   Explain what each argument to `plot` does in the following example.
-
-### [Lunch]({{page.root}}/10-lunch/) (12:15): 45 min
-
-### [Lists]({{page.root}}/11-lists/) (13:00)
-
-*   Teaching: 10 min
-    *   Explain why programs need collections of values.
-    *   Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls.
-*   Challenges: 10 min
-    *   Fill in the blanks so that the program produces the output shown.
-    *   How large are the following slices?
-    *   What do negative index expressions print?
-    *   What does a "stride" in a slice do?
-    *   How do slices treat out-of-range bounds?
-    *   What are the differences between sorting these two ways?
-    *   What is the difference between `new = old` and `new = old[:]`?
-
-### [Loops]({{page.root}}/12-for-loops/) (13:20)
-
-*   Teaching: 10 min
-    *   Explain what for loops are normally used for.
-    *   Trace the execution of a simple (unnested) loop and correctly state the values of variables in each iteration.
-    *   Write for loops that use the Accumulator pattern to aggregate values.
-*   Challenges: 15 min
-    *   Is an indentation error a syntax error or a runtime error?
-    *   Trace which lines of this program are executed in what order.
-    *   Fill in the blanks in this program so that it reverses a string.
-    *   Fill in the blanks in this series of examples to get practice accumulating values.
-    *   Reorder and indent these lines to calculate the cumulative sum of the list values.
-
-### [Looping Over Data Sets]({{page.root}}/13-looping-data-sets/) (13:45)
+### [Looping Over Data Sets]({{page.root}}/15-looping-data-sets/) (14:25)
 
 *   Teaching: 5 min
     *   Be able to read and write globbing expressions that match sets of files.
@@ -290,43 +319,18 @@ I know...
     *   Modify this program so that it prints the number of records in the shortest file.
     *   Write a program that reads and plots all of the regional data sets.
 
-### [Writing Functions]({{page.root}}/14-writing-functions/) (14:00)
+### [Coffee]({{page.root}}/16-coffee/) (14:40): 15 min
 
-*   Teaching: 10 min
-    *   Explain and identify the difference between function definition and function call.
-    *   Write a function that takes a small, fixed number of arguments and produces a single result.
-*   Challenges: 15 min
-    *   This code defines and calls a function - what does it print when run?
-    *   Explain why this short program prints things in the order it does.
-    *   Fill in the blanks to create a function that finds the minimum value in a data file.
-    *   Fill in the blanks to create a function that finds the first negative value in a list.
-        What does your function do if the list is empty?
-    *   Why is it sometimes useful to pass arguments by naming the corresponding parameters?
-    *   Fill in the blanks and turn this short piece of code into a function.
+### [Plotting]({{page.root}}/17-plotting/) (14:55)
 
-### [Variable Scope]({{page.root}}/15-scope/) (14:25)
+*   Teaching: 15 min
+    *   Create a time series plot showing a single data set.
+    *   Create a scatter plot showing relationship between two data sets.
+*   Exercise: 15 min
+    *   Fill in the blanks to plot the minimum GDP per capita over time for European countries.
+    *   Modify the example to create a scatter plot of GDP per capita in Asian countries.
+    *   Explain what each argument to `plot` does in the following example.
 
-*   Teaching: 10 min
-    *   Identify local and global variables.
-    *   Identify parameters as local variables.
-    *   Read a traceback and determine the file, function, and line number on which the error occurred.
-*   Challenges: 10 min
-    *   Trace the changes to the values in this program,
-        being careful to distinguish local from global values.
-
-### [Coffee]({{page.root}}/16-coffee/) (14:45): 15 min
-
-### [Conditionals]({{page.root}}/17-conditionals/) (15:00)
-
-*   Teaching: 10 min
-    *   Correctly write programs that use if and else statements and simple Boolean expressions (without logical operators).
-    *   Trace the execution of unnested conditionals and conditionals inside loops.
-*   Challenges: 15 min
-    *   Trace the execution of this conditional statement.
-    *   Fill in the blanks so that this function replaces negative values with zeroes.
-    *   Modify this program so that it only processes files with fewer than 50 records.
-    *   Modify this program so that it always finds the largest and smallest values in a list
-        no matter what the list's values are.
 
 ### [Programming Style]({{page.root}}/18-style/) (15:25)
 
