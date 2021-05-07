@@ -19,17 +19,27 @@ keypoints:
 - "Python is case-sensitive."
 - "Use meaningful variable names."
 ---
+## The Gapminder dataset
+In this lesson, we are going to work with data from [Gapminder](https://www.gapminder.org/), a non-profit
+foundation that provides open and curated global datasets. Specifically, we are going to look at __GDP__ values
+for each country. __GDP__ stands for ["gross domestic product"](https://en.wikipedia.org/wiki/Gross_domestic_product),
+a measure for the monetary value of all goods and services produced by a country in a given period of time (usually
+a quarter or a year). More specifically, we are going to look at __GDP per capita__ values, which is a country's GDP
+divided by its population, also called nominal GDP.
+
+Before we dig in the actual data, let's get familiar with some basic Python syntax.
+
 ## Use variables to store values.
 
 *   **Variables** are names for values.
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
-*   Here, Python assigns an age to a variable `age`
-    and a name in quotes to a variable `first_name`.
+*   Here, Python assigns a number to a variable `states`
+    and a text in quotes to a variable `country`.
 
     ~~~
-    age = 42
-    first_name = 'Ahmed'
+    states = 50
+    country = "United States"
     ~~~
     {: .language-python}
 
@@ -49,11 +59,11 @@ keypoints:
 *   The values passed to the function are called **arguments**
 
 ~~~
-print(first_name, 'is', age, 'years old')
+print(country, 'has', states, 'states.')
 ~~~
 {: .language-python}
 ~~~
-Ahmed is 42 years old
+United States has 50 states.
 ~~~
 {: .output}
 
@@ -66,16 +76,16 @@ Ahmed is 42 years old
     Python reports an error. (Unlike some languages, which "guess" a default value.)
 
 ~~~
-print(last_name)
+print(continent)
 ~~~
 {: .language-python}
 ~~~
 ---------------------------------------------------------------------------
 NameError                                 Traceback (most recent call last)
 <ipython-input-1-c1fbb4e96102> in <module>()
-----> 1 print(last_name)
+----> 1 print(continent)
 
-NameError: name 'last_name' is not defined
+NameError: name 'continent' is not defined
 ~~~
 {: .error}
 
@@ -91,12 +101,12 @@ NameError: name 'last_name' is not defined
 > following content, in this order:
 >
 > ~~~
-> print(myval)
+> print(myvalue)
 > ~~~
 > {: .language-python}
 >
 > ~~~
-> myval = 1
+> myvalue = 1
 > ~~~
 > {: .language-python}
 >
@@ -108,15 +118,15 @@ NameError: name 'last_name' is not defined
 ## Variables can be used in calculations.
 
 *   We can use variables in calculations just as if they were values.
-    *   Remember, we assigned the value `42` to `age` a few lines ago.
+    *   Remember, we assigned the value `50` to `states` a few lines ago.
 
 ~~~
-age = age + 3
-print('Age in three years:', age)
+states = states - 2
+print('States in the contiguous US:', states)
 ~~~
 {: .language-python}
 ~~~
-Age in three years: 45
+States in the contiguous US: 48
 ~~~
 {: .output}
 
@@ -159,19 +169,19 @@ h
     the slice is a copy of part of the original string.
 
 ~~~
-atom_name = 'sodium'
-print(atom_name[0:3])
+country = 'Australia'
+print(country[0:3])
 ~~~
 {: .language-python}
 ~~~
-sod
+Aus
 ~~~
 {: .output}
 
 ## Use the built-in function `len` to find the length of a string.
 
 ~~~
-print(len('helium'))
+print(len('Brazil'))
 ~~~
 {: .language-python}
 ~~~
@@ -185,7 +195,7 @@ print(len('helium'))
 ## Python is case-sensitive.
 
 *   Python thinks that upper- and lower-case letters are different,
-    so `Name` and `name` are different variables.
+    so `Country` and `country` are different variables.
 *   There are conventions for using upper-case letters at the start of variable names so we will use lower-case letters for now.
 
 ## Use meaningful variable names.
@@ -194,9 +204,9 @@ print(len('helium'))
     (alphanumeric characters and the underscore).
 
 ~~~
-flabadab = 42
-ewr_422_yY = 'Ahmed'
-print(ewr_422_yY, 'is', flabadab, 'years old')
+flabadab = 50
+ewr_422_yY = 'United States'
+print(ewr_422_yY, 'has', flabadab, 'states.')
 ~~~
 {: .language-python}
 
