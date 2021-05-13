@@ -182,6 +182,7 @@ True
 ## Use the built-in function `help` to get help for a function.
 
 *   Every built-in function has online documentation.
+*   Entering 'help()' only generates an interface in the output for searching functions and other Python syntax.
 
 ~~~
 help(round)
