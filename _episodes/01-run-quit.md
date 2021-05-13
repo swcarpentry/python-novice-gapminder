@@ -21,11 +21,21 @@ keypoints:
 - "Markdown does most of what HTML does."
 ---
 
-## Getting Started with JupyterLab
+Many software developers will often use an integrated development environment (IDE) or a 
+text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
 
-While many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs we will be using [JupyterLab][jupyterlab] 
-during this lesson. 
+This has several advantages:
+  *   You can easily type, edit, and copy and paste blocks of code.
+  *   Tab complete allows you to easily access the names of things you are using
+      and learn more about them.
+  *   It allows you to annotate your code with links, different sized text, bullets, etc.
+      to make it more accessible to you and your collaborators.
+  *   It allows you to display figures next to the code that produces them
+      to tell a complete story of the analysis.
+
+Each notebook contains one or more cells that contain code, text, or images.
+
+## Getting Started with JupyterLab
 
 JupyterLab is an application with a web-based user interface from [Project Jupyter][jupyter] that 
 enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
@@ -215,19 +225,6 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > > right, top, or bottom of the panel.
 > {: .solution}
 {: .challenge}
-
-## Use the Jupyter Notebook for editing and running Python.
-
-*   While it's common to write Python scripts using a text editor, we are going to use the [Jupyter Notebook][jupyter] for the remainder of this workshop.
-*   This has several advantages:
-    *   You can easily type, edit, and copy and paste blocks of code.
-    *   Tab complete allows you to easily access the names of things you are using
-        and learn more about them.
-    *   It allows you to annotate your code with links, different sized text, bullets, etc.
-        to make it more accessible to you and your collaborators.
-    *   It allows you to display figures next to the code that produces them
-        to tell a complete story of the analysis.
-*   Each notebook contains one or more cells that contain code, text, or images.
 
 > ## Code vs. Text
 >
