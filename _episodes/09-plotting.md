@@ -43,8 +43,8 @@ plt.ylabel('Position (km)')
 > 
 > In our Jupyter Notebook example, running the cell should generate the figure directly below the code. 
 > The figure is also included in the Notebook document for future viewing.
-> However, other Python environments, such as when running Python directly from a terminal window,
-> require an additional command in order to display the figure.
+> However, other Python environments like an interactive Python session started from a terminal 
+> or a Python script executed via the command line require an additional command to display the figure.
 >
 > Instruct `matplotlib` to show a figure:
 > ~~~
