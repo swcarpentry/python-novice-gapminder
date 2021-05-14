@@ -18,11 +18,9 @@ keypoints:
 ## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
 *   Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/api/pyplot_api.html).
-*   The Jupyter Notebook will render plots inline if we ask it to using a "magic" command, which have a `%` character
-preceding them.
+*   The Jupyter Notebook will render plots inline by default.
 
 ~~~
-%matplotlib inline
 import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
@@ -43,7 +41,7 @@ plt.ylabel('Position (km)')
 
 > ## Display All Open Figures
 > 
-> In our Jupyter Notebook example with `%matplotlib inline`, running the cell generates the figure directly below the code. 
+> In our Jupyter Notebook example, running the cell should generate the figure directly below the code. 
 > The figure is also included in the Notebook document for future viewing.
 > However, other Python environments require an additional command in order to display the figure.
 >
