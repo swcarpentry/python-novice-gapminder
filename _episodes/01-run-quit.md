@@ -58,7 +58,7 @@ does not require an internet connection.
 
 ## Starting JupyterLab
 
-You can start the Jupyterlab server through the command line, or through an application called 
+You can start the JupyterLab server through the command line or through an application called 
 `Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
 
 ### macOS - Command Line
@@ -76,15 +76,6 @@ $ jupyter lab
 ~~~
 {: .bash}
 
-### macOS - Anaconda Navigator
-To start the JupyterLab server you will need to access Anaconda Navigator.
-
-Press <kbd>Command</kbd> + <kbd>spacebar</kbd> to launch Spotlight. Type `Anaconda Navigator` and then 
-double-click the search result or hit <kbd>Enter</kbd>
-
-After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
-to scroll down to find it.
-
 ### Windows Users - Command Line
 To start the JupyterLab server you will need to access the Anaconda Prompt.
 
@@ -97,10 +88,9 @@ $ jupyter lab
 ~~~
 {: .bash}
 
-### Windows Users - Anaconda Navigator
-To start the JupyterLab server you will need to access Anaconda Navigator.
+###  Anaconda Navigator
 
-Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Navigator`, click the result or press enter.
+To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/anaconda/navigator/getting-started/#starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
 
 After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
 to scroll down to find it.
