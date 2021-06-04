@@ -557,12 +557,12 @@ result of call is: None
 > >   # the series needs a random starting point in [0.1,0.9]
 > >   start = 0.1 + 0.8 * random.random()
 > >   # Then, the function defined above computes the final series value
-> >   trajectory = iterate(start,5000,r)
-> >   # store the (r,final series value) pair for plotting
+> >   trajectory = iterate(start, 5000, r)
+> >   # store the (r, final series value) pair for plotting
 > >   r_list.append(r)
 > >   final_value.append(trajectory[-1])
 > > # Then plot the final recursion values as they depend on the growth parameter
-> > plt.plot(r_list,final_value,",")  # "," plots a single pixel
+> > plt.plot(r_list, final_value, ",")  # "," plots a single pixel
 > > plt.xlabel("growth parameter, r")
 > > plt.ylabel("final series value, aka \'attractor\'")
 > > plt.title("Bifurcation diagram for the logistic map\n $x_{n+1}=r x_n(1-x_n)$")
@@ -572,12 +572,12 @@ result of call is: None
 > > The plotting part of the solution above can be made more compact with the [numpy arange](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.arange.html) function.  Specifically, the iteration over different rvalues could be accomplished with the following lines: 
 > > ~~~
 > > import numpy as np
-> > r_list = np.arange(2.4,4.0,0.0001)
+> > r_list = np.arange(2.4, 4.0, 0.0001)
 > > final_value = []
 > > for r in r_list:
-> >     trajectory = iterate(0.1 + 0.8 * random.random(),1000,r)
+> >     trajectory = iterate(0.1 + 0.8 * random.random(), 1000, r)
 > >     final_value.append(trajectory[-1])
-> > plt.plot(r_list,final_value,",")
+> > plt.plot(r_list, final_value, ",")
 > > ~~~
 > > {: .python}
 > > 
