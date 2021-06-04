@@ -209,18 +209,18 @@ result of call is: None
 > 1. What's wrong in this example?
 >
 >     ~~~
->     result = print_time(11,37,59)
+>     result = print_time(11, 37, 59)
 >
->     def print_date(hour, minute, second):
->        joined = str(hour) + ':' + str(minute) + ':' + str(second)
->        print(joined)
+>     def print_time(hour, minute, second):
+>        time_string = str(hour) + ':' + str(minute) + ':' + str(second)
+>        print(time_string)
 >     ~~~
 >     {: .language-python}
 > 
 > 2. After fixing the problem above, explain why running this example code:
 >
 >     ~~~
->     result = print_time(11,37,59)
+>     result = print_time(11, 37, 59)
 >     print('result of call is:', result)
 >     ~~~
 >     {: .language-python}
@@ -241,9 +241,9 @@ result of call is: None
 > > doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
 > > `NameError: name 'print_time' is not defined`
 > >
-> > 2. The first line of output (`11:13:59`) is from the print function inside `print_time()`, while the second line
-> > is from the print function below the function call. All of the code inside `print_time()` is executed first, and
-> > the program then "leaves" the function and executes the rest of the code. 
+> > 2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value 
+> > returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents 
+> > of the `result` variable.
 > >
 > > 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
 > >
