@@ -106,4 +106,14 @@ NameError: name 'temperature' is not defined
 > KeyError: 'Friday'
 > ~~~
 > {: .error}
+> > ## Solution
+> > 1. Three levels.
+> > 2. `errors_02.py`
+> > 3. `print_message`
+> > 4. Line 11
+> > 5. `KeyError`. These errors occur when we are trying to look up a key that does not exist (usually in a data
+> > structure such as a dictionary). We can find more information about the `KeyError` and other built-in exceptions
+> > in the [Python docs](https://docs.python.org/3/library/exceptions.html#KeyError).
+> > 6. `KeyError: 'Friday'`
+> {: .solution}
 {: .challenge}

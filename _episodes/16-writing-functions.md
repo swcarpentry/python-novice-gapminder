@@ -195,46 +195,58 @@ result of call is: None
 > > print("calling")
 > > report(22.5)
 > > ~~~
+> > {: .language-python}
+> > ~~~
+> > calling
+> > pressure is 22.5
+> > ~~~
+> > {: .output}
 > {: .solution}
 {: .challenge}
 
-
 > ## Order of Operations
 >
-> The example above:
+> 1. What's wrong in this example?
 >
-> ~~~
-> result = print_date(1871, 3, 19)
-> print('result of call is:', result)
-> ~~~
-> {: .language-python}
+>     ~~~
+>     result = print_time(11, 37, 59)
 >
-> printed:
-> ~~~
-> 1871/3/19
-> result of call is: None
-> ~~~
-> {: .output}
->
-> Explain why the two lines of output appeared in the order they did.
->
-> What's wrong in this example?
-> ~~~
-> result = print_date(1871,3,19)
->
-> def print_date(year, month, day):
->    joined = str(year) + '/' + str(month) + '/' + str(day)
->    print(joined)
-> ~~~
-> {: .language-python}
+>     def print_time(hour, minute, second):
+>        time_string = str(hour) + ':' + str(minute) + ':' + str(second)
+>        print(time_string)
+>     ~~~
+>     {: .language-python}
 > 
+> 2. After fixing the problem above, explain why running this example code:
+>
+>     ~~~
+>     result = print_time(11, 37, 59)
+>     print('result of call is:', result)
+>     ~~~
+>     {: .language-python}
+>
+>     gives this output:
+>
+>     ~~~
+>     11:37:59
+>     result of call is: None
+>     ~~~
+>     {: .output}
+>
+> 3. Why is the result of the call `None`?
+>
 > > ## Solution
 > > 
-> > 1. The first line of output (`1871/3/19`) is from the print function inside `print_date()`, while the second line
-> > is from the print function below the function call. All of the code inside `print_date()` is executed first, and
-> > the program then "leaves" the function and executes the rest of the code.   
-> > 2. The problem with the example is that the function is defined *after* the call to the function is made. Python
-> > therefore doesn't understand the function call.
+> > 1. The problem with the example is that the function `print_time()` is defined *after* the call to the function is made. Python
+> > doesn't know how to resolve the name `print_time` since it hasn't been defined yet and will raise a `NameError` e.g.,
+> > `NameError: name 'print_time' is not defined`
+> >
+> > 2. The first line of output `11:37:59` is printed by the first line of code, `result = print_time(11, 37, 59)` that binds the value 
+> > returned by invoking `print_time` to the variable `result`. The second line is from the second print call to print the contents 
+> > of the `result` variable.
+> >
+> > 3. `print_time()` does not explicitly `return` a value, so it automatically returns `None`.
+> >
 > {: .solution}
 {: .challenge}
 
@@ -309,6 +321,7 @@ result of call is: None
 >     joined = str(year) + '/' + str(month) + '/' + str(day)
 >     print(joined)
 > ~~~
+> {: .language-python}
 > We saw that we can call the function using *named arguments*, like this:
 > ~~~
 > print_date(day=1, month=2, year=2003)
@@ -318,7 +331,7 @@ result of call is: None
 > 1.  What does `print_date(day=1, month=2, year=2003)` print?
 > 2.  When have you seen a function call like this before?
 > 3.  When and why is it useful to call functions this way?
-> {: .language-python}
+>
 > > ## Solution
 > > 
 > > 1. `2003/2/1`
@@ -331,28 +344,29 @@ result of call is: None
 > {: .solution}
 {: .challenge}
 
-> ## Encapsulate of If/Print Block
+> ## Encapsulation of an If/Print Block
 >
-> The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) to the computer and then the computer will print a label.  
+> The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) 
+> to the computer and then the computer will print a label.  
 >
 > Please re-write the code so that the if-block is folded into a function.
 >
 > ~~~
->  import random
->  for i in range(10):
+> import random
+> for i in range(10):
 >
 >     # simulating the mass of a chicken egg
 >     # the (random) mass will be 70 +/- 20 grams
->     mass=70+20.0*(2.0*random.random()-1.0)
+>     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
 >     print(mass)
 >    
->     #egg sizing machinery prints a label
->     if(mass>=85):
+>     # egg sizing machinery prints a label
+>     if mass >= 85:
 >        print("jumbo")
->     elif(mass>=70):
+>     elif mass >= 70:
 >        print("large")
->     elif(mass<70 and mass>=55):
+>     elif mass < 70 and mass >= 55:
 >        print("medium")
 >     else:
 >        print("small")
@@ -360,40 +374,40 @@ result of call is: None
 > {: .language-python}
 >
 >
-> The simplified program  follows.  What function definition will make it functional?
+> The simplified program follows.  What function definition will make it functional?
 >
 > ~~~
->  # revised version
->  import random
->  for i in range(10):
+> # revised version
+> import random
+> for i in range(10):
 >
 >     # simulating the mass of a chicken egg
 >     # the (random) mass will be 70 +/- 20 grams
->     mass=70+20.0*(2.0*random.random()-1.0)
+>     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
->     print(mass,print_egg_label(mass))    
+>     print(mass, print_egg_label(mass))    
 >
 > ~~~
 > {: .language-python}
 >
 >
 > 1. Create a function definition for `print_egg_label()` that will work with the revised program above.  Note, the function's return value will be significant. Sample output might be `71.23 large`.
-> 2.  A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+> 2. A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
 >
 > > ## Solution
 > >
 > > ~~~
 > > def print_egg_label(mass):
 > >     #egg sizing machinery prints a label
-> >     if(mass>=90):
+> >     if mass >= 90:
 > >         return "warning: egg might be dirty"
-> >     elif(mass>=85):
+> >     elif mass >= 85:
 > >         return "jumbo"
-> >     elif(mass>=70):
+> >     elif mass >= 70:
 > >         return "large"
-> >     elif(mass<70 and mass>=55):
+> >     elif mass < 70 and mass >= 55:
 > >         return "medium"
-> >     elif(mass<50):
+> >     elif mass < 50:
 > >         return "too light, probably spoiled"
 > >     else:
 > >         return "small"
@@ -414,29 +428,29 @@ result of call is: None
 > ~~~
 > {: .language-python}
 >
-> 1.Complete the statements below to obtain the average GDP for Japan
-> across the years reported for the 1980s.
+> 1. Complete the statements below to obtain the average GDP for Japan
+>    across the years reported for the 1980s.
 >
-> ~~~
-> year = 1983
-> gdp_decade = 'gdpPercap_' + str(year // ____)
-> avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
-> ~~~
-> {: .language-python}
+>     ~~~
+>     year = 1983
+>     gdp_decade = 'gdpPercap_' + str(year // ____)
+>     avg = (japan.loc[gdp_decade + ___] + japan.loc[gdp_decade + ___]) / 2
+>     ~~~
+>     {: .language-python}
 >
-> 2.Abstract the code above into a single function.
+> 2. Abstract the code above into a single function.
 >
-> ~~~
-> def avg_gdp_in_decade(country, continent, year):
->     df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
->     ____
->     ____
->     ____
->     return avg
-> ~~~
-> {: .language-python}
+>     ~~~
+>     def avg_gdp_in_decade(country, continent, year):
+>         df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+>         ____
+>         ____
+>         ____
+>         return avg
+>     ~~~
+>     {: .language-python}
 >
-> 3.How would you generalize this function
+> 3. How would you generalize this function
 >    if you did not know beforehand which specific years occurred as columns in the data?
 >    For instance, what if we also had data from years ending in 1 and 9 for each decade?
 >    (Hint: use the columns to filter out the ones that correspond to the decade,
@@ -444,47 +458,46 @@ result of call is: None
 >
 > > ## Solution
 > >
-> > 1.
+> > 1. The average GDP for Japan across the years reported for the 1980s is computed with:
 > >
-> > ~~~
-> > year = 1983
-> > gdp_decade = 'gdpPercap_' + str(year // 10)
-> > avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
-> > ~~~
-> > {: .language-python}
-> >
-> > 2.
-> >
-> > ~~~
-> > def avg_gdp_in_decade(country, continent, year):
-> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-> >     c = df.loc[country]
+> >     ~~~
+> >     year = 1983
 > >     gdp_decade = 'gdpPercap_' + str(year // 10)
-> >     avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
-> >     return avg
-> > ~~~
-> > {: .language-python}
+> >     avg = (japan.loc[gdp_decade + '2'] + japan.loc[gdp_decade + '7']) / 2
+> >     ~~~
+> >     {: .language-python}
 > >
-> > 3.
-> > 
-> > We need to loop over the reported years
-> >    to obtain the average for the relevant ones in the data.
+> > 2. That code as a function is:
 > >
-> > ~~~
-> > def avg_gdp_in_decade(country, continent, year):
-> >     df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-> >     c = df.loc[country]
-> >     gdp_decade = 'gdpPercap_' + str(year // 10)
-> >     total = 0.0
-> >     num_years = 0
-> >     for yr_header in c.index: # c's index contains reported years
-> >         if yr_header.startswith(gdp_decade):
-> >             total = total + c.loc[yr_header]
-> >             num_years = num_years + 1
-> >     return total/num_years
-> > ~~~
-> > {: .language-python}
+> >     ~~~
+> >     def avg_gdp_in_decade(country, continent, year):
+> >         df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >         c = df.loc[country]
+> >         gdp_decade = 'gdpPercap_' + str(year // 10)
+> >         avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
+> >         return avg
+> >     ~~~
+> >     {: .language-python}
+> >
+> > 3. To obtain the average for the relevant years, we need to loop over them:
+> >
+> >    ~~~
+> >    def avg_gdp_in_decade(country, continent, year):
+> >         df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+> >         c = df.loc[country]
+> >         gdp_decade = 'gdpPercap_' + str(year // 10)
+> >         total = 0.0
+> >         num_years = 0
+> >         for yr_header in c.index: # c's index contains reported years
+> >             if yr_header.startswith(gdp_decade):
+> >                 total = total + c.loc[yr_header]
+> >                 num_years = num_years + 1
+> >         return total/num_years
+> >     ~~~
+> >     {: .language-python}
+> >
 > > The function can now be called by:
+> >
 > > ~~~
 > > avg_gdp_in_decade('Japan','asia',1983)
 > > ~~~
@@ -506,21 +519,21 @@ result of call is: None
 > density. In the model, time takes discrete values 0, 1, 2, ...
 >
 > 1. Define a function called `logistic_map` that takes two inputs: `x`, representing the current
->    population (at time _t_), and a parameter `r=1`. This function should return a value 
->    representing the state of the system (population) at time _t_+1, using the mapping function 
+>    population (at time `t`), and a parameter `r = 1`. This function should return a value 
+>    representing the state of the system (population) at time `t + 1`, using the mapping function:
 >
->    x(t+1) = r * x(t) * [1 - x(t)]
+>    `f(t+1) = r * f(t) * [1 - f(t)]`
 >
 > 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
->    from an initial population of 0.5, for a period of time `t_final=10`. Store the intermediate
+>    from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
 >    results in a list so that after the loop terminates you have accumulated a sequence of values
->    representing the state of the logistic map at times _t_=0,1,...,_t_final_. Print this list to
+>    representing the state of the logistic map at times `t = [0,1,...,t_final]`. Print this list to
 >    see the evolution of the population.
 >
 > 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
 >    population as its first input, the parameter `t_final` as its second input and the parameter
 >    `r` as its third input. The function should return the list of values representing the state of
->    the logistic map at times _t_=0,1,...,_t_final_. Run this function for periods `t_final=100`
+>    the logistic map at times `t = [0,1,...,t_final]`. Run this function for periods `t_final = 100`
 >    and `1000` and print some of the values. Is the population trending toward a steady state?
 >
 > > ## Solution
@@ -559,5 +572,6 @@ result of call is: None
 > >    0.0009923756709128578
 > >    ~~~
 > >    {: .output}
+> >    The population seems to be approaching zero.
 > {: .solution}
 {: .challenge}

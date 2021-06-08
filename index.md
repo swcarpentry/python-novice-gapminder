@@ -8,7 +8,7 @@ This lesson is an introduction to programming in Python for people with little o
 programming experience. It uses plotting as its motivating example, and is designed to be used in 
 both [Data Carpentry][dc-lessons] and [Software Carpentry][swc-lessons] workshops. 
 This lesson references [JupyterLab][jupyterlab], but can be taught using a regular Python interpreter 
-as well. Please note that this lesson uses Python 3 rather than Python 2.
+as well. Please note that this lesson uses Python 3.
 
 > ## Under Design
 >

@@ -77,13 +77,12 @@ pressures is now: [0.265, 0.275, 0.277, 0.275, 0.276]
 primes = [2, 3, 5]
 print('primes is initially:', primes)
 primes.append(7)
-primes.append(9)
 print('primes has become:', primes)
 ~~~
 {: .language-python}
 ~~~
 primes is initially: [2, 3, 5]
-primes has become: [2, 3, 5, 7, 9]
+primes has become: [2, 3, 5, 7]
 ~~~
 {: .output}
 
@@ -106,9 +105,9 @@ print('primes has finally become:', primes)
 ~~~
 {: .language-python}
 ~~~
-primes is currently: [2, 3, 5, 7, 9]
-primes has now become: [2, 3, 5, 7, 9, 11, 13, 17, 19]
-primes has finally become: [2, 3, 5, 7, 9, 11, 13, 17, 19, [37, 41, 43, 47]]
+primes is currently: [2, 3, 5, 7]
+primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
+primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ~~~
 {: .output}
 
@@ -117,8 +116,8 @@ two-dimensional - the last element in `primes` is a list, not an integer.
 
 ## Use `del` to remove items from a list entirely.
 
-*   `del list_name[index]` removes an item from a list and shortens the list.
-*   Not a function or a method, but a statement in the language.
+*   We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
+*   `del` is not a function or a method, but a statement in the language.
 
 ~~~
 primes = [2, 3, 5, 7, 9]
@@ -138,7 +137,7 @@ primes after removing last item: [2, 3, 5, 7]
 *   Use `[]` on its own to represent a list that doesn't contain any values.
     *   "The zero of lists."
 *   Helpful as a starting point for collecting values
-        (which we will see in the [next episode]({% link _episodes/12-for-loops.md %}).
+        (which we will see in the [next episode]({{ page.root }}/12-for-loops/)).
 
 ## Lists may contain values of different types.
 
@@ -258,8 +257,8 @@ IndexError: string index out of range
 > ~~~
 > {: .language-python}
 > ~~~
-> ['t', 'i', 'n']
-> 'gold'
+> string to list: ['t', 'i', 'n']
+> list to string: gold
 > ~~~
 > {: .output}
 >
@@ -324,7 +323,7 @@ IndexError: string index out of range
 > > eniroulf
 > > ~~~
 > > {: .language-python}
-> > 1. `stride` is the step size of the slice
+> > 1. `stride` is the step size of the slice.
 > > 2. The slice `1::2` selects all even-numbered items from a collection: it starts
 > >    with element `1` (which is the second element, since indexing starts at `0`),
 > >    goes on until the end (since no `end` is given), and uses a step size of `2`
@@ -348,7 +347,9 @@ IndexError: string index out of range
 > > lithium
 > > 
 > > ~~~
-> > {: .language-python}
+> > {: .output}
+> The first statement prints the whole string, since the slice goes beyond the total length of the string.
+> The second statement returns an empty string, because the slice goes "out of bounds" of the string.
 > {: .solution}
 {: .challenge}
 
@@ -378,12 +379,12 @@ IndexError: string index out of range
 > > ~~~
 > > letters is ['g', 'o', 'l', 'd'] and result is ['d', 'g', 'l', 'o']
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > Program B prints
 > > ~~~
 > > letters is ['d', 'g', 'l', 'o'] and result is None
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > `sorted(letters)` returns a sorted copy of the list `letters` (the original
 > > list `letters` remains unchanged), while `letters.sort()` sorts the list
 > > `letters` in-place and does not return anything.
@@ -418,11 +419,12 @@ IndexError: string index out of range
 > > ~~~
 > > new is ['D', 'o', 'l', 'd'] and old is ['D', 'o', 'l', 'd']
 > > ~~~
+> > {: .output}
 > > Program B prints
 > > ~~~
 > > new is ['D', 'o', 'l', 'd'] and old is ['g', 'o', 'l', 'd']
 > > ~~~
-> > {: .language-python}
+> > {: .output}
 > > `new = old` makes `new` a reference to the list `old`; `new` and `old` point
 > > towards the same object.
 > > 

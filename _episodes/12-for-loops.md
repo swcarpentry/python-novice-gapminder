@@ -297,11 +297,10 @@ print(total)
 > > {: .language-python}
 > {: .solution}
 >
-> ~~~
-> # Create acronym: ["red", "green", "blue"] => "RGB"
-> # write the whole thing
-> ~~~
-> {: .language-python}
+> __Create an acronym:__ Starting from the list `["red", "green", "blue"]`, create the acronym `"RGB"` using
+> a for loop.
+> 
+> __Hint:__ You may need to use a string method to properly format the acronym.
 > > ## Solution
 > > ~~~
 > > acronym = ""
@@ -320,23 +319,23 @@ print(total)
 > The result should be `[1, 3, 5, 10]`.
 >
 > ~~~
-> cumulative.append(sum)
+> cumulative.append(total)
 > for number in data:
 > cumulative = []
-> sum += number
-> sum = 0
+> total += number
+> total = 0
 > print(cumulative)
 > data = [1,2,2,5]
 > ~~~
 > {: .language-python}
 > > ## Solution
 > > ~~~
-> > sum = 0
+> > total = 0
 > > data = [1,2,2,5]
 > > cumulative = []
 > > for number in data:
-> >     sum += number
-> >     cumulative.append(sum)
+> >     total += number
+> >     cumulative.append(total)
 > > print(cumulative)
 > > ~~~
 > > {: .language-python}
@@ -365,8 +364,10 @@ print(total)
 > ~~~
 > {: .language-python}
 > > ## Solution
-> > The variable `message` needs to be initialized and Python variable names are case sensitive: `number` and `Number`
-> > refer to different variables.
+> > - Python variable names are case sensitive: `number` and `Number` refer to different variables.
+> > - The variable `message` needs to be initialized as an empty string.
+> > - We want to add the string `"a"` to `message`, not the undefined variable `a`.
+> >
 > > ~~~
 > > message = ""
 > > for number in range(10):

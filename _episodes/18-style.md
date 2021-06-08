@@ -36,9 +36,10 @@ We may highlight some points:
     etc.
     Adhering to PEP8 makes it easier for other Python developers to read and understand your code,
     and to understand what their contributions should look like.
-*   To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/).
-*   Beyond just PEP8, some groups and organizations follow different style guidelines. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help     you format your code in either their style, or PEP8, called ["yapf"](https://github.com/google/yapf/).
+*   To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle.
+*   Beyond PEP8, some groups and organizations follow different style guidelines. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help you format your code in either their style, or PEP8, called ["yapf"](https://github.com/google/yapf/).
 *   With respect to style, the key is *consistency*. Choose a style for your project (be it PEP8, the Google style, or something else) and try to make sure that you, and anyone else you are collaborating with on your code, sticks to it! The choice of style is less important than consistency within a project. This will make your software much easier to read. Consider whether you will be able to understand your own code if you come back to read it in a couple of years!
+
 
 ## Use assertions to check for internal errors.
 
@@ -56,10 +57,7 @@ If the assertion is `False`, the Python interpreter raises an `AssertionError` r
 
 ## Use docstrings to provide builtin help.
 
-*   If the first thing in a function is a character string
-    that is not assigned directly to a variable,
-    Python attaches it to the function as the builtin help variable.
-*   Called a *docstring* (short for "documentation string").
+If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function as the builtin help variable. This string (that provides documentation) is also known as a *docstring*.
 
 ~~~
 def average(values):

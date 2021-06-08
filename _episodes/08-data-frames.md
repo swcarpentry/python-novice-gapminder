@@ -59,7 +59,6 @@ print(data.iloc[0, 0])
 *   Can specify location by row name analogously to 2D version of dictionary keys.
 
 ~~~
-data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 print(data.loc["Albania", "gdpPercap_1952"])
 ~~~
 {: .language-python}
@@ -298,7 +297,7 @@ dtype: float64
 {: .output}
 
 Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
-across the years surveyed:
+across the years surveyed using chained methods:
 
 ~~~
 data.groupby(wealth_score).sum()
@@ -339,8 +338,6 @@ data.groupby(wealth_score).sum()
 > {: .language-python}
 >
 > Write an expression to find the Per Capita GDP of Serbia in 2007.
-{: .challenge}
->
 > > ## Solution
 > > The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap_2007"):
 > > ~~~
@@ -366,7 +363,6 @@ data.groupby(wealth_score).sum()
 > print(df.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 > ~~~
 > {: .language-python}
-{: .challenge}
 > 
 > > ## Solution
 > > No, they do not produce the same output! The output of the first statement is:
@@ -406,7 +402,6 @@ data.groupby(wealth_score).sum()
 > fourth.to_csv('result.csv')
 > ~~~
 > {: .language-python}
-{: .challenge}
 >
 > > ## Solution
 > > Let's go through this piece of code line by line.
@@ -460,7 +455,6 @@ data.groupby(wealth_score).sum()
 > print(data.idxmax())
 > ~~~
 > {: .language-python}
-{: .challenge}
 >
 > > ## Solution
 > > For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
@@ -480,7 +474,6 @@ data.groupby(wealth_score).sum()
 > 3.  GDP per capita for all countries for years *after* 1985.
 > 4.  GDP per capita for each country in 2007 as a multiple of 
 >     GDP per capita for that country in 1952.
-{: .challenge}
 >
 > > ## Solution
 > > 1:
@@ -511,45 +504,38 @@ data.groupby(wealth_score).sum()
 {: .challenge}
 
 
-> ## Using the dir function to see available methods
+> ## Exploring available methods using the `dir()` function
 >
-> Python includes a `dir` function that can be used to display all of the available methods (functions) that are built into a data object.  As an example, the  functions available for a [list data type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) are:
+> Python includes a `dir()` function that can be used to display all of the available methods (functions) that are built into a data object.  In Episode 4, we used some methods with a string. But we can see many more are available by using `dir()`:
+>
 > ~~~
-> potatoes = ["Russet", "Norkota", "Yukon Gold", "Pontiac"]
-> dir(potatoes)
+> my_string = 'Hello world!'   # creation of a string object 
+> dir(myString)
 > ~~~
 > {: .language-python}
 >
 > This command returns:
+>
 > ~~~
 > ['__add__',
 > ...
 > '__subclasshook__',
->  'append',
->  'clear',
->  'copy',
->  'count',
-> 'extend',
-> 'index',
-> 'insert',
-> 'pop',
-> 'remove',
-> 'reverse',
-> 'sort']
+> 'capitalize',
+> 'casefold',
+> 'center',
+> ...
+> 'upper',
+> 'zfill']
 > ~~~
 > {: .language-python}
 >
-> The double underscore functions can be ignored for now; functions that are not surrounded by double underscores are the *public interface* of the [list type](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists). So, if you want to sort the list of potatoes, according to `dir` you should try,
-> ~~~
-> potatoes.sort()
-> ~~~
-> {: .language-python}
+> You can use `help()` or <kbd>Shift</kbd>+<kbd>Tab</kbd> to get more information about what these methods do.
 >
-> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir` to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.  
-{: .challenge}
+> Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()` 
+> to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
 >
 > > ## Solution
-> > Among many choices, dir lists the `median()` function as a possibility.  Thus,
+> > Among many choices, `dir()` lists the `median()` function as a possibility.  Thus,
 > > ~~~
 > > data.median()
 > > ~~~

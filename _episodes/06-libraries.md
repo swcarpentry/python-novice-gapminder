@@ -167,8 +167,8 @@ cos(pi) is -1.0
 > > The [random module][randommod] seems like it could help you.
 > >
 > > The string has 11 characters, each having a positional index from 0 to 10.
-> > You could use `random.randrange` function (or the alias `random.randint`
-> > if you find that easier to remember) to get a random integer between 0 and
+> > You could use either `random.randrange` or `random.randint` functions
+> > to get a random integer between 0 and
 > > 10, and then pick out the character at that position:
 > >
 > > ~~~
@@ -199,7 +199,7 @@ cos(pi) is -1.0
 > > {: .language-python}
 > >
 > > Note that this function returns a list of values. We will learn about
-> > lists in [episode 11]({% link _episodes/11-lists.md %}).
+> > lists in [episode 11]({{ page.root }}/11-lists/).
 > >
 > > There's also other functions you could use, but with more convoluted
 > > code as a result.
@@ -210,7 +210,8 @@ cos(pi) is -1.0
 > ## Jigsaw Puzzle (Parson's Problem) Programming Example
 >
 > Rearrange the following statements so that a random
-> DNA base is printed and its index in the string.  Not all statements may be needed.  Feel free to use/add
+> DNA base is printed and its index in the string. 
+> Not all statements may be needed.  Feel free to use/add
 > intermediate variables.
 >
 > ~~~
@@ -323,6 +324,13 @@ cos(pi) is -1.0
 > >    the shortened name `m`.
 > > 3. Library call 2. Here `sin` and `pi` are referred to with the regular library
 > >    name `math`, so the regular `import ...` call suffices.
+> >
+> > __Note:__ although library call 4 works, importing all names from a module using a wildcard 
+> > import is [not recommended][pep8-imports] as it makes it unclear which names from the module
+> > are used in the code. In general it is best to make your imports as specific as possible and to 
+> > only import what your code uses. In library call 1, the `import` statement explicitly tells us
+> > that the `sin` function is imported from the `math` module, but library call 4 does not
+> > convey this information.
 > {: .solution}
 {: .challenge}
 
@@ -368,10 +376,20 @@ cos(pi) is -1.0
 > {: .language-python}
 >
 > > ## Solution
+> > ~~~
+> > ---------------------------------------------------------------------------
+> > ValueError                                Traceback (most recent call last)
+> > <ipython-input-1-d72e1d780bab> in <module>
+> >       1 from math import log
+> > ----> 2 log(0)
+> > 
+> > ValueError: math domain error
+> > ~~~
+> > {: .output}
 > >
 > > 1. The logarithm of `x` is only defined for `x > 0`, so 0 is outside the
 > >    domain of the function.
-> > 2. You get an error of type "ValueError", indicating that the function
+> > 2. You get an error of type `ValueError`, indicating that the function
 > >    received an inappropriate argument value. The additional message
 > >    "math domain error" makes it clearer what the problem is.
 > {: .solution}
@@ -380,3 +398,4 @@ cos(pi) is -1.0
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
 [randommod]: https://docs.python.org/3/library/random.html
+[pep8-imports]: https://pep8.org/#imports

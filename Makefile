@@ -21,6 +21,9 @@ commands :
 docker-serve :
 	docker run --rm -it -v ${PWD}:/srv/jekyll -p 127.0.0.1:4000:4000 jekyll/jekyll:${JEKYLL_VERSION} make serve
 
+### jupyter 		: run JupyterHub and support a Python3 notebook with this data
+jupyter :
+	docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes -v ${PWD}:/home/jovyan/ jupyter/scipy-notebook:latest 
 ## serve            : run a local server.
 serve : lesson-md
 	${JEKYLL} serve

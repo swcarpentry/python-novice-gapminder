@@ -1,7 +1,5 @@
 ---
 layout: reference
-permalink: /reference/
-root: ..
 ---
 
 ## Reference
@@ -27,7 +25,7 @@ root: ..
   - Take a slice using `[start:stop]`. This makes a copy of part of the original string.
     - `start` is the index of the first element.
     - `stop` is the index of the element after the last desired element.
-- Use `len(...)` to find the length of a variable or string. 
+- Use `len(...)` to find the length of a variable or string.
 
 ## [Data Types and Type Conversion]({{ page.root }}/03-types-conversion/)
 - Each value has a type. This controls what can be done with it.

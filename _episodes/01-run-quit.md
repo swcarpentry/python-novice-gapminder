@@ -21,11 +21,21 @@ keypoints:
 - "Markdown does most of what HTML does."
 ---
 
-## Getting Started with JupyterLab
+Many software developers will often use an integrated development environment (IDE) or a 
+text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
 
-While many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs we will be using [JupyterLab][jupyterlab] 
-during this lesson. 
+This has several advantages:
+  *   You can easily type, edit, and copy and paste blocks of code.
+  *   Tab complete allows you to easily access the names of things you are using
+      and learn more about them.
+  *   It allows you to annotate your code with links, different sized text, bullets, etc.
+      to make it more accessible to you and your collaborators.
+  *   It allows you to display figures next to the code that produces them
+      to tell a complete story of the analysis.
+
+Each notebook contains one or more cells that contain code, text, or images.
+
+## Getting Started with JupyterLab
 
 JupyterLab is an application with a web-based user interface from [Project Jupyter][jupyter] that 
 enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
@@ -33,8 +43,9 @@ and even custom components in a flexible, integrated, and extensible manner. Jup
 reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
 Explorer versions 9 and below are *not* supported.
 
-JupyterLab is included as part of the Anaconda Python distribution. If you have not already 
-installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}/setup/) 
+JupyterLab is included as part of the Anaconda Python distribution. If you have not already
+installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}{% link
+setup.md %})
 for installation instructions.
 
 Even though JupyterLab is a web-based application, JupyterLab runs locally on your machine and 
@@ -46,9 +57,8 @@ does not require an internet connection.
 
 > ## JupyterLab? What about Jupyter notebooks?
 > 
-> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview). If you have prior 
-> experience working with Jupyter notebooks, then you will have a a good idea of what to expect 
-> from JupyterLab. 
+> JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
+> If you have prior experience working with Jupyter notebooks, then you will have a a good idea of what to expect from JupyterLab. 
 > 
 > Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
 > between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
@@ -57,7 +67,10 @@ does not require an internet connection.
 
 ## Starting JupyterLab
 
-### Mac OS X
+You can start the JupyterLab server through the command line or through an application called 
+`Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
+
+### macOS - Command Line
 To start the JupyterLab server you will need to access the command line through the Terminal. 
 There are two ways to open Terminal on Mac.
 
@@ -72,8 +85,8 @@ $ jupyter lab
 ~~~
 {: .bash}
 
-### Windows Users
-To start the JupyterLab server you will need to access the open Anaconda Prompt.
+### Windows Users - Command Line
+To start the JupyterLab server you will need to access the Anaconda Prompt.
 
 Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
 
@@ -84,8 +97,22 @@ $ jupyter lab
 ~~~
 {: .bash}
 
-Below is a screenshot of a similar JupyterLab landing page to the one that should open in your 
-default web browser after starting the JupyterLab server on wither Mac OS X or Windows.
+###  Anaconda Navigator
+
+To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/anaconda/navigator/getting-started/#starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
+
+After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+to scroll down to find it.
+
+Here is a screenshot of an Anaconda Navigator page similar to the one that should open on either macOS
+or Windows.
+
+<p align='center'>
+  <img alt="Anaconda Navigator landing page" src="../fig/0_anaconda_navigator_landing_page.png" width="750"/>
+</p>
+
+And here is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your 
+default web browser after starting the JupyterLab server on either macOS or Windows.
 
 <p align='center'>
   <img alt="JupyterLab landing page" src="../fig/0_jupyterlab_landing_page.png" width="750"/>
@@ -110,10 +137,22 @@ menus are included by default.
 *   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
 *   **View:** Actions that alter the appearance of JupyterLab.
 *   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
-*   **Kernel:** Actions for managing kernels which, as mentioned above, are separate processes for running code.
+*   **Kernel:** Actions for managing kernels. Kernels in Jupyter will be explained in more detail below.
 *   **Tabs:** A list of the open documents and activities in the main work area.
 *   **Settings:** Common JupyterLab settings can be configured using this menu. There is also an *Advanced Settings Editor* option in the dropdown menu that provides more fine-grained control of JupyterLab settings and configuration options.
 *   **Help:** A list of JupyterLab and kernel help links.
+
+> ## Kernels
+> The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html) 
+> define kernels as "separate processes started by the server that run your code in different programming languages and environments."
+> When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code. 
+> In this lesson, we'll be using the Jupyter ipython kernel which lets us run Python 3 code interactively.
+> 
+> Using other Jupyter [kernels for other programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) would let us 
+> write and execute code in other programming languages in the same JupyterLab interface, like R, Java, Julia, Ruby, JavaScript, Fortran, 
+> etc.
+> 
+{: .callout}
 
 A screenshot of the default Menu Bar is provided below.
 
@@ -204,19 +243,6 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 > {: .solution}
 {: .challenge}
 
-## Use the Jupyter Notebook for editing and running Python.
-
-*   While it's common to write Python scripts using a text editor, we are going to use the [Jupyter Notebook][jupyter] for the remainder of this workshop.
-*   This has several advantages:
-    *   You can easily type, edit, and copy and paste blocks of code.
-    *   Tab complete allows you to easily access the names of things you are using
-        and learn more about them.
-    *   It allows you to annotate your code with links, different sized text, bullets, etc.
-        to make it more accessible to you and your collaborators.
-    *   It allows you to display figures next to the code that produces them
-        to tell a complete story of the analysis.
-*   Each notebook contains one or more cells that contain code, text, or images.
-
 > ## Code vs. Text
 >
 > Jupyter mixes code and text in different types of blocks, called cells. We often use the term
@@ -284,36 +310,45 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 *   Use asterisks
 *   to create
 *   bullet lists.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 *   Use asterisks
 *   to create
 *   bullet lists.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 1.  Use numbers
 1.  to create
 1.  numbered lists.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+
 1.  Use numbers
 1.  to create
 1.  numbered lists.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 *  You can use indents
 	*  To create sublists 
@@ -322,41 +357,53 @@ more details, then see the [official notebook documentation][jupyterlab-notebook
 	1. Of different
 	1. types
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 *  You can use indents
 	*  To create sublists
 	*  of the same type
 *  Or sublists
 	1. Of different
 	1. types
+  
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 # A Level-1 Heading
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 # A Level-1 Heading
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 ## A Level-2 Heading (etc.)
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 ## A Level-2 Heading (etc.)
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 Line breaks
 don't matter.
@@ -364,30 +411,37 @@ don't matter.
 But blank lines
 create new paragraphs.
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 Line breaks
 don't matter.
 
 But blank lines
 create new paragraphs.
+
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-6" markdown="1">
+    
 ~~~
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
 ~~~
+
   </div>
   <div class="col-md-6" markdown="1">
+  
 [Create links](http://software-carpentry.org) with `[...](...)`.
 Or use [named links][data_carpentry].
 
 [data_carpentry]: http://datacarpentry.org
+
   </div>
 </div>
 

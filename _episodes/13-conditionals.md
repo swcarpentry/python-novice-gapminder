@@ -301,7 +301,7 @@ final velocity: 30.0
 > > original = [-1.5, 0.2, 0.4, 0.0, -1.3, 0.4]
 > > result = []
 > > for value in original:
-> >     if value<0.0:
+> >     if value < 0.0:
 > >         result.append(0)
 > >     else:
 > >         result.append(1)
@@ -331,7 +331,7 @@ final velocity: 30.0
 > > import pandas as pd
 > > for filename in glob.glob('data/*.csv'):
 > >     contents = pd.read_csv(filename)
-> >     if len(contents)<50:
+> >     if len(contents) < 50:
 > >         print(filename, len(contents))
 > > ~~~
 > > {: .language-python}
@@ -364,11 +364,27 @@ final velocity: 30.0
 > > values = [-2,1,65,78,-54,-24,100]
 > > smallest, largest = None, None
 > > for v in values:
-> >     if smallest==None and largest==None:
+> >     if smallest == None and largest == None:
 > >         smallest, largest = v, v
 > >     else:
 > >         smallest = min(smallest, v)
 > >         largest = max(largest, v)
+> > print(smallest, largest)
+> > ~~~
+> > {: .language-python}
+> > It can be argued that an advantage of using this method would be to make the code more readable.
+> > However, a disadvantage is that this code is not efficient, as the `values` list is iterated three times:
+> > once in the `for` loop statement, then again when both the `min` and `max` functions are called.
+> > The most efficient method, while maintaining readability, would be to iterate the list only once:
+> >
+> > ~~~
+> > values = [-2,1,65,78,-54,-24,100]
+> > smallest, largest = None, None
+> > for v in values:
+> >     if smallest == None or v < smallest:
+> >         smallest = v
+> >     if largest == None or v > largest:
+> >         largest = v
 > > print(smallest, largest)
 > > ~~~
 > > {: .language-python}
@@ -414,8 +430,8 @@ final velocity: 30.0
 > is an example, using the definition above.
 >
 > ~~~
-> data = pd.read_csv('Americas-data.csv')
-> data['life_qrtl'] = data['lifeExp'].apply(calculate_life_quartile)
+> data = pd.read_csv('data/gapminder_all.csv')
+> data['life_qrtl'] = data['lifeExp_1952'].apply(calculate_life_quartile)
 > ~~~
 > {: .language-python}
 >
