@@ -17,33 +17,31 @@ keypoints:
 
 ## Coding style
 
-Coding style helps us to understand the code better. It helps to maintain and change the code.
-Python relies strongly on coding style, as we may notice by the indentation we apply to lines to define different blocks of code.
-Python proposes a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008), and highlight the importance of readability in the [Zen of Python](https://www.python.org/dev/peps/pep-0020).
+A consistent coding style helps others (including our future selves) read and understand code more easily. Code is read much more often than it is written, and as the [Zen of Python](https://www.python.org/dev/peps/pep-0020) states, "Readability counts".
+Python proposed a standard style through one of its first Python Enhancement Proposals (PEP), [PEP8](https://www.python.org/dev/peps/pep-0008).
 
-We may highlight some points:
-*   document your code
-*   use clear, meaningful variable names
-*   use white-space, *not* tabs, to indent lines
+Some points worth highlighting:
+*   document your code and ensure that assumptions, internal algorithms, expected inputs, expected outputs, etc., are clear
+*   use clear, semantically meaningful variable names
+*   use white-space, *not* tabs, to indent lines (tabs can cause problems across different text editors, operating systems, and version control systems)
 
 
 ## Follow standard Python style in your code.
 
 *   [PEP8](https://www.python.org/dev/peps/pep-0008):
-    a style guide for Python that discusses topics such as how you should name variables,
-    how you should use indentation in your code,
-    how you should structure your `import` statements,
+    a style guide for Python that discusses topics such as how to name variables,
+    how to indent your code,
+    how to structure your `import` statements,
     etc.
-    Adhering to PEP8 makes it easier for other Python developers to read and understand your code,
-    and to understand what their contributions should look like.
-*   To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle.
-*   Beyond PEP8, some groups and organizations follow different style guidelines. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help you format your code in either their style, or PEP8, called ["yapf"](https://github.com/google/yapf/).
-*   With respect to style, the key is *consistency*. Choose a style for your project (be it PEP8, the Google style, or something else) and try to make sure that you, and anyone else you are collaborating with on your code, sticks to it! The choice of style is less important than consistency within a project. This will make your software much easier to read. Consider whether you will be able to understand your own code if you come back to read it in a couple of years!
+    Adhering to PEP8 makes it easier for other Python developers to read and understand your code, and to understand what their contributions should look like.
+*   To check your code for compliance with PEP8, you can use the [pycodestyle application](https://pypi.org/project/pycodestyle/) and tools like the [black code formatter](https://github.com/psf/black) can automatically format your code to conform to PEP8 and pycodestyle (a Jupyter notebook formatter also exists [nb_black](https://github.com/dnanhkhoa/nb_black)).
+*   Some groups and organizations follow different style guidelines besides PEP8. For example, the [Google style guide on Python](https://google.github.io/styleguide/pyguide.html) makes slightly different recommendations. Google wrote an application that can help you format your code in either their style or PEP8 called [yapf](https://github.com/google/yapf/).
+*   With respect to coding style, the key is *consistency*. Choose a style for your project be it PEP8, the Google style, or something else and do your best to ensure that you and anyone else you are collaborating with sticks to it. Consistency within a project is often more impactful than the particular style used. A consistent style will make your software easier to read and understand for others and for your future self.
 
 
 ## Use assertions to check for internal errors.
 
-Assertions are a simple, but powerful method for making sure that the context in which your code is executing is as you expect.
+Assertions are a simple but powerful method for making sure that the context in which your code is executing is as you expect.
 
 ~~~
 def calc_bulk_density(mass, volume):
@@ -57,7 +55,7 @@ If the assertion is `False`, the Python interpreter raises an `AssertionError` r
 
 ## Use docstrings to provide builtin help.
 
-If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function as the builtin help variable. This string (that provides documentation) is also known as a *docstring*.
+If the first thing in a function is a character string that is not assigned directly to a variable, Python attaches it to the function, accessible via the builtin help function. This string that provides documentation is also known as a *docstring*.
 
 ~~~
 def average(values):
@@ -122,7 +120,7 @@ average(values)
 
 > ## Document This
 >
-> Turn the comment on the following function into a docstring
+> Turn the comment in the following function into a docstring
 > and check that `help` displays it properly.
 >
 > ~~~
