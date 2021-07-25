@@ -510,7 +510,7 @@ data.groupby(wealth_score).sum()
 >
 > ~~~
 > my_string = 'Hello world!'   # creation of a string object 
-> dir(myString)
+> dir(my_string)
 > ~~~
 > {: .language-python}
 >
