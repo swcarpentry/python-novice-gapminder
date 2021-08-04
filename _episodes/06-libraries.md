@@ -9,12 +9,15 @@ objectives:
 - "Explain what software libraries are and why programmers create and use them."
 - "Write programs that import and use modules from Python's standard library."
 - "Find and read documentation for the standard library interactively (in the interpreter) and online."
+- "Print the current working directory and subdirectories and list their contents."
 keypoints:
 - "Most of the power of a programming language is in its libraries."
 - "A program must import a library module in order to use it."
 - "Use `help` to learn about the contents of a library module."
 - "Import specific items from a library to shorten programs."
 - "Create an alias for a library when importing it to shorten programs."
+- "A Python script / JupyterLab notebook has a working directory."
+- "The script / notebook will look for files in the working directory using a relative path."
 ---
 ## Most of the power of a programming language is in its libraries.
 
@@ -394,6 +397,112 @@ cos(pi) is -1.0
 > >    "math domain error" makes it clearer what the problem is.
 > {: .solution}
 {: .challenge}
+
+## Access the file system with the `os` library.
+
+*   The `os` library is part of the Python standard library. It contains
+    functions for working with files and directories that are consistent across
+    systems, regardless of whether you're using Mac, Linux, or Windows.
+*   Import the `os` library.
+*   Use the `getcwd` method from the `os` library to print your current working
+    directory. This is similar to `pwd` in Bash.
+
+~~~
+import os
+
+os.getcwd()
+~~~
+{: .language-python}
+~~~
+/Users/nelle
+~~~
+{: .output}
+
+
+*   Use the `listdir` method to list the files and directories in your current
+    working directory. This is similar to `ls` in Bash.
+    *   Notice that by default Python will list all files, including 'hidden'
+        files and directories (starting with `.`), whereas `ls` in Bash does
+        not. 
+    *   If you downloaded and unzipped the `python-novice-gapminder-data.zip`
+        file, you should see the 'data' directory here.
+    *   Use `listdir` without any input to list the contents of the
+        current working directory, or provide the path to another directory
+        to list the contents of that directory.
+
+
+~~~
+os.listdir()
+~~~
+{: .language-python}
+~~~
+['.bash_history',
+ '.bash_profile',
+ 'Applications',
+ 'Documents',
+ 'Library',
+ 'Music',
+ 'Public',
+ 'Desktop',
+ 'Downloads',
+ 'Movies',
+ 'Pictures',
+ 'data']
+~~~
+{: .output}
+
+
+~~~
+os.listdir('data')
+~~~
+{: .language-python}
+~~~
+['gapminder_gdp_americas.csv',
+ 'gapminder_gdp_europe.csv',
+ 'gapminder_all.csv',
+ 'gapminder_gdp_oceania.csv',
+ 'gapminder_gdp_africa.csv',
+ 'gapminder_gdp_asia.csv']
+~~~
+{: .output}
+
+
+*   Use the `chdir` method to change your current working directory. This
+    function requires a path as a string as input.
+    *   Note that you must use proper path delimiters for your system (e.g.,
+        forward-slash `/` for macOS and Linux, reverse-slash `\` for Windows).
+    *   The path must be relative to your current working directory or be a
+        full path.
+    *   If successful, `os.listdir` does not print anything, but if it is not
+        successful, it will print an error.
+    *   You might have used the tilde `~` to refer to your home directory in
+        Bash, but Python will not recognize this; you must spell out all
+        components of the path.
+
+~~~
+os.chdir('~/Desktop')
+~~~
+{: .language-python}
+~~~
+---------------------------------------------------------------------------
+FileNotFoundError                         Traceback (most recent call last)
+<ipython-input-11-a260bcd20044> in <module>
+----> 1 os.chdir('~/Desktop')
+
+FileNotFoundError: [Errno 2] No such file or directory: '~/Desktop'
+~~~
+{: .output}
+
+~~~
+os.chdir('/Users/nelle/Desktop')
+os.listdir()
+~~~
+{: .language-python}
+~~~
+['shell-lesson-data']
+~~~
+{: .output}
+
 
 [pypi]: https://pypi.python.org/pypi/
 [stdlib]: https://docs.python.org/3/library/
