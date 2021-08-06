@@ -424,8 +424,6 @@ os.getcwd()
     *   Notice that by default Python will list all files, including 'hidden'
         files and directories (starting with `.`), whereas `ls` in Bash does
         not. 
-    *   If you downloaded and unzipped the `python-novice-gapminder-data.zip`
-        file, you should see the 'data' directory here.
     *   Use `listdir` without any input to list the contents of the
         current working directory, or provide the path to another directory
         to list the contents of that directory.
@@ -447,10 +445,17 @@ os.listdir()
  'Downloads',
  'Movies',
  'Pictures',
- 'data']
+ 'data',
+ 'python-novice-gapminder-data.zip']
 ~~~
 {: .output}
 
+
+*   You should see the "python-novice-gapminder-data.zip" file that you
+    previously downloaded and the "data" directory, if you already
+    unzipped that file.
+*   We can check to see that all of the data files are there by using
+    `listdir` with the "data" directory as input.
 
 ~~~
 os.listdir('data')
@@ -468,30 +473,14 @@ os.listdir('data')
 
 
 *   Use the `chdir` method to change your current working directory. This
-    function requires a path as a string as input.
+    function requires a path as input.
     *   Note that you must use proper path delimiters for your system (e.g.,
         forward-slash `/` for macOS and Linux, reverse-slash `\` for Windows).
-    *   The path must be relative to your current working directory or be a
-        full path.
+    *   The path must be either (1) relative to your current working
+        directory or (2) be a full path (starting from the root
+        directory `/`).
     *   If successful, `os.listdir` does not print anything, but if it is not
         successful, it will print an error.
-    *   You might have used the tilde `~` to refer to your home directory in
-        Bash, but Python will not recognize this; you must spell out all
-        components of the path.
-
-~~~
-os.chdir('~/Desktop')
-~~~
-{: .language-python}
-~~~
----------------------------------------------------------------------------
-FileNotFoundError                         Traceback (most recent call last)
-<ipython-input-11-a260bcd20044> in <module>
-----> 1 os.chdir('~/Desktop')
-
-FileNotFoundError: [Errno 2] No such file or directory: '~/Desktop'
-~~~
-{: .output}
 
 ~~~
 os.chdir('/Users/nelle/Desktop')
