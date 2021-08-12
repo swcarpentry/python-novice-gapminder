@@ -316,16 +316,14 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > Therefore, make sure you call `plt.savefig` before the plot is displayed to
 > the screen, otherwise you may find a file with an empty plot.
 >
-> When using dataframes, data is often generated and plotted to screen in one line,
-> and `plt.savefig` seems not to be a possible approach.
-> One possibility to save the figure to file is then to
->
-> * save a reference to the current figure in a local variable (with `plt.gcf`) 
-> * call the `savefig` class method from that variable.
+> When using dataframes, data is often generated and plotted to screen in one line.
+> In addition to using `plt.savefig`, we can save a reference to the current figure 
+> in a local variable (with `plt.gcf`) and call the `savefig` class method from 
+> that variable to save the figure to file.
 >
 > ~~~
-> fig = plt.gcf() # get current figure
 > data.plot(kind='bar')
+> fig = plt.gcf() # get current figure
 > fig.savefig('my_figure.png')
 > ~~~
 > {: .language-python}
