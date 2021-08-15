@@ -133,7 +133,7 @@ The Menu Bar at the top of JupyterLab has the top-level menus that expose variou
 available in JupyterLab along with their keyboard shortcuts (where applicable). The following 
 menus are included by default.
 
-*   **File:** Actions related to files and directories such as *New*, *Open*, *Close*, *Save*, etc. The *File* menu also includes the *Quit* action used to shutdown the JupyterLab server.
+*   **File:** Actions related to files and directories such as *New*, *Open*, *Close*, *Save*, etc. The *File* menu also includes the *Shut Down* action used to shutdown the JupyterLab server.
 *   **Edit:** Actions related to editing documents and other activities such as *Undo*, *Cut*, *Copy*, *Paste*, etc.
 *   **View:** Actions that alter the appearance of JupyterLab.
 *   **Run:** Actions for running code in different activities such as notebooks and code consoles (discussed below).
@@ -162,8 +162,8 @@ A screenshot of the default Menu Bar is provided below.
 
 ### Left Sidebar
 
-The left sidebar contains a number of commonly-used tabs, such as a file browser (showing the 
-contents of the directory in which the JupyterLab server was launched!), a list of running kernels 
+The left sidebar contains a number of commonly used tabs, such as a file browser (showing the 
+contents of the directory where the JupyterLab server was launched), a list of running kernels 
 and terminals, the command palette, and a list of open tabs in the main work area. A screenshot of 
 the default Left Side Bar is provided below.
 
