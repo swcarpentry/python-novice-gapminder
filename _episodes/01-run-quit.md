@@ -553,7 +553,7 @@ Or use [named links][data_carpentry].
 
 ## Closing JupyterLab
 
-*   From the Menu Bar select the "File" menu and the choose "Quit" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (don't forget to save your work!). Click "Confirm" to shutdown the JupyterLab server.
+*   From the Menu Bar select the "File" menu and then choose "Shut Down" at the bottom of the dropdown menu. You will be prompted to confirm that you wish to shutdown the JupyterLab server (don't forget to save your work!). Click "Shut Down" to shutdown the JupyterLab server.
 *   To restart the JupyterLab server you will need to re-run the following command from a shell.
 
 ~~~
