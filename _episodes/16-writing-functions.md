@@ -281,7 +281,7 @@ result of call is: None
 >
 > Fill in the blanks to create a function that takes a list of numbers as an argument
 > and returns the first negative value in the list.
-> What does your function do if the list is empty?
+> What does your function do if the list is empty? What if the list has no negative numbers?
 >
 > ~~~
 > def first_negative(values):
@@ -295,11 +295,11 @@ result of call is: None
 > > ~~~
 > > def first_negative(values):
 > >     for v in values:
-> >         if v<0:
+> >         if v < 0:
 > >             return v
 > > ~~~
 > > {: .language-python}
-> > If an empty list is passed to this function, it returns `None`:
+> > If an empty list or a list with all positive values is passed to this function, it returns `None`:
 > > ~~~
 > > my_list = []
 > > print(first_negative(my_list))
@@ -385,32 +385,34 @@ result of call is: None
 >     # the (random) mass will be 70 +/- 20 grams
 >     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
->     print(mass, print_egg_label(mass))    
+>     print(mass, get_egg_label(mass))    
 >
 > ~~~
 > {: .language-python}
 >
 >
-> 1. Create a function definition for `print_egg_label()` that will work with the revised program above.  Note, the function's return value will be significant. Sample output might be `71.23 large`.
-> 2. A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `print_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
+> 1. Create a function definition for `get_egg_label()` that will work with the revised program above.  Note that the `get_egg_label()` function's return value will be important. Sample output from the above program would be `71.23 large`.
+> 2. A dirty egg might have a mass of more than 90 grams, and a spoiled or broken egg will probably have a mass that's less than 50 grams.  Modify your `get_egg_label()` function to account for these error conditions. Sample output could be `25 too light, probably spoiled`.
 >
 > > ## Solution
 > >
 > > ~~~
-> > def print_egg_label(mass):
-> >     #egg sizing machinery prints a label
+> > def get_egg_label(mass):
+> >     # egg sizing machinery prints a label
+> >     egg_label = "Unlabelled"
 > >     if mass >= 90:
-> >         return "warning: egg might be dirty"
+> >         egg_label = "warning: egg might be dirty"
 > >     elif mass >= 85:
-> >         return "jumbo"
+> >         egg_label = "jumbo"
 > >     elif mass >= 70:
-> >         return "large"
+> >         egg_label = "large"
 > >     elif mass < 70 and mass >= 55:
-> >         return "medium"
+> >         egg_label = "medium"
 > >     elif mass < 50:
-> >         return "too light, probably spoiled"
+> >         egg_label = "too light, probably spoiled"
 > >     else:
-> >         return "small"
+> >         egg_label = "small"
+> >     return egg_label
 > > ~~~
 > > {: .language-python}
 > {: .solution}
