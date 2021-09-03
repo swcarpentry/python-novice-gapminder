@@ -560,7 +560,7 @@ Or use [named links][data_carpentry].
 $ jupyter lab
 ~~~
 
-> ## Closing JupyerLab
+> ## Closing JupyterLab
 >
 > Practice closing and restarting the JupyterLab server.
 {: .challenge}
