@@ -153,7 +153,7 @@ h
 *   We take a slice by using `[start:stop]`, where `start` is replaced with the
     index of the first element we want and `stop` is replaced with the index of
     the element just after the last element we want.
-*   Mathematically, you might say that a slice selects `[start:stop)`.
+*   Mathematically, you might say that a slice selects `[start:stop]`.
 *   The difference between `stop` and `start` is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
     the slice is a copy of part of the original string.
