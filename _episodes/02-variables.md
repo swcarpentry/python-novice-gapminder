@@ -247,18 +247,21 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > ~~~
 > {: .language-python}
 > > ## Solution
-> >
 > > ~~~
-> > 'left'
+> > print(position)
+> > ~~~
+> > {: .language-python}
+> > ~~~
+> > left
 > > ~~~
 > > {: .output}
 > >
->> The `initial` variable is assigned the value `'left'`.
+> > The `initial` variable is assigned the value `'left'`.
 > > In the second line, the `position` variable also receives
->> the string value `'left'`. In third line, the `initial` variable is given the
->> value `'right'`, but the `position` variable retains its string value
->> of `'left'`.
->{: .solution}
+> > the string value `'left'`. In third line, the `initial` variable is given the
+> > value `'right'`, but the `position` variable retains its string value
+> > of `'left'`.
+> {: .solution}
 {: .challenge}
 
 > ## Challenge
