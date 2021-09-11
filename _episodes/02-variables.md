@@ -342,15 +342,15 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 3.  What does `thing[:high]` (without a value before the colon) do?
 > 4.  What does `thing[:]` (just a colon) do?
 > 5.  What does `thing[number:some-negative-number]` do?
-> 6.  What happens when you choose a `high` value which is out of range? (i.e., try `atom_name[0:15]`) 
+> 6.  What happens when you choose a `high` value which is out of range (i.e., try `atom_name[0:15]`)?
 >
 > > ## Solutions
 > >
-> > 1. `thing[low:high]` returns a slice from `low` to the value before `high`
-> > 2. `thing[low:]` returns a slice from `low` all the way to the end of `thing`
-> > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`
-> > 4. `thing[:]` returns all of `thing`
-> > 5. `thing[number:some-negative-number]` returns a slice from `number` to `some-negative-number` values from the end of `thing`
+> > 1. `thing[low:high]` returns a slice from `low` to the value before `high`.
+> > 2. `thing[low:]` returns a slice from `low` all the way to the end of `thing`.
+> > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`.
+> > 4. `thing[:]` returns all of `thing`.
+> > 5. `thing[number:some-negative-number]` returns a slice from `number` to `some-negative-number` values from the end of `thing`.
 > > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
 > {: .solution}
 {: .challenge}
