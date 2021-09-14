@@ -22,7 +22,7 @@ keypoints:
 ---
 
 Many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
+text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook](https://jupyter-notebook.readthedocs.io/en/stable/) via [JupyterLab](https://jupyterlab.readthedocs.io/en/latest/) for the remainder of this workshop.
 
 This has several advantages:
   *   You can easily type, edit, and copy and paste blocks of code.
