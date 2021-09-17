@@ -349,16 +349,16 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > 4.  `species_name[:]` (just a colon)
 > 5.  `species_name[11:-3]`
 > 6.  `species_name[-5:-3]`
-> 7.  What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]`)
+> 7.  What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]` or `species_name[:103]`)
 >
 > > ## Solutions
 > >
-> > 1.  `species_name[3:8]` returns the substring `'acia b'`
+> > 1.  `species_name[2:8]` returns the substring `'acia b'`
 > > 2.  `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
 > > 3.  `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
 > > 4.  `species_name[:]` returns the entire string `'Acacia buxifolia'`
 > > 5.  `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
 > > 6.  `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
-> > 7.  If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`
+> > 7.  If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
 > {: .solution}
 {: .challenge}
