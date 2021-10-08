@@ -168,6 +168,22 @@ print(str(1) + '2')
 ~~~
 {: .output}
 
+* This is not possible for every value 
+
+~~~
+print(int('Ahmed'))
+~~~
+{: .language-python}
+~~~
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-21-934e1d57e2db> in <module>
+----> 1 print(int('Ahmed'))
+
+ValueError: invalid literal for int() with base 10: 'Ahmed'
+~~~
+{: .error}
+
 ## Can mix integers and floats freely in operations.
 
 *   Integers and floating-point numbers can be mixed in arithmetic.
