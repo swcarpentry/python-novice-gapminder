@@ -347,9 +347,7 @@ result of call is: None
 > ## Encapsulation of an If/Print Block
 >
 > The code below will run on a label-printer for chicken eggs.  A digital scale will report a chicken egg mass (in grams) 
-> to the computer and then the computer will print a label.  
->
-> Please re-write the code so that the if-block is folded into a function.
+> to the computer and then the computer will print a label.
 >
 > ~~~
 > import random
@@ -374,7 +372,9 @@ result of call is: None
 > {: .language-python}
 >
 >
-> The simplified program follows.  What function definition will make it functional?
+> The if-block that classifies the eggs might be useful in other situations,
+> so to avoid repeating it, we could fold it into a function, `get_egg_label()`.
+> Revising the program to use the function would give us this:
 >
 > ~~~
 > # revised version
@@ -385,7 +385,7 @@ result of call is: None
 >     # the (random) mass will be 70 +/- 20 grams
 >     mass = 70 + 20.0 * (2.0 * random.random() - 1.0)
 >
->     print(mass, get_egg_label(mass))    
+>     print(mass, get_egg_label(mass))
 >
 > ~~~
 > {: .language-python}
