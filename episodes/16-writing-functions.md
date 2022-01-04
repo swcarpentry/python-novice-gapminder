@@ -529,8 +529,8 @@ result of call is: None
 > 2. Using a `for` or `while` loop, iterate the `logistic_map` function defined in part 1, starting
 >    from an initial population of 0.5, for a period of time `t_final = 10`. Store the intermediate
 >    results in a list so that after the loop terminates you have accumulated a sequence of values
->    representing the state of the logistic map at times `t = [0,1,...,t_final]`. Print this list to
->    see the evolution of the population.
+>    representing the state of the logistic map at times `t = [0,1,...,t_final]` (11 values in total).
+>    Print this list to see the evolution of the population.
 >
 > 3. Encapsulate the logic of your loop into a function called `iterate` that takes the initial
 >    population as its first input, the parameter `t_final` as its second input and the parameter
@@ -551,16 +551,16 @@ result of call is: None
 > >    t_final = 10
 > >    r = 1.0
 > >    population = [initial_population]
-> >    for t in range(1, t_final):
-> >        population.append( logistic_map(population[t-1], r) )
+> >    for t in range(t_final):
+> >        population.append( logistic_map(population[t], r) )
 > >    ~~~
 > >    {: .language-python}
 > >
 > > 3. ~~~
 > >    def iterate(initial_population, t_final, r):
 > >        population = [initial_population]
-> >        for t in range(1, t_final):
-> >            population.append( logistic_map(population[t-1], r) )
+> >        for t in range(t_final):
+> >            population.append( logistic_map(population[t], r) )
 > >        return population
 > >
 > >    for period in (10, 100, 1000):
@@ -569,9 +569,9 @@ result of call is: None
 > >    ~~~
 > >    {: .language-python}
 > >    ~~~
-> >    0.07508929631879595
-> >    0.009485759503982033
-> >    0.0009923756709128578
+> >    0.06945089389714401
+> >    0.009395779870614648
+> >    0.0009913908614406382
 > >    ~~~
 > >    {: .output}
 > >    The population seems to be approaching zero.
