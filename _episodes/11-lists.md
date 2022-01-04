@@ -236,14 +236,14 @@ IndexError: string index out of range
 
 > ## How Large is a Slice?
 >
-> If `low` and `high` are both non-negative integers,
-> how long is the list `values[low:high]`?
+> If `start` and `stop` are both non-negative integers,
+> how long is the list `values[start:stop]`?
 >
 > > ## Solution
-> > The list `values[low:high]` has up to `high - low` elements.  For example,
+> > The list `values[start:stop]` has up to `stop - start` elements.  For example,
 > > `values[1:4]` has the 3 elements `values[1]`, `values[2]`, and `values[3]`.
 > > Why 'up to'? As we saw in [episode 2]({{ page.root }}/02-variables/),
-> > if `high` is larger than the total length of the list `values`,
+> > if `stop` is greater than the total length of the list `values`,
 > > we will still get a list back but it will be shorter than expected.
 > {: .solution}
 {: .challenge}
