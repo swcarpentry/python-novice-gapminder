@@ -385,9 +385,9 @@ final velocity: 30.0
 > > values = [-2,1,65,78,-54,-24,100]
 > > smallest, largest = None, None
 > > for v in values:
-> >     if smallest == None or v < smallest:
+> >     if smallest is None or v < smallest:
 > >         smallest = v
-> >     if largest == None or v > largest:
+> >     if largest is None or v > largest:
 > >         largest = v
 > > print(smallest, largest)
 > > ~~~
