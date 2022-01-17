@@ -200,9 +200,16 @@ cos(pi) is -1.0
 > >
 > > Note that this function returns a list of values. We will learn about
 > > lists in [episode 11]({{ page.root }}/11-lists/).
+> > 
+> > One last option you may have encountered is the `random.choice` function:
+> > 
+> > ~~~
+> > from random import choice
 > >
-> > There's also other functions you could use, but with more convoluted
-> > code as a result.
+> > print(choice(bases))
+> > ~~~
+> > {: .language-python}
+> >
 > {: .solution}
 {: .challenge}
 
