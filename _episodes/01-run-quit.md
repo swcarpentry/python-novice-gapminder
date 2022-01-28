@@ -58,7 +58,7 @@ does not require an internet connection.
 > ## JupyterLab? What about Jupyter notebooks?
 > 
 > JupyterLab is the [next stage in the evolution of the Jupyter Notebook](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html#overview).
-> If you have prior experience working with Jupyter notebooks, then you will have a a good idea of what to expect from JupyterLab. 
+> If you have prior experience working with Jupyter notebooks, then you will have a good idea of what to expect from JupyterLab. 
 > 
 > Experienced users of Jupyter notebooks interested in a more detailed discussion of the similarities and differences
 > between the JupyterLab and Jupyter notebook user interfaces can find more information in the 
@@ -564,7 +564,9 @@ $ jupyter lab
 >
 > Practice closing and restarting the JupyterLab server.
 {: .challenge}
+
 [anaconda]: https://docs.continuum.io/anaconda/install
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [jupyterlab-ui]: https://jupyterlab.readthedocs.io/en/stable/user/interface.html
 [jupyterlab-notebook-docs]: https://jupyterlab.readthedocs.io/en/stable/user/notebook.html
 [markdown]: https://en.wikipedia.org/wiki/Markdown

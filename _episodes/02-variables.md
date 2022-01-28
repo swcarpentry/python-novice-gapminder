@@ -130,7 +130,7 @@ Age in three years: 45
 *   Indices are numbered from 0.
 *   Use the position's index in square brackets to get the character at that
     position.
-    
+
 ![an illustration of indexing](../fig/2_indexing.svg)
 
 ~~~
@@ -149,14 +149,13 @@ h
     single character.
 *   An item in a list is called an element. Whenever we treat a string as if it
     were a list, the string's elements are its individual characters.
-*   A slice is a part of a string (or, more generally, any list-like thing).
-*   We take a slice by using `[start:stop]`, where `start` is replaced with the
-    index of the first element we want and `stop` is replaced with the index of
-    the element just after the last element we want.
-*   Mathematically, you might say that a slice selects `[start:stop]`.
+*   A slice is a part of a string (or, more generally, a part of any list-like thing).
+*   We take a slice with the notation `[start:stop]`, where `start` is the integer
+    index of the first element we want and `stop` is the integer index of
+    the element _just after_ the last element we want.
 *   The difference between `stop` and `start` is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
-    the slice is a copy of part of the original string.
+    taking a slice returns a copy of part of the original string.
 
 ~~~
 atom_name = 'sodium'
@@ -228,7 +227,7 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > y = swap   # 3.0          # 1.0          # 1.0           #
 > > ~~~
 > > {: .output}
-> > 
+> >
 > > These three lines exchange the values in `x` and `y` using the `swap`
 > > variable for temporary storage. This is a fairly common programming idiom.
 >{: .solution}
@@ -284,8 +283,8 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > > TypeError: 'int' object is not subscriptable
 > > ~~~
 > > {: .error}
-> > 
-> > 
+> >
+> >
 > > ~~~
 > > a = str(123)
 > > print(a[1])
@@ -337,20 +336,31 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 
 > ## Slicing concepts
 >
-> 1.  What does `thing[low:high]` do?
-> 2.  What does `thing[low:]` (without a value after the colon) do?
-> 3.  What does `thing[:high]` (without a value before the colon) do?
-> 4.  What does `thing[:]` (just a colon) do?
-> 5.  What does `thing[number:some-negative-number]` do?
-> 6.  What happens when you choose a `high` value which is out of range (i.e., try `atom_name[0:15]`)?
+> Given the following string:
+>
+> ~~~
+> species_name = "Acacia buxifolia"
+> ~~~
+> {: .language-python}
+>
+> What would these expressions return?
+>
+> 1.  `species_name[2:8]`
+> 2.  `species_name[11:]` (without a value after the colon)
+> 3.  `species_name[:4]` (without a value before the colon)
+> 4.  `species_name[:]` (just a colon)
+> 5.  `species_name[11:-3]`
+> 6.  `species_name[-5:-3]`
+> 7.  What happens when you choose a `stop` value which is out of range? (i.e., try `species_name[0:20]` or `species_name[:103]`)
 >
 > > ## Solutions
 > >
-> > 1. `thing[low:high]` returns a slice from `low` to the value before `high`.
-> > 2. `thing[low:]` returns a slice from `low` all the way to the end of `thing`.
-> > 3. `thing[:high]` returns a slice from the beginning of `thing` to the value before `high`.
-> > 4. `thing[:]` returns all of `thing`.
-> > 5. `thing[number:some-negative-number]` returns a slice from `number` to `some-negative-number` values from the end of `thing`.
-> > 6. If a part of the slice is out of range, the operation does not fail. `atom_name[0:15]` gives the same result as `atom_name[0:]`.
+> > 1.  `species_name[2:8]` returns the substring `'acia b'`
+> > 2.  `species_name[11:]` returns the substring `'folia'`, from position 11 until the end
+> > 3.  `species_name[:4]` returns the substring `'Acac'`, from the start up to but not including position 4
+> > 4.  `species_name[:]` returns the entire string `'Acacia buxifolia'`
+> > 5.  `species_name[11:-3]` returns the substring `'fo'`, from the 11th position to the third last position
+> > 6.  `species_name[-5:-3]` also returns the substring `'fo'`, from the fifth last position to the third last
+> > 7.  If a part of the slice is out of range, the operation does not fail. `species_name[0:20]` gives the same result as `species_name[0:]`, and `species_name[:103]` gives the same result as `species_name[:]`
 > {: .solution}
 {: .challenge}

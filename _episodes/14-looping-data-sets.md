@@ -150,6 +150,10 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > > print('smallest file has', fewest, 'records')
 > > ~~~
 > > {: .language-python}
+> > You might have chosen to initialize the `fewest` variable with a number greater than the numbers
+> > you're dealing with, but that could lead to trouble if you reuse the code with bigger numbers.
+> > Python lets you use positive infinity, which will work no matter how big your numbers are.
+> > What other special strings does the [`float` function][float-function] recognize?
 > {: .solution}
 {: .challenge}
 
@@ -203,6 +207,7 @@ data/gapminder_gdp_oceania.csv 10039.59564
 > function!
 {: .callout}
 
+[float-function]: https://docs.python.org/3/library/functions.html#float
 [pathlib-module]: https://docs.python.org/3/library/pathlib.html
 [shape-method]: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.shape.html
 [split-method]: https://docs.python.org/3/library/stdtypes.html#str.split

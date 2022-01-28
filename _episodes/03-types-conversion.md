@@ -192,10 +192,10 @@ three squared is 9.0
 *   This does **not** happen in programming languages.
 
 ~~~
-first = 1
-second = 5 * first
-first = 2
-print('first is', first, 'and second is', second)
+variable_one = 1
+variable_two = 5 * variable_one
+variable_one = 2
+print('first is', variable_one, 'and second is', variable_two)
 ~~~
 {: .language-python}
 ~~~
@@ -427,9 +427,9 @@ first is 2 and second is 5
 > as `val.real` and `val.imag`.
 >
 > ~~~
-> complex = 6 + 2j
-> print(complex.real)
-> print(complex.imag)
+> a_complex_number = 6 + 2j
+> print(a_complex_number.real)
+> print(a_complex_number.imag)
 > ~~~
 > {: .language-python}
 >
@@ -441,7 +441,7 @@ first is 2 and second is 5
 >
 >
 > 1.  Why do you think Python uses `j` instead of `i` for the imaginary part?
-> 2.  What do you expect `1+2j + 3` to produce?
+> 2.  What do you expect `1 + 2j + 3` to produce?
 > 3.  What do you expect `4j` to be?  What about `4 j` or `4 + j`?
 > 
 > > ## Solution
