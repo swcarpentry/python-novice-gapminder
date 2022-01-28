@@ -149,14 +149,13 @@ h
     single character.
 *   An item in a list is called an element. Whenever we treat a string as if it
     were a list, the string's elements are its individual characters.
-*   A slice is a part of a string (or, more generally, any list-like thing).
-*   We take a slice by using `[start:stop]`, where `start` is replaced with the
-    index of the first element we want and `stop` is replaced with the index of
-    the element just after the last element we want.
-*   Mathematically, you might say that a slice selects `[start:stop)`.
+*   A slice is a part of a string (or, more generally, a part of any list-like thing).
+*   We take a slice with the notation `[start:stop]`, where `start` is the integer
+    index of the first element we want and `stop` is the integer index of
+    the element _just after_ the last element we want.
 *   The difference between `stop` and `start` is the slice's length.
 *   Taking a slice does not change the contents of the original string. Instead,
-    the slice is a copy of part of the original string.
+    taking a slice returns a copy of part of the original string.
 
 ~~~
 atom_name = 'sodium'
@@ -247,18 +246,21 @@ print(ewr_422_yY, 'is', flabadab, 'years old')
 > ~~~
 > {: .language-python}
 > > ## Solution
-> >
 > > ~~~
-> > 'left'
+> > print(position)
+> > ~~~
+> > {: .language-python}
+> > ~~~
+> > left
 > > ~~~
 > > {: .output}
 > >
->> The `initial` variable is assigned the value `'left'`.
+> > The `initial` variable is assigned the value `'left'`.
 > > In the second line, the `position` variable also receives
->> the string value `'left'`. In third line, the `initial` variable is given the
->> value `'right'`, but the `position` variable retains its string value
->> of `'left'`.
->{: .solution}
+> > the string value `'left'`. In third line, the `initial` variable is given the
+> > value `'right'`, but the `position` variable retains its string value
+> > of `'left'`.
+> {: .solution}
 {: .challenge}
 
 > ## Challenge
