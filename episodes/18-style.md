@@ -167,8 +167,8 @@ average(values)
 >     for j in range(len(s)):
 >         left = j-1
 >         right = (j+1)%len(s)
->         if s[left]==s[right]: new += '-'
->         else: new += '*'
+>         if s[left]==s[right]: new = new + '-'
+>         else: new = new + '*'
 >     s=''.join(new)
 >     print(s)
 >     i += 1
@@ -197,9 +197,9 @@ average(values)
 > >             left = j-1
 > >             right = (j+1) % input_string_length  # ensure right index wraps around
 > >             if old[left] == old[right]:
-> >                 new += '-'
+> >                 new = new + '-'
 > >             else:
-> >                 new += '*'
+> >                 new = new + '*'
 > >         print(new)
 > >         # store new string as old
 > >         old = new     

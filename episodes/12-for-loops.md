@@ -322,7 +322,7 @@ print(total)
 > cumulative.append(total)
 > for number in data:
 > cumulative = []
-> total += number
+> total = total + number
 > total = 0
 > print(cumulative)
 > data = [1,2,2,5]
@@ -334,7 +334,7 @@ print(total)
 > > data = [1,2,2,5]
 > > cumulative = []
 > > for number in data:
-> >     total += number
+> >     total = total + number
 > >     cumulative.append(total)
 > > print(cumulative)
 > > ~~~
