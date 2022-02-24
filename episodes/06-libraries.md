@@ -164,12 +164,12 @@ cos(pi) is -1.0
 >
 > > ## Solution
 > >
-> > The [random module][randommod] seems like it could help you.
+> > The [random module][randommod] seems like it could help.
 > >
 > > The string has 11 characters, each having a positional index from 0 to 10.
-> > You could use either `random.randrange` or `random.randint` functions
-> > to get a random integer between 0 and
-> > 10, and then pick out the character at that position:
+> > You could use the [`random.randrange`](https://docs.python.org/3/library/random.html#random.randrange)
+> > or [`random.randint`](https://docs.python.org/3/library/random.html#random.randint) functions
+> > to get a random integer between 0 and 10, and then select the `bases` character at that index:
 > >
 > > ~~~
 > > from random import randrange
@@ -188,8 +188,8 @@ cos(pi) is -1.0
 > > ~~~
 > > {: .language-python}
 > >
-> > Perhaps you found the `random.sample` function? It allows for slightly
-> > less typing:
+> > Perhaps you found the [`random.sample`](https://docs.python.org/3/library/random.html#random.sample) function? 
+> > It allows for slightly less typing but might be a bit harder to understand just by reading:
 > >
 > > ~~~
 > > from random import sample
@@ -201,7 +201,8 @@ cos(pi) is -1.0
 > > Note that this function returns a list of values. We will learn about
 > > lists in [episode 11]({{ page.root }}/11-lists/).
 > > 
-> > One last option you may have encountered is the `random.choice` function:
+> > The simplest and shortest solution is the [`random.choice`](https://docs.python.org/3/library/random.html#random.choice) 
+> > function that does exactly what we want:
 > > 
 > > ~~~
 > > from random import choice
