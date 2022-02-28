@@ -21,10 +21,9 @@ keypoints:
 - "Markdown does most of what HTML does."
 ---
 
-Many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
+To run Python, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop. There are other ways of running code and many software developers will often use an integrated development environment (IDE), like PyCharm, or a text editor, like Visual Studio Code, to create and edit their Python programs and either the IDE or the command line to execute them. Compared to these other alternatives, JupyterLab will let us run Python interactively so that the result of a command is returned after its execution.
 
-This has several advantages:
+JupyterLab has several other handy features:
   *   You can easily type, edit, and copy and paste blocks of code.
   *   Tab complete allows you to easily access the names of things you are using
       and learn more about them.
