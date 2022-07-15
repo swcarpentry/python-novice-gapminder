@@ -56,7 +56,7 @@ print(data.iloc[0, 0])
 
 ## Use `DataFrame.loc[..., ...]` to select values by their (entry) label.
 
-*   Can specify location by row name analogously to 2D version of dictionary keys.
+*   Can specify location by row and/or column name.
 
 ~~~
 print(data.loc["Albania", "gdpPercap_1952"])
