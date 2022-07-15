@@ -257,7 +257,7 @@ split themselves according to their GDP.
 ~~~
 mask_higher = data > data.mean()
 wealth_score = mask_higher.aggregate('sum', axis=1) / len(data.columns)
-wealth_score
+print(wealth_score)
 ~~~
 {: .language-python}
 ~~~
@@ -300,7 +300,7 @@ Finally, for each group in the `wealth_score` table, we sum their (financial) co
 across the years surveyed using chained methods:
 
 ~~~
-data.groupby(wealth_score).sum()
+print(data.groupby(wealth_score).sum())
 ~~~
 {: .language-python}
 ~~~
