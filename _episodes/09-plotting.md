@@ -324,8 +324,8 @@ data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
 > * call the `savefig` class method from that variable.
 >
 > ~~~
-> fig = plt.gcf() # get current figure
 > data.plot(kind='bar')
+> fig = plt.gcf() # get current figure
 > fig.savefig('my_figure.png')
 > ~~~
 > {: .language-python}
