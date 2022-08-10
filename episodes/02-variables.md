@@ -22,6 +22,13 @@ keypoints:
 ## Use variables to store values.
 
 *   **Variables** are names for values.
+*   Variable names
+    * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
+    * cannot start with a digit
+    * are **case sensitive** (age, Age and AGE are three different variables)
+* The name should also be meaningful so you or another programmer know what it is
+* Variable names that start with underscores like `__alistairs_real_age` have a special meaning
+    so we won't do that until we understand the convention.
 *   In Python the `=` symbol assigns the value on the right to the name on the left.
 *   The variable is created when a value is assigned to it.
 *   Here, Python assigns an age to a variable `age`
@@ -33,12 +40,7 @@ keypoints:
     ~~~
     {: .language-python}
 
-*   Variable names
-    * can **only** contain letters, digits, and underscore `_` (typically used to separate words in long variable names)
-    * cannot start with a digit
-    * are **case sensitive** (age, Age and AGE are three different variables)
-*   Variable names that start with underscores like `__alistairs_real_age` have a special meaning
-    so we won't do that until we understand the convention.
+
 
 ## Use `print` to display values.
 
