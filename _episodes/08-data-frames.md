@@ -56,7 +56,7 @@ print(data.iloc[0, 0])
 
 ## Use `DataFrame.loc[..., ...]` to select values by their (entry) label.
 
-*   Can specify location by row name analogously to 2D version of dictionary keys.
+*   Can specify location by row and/or column name.
 
 ~~~
 print(data.loc["Albania", "gdpPercap_1952"])
@@ -257,7 +257,7 @@ split themselves according to their GDP.
 ~~~
 mask_higher = data > data.mean()
 wealth_score = mask_higher.aggregate('sum', axis=1) / len(data.columns)
-wealth_score
+print(wealth_score)
 ~~~
 {: .language-python}
 ~~~
@@ -300,7 +300,7 @@ Finally, for each group in the `wealth_score` table, we sum their (financial) co
 across the years surveyed using chained methods:
 
 ~~~
-data.groupby(wealth_score).sum()
+print(data.groupby(wealth_score).sum())
 ~~~
 {: .language-python}
 ~~~
