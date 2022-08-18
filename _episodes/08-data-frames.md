@@ -551,7 +551,7 @@ print(data.groupby(wealth_score).sum())
 > >
 > > # by name
 > > data.T["row_name"] # as a Series
-> > data.T[["row_name"]].T as a DataFrame
+> > data.T[["row_name"]].T # as a DataFrame
 > >
 > > # by index
 > > data.iloc[row_index]   # as a Series
