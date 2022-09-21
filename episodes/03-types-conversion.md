@@ -203,9 +203,9 @@ first is 2 and second is 5
 ~~~
 {: .output}
 
-*   The computer reads the value of `first` when doing the multiplication,
-    creates a new value, and assigns it to `second`.
-*   After that, `second` does not remember where it came from.
+*   The computer reads the value of `variable_one` when doing the multiplication,
+    creates a new value, and assigns it to `variable_two`.
+*   After that, `variable_two` does not remember where it came from, so it's value does not automatically change when variable_one changes.
 
 > ## Fractions
 >
