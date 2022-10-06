@@ -44,6 +44,16 @@ def print_greeting():
 ~~~
 {: .language-python}
 
+~~~
+# Instead of writing print commands number of times in the above function (lines: 40-43), use '''''' quotes with single print statement
+def print_greeting():
+    print('''Hello!
+    The weather is nice today
+    Right?''')
+#Calling the function
+print_greeting()
+~~~
+
 ## Defining a function does not run it.
 
 *   Defining a function does not run it.
