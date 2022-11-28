@@ -194,7 +194,7 @@ plt.scatter(gdp_australia, gdp_nz)
 
 ![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
 
-We can see the same data frame reflected over its main diagonal by writing rows as columns (i.e., transposing) and add axes labels with the `x=` and `y=`  arguments:
+We can see the same data frame reflected over its main diagonal by writing rows as columns (i.e., transposing), and also add axes labels with the `x=` and `y=`  arguments:
 ~~~
 data.T.plot.scatter(x='Australia', y='New Zealand')
 ~~~
