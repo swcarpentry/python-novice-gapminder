@@ -1,32 +1,33 @@
 ---
-title: "Plotting"
-teaching: 15
-exercises: 15
-questions:
+Title: "Plotting"
+Teaching: 15
+Exercises: 15
+Questions:
 - "How can I plot my data?"
 - "How can I save my plot for publishing?"
-objectives:
+Objectives:
 - "Create a time series plot showing a single data set."
-- "Create a scatter plot showing relationship between two data sets."
-keypoints:
-- "[`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python."
-- "Plot data directly from a Pandas dataframe."
+- "Create a scatter plot showing the relationship between two data sets."
+Keypoints:
+- "[`Matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python"
+- "Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)."
 - "Select and transform data, then plot it."
-- "Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options."
-- "Can plot many sets of data together."
+- "Several plot styles are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options."
+- "Can plot many data sets together."
 ---
-## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
-*   Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot).
-*   The Jupyter Notebook will render plots inline by default.
+## Matplotlib is the most widely used scientific plotting library in Python
 
+* Commonly used Python library called [`matplotlib.pyplot`](https://matplotlib.org/stable/tutorials/introductory/pyplot.html) - here imported as 'plt'.
+* The Jupyter Notebook will render plots inline by default.
 ~~~
 import matplotlib.pyplot as plt
 ~~~
 {: .language-python}
 
-*   Simple plots are then (fairly) simple to create.
-
+* Simple plots are _fairly_ simple to create. 
+* For example, using the variables 'time' and 'position' and `plt.plot`.
+* We can also add labels to the X and Y axes with `plt.xlabel` and `plt.ylabel`, respectively.
 ~~~
 time = [0, 1, 2, 3]
 position = [0, 100, 200, 300]
@@ -39,57 +40,68 @@ plt.ylabel('Position (km)')
 
 ![Simple Position-Time Plot](../fig/9_simple_position_time_plot.svg)
 
-> ## Display All Open Figures
+> ### Display all (open) figures
 > 
-> In our Jupyter Notebook example, running the cell should generate the figure directly below the code. 
-> The figure is also included in the Notebook document for future viewing.
-> However, other Python environments like an interactive Python session started from a terminal 
-> or a Python script executed via the command line require an additional command to display the figure.
->
-> Instruct `matplotlib` to show a figure:
+> * In our Jupyter Notebook example, running the cell will generate the figure directly below the code. 
+> * The figure is also included in the Jupyter Notebook document for future viewing.
+> * However, other Python environments like an interactive Python session started from a terminal, or a Python script executed via the command line, require an additional command to display the figure.
+
+> To instruct Matplotlib to show a figure directly below the code, run the following command:
 > ~~~
 > plt.show()
 > ~~~
 > {: .language-python}
 >
-> This command can also be used within a Notebook - for instance, to display multiple figures
-> if several are created by a single cell.
+> `plt.show()` can also be used in a Jupyter Notebook - for instance, to display multiple figures if several are created by running a single cell.
 >
 {: .callout}
 
-## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
+## Select and plot data directly from a Pandas dataframe
 
-*   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
-*   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot).
-*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
-
+* We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html) - the Pandas library is here imported as 'pd'.
+* Pandas implicitly uses Matplotlib.
 ~~~
 import pandas as pd
+~~~
+{: .language-python}
 
+But first we need to import our data set. We use the the`index_col` parameter here to make Pandas use the column 'country' as the row labels of our dataframe.
+~~~
 data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
+~~~
+{: .language-python}
 
-# Extract year from last 4 characters of each column name
-# The current column names are structured as 'gdpPercap_(year)', 
-# so we want to keep the (year) part only for clarity when plotting GDP vs. years
-# To do this we use strip(), which removes from the string the characters stated in the argument
-# This method works on strings, so we call str before strip()
-
+Before plotting, we need to convert the data types of the column headings from strings into integers, since these will represent numerical values.
+> ### Data extraction
+> For clarity, we need to extract the year from the last four characters of each column name. The current column names are structured as 'gdpPercap_(year)'. 
+> 
+> * Since we want to plot GDP vs. years, we use `strip()`. This removes the characters stated in the argument - here 'gdpPercap_', from the string .
+> 
+> * This method works on strings, so we call `str` before `strip()`.
+~~~
 years = data.columns.str.strip('gdpPercap_')
+~~~
+{: .language-python}
 
-# Convert year values to integers, saving results back to dataframe
-
+Now we can convert years values into integers and save the transformed values (i.e., integers rather than strings) back to our dataframe. We do all of this at once with the following command:
+~~~
 data.columns = years.astype(int)
+~~~
+{: .language-python}
 
+Finally, we can select subsets of the data by specifying the variable we want to plot. For instance, we can plot data only from Australia by using `data.loc`:
+~~~
 data.loc['Australia'].plot()
 ~~~
 {: .language-python}
 
 ![GDP plot for Australia](../fig/9_gdp_australia.svg)
-## Select and transform data, then plot it.
 
-*   By default, [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot) plots with the rows as the X axis.
-*   We can transpose the data in order to plot multiple series.
+## Transform data before plotting
 
+* By default, `DataFrame.plot` plots rows in the X axis - here our variable 'years'. 
+* We can [transpose](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html) the data in order to plot multiple series - here the countries 'Australia' and 'New Zealand'.
+* **Note**: The property `T` is an accessor to the method `transpose()`.
 ~~~
 data.T.plot()
 plt.ylabel('GDP per capita')
@@ -97,10 +109,11 @@ plt.ylabel('GDP per capita')
 {: .language-python}
 
 ![GDP plot for Australia and New Zealand](../fig/9_gdp_australia_nz.svg)
-## Many styles of plot are available.
 
-*   For example, do a bar plot using a fancier style.
+## Several plot styles are available
 
+* As an exampel, we can create a bar plot with a _fancier_ style, using [`plt.style.use`](https://matplotlib.org/stable/gallery/style_sheets/ggplot.html). 
+* Here we use the `ggplot` argument, which adjusts the style to emulate [ggplot](https://r-graph-gallery.com/ggplot2-package.html) - an open-source data visualization package for the statistical programming language R, now known as _ggplot2_.
 ~~~
 plt.style.use('ggplot')
 data.T.plot(kind='bar')
@@ -110,85 +123,95 @@ plt.ylabel('GDP per capita')
 
 ![GDP barplot for Australia](../fig/9_gdp_bar.svg)
 
-## Data can also be plotted by calling the `matplotlib` `plot` function directly.
-*   The command is `plt.plot(x, y)`
-*   The color and format of markers can also be specified as an additional optional argument e.g., `b-` is a blue line, `g--` is a green dashed line.
+## The Matplotlib plot function
 
-## Get Australia data from dataframe
+* Data can also be plotted by calling the Matplotlib plot function directly with the command `plt.plot(x, y)`.
+* The color and format of markers can also be changed using additional optional arguments - e.g., `b-` is a blue line, `g--` is a green dashed line.
 
+As we learned earlier, we can plot a subset of the data (Australia) by using `data.loc`:
 ~~~
 years = data.columns
 gdp_australia = data.loc['Australia']
+~~~
+{: .language-python}
 
+And then create a plot with this subset and `plt.plot`:
+~~~
 plt.plot(years, gdp_australia, 'g--')
 ~~~
 {: .language-python}
 
 ![GDP formatted plot for Australia](../fig/9_gdp_australia_formatted.svg)
 
-## Can plot many sets of data together.
+## Multiple data sets
 
+* We can plot many sets of data together.
+* This is useful to find the relationship between two data sets.
+
+In this example, we will select two countries' worth of data - namely, Australia (data set 'gdp_australia') and New Zealand (data set 'gdp_nz').
 ~~~
-# Select two countries' worth of data.
 gdp_australia = data.loc['Australia']
 gdp_nz = data.loc['New Zealand']
+~~~
+{: .language-python}
 
-# Plot with differently-colored markers.
+## Color-coded markers and labels
+
+* We can generate a plot with differently-colored markers using the otions `b-` and `g-`. 
+* Matplotlib can recognise a wide variety of [colors and formats](https://matplotlib.org/stable/tutorials/colors/colors.html).
+* Here we also added labels to each of our data sets with the `label=` argument.
+~~~
 plt.plot(years, gdp_australia, 'b-', label='Australia')
 plt.plot(years, gdp_nz, 'g-', label='New Zealand')
+~~~
+{: .language-python}
 
-# Create legend.
+## Legends
+
+* Often when plotting multiple datasets on the same figure it is desirable to have a legend describing the data.
+* Once we have labeled each data set that is being plotted (as we did previously), we can create and format a figure legend.
+
+To Instruct Matplotlib to create the legend, we run the `plt.legend()` command. By default Matplotlib will attempt to place the legend in a suitable position, but you can change it with the `loc=` argument:
+~~~
 plt.legend(loc='upper left')
 plt.xlabel('Year')
 plt.ylabel('GDP per capita ($)')
 ~~~
 {: .language-python}
 
-> ## Adding a Legend
-> 
-> Often when plotting multiple datasets on the same figure it is desirable to have 
-> a legend describing the data.
->
-> This can be done in `matplotlib` in two stages:
-> 
-> * Provide a label for each dataset in the figure:
->
-> ~~~
-> plt.plot(years, gdp_australia, label='Australia')
-> plt.plot(years, gdp_nz, label='New Zealand')
-> ~~~
-> {: .language-python}
->
-> * Instruct `matplotlib` to create the legend.
->
-> ~~~
-> plt.legend()
-> ~~~
-> {: .language-python}
->
-> By default matplotlib will attempt to place the legend in a suitable position. If you
-> would rather specify a position this can be done with the `loc=` argument, e.g to place
-> the legend in the upper left corner of the plot, specify `loc='upper left'`
->
-{: .callout}
-
-
 ![GDP formatted plot for Australia and New Zealand](../fig/9_gdp_australia_nz_formatted.svg)
-*   Plot a scatter plot correlating the GDP of Australia and New Zealand
-*   Use either `plt.scatter` or `DataFrame.plot.scatter`
 
+## Scatter plots
+
+* Scatter plots are useful to show how much one variable is affected by another, and therefore are great to present the relationship between two sets of data (e.g., to visually assess correlation).
+* We can create scatter plots using either Matplotlib (with the `plt.scatter` command) or Pandas (with the `DataFrame.plot.scatter` command).
+
+To evaluate the relationship between the GDP of Australia and New Zealand, we can create a scatter plot with our previously selected data sets:
 ~~~
 plt.scatter(gdp_australia, gdp_nz)
 ~~~
 {: .language-python}
 
 ![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
+
+We can see the same data frame reflected over its main diagonal by writing rows as columns (i.e., transposing) and add axes labels with the `x=` and `y=`  arguments:
 ~~~
-data.T.plot.scatter(x = 'Australia', y = 'New Zealand')
+data.T.plot.scatter(x='Australia', y='New Zealand')
 ~~~
 {: .language-python}
 
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
+
+
+
+
+
+
+
+
+
+
+#########################################################START HERE!!!!
 
 > ## Minima and Maxima
 >
