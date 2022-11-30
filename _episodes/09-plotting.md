@@ -355,7 +355,7 @@ fig.savefig('my_figure.png') # saves the figure to my_figure.png
 
 Whenever you are generating plots for a manuscript or a presentation, there are a few things you can do to ensure that everyone can understand your plots. Here are a few tips to get you started on making _accessible_ plots:
 
-* **Text size:** always make sure that your text is large enough to read. To change your font size, use the `fontsize=` parameter in the `xlabel=`, `ylabel=`, `title=`, and `legend=` arguments. To increase the text size of the numbers on your axes, adjuts the `labelsize` parameter of your [tick_properties]( https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html). 
+* **Text size:** always make sure that your text is large enough to read. To change your font size, use the `fontsize=` parameter in the `xlabel=`, `ylabel=`, `title=`, and `legend=` arguments. To increase the text size of the numbers on your axes, adjuts the `labelsize` parameter of your [tick properties]( https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html). 
 
 * **Elements size:** Similarly, you should make your graph elements easy to see. Use `s=` to increase the size of your scatter plot markers and `linewidth=` to increase the sizes of your plot lines.
 
