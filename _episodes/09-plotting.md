@@ -194,7 +194,7 @@ plt.scatter(gdp_australia, gdp_nz)
 
 ![GDP correlation using plt.scatter](../fig/9_gdp_correlation_plt.svg)
 
-We can see the same data frame reflected over its main diagonal by writing rows as columns (i.e., transposing), and also add axes labels with the `x=` and `y=`  arguments:
+We can see the same data frame reflected over its main diagonal by writing rows as columns (i.e., transposing), and also add axes labels with the `x=` and `y=` arguments:
 ~~~
 data.T.plot.scatter(x='Australia', y='New Zealand')
 ~~~
@@ -202,23 +202,11 @@ data.T.plot.scatter(x='Australia', y='New Zealand')
 
 ![GDP correlation using data.T.plot.scatter](../fig/9_gdp_correlation_data.svg)
 
-
-
-
-
-
-
-
-
-
-#########################################################START HERE!!!!
-
-> ## Minima and Maxima
+> ## Challenge: minima and maxima
 >
-> Fill in the blanks below to plot the minimum GDP per capita over time
-> for all the countries in Europe.
-> Modify it again to plot the maximum GDP per capita over time for Europe.
->
+> 1. Fill in the blanks below to plot the minimum GDP per capita over time for all European countries.
+> 2. Modify it again to plot the maximum GDP per capita over time for all European countries.
+> 3. Generate a plot with both the minimum and maximum GDP per capita over time for all European countries.
 > ~~~
 > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > data_europe.____.plot(label='min')
@@ -229,7 +217,26 @@ data.T.plot.scatter(x='Australia', y='New Zealand')
 > {: .language-python}
 >
 > > ## Solution
-> >
+> > 
+> > 1. **Minimum** GDP per capita over time (Europe).
+> > ~~~
+> > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> > data_europe.min().plot(label='min')
+> > plt.legend(loc='best')
+> > plt.xticks(rotation=90)
+> > ~~~
+> > {: .language-python}
+> > 
+> > 2. **Maximum** GDP per capita over time (Europe).
+> > ~~~
+> > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+> > data_europe.max().plot(label='max')
+> > plt.legend(loc='best')
+> > plt.xticks(rotation=90)
+> > ~~~
+> > {: .language-python}
+> > 
+> > 3. **Minimum and maximum** GDP per capita over time (Europe).
 > > ~~~
 > > data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 > > data_europe.min().plot(label='min')
@@ -238,19 +245,19 @@ data.T.plot.scatter(x='Australia', y='New Zealand')
 > > plt.xticks(rotation=90)
 > > ~~~
 > > {: .language-python}
+> > 
 > > ![Minima Maxima Solution](../fig/9_minima_maxima_solution.png)
+> >
 > {: .solution}
 {: .challenge}
-
-> ## Correlations
 >
-> Modify the example in the notes to create a scatter plot showing
-> the relationship between the minimum and maximum GDP per capita
-> among the countries in Asia for each year in the data set.
-> What relationship do you see (if any)?
+> ## Challenge: correlations
 >
+> 1. Modify the example in the notes to create a scatter plot showing the relationship between the minimum and maximum GDP per capita among Asian countries for each year in the data set.
+> 2. Is there a relationship between the two variables? If so, which one is it?
 >
 > > ## Solution
+> > 1. **Minimum vs. maximum** GDP per capita over time (Asia).
 > > ~~~
 > > data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > > data_asia.describe().T.plot(kind='scatter', x='min', y='max')
@@ -259,13 +266,15 @@ data.T.plot.scatter(x='Australia', y='New Zealand')
 > >
 > > ![Correlations Solution 1](../fig/9_correlations_solution1.svg)
 > >
-> > No particular correlations can be seen between the minimum and maximum gdp values
-> > year on year. It seems the fortunes of asian countries do not rise and fall together.
+> > 2. Relationship between variables: no particular correlations can be seen between the minimum and maximum GDP per capita values over time. 
+> > It seems the fortunes of asian countries do not rise and fall together!
+> >
 > {: .solution}
+{: .challenge}
 >
-> You might note that the variability in the maximum is much higher than
-> that of the minimum.  Take a look at the maximum and the max indexes:
->
+> You may have noticed that the variability in the maximum variable is much higher than that of the minimum. 
+> Let's take a look at the [maximum](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmax.html) and [minimum](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.idxmin.html) indexes - also known as the `idxmax()` and `idxmin()` methods in Pandas:
+> 
 > ~~~
 > data_asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col='country')
 > data_asia.max().plot()
@@ -273,91 +282,83 @@ data.T.plot.scatter(x='Australia', y='New Zealand')
 > print(data_asia.idxmin())
 > ~~~
 > {: .language-python}
-> > ## Solution
-> > ![Correlations Solution 2](../fig/9_correlations_solution2.png)
-> >
-> > Seems the variability in this value is due to a sharp drop after 1972.
-> > Some geopolitics at play perhaps? Given the dominance of oil producing countries,
-> > maybe the Brent crude index would make an interesting comparison?
-> > Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
-> > more notably.
-> {: .solution}
-{: .challenge}
-
-> ## More Correlations
 >
-> This short program creates a plot showing
-> the correlation between GDP and life expectancy for 2007,
-> normalizing marker size by population:
+> ![Correlations Solution 2](../fig/9_correlations_solution2.png)
+> 
+> By using these methods, we now know that the variability in the maximim GPD per capita variable is due to a sharp drop after 1972 (the minimum index), which suggests a potential influence of geopolitics given the dominance of oil producing countries. The Brent crude index would have been an interesting comparison. Notably, whilst Myanmar consistently has the lowest GPD per capita, the country with the highest GPD per capita varies over time.
+>
+> ## Challenge: more about correlations
+>
+> The code below creates a plot showing the correlation between GDP and life expectancy in 2007, normalising the marker size by population:
 >
 > ~~~
 > data_all = pd.read_csv('data/gapminder_all.csv', index_col='country')
-> data_all.plot(kind='scatter', x='gdpPercap_2007', y='lifeExp_2007',
+> 
+> data_all.plot(kind='scatter', 
+>               x='gdpPercap_2007', 
+>               y='lifeExp_2007', 
 >               s=data_all['pop_2007']/1e6)
 > ~~~
 > {: .language-python}
 >
-> Using online help and other resources,
-> explain what each argument to `plot` does.
->
-> > ## Solution
 > > ![More Correlations Solution](../fig/9_more_correlations_solution.svg)
+> 
+> Using the `help()` function and other resources, explain what each of the arguments does to `.plot`.
+> 
+> **Hint**: A good place to start is the documentation for the plot function, which you can see by running `help(data_all.plot)`.
+> 
+> > ## Solution
+> > * `kind=` determines the kind of plot to be created - here a scatter plot.
 > >
-> > A good place to look is the documentation for the plot function -
-> > help(data_all.plot).
+> > * `x=` and `y=` determine what data will be placed on the X and Y axes of the plot - here the columns 'gdpPercap_2007' and 'gdpPercap_2007'; these could also be column indexes.
 > >
-> > kind - As seen already this determines the kind of plot to be drawn.
-> >
-> > x and y - A column name or index that determines what data will be
-> > placed on the x and y axes of the plot
-> >
-> > s - Details for this can be found in the documentation of plt.scatter.
-> > A single number or one value for each data point. Determines the size
-> > of the plotted points.
+> > * `s=` determines the size of the plotted points or markers, with a single number or one value for each data point. 
+> > You can see further details in the documentation for the `plt.scatter()` function.
+> > 
 > {: .solution}
 {: .challenge}
 
-> ## Saving your plot to a file
-> 
-> If you are satisfied with the plot you see you may want to save it to a file,
-> perhaps to include it in a publication. There is a function in the
-> matplotlib.pyplot module that accomplishes this:
-> [savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html).
-> Calling this function, e.g. with
-> ~~~
-> plt.savefig('my_figure.png')
-> ~~~
-> {: .language-python}
-> 
-> will save the current figure to the file `my_figure.png`. The file format
-> will automatically be deduced from the file name extension (other formats
-> are pdf, ps, eps and svg).
->
-> Note that functions in `plt` refer to a global figure variable
-> and after a figure has been displayed to the screen (e.g. with `plt.show`) 
-> matplotlib will make this  variable refer to a new empty figure.
-> Therefore, make sure you call `plt.savefig` before the plot is displayed to
-> the screen, otherwise you may find a file with an empty plot.
->
-> When using dataframes, data is often generated and plotted to screen in one line,
-> and `plt.savefig` seems not to be a possible approach.
-> One possibility to save the figure to file is then to
->
-> * save a reference to the current figure in a local variable (with `plt.gcf`) 
-> * call the `savefig` class method from that variable.
->
-> ~~~
-> data.plot(kind='bar')
-> fig = plt.gcf() # get current figure
-> fig.savefig('my_figure.png')
-> ~~~
-> {: .language-python}
+## Saving your plot
+
+If you are satisfied with the plot(s) you have created, you may want to save it to a file for later use; perhaps to include it in a publication you are currently working on. The [savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html) function in the Matplotlib.pyplot module accomplishes this:
+ 
+~~~
+plt.savefig('my_figure.png')
+~~~
+{: .language-python}
+ 
+Calling this function will save the current figure to the file `my_figure.png`. 
+ 
+The file format will automatically be deduced from the file name extension - here .png. Other formats like .pdf, .ps, .eps and .svg are also available.
+
+**Notes:** 
+* Functions in `plt` refer to a global figure variable and after a figure has been displayed to the screen (e.g., with `plt.show`). 
+Matplotlib will make this variable refer to a new empty figure if `plt.savefig()`is called after `plt.show()`, and this can also be problematic when building plots in a Jupyter Notebook (as we are here). 
+Therefore, make sure you call `plt.savefig` _before_ the plot is displayed to the screen, otherwise you may find a file with an empty plot.
+
+* When using Pandas dataframes, the data is often generated and plotted to the screen in one line, and `plt.savefig` seems not to be a possible approach.
+
+One possibility to save the figure to a file is then to:
+  
+i) save a reference to the current figure in a local variable with `plt.gcf`., and
+
+ii) call the `savefig` class method from that variable.
+~~~
+data.plot(kind='bar')
+fig = plt.gcf() # gets the current figure
+fig.savefig('my_figure.png') # saves the figure to my_figure.png
+~~~
+{: .language-python}
 {: .callout}
 
-> ## Making your plots accessible
->
-> Whenever you are generating plots to go into a paper or a presentation, there are a few things you can do to make sure that everyone can understand your plots.
-> * Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.tick_params.html) to increase the text size of the numbers on your axes.
-> * Similarly, you should make your graph elements easy to see. Use `s` to increase the size of your scatterplot markers and `linewidth` to increase the sizes of your plot lines.
-> * Using color (and nothing else) to distinguish between different plot elements will make your plots unreadable to anyone who is colorblind, or who happens to have a black-and-white office printer. For lines, the `linestyle` parameter lets you use different types of lines. For scatterplots, `marker` lets you change the shape of your points. If you're unsure about your colors, you can use [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) or [Color Oracle](https://colororacle.org/) to simulate what your plots would look like to those with colorblindness.
+## Tips for making your plots accessible
+
+Whenever you are generating plots for a manuscript or a presentation, there are a few things you can do to ensure that everyone can understand your plots. Here are a few tips to get you started on making _accessible_ plots:
+
+* **Text size:** always make sure that your text is large enough to read. To change your font size, use the `fontsize=` parameter in the `xlabel=`, `ylabel=`, `title=`, and `legend=` arguments. To increase the text size of the numbers on your axes, adjuts the `labelsize` parameter of your [tick_properties]( https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html). 
+
+* **Elements size:** Similarly, you should make your graph elements easy to see. Use `s=` to increase the size of your scatter plot markers and `linewidth=` to increase the sizes of your plot lines.
+
+* **Color:** Using color (and nothing else) to distinguish between different plot elements will make your plots unreadable to anyone who is colorblind, or who happens to have a black-and-white office printer. For lines, the `linestyle=` parameter allows you to use different types of lines. For scatter plots, `marker=` allows you to change the shape of your data points. Moreover, if you are unsure about your colors, you can use [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) or [Color Oracle](https://colororacle.org/) to simulate what your plots would look like to those with colorblindness.
+
 {: .callout}
