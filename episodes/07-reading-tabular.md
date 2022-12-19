@@ -18,7 +18,7 @@ keypoints:
 ---
 ## Use the Pandas library to do statistics on tabular data.
 
-*   Pandas is a widely-used Python library for statistics, particularly on tabular data.
+*   [Pandas](https://pandas.pydata.org/) is a widely-used Python library for statistics, particularly on tabular data.
 *   Borrows many features from R's dataframes.
     *   A 2-dimensional table whose columns have names
         and potentially have different data types.
