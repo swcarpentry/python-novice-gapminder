@@ -71,10 +71,10 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 # Extract year from last 4 characters of each column name
 # The current column names are structured as 'gdpPercap_(year)', 
 # so we want to keep the (year) part only for clarity when plotting GDP vs. years
-# To do this we use strip(), which removes from the string the characters stated in the argument
-# This method works on strings, so we call str before strip()
+# To do this we use replace(), which removes from the string the characters stated in the argument
+# This method works on strings, so we call str before replace()
 
-years = data.columns.str.strip('gdpPercap_')
+years = data.columns.str.replace('gdpPercap_', '')
 
 # Convert year values to integers, saving results back to dataframe
 
