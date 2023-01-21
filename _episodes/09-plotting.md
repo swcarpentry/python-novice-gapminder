@@ -61,7 +61,10 @@ plt.ylabel('Position (km)')
 
 *   We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 *   This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot).
-*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values
+*   Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values,
+    using [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html) to remove the `gpdPercap_`
+	prefix and then [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html)
+	to convert the series of string values (`['1952', '1957', ..., '2007']`) to a series of integers: `[1925, 1957, ..., 2007]`.
 
 ~~~
 import pandas as pd
@@ -71,10 +74,10 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 # Extract year from last 4 characters of each column name
 # The current column names are structured as 'gdpPercap_(year)', 
 # so we want to keep the (year) part only for clarity when plotting GDP vs. years
-# To do this we use strip(), which removes from the string the characters stated in the argument
-# This method works on strings, so we call str before strip()
+# To do this we use replace(), which removes from the string the characters stated in the argument
+# This method works on strings, so we use replace() from Pandas Series.str vectorized string functions
 
-years = data.columns.str.strip('gdpPercap_')
+years = data.columns.str.replace('gdpPercap_', '')
 
 # Convert year values to integers, saving results back to dataframe
 
