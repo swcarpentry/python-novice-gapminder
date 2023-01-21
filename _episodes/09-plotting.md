@@ -75,7 +75,7 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 # The current column names are structured as 'gdpPercap_(year)', 
 # so we want to keep the (year) part only for clarity when plotting GDP vs. years
 # To do this we use replace(), which removes from the string the characters stated in the argument
-# This method works on strings, so we access the str attribute before replace()
+# This method works on strings, so we use replace() from Pandas Series.str vectorized string functions
 
 years = data.columns.str.replace('gdpPercap_', '')
 
