@@ -12,12 +12,12 @@ objectives:
 keypoints:
 - "Every value has a type."
 - "Use the built-in function `type` to find the type of a value."
-- "Types control what operations can be done on values."
 - "Strings can be added and multiplied."
 - "Strings have a length (but numbers don't)."
-- "Must convert numbers to strings or vice versa when operating on them."
 - "Can mix integers and floats freely in operations."
 - "Variables only change value when something is assigned to them."
+- "Types control what operations can be done on values."
+- "Must convert numbers to strings or vice versa when operating on them."
 ---
 ## Every value has a type.
 
@@ -52,33 +52,6 @@ print(type(fitness))
 <class 'str'>
 ~~~
 {: .output}
-
-## Types control what operations (or methods) can be performed on a given value.
-
-*   A value's type determines what the program can do to it.
-
-~~~
-print(5 - 3)
-~~~
-{: .language-python}
-~~~
-2
-~~~
-{: .output}
-
-~~~
-print('hello' - 'h')
-~~~
-{: .language-python}
-~~~
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-2-67f5626a1e07> in <module>()
-----> 1 print('hello' - 'h')
-
-TypeError: unsupported operand type(s) for -: 'str' and 'str'
-~~~
-{: .error}
 
 ## You can use the "+" and "*" operators on strings.
 
@@ -136,38 +109,6 @@ TypeError: object of type 'int' has no len()
 ~~~
 {: .error}
 
-## <a name='convert-numbers-and-strings'></a> Must convert numbers to strings or vice versa when operating on them.
-
-*   Cannot add numbers and strings.
-
-~~~
-print(1 + '2')
-~~~
-{: .language-python}
-~~~
----------------------------------------------------------------------------
-TypeError                                 Traceback (most recent call last)
-<ipython-input-4-fe4f54a023c6> in <module>()
-----> 1 print(1 + '2')
-
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
-~~~
-{: .error}
-
-*   Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
-*   Some types can be converted to other types by using the type name as a function.
-
-~~~
-print(1 + int('2'))
-print(str(1) + '2')
-~~~
-{: .language-python}
-~~~
-3
-12
-~~~
-{: .output}
-
 ## Can mix integers and floats freely in operations.
 
 *   Integers and floating-point numbers can be mixed in arithmetic.
@@ -207,6 +148,65 @@ first is 2 and second is 5
     creates a new value, and assigns it to `variable_two`.
 *   Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
     does not automatically change when `variable_one` changes.
+
+## Types control what operations (or methods) can be performed on a given value.
+
+*   A value's type determines what the program can do to it.
+
+~~~
+print(5 - 3)
+~~~
+{: .language-python}
+~~~
+2
+~~~
+{: .output}
+
+~~~
+print('hello' - 'h')
+~~~
+{: .language-python}
+~~~
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-2-67f5626a1e07> in <module>()
+----> 1 print('hello' - 'h')
+
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+~~~
+{: .error}
+
+## <a name='convert-numbers-and-strings'></a> Must convert numbers to strings or vice versa when operating on them.
+
+*   Cannot add numbers and strings.
+
+~~~
+print(1 + '2')
+~~~
+{: .language-python}
+~~~
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-4-fe4f54a023c6> in <module>()
+----> 1 print(1 + '2')
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+~~~
+{: .error}
+
+*   Not allowed because it's ambiguous: should `1 + '2'` be `3` or `'12'`?
+*   Some types can be converted to other types by using the type name as a function.
+
+~~~
+print(1 + int('2'))
+print(str(1) + '2')
+~~~
+{: .language-python}
+~~~
+3
+12
+~~~
+{: .output}
 
 > ## Fractions
 >
