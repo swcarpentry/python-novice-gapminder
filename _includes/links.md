@@ -19,7 +19,6 @@
 [jekyll-windows]: http://jekyll-windows.juthilo.com/
 [jekyll]: https://jekyllrb.com/
 [jupyter]: https://jupyter.org/
-[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [kramdown]: https://kramdown.gettalong.org/
 [lc-lessons]: https://librarycarpentry.org/lessons/
 [lesson-aio]: {{ relative_root_path }}{% link aio.md %}
