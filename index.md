@@ -22,7 +22,7 @@ as well (e.g., repl.it, Anaconda).
 >
 > 3. Learners must get the gapminder data before class starts:
 >    please download and unzip the file 
->    [python-novice-gapminder-data.zip]({{page.root}}/files/python-novice-gapminder-data.zip).
+>    [python-novice-gapminder-data.zip]({{ site.baseurl }}/files/python-novice-gapminder-data.zip).
 >
 >    Please see [the setup instructions][lesson-setup]
 >    for more details.
