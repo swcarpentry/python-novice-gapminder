@@ -133,7 +133,7 @@ Age in three years: 45
 *   Use the position's index in square brackets to get the character at that
     position.
 
-![A line of Python code, print(atom_name[0]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.](../fig/2_indexing.svg)
+![A line of Python code, print(atom_name[0]), demonstrates that using the zero index will output just the initial letter, in this case 'h' for helium.]({{ site.baseurl }}/fig/2_indexing.svg)
 
 ~~~
 atom_name = 'helium'
