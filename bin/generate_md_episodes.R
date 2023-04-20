@@ -39,7 +39,6 @@ generate_md_episodes <- function() {
   }
 
   vapply(dest_md, add_no_edit_comment, character(1))
-
 }
 
 generate_md_episodes()
