@@ -21,10 +21,12 @@ keypoints:
 - "Markdown does most of what HTML does."
 ---
 
-Many software developers will often use an integrated development environment (IDE) or a 
-text editor to create and edit their Python programs which can be executed through the IDE or command line directly. While this is a common approach, we are going to use the [Jupyter Notebook][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop.
+To run Python, we are going to use [Jupyter Notebooks][jupyter] via [JupyterLab][jupyterlab] for the remainder of this workshop. Jupyter notebooks are common in data science and visualization and serve as a convenient common-demoninator experience for running Python code interactively where we can easily view and share the results of our Python code.
 
-This has several advantages:
+There are other ways of editing, managing, and running code. Software developers often use an integrated development environment (IDE) like [PyCharm](https://www.jetbrains.com/pycharm/) or [Visual Studio Code](https://code.visualstudio.com/), or text editors like Vim or Emacs, to create and edit their Python programs. After editing and saving your Python programs you can execute those programs within the IDE itself or directly on the command line. In contrast, Jupyter notebooks let us execute and view the results of our Python code immediately within the notebook.
+
+JupyterLab has several other handy features:
+
   *   You can easily type, edit, and copy and paste blocks of code.
   *   Tab complete allows you to easily access the names of things you are using
       and learn more about them.
@@ -37,23 +39,23 @@ Each notebook contains one or more cells that contain code, text, or images.
 
 ## Getting Started with JupyterLab
 
-JupyterLab is an application with a web-based user interface from [Project Jupyter][jupyter] that 
+JupyterLab is an application server with a web user interface from [Project Jupyter][jupyter] that 
 enables one to work with documents and activities such as Jupyter notebooks, text editors, terminals,
 and even custom components in a flexible, integrated, and extensible manner. JupyterLab requires a
 reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
 Explorer versions 9 and below are *not* supported.
 
 JupyterLab is included as part of the Anaconda Python distribution. If you have not already
-installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}{% link
-setup.md %})
+installed the Anaconda Python distribution, see [the setup instructions]({{ page.root }}{% link setup.md %})
 for installation instructions.
 
-Even though JupyterLab is a web-based application, JupyterLab runs locally on your machine and 
-does not require an internet connection.
-*   The JupyterLab server sends messages to your web browser.
-*   The JupyterLab server does the work and the web browser renders the result.
-*   You will type code into the browser and see the result when the web page talks to the 
-    JupyterLab server.
+In this lesson we will run JupyterLab locally on our own machines so it will not require an internet connection besides
+the initial connection to download and install Anaconda and JupyterLab
+
+*   Start the JupyterLab server on your machine
+*   Use a web browser to open a special localhost URL that connects to your JupyterLab server
+*   The JupyterLab server does the work and the web browser renders the result
+*   Type code into the browser and see the results after your JupyterLab server has finished executing your code
 
 > ## JupyterLab? What about Jupyter notebooks?
 > 
@@ -108,7 +110,7 @@ Here is a screenshot of an Anaconda Navigator page similar to the one that shoul
 or Windows.
 
 <p align='center'>
-  <img alt="Anaconda Navigator landing page" src="../fig/0_anaconda_navigator_landing_page.png" width="750"/>
+  <img alt="Anaconda Navigator landing page" src="{{ site.baseurl }}/fig/0_anaconda_navigator_landing_page.png" width="750"/>
 </p>
 
 And here is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your 
