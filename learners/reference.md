@@ -1,17 +1,19 @@
 ---
-layout: reference
+title: 'Reference'
 ---
 
 ## Reference
 
-## [Running and Quitting]({{ page.root }}/01-run-quit/)
+## [Running and Quitting](episodes/01-run-quit.md)
+
 - Python files have the `.py` extension.
 - Can be written in a text file or a [Jupyter Notebook][jupyter].
   - Jupyter notebooks have the extension `.ipynb`
   - Jupyter notebooks can be opened from [Anaconda](https://docs.continuum.io/anaconda/install) or through the command line by entering `$ jupyter notebook`
     - Markdown and HTML are allowed in markdown cells for documenting code.
 
-## [Variables and Assignment]({{ page.root }}/02-variables/)
+## [Variables and Assignment](episodes/02-variables.md)
+
 - Variables are stored using `=`.
   - Strings are defined in quotations `'...'`.
   - Integers and floating point numbers are defined without quotations.
@@ -27,7 +29,8 @@ layout: reference
     - `stop` is the index of the element after the last desired element.
 - Use `len(...)` to find the length of a variable or string.
 
-## [Data Types and Type Conversion]({{ page.root }}/03-types-conversion/)
+## [Data Types and Type Conversion](episodes/03-types-conversion.md)
+
 - Each value has a type. This controls what can be done with it.
   - `int` represents an integer
   - `float` represents a floating point number.
@@ -40,7 +43,8 @@ layout: reference
     - Convert string to integer: `int(...)`.
     - Convert integer to string: `str(...)`.
 
-## [Built-in Functions and Help]({{ page.root }}/04-built-in/)
+## [Built-in Functions and Help](episodes/04-built-in.md)
+
 - To add a comment, place `#` before the thing you do not with to be executed.
 - Commonly used built-in functions:
   - `min()` finds the smallest value.
@@ -49,7 +53,8 @@ layout: reference
   - `help()` displays documentation for the function in the parenthesis.
     - Other ways to get help include holding down `shift` and pressing `tab` in Jupyter Notebooks.
 
-## [Libraries]({{ page.root }}/06-libraries/)
+## [Libraries](episodes/06-libraries.md)
+
 - Importing a library:
   - Use `import ...` to load a library.
   - Refer to this library by using `module_name.thing_name`.
@@ -60,7 +65,8 @@ layout: reference
   - Example of referring to an item with the module's name: `math.cos(math.pi)`.
 - Importing the plotting library as an alias: `import matplotlib as mpl`
 
-## [Reading Tabular Data into DataFrames]({{ page.root }}/07-reading-tabular/)
+## [Reading Tabular Data into DataFrames](episodes/07-reading-tabular.md)
+
 - Use the pandas library to do statistics on tabular data. Load with `import pandas as pd`.
   - To read in a csv: `pd.read_csv()`, including the path name in the parenthesis.
     - To specify a column's values should be used as row headings: `pd.read_csv('path', index_col='column name')`, where path and column name should be replaced with the relevant values.
@@ -69,7 +75,8 @@ layout: reference
 - Use `DataFrame.T` to transpose a DataFrame.
 - Use `DataFrame.describe` to get summary statistics about your data.
 
-## [Pandas DataFrames]({{ page.root }}/08-data-frames/)
+## [Pandas DataFrames](episodes/08-data-frames.md)
+
 - Select data using `[i,j]`
   - To select by entry position: `DataFrame.iloc[..., ...]`
     - This is inclusive of everything except the final index.
@@ -82,7 +89,8 @@ layout: reference
   - We can then use this to select values.
 - To use a select-apply-combine operation we use `data.apply(lambda x: x > x.mean())` where `mean()` can be any operation the user would like to be applied to x.
 
-## [Plotting]({{ page.root }}/09-plotting/)
+## [Plotting](episodes/09-plotting.md)
+
 - The most widely used plotting library is `matplotlib`.
   - Usually imported using `import matplotlib.pyplot as plt`.
   - To plot we use the command `plt.plot(time, position)`.
@@ -92,16 +100,16 @@ layout: reference
 - Pandas DataFrames can be used to plot by using `DataFrame.plot()`. Any operations that can be used on a DataFrame can be applied while plotting.
   - To plot a bar plot `data.plot(kind='bar')`
 
-~~~
+```python
 import matplotlib.puplot as plot
 plt.plot(time, position, label='label')
 plt.xlabel('x axis label')
 plt.ylabel('y axis label')
 plt.legend()
-~~~
-{: .language-python}
+```
 
-## [Lists]({{ page.root }}/11-lists/)
+## [Lists](episodes/11-lists.md)
+
 - Defined within `[...]` and separated by `,`.
   - An empty list can be created by using `[]`.
 - Can use `len(...)` to determine how many values are in a list.
@@ -111,20 +119,21 @@ plt.legend()
 - To combine two lists use `list_name_1.extend(list_name_2)`.
 - To remove an item from a list use `del list_name[index]`.
 
-## [For Loops]({{ page.root }}/12-for-loops/)
+## [For Loops](episodes/12-for-loops.md)
+
 - Start a for loop with `for number in [1, 2, 3]:`, with the following lines indented.
   - `[1, 2, 3]` is considered the collection.
   - `number` is the loop variable.
   - The action following the collection is the body.
 - To iterate over a sequence of numbers use `range(start, end)`
 
-~~~
+```python
 for number in range(0,5):
     print(number)
-~~~
-{: .language-python}
+```
 
-## [Conditionals]({{ page.root }}/13-conditionals/)
+## [Conditionals](episodes/13-conditionals.md)
+
 - Defined similarly to a loop, using `if variable conditional value:`.
   - For example, `if variable > 5:`.
 - Use `elif:` for additional tests.
@@ -138,7 +147,7 @@ for number in range(0,5):
   - `>` greater than.
   - `<` less than.
 
-~~~
+```python
 for m in [3, 6, 7, 2, 8]:
     if m > 5:
         print(m, 'is large')
@@ -146,10 +155,10 @@ for m in [3, 6, 7, 2, 8]:
         print(m, 'is 5')
     else:
         print(m, 'is small')
-~~~
-{: .language-python}
+```
 
-## [Looping Over Data Sets]({{ page.root }}/14-looping-data-sets/)
+## [Looping Over Data Sets](episodes/14-looping-data-sets.md)
+
 - Use a for loop: `for filename in [file1, file2]:`
 - To find a set of files using a pattern use `glob.glob`
   - Must import first using `import glob`.
@@ -158,31 +167,32 @@ for m in [3, 6, 7, 2, 8]:
     - For example: `glob.glob(*.txt)` will find all files that end with `.txt` in the current directory.
 - Combine these by writing a loop using: `for filename in glob.glob(*.txt):`
 
-~~~
+```python
 for filename in glob.glob(*.txt):
   data = pd.read_csv(filename)
-~~~
-{: .language-python}
+```
 
-## [Writing Functions]({{ page.root }}/16-writing-functions/)
+## [Writing Functions](episodes/16-writing-functions.md)
+
 - Define a function using `def function_name(parameters):`. Replace `parameters` with the variables to use when the function is executed.
 - Run by using `function_name(parameters)`.
 - To return a result to the caller use `return ...` in the function.
 
-~~~
+```python
 def add_numbers(a, b):
     result = a + b
     return result
 
 add_numbers(1, 4)
-~~~
-{: .language-python}
+```
 
-## [Variable Scope]({{ page.root }}/17-scope/)
+## [Variable Scope](episodes/17-scope.md)
+
 - A local variable is defined in a function and can only be seen and used within that function.
 - A global variable is defined outside of a function and can be seen or used anywhere after definition.
 
-## [Programming Style]({{ page.root }}/18-style/)
+## [Programming Style](episodes/18-style.md)
+
 - Document your code.
 - Use clear and meaningful variable names.
 - Follow [the PEP8 style guide](https://www.python.org/dev/peps/pep-0008) when setting up your code.
@@ -191,7 +201,7 @@ add_numbers(1, 4)
 
 ## Glossary
 
-{:auto_ids}
+{:auto\_ids}
 Arguments
 :     Values passed to functions.
 
@@ -246,4 +256,6 @@ Substring
 Variables
 :     Names for values.
 
-{% include links.md %}
+
+
+
