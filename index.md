@@ -3,8 +3,6 @@ permalink: index.html
 site: sandpaper::sandpaper_site
 ---
 
-{% include gh\_variables.html %}
-
 This lesson is an introduction to programming in Python 3 for people with little or no previous
 programming experience. It uses plotting as its motivating example and is designed to be used in
 both [Data Carpentry][dc-lessons] and [Software Carpentry][swc-lessons] workshops.
@@ -23,14 +21,11 @@ as well (e.g., repl.it, Anaconda).
 
 3. Learners must get the gapminder data before class starts:
   please download and unzip the file
-  [python-novice-gapminder-data.zip](files/python-novice-gapminder-data.zip).
-  
-  Please see [the setup instructions][lesson-setup]
-  for more details.
-  
+  [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
+
+Please see [the setup instructions][lesson-setup]
+for more details.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-
 
 
