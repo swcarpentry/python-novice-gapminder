@@ -23,7 +23,7 @@ as well (e.g., repl.it, Anaconda).
   please download and unzip the file
   [python-novice-gapminder-data.zip](episodes/files/python-novice-gapminder-data.zip).
 
-Please see [the setup instructions][lesson-setup]
+Please see [the setup instructions](learners/setup.md)
 for more details.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::

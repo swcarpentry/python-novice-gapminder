@@ -17,6 +17,7 @@
 [jekyll-windows]: https://jekyll-windows.juthilo.com/
 [jekyll]: https://jekyllrb.com/
 [jupyter]: https://jupyter.org/
+[jupyterlab]: https://jupyterlab.readthedocs.io/en/stable/
 [kramdown]: https://kramdown.gettalong.org/
 [lc-lessons]: https://librarycarpentry.org/lessons/
 [lesson-example]: https://carpentries.github.io/lesson-example/
