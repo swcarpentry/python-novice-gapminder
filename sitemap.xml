@@ -70,6 +70,9 @@
     <loc>https://swcarpentry.github.io/python-novice-gapminder/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/aio.html</loc>
+  </url>
+  <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/design.html</loc>
   </url>
   <url>
@@ -77,6 +80,9 @@
   </url>
   <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/exercises.html</loc>
+  </url>
+  <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/images.html</loc>
   </url>
   <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/index.html</loc>
@@ -151,6 +157,9 @@
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/aio.html</loc>
+  </url>
+  <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/design.html</loc>
   </url>
   <url>
@@ -160,13 +169,28 @@
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/exercises.html</loc>
   </url>
   <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/index.html</loc>
+  </url>
+  <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/profiles.html</loc>
   </url>
   <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor/reference.html</loc>
+  </url>
+  <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/instructor-notes.html</loc>
+  </url>
+  <url>
+    <loc>https://swcarpentry.github.io/python-novice-gapminder/key-points.html</loc>
   </url>
   <url>
     <loc>https://swcarpentry.github.io/python-novice-gapminder/profiles.html</loc>
