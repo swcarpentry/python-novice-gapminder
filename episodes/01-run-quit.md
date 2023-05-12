@@ -156,7 +156,7 @@ menus are included by default.
 The JupyterLab [docs](https://jupyterlab.readthedocs.io/en/stable/user/documents_kernels.html)
 define kernels as "separate processes started by the server that runs your code in different programming languages and environments."
 When we open a Jupyter Notebook, that starts a kernel - a process - that is going to run the code.
-In this lesson, we'll be using the Jupyter ipython kernel which lets us run Python 3 code interactively.
+In this lesson, we'll be using the IPython kernel (ipykernel), which lets us run Python 3 code in Jupyter.
 
 Using other Jupyter [kernels for other programming languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels) would let us
 write and execute code in other programming languages in the same JupyterLab interface, like R, Java, Julia, Ruby, JavaScript, Fortran,
