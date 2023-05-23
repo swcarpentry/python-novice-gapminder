@@ -442,12 +442,12 @@ most widely used scientific plotting library in Python.<a class="anchor" aria-la
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time (hr)'</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Position (km)'</span>)</span></code></pre>
 </div>
-<figure><img src="fig/9_simple_position_time_plot.svg" alt="Simple Position-Time Plot" class="figure mx-auto d-block"></figure><div id="callout1" class="callout callout">
+<figure><img src="fig/9_simple_position_time_plot.svg" alt="Simple Position-Time Plot" class="figure mx-auto d-block"></figure><div id="display-all-open-figures" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="display-all-open-figures" class="callout-inner">
-<h3 class="callout-title">Display All Open Figures<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">Display All Open Figures<a class="anchor" aria-label="anchor" href="#display-all-open-figures"></a>
 </h3>
 <div class="callout-content">
 <p>In our Jupyter Notebook example, running the cell should generate the
@@ -557,12 +557,12 @@ additional optional argument e.g., <code>b-</code> is a blue line,
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita ($)'</span>)</span></code></pre>
 </div>
-<div id="callout2" class="callout callout">
+<div id="adding-a-legend" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="adding-a-legend" class="callout-inner">
-<h3 class="callout-title">Adding a Legend<a class="anchor" aria-label="anchor" href="#callout2"></a>
+<h3 class="callout-title">Adding a Legend<a class="anchor" aria-label="anchor" href="#adding-a-legend"></a>
 </h3>
 <div class="callout-content">
 <p>Often when plotting multiple datasets on the same figure it is
@@ -603,12 +603,12 @@ Zealand</li>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data.T.plot.scatter(x <span class="op">=</span> <span class="st">'Australia'</span>, y <span class="op">=</span> <span class="st">'New Zealand'</span>)</span></code></pre>
 </div>
-<figure><img src="fig/9_gdp_correlation_data.svg" alt="GDP correlation using data.T.plot.scatter" class="figure mx-auto d-block"></figure><div id="challenge1" class="callout challenge">
+<figure><img src="fig/9_gdp_correlation_data.svg" alt="GDP correlation using data.T.plot.scatter" class="figure mx-auto d-block"></figure><div id="minima-and-maxima" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="minima-and-maxima" class="callout-inner">
-<h3 class="callout-title">Minima and Maxima<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Minima and Maxima<a class="anchor" aria-label="anchor" href="#minima-and-maxima"></a>
 </h3>
 <div class="callout-content">
 <p>Fill in the blanks below to plot the minimum GDP per capita over time
@@ -648,12 +648,12 @@ per capita over time for Europe.</p>
 </div>
 </div>
 </div>
-<div id="challenge2" class="callout challenge">
+<div id="correlations" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="correlations" class="callout-inner">
-<h3 class="callout-title">Correlations<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Correlations<a class="anchor" aria-label="anchor" href="#correlations"></a>
 </h3>
 <div class="callout-content">
 <p>Modify the example in the notes to create a scatter plot showing the
@@ -685,12 +685,12 @@ countries do not rise and fall together.</p>
 </div>
 </div>
 </div>
-<div id="challenge3" class="callout challenge">
+<div id="correlations" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="correlations" class="callout-inner">
-<h3 class="callout-title">Correlations<em> (continued)</em><a class="anchor" aria-label="anchor" href="#challenge3"></a>
+<h3 class="callout-title">Correlations<em> (continued)</em><a class="anchor" aria-label="anchor" href="#correlations"></a>
 </h3>
 <div class="callout-content">
 <p>You might note that the variability in the maximum is much higher
@@ -725,12 +725,12 @@ the highest gdb nation has varied more notably.</p>
 </div>
 </div>
 </div>
-<div id="challenge4" class="callout challenge">
+<div id="more-correlations" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="more-correlations" class="callout-inner">
-<h3 class="callout-title">More Correlations<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+<h3 class="callout-title">More Correlations<a class="anchor" aria-label="anchor" href="#more-correlations"></a>
 </h3>
 <div class="callout-content">
 <p>This short program creates a plot showing the correlation between GDP
@@ -769,12 +769,12 @@ Determines the size of the plotted points.</p>
 </div>
 </div>
 </div>
-<div id="callout3" class="callout callout">
+<div id="saving-your-plot-to-a-file" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="saving-your-plot-to-a-file" class="callout-inner">
-<h3 class="callout-title">Saving your plot to a file<a class="anchor" aria-label="anchor" href="#callout3"></a>
+<h3 class="callout-title">Saving your plot to a file<a class="anchor" aria-label="anchor" href="#saving-your-plot-to-a-file"></a>
 </h3>
 <div class="callout-content">
 <p>If you are satisfied with the plot you see you may want to save it to
@@ -810,12 +810,12 @@ from that variable to save the figure to file.</p>
 </div>
 </div>
 </div>
-<div id="callout4" class="callout callout">
+<div id="making-your-plots-accessible" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="making-your-plots-accessible" class="callout-inner">
-<h3 class="callout-title">Making your plots accessible<a class="anchor" aria-label="anchor" href="#callout4"></a>
+<h3 class="callout-title">Making your plots accessible<a class="anchor" aria-label="anchor" href="#making-your-plots-accessible"></a>
 </h3>
 <div class="callout-content">
 <p>Whenever you are generating plots to go into a paper or a
@@ -889,7 +889,7 @@ Gallery</a> for more options.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.17" class="external-link">sandpaper (0.11.17)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -913,7 +913,7 @@ Gallery</a> for more options.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/09-plotting.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2023-05-02",
-  "datePublished": "2023-05-18"
+  "datePublished": "2023-05-23"
 }
 
   </script><script>

@@ -473,12 +473,12 @@ output is too wide to fit the screen.</li>
 <li>Using descriptive dataframe names helps us distinguish between
 multiple dataframes so we won’t accidentally overwrite a dataframe or
 read from the wrong one.</li>
-</ul><div id="callout1" class="callout callout">
+</ul><div id="file-not-found" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="file-not-found" class="callout-inner">
-<h3 class="callout-title">File Not Found<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">File Not Found<a class="anchor" aria-label="anchor" href="#file-not-found"></a>
 </h3>
 <div class="callout-content">
 <p>Our lessons store their data files in a <code>data</code>
@@ -665,12 +665,12 @@ max      23424.766830    26997.936570    30687.754730    34435.367440</code></pr
 </div>
 <ul><li>Not particularly useful with just two records, but very helpful when
 there are thousands.</li>
-</ul><div id="challenge1" class="callout challenge">
+</ul><div id="reading-other-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="reading-other-data" class="callout-inner">
-<h3 class="callout-title">Reading Other Data<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Reading Other Data<a class="anchor" aria-label="anchor" href="#reading-other-data"></a>
 </h3>
 <div class="callout-content">
 <p>Read the data in <code>gapminder_gdp_americas.csv</code> (which
@@ -687,7 +687,7 @@ should be in the same directory as
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To read in a CSV, we use <code>pd.read_csv</code> and pass the
 filename <code>'data/gapminder_gdp_americas.csv'</code> to it. We also
@@ -705,12 +705,12 @@ method.</p>
 </div>
 </div>
 </div>
-<div id="challenge2" class="callout challenge">
+<div id="inspecting-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="inspecting-data" class="callout-inner">
-<h3 class="callout-title">Inspecting Data<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Inspecting Data<a class="anchor" aria-label="anchor" href="#inspecting-data"></a>
 </h3>
 <div class="callout-content">
 <p>After reading the data for the Americas, use
@@ -731,7 +731,7 @@ data?</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li>We can check out the first five rows of <code>data_americas</code>
 by executing <code>data_americas.head()</code> which lets us view the
@@ -830,12 +830,12 @@ of code by ‘chaining’ the commands:</p>
 </div>
 </div>
 </div>
-<div id="challenge3" class="callout challenge">
+<div id="reading-files-in-other-directories" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="reading-files-in-other-directories" class="callout-inner">
-<h3 class="callout-title">Reading Files in Other Directories<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+<h3 class="callout-title">Reading Files in Other Directories<a class="anchor" aria-label="anchor" href="#reading-files-in-other-directories"></a>
 </h3>
 <div class="callout-content">
 <p>The data for your current project is stored in a file called
@@ -864,7 +864,7 @@ of code by ‘chaining’ the commands:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We need to specify the path to the file of interest in the call to
 <code>pd.read_csv</code>. We first need to ‘jump’ out of the folder
@@ -880,12 +880,12 @@ filename `microbes.csv. The result is as follows:</p>
 </div>
 </div>
 </div>
-<div id="challenge4" class="callout challenge">
+<div id="writing-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="writing-data" class="callout-inner">
-<h3 class="callout-title">Writing Data<a class="anchor" aria-label="anchor" href="#challenge4"></a>
+<h3 class="callout-title">Writing Data<a class="anchor" aria-label="anchor" href="#writing-data"></a>
 </h3>
 <div class="callout-content">
 <p>As well as the <code>read_csv</code> function for reading data from a
@@ -904,7 +904,7 @@ can use <code>help</code> to get information on how to use
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>In order to write the DataFrame <code>data_americas</code> to a file
 called <code>processed.csv</code>, execute the following command:</p>
@@ -983,7 +983,7 @@ data.</li>
         <p>Materials licensed under <a href="../LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.17" class="external-link">sandpaper (0.11.17)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -1007,7 +1007,7 @@ data.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/07-reading-tabular.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2023-05-02",
-  "datePublished": "2023-05-18"
+  "datePublished": "2023-05-23"
 }
 
   </script><script>

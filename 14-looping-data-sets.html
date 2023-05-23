@@ -522,12 +522,12 @@ data/gapminder_gdp_oceania.csv 10039.59564</code></pre>
 data set.</li>
 <li>But note that the minimum of the entire data set is also the minimum
 of one of the data sets, which is a nice check on correctness.</li>
-</ul><div id="challenge1" class="callout challenge">
+</ul><div id="determining-matches" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="determining-matches" class="callout-inner">
-<h3 class="callout-title">Determining Matches<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+<h3 class="callout-title">Determining Matches<a class="anchor" aria-label="anchor" href="#determining-matches"></a>
 </h3>
 <div class="callout-content">
 <p>Which of these files is <em>not</em> matched by the expression
@@ -545,19 +545,19 @@ of one of the data sets, which is a nice check on correctness.</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>1 is not matched by the glob.</p>
 </div>
 </div>
 </div>
 </div>
-<div id="challenge2" class="callout challenge">
+<div id="minimum-file-size" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="minimum-file-size" class="callout-inner">
-<h3 class="callout-title">Minimum File Size<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+<h3 class="callout-title">Minimum File Size<a class="anchor" aria-label="anchor" href="#minimum-file-size"></a>
 </h3>
 <div class="callout-content">
 <p>Modify this program so that it prints the number of records in the
@@ -586,7 +586,7 @@ data frame.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -609,12 +609,12 @@ function</a> recognize?</p>
 </div>
 </div>
 </div>
-<div id="challenge3" class="callout challenge">
+<div id="comparing-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="comparing-data" class="callout-inner">
-<h3 class="callout-title">Comparing Data<a class="anchor" aria-label="anchor" href="#challenge3"></a>
+<h3 class="callout-title">Comparing Data<a class="anchor" aria-label="anchor" href="#comparing-data"></a>
 </h3>
 <div class="callout-content">
 <p>Write a program that reads in the regional data sets and plots the
@@ -629,7 +629,7 @@ average GDP per capita for each region over time in a single chart.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>This solution builds a useful legend by using the <a href="https://docs.python.org/3/library/stdtypes.html#str.split" class="external-link">string
 <code>split</code> method</a> to extract the <code>region</code> from
@@ -656,12 +656,12 @@ the path ‘data/gapminder_gdp_a_specific_region.csv’.</p>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout callout">
+<div id="dealing-with-file-paths" class="callout callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="dealing-with-file-paths" class="callout-inner">
-<h3 class="callout-title">Dealing with File Paths<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<h3 class="callout-title">Dealing with File Paths<a class="anchor" aria-label="anchor" href="#dealing-with-file-paths"></a>
 </h3>
 <div class="callout-content">
 <p>The <a href="https://docs.python.org/3/library/pathlib.html" class="external-link"><code>pathlib</code>
@@ -738,7 +738,7 @@ files.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.11.17" class="external-link">sandpaper (0.11.17)</a>,
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.12.0" class="external-link">sandpaper (0.12.0)</a>,
         <a href="https://github.com/carpentries/pegboard" class="external-link">pegboard (0.5.3)</a>,
       and <a href="https://github.com/carpentries/varnish/tree/0.2.16" class="external-link">varnish (0.2.16)</a>.</p>
 			</div>
@@ -762,7 +762,7 @@ files.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/14-looping-data-sets.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2023-05-02",
-  "datePublished": "2023-05-18"
+  "datePublished": "2023-05-23"
 }
 
   </script><script>
