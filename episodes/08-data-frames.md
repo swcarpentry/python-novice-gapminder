@@ -234,6 +234,16 @@ max      13450.401510    16361.876470    18965.055510
 
 ## Group By: split-apply-combine
 
+::::::::::::::::::::::::::::::::::::: instructor
+Learners often struggle here, many may not work with financial data and concepts so they
+find the example concepts difficult to get their head around. The biggest problem
+though is the line generating the wealth_score, this step needs to be talked through
+throughly:
+* It uses implicit conversion between boolean and float values which 
+has not been covered in the course so far. 
+* The axis=1 argument needs to be explained clearly.
+:::::::::::::::::::::::::::::::::::::::::::::::::
+
 Pandas vectorizing methods and grouping operations are features that provide users
 much flexibility to analyse their data.
 
