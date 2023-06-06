@@ -348,14 +348,22 @@ matplotlib will make this  variable refer to a new empty figure.
 Therefore, make sure you call `plt.savefig` before the plot is displayed to
 the screen, otherwise you may find a file with an empty plot.
 
+Sometimes, some elements of the figure may get truncated when saving the figure to a file. You can find an in-depth explanation why this happens [here](https://matplotlib.org/stable/tutorials/intermediate/tight_layout_guide.html). To avoid this, we can call `plt.tight_layout` before `plt.savefig` to make sure that everything fits into the figure area.
+
+```python
+plt.tight_layout()
+plt.savefig('my_figure.png')
+```
+
 When using dataframes, data is often generated and plotted to screen in one line.
 In addition to using `plt.savefig`, we can save a reference to the current figure
-in a local variable (with `plt.gcf`) and call the `savefig` class method from
+in a local variable (with `plt.gcf`) and call the `tight_layout` and `savefig` class method from
 that variable to save the figure to file.
 
 ```python
 data.plot(kind='bar')
 fig = plt.gcf() # get current figure
+fig.tight_layout()
 fig.savefig('my_figure.png')
 ```
 
