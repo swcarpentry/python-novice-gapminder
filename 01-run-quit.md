@@ -188,6 +188,8 @@ The main work area in JupyterLab enables you to arrange documents (notebooks, te
 and other activities (terminals, code consoles, etc.) into panels of tabs that can be resized or
 subdivided. A screenshot of the default Main Work Area is provided below.
 
+If you do not see the Launcher tab, click the blue plus sign under the "File" and "Edit" menus and it will appear.
+
 <p align='center'>   <img alt="JupyterLab Main Work Area" src="fig/0_jupyterlab_main_work_area.png" width="750"/>
 </p>
 
