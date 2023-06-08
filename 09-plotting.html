@@ -384,7 +384,7 @@ most widely used scientific plotting library in Python.</li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Plotting</h1>
-        <p> Last updated on 2023-05-02 | 
+        <p> Last updated on 2023-06-08 | 
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/09-plotting.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -424,7 +424,7 @@ sets.</li>
 <a href="https://matplotlib.org/" class="external-link"><code>matplotlib</code></a> is the
 most widely used scientific plotting library in Python.<a class="anchor" aria-label="anchor" href="#matplotlib-is-the-most-widely-used-scientific-plotting-library-in-python."></a>
 </h2>
-<hr class="half-width"><ul><li>Commonly use a sub-library called <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" class="external-link"><code>matplotlib.pyplot</code></a>.</li>
+<hr class="half-width"><ul><li>Commonly use a sub-library called <a href="https://matplotlib.org/stable/tutorials/introductory/pyplot.html" class="external-link"><code>matplotlib.pyplot</code></a>.</li>
 <li>The Jupyter Notebook will render plots inline by default.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -471,7 +471,6 @@ display multiple figures if several are created by a single cell.</p>
 </h2>
 <hr class="half-width"><ul><li>We can also plot <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html" class="external-link">Pandas
 dataframes</a>.</li>
-<li>This implicitly uses <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot" class="external-link"><code>matplotlib.pyplot</code></a>.</li>
 <li>Before plotting, we convert the column headings from a
 <code>string</code> to <code>integer</code> data type, since they
 represent numerical values, using <a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html" class="external-link">str.replace()</a>
@@ -633,7 +632,7 @@ per capita over time for Europe.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -670,7 +669,7 @@ you see (if any)?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -714,7 +713,7 @@ indexes:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <figure><img src="fig/9_correlations_solution2.png" alt="Correlations Solution 2" class="figure mx-auto d-block"></figure><p>Seems the variability in this value is due to a sharp drop after
 1972. Some geopolitics at play perhaps? Given the dominance of oil
@@ -754,7 +753,7 @@ and life expectancy for 2007, normalizing marker size by population:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <figure><img src="fig/9_more_correlations_solution.svg" alt="More Correlations Solution" class="figure mx-auto d-block"></figure><p>A good place to look is the documentation for the plot function -
 help(data_all.plot).</p>
@@ -779,7 +778,7 @@ Determines the size of the plotted points.</p>
 <div class="callout-content">
 <p>If you are satisfied with the plot you see you may want to save it to
 a file, perhaps to include it in a publication. There is a function in
-the matplotlib.pyplot module that accomplishes this: <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html" class="external-link">savefig</a>.
+the matplotlib.pyplot module that accomplishes this: <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html" class="external-link">savefig</a>.
 Calling this function, e.g. with</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -823,7 +822,7 @@ presentation, there are a few things you can do to make sure that
 everyone can understand your plots.</p>
 <ul><li>Always make sure your text is large enough to read. Use the
 <code>fontsize</code> parameter in <code>xlabel</code>,
-<code>ylabel</code>, <code>title</code>, and <code>legend</code>, and <a href="https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.tick_params.html" class="external-link"><code>tick_params</code>
+<code>ylabel</code>, <code>title</code>, and <code>legend</code>, and <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html" class="external-link"><code>tick_params</code>
 with <code>labelsize</code></a> to increase the text size of the numbers
 on your axes.</li>
 <li>Similarly, you should make your graph elements easy to see. Use
@@ -912,8 +911,8 @@ Gallery</a> for more options.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/09-plotting.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/09-plotting.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2023-05-02",
-  "datePublished": "2023-06-07"
+  "dateModified": "2023-06-08",
+  "datePublished": "2023-06-08"
 }
 
   </script><script>
