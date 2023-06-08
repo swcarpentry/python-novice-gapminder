@@ -20,7 +20,7 @@ exercises: 15
 
 ## [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
 
-- Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot).
+- Commonly use a sub-library called [`matplotlib.pyplot`](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
 - The Jupyter Notebook will render plots inline by default.
 
 ```python
@@ -63,7 +63,6 @@ if several are created by a single cell.
 ## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
 
 - We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
-- This implicitly uses [`matplotlib.pyplot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html#module-matplotlib.pyplot).
 - Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values,
   using [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html) to remove the `gpdPercap_`
   prefix and then [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html)
@@ -331,7 +330,7 @@ of the plotted points.
 If you are satisfied with the plot you see you may want to save it to a file,
 perhaps to include it in a publication. There is a function in the
 matplotlib.pyplot module that accomplishes this:
-[savefig](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.savefig.html).
+[savefig](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html).
 Calling this function, e.g. with
 
 ```python
@@ -367,7 +366,7 @@ fig.savefig('my_figure.png')
 
 Whenever you are generating plots to go into a paper or a presentation, there are a few things you can do to make sure that everyone can understand your plots.
 
-- Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.tick_params.html) to increase the text size of the numbers on your axes.
+- Always make sure your text is large enough to read. Use the `fontsize` parameter in `xlabel`, `ylabel`, `title`, and `legend`, and [`tick_params` with `labelsize`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.tick_params.html) to increase the text size of the numbers on your axes.
 - Similarly, you should make your graph elements easy to see. Use `s` to increase the size of your scatterplot markers and `linewidth` to increase the sizes of your plot lines.
 - Using color (and nothing else) to distinguish between different plot elements will make your plots unreadable to anyone who is colorblind, or who happens to have a black-and-white office printer. For lines, the `linestyle` parameter lets you use different types of lines. For scatterplots, `marker` lets you change the shape of your points. If you're unsure about your colors, you can use [Coblis](https://www.color-blindness.com/coblis-color-blindness-simulator/) or [Color Oracle](https://colororacle.org/) to simulate what your plots would look like to those with colorblindness.
   
