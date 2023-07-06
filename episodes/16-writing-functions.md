@@ -458,8 +458,8 @@ Assume that the following code has been executed:
 ```python
 import pandas as pd
 
-df = pd.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
-japan = df.loc['Japan']
+asia = pd.read_csv('data/gapminder_gdp_asia.csv', index_col=0)
+japan = asia.loc['Japan']
 ```
 
 1. Complete the statements below to obtain the average GDP for Japan
@@ -475,7 +475,7 @@ japan = df.loc['Japan']
   
   ```python
   def avg_gdp_in_decade(country, continent, year):
-      df = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
+      countries = pd.read_csv('data/gapminder_gdp_'+___+'.csv',delimiter=',',index_col=0)
       ____
       ____
       ____
@@ -504,8 +504,8 @@ japan = df.loc['Japan']
   
   ```python
   def avg_gdp_in_decade(country, continent, year):
-      df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-      c = df.loc[country]
+      countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+      c = countries.loc[country]
       gdp_decade = 'gdpPercap_' + str(year // 10)
       avg = (c.loc[gdp_decade + '2'] + c.loc[gdp_decade + '7'])/2
       return avg
@@ -515,8 +515,8 @@ japan = df.loc['Japan']
   
   ```python
   def avg_gdp_in_decade(country, continent, year):
-      df = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
-      c = df.loc[country]
+      countries = pd.read_csv('data/gapminder_gdp_' + continent + '.csv', index_col=0)
+      c = countries.loc[country]
       gdp_decade = 'gdpPercap_' + str(year // 10)
       total = 0.0
       num_years = 0
