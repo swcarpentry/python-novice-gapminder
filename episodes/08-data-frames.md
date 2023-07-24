@@ -333,7 +333,7 @@ and the Gapminder GDP data for Europe has been loaded:
 ```python
 import pandas as pd
 
-europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
+data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
 ```
 
 Write an expression to find the Per Capita GDP of Serbia in 2007.
@@ -345,7 +345,7 @@ Write an expression to find the Per Capita GDP of Serbia in 2007.
 The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap\_2007"):
 
 ```python
-print(europe.loc['Serbia', 'gdpPercap_2007'])
+print(data_europe.loc['Serbia', 'gdpPercap_2007'])
 ```
 
 The output is
@@ -367,8 +367,8 @@ The output is
   what rule governs what is included (or not) in numerical slices and named slices in Pandas?
 
 ```python
-print(europe.iloc[0:2, 0:2])
-print(europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
+print(data_europe.iloc[0:2, 0:2])
+print(data_europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
 ```
 
 :::::::::::::::  solution
