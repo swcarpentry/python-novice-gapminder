@@ -128,6 +128,11 @@ def overall_max(sequences):
 
 ## Document This
 
+Comments are useful for people to understand how the code works,
+when reading or editing existing code.
+Docstrings are more targeted to the end user of a library of code,
+and can be accessed using `help`.
+
 Turn the comment in the following function into a docstring
 and check that `help` displays it properly.
 
