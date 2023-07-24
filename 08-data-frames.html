@@ -388,7 +388,7 @@ a named slice.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Pandas DataFrames</h1>
-        <p> Last updated on 2023-06-05 | 
+        <p> Last updated on 2023-07-24 | 
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/08-data-frames.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -761,7 +761,7 @@ GDP data for Europe has been loaded:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
 </div>
 <p>Write an expression to find the Per Capita GDP of Serbia in 2007.</p>
 </div>
@@ -774,14 +774,14 @@ GDP data for Europe has been loaded:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The selection can be done by using the labels for both the row
 (“Serbia”) and the column (“gdpPercap_2007”):</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.loc[<span class="st">'Serbia'</span>, <span class="st">'gdpPercap_2007'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Serbia'</span>, <span class="st">'gdpPercap_2007'</span>])</span></code></pre>
 </div>
 <p>The output is</p>
 <div class="codewrapper">
@@ -807,8 +807,8 @@ numerical slices and named slices in Pandas?</li>
 </ol><div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.iloc[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>])</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.loc[<span class="st">'Albania'</span>:<span class="st">'Belgium'</span>, <span class="st">'gdpPercap_1952'</span>:<span class="st">'gdpPercap_1962'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.iloc[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>])</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Albania'</span>:<span class="st">'Belgium'</span>, <span class="st">'gdpPercap_1952'</span>:<span class="st">'gdpPercap_1962'</span>])</span></code></pre>
 </div>
 </div>
 </div>
@@ -820,7 +820,7 @@ numerical slices and named slices in Pandas?</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>No, they do not produce the same output! The output of the first
 statement is:</p>
@@ -881,7 +881,7 @@ in <code>first</code>, <code>second</code>, etc.?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Let’s go through this piece of code line by line.</p>
 <div class="codewrapper sourceCode" id="cb32">
@@ -965,7 +965,7 @@ these methods?</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>For each column in <code>data</code>, <code>idxmin</code> will return
 the index value corresponding to each column’s minimum;
@@ -1003,7 +1003,7 @@ capita for that country in 1952.</li>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>1:</p>
 <div class="codewrapper sourceCode" id="cb38">
@@ -1080,7 +1080,7 @@ DataFrame:</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>1. Access a single column:</p>
 <div class="codewrapper sourceCode" id="cb42">
@@ -1269,7 +1269,7 @@ European countries for each year that information is available.</p>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Among many choices, <code>dir()</code> lists the
 <code>median()</code> function as a possibility. Thus,</p>
@@ -1369,8 +1369,8 @@ a named slice.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/08-data-frames.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/08-data-frames.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2023-06-05",
-  "datePublished": "2023-07-18"
+  "dateModified": "2023-07-24",
+  "datePublished": "2023-07-24"
 }
 
   </script><script>

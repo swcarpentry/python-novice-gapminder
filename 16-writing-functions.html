@@ -384,7 +384,7 @@ parameters.</a></li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Writing Functions</h1>
-        <p> Last updated on 2023-05-02 | 
+        <p> Last updated on 2023-07-24 | 
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/16-writing-functions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -1002,8 +1002,8 @@ error conditions. Sample output could be
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>japan <span class="op">=</span> df.loc[<span class="st">'Japan'</span>]</span></code></pre>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>data_asia <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_asia.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>japan <span class="op">=</span> data_asia.loc[<span class="st">'Japan'</span>]</span></code></pre>
 </div>
 <ol style="list-style-type: decimal"><li>Complete the statements below to obtain the average GDP for Japan
 across the years reported for the 1980s.</li>
@@ -1019,7 +1019,7 @@ across the years reported for the 1980s.</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avg_gdp_in_decade(country, continent, year):</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span><span class="op">+</span>___<span class="op">+</span><span class="st">'.csv'</span>,delimiter<span class="op">=</span><span class="st">','</span>,index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    data_countries <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span><span class="op">+</span>___<span class="op">+</span><span class="st">'.csv'</span>,delimiter<span class="op">=</span><span class="st">','</span>,index_col<span class="op">=</span><span class="dv">0</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>    ____</span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>    ____</span>
 <span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    ____</span>
@@ -1056,8 +1056,8 @@ computed with:</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avg_gdp_in_decade(country, continent, year):</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span> <span class="op">+</span> continent <span class="op">+</span> <span class="st">'.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> df.loc[country]</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>    data_countries <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span> <span class="op">+</span> continent <span class="op">+</span> <span class="st">'.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> data_countries.loc[country]</span>
 <span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    gdp_decade <span class="op">=</span> <span class="st">'gdpPercap_'</span> <span class="op">+</span> <span class="bu">str</span>(year <span class="op">//</span> <span class="dv">10</span>)</span>
 <span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> (c.loc[gdp_decade <span class="op">+</span> <span class="st">'2'</span>] <span class="op">+</span> c.loc[gdp_decade <span class="op">+</span> <span class="st">'7'</span>])<span class="op">/</span><span class="dv">2</span></span>
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> avg</span></code></pre>
@@ -1068,8 +1068,8 @@ them:</li>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> avg_gdp_in_decade(country, continent, year):</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span> <span class="op">+</span> continent <span class="op">+</span> <span class="st">'.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> df.loc[country]</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>    data_countries <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_'</span> <span class="op">+</span> continent <span class="op">+</span> <span class="st">'.csv'</span>, index_col<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> data_countries.loc[country]</span>
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    gdp_decade <span class="op">=</span> <span class="st">'gdpPercap_'</span> <span class="op">+</span> <span class="bu">str</span>(year <span class="op">//</span> <span class="dv">10</span>)</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="fl">0.0</span></span>
 <span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    num_years <span class="op">=</span> <span class="dv">0</span></span>
@@ -1308,8 +1308,8 @@ parameters.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/16-writing-functions.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/16-writing-functions.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2023-05-02",
-  "datePublished": "2023-07-18"
+  "dateModified": "2023-07-24",
+  "datePublished": "2023-07-24"
 }
 
   </script><script>
