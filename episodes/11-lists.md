@@ -104,8 +104,9 @@ primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
 primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
-Note that while `extend` maintains the "flat" structure of the list, appending a list to a list makes the result
-two-dimensional - the last element in `primes` is a list, not an integer.
+Note that while `extend` maintains the "flat" structure of the list, appending a list to a list means
+the last element in `primes` will itself be a list, not an integer. Lists can contain values of any
+type; therefore, lists of lists are possible.
 
 ## Use `del` to remove items from a list entirely.
 
