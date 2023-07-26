@@ -128,10 +128,13 @@ def overall_max(sequences):
 
 ## Document This
 
-Comments are useful for people to understand how the code works,
-when reading or editing existing code.
-Docstrings are more targeted to the end user of a library of code,
-and can be accessed using `help`.
+Use comments to describe and help others understand potentially unintuitive
+sections or individual lines of code. They are especially useful to whoever
+may need to edit your code in the future, including yourself.
+
+Use docstrings to document the expected inputs and outputs of a method or class,
+its purpose, assumptions and intended behavior. Docstrings are displayed
+when a user invokes the builtin `help` method on your method or class.
 
 Turn the comment in the following function into a docstring
 and check that `help` displays it properly.
