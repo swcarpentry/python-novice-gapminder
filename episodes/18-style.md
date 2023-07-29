@@ -130,10 +130,10 @@ def overall_max(sequences):
 
 Use comments to describe and help others understand potentially unintuitive
 sections or individual lines of code. They are especially useful to whoever
-may need to edit your code in the future, including yourself.
+may need to understand and edit your code in the future, including yourself.
 
-Use docstrings to document the expected inputs and outputs of a method or class,
-its purpose, assumptions and intended behavior. Docstrings are displayed
+Use docstrings to document the acceptable inputs and expected outputs of a method
+or class, its purpose, assumptions and intended behavior. Docstrings are displayed
 when a user invokes the builtin `help` method on your method or class.
 
 Turn the comment in the following function into a docstring
