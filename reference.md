@@ -201,7 +201,6 @@ add_numbers(1, 4)
 
 ## Glossary
 
-{:auto\_ids}
 Arguments
 :     Values passed to functions.
 
