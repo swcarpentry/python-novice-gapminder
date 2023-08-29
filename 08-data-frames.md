@@ -566,10 +566,6 @@ Suggest different ways of doing the following operations on a DataFrame:
 6. Access a subset of specific rows and columns
 7. Access a subset of row and column ranges
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
 :::::::::::::::  solution
 
 ## Solution
