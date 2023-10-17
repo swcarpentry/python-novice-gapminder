@@ -201,7 +201,7 @@ for filename in glob.glob('data/gapminder_gdp*.csv'):
     # retrieve the last string in the list that split returns (`<region>.csv`), 
     # and then remove the `.csv` extension from that string.
     region = filename.split('_')[-1][:-4] 
-    dataframe.mean().plot(ax=ax, label=region)
+    dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
 plt.legend()
 plt.show()
 ```
