@@ -222,7 +222,9 @@ directories. In the example below, we create a `Path` object and inspect its att
 from pathlib import Path
 
 p = Path("data/gapminder_gdp_africa.csv")
-print(p.parent), print(p.stem), print(p.suffix)
+print(p.parent)
+print(p.stem)
+print(p.suffix)
 ```
 
 ```output
