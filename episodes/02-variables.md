@@ -152,10 +152,10 @@ h
 - An item in a list is called an element. Whenever we treat a string as if it
   were a list, the string's elements are its individual characters.
 - A slice is a part of a string (or, more generally, a part of any list-like thing).
-- We take a slice with the notation `[start:stop]`, where `start` is the integer
-  index of the first element we want and `stop` is the integer index of
+- We take a slice with the notation `[start:after]`, where `start` is the integer
+  index of the first element we want and `after` is the integer index of
   the element *just after* the last element we want.
-- The difference between `stop` and `start` is the slice's length.
+- The slice's length is `after-start`.
 - Taking a slice does not change the contents of the original string. Instead,
   taking a slice returns a copy of part of the original string.
 
