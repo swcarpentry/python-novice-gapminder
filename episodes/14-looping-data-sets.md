@@ -195,7 +195,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1,1)
 for filename in glob.glob('data/gapminder_gdp*.csv'):
-    dataframe = pd.read_csv(filename)
+    dataframe = pd.read_csv(filename, index_col="country")
     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
     # we will split the string using the split method and `_` as our separator,
     # retrieve the last string in the list that split returns (`<region>.csv`), 
