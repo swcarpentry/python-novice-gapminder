@@ -111,16 +111,16 @@ for m in masses:
 
 ```python
 grade = 85
-if grade >= 70:
+if grade >= 70 and grade < 80:
     print('grade is C')
-elif grade >= 80:
+elif grade >= 80 and grade < 90:
     print('grade is B')
 elif grade >= 90:
     print('grade is A')
 ```
 
 ```output
-grade is C
+grade is B
 ```
 
 - Does *not* automatically go back and re-evaluate if values change.
