@@ -180,7 +180,10 @@ What other special strings does the [`float` function][float-function] recognize
 
 Write a program that reads in the regional data sets
 and plots the average GDP per capita for each region over time
-in a single chart.
+in a single chart. Pandas will raise an error if it encounters
+non-numeric columns in a dataframe computation so you may need
+to either filter out those columns or tell pandas to ignore them.
+
 
 :::::::::::::::  solution
 
@@ -200,8 +203,17 @@ for filename in glob.glob('data/gapminder_gdp*.csv'):
     # we will split the string using the split method and `_` as our separator,
     # retrieve the last string in the list that split returns (`<region>.csv`), 
     # and then remove the `.csv` extension from that string.
+    # NOTE: the pathlib module covered in the next callout also offers
+    # convenient abstractions for working with filesystem paths and could solve this as well:
+    # from pathlib import Path
+    # region = Path(filename).stem.split('_')[-1]
     region = filename.split('_')[-1][:-4] 
-    dataframe.mean().plot(ax=ax, label=region)
+    # pandas raises errors when it encounters non-numeric columns in a dataframe computation
+    # but we can tell pandas to ignore them with the `numeric_only` parameter
+    dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
+    # NOTE: another way of doing this selects just the columns with gdp in their name using the filter method
+    # dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)
+
 plt.legend()
 plt.show()
 ```
@@ -231,8 +243,8 @@ gapminder_gdp_africa
 .csv
 ```
 
-**Hint:** It is possible to check all available attributes and methods on the `Path` object with the `dir()`
-function!
+**Hint:** Check all available attributes and methods on the `Path` object with the `dir()`
+function.
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
