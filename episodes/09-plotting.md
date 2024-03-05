@@ -38,7 +38,7 @@ plt.xlabel('Time (hr)')
 plt.ylabel('Position (km)')
 ```
 
-![](fig/9_simple_position_time_plot.svg){alt='Simple Position-Time Plot'}
+![](fig/9_simple_position_time_plot.svg){alt='A line chart showing time (hr) relative to position (km), using the values provided in the code block above. By default, the plotted line is blue against a white background, and the axes have been scaled automatically to fit the range of the input data.'}
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
