@@ -464,9 +464,9 @@ character selection in strings.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.iloc[<span class="dv">0</span>, <span class="dv">0</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="bu">print</span>(data.iloc[<span class="dv">0</span>, <span class="dv">0</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -480,7 +480,7 @@ character selection in strings.</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">"Albania"</span>, <span class="st">"gdpPercap_1952"</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">"Albania"</span>, <span class="st">"gdpPercap_1952"</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -493,7 +493,7 @@ character selection in strings.</li>
 </ul><div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">"Albania"</span>, :])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">"Albania"</span>, :])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -517,7 +517,7 @@ Name: Albania, dtype: float64</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[:, <span class="st">"gdpPercap_1952"</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[:, <span class="st">"gdpPercap_1952"</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -544,7 +544,7 @@ a named slice.<a class="anchor" aria-label="anchor" href="#select-multiple-colum
 <hr class="half-width"><div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -570,7 +570,7 @@ the same way on slices.</li>
 </ul><div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>].<span class="bu">max</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>].<span class="bu">max</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -583,7 +583,7 @@ dtype: float64</code></pre>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>].<span class="bu">min</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="bu">print</span>(data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>].<span class="bu">min</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -601,12 +601,12 @@ dtype: float64</code></pre>
 </ul><div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use a subset of data to keep output readable.</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>subset <span class="op">=</span> data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>]</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Subset of data:</span><span class="ch">\n</span><span class="st">'</span>, subset)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Which values were greater than 10000 ?</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Where are values large?</span><span class="ch">\n</span><span class="st">'</span>, subset <span class="op">&gt;</span> <span class="dv">10000</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Use a subset of data to keep output readable.</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>subset <span class="op">=</span> data.loc[<span class="st">'Italy'</span>:<span class="st">'Poland'</span>, <span class="st">'gdpPercap_1962'</span>:<span class="st">'gdpPercap_1972'</span>]</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Subset of data:</span><span class="ch">\n</span><span class="st">'</span>, subset)</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co"># Which values were greater than 10000 ?</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">Where are values large?</span><span class="ch">\n</span><span class="st">'</span>, subset <span class="op">&gt;</span> <span class="dv">10000</span>)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -636,8 +636,8 @@ of how it can be used.</li>
 </ul><div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> subset <span class="op">&gt;</span> <span class="dv">10000</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(subset[mask])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>mask <span class="op">=</span> subset <span class="op">&gt;</span> <span class="dv">10000</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="bu">print</span>(subset[mask])</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -657,7 +657,7 @@ average, etc.</li>
 </ul><div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(subset[subset <span class="op">&gt;</span> <span class="dv">10000</span>].describe())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="bu">print</span>(subset[subset <span class="op">&gt;</span> <span class="dv">10000</span>].describe())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -680,7 +680,7 @@ max      13450.401510    16361.876470    18965.055510</code></pre>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Learners often struggle here, many may not work with financial data
 and concepts so they find the example concepts difficult to get their
@@ -707,9 +707,9 @@ GDP</li>
 </ol><div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mask_higher <span class="op">=</span> data <span class="op">&gt;</span> data.mean()</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>wealth_score <span class="op">=</span> mask_higher.aggregate(<span class="st">'sum'</span>, axis<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> <span class="bu">len</span>(data.columns)</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(wealth_score)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>mask_higher <span class="op">=</span> data <span class="op">&gt;</span> data.mean()</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>wealth_score <span class="op">=</span> mask_higher.aggregate(<span class="st">'sum'</span>, axis<span class="op">=</span><span class="dv">1</span>) <span class="op">/</span> <span class="bu">len</span>(data.columns)</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="bu">print</span>(wealth_score)</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -753,7 +753,7 @@ chained methods:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.groupby(wealth_score).<span class="bu">sum</span>())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="bu">print</span>(data.groupby(wealth_score).<span class="bu">sum</span>())</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -789,9 +789,9 @@ GDP data for Europe has been loaded:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>data_europe <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
 </div>
 <p>Write an expression to find the Per Capita GDP of Serbia in 2007.</p>
 </div>
@@ -802,14 +802,14 @@ GDP data for Europe has been loaded:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The selection can be done by using the labels for both the row
 (“Serbia”) and the column (“gdpPercap_2007”):</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Serbia'</span>, <span class="st">'gdpPercap_2007'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Serbia'</span>, <span class="st">'gdpPercap_2007'</span>])</span></code></pre>
 </div>
 <p>The output is</p>
 <div class="codewrapper">
@@ -835,8 +835,8 @@ numerical slices and named slices in Pandas?</li>
 </ol><div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.iloc[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>])</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Albania'</span>:<span class="st">'Belgium'</span>, <span class="st">'gdpPercap_1952'</span>:<span class="st">'gdpPercap_1962'</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="bu">print</span>(data_europe.iloc[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">0</span>:<span class="dv">2</span>])</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="bu">print</span>(data_europe.loc[<span class="st">'Albania'</span>:<span class="st">'Belgium'</span>, <span class="st">'gdpPercap_1952'</span>:<span class="st">'gdpPercap_1962'</span>])</span></code></pre>
 </div>
 </div>
 </div>
@@ -846,7 +846,7 @@ numerical slices and named slices in Pandas?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>No, they do not produce the same output! The output of the first
 statement is:</p>
@@ -891,11 +891,11 @@ in <code>first</code>, <code>second</code>, etc.?</p>
 <div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>first <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>second <span class="op">=</span> first[first[<span class="st">'continent'</span>] <span class="op">==</span> <span class="st">'Americas'</span>]</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>third <span class="op">=</span> second.drop(<span class="st">'Puerto Rico'</span>)</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>fourth <span class="op">=</span> third.drop(<span class="st">'continent'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>fourth.to_csv(<span class="st">'result.csv'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>first <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>second <span class="op">=</span> first[first[<span class="st">'continent'</span>] <span class="op">==</span> <span class="st">'Americas'</span>]</span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a>third <span class="op">=</span> second.drop(<span class="st">'Puerto Rico'</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a>fourth <span class="op">=</span> third.drop(<span class="st">'continent'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a>fourth.to_csv(<span class="st">'result.csv'</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -905,13 +905,13 @@ in <code>first</code>, <code>second</code>, etc.?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>Let’s go through this piece of code line by line.</p>
 <div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>first <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>first <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_all.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span></code></pre>
 </div>
 <p>This line loads the dataset containing the GDP data from all
 countries into a dataframe called <code>first</code>. The
@@ -920,7 +920,7 @@ as the row labels in the dataframe.</p>
 <div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>second <span class="op">=</span> first[first[<span class="st">'continent'</span>] <span class="op">==</span> <span class="st">'Americas'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a>second <span class="op">=</span> first[first[<span class="st">'continent'</span>] <span class="op">==</span> <span class="st">'Americas'</span>]</span></code></pre>
 </div>
 <p>This line makes a selection: only those rows of <code>first</code>
 for which the ‘continent’ column matches ‘Americas’ are extracted.
@@ -932,7 +932,7 @@ assign the expression to a variable)</p>
 <div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>third <span class="op">=</span> second.drop(<span class="st">'Puerto Rico'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a>third <span class="op">=</span> second.drop(<span class="st">'Puerto Rico'</span>)</span></code></pre>
 </div>
 <p>As the syntax suggests, this line drops the row from
 <code>second</code> where the label is ‘Puerto Rico’. The resulting
@@ -941,7 +941,7 @@ dataframe <code>second</code>.</p>
 <div class="codewrapper sourceCode" id="cb35">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>fourth <span class="op">=</span> third.drop(<span class="st">'continent'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>fourth <span class="op">=</span> third.drop(<span class="st">'continent'</span>, axis <span class="op">=</span> <span class="dv">1</span>)</span></code></pre>
 </div>
 <p>Again we apply the drop function, but in this case we are dropping
 not a row but a whole column. To accomplish this, we need to specify
@@ -950,7 +950,7 @@ which has index 1).</p>
 <div class="codewrapper sourceCode" id="cb36">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>fourth.to_csv(<span class="st">'result.csv'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a>fourth.to_csv(<span class="st">'result.csv'</span>)</span></code></pre>
 </div>
 <p>The final step is to write the data that we have been working on to a
 csv file. Pandas makes this easy with the <code>to_csv()</code>
@@ -975,9 +975,9 @@ these methods?</p>
 <div class="codewrapper sourceCode" id="cb37">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.idxmin())</span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.idxmax())</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'data/gapminder_gdp_europe.csv'</span>, index_col<span class="op">=</span><span class="st">'country'</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" tabindex="-1"></a><span class="bu">print</span>(data.idxmin())</span>
+<span id="cb37-3"><a href="#cb37-3" tabindex="-1"></a><span class="bu">print</span>(data.idxmax())</span></code></pre>
 </div>
 </div>
 </div>
@@ -987,7 +987,7 @@ these methods?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Show me the solution</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>For each column in <code>data</code>, <code>idxmin</code> will return
 the index value corresponding to each column’s minimum;
@@ -1023,25 +1023,25 @@ capita for that country in 1952.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5">Show me the solution</h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>1:</p>
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'gdpPercap_1982'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>data[<span class="st">'gdpPercap_1982'</span>]</span></code></pre>
 </div>
 <p>2:</p>
 <div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">'Denmark'</span>,:]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>data.loc[<span class="st">'Denmark'</span>,:]</span></code></pre>
 </div>
 <p>3:</p>
 <div class="codewrapper sourceCode" id="cb40">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>data.loc[:,<span class="st">'gdpPercap_1985'</span>:]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>data.loc[:,<span class="st">'gdpPercap_1985'</span>:]</span></code></pre>
 </div>
 <p>Pandas is smart enough to recognize the number at the end of the
 column label and does not give you an error, although no column named
@@ -1051,7 +1051,7 @@ columns are added to the CSV file later.</p>
 <div class="codewrapper sourceCode" id="cb41">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'gdpPercap_2007'</span>]<span class="op">/</span>data[<span class="st">'gdpPercap_1952'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>data[<span class="st">'gdpPercap_2007'</span>]<span class="op">/</span>data[<span class="st">'gdpPercap_1952'</span>]</span></code></pre>
 </div>
 </div>
 </div>
@@ -1086,141 +1086,141 @@ DataFrame:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
   <h4 class="accordion-header" id="headingSolution6">Show me the solution</h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <p>1. Access a single column:</p>
 <div class="codewrapper sourceCode" id="cb42">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by name</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"col_name"</span>]   <span class="co"># as a Series</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]] <span class="co"># as a DataFrame</span></span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># by name using .loc</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>data.T.loc[<span class="st">"col_name"</span>]  <span class="co"># as a Series</span></span>
-<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>data.T.loc[[<span class="st">"col_name"</span>]].T  <span class="co"># as a DataFrame</span></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Dot notation (Series)</span></span>
-<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>data.col_name</span>
-<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a><span class="co"># by index (iloc)</span></span>
-<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>data.iloc[:, col_index]   <span class="co"># as a Series</span></span>
-<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>data.iloc[:, [col_index]] <span class="co"># as a DataFrame</span></span>
-<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="co"># using a mask</span></span>
-<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>data.T[data.T.index <span class="op">==</span> <span class="st">"col_name"</span>].T</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="co"># by name</span></span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a>data[<span class="st">"col_name"</span>]   <span class="co"># as a Series</span></span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]] <span class="co"># as a DataFrame</span></span>
+<span id="cb42-4"><a href="#cb42-4" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" tabindex="-1"></a><span class="co"># by name using .loc</span></span>
+<span id="cb42-6"><a href="#cb42-6" tabindex="-1"></a>data.T.loc[<span class="st">"col_name"</span>]  <span class="co"># as a Series</span></span>
+<span id="cb42-7"><a href="#cb42-7" tabindex="-1"></a>data.T.loc[[<span class="st">"col_name"</span>]].T  <span class="co"># as a DataFrame</span></span>
+<span id="cb42-8"><a href="#cb42-8" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" tabindex="-1"></a><span class="co"># Dot notation (Series)</span></span>
+<span id="cb42-10"><a href="#cb42-10" tabindex="-1"></a>data.col_name</span>
+<span id="cb42-11"><a href="#cb42-11" tabindex="-1"></a></span>
+<span id="cb42-12"><a href="#cb42-12" tabindex="-1"></a><span class="co"># by index (iloc)</span></span>
+<span id="cb42-13"><a href="#cb42-13" tabindex="-1"></a>data.iloc[:, col_index]   <span class="co"># as a Series</span></span>
+<span id="cb42-14"><a href="#cb42-14" tabindex="-1"></a>data.iloc[:, [col_index]] <span class="co"># as a DataFrame</span></span>
+<span id="cb42-15"><a href="#cb42-15" tabindex="-1"></a></span>
+<span id="cb42-16"><a href="#cb42-16" tabindex="-1"></a><span class="co"># using a mask</span></span>
+<span id="cb42-17"><a href="#cb42-17" tabindex="-1"></a>data.T[data.T.index <span class="op">==</span> <span class="st">"col_name"</span>].T</span></code></pre>
 </div>
 <p>2. Access a single row:</p>
 <div class="codewrapper sourceCode" id="cb43">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by name using .loc</span></span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>] <span class="co"># as a Series</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]] <span class="co"># as a DataFrame</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="co"># by name</span></span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>data.T[<span class="st">"row_name"</span>] <span class="co"># as a Series</span></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>data.T[[<span class="st">"row_name"</span>]].T <span class="co"># as a DataFrame</span></span>
-<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="co"># by index</span></span>
-<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>data.iloc[row_index]   <span class="co"># as a Series</span></span>
-<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>data.iloc[[row_index]]   <span class="co"># as a DataFrame</span></span>
-<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a><span class="co"># using mask</span></span>
-<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>data[data.index <span class="op">==</span> <span class="st">"row_name"</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a><span class="co"># by name using .loc</span></span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>] <span class="co"># as a Series</span></span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]] <span class="co"># as a DataFrame</span></span>
+<span id="cb43-4"><a href="#cb43-4" tabindex="-1"></a></span>
+<span id="cb43-5"><a href="#cb43-5" tabindex="-1"></a><span class="co"># by name</span></span>
+<span id="cb43-6"><a href="#cb43-6" tabindex="-1"></a>data.T[<span class="st">"row_name"</span>] <span class="co"># as a Series</span></span>
+<span id="cb43-7"><a href="#cb43-7" tabindex="-1"></a>data.T[[<span class="st">"row_name"</span>]].T <span class="co"># as a DataFrame</span></span>
+<span id="cb43-8"><a href="#cb43-8" tabindex="-1"></a></span>
+<span id="cb43-9"><a href="#cb43-9" tabindex="-1"></a><span class="co"># by index</span></span>
+<span id="cb43-10"><a href="#cb43-10" tabindex="-1"></a>data.iloc[row_index]   <span class="co"># as a Series</span></span>
+<span id="cb43-11"><a href="#cb43-11" tabindex="-1"></a>data.iloc[[row_index]]   <span class="co"># as a DataFrame</span></span>
+<span id="cb43-12"><a href="#cb43-12" tabindex="-1"></a></span>
+<span id="cb43-13"><a href="#cb43-13" tabindex="-1"></a><span class="co"># using mask</span></span>
+<span id="cb43-14"><a href="#cb43-14" tabindex="-1"></a>data[data.index <span class="op">==</span> <span class="st">"row_name"</span>]</span></code></pre>
 </div>
 <p>3. Access an individual DataFrame element:</p>
 <div class="codewrapper sourceCode" id="cb44">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by column/row names</span></span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"column_name"</span>][<span class="st">"row_name"</span>]         <span class="co"># as a Series</span></span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]].loc[<span class="st">"row_name"</span>]  <span class="co"># as a Series</span></span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]].loc[[<span class="st">"row_name"</span>]]  <span class="co"># as a DataFrame</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>][<span class="st">"col_name"</span>]  <span class="co"># as a value</span></span>
-<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]][<span class="st">"col_name"</span>]  <span class="co"># as a Series</span></span>
-<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]][[<span class="st">"col_name"</span>]]  <span class="co"># as a DataFrame</span></span>
-<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>, <span class="st">"col_name"</span>]  <span class="co"># as a value</span></span>
-<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>], <span class="st">"col_name"</span>]  <span class="co"># as a Series. Preserves index. Column name is moved to `.name`.</span></span>
-<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>, [<span class="st">"col_name"</span>]]  <span class="co"># as a Series. Index is moved to `.name.` Sets index to column name.</span></span>
-<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>], [<span class="st">"col_name"</span>]]  <span class="co"># as a DataFrame (preserves original index and column name)</span></span>
-<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="co"># by column/row names: Dot notation</span></span>
-<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a>data.col_name.row_name</span>
-<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a><span class="co"># by column/row indices</span></span>
-<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a>data.iloc[row_index, col_index] <span class="co"># as a value</span></span>
-<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a>data.iloc[[row_index], col_index] <span class="co"># as a Series. Preserves index. Column name is moved to `.name`</span></span>
-<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a>data.iloc[row_index, [col_index]] <span class="co"># as a Series. Index is moved to `.name.` Sets index to column name.</span></span>
-<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a>data.iloc[[row_index], [col_index]] <span class="co"># as a DataFrame (preserves original index and column name)</span></span>
-<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a><span class="co"># column name + row index</span></span>
-<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"col_name"</span>][row_index]</span>
-<span id="cb44-27"><a href="#cb44-27" aria-hidden="true" tabindex="-1"></a>data.col_name[row_index]</span>
-<span id="cb44-28"><a href="#cb44-28" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"col_name"</span>].iloc[row_index]</span>
-<span id="cb44-29"><a href="#cb44-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-30"><a href="#cb44-30" aria-hidden="true" tabindex="-1"></a><span class="co"># column index + row name</span></span>
-<span id="cb44-31"><a href="#cb44-31" aria-hidden="true" tabindex="-1"></a>data.iloc[:, [col_index]].loc[<span class="st">"row_name"</span>]  <span class="co"># as a Series</span></span>
-<span id="cb44-32"><a href="#cb44-32" aria-hidden="true" tabindex="-1"></a>data.iloc[:, [col_index]].loc[[<span class="st">"row_name"</span>]]  <span class="co"># as a DataFrame</span></span>
-<span id="cb44-33"><a href="#cb44-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-34"><a href="#cb44-34" aria-hidden="true" tabindex="-1"></a><span class="co"># using masks</span></span>
-<span id="cb44-35"><a href="#cb44-35" aria-hidden="true" tabindex="-1"></a>data[data.index <span class="op">==</span> <span class="st">"row_name"</span>].T[data.T.index <span class="op">==</span> <span class="st">"col_name"</span>].T</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="co"># by column/row names</span></span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a>data[<span class="st">"column_name"</span>][<span class="st">"row_name"</span>]         <span class="co"># as a Series</span></span>
+<span id="cb44-3"><a href="#cb44-3" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]].loc[<span class="st">"row_name"</span>]  <span class="co"># as a Series</span></span>
+<span id="cb44-5"><a href="#cb44-5" tabindex="-1"></a>data[[<span class="st">"col_name"</span>]].loc[[<span class="st">"row_name"</span>]]  <span class="co"># as a DataFrame</span></span>
+<span id="cb44-6"><a href="#cb44-6" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="#cb44-7" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>][<span class="st">"col_name"</span>]  <span class="co"># as a value</span></span>
+<span id="cb44-8"><a href="#cb44-8" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]][<span class="st">"col_name"</span>]  <span class="co"># as a Series</span></span>
+<span id="cb44-9"><a href="#cb44-9" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>]][[<span class="st">"col_name"</span>]]  <span class="co"># as a DataFrame</span></span>
+<span id="cb44-10"><a href="#cb44-10" tabindex="-1"></a></span>
+<span id="cb44-11"><a href="#cb44-11" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>, <span class="st">"col_name"</span>]  <span class="co"># as a value</span></span>
+<span id="cb44-12"><a href="#cb44-12" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>], <span class="st">"col_name"</span>]  <span class="co"># as a Series. Preserves index. Column name is moved to `.name`.</span></span>
+<span id="cb44-13"><a href="#cb44-13" tabindex="-1"></a>data.loc[<span class="st">"row_name"</span>, [<span class="st">"col_name"</span>]]  <span class="co"># as a Series. Index is moved to `.name.` Sets index to column name.</span></span>
+<span id="cb44-14"><a href="#cb44-14" tabindex="-1"></a>data.loc[[<span class="st">"row_name"</span>], [<span class="st">"col_name"</span>]]  <span class="co"># as a DataFrame (preserves original index and column name)</span></span>
+<span id="cb44-15"><a href="#cb44-15" tabindex="-1"></a></span>
+<span id="cb44-16"><a href="#cb44-16" tabindex="-1"></a><span class="co"># by column/row names: Dot notation</span></span>
+<span id="cb44-17"><a href="#cb44-17" tabindex="-1"></a>data.col_name.row_name</span>
+<span id="cb44-18"><a href="#cb44-18" tabindex="-1"></a></span>
+<span id="cb44-19"><a href="#cb44-19" tabindex="-1"></a><span class="co"># by column/row indices</span></span>
+<span id="cb44-20"><a href="#cb44-20" tabindex="-1"></a>data.iloc[row_index, col_index] <span class="co"># as a value</span></span>
+<span id="cb44-21"><a href="#cb44-21" tabindex="-1"></a>data.iloc[[row_index], col_index] <span class="co"># as a Series. Preserves index. Column name is moved to `.name`</span></span>
+<span id="cb44-22"><a href="#cb44-22" tabindex="-1"></a>data.iloc[row_index, [col_index]] <span class="co"># as a Series. Index is moved to `.name.` Sets index to column name.</span></span>
+<span id="cb44-23"><a href="#cb44-23" tabindex="-1"></a>data.iloc[[row_index], [col_index]] <span class="co"># as a DataFrame (preserves original index and column name)</span></span>
+<span id="cb44-24"><a href="#cb44-24" tabindex="-1"></a></span>
+<span id="cb44-25"><a href="#cb44-25" tabindex="-1"></a><span class="co"># column name + row index</span></span>
+<span id="cb44-26"><a href="#cb44-26" tabindex="-1"></a>data[<span class="st">"col_name"</span>][row_index]</span>
+<span id="cb44-27"><a href="#cb44-27" tabindex="-1"></a>data.col_name[row_index]</span>
+<span id="cb44-28"><a href="#cb44-28" tabindex="-1"></a>data[<span class="st">"col_name"</span>].iloc[row_index]</span>
+<span id="cb44-29"><a href="#cb44-29" tabindex="-1"></a></span>
+<span id="cb44-30"><a href="#cb44-30" tabindex="-1"></a><span class="co"># column index + row name</span></span>
+<span id="cb44-31"><a href="#cb44-31" tabindex="-1"></a>data.iloc[:, [col_index]].loc[<span class="st">"row_name"</span>]  <span class="co"># as a Series</span></span>
+<span id="cb44-32"><a href="#cb44-32" tabindex="-1"></a>data.iloc[:, [col_index]].loc[[<span class="st">"row_name"</span>]]  <span class="co"># as a DataFrame</span></span>
+<span id="cb44-33"><a href="#cb44-33" tabindex="-1"></a></span>
+<span id="cb44-34"><a href="#cb44-34" tabindex="-1"></a><span class="co"># using masks</span></span>
+<span id="cb44-35"><a href="#cb44-35" tabindex="-1"></a>data[data.index <span class="op">==</span> <span class="st">"row_name"</span>].T[data.T.index <span class="op">==</span> <span class="st">"col_name"</span>].T</span></code></pre>
 </div>
 <p>4. Access several columns:</p>
 <div class="codewrapper sourceCode" id="cb45">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by name</span></span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
-<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>data.loc[:, [<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
-<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="co"># by index</span></span>
-<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>data.iloc[:, [col1_index, col2_index, col3_index]]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a><span class="co"># by name</span></span>
+<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>data[[<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
+<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a>data.loc[:, [<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
+<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a><span class="co"># by index</span></span>
+<span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a>data.iloc[:, [col1_index, col2_index, col3_index]]</span></code></pre>
 </div>
 <p>5. Access several rows</p>
 <div class="codewrapper sourceCode" id="cb46">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by name</span></span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>]]</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co"># by index</span></span>
-<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>data.iloc[[row1_index, row2_index, row3_index]]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a><span class="co"># by name</span></span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a>data.loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>]]</span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a></span>
+<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a><span class="co"># by index</span></span>
+<span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>data.iloc[[row1_index, row2_index, row3_index]]</span></code></pre>
 </div>
 <p>6. Access a subset of specific rows and columns</p>
 <div class="codewrapper sourceCode" id="cb47">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by names</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>data.loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>], [<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># by indices</span></span>
-<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>data.iloc[[row1_index, row2_index, row3_index], [col1_index, col2_index, col3_index]]</span>
-<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="co"># column names + row indices</span></span>
-<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>data[[<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]].iloc[[row1_index, row2_index, row3_index]]</span>
-<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="co"># column indices + row names</span></span>
-<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>data.iloc[:, [col1_index, col2_index, col3_index]].loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>]]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a><span class="co"># by names</span></span>
+<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a>data.loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>], [<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]]</span>
+<span id="cb47-3"><a href="#cb47-3" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" tabindex="-1"></a><span class="co"># by indices</span></span>
+<span id="cb47-5"><a href="#cb47-5" tabindex="-1"></a>data.iloc[[row1_index, row2_index, row3_index], [col1_index, col2_index, col3_index]]</span>
+<span id="cb47-6"><a href="#cb47-6" tabindex="-1"></a></span>
+<span id="cb47-7"><a href="#cb47-7" tabindex="-1"></a><span class="co"># column names + row indices</span></span>
+<span id="cb47-8"><a href="#cb47-8" tabindex="-1"></a>data[[<span class="st">"col1"</span>, <span class="st">"col2"</span>, <span class="st">"col3"</span>]].iloc[[row1_index, row2_index, row3_index]]</span>
+<span id="cb47-9"><a href="#cb47-9" tabindex="-1"></a></span>
+<span id="cb47-10"><a href="#cb47-10" tabindex="-1"></a><span class="co"># column indices + row names</span></span>
+<span id="cb47-11"><a href="#cb47-11" tabindex="-1"></a>data.iloc[:, [col1_index, col2_index, col3_index]].loc[[<span class="st">"row1"</span>, <span class="st">"row2"</span>, <span class="st">"row3"</span>]]</span></code></pre>
 </div>
 <p>7. Access a subset of row and column ranges</p>
 <div class="codewrapper sourceCode" id="cb48">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># by name</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>data.loc[<span class="st">"row1"</span>:<span class="st">"row2"</span>, <span class="st">"col1"</span>:<span class="st">"col2"</span>]</span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co"># by index</span></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>data.iloc[row1_index:row2_index, col1_index:col2_index]</span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co"># column names + row indices</span></span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>data.loc[:, <span class="st">"col1_name"</span>:<span class="st">"col2_name"</span>].iloc[row1_index:row2_index]</span>
-<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co"># column indices + row names</span></span>
-<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>data.iloc[:, col1_index:col2_index].loc[<span class="st">"row1"</span>:<span class="st">"row2"</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a><span class="co"># by name</span></span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a>data.loc[<span class="st">"row1"</span>:<span class="st">"row2"</span>, <span class="st">"col1"</span>:<span class="st">"col2"</span>]</span>
+<span id="cb48-3"><a href="#cb48-3" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" tabindex="-1"></a><span class="co"># by index</span></span>
+<span id="cb48-5"><a href="#cb48-5" tabindex="-1"></a>data.iloc[row1_index:row2_index, col1_index:col2_index]</span>
+<span id="cb48-6"><a href="#cb48-6" tabindex="-1"></a></span>
+<span id="cb48-7"><a href="#cb48-7" tabindex="-1"></a><span class="co"># column names + row indices</span></span>
+<span id="cb48-8"><a href="#cb48-8" tabindex="-1"></a>data.loc[:, <span class="st">"col1_name"</span>:<span class="st">"col2_name"</span>].iloc[row1_index:row2_index]</span>
+<span id="cb48-9"><a href="#cb48-9" tabindex="-1"></a></span>
+<span id="cb48-10"><a href="#cb48-10" tabindex="-1"></a><span class="co"># column indices + row names</span></span>
+<span id="cb48-11"><a href="#cb48-11" tabindex="-1"></a>data.iloc[:, col1_index:col2_index].loc[<span class="st">"row1"</span>:<span class="st">"row2"</span>]</span></code></pre>
 </div>
 </div>
 </div>
@@ -1241,22 +1241,22 @@ can see many more are available by using <code>dir()</code>:</p>
 <div class="codewrapper sourceCode" id="cb49">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">'Hello world!'</span>   <span class="co"># creation of a string object </span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(my_string)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a>my_string <span class="op">=</span> <span class="st">'Hello world!'</span>   <span class="co"># creation of a string object </span></span>
+<span id="cb49-2"><a href="#cb49-2" tabindex="-1"></a><span class="bu">dir</span>(my_string)</span></code></pre>
 </div>
 <p>This command returns:</p>
 <div class="codewrapper sourceCode" id="cb50">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">'__add__'</span>,</span>
-<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="st">'__subclasshook__'</span>,</span>
-<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a><span class="st">'capitalize'</span>,</span>
-<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="st">'casefold'</span>,</span>
-<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a><span class="st">'center'</span>,</span>
-<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a><span class="st">'upper'</span>,</span>
-<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a><span class="st">'zfill'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a>[<span class="st">'__add__'</span>,</span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a>...</span>
+<span id="cb50-3"><a href="#cb50-3" tabindex="-1"></a><span class="st">'__subclasshook__'</span>,</span>
+<span id="cb50-4"><a href="#cb50-4" tabindex="-1"></a><span class="st">'capitalize'</span>,</span>
+<span id="cb50-5"><a href="#cb50-5" tabindex="-1"></a><span class="st">'casefold'</span>,</span>
+<span id="cb50-6"><a href="#cb50-6" tabindex="-1"></a><span class="st">'center'</span>,</span>
+<span id="cb50-7"><a href="#cb50-7" tabindex="-1"></a>...</span>
+<span id="cb50-8"><a href="#cb50-8" tabindex="-1"></a><span class="st">'upper'</span>,</span>
+<span id="cb50-9"><a href="#cb50-9" tabindex="-1"></a><span class="st">'zfill'</span>]</span></code></pre>
 </div>
 <p>You can use <code>help()</code> or <kbd>Shift</kbd>+<kbd>Tab</kbd> to
 get more information about what these methods do.</p>
@@ -1272,14 +1272,14 @@ European countries for each year that information is available.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution7" aria-expanded="false" aria-controls="collapseSolution7">
   <h4 class="accordion-header" id="headingSolution7">Show me the solution</h4>
 </button>
-<div id="collapseSolution7" class="accordion-collapse collapse" data-bs-parent="#accordionSolution7" aria-labelledby="headingSolution7">
+<div id="collapseSolution7" class="accordion-collapse collapse" aria-labelledby="headingSolution7" data-bs-parent="#accordionSolution7">
 <div class="accordion-body">
 <p>Among many choices, <code>dir()</code> lists the
 <code>median()</code> function as a possibility. Thus,</p>
 <div class="codewrapper sourceCode" id="cb51">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>data.median()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>data.median()</span></code></pre>
 </div>
 </div>
 </div>
@@ -1378,7 +1378,7 @@ a named slice.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/08-data-frames.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2023-08-29",
-  "datePublished": "2024-02-27"
+  "datePublished": "2024-03-05"
 }
 
   </script><script>
