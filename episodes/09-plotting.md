@@ -348,7 +348,7 @@ matplotlib will make this  variable refer to a new empty figure.
 Therefore, make sure you call `plt.savefig` before the plot is displayed to
 the screen, otherwise you may find a file with an empty plot.
 
-Sometimes, some elements of the figure may get truncated when saving the figure to a file. You can find an in-depth explanation why this happens [here](https://matplotlib.org/stable/tutorials/intermediate/tight_layout_guide.html). To avoid this, we can call `plt.tight_layout` before `plt.savefig` to make sure that everything fits into the figure area.
+Sometimes, some elements of the figure may get truncated when saving the figure to a file. You can find an in-depth explanation why this happens [here](https://matplotlib.org/stable/users/explain/axes/tight_layout_guide.html). To avoid this, we can call `plt.tight_layout` before `plt.savefig` to make sure that everything fits into the figure area.
 
 ```python
 plt.tight_layout()
