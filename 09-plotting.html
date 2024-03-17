@@ -393,7 +393,7 @@ most widely used scientific plotting library in Python.</li>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Plotting</h1>
-        <p>Last updated on 2023-06-08 |
+        <p>Last updated on 2024-03-17 |
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/09-plotting.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -451,12 +451,13 @@ most widely used scientific plotting library in Python.<a class="anchor" aria-la
 <span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>plt.xlabel(<span class="st">'Time (hr)'</span>)</span>
 <span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>plt.ylabel(<span class="st">'Position (km)'</span>)</span></code></pre>
 </div>
-<figure><img src="fig/9_simple_position_time_plot.svg" alt="Simple Position-Time Plot" class="figure mx-auto d-block"></figure><div id="callout1" class="callout">
+<figure><img src="fig/9_simple_position_time_plot.svg" alt="A line chart showing time (hr) relative to position (km), using the values provided in the code block above. By default, the plotted line is blue against a white background, and the axes have been scaled automatically to fit the range of the input data." class="figure mx-auto d-block"></figure><div id="display-all-open-figures" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="display-all-open-figures">Display All Open Figures<a class="anchor" aria-label="anchor" href="#display-all-open-figures"></a></h3>
+<div id="display-all-open-figures" class="callout-inner">
+<h3 class="callout-title">Display All Open Figures<a class="anchor" aria-label="anchor" href="#display-all-open-figures"></a>
+</h3>
 <div class="callout-content">
 <p>In our Jupyter Notebook example, running the cell should generate the
 figure directly below the code. The figure is also included in the
@@ -564,12 +565,13 @@ additional optional argument e.g., <code>b-</code> is a blue line,
 <span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
 <span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a>plt.ylabel(<span class="st">'GDP per capita ($)'</span>)</span></code></pre>
 </div>
-<div id="callout2" class="callout">
+<div id="adding-a-legend" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="adding-a-legend">Adding a Legend<a class="anchor" aria-label="anchor" href="#adding-a-legend"></a></h3>
+<div id="adding-a-legend" class="callout-inner">
+<h3 class="callout-title">Adding a Legend<a class="anchor" aria-label="anchor" href="#adding-a-legend"></a>
+</h3>
 <div class="callout-content">
 <p>Often when plotting multiple datasets on the same figure it is
 desirable to have a legend describing the data.</p>
@@ -637,7 +639,7 @@ per capita over time for Europe.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -672,7 +674,7 @@ you see (if any)?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -714,7 +716,7 @@ indexes:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <figure><img src="fig/9_correlations_solution2.png" alt="Correlations Solution 2" class="figure mx-auto d-block"></figure><p>Seems the variability in this value is due to a sharp drop after
 1972. Some geopolitics at play perhaps? Given the dominance of oil
@@ -752,7 +754,7 @@ and life expectancy for 2007, normalizing marker size by population:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Show me the solution</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <figure><img src="fig/9_more_correlations_solution.svg" alt="More Correlations Solution" class="figure mx-auto d-block"></figure><p>A good place to look is the documentation for the plot function -
 help(data_all.plot).</p>
@@ -767,12 +769,13 @@ Determines the size of the plotted points.</p>
 </div>
 </div>
 </div>
-<div id="callout3" class="callout">
+<div id="saving-your-plot-to-a-file" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="saving-your-plot-to-a-file">Saving your plot to a file<a class="anchor" aria-label="anchor" href="#saving-your-plot-to-a-file"></a></h3>
+<div id="saving-your-plot-to-a-file" class="callout-inner">
+<h3 class="callout-title">Saving your plot to a file<a class="anchor" aria-label="anchor" href="#saving-your-plot-to-a-file"></a>
+</h3>
 <div class="callout-content">
 <p>If you are satisfied with the plot you see you may want to save it to
 a file, perhaps to include it in a publication. There is a function in
@@ -807,12 +810,13 @@ from that variable to save the figure to file.</p>
 </div>
 </div>
 </div>
-<div id="callout4" class="callout">
+<div id="making-your-plots-accessible" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3 callout-title callout-inner">
-<h3 class="callout-title" id="making-your-plots-accessible">Making your plots accessible<a class="anchor" aria-label="anchor" href="#making-your-plots-accessible"></a></h3>
+<div id="making-your-plots-accessible" class="callout-inner">
+<h3 class="callout-title">Making your plots accessible<a class="anchor" aria-label="anchor" href="#making-your-plots-accessible"></a>
+</h3>
 <div class="callout-content">
 <p>Whenever you are generating plots to go into a paper or a
 presentation, there are a few things you can do to make sure that
@@ -891,7 +895,7 @@ Gallery</a> for more options.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
         
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.2" class="external-link">sandpaper (0.16.2)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.4" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.1" class="external-link">varnish (1.0.1)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.3" class="external-link">sandpaper (0.16.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.4" class="external-link">pegboard (0.7.4)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.1" class="external-link">varnish (1.0.1)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -913,8 +917,8 @@ Gallery</a> for more options.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/09-plotting.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/09-plotting.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2023-06-08",
-  "datePublished": "2024-03-12"
+  "dateModified": "2024-03-17",
+  "datePublished": "2024-03-17"
 }
 
   </script><script>
