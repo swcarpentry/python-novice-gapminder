@@ -7,9 +7,8 @@
 Introduction to Python for non-programmers with a focus on plotting and data analysis.
 Please see [https://swcarpentry.github.io/python-novice-gapminder/](https://swcarpentry.github.io/python-novice-gapminder/)
 for a rendered version of this material,
-[the lesson template documentation][lesson-example]
-for instructions on formatting, building, and submitting material,
-or run `make` in this directory for a list of helpful commands.
+[the lesson template documentation][sandpaper-docs]
+for instructions on formatting and building lesson material.
 
 Maintainer(s):
 
@@ -18,11 +17,8 @@ Maintainer(s):
 - [Sourav Singh][singh-sourav]
 - [Olav Vahtras][olav-vahtras]
 
-[lesson-example]: https://carpentries.github.io/lesson-example/
+[sandpaper-docs]: https://carpentries.github.io/sandpaper-docs/
 [lee-allen]: https://software-carpentry.org/team/#lee-allen
 [moore-nathan]: https://software-carpentry.org/team/#moore_nathan
 [singh-sourav]: https://software-carpentry.org/team/#singh-sourav
 [olav-vahtras]: https://software-carpentry.org/team/#vahtras_olav
-
-
-
