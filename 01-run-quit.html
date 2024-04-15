@@ -397,7 +397,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Running and Quitting</h1>
-        <p>Last updated on 2023-06-07 |
+        <p>Last updated on 2024-04-15 |
         
         <a href="https://github.com/swcarpentry/python-novice-gapminder/edit/main/episodes/01-run-quit.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -842,45 +842,44 @@ cell and you will be able to write in Markdown.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="markdown-does-most-of-what-html-does-">Markdown does most of what HTML does.<a class="anchor" aria-label="anchor" href="#markdown-does-most-of-what-html-does-"></a></h3>
-<div class="row">
-
-<div class="col-md-6" markdown="1">
-<pre><code>*   Use asterisks
+<table class="table"><caption>Showing some markdown syntax and its rendered output.</caption>
+<colgroup><col width="44%"><col width="55%"></colgroup><thead><tr class="header"><th>Markdown code</th>
+<th>Rendered output</th>
+</tr></thead><tbody><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>*   Use asterisks
 *   to create
-*   bullet lists.</code></pre>
-</div>
-<div class="col-md-6" markdown="1">
-<ul><li><p>Use asterisks</p></li>
-<li><p>to create</p></li>
-<li>
-<p>bullet lists.</p>
-</li>
-</ul></div>
-
-</div>
-<div class="row">
-<div class="col-md-6" markdown="1">
-<pre><code>1.  Use numbers
-1.  to create
-1.  numbered lists.</code></pre>
-</div>
-<div class="col-md-6" markdown="1">
+*   bullet lists.</code></pre></td>
+<td>
+<p>
+</p>
+<ul><li>Use asterisks</li>
+<li>to create</li>
+<li>bullet lists.</li>
+</ul></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>1.   Use numbers
+1.   to create
+1.   bullet lists.</code></pre></td>
+<td>
+<p>
+</p>
 <ol style="list-style-type: decimal"><li>Use numbers</li>
 <li>to create</li>
 <li>numbered lists.</li>
-</ol></div>
-</div>
-<div class="row">
-
-<div class="col-md-6" markdown="1">
-<pre><code>*  You can use indents
-	*  To create sublists 
-	*  of the same type
+</ol></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>*  You can use indents
+  *  To create sublists
+  *  of the same type
 *  Or sublists
-	1. Of different
-	1. types</code></pre>
-</div>
-<div class="col-md-6" markdown="1">
+  1. Of different
+  1. types</code></pre></td>
+<td>
+<p>
+</p>
 <ul><li>You can use indents
 <ul><li>To create sublists</li>
 <li>of the same type</li>
@@ -889,51 +888,50 @@ cell and you will be able to write in Markdown.</li>
 <ol style="list-style-type: decimal"><li>Of different</li>
 <li>types</li>
 </ol></li>
-</ul></div>
-
-</div>
-<div class="row">
-<div class="col-md-6" markdown="1">
-<pre><code><span><span class="co"># A Level-1 Heading</span></span></code></pre>
-</div>
-<div class="section level2 col-md-6" markdown="1">
-<h2 id="a-level-1-heading">A Level-1 Heading<a class="anchor" aria-label="anchor" href="#a-level-1-heading"></a></h2>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6" markdown="1">
-<pre><code><span><span class="co">## A Level-2 Heading (etc.)</span></span></code></pre>
-</div>
-<div class="section level2 col-md-6" markdown="1">
-<h2 id="a-level-2-heading-etc-">A Level-2 Heading (etc.)<a class="anchor" aria-label="anchor" href="#a-level-2-heading-etc-"></a></h2>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6" markdown="1">
-<pre><code>Line breaks
+</ul></td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code><span><span class="co"># A Level-1 Heading</span></span></code></pre></td>
+<td>
+<p>
+</p>
+<h2 id="a-level-1-heading">A Level-1 Heading</h2>
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code><span><span class="co">## A Level-2 Heading (etc.)</span></span></code></pre></td>
+<td>
+<p>
+</p>
+<h3 id="a-level-2-heading-etc.">A Level-2 Heading (etc.)</h3>
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>Line breaks
 don't matter.
 
 But blank lines
-create new paragraphs.</code></pre>
-</div>
-<div class="col-md-6" markdown="1">
+create new paragraphs.</code></pre></td>
+<td>
+<p>
+</p>
 <p>Line breaks don’t matter.</p>
 <p>But blank lines create new paragraphs.</p>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6" markdown="1">
-<pre><code>[Create links](http://software-carpentry.org) with `[...](...)`.
-Or use [named links][data_carpentry].
+</td>
+</tr><tr class="odd"><td></td>
+<td></td>
+</tr><tr class="even"><td><pre><code>[Links](http://software-carpentry.org)
+are created with `[...](...)`.
+Or use [named links][data-carp].
 
-[data_carpentry]: http://datacarpentry.org</code></pre>
-</div>
-<div class="col-md-6" markdown="1">
-<p><a href="https://software-carpentry.org" class="external-link">Create links</a> with
+[data-carp]: http://datacarpentry.org</code></pre></td>
+<td>
+<p>
+</p>
+<p><a href="https://software-carpentry.org" class="external-link">Links</a> are created with
 <code>[...](...)</code>. Or use <a href="https://datacarpentry.org" class="external-link">named links</a>.</p>
-</div>
-</div>
-<div id="creating-lists-in-markdown" class="callout challenge">
+</td>
+</tr></tbody></table><div id="creating-lists-in-markdown" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -1195,8 +1193,8 @@ documentation.</li>
   "url": "https://swcarpentry.github.io/python-novice-gapminder/01-run-quit.html",
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/01-run-quit.html",
   "dateCreated": "2016-01-07",
-  "dateModified": "2023-06-07",
-  "datePublished": "2024-04-12"
+  "dateModified": "2024-04-15",
+  "datePublished": "2024-04-15"
 }
 
   </script><script>
