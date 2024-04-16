@@ -86,29 +86,38 @@ primes has become: [2, 3, 5, 7]
   - Deliberately resembles the way we refer to things in a library.
 - We will meet other methods of lists as we go along.
   - Use `help(list)` for a preview.
-- `extend` is similar to `append`, but it allows you to combine two lists.  For example:
+
+## Multiple lists can be combined.
+- `extend` is a list *method* like `append` but it allows you to combine two lists.  For example:
 
 ```python
-teen_primes = [11, 13, 17, 19]
-middle_aged_primes = [37, 41, 43, 47]
+primes = [2, 3, 5, 7]
+more_primes = [11, 13, 17, 19]
 print('primes is currently:', primes)
-primes.extend(teen_primes)
+primes.extend(more_primes)
 print('primes has now become:', primes)
-primes.append(middle_aged_primes)
-print('primes has finally become:', primes)
 ```
 
 ```output
 primes is currently: [2, 3, 5, 7]
 primes has now become: [2, 3, 5, 7, 11, 13, 17, 19]
-primes has finally become: [2, 3, 5, 7, 11, 13, 17, 19, [37, 41, 43, 47]]
 ```
 
-Note that while `extend` maintains the "flat" structure of the list, appending a list to a list means
-the last element in `primes` will itself be a list, not an integer. Lists can contain values of any
-type; therefore, lists of lists are possible.
+- We can also combine lists using the `+` operator, but instead of altering an existing list, it creates a new one.
 
-## Use `del` to remove items from a list entirely.
+```python
+primes = [2, 3, 5, 7]
+more_primes = [11, 13, 17, 19]
+combined_primes = primes + more_primes
+print('combined_primes is now:', combined_primes)
+```
+
+```output
+combined_primes is now: [2, 3, 5, 7, 11, 13, 17, 19]
+```
+
+
+## Items can be removed from a list.
 
 - We use `del list_name[index]` to remove an element from a list (in the example, 9 is not a prime number) and thus shorten it.
 - `del` is not a function or a method, but a statement in the language.
@@ -125,6 +134,20 @@ primes before removing last item: [2, 3, 5, 7, 9]
 primes after removing last item: [2, 3, 5, 7]
 ```
 
+- The list method `pop` is helpful, when you want to fetch an item **AND** remove it from the list.
+- Similarly to `del`, we use it by providing the desired index: `list.pop(index)`.
+```python
+primes = [2, 3, 5, 7, 9]
+wrong_prime = primes.pop(4)
+print('primes after removing last item:', primes)
+print('The wrong prime was: ', wrong_prime)
+```
+
+```output
+primes after removing last item: [2, 3, 5, 7]
+The wrong prime was: 9
+```
+
 ## The empty list contains no values.
 
 - Use `[]` on its own to represent a list that doesn't contain any values.
@@ -138,6 +161,11 @@ primes after removing last item: [2, 3, 5, 7]
 
 ```python
 goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
+```
+
+- This implies that lists can store other lists, allowing arbitrary nested lists.
+```python
+more_goals = [4, 'Explore lists.', [5, 'Understand lists within lists.', [6, 'Master Python lists.']]]
 ```
 
 ## Character strings can be indexed like lists.
