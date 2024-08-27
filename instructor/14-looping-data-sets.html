@@ -393,10 +393,10 @@ files.</a></li>
               </div>
             </div>
 
-            <hr class="half-width"><div class="accordion accordion-flush resources" id="accordionFlush12">
+            <hr class="half-width"><div class="accordion accordion-flush lesson-resources" id="accordionFlush12">
               <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingTwelve">
-                  <button class="accordion-button collapsed" id="resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <button class="accordion-button collapsed" id="lesson-resources" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
                     RESOURCES
                   </button>
                 </h2>
@@ -416,7 +416,7 @@ files.</a></li>
                 </div>
               </div>
             </div>
-            <hr class="half-width resources"><a href="../instructor/aio.html">See all in one page</a>
+            <hr class="half-width lesson-resources"><a href="../instructor/aio.html">See all in one page</a>
 
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
@@ -487,8 +487,7 @@ a list.</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="use-a-for-loop-to-process-files-given-a-list-of-their-names-">Use a <code>for</code> loop to process files given a list of their
-names.<a class="anchor" aria-label="anchor" href="#use-a-for-loop-to-process-files-given-a-list-of-their-names."></a>
-<a class="anchor" aria-label="anchor" href="#use-a-for-loop-to-process-files-given-a-list-of-their-names-"></a></h2>
+names.<a class="anchor" aria-label="anchor" href="#use-a-for-loop-to-process-files-given-a-list-of-their-names-"></a></h2>
 <hr class="half-width"><ul><li>A filename is a character string.</li>
 <li>And lists can contain character strings.</li>
 </ul><div class="codewrapper sourceCode" id="cb1">
@@ -522,8 +521,7 @@ gdpPercap_2007    944
 dtype: float64</code></pre>
 </div>
 </section><section><h2 class="section-heading" id="use-glob-glob-to-find-sets-of-files-whose-names-match-a-pattern-">Use <a href="https://docs.python.org/3/library/glob.html#glob.glob" class="external-link"><code>glob.glob</code></a>
-to find sets of files whose names match a pattern.<a class="anchor" aria-label="anchor" href="#use-glob.glob-to-find-sets-of-files-whose-names-match-a-pattern."></a>
-<a class="anchor" aria-label="anchor" href="#use-glob-glob-to-find-sets-of-files-whose-names-match-a-pattern-"></a></h2>
+to find sets of files whose names match a pattern.<a class="anchor" aria-label="anchor" href="#use-glob-glob-to-find-sets-of-files-whose-names-match-a-pattern-"></a></h2>
 <hr class="half-width"><ul><li>In Unix, the term “globbing” means “matching a set of files with a
 pattern”.</li>
 <li>The most common patterns are:
@@ -564,8 +562,7 @@ current directory whose names end with <code>.txt</code>.</li>
 <pre class="output" tabindex="0"><code>all PDB files: []</code></pre>
 </div>
 </section><section><h2 class="section-heading" id="use-glob-and-for-to-process-batches-of-files-">Use <code>glob</code> and <code>for</code> to process batches of
-files.<a class="anchor" aria-label="anchor" href="#use-glob-and-for-to-process-batches-of-files."></a>
-<a class="anchor" aria-label="anchor" href="#use-glob-and-for-to-process-batches-of-files-"></a></h2>
+files.<a class="anchor" aria-label="anchor" href="#use-glob-and-for-to-process-batches-of-files-"></a></h2>
 <hr class="half-width"><ul><li>Helps a lot if the files are named and stored systematically and
 consistently so that simple patterns will find the right data.</li>
 </ul><div class="codewrapper sourceCode" id="cb7">
@@ -595,8 +592,7 @@ of one of the data sets, which is a nice check on correctness.</li>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="determining-matches" class="callout-inner">
-<h3 class="callout-title">Determining Matches<a class="anchor" aria-label="anchor" href="#determining-matches"></a>
-</h3>
+<h3 class="callout-title">Determining Matches</h3>
 <div class="callout-content">
 <p>Which of these files is <em>not</em> matched by the expression
 <code>glob.glob('data/*as*.csv')</code>?</p>
@@ -611,7 +607,7 @@ of one of the data sets, which is a nice check on correctness.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>1 is not matched by the glob.</p>
 </div>
@@ -623,8 +619,7 @@ of one of the data sets, which is a nice check on correctness.</li>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="minimum-file-size" class="callout-inner">
-<h3 class="callout-title">Minimum File Size<a class="anchor" aria-label="anchor" href="#minimum-file-size"></a>
-</h3>
+<h3 class="callout-title">Minimum File Size</h3>
 <div class="callout-content">
 <p>Modify this program so that it prints the number of records in the
 file that has the fewest records.</p>
@@ -650,7 +645,7 @@ data frame.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -678,8 +673,7 @@ function</a> recognize?</p>
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <div id="comparing-data" class="callout-inner">
-<h3 class="callout-title">Comparing Data<a class="anchor" aria-label="anchor" href="#comparing-data"></a>
-</h3>
+<h3 class="callout-title">Comparing Data</h3>
 <div class="callout-content">
 <p>Write a program that reads in the regional data sets and plots the
 average GDP per capita for each region over time in a single chart.
@@ -694,7 +688,7 @@ or tell pandas to ignore them.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>This solution builds a useful legend by using the <a href="https://docs.python.org/3/library/stdtypes.html#str.split" class="external-link">string
 <code>split</code> method</a> to extract the <code>region</code> from
@@ -735,8 +729,7 @@ the path ‘data/gapminder_gdp_a_specific_region.csv’.</p>
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="dealing-with-file-paths" class="callout-inner">
-<h3 class="callout-title">Dealing with File Paths<a class="anchor" aria-label="anchor" href="#dealing-with-file-paths"></a>
-</h3>
+<h3 class="callout-title">Dealing with File Paths</h3>
 <div class="callout-content">
 <p>The <a href="https://docs.python.org/3/library/pathlib.html" class="external-link"><code>pathlib</code>
 module</a> provides useful abstractions for file and path manipulation
@@ -771,8 +764,7 @@ the <code>Path</code> object with the <code>dir()</code> function.</p>
 <i class="callout-icon" data-feather="key"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
+<h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul><li>Use a <code>for</code> loop to process files given a list of their
 names.</li>
@@ -819,7 +811,7 @@ files.</li>
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.6" class="external-link">sandpaper (0.16.6)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.4" class="external-link">varnish (1.0.4)</a></p>
 			</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -842,7 +834,7 @@ files.</li>
   "identifier": "https://swcarpentry.github.io/python-novice-gapminder/instructor/14-looping-data-sets.html",
   "dateCreated": "2016-01-07",
   "dateModified": "2024-03-05",
-  "datePublished": "2024-08-20"
+  "datePublished": "2024-08-27"
 }
 
   </script><script>
