@@ -248,7 +248,7 @@ data_asia.describe().T.plot(kind='scatter', x='min', y='max')
 
 ![](fig/9_correlations_solution1.svg){alt='Correlations Solution 1'}
 
-No particular correlations can be seen between the minimum and maximum gdp values
+No particular correlations can be seen between the minimum and maximum GDP values
 year on year. It seems the fortunes of asian countries do not rise and fall together.
 
 
@@ -273,7 +273,7 @@ print(data_asia.idxmin())
 Seems the variability in this value is due to a sharp drop after 1972.
 Some geopolitics at play perhaps? Given the dominance of oil producing countries,
 maybe the Brent crude index would make an interesting comparison?
-Whilst Myanmar consistently has the lowest gdp, the highest gdb nation has varied
+Whilst Myanmar consistently has the lowest GDP, the highest GDP nation has varied
 more notably.
 
 
