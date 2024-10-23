@@ -1,4 +1,4 @@
-# Carpentries Workflows
+# Carpentries Workflows 
 
 This directory contains workflows to be used for Lessons using the {sandpaper}
 lesson infrastructure. Two of these workflows require R (`sandpaper-main.yaml`
