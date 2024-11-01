@@ -32,26 +32,36 @@ exercises: 10
 ```python
 import pandas as pd
 
-data_oceania = pd.read_csv('data/gapminder_gdp_oceania.csv')
-print(data_oceania)
+data_penguins = pd.read_csv('data/data-palmers-penguins.csv')
+print(data_penguins)
 ```
 
 ```output
-       country  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
-0    Australia     10039.59564     10949.64959     12217.22686
-1  New Zealand     10556.57566     12247.39532     13175.67800
+    species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  \
+0    Adelie  Torgersen            39.1           18.7              181.0   
+1    Adelie  Torgersen            39.5           17.4              186.0   
+2    Adelie  Torgersen            40.3           18.0              195.0   
+3    Adelie  Torgersen            36.7           19.3              193.0   
+4    Adelie  Torgersen            39.3           20.6              190.0   
+..      ...        ...             ...            ...                ...   
+328  Gentoo     Biscoe            47.2           13.7              214.0   
+329  Gentoo     Biscoe            46.8           14.3              215.0   
+330  Gentoo     Biscoe            50.4           15.7              222.0   
+331  Gentoo     Biscoe            45.2           14.8              212.0   
+332  Gentoo     Biscoe            49.9           16.1              213.0   
 
-   gdpPercap_1967  gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  \
-0     14526.12465     16788.62948     18334.19751     19477.00928
-1     14463.91893     16046.03728     16233.71770     17632.41040
-
-   gdpPercap_1987  gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  \
-0     21888.88903     23424.76683     26997.93657     30687.75473
-1     19007.19129     18363.32494     21050.41377     23189.80135
-
-   gdpPercap_2007
-0     34435.36744
-1     25185.00911
+     body_mass_g     sex  
+0         3750.0    Male  
+1         3800.0  Female  
+2         3250.0  Female  
+3         3450.0  Female  
+4         3650.0    Male  
+..           ...     ...  
+328       4925.0  Female  
+329       4850.0  Female  
+330       5750.0    Male  
+331       5200.0  Female  
+332       5400.0    Male 
 ```
 
 - The columns in a dataframe are the observed variables, and the rows are the observations.
@@ -63,14 +73,14 @@ print(data_oceania)
 ## File Not Found
 
 Our lessons store their data files in a `data` sub-directory,
-which is why the path to the file is `data/gapminder_gdp_oceania.csv`.
+which is why the path to the file is `data/data-palmers-penguins.csv`.
 If you forget to include `data/`,
 or if you include it but your copy of the file is somewhere else,
 you will get a [runtime error](04-built-in.md)
 that ends with a line like this:
 
 ```error
-FileNotFoundError: [Errno 2] No such file or directory: 'data/gapminder_gdp_oceania.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'data/data-palmers-penguins.csv'
 ```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -80,61 +90,58 @@ FileNotFoundError: [Errno 2] No such file or directory: 'data/gapminder_gdp_ocea
 - Row headings are numbers (0 and 1 in this case).
 - Really want to index by country.
 - Pass the name of the column to `read_csv` as its `index_col` parameter to do this.
-- Naming the dataframe `data_oceania_country` tells us which region the data includes (`oceania`) and how it is indexed (`country`).
+- Naming the dataframe `data_penguins_species` tells us what data it includes (`penguins`) and how it is indexed (`species`).
 
 ```python
-data_oceania_country = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
-print(data_oceania_country)
+data_penguins_species = pd.read_csv('data/data_penguins_species.csv', index_col='species')
+print(data_penguins_species)
 ```
 
 ```output
-             gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
-country
-Australia       10039.59564     10949.64959     12217.22686     14526.12465
-New Zealand     10556.57566     12247.39532     13175.67800     14463.91893
+	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g	sex
+species						
+Adelie	Torgersen	39.1	18.7	181.0	3750.0	Male
+Adelie	Torgersen	39.5	17.4	186.0	3800.0	Female
+Adelie	Torgersen	40.3	18.0	195.0	3250.0	Female
+Adelie	Torgersen	36.7	19.3	193.0	3450.0	Female
+Adelie	Torgersen	39.3	20.6	190.0	3650.0	Male
+...	...	...	...	...	...	...
+Gentoo	Biscoe	47.2	13.7	214.0	4925.0	Female
+Gentoo	Biscoe	46.8	14.3	215.0	4850.0	Female
+Gentoo	Biscoe	50.4	15.7	222.0	5750.0	Male
+Gentoo	Biscoe	45.2	14.8	212.0	5200.0	Female
+Gentoo	Biscoe	49.9	16.1	213.0	5400.0	Male
 
-             gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
-country
-Australia       16788.62948     18334.19751     19477.00928     21888.88903
-New Zealand     16046.03728     16233.71770     17632.41040     19007.19129
-
-             gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007
-country
-Australia       23424.76683     26997.93657     30687.75473     34435.36744
-New Zealand     18363.32494     21050.41377     23189.80135     25185.00911
 ```
 
 ## Use the `DataFrame.info()` method to find out more about a dataframe.
 
 ```python
-data_oceania_country.info()
+data_penguins_species.info()
 ```
 
 ```output
 <class 'pandas.core.frame.DataFrame'>
-Index: 2 entries, Australia to New Zealand
-Data columns (total 12 columns):
-gdpPercap_1952    2 non-null float64
-gdpPercap_1957    2 non-null float64
-gdpPercap_1962    2 non-null float64
-gdpPercap_1967    2 non-null float64
-gdpPercap_1972    2 non-null float64
-gdpPercap_1977    2 non-null float64
-gdpPercap_1982    2 non-null float64
-gdpPercap_1987    2 non-null float64
-gdpPercap_1992    2 non-null float64
-gdpPercap_1997    2 non-null float64
-gdpPercap_2002    2 non-null float64
-gdpPercap_2007    2 non-null float64
-dtypes: float64(12)
-memory usage: 208.0+ bytes
+RangeIndex: 333 entries, 0 to 332
+Data columns (total 7 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   species            333 non-null    object 
+ 1   island             333 non-null    object 
+ 2   bill_length_mm     333 non-null    float64
+ 3   bill_depth_mm      333 non-null    float64
+ 4   flipper_length_mm  333 non-null    float64
+ 5   body_mass_g        333 non-null    float64
+ 6   sex                333 non-null    object 
+dtypes: float64(4), object(3)
+memory usage: 18.3+ KB
 ```
 
-- This is a `DataFrame`
-- Two rows named `'Australia'` and `'New Zealand'`
-- Twelve columns, each of which has two actual 64-bit floating point values.
+- This is a `DataFrame`.
+- Species, island and sex columns with object values.
+- Four columns, each of which has two actual 64-bit floating point values.
   - We will talk later about null values, which are used to represent missing observations.
-- Uses 208 bytes of memory.
+- Uses 18.3+ KB of memory.
 
 ## The `DataFrame.columns` variable stores information about the dataframe's columns.
 
@@ -144,41 +151,15 @@ memory usage: 208.0+ bytes
 - Called a *member variable*, or just *member*.
 
 ```python
-print(data_oceania_country.columns)
+print(data_penguins_species.columns)
 ```
 
 ```output
-Index(['gdpPercap_1952', 'gdpPercap_1957', 'gdpPercap_1962', 'gdpPercap_1967',
-       'gdpPercap_1972', 'gdpPercap_1977', 'gdpPercap_1982', 'gdpPercap_1987',
-       'gdpPercap_1992', 'gdpPercap_1997', 'gdpPercap_2002', 'gdpPercap_2007'],
+Index(['species', 'island', 'bill_length_mm', 'bill_depth_mm',
+       'flipper_length_mm', 'body_mass_g', 'sex'],
       dtype='object')
 ```
 
-## Use `DataFrame.T` to transpose a dataframe.
-
-- Sometimes want to treat columns as rows and vice versa.
-- Transpose (written `.T`) doesn't copy the data, just changes the program's view of it.
-- Like `columns`, it is a member variable.
-
-```python
-print(data_oceania_country.T)
-```
-
-```output
-country           Australia  New Zealand
-gdpPercap_1952  10039.59564  10556.57566
-gdpPercap_1957  10949.64959  12247.39532
-gdpPercap_1962  12217.22686  13175.67800
-gdpPercap_1967  14526.12465  14463.91893
-gdpPercap_1972  16788.62948  16046.03728
-gdpPercap_1977  18334.19751  16233.71770
-gdpPercap_1982  19477.00928  17632.41040
-gdpPercap_1987  21888.88903  19007.19129
-gdpPercap_1992  23424.76683  18363.32494
-gdpPercap_1997  26997.93657  21050.41377
-gdpPercap_2002  30687.75473  23189.80135
-gdpPercap_2007  34435.36744  25185.00911
-```
 
 ## Use `DataFrame.describe()` to get summary statistics about data.
 
@@ -186,64 +167,42 @@ gdpPercap_2007  34435.36744  25185.00911
 All other columns are ignored, unless you use the argument `include='all'`.
 
 ```python
-print(data_oceania_country.describe())
+print(data_penguins_species.describe())
 ```
 
 ```output
-       gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
-count        2.000000        2.000000        2.000000        2.000000
-mean     10298.085650    11598.522455    12696.452430    14495.021790
-std        365.560078      917.644806      677.727301       43.986086
-min      10039.595640    10949.649590    12217.226860    14463.918930
-25%      10168.840645    11274.086022    12456.839645    14479.470360
-50%      10298.085650    11598.522455    12696.452430    14495.021790
-75%      10427.330655    11922.958888    12936.065215    14510.573220
-max      10556.575660    12247.395320    13175.678000    14526.124650
+	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g
+count	333.000000	333.000000	333.000000	333.000000
+mean	43.992793	17.164865	200.966967	4207.057057
+std	5.468668	1.969235	14.015765	805.215802
+min	32.100000	13.100000	172.000000	2700.000000
+25%	39.500000	15.600000	190.000000	3550.000000
+50%	44.500000	17.300000	197.000000	4050.000000
+75%	48.600000	18.700000	213.000000	4775.000000
+max	59.600000	21.500000	231.000000	6300.000000
 
-       gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
-count         2.00000        2.000000        2.000000        2.000000
-mean      16417.33338    17283.957605    18554.709840    20448.040160
-std         525.09198     1485.263517     1304.328377     2037.668013
-min       16046.03728    16233.717700    17632.410400    19007.191290
-25%       16231.68533    16758.837652    18093.560120    19727.615725
-50%       16417.33338    17283.957605    18554.709840    20448.040160
-75%       16602.98143    17809.077557    19015.859560    21168.464595
-max       16788.62948    18334.197510    19477.009280    21888.889030
-
-       gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007
-count        2.000000        2.000000        2.000000        2.000000
-mean     20894.045885    24024.175170    26938.778040    29810.188275
-std       3578.979883     4205.533703     5301.853680     6540.991104
-min      18363.324940    21050.413770    23189.801350    25185.009110
-25%      19628.685413    22537.294470    25064.289695    27497.598692
-50%      20894.045885    24024.175170    26938.778040    29810.188275
-75%      22159.406358    25511.055870    28813.266385    32122.777857
-max      23424.766830    26997.936570    30687.754730    34435.367440
 ```
-
-- Not particularly useful with just two records,
-  but very helpful when there are thousands.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## Reading Other Data
-
-Read the data in `gapminder_gdp_americas.csv`
-(which should be in the same directory as `gapminder_gdp_oceania.csv`)
-into a variable called `data_americas`
+Projects/carpentry_python_mods/data-breast-cancer.csv
+Read the data in `data-breast-cancer.csv`
+(which should be in the same directory as `data-palmers-penguin.csv`)
+into a variable called `data_cancer`
 and display its summary statistics.
 
 :::::::::::::::  solution
 
 ## Solution
 
-To read in a CSV, we use `pd.read_csv` and pass the filename `'data/gapminder_gdp_americas.csv'` to it.
-We also once again pass the column name `'country'` to the parameter `index_col` in order to index by country.
-The summary statistics can be displayed with the `DataFrame.describe()` method.
+To read in a CSV, we use `pd.read_csv` and pass the filename `'data/data-breast-cancer.csv'` to it.
+<!-- We also once again pass the column name `'country'` to the parameter `index_col` in order to index by country.
+The summary statistics can be displayed with the `DataFrame.describe()` method. -->
 
 ```python
-data_americas = pd.read_csv('data/gapminder_gdp_americas.csv', index_col='country')
-data_americas.describe()
+data_cancer = pd.read_csv('data/data-breast-cancer.csv')
+data_cancer.describe()
 ```
 
 :::::::::::::::::::::::::
@@ -254,8 +213,8 @@ data_americas.describe()
 
 ## Inspecting Data
 
-After reading the data for the Americas,
-use `help(data_americas.head)` and `help(data_americas.tail)`
+After reading the data for the cancer,
+use `help(data_cancer.head)` and `help(data_cancer.tail)`
 to find out what `DataFrame.head` and `DataFrame.tail` do.
 
 1. What method call will display the first three rows of this data?
@@ -266,90 +225,57 @@ to find out what `DataFrame.head` and `DataFrame.tail` do.
 
 ## Solution
 
-1. We can check out the first five rows of `data_americas` by executing `data_americas.head()`
+1. We can check out the first five rows of `data_cancer` by executing `data_cancer.head()`
   which lets us view the beginning of the DataFrame. We can specify the number of rows we wish
-  to see by specifying the parameter `n` in our call to `data_americas.head()`.
+  to see by specifying the parameter `n` in our call to `data_cancer.head()`.
   To view the first three rows, execute:
   
   ```python
-  data_americas.head(n=3)
+  data_cancer.head(n=3)
   ```
   
   ```output
-            continent  gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  \
-  country
-  Argentina  Americas     5911.315053     6856.856212     7133.166023
-  Bolivia    Americas     2677.326347     2127.686326     2180.972546
-  Brazil     Americas     2108.944355     2487.365989     3336.585802
-  
-            gdpPercap_1967  gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  \
-  country
-  Argentina     8052.953021     9443.038526    10079.026740     8997.897412
-  Bolivia       2586.886053     2980.331339     3548.097832     3156.510452
-  Brazil        3429.864357     4985.711467     6660.118654     7030.835878
-  
-             gdpPercap_1987  gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  \
-  country
-  Argentina     9139.671389     9308.418710    10967.281950     8797.640716
-  Bolivia       2753.691490     2961.699694     3326.143191     3413.262690
-  Brazil        7807.095818     6950.283021     7957.980824     8131.212843
-  
-             gdpPercap_2007
-  country
-  Argentina    12779.379640
-  Bolivia       3822.137084
-  Brazil        9065.800825
+
+diagnosis	radius_mean	texture_mean	perimeter_mean	area_mean	smoothness_mean	compactness_mean	concavity_mean	concave points_mean	symmetry_mean	...	radius_worst	texture_worst	perimeter_worst	area_worst	smoothness_worst	compactness_worst	concavity_worst	concave points_worst	symmetry_worst	fractal_dimension_worst
+0	0	17.99	10.38	122.8	1001.0	0.11840	0.27760	0.3001	0.14710	0.2419	...	25.38	17.33	184.6	2019.0	0.1622	0.6656	0.7119	0.2654	0.4601	0.11890
+1	0	20.57	17.77	132.9	1326.0	0.08474	0.07864	0.0869	0.07017	0.1812	...	24.99	23.41	158.8	1956.0	0.1238	0.1866	0.2416	0.1860	0.2750	0.08902
+2	0	19.69	21.25	130.0	1203.0	0.10960	0.15990	0.1974	0.12790	0.2069	...	23.57	25.53	152.5	1709.0	0.1444	0.4245	0.4504	0.2430	0.3613	0.08758
   ```
 
-2. To check out the last three rows of `data_americas`, we would use the command,
-  `americas.tail(n=3)`, analogous to `head()` used above. However, here we want to look at
+2. To check out the last three rows of `data_cancer`, we would use the command,
+  `data_cancer.tail(n=3)`, analogous to `head()` used above. However, here we want to look at
   the last three columns so we need to change our view and then use `tail()`. To do so, we
   create a new DataFrame in which rows and columns are switched:
   
   ```python
-  americas_flipped = data_americas.T
+  cancer_flipped = data_cancer.T
   ```
   
-  We can then view the last three columns of `americas` by viewing the last three rows
-  of `americas_flipped`:
+  We can then view the last three columns of `data_cancer` by viewing the last three rows
+  of `cancer_flipped`:
   
   ```python
-  americas_flipped.tail(n=3)
+  cancer_flipped.tail(n=3)
   ```
-  
+
   ```output
-  country        Argentina  Bolivia   Brazil   Canada    Chile Colombia  \
-  gdpPercap_1997   10967.3  3326.14  7957.98  28954.9  10118.1  6117.36
-  gdpPercap_2002   8797.64  3413.26  8131.21    33329  10778.8  5755.26
-  gdpPercap_2007   12779.4  3822.14   9065.8  36319.2  13171.6  7006.58
-  
-  country        Costa Rica     Cuba Dominican Republic  Ecuador    ...     \
-  gdpPercap_1997    6677.05  5431.99             3614.1  7429.46    ...
-  gdpPercap_2002    7723.45  6340.65            4563.81  5773.04    ...
-  gdpPercap_2007    9645.06   8948.1            6025.37  6873.26    ...
-  
-  country          Mexico Nicaragua   Panama Paraguay     Peru Puerto Rico  \
-  gdpPercap_1997   9767.3   2253.02  7113.69   4247.4  5838.35     16999.4
-  gdpPercap_2002  10742.4   2474.55  7356.03  3783.67  5909.02     18855.6
-  gdpPercap_2007  11977.6   2749.32  9809.19  4172.84  7408.91     19328.7
-  
-  country        Trinidad and Tobago United States  Uruguay Venezuela
-  gdpPercap_1997             8792.57       35767.4  9230.24   10165.5
-  gdpPercap_2002             11460.6       39097.1     7727   8605.05
-  gdpPercap_2007             18008.5       42951.7  10611.5   11415.8
+0	1	2	3	4	5	6	7	8	9	...	559	560	561	562	563	564	565	566	567	568
+concave points_worst	0.2654	0.18600	0.24300	0.2575	0.16250	0.1741	0.19320	0.1556	0.2060	0.2210	...	0.09653	0.10480	0.00000	0.2356	0.25420	0.22160	0.16280	0.1418	0.2650	0.00000
+symmetry_worst	0.4601	0.27500	0.36130	0.6638	0.23640	0.3985	0.30630	0.3196	0.4378	0.4366	...	0.21120	0.22500	0.15660	0.4089	0.29290	0.20600	0.25720	0.2218	0.4087	0.28710
+fractal_dimension_worst	0.1189	0.08902	0.08758	0.1730	0.07678	0.1244	0.08368	0.1151	0.1072	0.2075	...	0.08732	0.08321	0.05905	0.1409	0.09873	0.07115	0.06637	0.0782	0.1240	0.07039
   ```
   
   This shows the data that we want, but we may prefer to display three columns instead of three rows,
   so we can flip it back:
   
   ```python
-  americas_flipped.tail(n=3).T    
+  cancer_flipped.tail(n=3).T    
   ```
   
   **Note:** we could have done the above in a single line of code by 'chaining' the commands:
   
   ```python
-  data_americas.T.tail(n=3).T
+  data_cancer.T.tail(n=3).T
   ```
 
 :::::::::::::::::::::::::
@@ -405,22 +331,22 @@ You can use `help` to get information on how to use `to_csv`.
 
 ## Solution
 
-In order to write the DataFrame `data_americas` to a file called `processed.csv`, execute the following command:
+In order to write the DataFrame `data_cancer` to a file called `processed.csv`, execute the following command:
 
 ```python
-data_americas.to_csv('processed.csv')
+data_cancer.to_csv('processed.csv')
 ```
 
 For help on `read_csv` or `to_csv`, you could execute, for example:
 
 ```python
-help(data_americas.to_csv)
+help(data_cancer.to_csv)
 help(pd.read_csv)
 ```
 
 Note that `help(to_csv)` or `help(pd.to_csv)` throws an error! This is due to the fact that `to_csv` is not a global Pandas function, but
 a member function of DataFrames. This means you can only call it on an instance of a DataFrame
-e.g., `data_americas.to_csv` or `data_oceania.to_csv`
+e.g., `data_cancer.to_csv` or `data_penguins.to_csv`
 
 
 
