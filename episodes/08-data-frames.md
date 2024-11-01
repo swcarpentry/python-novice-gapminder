@@ -46,12 +46,12 @@ uniquely identifies its *entry* in the DataFrame.
 
 ```python
 import pandas as pd
-data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.iloc[0, 0])
+data_cancer = pd.read_csv('data-palmers-penguins.csv')
+print(data_cancer.iloc[0, 0])
 ```
 
 ```output
-1601.056136
+Adelie
 ```
 
 ## Use `DataFrame.loc[..., ...]` to select values by their (entry) label.
@@ -71,93 +71,18 @@ print(data.loc["Albania", "gdpPercap_1952"])
 - Just like Python's usual slicing notation.
 
 ```python
-print(data.loc["Albania", :])
+print(data.loc[0, :])
 ```
 
 ```output
-gdpPercap_1952    1601.056136
-gdpPercap_1957    1942.284244
-gdpPercap_1962    2312.888958
-gdpPercap_1967    2760.196931
-gdpPercap_1972    3313.422188
-gdpPercap_1977    3533.003910
-gdpPercap_1982    3630.880722
-gdpPercap_1987    3738.932735
-gdpPercap_1992    2497.437901
-gdpPercap_1997    3193.054604
-gdpPercap_2002    4604.211737
-gdpPercap_2007    5937.029526
-Name: Albania, dtype: float64
-```
-
-- Would get the same result printing `data.loc["Albania"]` (without a second index).
-
-```python
-print(data.loc[:, "gdpPercap_1952"])
-```
-
-```output
-country
-Albania                    1601.056136
-Austria                    6137.076492
-Belgium                    8343.105127
-⋮ ⋮ ⋮
-Switzerland               14734.232750
-Turkey                     1969.100980
-United Kingdom             9979.508487
-Name: gdpPercap_1952, dtype: float64
-```
-
-- Would get the same result printing `data["gdpPercap_1952"]`
-- Also get the same result printing `data.gdpPercap_1952` (not recommended, because easily confused with `.` notation for methods)
-
-## Select multiple columns or rows using `DataFrame.loc` and a named slice.
-
-```python
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'])
-```
-
-```output
-             gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country
-Italy           8243.582340    10022.401310    12269.273780
-Montenegro      4649.593785     5907.850937     7778.414017
-Netherlands    12790.849560    15363.251360    18794.745670
-Norway         13450.401510    16361.876470    18965.055510
-Poland          5338.752143     6557.152776     8006.506993
-```
-
-In the above code, we discover that **slicing using `loc` is inclusive at both
-ends**, which differs from **slicing using `iloc`**, where slicing indicates
-everything up to but not including the final index.
-
-## Result of slicing can be used in further operations.
-
-- Usually don't just print a slice.
-- All the statistical operators that work on entire dataframes
-  work the same way on slices.
-- E.g., calculate max of a slice.
-
-```python
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].max())
-```
-
-```output
-gdpPercap_1962    13450.40151
-gdpPercap_1967    16361.87647
-gdpPercap_1972    18965.05551
-dtype: float64
-```
-
-```python
-print(data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972'].min())
-```
-
-```output
-gdpPercap_1962    4649.593785
-gdpPercap_1967    5907.850937
-gdpPercap_1972    7778.414017
-dtype: float64
+species                 Adelie
+island               Torgersen
+bill_length_mm            39.1
+bill_depth_mm             18.7
+flipper_length_mm        181.0
+body_mass_g             3750.0
+sex                       Male
+Name: 0, dtype: object
 ```
 
 ## Use comparisons to select data based on value.
@@ -167,31 +92,27 @@ dtype: float64
 
 ```python
 # Use a subset of data to keep output readable.
-subset = data.loc['Italy':'Poland', 'gdpPercap_1962':'gdpPercap_1972']
+subset = data.loc[:, 'bill_length_mm':'body_mass_g']
 print('Subset of data:\n', subset)
 
 # Which values were greater than 10000 ?
-print('\nWhere are values large?\n', subset > 10000)
+print('\nWhere are values large?\n', subset > 100)
 ```
 
 ```output
-Subset of data:
-             gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country
-Italy           8243.582340    10022.401310    12269.273780
-Montenegro      4649.593785     5907.850937     7778.414017
-Netherlands    12790.849560    15363.251360    18794.745670
-Norway         13450.401510    16361.876470    18965.055510
-Poland          5338.752143     6557.152776     8006.506993
-
 Where are values large?
-            gdpPercap_1962 gdpPercap_1967 gdpPercap_1972
-country
-Italy                False           True           True
-Montenegro           False          False          False
-Netherlands           True           True           True
-Norway                True           True           True
-Poland               False          False          False
+      bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g
+0             False          False               True         True
+1             False          False               True         True
+2             False          False               True         True
+3             False          False               True         True
+4             False          False               True         True
+..              ...            ...                ...          ...
+328           False          False               True         True
+329           False          False               True         True
+330           False          False               True         True
+331           False          False               True         True
+332           False          False               True         True
 ```
 
 ## Select values or NaN using a Boolean mask.
@@ -199,37 +120,42 @@ Poland               False          False          False
 - A frame full of Booleans is sometimes called a *mask* because of how it can be used.
 
 ```python
-mask = subset > 10000
+mask = subset > 100
 print(subset[mask])
 ```
 
 ```output
-             gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-country
-Italy                   NaN     10022.40131     12269.27378
-Montenegro              NaN             NaN             NaN
-Netherlands     12790.84956     15363.25136     18794.74567
-Norway          13450.40151     16361.87647     18965.05551
-Poland                  NaN             NaN             NaN
+     bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g
+0               NaN            NaN              181.0       3750.0
+1               NaN            NaN              186.0       3800.0
+2               NaN            NaN              195.0       3250.0
+3               NaN            NaN              193.0       3450.0
+4               NaN            NaN              190.0       3650.0
+..              ...            ...                ...          ...
+328             NaN            NaN              214.0       4925.0
+329             NaN            NaN              215.0       4850.0
+330             NaN            NaN              222.0       5750.0
+331             NaN            NaN              212.0       5200.0
+332             NaN            NaN              213.0       5400.0
 ```
 
 - Get the value where the mask is true, and NaN (Not a Number) where it is false.
 - Useful because NaNs are ignored by operations like max, min, average, etc.
 
 ```python
-print(subset[subset > 10000].describe())
+print(subset[subset > 100].describe())
 ```
 
 ```output
-       gdpPercap_1962  gdpPercap_1967  gdpPercap_1972
-count        2.000000        3.000000        3.000000
-mean     13120.625535    13915.843047    16676.358320
-std        466.373656     3408.589070     3817.597015
-min      12790.849560    10022.401310    12269.273780
-25%      12955.737547    12692.826335    15532.009725
-50%      13120.625535    15363.251360    18794.745670
-75%      13285.513523    15862.563915    18879.900590
-max      13450.401510    16361.876470    18965.055510
+       bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g
+count             0.0            0.0         333.000000   333.000000
+mean              NaN            NaN         200.966967  4207.057057
+std               NaN            NaN          14.015765   805.215802
+min               NaN            NaN         172.000000  2700.000000
+25%               NaN            NaN         190.000000  3550.000000
+50%               NaN            NaN         197.000000  4050.000000
+75%               NaN            NaN         213.000000  4775.000000
+max               NaN            NaN         231.000000  6300.000000
 ```
 
 ## Group By: split-apply-combine
@@ -247,111 +173,41 @@ has not been covered in the course so far.
 Pandas vectorizing methods and grouping operations are features that provide users
 much flexibility to analyse their data.
 
-For instance, let's say we want to have a clearer view on how the European countries
-split themselves according to their GDP.
-
-1. We may have a glance by splitting the countries in two groups during the years surveyed,
-  those who presented a GDP *higher* than the European average and those with a *lower* GDP.
-2. We then estimate a *wealthy score* based on the historical (from 1962 to 2007) values,
-  where we account how many times a country has participated in the groups of *lower* or *higher* GDP
-
 ```python
-mask_higher = data > data.mean()
-wealth_score = mask_higher.aggregate('sum', axis=1) / len(data.columns)
-print(wealth_score)
-```
-
-```output
-country
-Albania                   0.000000
-Austria                   1.000000
-Belgium                   1.000000
-Bosnia and Herzegovina    0.000000
-Bulgaria                  0.000000
-Croatia                   0.000000
-Czech Republic            0.500000
-Denmark                   1.000000
-Finland                   1.000000
-France                    1.000000
-Germany                   1.000000
-Greece                    0.333333
-Hungary                   0.000000
-Iceland                   1.000000
-Ireland                   0.333333
-Italy                     0.500000
-Montenegro                0.000000
-Netherlands               1.000000
-Norway                    1.000000
-Poland                    0.000000
-Portugal                  0.000000
-Romania                   0.000000
-Serbia                    0.000000
-Slovak Republic           0.000000
-Slovenia                  0.333333
-Spain                     0.333333
-Sweden                    1.000000
-Switzerland               1.000000
-Turkey                    0.000000
-United Kingdom            1.000000
-dtype: float64
-```
-
-Finally, for each group in the `wealth_score` table, we sum their (financial) contribution
-across the years surveyed using chained methods:
-
-```python
-print(data.groupby(wealth_score).sum())
-```
-
-```output
-          gdpPercap_1952  gdpPercap_1957  gdpPercap_1962  gdpPercap_1967  \
-0.000000    36916.854200    46110.918793    56850.065437    71324.848786   
-0.333333    16790.046878    20942.456800    25744.935321    33567.667670   
-0.500000    11807.544405    14505.000150    18380.449470    21421.846200   
-1.000000   104317.277560   127332.008735   149989.154201   178000.350040   
-
-          gdpPercap_1972  gdpPercap_1977  gdpPercap_1982  gdpPercap_1987  \
-0.000000    88569.346898   104459.358438   113553.768507   119649.599409   
-0.333333    45277.839976    53860.456750    59679.634020    64436.912960   
-0.500000    25377.727380    29056.145370    31914.712050    35517.678220   
-1.000000   215162.343140   241143.412730   263388.781960   296825.131210   
-
-          gdpPercap_1992  gdpPercap_1997  gdpPercap_2002  gdpPercap_2007  
-0.000000    92380.047256   103772.937598   118590.929863   149577.357928  
-0.333333    67918.093220    80876.051580   102086.795210   122803.729520  
-0.500000    36310.666080    40723.538700    45564.308390    51403.028210  
-1.000000   315238.235970   346930.926170   385109.939210   427850.333420
+data.groupby('species')['body_mass_g'].mean()
 ```
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Selection of Individual Values
+## Looking at unique values
 
-Assume Pandas has been imported into your notebook
-and the Gapminder GDP data for Europe has been loaded:
-
-```python
-import pandas as pd
-
-data_europe = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-```
-
-Write an expression to find the Per Capita GDP of Serbia in 2007.
+Look at pandas documentation and see what method can be used to get unique values. 
 
 :::::::::::::::  solution
 
 ## Solution
 
-The selection can be done by using the labels for both the row ("Serbia") and the column ("gdpPercap\_2007"):
+To get the count of unique values you can use value_counts method:
 
 ```python
-print(data_europe.loc['Serbia', 'gdpPercap_2007'])
+data.value_counts()
 ```
 
 The output is
 
 ```output
-9786.534714
+species  island     bill_length_mm  bill_depth_mm  flipper_length_mm  body_mass_g  sex   
+Adelie   Biscoe     34.5            18.1           187.0              2900.0       Female    1
+Gentoo   Biscoe     44.0            13.6           208.0              4350.0       Female    1
+                    43.6            13.9           217.0              4900.0       Female    1
+                    43.5            15.2           213.0              4650.0       Female    1
+                                    14.2           220.0              4700.0       Female    1
+                                                                                            ..
+Adelie   Torgersen  36.6            17.8           185.0              3700.0       Female    1
+                    36.2            17.2           187.0              3150.0       Female    1
+                                    16.1           187.0              3550.0       Female    1
+                    35.9            16.6           190.0              3050.0       Female    1
+Gentoo   Biscoe     59.6            17.0           230.0              6050.0       Male      1
 ```
 
 :::::::::::::::::::::::::
@@ -360,188 +216,20 @@ The output is
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Extent of Slicing
+## Filtering
 
-1. Do the two statements below produce the same output?
-2. Based on this,
-  what rule governs what is included (or not) in numerical slices and named slices in Pandas?
-
-```python
-print(data_europe.iloc[0:2, 0:2])
-print(data_europe.loc['Albania':'Belgium', 'gdpPercap_1952':'gdpPercap_1962'])
-```
+1. How can you filter the DataFrame data to get all rows where the species is 'Adelie' and the island is 'Torgersen'?
+2. What code would you use to filter the DataFrame data to find all entries where the body mass is greater than 4000 grams and the flipper length is greater than 200 mm?
 
 :::::::::::::::  solution
 
 ## Solution
 
-No, they do not produce the same output! The output of the first statement is:
-
-```output
-        gdpPercap_1952  gdpPercap_1957
-country                                
-Albania     1601.056136     1942.284244
-Austria     6137.076492     8842.598030
-```
-
-The second statement gives:
-
-```output
-        gdpPercap_1952  gdpPercap_1957  gdpPercap_1962
-country                                                
-Albania     1601.056136     1942.284244     2312.888958
-Austria     6137.076492     8842.598030    10750.721110
-Belgium     8343.105127     9714.960623    10991.206760
-```
-
-Clearly, the second statement produces an additional column and an additional row compared to the first statement.  
-What conclusion can we draw? We see that a numerical slice, 0:2, *omits* the final index (i.e. index 2)
-in the range provided,
-while a named slice, 'gdpPercap\_1952':'gdpPercap\_1962', *includes* the final element.
-
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Reconstructing Data
-
-Explain what each line in the following short program does:
-what is in `first`, `second`, etc.?
-
 ```python
-first = pd.read_csv('data/gapminder_all.csv', index_col='country')
-second = first[first['continent'] == 'Americas']
-third = second.drop('Puerto Rico')
-fourth = third.drop('continent', axis = 1)
-fourth.to_csv('result.csv')
+data[(data['species'] == 'Adelie') & (data['island'] == 'Torgersen')]
 ```
-
-:::::::::::::::  solution
-
-## Solution
-
-Let's go through this piece of code line by line.
-
 ```python
-first = pd.read_csv('data/gapminder_all.csv', index_col='country')
-```
-
-This line loads the dataset containing the GDP data from all countries into a dataframe called
-`first`. The `index_col='country'` parameter selects which column to use as the
-row labels in the dataframe.
-
-```python
-second = first[first['continent'] == 'Americas']
-```
-
-This line makes a selection: only those rows of `first` for which the 'continent' column matches
-'Americas' are extracted. Notice how the Boolean expression inside the brackets,
-`first['continent'] == 'Americas'`, is used to select only those rows where the expression is true.
-Try printing this expression! Can you print also its individual True/False elements?
-(hint: first assign the expression to a variable)
-
-```python
-third = second.drop('Puerto Rico')
-```
-
-As the syntax suggests, this line drops the row from `second` where the label is 'Puerto Rico'. The
-resulting dataframe `third` has one row less than the original dataframe `second`.
-
-```python
-fourth = third.drop('continent', axis = 1)
-```
-
-Again we apply the drop function, but in this case we are dropping not a row but a whole column.
-To accomplish this, we need to specify also the `axis` parameter (we want to drop the second column
-which has index 1).
-
-```python
-fourth.to_csv('result.csv')
-```
-
-The final step is to write the data that we have been working on to a csv file. Pandas makes this easy
-with the `to_csv()` function. The only required argument to the function is the filename. Note that the
-file will be written in the directory from which you started the Jupyter or Python session.
-
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Selecting Indices
-
-Explain in simple terms what `idxmin` and `idxmax` do in the short program below.
-When would you use these methods?
-
-```python
-data = pd.read_csv('data/gapminder_gdp_europe.csv', index_col='country')
-print(data.idxmin())
-print(data.idxmax())
-```
-
-:::::::::::::::  solution
-
-## Solution
-
-For each column in `data`, `idxmin` will return the index value corresponding to each column's minimum;
-`idxmax` will do accordingly the same for each column's maximum value.
-
-You can use these functions whenever you want to get the row index of the minimum/maximum value and not the actual minimum/maximum value.
-
-
-
-:::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Practice with Selection
-
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
-Write an expression to select each of the following:
-
-1. GDP per capita for all countries in 1982.
-2. GDP per capita for Denmark for all years.
-3. GDP per capita for all countries for years *after* 1985.
-4. GDP per capita for each country in 2007 as a multiple of
-  GDP per capita for that country in 1952.
-
-:::::::::::::::  solution
-
-## Solution
-
-1:
-
-```python
-data['gdpPercap_1982']
-```
-
-2:
-
-```python
-data.loc['Denmark',:]
-```
-
-3:
-
-```python
-data.loc[:,'gdpPercap_1985':]
-```
-
-Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
-
-4:
-
-```python
-data['gdpPercap_2007']/data['gdpPercap_1952']
+data[(data['body_mass_g'] > 4000) & (data['flipper_length_mm'] > 200)]
 ```
 
 :::::::::::::::::::::::::
