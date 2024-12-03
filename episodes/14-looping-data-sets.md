@@ -192,11 +192,12 @@ to either filter out those columns or tell pandas to ignore them.
 This solution builds a useful legend by using the [string `split` method][split-method] to
 extract the `region` from the path 'data/gapminder\_gdp\_a\_specific\_region.csv'.
 
-```import glob
+```python
+import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1,1)
-for filename in glob.glob('/Users/nikkhadijahnikaznan/Downloads/data/gapminder_gdp*.csv'):
+for filename in glob.glob('data/gapminder_gdp*.csv'):
     dataframe = pd.read_csv(filename)
     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
     # we will split the string using the split method and `_` as our separator,
