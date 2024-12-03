@@ -192,12 +192,11 @@ to either filter out those columns or tell pandas to ignore them.
 This solution builds a useful legend by using the [string `split` method][split-method] to
 extract the `region` from the path 'data/gapminder\_gdp\_a\_specific\_region.csv'.
 
-```python
-import glob
+```import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1,1)
-for filename in glob.glob('data/gapminder_gdp*.csv'):
+for filename in glob.glob('/Users/nikkhadijahnikaznan/Downloads/data/gapminder_gdp*.csv'):
     dataframe = pd.read_csv(filename)
     # extract <region> from the filename, expected to be in the format 'data/gapminder_gdp_<region>.csv'.
     # we will split the string using the split method and `_` as our separator,
@@ -207,13 +206,21 @@ for filename in glob.glob('data/gapminder_gdp*.csv'):
     # convenient abstractions for working with filesystem paths and could solve this as well:
     # from pathlib import Path
     # region = Path(filename).stem.split('_')[-1]
-    region = filename.split('_')[-1][:-4] 
+    region = filename.split('_')[-1][:-4]
+    # extract the years from the columns of the dataframe 
+    headings = dataframe.columns[1:]
+    years = headings.str.split('_').str.get(1)
     # pandas raises errors when it encounters non-numeric columns in a dataframe computation
     # but we can tell pandas to ignore them with the `numeric_only` parameter
     dataframe.mean(numeric_only=True).plot(ax=ax, label=region)
     # NOTE: another way of doing this selects just the columns with gdp in their name using the filter method
     # dataframe.filter(like="gdp").mean().plot(ax=ax, label=region)
-
+# set the title and labels
+ax.set_title('GDP Per Capita for Regions Over Time')
+ax.set_xticks(range(len(years)))
+ax.set_xticklabels(years)
+ax.set_xlabel('Year')
+plt.tight_layout()
 plt.legend()
 plt.show()
 ```
