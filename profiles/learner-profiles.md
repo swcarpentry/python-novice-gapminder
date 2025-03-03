@@ -8,6 +8,8 @@ Carla is a social scientist with a PhD in Sociology and 2 years of research expe
 
 This course will teach Carla the Python fundamentals needed to analyze cross-country demographic data for her paper on education outcomes. She's particularly interested in the data importing, visualization, and statistical analysis episodes. After completing the workshop, Carla will be able to independently import CSV files, perform basic data cleaning, create simple visualizations of demographic trends, and produce summary statistics from tabular data without relying on colleagues for code support.
 
+This workshop serves as a first step in Carla's Python journey, providing her with a coherent mental model of programming and data visualization that will form the foundation of her future learning. She will be equipped to ask well informed questions about programming in the future, recognize what's possible with Python, and independently explore resources to expand her skills.
+
 ## Jim JIT
 
 Jim teaches biology and environmental science to high school students with 12 years of teaching experience. While comfortable with educational technology, he has no programming experience. He wants to incorporate real-world data analysis into his curriculum to engage students with current global challenges and teach them valuable skills, but is concerned about simplifying complex concepts for teenage students and designing activities that can fit within 45-minute class periods.
