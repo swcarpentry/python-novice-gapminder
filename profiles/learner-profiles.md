@@ -4,9 +4,9 @@ title: Learner Profiles
 
 ## Carla Correlation
 
-Maria is a social scientist with a PhD in Sociology and 2 years of research experience. She primarily uses SPSS for data analysis and has extensive domain knowledge in her field. Her department is increasingly adopting Python for research, but she has never written code beyond SPSS syntax files.
+Carla is a social scientist with a PhD in Sociology and 2 years of research experience. She primarily uses SPSS for data analysis and has extensive domain knowledge in her field. Her department is increasingly adopting Python for research, but she has never written code beyond SPSS syntax files.
 
-This course will teach Maria the Python fundamentals needed to analyze cross-country demographic data for her paper on education outcomes. She's particularly interested in the data importing, visualization, and statistical analysis episodes. After completing the workshop, Maria will be able to independently import CSV files, perform basic data cleaning, create simple visualizations of demographic trends, and produce summary statistics from tabular data without relying on colleagues for code support.
+This course will teach Carla the Python fundamentals needed to analyze cross-country demographic data for her paper on education outcomes. She's particularly interested in the data importing, visualization, and statistical analysis episodes. After completing the workshop, Carla will be able to independently import CSV files, perform basic data cleaning, create simple visualizations of demographic trends, and produce summary statistics from tabular data without relying on colleagues for code support.
 
 ## Jim JIT
 
