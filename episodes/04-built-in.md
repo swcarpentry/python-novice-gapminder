@@ -261,17 +261,16 @@ NameError: name 'aege' is not defined
 
 ## Other ways to get help
 There are several other ways that people often get help when they are stuck with their Python code.
-Perhaps the most common is to search the internet: 
-paste the last line of your error message into your favourite search engine 
-and you will usually find several examples where other people have encountered the same problem and came looking for help.
-You can take a similar approach if you want to find out how to achieve something with Python that you have not done before.
-[StackOverflow](https://stackoverflow.com/questions) can be particularly helpful for this: answers to questions are presented as a ranked thread ordered according to how useful other users found them to be.
-**Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
 
-We also encourage you to get help when you are stuck by asking somebody "in the real world".
-If you have a colleague or friend with more expertise in Python than you have, show them the problem you are having and ask them for help.
-Sometimes, simply the act of formulating your question can help you to identify what is going wrong.
-This is known as ["rubber duck debugging"](https://en.wikipedia.org/wiki/Rubber_duck_debugging) among programmers.
+* Search the internet: 
+  paste the last line of your error message or the word "python" and a short description of what you want to do into your favourite search engine 
+  and you will usually find several examples where other people have encountered the same problem and came looking for help.
+* [StackOverflow](https://stackoverflow.com/questions) can be particularly helpful for this: answers to questions are presented as a ranked thread ordered according to how useful other users found them to be.
+* **Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
+* ask somebody "in the real world". 
+  If you have a colleague or friend with more expertise in Python than you have, show them the problem you are having and ask them for help.
+* Sometimes, simply the act of formulating your question can help you to identify what is going wrong.
+  This is known as ["rubber duck debugging"](https://en.wikipedia.org/wiki/Rubber_duck_debugging) among programmers.
 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
