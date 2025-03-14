@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#fff"/>
+  <defs>
+    <path id="d" d="m0 0v4" stroke="#000"/>
+    <path id="e" d="m0 0h-4" stroke="#000"/>
+  </defs>
+  <g stroke="#000">
+    <use x="74" y="308" xlink:href="#d"/>
+    <use x="128" y="308" xlink:href="#d"/>
+    <use x="182" y="308" xlink:href="#d"/>
+    <use x="236" y="308" xlink:href="#d"/>
+    <use x="290" y="308" xlink:href="#d"/>
+    <use x="344" y="308" xlink:href="#d"/>
+    <use x="398" y="308" xlink:href="#d"/>
+    <use x="58" y="295" xlink:href="#e"/>
+    <use x="58" y="255" xlink:href="#e"/>
+    <use x="58" y="215" xlink:href="#e"/>
+    <use x="58" y="175" xlink:href="#e"/>
+    <use x="58" y="134" xlink:href="#e"/>
+    <use x="58" y="94" xlink:href="#e"/>
+    <use x="58" y="54" xlink:href="#e"/>
+  </g>
+  <g font-size="10px">
+    <g text-anchor="middle">
+      <text x="74" y="322">0.0</text>
+      <text x="128" y="322">0.5</text>
+      <text x="182" y="322">1.0</text>
+      <text x="236" y="322">1.5</text>
+      <text x="290" y="322">2.0</text>
+      <text x="344" y="322">2.5</text>
+      <text x="398" y="322">3.0</text>
+      <text x="236" y="336">Time (hr)</text>
+    </g>
+    <g text-anchor="end">
+      <text x="51" y="299">0</text>
+      <text x="51" y="259">50</text>
+      <text x="51" y="219">100</text>
+      <text x="51" y="178">150</text>
+      <text x="51" y="138">200</text>
+      <text x="51" y="98">250</text>
+      <text x="51" y="57">300</text>
+    </g>
+    <text transform="rotate(-90 25 175)" x="25" y="175" text-anchor="middle">Position (km)</text>
+  </g>
+  <g fill="none" stroke-linecap="square">
+    <rect x="58" y="41" width="357" height="267" stroke="#000"/>
+    <path d="m74 295 325-242" stroke="#1f77b4" stroke-width="2"/>
+  </g>
+</svg>
