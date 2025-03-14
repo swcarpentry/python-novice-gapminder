@@ -30,4 +30,4 @@
 "learners/exercises.md" "8f305efe9f670305e9d23140d43ca651" "site/built/exercises.md" "2023-05-02"
 "learners/reference.md" "f83e0f36168cb869210dd190ef81227b" "site/built/reference.md" "2023-08-19"
 "learners/setup.md" "40258d2c8777bac1e9ee081f6c12010c" "site/built/setup.md" "2023-07-26"
-"profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2023-05-02"
+"profiles/learner-profiles.md" "e11c7a838ed94e9d74cb8a9402adfd92" "site/built/learner-profiles.md" "2025-03-14"
