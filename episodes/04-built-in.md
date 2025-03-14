@@ -293,15 +293,16 @@ It is increasingly common for people to use _generative AI_ chatbots such as Cha
 Once again, you will probably receive some useful guidance by presenting your error message to the chatbot and asking it what went wrong. 
 However, the way this help is provided by the chatbot is different. 
 Answers on Stackoverflow have (probably) been given by a human as a direct response to the question asked. 
-But generative AI chatbots, which are based on an advanced statistical model, respond by generating the _most likely_ sequence of text that would follow the prompt they are given.
+But generative AI chatbots, which are built on an advanced statistical model based on oberservations or which combinations of words tend to appear together, respond by generating the _most likely_ sequence of text that would follow the prompt they are given.
 
 In many cases, these responses will be as accurate as those you could find online, but responses from a chatbot can and often do include errors.
-Just as with an answer found on the internet, you need the knowledge and skills to be able to understand these responses, to judge whether or not they are accurate, and to fix any errors in the code it offers you.
+Just as with an answer found on the internet, you should **take care** to ensure you understand what any code the tool has suggested is going to do when it is run. 
+You will need knowledge and skills to be able to understand the responses you get from these tools, to judge whether or not they are accurate, and to fix any errors in the code it may offer you.
 
 In addition to asking for help, programmers use generative AI tools to generate code from scratch, extend, improve and reorganise existing code, translate code between programming languages, figure out what terms to use in a search of the internet, and more.
 However, there are drawbacks that you should be aware of.
 
-The models used by these tools have been "trained" on very large volumes of data, much of it taken from the internet, and the responses they produce reflect that training data.
+The models used by these tools have been "trained" on enormous volumes of data, much of it taken from the internet, and the responses they produce reflect that training data.
 Very large amounts of energy was consumed when training most of the models in widespread use and many people are concerned about the environmental cost of this.
 Concerns also exist about the way the data for this training was obtained, with questions raised about whether the developers had permission to use it.
 Other ethical concerns have also been raised, such as reports that workers were exploited during the training process.
