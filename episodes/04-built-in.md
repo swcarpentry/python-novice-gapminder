@@ -274,6 +274,21 @@ There are several other ways that people often get help when they are stuck with
 
 ### Generative AI
 
+::::::::::::::::::::::::::::: instructor
+
+### Choose how to teach this section
+The section on generative AI is intended to be concise but Instructors may choose to devote more time to the topic in a workshop.
+Depending on your own level of experience and comfort with talking about and using these tools, you could choose to do any of the following:
+
+* Explain how large language models work and are trained, and/or the difference between generative AI, other forms of AI that currently exist, and the concept of artificial general intelligence.
+* Demonstrate how you recommend that learners use generative AI.
+* Discuss the ethical concerns listed below, as well as others that you are aware of, to help learners make an informed choice about whether or not to use generative AI tools.
+
+This is a fast-moving technology. 
+If you are preparing to teach this section and you feel it has become outdated, please open an issue on the lesson repository to let the Maintainers know and/or a pull request to suggest updates and improvements.
+
+::::::::::::::::::::::::::::::::::::::::
+
 It is increasingly common for people to use _generative AI_ chatbots such as ChatGPT to get help while coding. 
 Once again, you will probably receive some useful guidance by presenting your error message to the chatbot and asking it what went wrong. 
 However, the way this help is provided by the chatbot is different. 
