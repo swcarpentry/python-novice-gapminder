@@ -296,8 +296,8 @@ Other ethical concerns have also been raised, such as reports that workers were 
 1. For most problems you will encounter at this stage, help and answers can be easily found by searching the internet.
 2. The foundational knowledge and skills you will learn in this lesson are essential for you to be able to fix your own programs and any code you receive from online help or a generative AI chatbot. 
    If you choose to use these tools in the future, the expertise you gain from learning and practising these fundamentals on your own will help you use them more effectively.
-3. As you start out with programming, you will make extremely common mistakes that have been made by everybody else who learned to program before you. 
-  Since these mistakes and the questions you are likely to have at this stage are common, they are better represented in the training data of generative AI tools than other, more specialised problems and tasks. 
+3. As you start out with programming, the mistakes you make will be the kinds that have also been made -- and overcome! -- by everybody else who learned to program before you. 
+  Since these mistakes and the questions you are likely to have at this stage are common, they are also better represented than other, more specialised problems and tasks in the data that was used to train generative AI tools.
   This means that a generative AI chatbot is _more likely to produce accurate responses_ to questions that novices ask, which could give you a false impression of how reliable they will be when you are ready to do things that are more advanced.
 
 
