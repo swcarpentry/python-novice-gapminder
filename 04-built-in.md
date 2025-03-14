@@ -259,6 +259,64 @@ NameError: name 'aege' is not defined
 
 - Fix syntax errors by reading the source and runtime errors by tracing execution.
 
+## Other ways to get help
+There are several other ways that people often get help when they are stuck with their Python code.
+
+* Search the internet: 
+  paste the last line of your error message or the word "python" and a short description of what you want to do into your favourite search engine 
+  and you will usually find several examples where other people have encountered the same problem and came looking for help.
+* [StackOverflow](https://stackoverflow.com/questions) can be particularly helpful for this: answers to questions are presented as a ranked thread ordered according to how useful other users found them to be.
+* **Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
+* ask somebody "in the real world". 
+  If you have a colleague or friend with more expertise in Python than you have, show them the problem you are having and ask them for help.
+* Sometimes, simply the act of formulating your question can help you to identify what is going wrong.
+  This is known as ["rubber duck debugging"](https://en.wikipedia.org/wiki/Rubber_duck_debugging) among programmers.
+
+### Generative AI
+
+::::::::::::::::::::::::::::: instructor
+
+### Choose how to teach this section
+The section on generative AI is intended to be concise but Instructors may choose to devote more time to the topic in a workshop.
+Depending on your own level of experience and comfort with talking about and using these tools, you could choose to do any of the following:
+
+* Explain how large language models work and are trained, and/or the difference between generative AI, other forms of AI that currently exist, and the concept of artificial general intelligence.
+* Demonstrate how you recommend that learners use generative AI.
+* Discuss the ethical concerns listed below, as well as others that you are aware of, to help learners make an informed choice about whether or not to use generative AI tools.
+
+This is a fast-moving technology. 
+If you are preparing to teach this section and you feel it has become outdated, please open an issue on the lesson repository to let the Maintainers know and/or a pull request to suggest updates and improvements.
+
+::::::::::::::::::::::::::::::::::::::::
+
+It is increasingly common for people to use _generative AI_ chatbots such as ChatGPT to get help while coding. 
+Once again, you will probably receive some useful guidance by presenting your error message to the chatbot and asking it what went wrong. 
+However, the way this help is provided by the chatbot is different. 
+Answers on Stackoverflow have (probably) been given by a human as a direct response to the question asked. 
+But generative AI chatbots, which are built on an advanced statistical model based on oberservations or which combinations of words tend to appear together, respond by generating the _most likely_ sequence of text that would follow the prompt they are given.
+
+In many cases, these responses will be as accurate as those you could find online, but responses from a chatbot can and often do include errors.
+Just as with an answer found on the internet, you should **take care** to ensure you understand what any code the tool has suggested is going to do when it is run. 
+You will need knowledge and skills to be able to understand the responses you get from these tools, to judge whether or not they are accurate, and to fix any errors in the code it may offer you.
+
+In addition to asking for help, programmers use generative AI tools to generate code from scratch, extend, improve and reorganise existing code, translate code between programming languages, figure out what terms to use in a search of the internet, and more.
+However, there are drawbacks that you should be aware of.
+
+The models used by these tools have been "trained" on enormous volumes of data, much of it taken from the internet, and the responses they produce reflect that training data.
+Very large amounts of energy was consumed when training most of the models in widespread use and many people are concerned about the environmental cost of this.
+Concerns also exist about the way the data for this training was obtained, with questions raised about whether the developers had permission to use it.
+Other ethical concerns have also been raised, such as reports that workers were exploited during the training process.
+
+**We recommend that you avoid getting help from generative AI while you learn to code** for several reasons:
+
+1. For most problems you will encounter at this stage, help and answers can be easily found by searching the internet.
+2. The foundational knowledge and skills you will learn in this lesson are essential for you to be able to fix your own programs and any code you receive from online help or a generative AI chatbot. 
+   If you choose to use these tools in the future, the expertise you gain from learning and practising these fundamentals on your own will help you use them more effectively.
+3. As you start out with programming, the mistakes you make will be the kinds that have also been made -- and overcome! -- by everybody else who learned to program before you. 
+  Since these mistakes and the questions you are likely to have at this stage are common, they are also better represented than other, more specialised problems and tasks in the data that was used to train generative AI tools.
+  This means that a generative AI chatbot is _more likely to produce accurate responses_ to questions that novices ask, which could give you a false impression of how reliable they will be when you are ready to do things that are more advanced.
+
+
 :::::::::::::::::::::::::::::::::::::::  challenge
 
 ## What Happens When
