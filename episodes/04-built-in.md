@@ -295,8 +295,9 @@ However, the way this help is provided by the chatbot is different.
 Answers on Stackoverflow have (probably) been given by a human as a direct response to the question asked. 
 But generative AI chatbots, which are based on an advanced statistical model, respond by generating the _most likely_ sequence of text that would follow the prompt they are given.
 
-In many cases, these responses will be as accurate as those you could find online, but responses from a chatbot can and often do include errors.
-Just as with an answer found on the internet, you need the knowledge and skills to be able to understand these responses, to judge whether or not they are accurate, and to fix any errors in the code it offers you.
+While responses from generative AI tools can often be helpful, they are not always reliable. 
+These tools sometimes generate plausible but incorrect or misleading information, so (just as with an answer found on the internet) it is essential to verify their accuracy.
+You need the knowledge and skills to be able to understand these responses, to judge whether or not they are accurate, and to fix any errors in the code it offers you.
 
 In addition to asking for help, programmers can use generative AI tools to generate code from scratch; extend, improve and reorganise existing code; translate code between programming languages; figure out what terms to use in a search of the internet; and more.
 However, there are drawbacks that you should be aware of.
