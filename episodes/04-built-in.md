@@ -265,8 +265,8 @@ There are several other ways that people often get help when they are stuck with
 * Search the internet: 
   paste the last line of your error message or the word "python" and a short description of what you want to do into your favourite search engine 
   and you will usually find several examples where other people have encountered the same problem and came looking for help.
-* [StackOverflow](https://stackoverflow.com/questions) can be particularly helpful for this: answers to questions are presented as a ranked thread ordered according to how useful other users found them to be.
-* **Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
+    * [StackOverflow](https://stackoverflow.com/questions) can be particularly helpful for this: answers to questions are presented as a ranked thread ordered according to how useful other users found them to be.
+    * **Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
 * ask somebody "in the real world". 
   If you have a colleague or friend with more expertise in Python than you have, show them the problem you are having and ask them for help.
 * Sometimes, simply the act of formulating your question can help you to identify what is going wrong.
@@ -298,7 +298,7 @@ But generative AI chatbots, which are based on an advanced statistical model, re
 In many cases, these responses will be as accurate as those you could find online, but responses from a chatbot can and often do include errors.
 Just as with an answer found on the internet, you need the knowledge and skills to be able to understand these responses, to judge whether or not they are accurate, and to fix any errors in the code it offers you.
 
-In addition to asking for help, programmers use generative AI tools to generate code from scratch, extend, improve and reorganise existing code, translate code between programming languages, figure out what terms to use in a search of the internet, and more.
+In addition to asking for help, programmers can use generative AI tools to generate code from scratch; extend, improve and reorganise existing code; translate code between programming languages; figure out what terms to use in a search of the internet; and more.
 However, there are drawbacks that you should be aware of.
 
 The models used by these tools have been "trained" on very large volumes of data, much of it taken from the internet, and the responses they produce reflect that training data.
@@ -306,10 +306,10 @@ Very large amounts of energy was consumed when training most of the models in wi
 Concerns also exist about the way the data for this training was obtained, with questions raised about whether the developers had permission to use it.
 Other ethical concerns have also been raised, such as reports that workers were exploited during the training process.
 
-**We recommend that you avoid getting help from generative AI while you learn to code** for several reasons:
+**We recommend that you avoid getting help from generative AI during the workshop** for several reasons:
 
-1. For most problems you will encounter at this stage, help and answers can be easily found by searching the internet.
-2. The foundational knowledge and skills you will learn in this lesson are essential for you to be able to fix your own programs and any code you receive from online help or a generative AI chatbot. 
+1. For most problems you will encounter at this stage, help and answers can be found among the first results returned by searching the internet.
+2. The foundational knowledge and skills you will learn in this lesson by writing and fixing your own programs  are essential to be able to evaluate the correctness and safety of any code you receive from online help or a generative AI chatbot. 
    If you choose to use these tools in the future, the expertise you gain from learning and practising these fundamentals on your own will help you use them more effectively.
 3. As you start out with programming, the mistakes you make will be the kinds that have also been made -- and overcome! -- by everybody else who learned to program before you. 
   Since these mistakes and the questions you are likely to have at this stage are common, they are also better represented than other, more specialised problems and tasks in the data that was used to train generative AI tools.
