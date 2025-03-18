@@ -269,7 +269,7 @@ There are several other ways that people often get help when they are stuck with
     * **Take care:** copying and pasting code written by somebody else is risky unless you understand exactly what it is doing!
 * ask somebody "in the real world". 
   If you have a colleague or friend with more expertise in Python than you have, show them the problem you are having and ask them for help.
-* Sometimes, simply the act of formulating your question can help you to identify what is going wrong.
+* Sometimes, the act of articulating your question can help you to identify what is going wrong.
   This is known as ["rubber duck debugging"](https://en.wikipedia.org/wiki/Rubber_duck_debugging) among programmers.
 
 ### Generative AI
