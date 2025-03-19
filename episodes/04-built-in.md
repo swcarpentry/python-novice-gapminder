@@ -304,7 +304,7 @@ However, there are drawbacks that you should be aware of.
 
 The models used by these tools have been "trained" on very large volumes of data, much of it taken from the internet, and the responses they produce reflect that training data, and may recapitulate its inaccuracies or biases.
 Very large amounts of energy was consumed when training most of the models in widespread use and many people are concerned about the environmental cost of this.
-Concerns also exist about the way the data for this training was obtained, with questions raised about whether the developers had permission to use it.
+Concerns also exist about the way the data for this training was obtained, with questions raised about whether the people developing the LLMs had permission to use it.
 Other ethical concerns have also been raised, such as reports that workers were exploited during the training process.
 
 **We recommend that you avoid getting help from generative AI during the workshop** for several reasons:
