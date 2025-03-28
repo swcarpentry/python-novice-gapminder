@@ -280,7 +280,7 @@ There are several other ways that people often get help when they are stuck with
 The section on generative AI is intended to be concise but Instructors may choose to devote more time to the topic in a workshop.
 Depending on your own level of experience and comfort with talking about and using these tools, you could choose to do any of the following:
 
-* Explain how large language models work and are trained, and/or the difference between generative AI, other forms of AI that currently exist, and the concept of artificial general intelligence.
+* Explain how large language models work and are trained, and/or the difference between generative AI, other forms of AI that currently exist, and the limits of what LLMs can do (e.g., they can't "reason").
 * Demonstrate how you recommend that learners use generative AI.
 * Discuss the ethical concerns listed below, as well as others that you are aware of, to help learners make an informed choice about whether or not to use generative AI tools.
 
@@ -303,7 +303,7 @@ In addition to asking for help, programmers can use generative AI tools to gener
 However, there are drawbacks that you should be aware of.
 
 The models used by these tools have been "trained" on very large volumes of data, much of it taken from the internet, and the responses they produce reflect that training data, and may recapitulate its inaccuracies or biases.
-Very large amounts of energy was consumed when training most of the models in widespread use and many people are concerned about the environmental cost of this.
+The environmental costs (energy and water use) of LLMs are a lot higher than other technologies, both during development (known as training) and when an individual user uses one (also called inference). For more information see the [AI Environmental Impact Primer](https://huggingface.co/blog/sasha/ai-environment-primer) developed researchers at HuggingFace, an AI hosting platform. 
 Concerns also exist about the way the data for this training was obtained, with questions raised about whether the people developing the LLMs had permission to use it.
 Other ethical concerns have also been raised, such as reports that workers were exploited during the training process.
 
