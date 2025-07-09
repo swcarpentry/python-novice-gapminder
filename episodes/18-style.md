@@ -49,7 +49,15 @@ Assertions are a simple but powerful method for making sure that the context in 
 
 ```python
 def calc_bulk_density(mass, volume):
-    '''Return dry bulk density = powder mass / powder volume.'''
+    """Calculate dry bulk density
+    
+    Args:
+        mass: Powder mass
+        volume: Powder volume
+    
+    Returns:
+        Dry bulk density value, calculated as powder mass / powder volume.
+    """
     assert volume > 0
     return mass / volume
 ```
@@ -62,7 +70,14 @@ If the first thing in a function is a character string that is not assigned dire
 
 ```python
 def average(values):
-    "Return average of values, or None if no values are supplied."
+    """Calculate averages of values
+    
+    Args:
+        values (list): A list of numeric values
+
+    Returns:
+        numeric: The average of `values` or None if no values are provided
+    """
 
     if len(values) == 0:
         return None
@@ -75,7 +90,13 @@ help(average)
 Help on function average in module __main__:
 
 average(values)
-    Return average of values, or None if no values are supplied.
+    Calculate averages of values
+
+    Args:
+        values: A list of numeric values
+
+    Returns:
+        The average of `values` or None if no values are provided
 ```
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -108,16 +129,32 @@ Will any lines produce a syntax error or a runtime error?
 # This finds the maximum distance between all sequences.
 
 def overall_max(sequences):
-    '''Determine overall maximum edit distance.'''
-
+    """Finds the maximum edit distance between any two sequences in a collection.
+    
+    Computes the edit distance between every pair of distinct sequences and
+    returns the largest distance found. Each sequence is compared against all
+    others, but not against itself.
+    
+    Args:
+        sequences (list): A collection of sequences (strings or lists) to compare.
+    
+    Returns:
+        int: The maximum edit distance found between any two sequences in the
+            collection. Returns 0 if all sequences are identical or if there
+            are fewer than 2 sequences.
+    
+    Example:
+        >>> sequences = ["cat", "dog", "elephant"]
+        >>> overall_max(sequences)
+        6
+    """
     highest = 0
     for left in sequences:
         for right in sequences:
-            '''Avoid checking sequence against itself.'''
+            # Avoid checking sequence against itself.
             if left != right:
                 this = edit_distance(left, right)
                 highest = max(highest, this)
-
     # Report.
     return highest
 ```
@@ -154,8 +191,17 @@ def middle(a, b, c):
 
 ```python
 def middle(a, b, c):
-    '''Return the middle value of three.
-    Assumes the values can actually be compared.'''
+    """Return the middle value of three.
+    Assumes the values can actually be compared.
+    
+    Args:
+        a: First value
+        b: Second value
+        c: Third value
+    
+    Returns:
+        The middle value
+    """
     values = [a, b, c]
     values.sort()
     return values[1]
@@ -203,11 +249,25 @@ Here's one solution.
 
 ```python
 def string_machine(input_string, iterations):
-    """
-    Takes input_string and generates a new string with -'s and *'s
-    corresponding to characters that have identical adjacent characters
-    or not, respectively.  Iterates through this procedure with the resultant
-    strings for the supplied number of iterations.
+    """Processes a string through multiple iterations of character transformation.
+    
+    Takes an input string and generates new strings by replacing each character
+    with '-' if its adjacent characters are identical, or '*' if they differ.
+    The process treats the string as circular (wraps around). Each iteration
+    uses the result from the previous iteration.
+    
+    Args:
+        input_string (str): The initial string to process.
+        iterations (int): Number of transformation iterations to perform.
+    
+    Returns:
+        None: This function prints results but doesn't return a value.
+    
+    Example:
+        >>> string_machine("abca", 2)
+        abca
+        *-*-
+        --*-
     """
     print(input_string)
     input_string_length = len(input_string)
@@ -224,7 +284,7 @@ def string_machine(input_string, iterations):
                 new = new + '*'
         print(new)
         # store new string as old
-        old = new     
+        old = new    
 
 string_machine('et cetera', 10)
 ```
