@@ -173,14 +173,21 @@ half is 0.5
 three squared is 9.0
 ```
 
-## Variables only change value when something is assigned to them.
+## Assignment changes the value of a variable, it does not create links between variables.
 
-- If we make one cell in a spreadsheet depend on another,
-  and update the latter,
-  the former updates automatically.
-- This does **not** happen in programming languages.
+- In the spreadsheet context,
+  - If we use a formula to connect one cell to another,
+    and update the latter,
+    the former updates automatically.
+  - In contrast, if we copy one cell and paste its contents into another cell,
+    the second cell will not update if the first cell changes.
+    To update the second cell, we would need to copy and paste again.
+- Assignment (`=` operator) in python works like copy and paste in spreadsheets
+    not like a spreadsheet formula connecting the two cells.
+    In other words, after a variable is used to assign a value to another variable,
+    reassigning the first variable does not change the second variable.
 
-Most of the time, variable assignment creates a new storage location for the value, so in this simple example:
+To demostrate this:
 
 ```python
 a = 1
@@ -193,7 +200,7 @@ print('a is', a, 'and b is', b)
 a is 2 and b is 1
 ```
 
-`b` is a **copy** of `a`, a separate storage location, so subsequent assignment of a new value to `a` leaves `b` completely unaffected. 
+When `b = a` is run, `a`'s value (`1`) is assigned to `b`, but no ongoing link is created between `a` and `b`.
 
 Here is a slightly more complicated example involving computation on the second value:
 
@@ -213,7 +220,7 @@ first is 2 and second is 5
 - Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
   does not automatically change when `variable_one` changes.
 
-Sometimes, however (e.g. with Python list types, described in more detail in Episode 11:Lists - under section 'Copying (or Not)'), more than one variable *can* point to the same storage location.  Think of a cell in a spreadsheet which depends on another cell.  Updating the latter will automatically update the former.  The dependent cell is actually a **reference** to the original, not a distinct copy of it.  
+Some data types that we haven't encountered yet (e.g. lists) have links inside them so they behave differently than described above. An example of this is shown in [Episode 11: Lists](../11-lists.md#copying-or-not). Assigning one of these values to a new variable is a bit like copying and pasting a formula from one cell to another. If the cells referenced in the formula change, then both cells that contain the formula will also change. However, unlike in a spreadsheet, these variables ("formula cells") can be used to change the referenced data (analogous to cells referenced by the formula).
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
