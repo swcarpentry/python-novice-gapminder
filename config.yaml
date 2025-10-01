@@ -59,21 +59,19 @@ contact: 'team@carpentries.org'
 
 # Order of episodes in your lesson
 episodes: 
+- 00-installing-jupyter.md
 - 01-run-quit.md
 - 02-variables.md
 - 03-types-conversion.md
 - 04-built-in.md
-- 05-coffee.md
 - 06-libraries.md
 - 07-reading-tabular.md
 - 08-data-frames.md
 - 09-plotting.md
-- 10-lunch.md
 - 11-lists.md
 - 12-for-loops.md
 - 13-conditionals.md
 - 14-looping-data-sets.md
-- 15-coffee.md
 - 16-writing-functions.md
 - 17-scope.md
 - 18-style.md
