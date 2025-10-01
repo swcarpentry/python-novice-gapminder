@@ -96,7 +96,7 @@ This will install the JupyterLab app to the Applications folder on your computer
 
 ## What Are .dmg Files?
 
-- A *.dmg* file is a disk image file, typically used to install software on MacOS. 
+- A *.dmg file is a disk image file, typically used to install software on MacOS. 
 - If you do not drag the JupyterLab app icon to your Applications folder, it will run from the *.dmg* file instead.
 - By copying the JupyterLab app icon to the Applications folder, you tell your computer that you want the contents
 of the *.dmg* copied and installed to your Applications so that you can use the application later.
@@ -337,35 +337,3 @@ x = 6 * 7 + 12 print(x)
 :::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
-## Equations
-
-Standard Markdown (such as we're using for these notes) won't render equations,
-but the Notebook will.
-Create a new Markdown cell
-and enter the following:
-
-```
-$\sum_{i=1}^{N} 2^{-i} \approx 1$
-```
-
-(It's probably easier to copy and paste.)
-What does it display?
-What do you think the underscore, `_`, circumflex, `^`, and dollar sign, `$`, do?
-
-:::::::::::::::  solution
-
-## Solution
-
-The notebook shows the equation as it would be rendered from LaTeX equation syntax.
-The dollar sign, `$`, is used to tell Markdown that the text in between is a LaTeX equation.
-If you're not familiar with LaTeX,  underscore, `_`, is used for subscripts and circumflex, `^`, is used for superscripts.
-A pair of curly braces, `{` and `}`, is used to group text together so that the statement `i=1` becomes the subscript and `N` becomes the superscript.
-Similarly, `-i` is in curly braces to make the whole statement the superscript for `2`.
-`\sum` and `\approx` are LaTeX commands for "sum over" and "approximate" symbols.
-
-
-
-:::::::::::::::::::::::::
