@@ -17,8 +17,8 @@ site/*
 # Output files from R CMD check
 /*.Rcheck/
 # RStudio files
-.Rproj.user/
-.Rproj*
+*.Rproj.user/
+*.Rproj
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
