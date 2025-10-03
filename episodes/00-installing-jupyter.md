@@ -54,7 +54,7 @@ program that corresponds to the right chip.
 
 ### Finding Your Processor Chip Type
 
-1. Click on the  Apple icon in the top left corner of your screen.
+1. Click on the Apple icon in the top left corner of your screen.
 2. Select *About this Mac*.
 3. Look at the line labeled *Chip*.
   - If your chip name begins with Apple, it is an Apple Silicon processor.
@@ -106,10 +106,11 @@ Go to the [JupyterLab Installation](https://github.com/jupyterlab/jupyterlab-des
 From the **Windows (10, 11)** column, select the *x64 Installer*.
 Click to download the file to your computer.  
 
+
+### Installing JupyterLab Desktop
 Locate the downloaded file (it will often go to your Downloads folder by default) 
 to start the installation process. Double-click it.
 
-### Installing JupyterLab Desktop
 <p align='center'>   <img alt="JupyterLab download" src="files/windows-setup.PNG" width="500"/>
 </p>
 
