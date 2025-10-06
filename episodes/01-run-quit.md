@@ -6,7 +6,7 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Launch the JupyterLab server.
+- Launch JupyterLab desktop.
 - Create a new Python script.
 - Create a Jupyter notebook.
 - Shutdown the JupyterLab server.
