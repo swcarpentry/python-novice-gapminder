@@ -43,7 +43,7 @@ We use JupyterLab Desktop because it's convenient for our learners:
 How you install JupyterLab Desktop will depend on your operating system.
 
 - ** If you have a Mac laptop, [click here](#installing-jupyterlab-desktop-macos).**
-- **If you a Windows laptop, [click here](#installing-jupyterlab-desktop-windows).**
+- **If you have a Windows laptop, [click here](#installing-jupyterlab-desktop-windows).**
 
 ## Installing JupyterLab Desktop: MacOS
 
