@@ -42,8 +42,8 @@ We use JupyterLab Desktop because it's convenient for our learners:
 ## Installing JupyterLab Desktop
 How you install JupyterLab Desktop will depend on your operating system.
 
-- If you have a Mac laptop, [click here](#installing-jupyterlab-desktop-macos).
-- If you a Windows laptop, [click here](#installing-jupyterlab-desktop-windows).
+- ** If you have a Mac laptop, [click here](#installing-jupyterlab-desktop-macos).**
+- **If you a Windows laptop, [click here](#installing-jupyterlab-desktop-windows).**
 
 ## Installing JupyterLab Desktop: MacOS
 
@@ -132,7 +132,7 @@ to complete the installation and open JupyterLab Desktop.
 JupyterLab has many features found in traditional integrated development environments (IDEs) but
 is focused on providing flexible building blocks for interactive, exploratory computing.
 
-The [JupyterLab Interface][jupyterlab-ui]
+The [JupyterLab Interface](https://jupyterlab.readthedocs.io/en/4.4.x/user/interface.html)
 consists of the Menu Bar, a collapsable Left Side Bar, and the Main Work Area which contains tabs
 of documents and activities.
 
