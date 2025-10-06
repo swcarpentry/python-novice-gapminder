@@ -246,3 +246,13 @@ Step 3: Clicking on settings will open up a screen similar to the one below. Cli
 </p>
 
 Step 5: Search your file directory for a folder you will recognize. For now, consider setting the folder you have just created for this workshop as your working directory. Above you can tell I named my default working directory “PythonWorkshop”. Now all my scripts of python code from JupyterLab will be saved in that folder when I choose to save them. 
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- JupyterLab Desktop is an application for running files for managing and organizing Python
+code called Jupyter notebooks.
+- You will only need to install JupyterLab Desktop once for this workshop.
+- Your current working directory determines where programs are run and how
+filepaths are interpreted.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
