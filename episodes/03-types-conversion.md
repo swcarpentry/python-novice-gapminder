@@ -182,12 +182,12 @@ three squared is 9.0
   - In contrast, if we copy one cell and paste its contents into another cell,
     the second cell will not update if the first cell changes.
     To update the second cell, we would need to copy and paste again.
-- Assignment (`=` operator) in python works like copy and paste in spreadsheets
+- Assignment (the `=` operator) in python works like copy and paste in spreadsheets
     not like a spreadsheet formula connecting the two cells.
     In other words, after a variable is used to assign a value to another variable,
     reassigning the first variable does not change the second variable.
 
-To demostrate this:
+To demonstrate this:
 
 ```python
 a = 1
@@ -208,19 +208,19 @@ Here is a slightly more complicated example involving computation on the second 
 variable_one = 1
 variable_two = 5 * variable_one
 variable_one = 2
-print('first is', variable_one, 'and second is', variable_two)
+print('variable_one is', variable_one, 'and variable_two is', variable_two)
 ```
 
 ```output
-first is 2 and second is 5
+variable_one is 2 and variable_two is 5
 ```
 
-- The computer reads the value of `variable_one` when doing the multiplication,
+- Python reads the value of `variable_one` when doing the multiplication,
   creates a new value, and assigns it to `variable_two`.
-- Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
+- Afterwards, `variable_two` is set to this new value and *is not dependent on `variable_one`* so its value
   does not automatically change when `variable_one` changes.
 
-Some data types that we haven't encountered yet (e.g. lists) have links inside them so they behave differently than described above. An example of this is shown in [Episode 11: Lists](../11-lists.md#copying-or-not). Assigning one of these values to a new variable is a bit like copying and pasting a formula from one cell to another. If the cells referenced in the formula change, then both cells that contain the formula will also change. However, unlike in a spreadsheet, these variables ("formula cells") can be used to change the referenced data (analogous to cells referenced by the formula).
+Some data types that we haven't encountered yet (e.g. _lists_, _dictionaries_, and _objects_) have "links" inside them so they behave somewhat differently when you assign values to their *contents*. An example of this is shown in [Episode 12: Lists](../11-lists.md#copying-or-not). Assigning a list value to a new variable is like copying and pasting a formula from one cell to another. When you update an item in that list with the new value, you're updating that canonical list. 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
