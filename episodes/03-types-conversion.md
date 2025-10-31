@@ -220,7 +220,7 @@ variable_one is 2 and variable_two is 5
 - Afterwards, `variable_two` is set to this new value and *is not dependent on `variable_one`* so its value
   does not automatically change when `variable_one` changes.
 
-Some data types that we haven't encountered yet (e.g. _lists_, _dictionaries_, and _objects_) have "links" inside them so they behave somewhat differently when you assign values to their *contents*. An example of this is shown in [Episode 12: Lists](../11-lists.md#copying-or-not). Assigning a list value to a new variable is like copying and pasting a formula from one cell to another. When you update an item in that list with the new value, you're updating that canonical list. 
+Some data types that we haven't encountered yet (e.g. _lists_, _dictionaries_, and _objects_) have "links" inside them so they behave somewhat differently when you assign values to their *contents*. An example of this is shown in [Episode 12: Lists](../11-lists.md#copying-or-not). Assigning a list value to a new variable is like copying and pasting a formula from one cell to another. When you update an item in that list with the new value, you're updating that item in the original list as well. 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
