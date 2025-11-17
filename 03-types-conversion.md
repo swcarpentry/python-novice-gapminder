@@ -173,28 +173,54 @@ half is 0.5
 three squared is 9.0
 ```
 
-## Variables only change value when something is assigned to them.
+## Assignment changes the value of a variable, it does not create links between variables.
 
-- If we make one cell in a spreadsheet depend on another,
-  and update the latter,
-  the former updates automatically.
-- This does **not** happen in programming languages.
+- In the spreadsheet context,
+  - If we use a formula to connect one cell to another,
+    and update the latter,
+    the former updates automatically.
+  - In contrast, if we copy one cell and paste its contents into another cell,
+    the second cell will not update if the first cell changes.
+    To update the second cell, we would need to copy and paste again.
+- Assignment (the `=` operator) in python works like copy and paste in spreadsheets
+    not like a spreadsheet formula connecting the two cells.
+    In other words, after a variable is used to assign a value to another variable,
+    reassigning the first variable does not change the second variable.
+
+To demonstrate this:
+
+```python
+a = 1
+b = a
+a = 2
+print('a is', a, 'and b is', b)
+```
+
+```output
+a is 2 and b is 1
+```
+
+When `b = a` is run, `a`'s value (`1`) is assigned to `b`, but no ongoing link is created between `a` and `b`.
+
+Here is a slightly more complicated example involving computation on the second value:
 
 ```python
 variable_one = 1
 variable_two = 5 * variable_one
 variable_one = 2
-print('first is', variable_one, 'and second is', variable_two)
+print('variable_one is', variable_one, 'and variable_two is', variable_two)
 ```
 
 ```output
-first is 2 and second is 5
+variable_one is 2 and variable_two is 5
 ```
 
-- The computer reads the value of `variable_one` when doing the multiplication,
+- Python reads the value of `variable_one` when doing the multiplication,
   creates a new value, and assigns it to `variable_two`.
-- Afterwards, the value of `variable_two` is set to the new value and *not dependent on `variable_one`* so its value
+- Afterwards, `variable_two` is set to this new value and *is not dependent on `variable_one`* so its value
   does not automatically change when `variable_one` changes.
+
+Some data types that we haven't encountered yet (e.g. _lists_, _dictionaries_, and _objects_) have "links" inside them so they behave somewhat differently when you assign values to their *contents*. An example of this is shown in [Episode 12: Lists](../11-lists.md#copying-or-not). Assigning a list value to a new variable is like copying and pasting a formula from one cell to another. When you update an item in that list with the new value, you're updating that item in the original list as well. 
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 

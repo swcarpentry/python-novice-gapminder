@@ -58,8 +58,6 @@ print_greeting()
 
 ```output
 Hello!
-The weather is nice today.
-Right?
 ```
 
 ## Arguments in a function call are matched to its defined parameters.
