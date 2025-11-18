@@ -27,7 +27,7 @@ exercises: 15
 import matplotlib.pyplot as plt
 ```
 
-- Simple plots are then (fairly) simple to create.
+- Simple plots can be created with just one call, to `plt.plot`:
 
 ```python
 time = [0, 1, 2, 3]
