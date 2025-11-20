@@ -147,25 +147,27 @@ a range is not a list: range(0, 3)
 
 - A common pattern in programs is to:
   1. Initialize an *accumulator* variable to zero, the empty string, or the empty list.
-  2. Update the variable with values from a collection.
+  2. Update the variable incrementally, this might use the values of the loop variable, but doesn't have to.
 
 ```python
-# Sum the first 10 integers.
-total = 0
-for number in range(10):
-   total = total + (number + 1)
-print(total)
+# Simulating 100 coin flips.
+import random
+
+total_flips = 100
+total_heads = 0
+for flip in range(total_flips):
+    if random.random() < 0.5:
+      total_heads += 1
+
+print(f'Of {total_flips} coin flips, {total_heads} were heads.')
 ```
 
 ```output
-55
+Of 100 coin flips, 48 were heads.
 ```
 
-- Read `total = total + (number + 1)` as:
-  - Add 1 to the current value of the loop variable `number`.
-  - Add that to the current value of the accumulator variable `total`.
-  - Assign that to `total`, replacing the current value.
-- We have to add `number + 1` because `range` produces 0..9, not 1..10.
+- Read `total_heads += 1` as:
+  - Add 1 to the the accumulator variable `total_heads`, replacing the current value.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
