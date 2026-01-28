@@ -9,10 +9,5 @@ break: 15
 
 Over break, reflect on and discuss the following:
 
-- A common refrain in software engineering is "Don't Repeat Yourself". How do the techniques we've learned in the last
-  lessons help us avoid repeating ourselves? *Note that in practice there is some nuance to this and should be balanced
-  with doing the simplest thing that could possibly work.*
-- What are the pros / cons of making a variable global or local to a function?
-- When would you consider turning a block of code into a function definition?
-
-
+- Think about data you are working with. Is it split up into multiple files? Would you be able to process these files using a for loop?
+- If you are creating a new data set, how can file names you choose make it easier or harder to loop over the data files?
