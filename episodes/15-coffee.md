@@ -9,10 +9,12 @@ break: 15
 
 Over break, reflect on and discuss the following:
 
-- A common refrain in software engineering is "Don't Repeat Yourself". How do the techniques we've learned in the last
-  lessons help us avoid repeating ourselves? *Note that in practice there is some nuance to this and should be balanced
-  with doing the simplest thing that could possibly work.*
-- What are the pros / cons of making a variable global or local to a function?
-- When would you consider turning a block of code into a function definition?
+- Think about existing data you are working with. Are the data split up into multiple files? How are the files named and organized? Would you be able to efficiently process these files using a for loop?
+- If you are creating a new data set, what file naming and data organization practices would help you and your collaborators analyze and interpret your data now and in five or ten years?
 
+Here are some guides for file naming and data collection that we've found. Let us know if you have additional resources you'd like to share!
 
+- https://carpentries-lab.github.io/good-enough-practices/05-project_organization.html
+- https://datamanagement.hms.harvard.edu/plan-design/file-naming-conventions
+- https://guides.library.stanford.edu/data-best-practices
+- https://book.the-turing-way.org/reproducible-research/rdm/rdm-storage/
