@@ -9,7 +9,7 @@ exercises: 15
 - Gather feedback on the class
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
+j
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - How did the class go?
