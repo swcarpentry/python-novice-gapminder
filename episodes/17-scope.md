@@ -63,25 +63,6 @@ NameError: name 'temperature' is not defined
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
-## Local and Global Variable Use
-
-Trace the values of all variables in this program as it is executed.
-(Use '---' as the value of variables before and after they exist.)
-
-```python
-limit = 100
-
-def clip(value):
-    return min(max(0.0, value), limit)
-
-value = -22.5
-print(clip(value))
-```
-
-::::::::::::::::::::::::::::::::::::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::::  challenge
-
 ## Reading Error Messages
 
 Read the traceback below, and identify the following:
