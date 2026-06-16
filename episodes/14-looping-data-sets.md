@@ -27,11 +27,12 @@ exercises: 10
 import pandas as pd
 for filename in ['data/gapminder_gdp_africa.csv', 'data/gapminder_gdp_asia.csv']:
     data = pd.read_csv(filename, index_col='country')
-    print(filename, data.min())
+    print(filename, '\n', data.min())
 ```
 
 ```output
-data/gapminder_gdp_africa.csv gdpPercap_1952    298.846212
+data/gapminder_gdp_africa.csv
+gdpPercap_1952    298.846212
 gdpPercap_1957    335.997115
 gdpPercap_1962    355.203227
 gdpPercap_1967    412.977514
@@ -40,7 +41,8 @@ gdpPercap_1997    312.188423
 gdpPercap_2002    241.165877
 gdpPercap_2007    277.551859
 dtype: float64
-data/gapminder_gdp_asia.csv gdpPercap_1952    331
+data/gapminder_gdp_asia.csv
+gdpPercap_1952    331
 gdpPercap_1957    350
 gdpPercap_1962    388
 gdpPercap_1967    349
