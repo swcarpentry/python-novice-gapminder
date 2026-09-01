@@ -671,6 +671,16 @@ value of this column for every row in the dataframe.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Reflections (optional)
+
+- How can functions help make code easier to reuse, understand, or change?
+- What are the pros / cons of making a variable global or local to a function?
+- When would you consider turning a block of code into a function definition?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Break programs down into functions to make them easier to understand.
@@ -678,6 +688,7 @@ value of this column for every row in the dataframe.
 - Defining a function does not run it.
 - Arguments in a function call are matched to its defined parameters.
 - Functions may return a result to their caller using `return`.
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
