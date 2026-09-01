@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#e5e5e5"/>
+  <path d="m73 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <defs>
+    <path id="d" d="m0 0v4" stroke="#555"/>
+    <path id="c" d="m0 0h-4" stroke="#555"/>
+    <path id="b" d="m0 3c0.8 0 2-0.3 2-0.9 0.6-0.6 0.9-1 0.9-2s-0.3-2-0.9-2c-0.6-0.6-1-0.9-2-0.9s-2 0.3-2 0.9c-0.6 0.6-0.9 1-0.9 2s0.3 2 0.9 2c0.6 0.6 1 0.9 2 0.9z" stroke="#e24a33"/>
+  </defs>
+  <g fill="#555">
+    <g stroke="#555">
+      <use x="73" y="308" xlink:href="#d"/>
+      <use x="140" y="308" xlink:href="#d"/>
+      <use x="206" y="308" xlink:href="#d"/>
+      <use x="273" y="308" xlink:href="#d"/>
+      <use x="339" y="308" xlink:href="#d"/>
+      <use x="406" y="308" xlink:href="#d"/>
+      <use x="58" y="305" xlink:href="#c"/>
+      <use x="58" y="272" xlink:href="#c"/>
+      <use x="58" y="239" xlink:href="#c"/>
+      <use x="58" y="205" xlink:href="#c"/>
+      <use x="58" y="172" xlink:href="#c"/>
+      <use x="58" y="139" xlink:href="#c"/>
+      <use x="58" y="106" xlink:href="#c"/>
+      <use x="58" y="73" xlink:href="#c"/>
+    </g>
+    <g font-size="10px">
+      <g text-anchor="middle">
+        <text x="73" y="322">10000</text>
+        <text x="140" y="322">15000</text>
+        <text x="206" y="322">20000</text>
+        <text x="273" y="322">25000</text>
+        <text x="339" y="322">30000</text>
+        <text x="406" y="322">35000</text>
+      </g>
+      <g text-anchor="end">
+        <text x="51" y="308">10000</text>
+        <text x="51" y="275">12000</text>
+        <text x="51" y="242">14000</text>
+        <text x="51" y="209">16000</text>
+        <text x="51" y="176">18000</text>
+        <text x="51" y="143">20000</text>
+        <text x="51" y="110">22000</text>
+        <text x="51" y="77">24000</text>
+      </g>
+    </g>
+  </g>
+  <g fill="none" stroke="#fff" stroke-linecap="square">
+    <path d="m140 308v-266"/>
+    <path d="m206 308v-266"/>
+    <path d="m273 308v-266"/>
+    <path d="m339 308v-266"/>
+    <path d="m406 308v-266"/>
+    <path d="m58 305h357"/>
+    <path d="m58 272h357"/>
+    <path d="m58 239h357"/>
+    <path d="m58 205h357"/>
+    <path d="m58 172h357"/>
+    <path d="m58 139h357"/>
+    <path d="m58 106h357"/>
+    <path d="m58 73h357"/>
+    <rect x="58" y="41" width="357" height="267"/>
+  </g>
+  <g fill="#e24a33" stroke="#e24a33">
+    <use x="74" y="295" xlink:href="#b"/>
+    <use x="86" y="268" xlink:href="#b"/>
+    <use x="103" y="252" xlink:href="#b"/>
+    <use x="134" y="231" xlink:href="#b"/>
+    <use x="164" y="205" xlink:href="#b"/>
+    <use x="184" y="202" xlink:href="#b"/>
+    <use x="199" y="178" xlink:href="#b"/>
+    <use x="232" y="156" xlink:href="#b"/>
+    <use x="252" y="166" xlink:href="#b"/>
+    <use x="300" y="122" xlink:href="#b"/>
+    <use x="349" y="87" xlink:href="#b"/>
+    <use x="398" y="54" xlink:href="#b"/>
+  </g>
+</svg>

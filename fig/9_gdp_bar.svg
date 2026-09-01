@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg width="461pt" height="346pt" version="1.1" viewBox="0 0 461 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="m0 346h461v-346h-461z" fill="#fff"/>
+  <path d="m58 308h357v-266h-357z" fill="#e5e5e5"/>
+  <path d="m72 308v-266" fill="none" stroke="#fff" stroke-linecap="square"/>
+  <defs>
+    <path id="b" d="m0 0v4" stroke="#555"/>
+    <path id="c" d="m0 0h-4" stroke="#555"/>
+  </defs>
+  <g fill="#555">
+    <g stroke="#555">
+      <use x="72" y="308" xlink:href="#b"/>
+      <use x="102" y="308" xlink:href="#b"/>
+      <use x="132" y="308" xlink:href="#b"/>
+      <use x="162" y="308" xlink:href="#b"/>
+      <use x="192" y="308" xlink:href="#b"/>
+      <use x="221" y="308" xlink:href="#b"/>
+      <use x="251" y="308" xlink:href="#b"/>
+      <use x="281" y="308" xlink:href="#b"/>
+      <use x="311" y="308" xlink:href="#b"/>
+      <use x="340" y="308" xlink:href="#b"/>
+      <use x="370" y="308" xlink:href="#b"/>
+      <use x="400" y="308" xlink:href="#b"/>
+      <use x="58" y="308" xlink:href="#c"/>
+      <use x="58" y="271" xlink:href="#c"/>
+      <use x="58" y="234" xlink:href="#c"/>
+      <use x="58" y="197" xlink:href="#c"/>
+      <use x="58" y="160" xlink:href="#c"/>
+      <use x="58" y="124" xlink:href="#c"/>
+      <use x="58" y="87" xlink:href="#c"/>
+      <use x="58" y="50" xlink:href="#c"/>
+    </g>
+    <g font-size="10px">
+      <text transform="translate(75 340) rotate(-90)">1952</text>
+      <text transform="translate(105 340) rotate(-90)">1957</text>
+      <text transform="translate(135 340) rotate(-90)">1962</text>
+      <text transform="translate(165 340) rotate(-90)">1967</text>
+      <text transform="translate(194 340) rotate(-90)">1972</text>
+      <text transform="translate(224 340) rotate(-90)">1977</text>
+      <text transform="translate(254 340) rotate(-90)">1982</text>
+      <text transform="translate(284 340) rotate(-90)">1987</text>
+      <text transform="translate(313 340) rotate(-90)">1992</text>
+      <text transform="translate(343 340) rotate(-90)">1997</text>
+      <text transform="translate(373 340) rotate(-90)">2002</text>
+      <text transform="translate(403 340) rotate(-90)">2007</text>
+      <g text-anchor="end">
+        <text x="51" y="311">0</text>
+        <text x="51" y="275">5000</text>
+        <text x="51" y="238">10000</text>
+        <text x="51" y="201">15000</text>
+        <text x="51" y="164">20000</text>
+        <text x="51" y="127">25000</text>
+        <text x="51" y="91">30000</text>
+        <text x="51" y="54">35000</text>
+      </g>
+    </g>
+    <text transform="rotate(-90 12 175)" x="12" y="175" font-size="12px" text-anchor="middle">GDP per capita</text>
+  </g>
+  <g fill="none" stroke="#fff" stroke-linecap="square">
+    <path d="m102 308v-266"/>
+    <path d="m132 308v-266"/>
+    <path d="m162 308v-266"/>
+    <path d="m192 308v-266"/>
+    <path d="m221 308v-266"/>
+    <path d="m251 308v-266"/>
+    <path d="m281 308v-266"/>
+    <path d="m311 308v-266"/>
+    <path d="m340 308v-266"/>
+    <path d="m370 308v-266"/>
+    <path d="m400 308v-266"/>
+    <path d="m58 308h357"/>
+    <path d="m58 271h357"/>
+    <path d="m58 234h357"/>
+    <path d="m58 197h357"/>
+    <path d="m58 160h357"/>
+    <path d="m58 124h357"/>
+    <path d="m58 87h357"/>
+    <path d="m58 50h357"/>
+    <rect x="58" y="41" width="357" height="267"/>
+  </g>
+  <g fill="#e24a33">
+    <path d="m65 308h7v-74h-7z"/>
+    <path d="m95 308h7v-81h-7z"/>
+    <path d="m125 308h7v-90h-7z"/>
+    <path d="m154 308h7v-107h-7z"/>
+    <path d="m184 308h7v-124h-7z"/>
+    <path d="m214 308h7v-135h-7z"/>
+    <path d="m244 308h7v-143h-7z"/>
+    <path d="m273 308h7v-161h-7z"/>
+    <path d="m303 308h7v-172h-7z"/>
+    <path d="m333 308h7v-199h-7z"/>
+    <path d="m363 308h7v-226h-7z"/>
+    <path d="m392 308h7v-253h-7z"/>
+  </g>
+  <g fill="#348abd">
+    <path d="m72 308h7v-78h-7z"/>
+    <path d="m102 308h7v-90h-7z"/>
+    <path d="m132 308h7v-97h-7z"/>
+    <path d="m162 308h7v-106h-7z"/>
+    <path d="m192 308h7v-118h-7z"/>
+    <path d="m221 308h7v-119h-7z"/>
+    <path d="m251 308h7v-130h-7z"/>
+    <path d="m281 308h7v-140h-7z"/>
+    <path d="m311 308h7v-135h-7z"/>
+    <path d="m340 308h7v-155h-7z"/>
+    <path d="m370 308h7v-171h-7z"/>
+    <path d="m400 308h7v-185h-7z"/>
+  </g>
+  <path d="m65 94h98q2 0 2-2v-43q0-2-2-2h-98q-2 0-2 2v43q0 2 2 2z" fill="#e5e5e5" opacity=".8" stroke="#ccc"/>
+  <path d="m67 73h20v-7h-20z" fill="#e24a33"/>
+  <path d="m67 87h20v-7h-20z" fill="#348abd"/>
+  <!-- legend inscriptions. They should be last for proper order with respect to the background -->
+  <g font-size="10px">
+    <text x="94" y="58">country</text>
+    <text x="95" y="73">Australia</text>
+    <text x="95" y="87">New Zealand</text>
+  </g>
+</svg>
