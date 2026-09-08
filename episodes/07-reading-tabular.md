@@ -6,9 +6,9 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Import the Pandas library.
-- Use Pandas to load a simple CSV data set.
-- Get some basic information about a Pandas DataFrame.
+- Import the pandas library.
+- Use pandas to load a simple CSV data set.
+- Get some basic information about a pandas DataFrame.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -18,13 +18,13 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Use the Pandas library to do statistics on tabular data.
+## Use the pandas library to do statistics on tabular data.
 
-- [Pandas](https://pandas.pydata.org/) is a widely-used Python library for statistics, particularly on tabular data.
+- [pandas](https://pandas.pydata.org/) is a widely-used Python library for statistics, particularly on tabular data.
 - Borrows many features from R's dataframes.
   - A 2-dimensional table whose columns have names
     and potentially have different data types.
-- Load Pandas with `import pandas as pd`. The alias `pd` is commonly used to refer to the Pandas library in code.
+- Load pandas with `import pandas as pd`. The alias `pd` is commonly used to refer to the pandas library in code.
 - Read a Comma Separated Values (CSV) data file with `pd.read_csv`.
   - Argument is the name of the file to be read.
   - Returns a dataframe that you can assign to a variable
@@ -55,7 +55,7 @@ print(data_oceania)
 ```
 
 - The columns in a dataframe are the observed variables, and the rows are the observations.
-- Pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
+- pandas uses backslash `\` to show wrapped lines when output is too wide to fit the screen.
 - Using descriptive dataframe names helps us distinguish between multiple dataframes so we won't accidentally overwrite a dataframe or read from the wrong one.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
@@ -396,7 +396,7 @@ data_microbes = pd.read_csv('../field_data/microbes.csv')
 ## Writing Data
 
 As well as the `read_csv` function for reading data from a file,
-Pandas provides a `to_csv` function to write dataframes to files.
+pandas provides a `to_csv` function to write dataframes to files.
 Applying what you've learned about reading from files,
 write one of your dataframes to a file called `processed.csv`.
 You can use `help` to get information on how to use `to_csv`.
@@ -418,7 +418,7 @@ help(data_americas.to_csv)
 help(pd.read_csv)
 ```
 
-Note that `help(to_csv)` or `help(pd.to_csv)` throws an error! This is due to the fact that `to_csv` is not a global Pandas function, but
+Note that `help(to_csv)` or `help(pd.to_csv)` throws an error! This is due to the fact that `to_csv` is not a global pandas function, but
 a member function of DataFrames. This means you can only call it on an instance of a DataFrame
 e.g., `data_americas.to_csv` or `data_oceania.to_csv`
 
@@ -430,7 +430,7 @@ e.g., `data_americas.to_csv` or `data_oceania.to_csv`
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use the Pandas library to get basic statistics out of tabular data.
+- Use the pandas library to get basic statistics out of tabular data.
 - Use `index_col` to specify that a column's values should be used as row headings.
 - Use `DataFrame.info` to find out more about a dataframe.
 - The `DataFrame.columns` variable stores information about the dataframe's columns.
