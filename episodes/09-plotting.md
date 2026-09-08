@@ -60,9 +60,9 @@ if several are created by a single cell.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Plot data directly from a [`Pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
+## Plot data directly from a [`pandas dataframe`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html).
 
-- We can also plot [Pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
+- We can also plot [pandas dataframes](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html).
 - Before plotting, we convert the column headings from a `string` to `integer` data type, since they represent numerical values,
   using [str.replace()](https://pandas.pydata.org/docs/reference/api/pandas.Series.str.replace.html) to remove the `gpdPercap_`
   prefix and then [astype(int)](https://pandas.pydata.org/docs/reference/api/pandas.Series.astype.html)
@@ -77,7 +77,7 @@ data = pd.read_csv('data/gapminder_gdp_oceania.csv', index_col='country')
 # The current column names are structured as 'gdpPercap_(year)', 
 # so we want to keep the (year) part only for clarity when plotting GDP vs. years
 # To do this we use replace(), which removes from the string the characters stated in the argument
-# This method works on strings, so we use replace() from Pandas Series.str vectorized string functions
+# This method works on strings, so we use replace() from pandas Series.str vectorized string functions
 
 years = data.columns.str.replace('gdpPercap_', '')
 
@@ -376,7 +376,7 @@ Whenever you are generating plots to go into a paper or a presentation, there ar
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - [`matplotlib`](https://matplotlib.org/) is the most widely used scientific plotting library in Python.
-- Plot data directly from a Pandas dataframe.
+- Plot data directly from a pandas dataframe.
 - Select and transform data, then plot it.
 - Many styles of plot are available: see the [Python Graph Gallery](https://python-graph-gallery.com/matplotlib/) for more options.
 - Can plot many sets of data together.

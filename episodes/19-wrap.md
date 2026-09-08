@@ -34,13 +34,13 @@ turn out to be anything but when we have to explain them precisely.
 
 - [Jupyter](https://jupyter.org) is the home of Project Jupyter.
 
-- [Pandas](https://pandas.pydata.org) is the home of the Pandas data library.
+- [pandas](https://pandas.pydata.org) is the home of the pandas data library.
 
 - Stack Overflow's [general Python section](https://stackoverflow.com/questions/tagged/python?tab=Votes)
   can be helpful,
   as well as the sections on [NumPy](https://stackoverflow.com/questions/tagged/numpy?tab=Votes),
   [SciPy](https://stackoverflow.com/questions/tagged/scipy?tab=Votes), and
-  [Pandas](https://stackoverflow.com/questions/tagged/pandas?tab=Votes).
+  [pandas](https://stackoverflow.com/questions/tagged/pandas?tab=Votes).
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
