@@ -185,7 +185,7 @@ print(len('helium'))
 
 - Python thinks that upper- and lower-case letters are different,
   so `Name` and `name` are different variables.
-- There are conventions for using upper-case letters at the start of variable names so we will use lower-case letters for now.
+- There are conventions for using lower-case letters at the start of variable names so we will use lower-case letters for now.
 
 ## Use meaningful variable names.
 
