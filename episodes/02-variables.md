@@ -63,6 +63,16 @@ Ahmed is 42 years old
 - `print` automatically puts a single space between items to separate them.
 - And wraps around to a new line at the end.
 
+### Use comments to add notes to your code.
+
+* Python uses the `#` symbol to start a comment.
+* Anything after `#` on a line is ignored by Python when the code executes.
+* Comments help explain what the code does for yourself and other programmers.
+```python
+# This is a comment and will not run
+age = 42  # You can also place comments at the end of a line
+```
+
 ## Variables must be created before they are used.
 
 - If a variable doesn't exist yet, or if the name has been mis-spelled,
