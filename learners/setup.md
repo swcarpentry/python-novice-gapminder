@@ -10,7 +10,7 @@ To obtain it, download and unzip the file
 In order to follow the presented material, you should launch the JupyterLab
 server in the root directory (see [Starting JupyterLab](episodes/01-run-quit.md#starting-jupyterlab)).
 
-## Installing Python Using Anaconda
+## Installing Python Using Conda-forge
 
 Please refer to the [Python section of the workshop website for installation instructions.](https://carpentries.github.io/workshop-template/install_instructions/#python)
 
