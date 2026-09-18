@@ -46,12 +46,13 @@ and even custom components in a flexible, integrated, and extensible manner. Jup
 reasonably up-to-date browser (ideally a current version of Chrome, Safari, or Firefox); Internet
 Explorer versions 9 and below are *not* supported.
 
-JupyterLab is included as part of the Anaconda Python distribution. If you have not already
-installed the Anaconda Python distribution, see [the setup instructions](../learners/setup.md)
-for installation instructions.
+JupyterLab can be installed with the all-in-one [Conda-forge](https://conda-forge.org/download/) installer and 
+the [Carpentries environment file](https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml).
+If you have not already installed Conda-forge and created the carpentries environment including JupyterLab, 
+see [the setup instructions](../learners/setup.md) for installation instructions.
 
 In this lesson we will run JupyterLab locally on our own machines so it will not require an internet connection besides
-the initial connection to download and install Anaconda and JupyterLab
+the initial connection to download and install Miniforge3 and JupyterLab
 
 - Start the JupyterLab server on your machine
 - Use a web browser to open a special localhost URL that connects to your JupyterLab server
@@ -74,8 +75,7 @@ between the JupyterLab and Jupyter notebook user interfaces can find more inform
 
 ## Starting JupyterLab
 
-You can start the JupyterLab server through the command line or through an application called
-`Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution.
+You can start the JupyterLab server through the command line or through Miniforge3 Prompt
 
 ### macOS - Command Line
 
@@ -94,31 +94,18 @@ $ jupyter lab
 
 ### Windows Users - Command Line
 
-To start the JupyterLab server you will need to access the Anaconda Prompt.
+To start the JupyterLab server you will need to access the Miniforge3 Prompt.
 
-Press <kbd>Windows Logo Key</kbd> and search for `Anaconda Prompt`, click the result or press enter.
+Press <kbd>Windows Logo Key</kbd> and search for `Miniforge3 Prompt`, click the result or press enter.
 
-After you have launched the Anaconda Prompt, type the command:
+After you have launched the Miniforge Prompt, type the commands:
 
 ```bash
+$ conda activate carpentries
 $ jupyter lab
 ```
 
-### Anaconda Navigator
-
-To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
-
-After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
-to scroll down to find it.
-
-Here is a screenshot of an Anaconda Navigator page similar to the one that should open on either macOS
-or Windows.
-
-<p align='center'>
-  <img alt="Anaconda Navigator landing page" src="fig/0_anaconda_navigator_landing_page.png" width="750"/>
-</p>
-
-And here is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your
+Here is a screenshot of a JupyterLab landing page that should be similar to the one that opens in your
 default web browser after starting the JupyterLab server on either macOS or Windows.
 
 <p align='center'>
