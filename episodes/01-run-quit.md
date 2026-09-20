@@ -112,6 +112,23 @@ default web browser after starting the JupyterLab server on either macOS or Wind
   <img alt="JupyterLab landing page" src="fig/0_jupyterlab_landing_page.png" width="750"/>
 </p>
 
+:::::::::::::::::::::: spoiler
+### Anaconda Navigator
+
+Alternatively, you can start JupyterLab through an application called `Anaconda Navigator`. Anaconda Navigator is included as part of the Anaconda Python distribution. To start a JupyterLab server from Anaconda Navigator you must first [start Anaconda Navigator (click for detailed instructions on macOS, Windows, and Linux)](https://docs.anaconda.com/free/navigator/getting-started/#navigator-starting-navigator). You can search for Anaconda Navigator via Spotlight on macOS (<kbd>Command</kbd> + <kbd>spacebar</kbd>), the Windows search function (<kbd>Windows Logo Key</kbd>) or opening a terminal shell and executing the `anaconda-navigator` executable from the command line.
+
+After you have launched Anaconda Navigator, click the `Launch` button under JupyterLab. You may need
+to scroll down to find it.
+
+Here is a screenshot of an Anaconda Navigator page similar to the one that should open on either macOS
+or Windows.
+
+<p align='center'>
+  <img alt="Anaconda Navigator landing page" src="fig/0_anaconda_navigator_landing_page.png" width="750"/>
+</p>
+
+:::::::::::::::::::::::::::::::
+
 ## The JupyterLab Interface
 
 JupyterLab has many features found in traditional integrated development environments (IDEs) but
