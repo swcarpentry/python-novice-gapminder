@@ -92,9 +92,9 @@ After you have launched Terminal, type the command to launch the JupyterLab serv
 $ jupyter lab
 ```
 
-### Windows Users - Command Line
+### Windows Users - Miniforge3 Prompt
 
-To start the JupyterLab server you will need to access the Miniforge3 Prompt.
+To start the JupyterLab server you will need to open the Miniforge3 Prompt and activate the 'carpentries' environment.  The 'carpentries' [conda environment](https://en.wikipedia.org/wiki/Conda_(package_manager)) provides the software needed for this workshop, including JupyterLab.
 
 Press <kbd>Windows Logo Key</kbd> and search for `Miniforge3 Prompt`, click the result or press enter.
 
