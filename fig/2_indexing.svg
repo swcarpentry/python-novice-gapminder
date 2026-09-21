@@ -1,0 +1,24 @@
+<svg font-family="monospace"  height="230" width="1000" xmlns="http://www.w3.org/2000/svg">
+  <rect x="40"  y="110" width="48" height="110" fill="#b3ef54" stroke="#000"/>
+
+  <text font-size="60" x="40" y="80"><tspan fill="#800080">print</tspan>(atom_name[0])</text>
+
+  <g fill="#000" font-size="60" text-anchor="middle">
+    <text x="65"  y="200">h</text>
+    <text x="113" y="200">e</text>
+    <text x="161" y="200">l</text>
+    <text x="209" y="200">i</text>
+    <text x="257" y="200">u</text>
+    <text x="305" y="200">m</text>
+  </g>
+
+  <g fill="#333" font-size="20" text-anchor="middle">
+    <text x="65"  y="140">0</text>
+    <text x="113" y="140">1</text>
+    <text x="161" y="140">2</text>
+    <text x="209" y="140">3</text>
+    <text x="257" y="140">4</text>
+    <text x="305" y="140">5</text>
+  </g>
+</svg>
+
