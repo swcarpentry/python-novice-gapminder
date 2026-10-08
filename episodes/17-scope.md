@@ -130,13 +130,14 @@ KeyError: 'Friday'
   
   
 
-:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - The scope of a variable is the part of a program that can 'see' that variable.
+- What are the pros / cons of making a variable global or local to a function?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
