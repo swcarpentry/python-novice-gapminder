@@ -676,7 +676,6 @@ value of this column for every row in the dataframe.
 ## Reflections (optional)
 
 - How can functions help make code easier to reuse, understand, or change?
-- What are the pros / cons of making a variable global or local to a function?
 - When would you consider turning a block of code into a function definition?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
