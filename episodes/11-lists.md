@@ -42,13 +42,13 @@ length: 5
 - Just like strings.
 
 ```python
-print('zeroth item of pressures:', pressures[0])
-print('fourth item of pressures:', pressures[4])
+print('first item of pressures:', pressures[0])
+print('fourth item of pressures:', pressures[3])
 ```
 
 ```output
-zeroth item of pressures: 0.273
-fourth item of pressures: 0.276
+first item of pressures: 0.273
+fourth item of pressures: 0.275
 ```
 
 ## Lists' values can be replaced by assigning to them.
@@ -146,13 +146,13 @@ goals = [1, 'Create lists.', 2, 'Extract items from lists.', 3, 'Modify lists.']
 
 ```python
 element = 'carbon'
-print('zeroth character:', element[0])
-print('third character:', element[3])
+print('first character:', element[0])
+print('third character:', element[2])
 ```
 
 ```output
-zeroth character: c
-third character: b
+first character: c
+third character: r
 ```
 
 ## Character strings are immutable.
