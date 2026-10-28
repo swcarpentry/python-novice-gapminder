@@ -276,10 +276,10 @@ a "text cell" is one that contains ordinary prose written for human beings.
 
 ## The Notebook has Command and Edit modes.
 
-- If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the outer border of your code cell will change from gray to blue.
-- These are the **Command** (gray) and **Edit** (blue) modes of your notebook.
+- If you press <kbd>Esc</kbd> and <kbd>Return</kbd> alternately, the outer border of your code cell will change color.
+- These are the **Command** and **Edit** modes of your notebook. Their border colors can vary by platform and theme; on macOS, Command mode may appear blue and Edit mode gray.
 - Command mode allows you to edit notebook-level features, and Edit mode changes the content of cells.
-- When in Command mode (esc/gray),
+- When in Command mode (after pressing <kbd>Esc</kbd>),
   - The <kbd>b</kbd> key will make a new cell below the currently selected cell.
   - The <kbd>a</kbd> key will make one above.
   - The <kbd>x</kbd> key will delete the current cell.
@@ -300,11 +300,11 @@ Use the shortcuts to undo the last cell operation you performed.
 
 ## Solution
 
-Command mode has a grey border and Edit mode has a blue border.
+Command and Edit mode border colors can vary by platform and theme. On macOS, Command mode may appear blue while Edit mode may appear gray.
 Use <kbd>Esc</kbd> and <kbd>Return</kbd> to switch between modes.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>b</kbd> or <kbd>a</kbd>.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>x</kbd>.
-You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Type <kbd>z</kbd>.
+You need to be in Command mode (press <kbd>Esc</kbd> if your cell is in Edit mode). Type <kbd>b</kbd> or <kbd>a</kbd>.
+You need to be in Command mode (press <kbd>Esc</kbd> if your cell is in Edit mode). Type <kbd>x</kbd>.
+You need to be in Command mode (press <kbd>Esc</kbd> if your cell is in Edit mode). Type <kbd>z</kbd>.
 
 
 
@@ -314,10 +314,10 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Typ
 
 ### Use the keyboard and mouse to select and edit cells.
 
-- Pressing the <kbd>Return</kbd> key turns the border blue and engages Edit mode, which allows
+- Pressing the <kbd>Return</kbd> key switches to Edit mode, which allows
   you to type within the cell.
 - Because we want to be able to write many lines of code in a single cell,
-  pressing the <kbd>Return</kbd> key when in Edit mode (blue) moves the cursor to the next line
+  pressing the <kbd>Return</kbd> key when in Edit mode moves the cursor to the next line
   in the cell just like in a text editor.
 - We need some other way to tell the Notebook we want to run what's in the cell.
 - Pressing <kbd>Shift</kbd>\+<kbd>Return</kbd> together will execute the contents of the cell.
@@ -330,11 +330,11 @@ You need to be in Command mode (Press <kbd>Esc</kbd> if your cell is blue).  Typ
   - A simple plain-text format for writing lists, links,
     and other things that might go into a web page.
   - Equivalently, a subset of HTML that looks like what you'd send in an old-fashioned email.
-- Turn the current cell into a Markdown cell by entering the Command mode (<kbd>Esc</kbd>/gray)
+- Turn the current cell into a Markdown cell by entering the Command mode (<kbd>Esc</kbd>)
   and press the <kbd>M</kbd> key.
 - `In [ ]:` will disappear to show it is no longer a code cell and you will be able to write in
   Markdown.
-- Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>/gray) and
+- Turn the current cell into a Code cell by entering the Command mode (<kbd>Esc</kbd>) and
   press the <kbd>y</kbd> key.
 
 ### Markdown does most of what HTML does.
