@@ -180,7 +180,7 @@ What other special strings does the [`float` function][float-function] recognize
 
 Write a program that reads in the regional data sets
 and plots the average GDP per capita for each region over time
-in a single chart. Pandas will raise an error if it encounters
+in a single chart. pandas will raise an error if it encounters
 non-numeric columns in a dataframe computation so you may need
 to either filter out those columns or tell pandas to ignore them.
 

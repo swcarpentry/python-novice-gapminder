@@ -621,7 +621,7 @@ density. In the model, time takes discrete values 0, 1, 2, ...
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Using Functions With Conditionals in Pandas
+## Using Functions With Conditionals in pandas
 
 Functions will often contain conditionals.  Here is a short example that
 will indicate which quartile the argument is in based on hand-coded values
@@ -652,7 +652,7 @@ calculate_life_quartile(62.5)
 2
 ```
 
-That function would typically be used within a `for` loop, but Pandas has
+That function would typically be used within a `for` loop, but pandas has
 a different, more efficient way of doing the same thing, and that is by
 *applying* a function to a dataframe or a portion of a dataframe.  Here
 is an example, using the definition above.

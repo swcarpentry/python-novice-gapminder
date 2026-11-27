@@ -1,12 +1,12 @@
 ---
-title: Pandas DataFrames
+title: pandas DataFrames
 teaching: 15
 exercises: 15
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Select individual values from a Pandas dataframe.
+- Select individual values from a pandas dataframe.
 - Select entire rows or entire columns from a dataframe.
 - Select a subset of both rows and columns from a dataframe in a single operation.
 - Select a subset of a dataframe by a single Boolean criterion.
@@ -19,16 +19,16 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Note about Pandas DataFrames/Series
+## Note about pandas DataFrames/Series
 
 A [DataFrame][pandas-dataframe] is a collection of [Series][pandas-series];
-The DataFrame is the way Pandas represents a table, and Series is the data-structure
-Pandas use to represent a column.
+The DataFrame is the way pandas represents a table, and Series is the data-structure
+pandas use to represent a column.
 
-Pandas is built on top of the [Numpy][numpy] library, which in practice means that
-most of the methods defined for Numpy Arrays apply to Pandas Series/DataFrames.
+pandas is built on top of the [Numpy][numpy] library, which in practice means that
+most of the methods defined for Numpy Arrays apply to pandas Series/DataFrames.
 
-What makes Pandas so attractive is the powerful interface to access individual records
+What makes pandas so attractive is the powerful interface to access individual records
 of the table, proper handling of missing values, and relational-databases operations
 between DataFrames.
 
@@ -244,7 +244,7 @@ has not been covered in the course so far.
 * The axis=1 argument needs to be explained clearly.
 :::::::::::::::::::::::::::::::::::::::::::::::::
 
-Pandas vectorizing methods and grouping operations are features that provide users
+pandas vectorizing methods and grouping operations are features that provide users
 much flexibility to analyse their data.
 
 For instance, let's say we want to have a clearer view on how the European countries
@@ -327,7 +327,7 @@ print(data.groupby(wealth_score).sum())
 
 ## Selection of Individual Values
 
-Assume Pandas has been imported into your notebook
+Assume pandas has been imported into your notebook
 and the Gapminder GDP data for Europe has been loaded:
 
 ```python
@@ -364,7 +364,7 @@ The output is
 
 1. Do the two statements below produce the same output?
 2. Based on this,
-  what rule governs what is included (or not) in numerical slices and named slices in Pandas?
+  what rule governs what is included (or not) in numerical slices and named slices in pandas?
 
 ```python
 print(data_europe.iloc[0:2, 0:2])
@@ -463,7 +463,7 @@ which has index 1).
 fourth.to_csv('result.csv')
 ```
 
-The final step is to write the data that we have been working on to a csv file. Pandas makes this easy
+The final step is to write the data that we have been working on to a csv file. pandas makes this easy
 with the `to_csv()` function. The only required argument to the function is the filename. Note that the
 file will be written in the directory from which you started the Jupyter or Python session.
 
@@ -505,7 +505,7 @@ You can use these functions whenever you want to get the row index of the minimu
 
 ## Practice with Selection
 
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded.
+Assume pandas has been imported and the Gapminder GDP data for Europe has been loaded.
 Write an expression to select each of the following:
 
 1. GDP per capita for all countries in 1982.
@@ -536,7 +536,7 @@ data.loc['Denmark',:]
 data.loc[:,'gdpPercap_1985':]
 ```
 
-Pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
+pandas is smart enough to recognize the number at the end of the column label and does not give you an error, although no column named `gdpPercap_1985` actually exists. This is useful if new columns are added to the CSV file later.
 
 4:
 
@@ -735,7 +735,7 @@ This command returns:
 
 You can use `help()` or <kbd>Shift</kbd>\+<kbd>Tab</kbd> to get more information about what these methods do.
 
-Assume Pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()`
+Assume pandas has been imported and the Gapminder GDP data for Europe has been loaded as `data`.  Then, use `dir()`
 to find the function that prints out the median per-capita GDP across all European countries for each year that information is available.
 
 :::::::::::::::  solution
